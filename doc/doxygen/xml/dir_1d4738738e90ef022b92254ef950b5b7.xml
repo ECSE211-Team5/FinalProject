@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_1d4738738e90ef022b92254ef950b5b7" kind="dir">
+    <compoundname>/home/ccc/FinalProject/src/ca/mcgill/ecse211/project</compoundname>
+    <innerfile refid="_color_calibrator_8java">ColorCalibrator.java</innerfile>
+    <innerfile refid="_display_8java">Display.java</innerfile>
+    <innerfile refid="_game_8java">Game.java</innerfile>
+    <innerfile refid="_game_parameters_8java">GameParameters.java</innerfile>
+    <innerfile refid="_main_8java">Main.java</innerfile>
+    <innerfile refid="_navigation_8java">Navigation.java</innerfile>
+    <innerfile refid="_ring_searcher_8java">RingSearcher.java</innerfile>
+    <innerfile refid="_wi_fi_8java">WiFi.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/"/>
+  </compounddef>
+</doxygen>

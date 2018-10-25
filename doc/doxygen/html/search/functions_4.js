@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5.html#a82cca51f550ed0eb016bb2082d3fe755',1,'ca::mcgill::ecse211::lab5::Lab5']]]
+  ['main',['main',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3',1,'ca::mcgill::ecse211::project::Main']]]
 ];

@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::project::GameParameters</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aae8c69151bc01acce692b9119323bb46" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.SC</definition>
+        <argsstring></argsstring>
+        <name>SC</name>
+        <initializer>= {-1, -1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variables holds the starting corner coordinates for our robot. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="7" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aec739d9ebcbd75db6a77ec288ff974cf" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.Grid_LL</definition>
+        <argsstring></argsstring>
+        <name>Grid_LL</name>
+        <initializer>= {0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the lower left coordinates of the entire grid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="12" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ab79c9c891076d29cbe5ac053f617c381" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.Grid_UR</definition>
+        <argsstring></argsstring>
+        <name>Grid_UR</name>
+        <initializer>= {15, 9}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the upper right coordinates of the entire grid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a5a299e93e098c89d12be1072947d3bcb" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.project.GameParameters.TR</definition>
+        <argsstring></argsstring>
+        <name>TR</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable holds the color of the target ring in the range [1,4]. 1 indicates a BLUE ring 2 indicates a GREEN ring 3 indicates a YELLOW ring 4 indicates an ORANGE ring </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="23" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a15bc3c24f73d1ad29b6fe7fd9e1ef0e6" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.project.GameParameters.PlayerTeamNumber</definition>
+        <argsstring></argsstring>
+        <name>PlayerTeamNumber</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the number of the team our robot is on. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a51c899921677197f960f39e6ed42c780" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.project.GameParameters.RedTeam</definition>
+        <argsstring></argsstring>
+        <name>RedTeam</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the team starting out from the red zone, possible values are [1,20]. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="33" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aca550f5067892ceeb8f44ede61bbc90e" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.project.GameParameters.GreenTeam</definition>
+        <argsstring></argsstring>
+        <name>GreenTeam</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the team starting out from the green zone, possible values are [1,20]. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="38" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1acf0dce5eb9dc754248f0c3de997d2809" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.project.GameParameters.RedCorner</definition>
+        <argsstring></argsstring>
+        <name>RedCorner</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the starting corner for the red team, possible values are [0,3]. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a7fe7f10f96800fbd5f2331e3aa608b66" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.project.GameParameters.GreenCorner</definition>
+        <argsstring></argsstring>
+        <name>GreenCorner</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the starting corner for the green team, possible values are [0,3]. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ae3eb3c87467d3a7760cd619a96379a9e" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.Red_LL</definition>
+        <argsstring></argsstring>
+        <name>Red_LL</name>
+        <initializer>= {0, 5}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the lower left hand corner of the red zone. [0] = x coordinate, [1] = y coordinate min Red_UR[0] - Red_LL[0] = 2 max Red_UR[0] - Red_LL[0] = 10 min Red_UR[1] - Red_LL[1] = 2 max Red_UR[1] - Red_LL[1] = 10 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="58" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a81ddd789119962c32fe6d7f9cce4f240" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.Red_UR</definition>
+        <argsstring></argsstring>
+        <name>Red_UR</name>
+        <initializer>= {4, 9}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the upper right hand corner of the red zone. [0] = x coordinate, [1] = y coordinate min Red_UR[0] - Red_LL[0] = 2 max Red_UR[0] - Red_LL[0] = 10 min Red_UR[1] - Red_LL[1] = 2 max Red_UR[1] - Red_LL[1] = 10 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="68" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a24e38b735e194403bf2b9877241969c1" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.Green_LL</definition>
+        <argsstring></argsstring>
+        <name>Green_LL</name>
+        <initializer>= {10, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the lower left hand corner of the green zone. [0] = x coordinate, [1] = y coordinate min Green_UR[0] - Green_LL[0] = 2 max Green_UR[0] - Green_LL[0] = 10 min Green_UR[1] - Green_LL[1] = 2 max Green_UR[1] - Green_LL[1] = 10 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="78" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aedb13ca3822f3581bdffd464891b1494" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.Green_UR</definition>
+        <argsstring></argsstring>
+        <name>Green_UR</name>
+        <initializer>= {15, 4}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the upper right hand corner of the green zone. [0] = x coordinate, [1] = y coordinate min Green_UR[0] - Green_LL[0] = 2 max Green_UR[0] - Green_LL[0] = 10 min Green_UR[1] - Green_LL[1] = 2 max Green_UR[1] - Green_LL[1] = 10 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="88" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a8695da7f04954ea1513082740fd2d57f" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.BRR_LL</definition>
+        <argsstring></argsstring>
+        <name>BRR_LL</name>
+        <initializer>= {4, 7}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the lower left hand corner of the red tunnel footprint. [0] = x coordinate, [1] = y coordinate min BRR_UR[0] - BRR_LL[0] = 1 max BRR_UR[0] - BRR_LL[0] = 2 min BRR_UR[1] - BRR_LL[1] = 1 max BRR_UR[1] - BRR_LL[1] = 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="98" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a720d0ae20fc2466e7b77fda14bf374f3" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.BRR_UR</definition>
+        <argsstring></argsstring>
+        <name>BRR_UR</name>
+        <initializer>= {6, 8}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the upper right hand corner of the red tunnel footprint. [0] = x coordinate, [1] = y coordinate min BRR_UR[0] - BRR_LL[0] = 1 max BRR_UR[0] - BRR_LL[0] = 2 min BRR_UR[1] - BRR_LL[1] = 1 max BRR_UR[1] - BRR_LL[1] = 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="108" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ae6824f16adf03173062767f99d46b6e0" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.BRG_LL</definition>
+        <argsstring></argsstring>
+        <name>BRG_LL</name>
+        <initializer>= {10, 3}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the lower left hand corner of the green tunnel footprint. [0] = x coordinate, [1] = y coordinate min BRG_UR[0] - BRG_LL[0] = 1 max BRG_UR[0] - BRG_LL[0] = 2 min BRG_UR[1] - BRG_LL[1] = 1 max BRG_UR[1] - BRG_LL[1] = 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="118" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a644c339e7b0f11c5780f9c7de34e1e07" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.BRG_UR</definition>
+        <argsstring></argsstring>
+        <name>BRG_UR</name>
+        <initializer>= {11, 5}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the upper right hand corner of the green tunnel footprint. [0] = x coordinate, [1] = y coordinate min BRG_UR[0] - BRG_LL[0] = 1 max BRG_UR[0] - BRG_LL[0] = 2 min BRG_UR[1] - BRG_LL[1] = 1 max BRG_UR[1] - BRG_LL[1] = 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="128" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ac642730053a35524ce70866289ca10b9" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.TR_LL</definition>
+        <argsstring></argsstring>
+        <name>TR_LL</name>
+        <initializer>= {7, 6}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the lower left hand corner of the red player ring set. [0] = x coordinate, [1] = y coordinate min TR_UR[0] - TR_LL[0] = 1 max TR_UR[0] - TR_LL[0] = 1 min TR_UR[1] - TR_LL[1] = 1 max TR_UR[1] - TR_LL[1] = 1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="138" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a45c465e9f0b53a4e752a398036be13f5" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.TR_UR</definition>
+        <argsstring></argsstring>
+        <name>TR_UR</name>
+        <initializer>= {8, 7}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the upper right hand corner of the red player ring set. [0] = x coordinate, [1] = y coordinate min TR_UR[0] - TR_LL[0] = 1 max TR_UR[0] - TR_LL[0] = 1 min TR_UR[1] - TR_LL[1] = 1 max TR_UR[1] - TR_LL[1] = 1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="148" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a0fefeecefd65deabea205bd9d628bf76" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.TG_LL</definition>
+        <argsstring></argsstring>
+        <name>TG_LL</name>
+        <initializer>= {13, 7}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the lower left hand corner of the green player ring set. [0] = x coordinate, [1] = y coordinate min TG_UR[0] - TG_LL[0] = 1 max TG_UR[0] - TG_LL[0] = 1 min TG_UR[1] - TG_LL[1] = 1 max TG_UR[1] - TG_LL[1] = 1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="158" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa8220987d04f322d9480db7cc073ffd2" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.project.GameParameters.TG_UR</definition>
+        <argsstring></argsstring>
+        <name>TG_UR</name>
+        <initializer>= {14, 8}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the upper right hand corner of the green player ring set. [0] = x coordinate, [1] = y coordinate min TG_UR[0] - TG_LL[0] = 1 max TG_UR[0] - TG_LL[0] = 1 min TG_UR[1] - TG_LL[1] = 1 max TG_UR[1] - TG_LL[1] = 1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="168" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="3" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="3" bodyend="169"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ae6824f16adf03173062767f99d46b6e0" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>BRG_LL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a644c339e7b0f11c5780f9c7de34e1e07" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>BRG_UR</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a8695da7f04954ea1513082740fd2d57f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>BRR_LL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a720d0ae20fc2466e7b77fda14bf374f3" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>BRR_UR</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a24e38b735e194403bf2b9877241969c1" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Green_LL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aedb13ca3822f3581bdffd464891b1494" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Green_UR</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a7fe7f10f96800fbd5f2331e3aa608b66" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>GreenCorner</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aca550f5067892ceeb8f44ede61bbc90e" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>GreenTeam</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aec739d9ebcbd75db6a77ec288ff974cf" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Grid_LL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ab79c9c891076d29cbe5ac053f617c381" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Grid_UR</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a15bc3c24f73d1ad29b6fe7fd9e1ef0e6" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>PlayerTeamNumber</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ae3eb3c87467d3a7760cd619a96379a9e" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Red_LL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a81ddd789119962c32fe6d7f9cce4f240" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Red_UR</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1acf0dce5eb9dc754248f0c3de997d2809" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>RedCorner</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a51c899921677197f960f39e6ed42c780" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>RedTeam</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aae8c69151bc01acce692b9119323bb46" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>SC</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a0fefeecefd65deabea205bd9d628bf76" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TG_LL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa8220987d04f322d9480db7cc073ffd2" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TG_UR</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a5a299e93e098c89d12be1072947d3bcb" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TR</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ac642730053a35524ce70866289ca10b9" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TR_LL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a45c465e9f0b53a4e752a398036be13f5" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TR_UR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

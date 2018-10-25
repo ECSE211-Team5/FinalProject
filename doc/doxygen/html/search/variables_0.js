@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['leftmotor',['leftMotor',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5.html#a613e69d8f1e90a1161b78020571110fc',1,'ca::mcgill::ecse211::lab5::Lab5']]],
-  ['llx',['LLx',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5.html#a957a526ed669e9d8b7fc485e21385ee9',1,'ca::mcgill::ecse211::lab5::Lab5']]],
-  ['localize_5ftrack',['LOCALIZE_TRACK',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5.html#a971cb3d8a46c2b41bcadf08f21498d6d',1,'ca::mcgill::ecse211::lab5::Lab5']]],
-  ['localize_5fwheel_5frad',['LOCALIZE_WHEEL_RAD',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5.html#a6bc8fbcc688c767a11226cb7b5da3411',1,'ca::mcgill::ecse211::lab5::Lab5']]]
+  ['brg_5fll',['BRG_LL',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#ae6824f16adf03173062767f99d46b6e0',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['brg_5fur',['BRG_UR',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a644c339e7b0f11c5780f9c7de34e1e07',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['brr_5fll',['BRR_LL',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a8695da7f04954ea1513082740fd2d57f',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['brr_5fur',['BRR_UR',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a720d0ae20fc2466e7b77fda14bf374f3',1,'ca::mcgill::ecse211::project::GameParameters']]]
 ];

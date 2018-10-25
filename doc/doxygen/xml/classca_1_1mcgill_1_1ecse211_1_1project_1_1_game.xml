@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::project::Game</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab73df1b495cf395fdab869d1835d8208" prot="private" static="yes" mutable="no">
+        <type>final Port</type>
+        <definition>final Port ca.mcgill.ecse211.project.Game.usPort</definition>
+        <argsstring></argsstring>
+        <name>usPort</name>
+        <initializer>= LocalEV3.get().getPort(&quot;S1&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="35" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ae4cb073d77603b48495c3659c2753714" prot="private" static="yes" mutable="no">
+        <type>Port []</type>
+        <definition>Port [] ca.mcgill.ecse211.project.Game.lgPorts</definition>
+        <argsstring></argsstring>
+        <name>lgPorts</name>
+        <initializer>= new Port[2]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a29abb0a2304d8e5c1ddc53f40462ec1e" prot="private" static="yes" mutable="no">
+        <type>final TextLCD</type>
+        <definition>final TextLCD ca.mcgill.ecse211.project.Game.lcd</definition>
+        <argsstring></argsstring>
+        <name>lcd</name>
+        <initializer>= LocalEV3.get().getTextLCD()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="38" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a1222e7b3cd8789677feb4c56b2f6a610" prot="private" static="yes" mutable="no">
+        <type>final Port</type>
+        <definition>final Port ca.mcgill.ecse211.project.Game.gPort</definition>
+        <argsstring></argsstring>
+        <name>gPort</name>
+        <initializer>= LocalEV3.get().getPort(&quot;S4&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="39" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a13083b8c489c2bcb9a7d2bdce351c242" prot="private" static="yes" mutable="no">
+        <type>EV3GyroSensor</type>
+        <definition>EV3GyroSensor ca.mcgill.ecse211.project.Game.gSensor</definition>
+        <argsstring></argsstring>
+        <name>gSensor</name>
+        <initializer>= new EV3GyroSensor(gPort)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="40" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a40f6d5a8c70b88bf89b2171a02d2813f" prot="public" static="yes" mutable="no">
+        <type>final EV3LargeRegulatedMotor</type>
+        <definition>final EV3LargeRegulatedMotor ca.mcgill.ecse211.project.Game.leftMotor</definition>
+        <argsstring></argsstring>
+        <name>leftMotor</name>
+        <initializer>=
+      new EV3LargeRegulatedMotor(LocalEV3.get().getPort(&quot;A&quot;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Motor object instance that allows control of the left motor connected to port B </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="45" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a637614c1eb769dcdb09d897c66e453a2" prot="public" static="yes" mutable="no">
+        <type>final EV3LargeRegulatedMotor</type>
+        <definition>final EV3LargeRegulatedMotor ca.mcgill.ecse211.project.Game.rightMotor</definition>
+        <argsstring></argsstring>
+        <name>rightMotor</name>
+        <initializer>=
+      new EV3LargeRegulatedMotor(LocalEV3.get().getPort(&quot;D&quot;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Motor object instance that allows control of the right motor connected to port A </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="51" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a9a7a353789ddffcb938827410318b4fe" prot="public" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double ca.mcgill.ecse211.project.Game.TILE</definition>
+        <argsstring></argsstring>
+        <name>TILE</name>
+        <initializer>= 30.48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>length of the tile </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="56" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1af0ff4c5121973a8310cf986e25fa0d87" compoundref="_odometer_8java" startline="109" endline="150">ca.mcgill.ecse211.odometer.Odometer.run</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1a21a351682dc75060d6a5f15ad4775068" compoundref="_odometry_correction_8java" startline="99" endline="112">ca.mcgill.ecse211.odometer.OdometryCorrection.doCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" compoundref="_navigation_8java" startline="72" endline="89">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a206492a827a716e6c606dc817cb4ff4d" prot="public" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double ca.mcgill.ecse211.project.Game.WHEEL_RAD</definition>
+        <argsstring></argsstring>
+        <name>WHEEL_RAD</name>
+        <initializer>= 2.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable denotes the radius of our wheels in cm. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="61" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="54" endline="93">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" compoundref="_navigation_8java" startline="72" endline="89">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a8b363632288a415edb9d32932555d233" compoundref="_navigation_8java" startline="99" endline="124">ca.mcgill.ecse211.project.Navigation.turnTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1af2bddd9a34ea26cfd9a1e4ac055644dc" compoundref="_navigation_8java" startline="131" endline="134">ca.mcgill.ecse211.project.Navigation.rotate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad7896596e6ee5d9ff87a7bdbf230995c" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double ca.mcgill.ecse211.project.Game.TRACK</definition>
+        <argsstring></argsstring>
+        <name>TRACK</name>
+        <initializer>= 10.3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable denotes the track distance between the center of the wheels in cm (measured and adjusted based on trial and error). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="67" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a8b363632288a415edb9d32932555d233" compoundref="_navigation_8java" startline="99" endline="124">ca.mcgill.ecse211.project.Navigation.turnTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1af2bddd9a34ea26cfd9a1e4ac055644dc" compoundref="_navigation_8java" startline="131" endline="134">ca.mcgill.ecse211.project.Navigation.rotate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a1bcbd1c19309c65a6887ae19bde66765" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.project.Game.preparation</definition>
+        <argsstring>()</argsstring>
+        <name>preparation</name>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prepare for the game: starting thread, read all arguments</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OdometerExceptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="74" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="74" bodyend="128"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="79" endline="88">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ab8aef4bdb5d9f3dad399656e00af2539" compoundref="_sensor_data_8java" startline="70" endline="82">ca.mcgill.ecse211.sensors.SensorData.getSensorData</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af681b5dc675c13ed284071cc135f5fd3" compoundref="_main_8java" startline="52" endline="66">ca.mcgill.ecse211.project.Main.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad1a9b39b2449607da3320b28c72ba379" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.project.Game.localization</definition>
+        <argsstring>()</argsstring>
+        <name>localization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>perform localization </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="133" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ac9f3ddab796dea6e753bfde7b87fa1b2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.project.Game.readData</definition>
+        <argsstring>()</argsstring>
+        <name>readData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read data from the wifi class (using another thread) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="140" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="140" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1afaee4e6015d5219e948a055067261de6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.project.Game.runGame</definition>
+        <argsstring>()</argsstring>
+        <name>runGame</name>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method contains main logic for the game plays</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OdometerExceptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="149" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="149" bodyend="184"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af681b5dc675c13ed284071cc135f5fd3" compoundref="_main_8java" startline="52" endline="66">ca.mcgill.ecse211.project.Main.main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the main starting point for the Search and Localize lab</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>ca.mcgill.ecse211.project.Game</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>leftMotor</edgelabel>
+          <edgelabel>rightMotor</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>EV3LargeRegulatedMotor</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="33" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="33" bodyend="185"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a1222e7b3cd8789677feb4c56b2f6a610" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>gPort</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a13083b8c489c2bcb9a7d2bdce351c242" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>gSensor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a29abb0a2304d8e5c1ddc53f40462ec1e" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>lcd</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a40f6d5a8c70b88bf89b2171a02d2813f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>leftMotor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ae4cb073d77603b48495c3659c2753714" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>lgPorts</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad1a9b39b2449607da3320b28c72ba379" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>localization</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a1bcbd1c19309c65a6887ae19bde66765" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>preparation</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ac9f3ddab796dea6e753bfde7b87fa1b2" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>readData</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a637614c1eb769dcdb09d897c66e453a2" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>rightMotor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1afaee4e6015d5219e948a055067261de6" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>runGame</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a9a7a353789ddffcb938827410318b4fe" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>TILE</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad7896596e6ee5d9ff87a7bdbf230995c" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>TRACK</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab73df1b495cf395fdab869d1835d8208" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>usPort</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a206492a827a716e6c606dc817cb4ff4d" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game</scope><name>WHEEL_RAD</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

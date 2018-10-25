@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['display',['Display',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_display.html#aeb15906f02c60c1ca449d4c37922739b',1,'ca.mcgill.ecse211.lab5.Display.Display(TextLCD lcd)'],['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_display.html#abb1c01962b84cfad6ff897ce490b365a',1,'ca.mcgill.ecse211.lab5.Display.Display(TextLCD lcd, long timeout)']]],
-  ['docorrection',['doCorrection',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_navigation.html#a73a89ddd822e0ba1cfd7a29c18aa7aea',1,'ca::mcgill::ecse211::lab5::Navigation']]]
+  ['display',['Display',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_display.html#af0970123ca090749bfb2f5b9f478c01d',1,'ca.mcgill.ecse211.project.Display.Display(TextLCD lcd)'],['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_display.html#a690cd91bcc8024950c2b8e3b2613c801',1,'ca.mcgill.ecse211.project.Display.Display(TextLCD lcd, long timeout)']]],
+  ['docorrection',['doCorrection',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html#a21a351682dc75060d6a5f15ad4775068',1,'ca::mcgill::ecse211::odometer::OdometryCorrection']]]
 ];

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="17" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="17" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_gyro_poller_1af938c0d98e85a2b52a892b3060a16e55" prot="protected" static="no" mutable="no">
         <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data" kindref="compound">SensorData</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="18" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="18" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="18" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_gyro_poller_1a6e6759875b42b8ac6947aac140e74fce" prot="protected" static="no" mutable="no">
         <type>float []</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="19" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="19" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="19" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="20" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="20" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="20" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="31" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="31" bodyend="35"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="31" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_gyro_poller_1a2a52059192555ece72190fa44a761d28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -128,7 +128,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="46" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="46" bodyend="50"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="46" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="46" bodyend="50"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a9828d8b4dfb9b197e8fd149fb7deb63b" compoundref="_sensor_data_8java" startline="173" endline="184">ca.mcgill.ecse211.sensors.SensorData.setA</references>
       </memberdef>
       </sectiondef>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="52" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="52" bodyend="64"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="52" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="52" bodyend="64"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -158,44 +158,44 @@
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9">
+      <node id="16">
         <label>Thread</label>
       </node>
-      <node id="8">
+      <node id="15">
         <label>ca.mcgill.ecse211.sensors.GyroPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_gyro_poller"/>
-        <childnode refid="9" relation="public-inheritance">
+        <childnode refid="16" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="13">
+      <node id="20">
         <label>ca.mcgill.ecse211.sensors.SensorData</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data"/>
       </node>
-      <node id="12">
+      <node id="19">
         <label>SampleProvider</label>
       </node>
-      <node id="11">
+      <node id="18">
         <label>Thread</label>
       </node>
-      <node id="10">
+      <node id="17">
         <label>ca.mcgill.ecse211.sensors.GyroPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_gyro_poller"/>
-        <childnode refid="11" relation="public-inheritance">
+        <childnode refid="18" relation="public-inheritance">
         </childnode>
-        <childnode refid="12" relation="usage">
+        <childnode refid="19" relation="usage">
           <edgelabel>us</edgelabel>
         </childnode>
-        <childnode refid="13" relation="usage">
+        <childnode refid="20" relation="usage">
           <edgelabel>cont</edgelabel>
         </childnode>
-        <childnode refid="10" relation="usage">
+        <childnode refid="17" relation="usage">
           <edgelabel>Instance</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="16" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="16" bodyend="65"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" line="16" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/GyroPoller.java" bodystart="16" bodyend="65"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_gyro_poller_1af938c0d98e85a2b52a892b3060a16e55" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::GyroPoller</scope><name>cont</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_gyro_poller_1a284eec4434708068ce9cb8a9635f7830" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::GyroPoller</scope><name>GyroPoller</name></member>

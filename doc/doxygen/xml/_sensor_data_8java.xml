@@ -175,6 +175,6 @@
 <codeline lineno="225"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="226"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/sensors/SensorData.java"/>
   </compounddef>
 </doxygen>

@@ -24,6 +24,8 @@ Collaboration diagram for ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correctio
 \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_ad80b45e0bc4bf935494e075edcec739c}{Odometry\+Correction} ()  throws Odometer\+Exceptions 
 \item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_aad66a7030ac00f3a9cbe7bc33c25acbf}{run} ()
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_a21a351682dc75060d6a5f15ad4775068}{do\+Correction} (double angle)
 \end{DoxyCompactItemize}
 
 
@@ -45,7 +47,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 21 of file Odometry\+Correction.\+java.
+Definition at line 22 of file Odometry\+Correction.\+java.
 
 
 
@@ -65,7 +67,7 @@ This is the default class constructor. An existing instance of the odometer is u
 \end{DoxyExceptions}
 
 
-Definition at line 36 of file Odometry\+Correction.\+java.
+Definition at line 38 of file Odometry\+Correction.\+java.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -77,13 +79,38 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_a21a351682dc75060d6a5f15ad4775068}\label{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_a21a351682dc75060d6a5f15ad4775068}} 
+\index{ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometry\+Correction@{ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometry\+Correction}!do\+Correction@{do\+Correction}}
+\index{do\+Correction@{do\+Correction}!ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometry\+Correction@{ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometry\+Correction}}
+\subsubsection{\texorpdfstring{do\+Correction()}{doCorrection()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction.\+do\+Correction (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
+
+This method corrects our robot\textquotesingle{}s odometer readings
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The current angle that the robot is facing \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 99 of file Odometry\+Correction.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_a21a351682dc75060d6a5f15ad4775068_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_aad66a7030ac00f3a9cbe7bc33c25acbf}\label{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_aad66a7030ac00f3a9cbe7bc33c25acbf}} 
 \index{ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometry\+Correction@{ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometry\+Correction}!run@{run}}
 \index{run@{run}!ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometry\+Correction@{ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometry\+Correction}}
 \subsubsection{\texorpdfstring{run()}{run()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is where the odometer correction code should be run.
+When this thread starts, it will correct the rotation and position of the robot once a blackline is detected
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -92,9 +119,10 @@ Here is where the odometer correction code should be run.
 \end{DoxyExceptions}
 
 
-Definition at line 47 of file Odometry\+Correction.\+java.
+Definition at line 50 of file Odometry\+Correction.\+java.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -105,4 +133,4 @@ Here is the call graph for this function\+:\nopagebreak
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ccc/\+Eclipse-\/\+Workspace-\/\+Oxygen/\+Lab5-\/\+Search\+And\+Localize/src/ca/mcgill/ecse211/odometer/Odometry\+Correction.\+java\end{DoxyCompactItemize}
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/odometer/Odometry\+Correction.\+java\end{DoxyCompactItemize}

@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['search',['search',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_ring_searcher.html#a88a4c77f3c76d74edc8bfd0229f0902f',1,'ca::mcgill::ecse211::lab5::RingSearcher']]],
-  ['searcharea',['searchArea',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5.html#a0e80ac0068ef1ab41cfb571b8c65845c',1,'ca::mcgill::ecse211::lab5::Lab5']]],
-  ['sensordata',['SensorData',['../classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data.html#a41b9929f62455a15364385a339b4b910',1,'ca::mcgill::ecse211::sensors::SensorData']]],
-  ['seta',['setA',['../classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data.html#a9828d8b4dfb9b197e8fd149fb7deb63b',1,'ca::mcgill::ecse211::sensors::SensorData']]],
-  ['setd',['setD',['../classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data.html#ae20bf127c57dcfcb3b7632ca05b6d482',1,'ca::mcgill::ecse211::sensors::SensorData']]],
-  ['setl',['setL',['../classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data.html#aeafd49ce71819e8e1a5d5ff6287e7819',1,'ca::mcgill::ecse211::sensors::SensorData']]],
-  ['setrgb',['setRGB',['../classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data.html#ae5e2528566b53218673ebc1ae4683204',1,'ca::mcgill::ecse211::sensors::SensorData']]],
-  ['settheta',['setTheta',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a419b8f07c2c5374411c8e62298e9a402',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
-  ['setx',['setX',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a2911d7215e47f3064defe016b46bfeef',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
-  ['setxyt',['setXYT',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a2ebc18a13aea6276122d9ef4ee100bb9',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
-  ['sety',['setY',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a82986438cd462e66520bc62bb4bd2b75',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
-  ['stop',['stop',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_navigation.html#afe038af6692e7ad28c3587cd979d7223',1,'ca::mcgill::ecse211::lab5::Navigation']]]
+  ['readdata',['readData',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ac9f3ddab796dea6e753bfde7b87fa1b2',1,'ca::mcgill::ecse211::project::Game']]],
+  ['retrievering',['retrieveRing',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#a988d23ece5820b5d60c3ef7079694958',1,'ca::mcgill::ecse211::project::RingSearcher']]],
+  ['rgbpoller',['RGBPoller',['../classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_r_g_b_poller.html#aa0e804f9185cb172aa1f63c62d13d168',1,'ca::mcgill::ecse211::sensors::RGBPoller']]],
+  ['ringdetection',['RingDetection',['../classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test.html#a8e356dc648d4b446fc6f7b0987078c2d',1,'ca::mcgill::ecse211::Test::ComponentTest']]],
+  ['ringsearcher',['RingSearcher',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#a98ffa8d6e451641c719e1919f62f09a1',1,'ca::mcgill::ecse211::project::RingSearcher']]],
+  ['rotate',['rotate',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#af2bddd9a34ea26cfd9a1e4ac055644dc',1,'ca::mcgill::ecse211::project::Navigation']]],
+  ['run',['run',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer.html#af0ff4c5121973a8310cf986e25fa0d87',1,'ca.mcgill.ecse211.odometer.Odometer.run()'],['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html#aad66a7030ac00f3a9cbe7bc33c25acbf',1,'ca.mcgill.ecse211.odometer.OdometryCorrection.run()'],['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_display.html#ab508a8bc2b738499bec2c432a814cba5',1,'ca.mcgill.ecse211.project.Display.run()'],['../classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_gyro_poller.html#a2a52059192555ece72190fa44a761d28',1,'ca.mcgill.ecse211.sensors.GyroPoller.run()'],['../classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_light_poller.html#a31751b40132d9402de493aa9ec11d9d5',1,'ca.mcgill.ecse211.sensors.LightPoller.run()'],['../classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_ultrasonic_poller.html#acc71fac612a72c197244c71d6cf7b6e1',1,'ca.mcgill.ecse211.sensors.UltrasonicPoller.run()']]],
+  ['rungame',['runGame',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#afaee4e6015d5219e948a055067261de6',1,'ca::mcgill::ecse211::project::Game']]],
+  ['runtest',['runTest',['../classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test.html#a2e7169881d709c5cc7a85b064651abda',1,'ca::mcgill::ecse211::Test::ComponentTest']]]
 ];

@@ -12,7 +12,7 @@
 <codeline lineno="1"></codeline>
 <codeline lineno="11" refid="namespaceca_1_1mcgill_1_1ecse211_1_1odometer" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">ca.mcgill.ecse211.odometer;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/><ref refid="namespaceca" kindref="compound">ca</ref>.<ref refid="namespaceca_1_1mcgill" kindref="compound">mcgill</ref>.<ref refid="namespaceca_1_1mcgill_1_1ecse211" kindref="compound">ecse211</ref>.<ref refid="namespaceca_1_1mcgill_1_1ecse211_1_1lab5" kindref="compound">lab5</ref>.<ref refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5" kindref="compound">Lab5</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/><ref refid="namespaceca" kindref="compound">ca</ref>.<ref refid="namespaceca_1_1mcgill" kindref="compound">mcgill</ref>.<ref refid="namespaceca_1_1mcgill_1_1ecse211" kindref="compound">ecse211</ref>.<ref refid="namespaceca_1_1mcgill_1_1ecse211_1_1project" kindref="compound">project</ref>.<ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game" kindref="compound">Game</ref>;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>lejos.hardware.motor.EV3LargeRegulatedMotor;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26" refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer" kindref="compound">Odometer</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data" kindref="compound">OdometerData</ref><sp/>implements<sp/>Runnable<sp/>{</highlight></codeline>
@@ -100,7 +100,7 @@
 <codeline lineno="134"><highlight class="normal"></highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Update<sp/>odometer<sp/>values<sp/>with<sp/>new<sp/>calculated<sp/>values</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>odometer.<ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1aaa06f190d634299fcb1b97a1891dad85" kindref="member">update</ref>(dX<sp/>/<sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5" kindref="compound">Lab5</ref>.<ref refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5_1a099ba21be1cd8d54a57c40cd0d35701d" kindref="member">TILE</ref>,<sp/>dY<sp/>/<sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5" kindref="compound">Lab5</ref>.<ref refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5_1a099ba21be1cd8d54a57c40cd0d35701d" kindref="member">TILE</ref>,<sp/>Math.toDegrees(deltaT));</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>odometer.<ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1aaa06f190d634299fcb1b97a1891dad85" kindref="member">update</ref>(dX<sp/>/<sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game" kindref="compound">Game</ref>.<ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a9a7a353789ddffcb938827410318b4fe" kindref="member">TILE</ref>,<sp/>dY<sp/>/<sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game" kindref="compound">Game</ref>.<ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a9a7a353789ddffcb938827410318b4fe" kindref="member">TILE</ref>,<sp/>Math.toDegrees(deltaT));</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>ensures<sp/>that<sp/>the<sp/>odometer<sp/>only<sp/>runs<sp/>once<sp/>every<sp/>period</highlight><highlight class="normal"></highlight></codeline>
@@ -116,6 +116,6 @@
 <codeline lineno="150"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="151"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/odometer/Odometer.java"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/Odometer.java"/>
   </compounddef>
 </doxygen>

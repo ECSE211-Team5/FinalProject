@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::Test::ComponentTest</compoundname>
+    <innerclass refid="enumca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1_1_type" prot="public">ca::mcgill::ecse211::Test::ComponentTest::Type</innerclass>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a2e7169881d709c5cc7a85b064651abda" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.Test.ComponentTest.runTest</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>runTest</name>
+        <param>
+          <type><ref refid="enumca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1_1_type" kindref="compound">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method selects test for each individual components of the design</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" line="13" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" bodystart="13" bodyend="15"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af681b5dc675c13ed284071cc135f5fd3" compoundref="_main_8java" startline="52" endline="66">ca.mcgill.ecse211.project.Main.main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a1a47d24fa18b0e254a35ed95ad3f8a09" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.Test.ComponentTest.navigationTest</definition>
+        <argsstring>()</argsstring>
+        <name>navigationTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for Navigation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a75984b019b30626003d0b2a9c5a52e75" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.Test.ComponentTest.localizationTest</definition>
+        <argsstring>()</argsstring>
+        <name>localizationTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for localizationTest </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" line="27" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a2ef053a823fdbf349c1eaa3ae11bd477" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.Test.ComponentTest.ultrasonicSensorTest</definition>
+        <argsstring>()</argsstring>
+        <name>ultrasonicSensorTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for UltrasonicSensor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" line="34" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1aafdb1b5fb1ecccae51c551f54f92c447" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.Test.ComponentTest.lightSensorTest</definition>
+        <argsstring>()</argsstring>
+        <name>lightSensorTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for lightSensor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" line="41" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a8e356dc648d4b446fc6f7b0987078c2d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.Test.ComponentTest.RingDetection</definition>
+        <argsstring>()</argsstring>
+        <name>RingDetection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for ring detection </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" bodystart="48" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" line="3" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/Test/ComponentTest.java" bodystart="3" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1aafdb1b5fb1ecccae51c551f54f92c447" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::Test::ComponentTest</scope><name>lightSensorTest</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a75984b019b30626003d0b2a9c5a52e75" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::Test::ComponentTest</scope><name>localizationTest</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a1a47d24fa18b0e254a35ed95ad3f8a09" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::Test::ComponentTest</scope><name>navigationTest</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a8e356dc648d4b446fc6f7b0987078c2d" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::Test::ComponentTest</scope><name>RingDetection</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a2e7169881d709c5cc7a85b064651abda" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::Test::ComponentTest</scope><name>runTest</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test_1a2ef053a823fdbf349c1eaa3ae11bd477" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::Test::ComponentTest</scope><name>ultrasonicSensorTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

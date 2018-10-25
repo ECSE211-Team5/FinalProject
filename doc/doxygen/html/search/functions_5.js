@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['navigation',['Navigation',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_navigation.html#a93b746f61226c3b14532c43d0c2f61dd',1,'ca::mcgill::ecse211::lab5::Navigation']]]
+  ['navigation',['Navigation',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#aaee14b67c392ddd951e3ce21224c3e56',1,'ca::mcgill::ecse211::project::Navigation']]],
+  ['navigationtest',['navigationTest',['../classca_1_1mcgill_1_1ecse211_1_1_test_1_1_component_test.html#a1a47d24fa18b0e254a35ed95ad3f8a09',1,'ca::mcgill::ecse211::Test::ComponentTest']]]
 ];

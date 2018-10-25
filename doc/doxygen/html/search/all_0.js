@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['colorcalibrator',['ColorCalibrator',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_color_calibrator.html',1,'ca::mcgill::ecse211::lab5']]],
-  ['convertangle',['convertAngle',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_light_localizer.html#ab9d7289c4badf692fd5c83635305f2c5',1,'ca::mcgill::ecse211::lab5::LightLocalizer']]],
-  ['convertdistance',['convertDistance',['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_light_localizer.html#a9eebe889aa2d4d2e881f413cc727cd9c',1,'ca.mcgill.ecse211.lab5.LightLocalizer.convertDistance()'],['../classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_navigation.html#a85122ad723d0988c118866f367073be6',1,'ca.mcgill.ecse211.lab5.Navigation.convertDistance()']]],
-  ['odometer',['odometer',['../namespaceca_1_1mcgill_1_1ecse211_1_1odometer.html',1,'ca::mcgill::ecse211']]]
+  ['brg_5fll',['BRG_LL',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#ae6824f16adf03173062767f99d46b6e0',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['brg_5fur',['BRG_UR',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a644c339e7b0f11c5780f9c7de34e1e07',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['brr_5fll',['BRR_LL',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a8695da7f04954ea1513082740fd2d57f',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['brr_5fur',['BRR_UR',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a720d0ae20fc2466e7b77fda14bf374f3',1,'ca::mcgill::ecse211::project::GameParameters']]]
 ];

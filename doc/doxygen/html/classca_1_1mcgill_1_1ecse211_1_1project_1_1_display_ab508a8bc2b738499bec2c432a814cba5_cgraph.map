@@ -1,0 +1,7 @@
+<map id="ca.mcgill.ecse211.project.Display.run" name="ca.mcgill.ecse211.project.Display.run">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="228,5,417,47"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data.html#a4e0eabd547726c90bd0b7252557d7ad7" title="ca.mcgill.ecse211.sensors.\lSensorData.getDL" alt="" coords="232,71,413,112"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data.html#a0abd08431dae67c7ee0e7a18b5305f91" title="ca.mcgill.ecse211.sensors.\lSensorData.getRGB" alt="" coords="232,136,413,177"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a92e653a6a9f7a31cb7b6f9bc2e732133" title="ca.mcgill.ecse211.project.\lColorCalibrator.getColor" alt="" coords="235,201,410,243"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data.html#a7ad543db5c907b4bd3329dbb34b4e9d9" title="ca.mcgill.ecse211.sensors.\lSensorData.getA" alt="" coords="232,267,413,308"/>
+</map>

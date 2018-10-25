@@ -1,0 +1,77 @@
+.TH "ca.mcgill.ecse211.localization.LightLocalizer" 3 "Thu Oct 25 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.localization.LightLocalizer
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLightLocalizer\fP (\fBNavigation\fP nav, EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor)  throws OdometerExceptions "
+.br
+.ti -1c
+.RI "void \fBlocalize\fP (int[] sC)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class helps our robot to localize itself using the light sensor
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file LightLocalizer\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ca\&.mcgill\&.ecse211\&.localization\&.LightLocalizer\&.LightLocalizer (\fBNavigation\fP nav, EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor) throws \fBOdometerExceptions\fP"
+This is the class constructor
+.PP
+\fBParameters:\fP
+.RS 4
+\fIleftMotor\fP 
+.br
+\fIrightMotor\fP 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIOdometerExceptions\fP 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file LightLocalizer\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ca\&.mcgill\&.ecse211\&.localization\&.LightLocalizer\&.localize (int [] sC)"
+(\fIImprove\fP) Once the robot know what angle it is facing, this method looks for the x,y axis origins knowing it is in the first tile facing north\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsC\fP the coordinate to set to after localization 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file LightLocalizer\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

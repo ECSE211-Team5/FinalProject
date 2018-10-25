@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::project::Navigation</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae23bfa31488ae9eac7142de45d7163ea" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ca.mcgill.ecse211.project.Navigation.FORWARD_SPEED</definition>
+        <argsstring></argsstring>
+        <name>FORWARD_SPEED</name>
+        <initializer>= 250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a82b05b985ae3649bc9e515fb03428d82" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ca.mcgill.ecse211.project.Navigation.ROTATE_SPEED</definition>
+        <argsstring></argsstring>
+        <name>ROTATE_SPEED</name>
+        <initializer>= 80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae680802d48058814c87158c38f3cad34" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ca.mcgill.ecse211.project.Navigation.ACCELERATION</definition>
+        <argsstring></argsstring>
+        <name>ACCELERATION</name>
+        <initializer>= 300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="32" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7955ada29edd50e3d234b0a05322eb05" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ca.mcgill.ecse211.project.Navigation.DISTANCE_THRESHOLD</definition>
+        <argsstring></argsstring>
+        <name>DISTANCE_THRESHOLD</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="33" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a05e650fadd8733a3486ecfc5ed8c54ed" prot="private" static="no" mutable="no">
+        <type>EV3LargeRegulatedMotor</type>
+        <definition>EV3LargeRegulatedMotor ca.mcgill.ecse211.project.Navigation.leftMotor</definition>
+        <argsstring></argsstring>
+        <name>leftMotor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="35" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a2ec143983071420e10579c211e2d5f0f" prot="private" static="no" mutable="no">
+        <type>EV3LargeRegulatedMotor</type>
+        <definition>EV3LargeRegulatedMotor ca.mcgill.ecse211.project.Navigation.rightMotor</definition>
+        <argsstring></argsstring>
+        <name>rightMotor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a20d49ac52063aa11a31a0cdbfdb90aa8" prot="private" static="no" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer" kindref="compound">Odometer</ref></type>
+        <definition>Odometer ca.mcgill.ecse211.project.Navigation.odometer</definition>
+        <argsstring></argsstring>
+        <name>odometer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad915718f10b304ba6d7c2366037e8022" prot="private" static="no" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data" kindref="compound">SensorData</ref></type>
+        <definition>SensorData ca.mcgill.ecse211.project.Navigation.data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="38" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ca.mcgill.ecse211.project.Navigation.Navigation</definition>
+        <argsstring>(EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor)</argsstring>
+        <name>Navigation</name>
+        <param>
+          <type>EV3LargeRegulatedMotor</type>
+          <declname>leftMotor</declname>
+        </param>
+        <param>
+          <type>EV3LargeRegulatedMotor</type>
+          <declname>rightMotor</declname>
+        </param>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This navigation class constructor sets up our robot to begin navigating a particular map</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leftMotor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The EV3LargeRegulatedMotor instance for our left motor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rightMotor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The EV3LargeRegulatedMotor instance for our right motor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="46" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="46" bodyend="57"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="79" endline="88">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ab8aef4bdb5d9f3dad399656e00af2539" compoundref="_sensor_data_8java" startline="70" endline="82">ca.mcgill.ecse211.sensors.SensorData.getSensorData</references>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.project.Navigation.travelTo</definition>
+        <argsstring>(double x, double y, boolean avoid)</argsstring>
+        <name>travelTo</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>avoid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(<emphasis>Improve</emphasis>) This method travel the robot to desired position by following the line (Always rotate 90 degree)</para><para>When avoid=true, the nav thread will handle traveling. If you want to travel without avoidance, this is also possible. In this case, the method in the <ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" kindref="compound">Navigation</ref> class is used.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate to travel to (in cm) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate to travel to (in cm) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>avoid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the robot will pay attention to the distance from ultrasonic sensor to avoid abstacle when navigating </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>doCorrection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="72" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="72" bodyend="89"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a8b363632288a415edb9d32932555d233" compoundref="_navigation_8java" startline="99" endline="124">ca.mcgill.ecse211.project.Navigation.turnTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="152" endline="154">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a206492a827a716e6c606dc817cb4ff4d" compoundref="_game_8java" startline="61">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a9a7a353789ddffcb938827410318b4fe" compoundref="_game_8java" startline="56">ca.mcgill.ecse211.project.Game.TILE</references>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a8b363632288a415edb9d32932555d233" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.project.Navigation.turnTo</definition>
+        <argsstring>(double angle, boolean async, boolean useGyro)</argsstring>
+        <name>turnTo</name>
+        <param>
+          <type>double</type>
+          <declname>angle</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>async</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>useGyro</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(<emphasis>Improve</emphasis> <emphasis>Consider to discard</emphasis>) This method is where the logic for the odometer will run. Use the methods provided from the OdometerData class to implement the odometer.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle we want our robot to turn to (in degrees) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>async</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether return instantaneously </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="99" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="99" bodyend="124"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a7ad543db5c907b4bd3329dbb34b4e9d9" compoundref="_sensor_data_8java" startline="136" endline="148">ca.mcgill.ecse211.sensors.SensorData.getA</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a206492a827a716e6c606dc817cb4ff4d" compoundref="_game_8java" startline="61">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad7896596e6ee5d9ff87a7bdbf230995c" compoundref="_game_8java" startline="67">ca.mcgill.ecse211.project.Game.TRACK</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="54" endline="93">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" compoundref="_navigation_8java" startline="72" endline="89">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a86d4b320aa7e8368e38c5a38c030adb3" compoundref="_ring_searcher_8java" startline="59" endline="79">ca.mcgill.ecse211.project.RingSearcher.search</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1af2bddd9a34ea26cfd9a1e4ac055644dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.project.Navigation.rotate</definition>
+        <argsstring>(int angle)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type>int</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rotate the robot by certain angle</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle to rotate our robot to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="131" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="131" bodyend="134"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a206492a827a716e6c606dc817cb4ff4d" compoundref="_game_8java" startline="61">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad7896596e6ee5d9ff87a7bdbf230995c" compoundref="_game_8java" startline="67">ca.mcgill.ecse211.project.Game.TRACK</references>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae8530d181ffd790ff9dea5eeab54b1a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.project.Navigation.stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop the motor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="139" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="139" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ca.mcgill.ecse211.project.Navigation.convertDistance</definition>
+        <argsstring>(double radius, double distance)</argsstring>
+        <name>convertDistance</name>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>distance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method allows the conversion of a distance to the total rotation of each wheel need to cover that distance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The radius of our wheels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distance traveled </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A converted distance </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="152" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="152" bodyend="154"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="54" endline="93">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" compoundref="_navigation_8java" startline="72" endline="89">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a434c589a16c077ff25dd93121f93c2a7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ca.mcgill.ecse211.project.Navigation.convertAngle</definition>
+        <argsstring>(double radius, double width, double angle)</argsstring>
+        <name>convertAngle</name>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method allows the conversion of an angle value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The radius of our wheels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distance traveled </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A converted angle </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="164" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="164" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The Navigator class extends the functionality of the <ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" kindref="compound">Navigation</ref> class. It offers an alternative <ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" kindref="member">travelTo()</ref> method which uses a state machine to implement obstacle avoidance.</para><para>The Navigator class does not override any of the methods in <ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" kindref="compound">Navigation</ref>. All methods with the same name are overloaded i.e. the Navigator version takes different parameters than the <ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" kindref="compound">Navigation</ref> version.</para><para>This is useful if, for instance, you want to force travel without obstacle detection over small distances. One place where you might want to do this is in the ObstacleAvoidance class. Another place is methods that implement specific features for future milestones such as retrieving an object.</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="29" bodyend="167"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae680802d48058814c87158c38f3cad34" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>ACCELERATION</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a434c589a16c077ff25dd93121f93c2a7" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>convertAngle</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>convertDistance</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad915718f10b304ba6d7c2366037e8022" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>data</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7955ada29edd50e3d234b0a05322eb05" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>DISTANCE_THRESHOLD</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae23bfa31488ae9eac7142de45d7163ea" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>FORWARD_SPEED</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a05e650fadd8733a3486ecfc5ed8c54ed" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>leftMotor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>Navigation</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a20d49ac52063aa11a31a0cdbfdb90aa8" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>odometer</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a2ec143983071420e10579c211e2d5f0f" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>rightMotor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1af2bddd9a34ea26cfd9a1e4ac055644dc" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>rotate</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a82b05b985ae3649bc9e515fb03428d82" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>ROTATE_SPEED</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae8530d181ffd790ff9dea5eeab54b1a1" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>stop</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>travelTo</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a8b363632288a415edb9d32932555d233" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>turnTo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

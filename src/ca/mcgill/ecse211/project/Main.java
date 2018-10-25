@@ -37,33 +37,31 @@ public class Main {
    * Whether Enable test
    */
   public static boolean test = false;
-  
+
   /**
    * Type of test
    */
   public static ComponentTest.Type cType = ComponentTest.Type.LightSensor;
-  
+
   /**
-   * This method is our main entry point - instantiate objects used and set up
-   * sensor.
+   * This method is our main entry point - instantiate objects used and set up sensor.
    * 
-   * @param args an array of arguments that can be passed in via commandline or
-   *             otherwise.
-   * @throws OdometerExceptions 
+   * @param args an array of arguments that can be passed in via commandline or otherwise.
+   * @throws OdometerExceptions
    */
-  public static void main(String[] args){
+  public static void main(String[] args) {
     try {
       Game.preparation();
-      if(test) {
+      if (test) {
         ComponentTest.runTest(cType);
-      }else {
+      } else {
         Game.runGame();
-      }     
-      
+      }
+
     } catch (OdometerExceptions e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
-    
+
   }
 }
