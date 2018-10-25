@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::sensors::SensorData</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1afd69657f252c634cefc3fdc1eef21772" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>volatile double ca.mcgill.ecse211.sensors.SensorData.light</definition>
+        <argsstring></argsstring>
+        <name>light</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="20" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ab9c5af6f1bc0ef5d92797a39a21455fc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>volatile double ca.mcgill.ecse211.sensors.SensorData.distance</definition>
+        <argsstring></argsstring>
+        <name>distance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="21" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1aeb3f2cc7d016c3fe9144883b0e313b1d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>volatile double ca.mcgill.ecse211.sensors.SensorData.angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="22" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ac7f99eb990974f250a5e9539c0f1a8fd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>volatile int ca.mcgill.ecse211.sensors.SensorData.rgb[][]</definition>
+        <argsstring>[][]</argsstring>
+        <name>rgb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="23" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a9338b722add706ae989ee15cf24f4040" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>volatile boolean ca.mcgill.ecse211.sensors.SensorData.isReseting</definition>
+        <argsstring></argsstring>
+        <name>isReseting</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="35" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1aa1994be142487cad5a77bfd56dd4de24" prot="private" static="no" mutable="no">
+        <type>Condition</type>
+        <definition>Condition ca.mcgill.ecse211.sensors.SensorData.doneReseting</definition>
+        <argsstring></argsstring>
+        <name>doneReseting</name>
+        <initializer>= lock.newCondition()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="38" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a51e7db186028e146fa40567788fa151f" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>volatile int ca.mcgill.ecse211.sensors.SensorData.numberOfIntances</definition>
+        <argsstring></argsstring>
+        <name>numberOfIntances</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="26" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a726aa6be557dd500129ac35bbdbb7f40" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ca.mcgill.ecse211.sensors.SensorData.MAX_INSTANCES</definition>
+        <argsstring></argsstring>
+        <name>MAX_INSTANCES</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="29" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a89b5d184a335f6c767c3068408c1c6a1" prot="private" static="yes" mutable="no">
+        <type>Lock</type>
+        <definition>Lock ca.mcgill.ecse211.sensors.SensorData.lock</definition>
+        <argsstring></argsstring>
+        <name>lock</name>
+        <initializer>= new ReentrantLock(true)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="33" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ac58f186ca2d23fcb03ae50be6265ca51" prot="private" static="yes" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data" kindref="compound">SensorData</ref></type>
+        <definition>SensorData ca.mcgill.ecse211.sensors.SensorData.sensorData</definition>
+        <argsstring></argsstring>
+        <name>sensorData</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="43" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a41b9929f62455a15364385a339b4b910" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ca.mcgill.ecse211.sensors.SensorData.SensorData</definition>
+        <argsstring>()</argsstring>
+        <name>SensorData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor. The constructor is private. A factory is used instead such that only one instance of this class is ever created. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="49" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="49" bodyend="60"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ab8aef4bdb5d9f3dad399656e00af2539" compoundref="_sensor_data_8java" startline="70" endline="82">ca.mcgill.ecse211.sensors.SensorData.getSensorData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ab8aef4bdb5d9f3dad399656e00af2539" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized <ref refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data" kindref="compound">SensorData</ref></type>
+        <definition>static synchronized SensorData ca.mcgill.ecse211.sensors.SensorData.getSensorData</definition>
+        <argsstring>()</argsstring>
+        <name>getSensorData</name>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OdometerData factory. Returns an OdometerData instance and makes sure that only one instance is ever created. If the user tries to instantiate multiple objects, the method throws a MultipleOdometerDataException.</para><para><simplesect kind="return"><para>An OdometerData object </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OdometerExceptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="70" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="70" bodyend="82"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a41b9929f62455a15364385a339b4b910" compoundref="_sensor_data_8java" startline="49" endline="60">ca.mcgill.ecse211.sensors.SensorData.SensorData</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_display_1aeb15906f02c60c1ca449d4c37922739b" compoundref="_display_8java" startline="35" endline="39">ca.mcgill.ecse211.lab5.Display.Display</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_lab5_1a82cca51f550ed0eb016bb2082d3fe755" compoundref="_lab5_8java" startline="111" endline="212">ca.mcgill.ecse211.lab5.Lab5.main</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_light_localizer_1a83dbb9eaea19092e27f6f9acdd35d37a" compoundref="_light_localizer_8java" startline="37" endline="44">ca.mcgill.ecse211.lab5.LightLocalizer.LightLocalizer</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_navigation_1a93b746f61226c3b14532c43d0c2f61dd" compoundref="_navigation_8java" startline="47" endline="58">ca.mcgill.ecse211.lab5.Navigation.Navigation</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_ring_searcher_1aa3f2d76984b3b80f32b6ddd6770e24b0" compoundref="_ring_searcher_8java" startline="39" endline="51">ca.mcgill.ecse211.lab5.RingSearcher.RingSearcher</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_ultrasonic_localizer_1a47c08f2d2ec2ba664867231ca62020da" compoundref="_ultrasonic_localizer_8java" startline="42" endline="49">ca.mcgill.ecse211.lab5.UltrasonicLocalizer.UltrasonicLocalizer</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a4e0eabd547726c90bd0b7252557d7ad7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double []</type>
+        <definition>double [] ca.mcgill.ecse211.sensors.SensorData.getDL</definition>
+        <argsstring>()</argsstring>
+        <name>getDL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the Sensor data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the array to store the sensor data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the sensor data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="90" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="90" bodyend="110"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_display_1a047e885f7170ba80f60fd3b4b2bc79a9" compoundref="_display_8java" startline="57" endline="106">ca.mcgill.ecse211.lab5.Display.run</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_light_localizer_1a441f56a899fae5bc9c1d6a6d25fbe0bb" compoundref="_light_localizer_8java" startline="50" endline="89">ca.mcgill.ecse211.lab5.LightLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_navigation_1a318969f4776d0bf4a8721be3d2444a5c" compoundref="_navigation_8java" startline="70" endline="97">ca.mcgill.ecse211.lab5.Navigation.travelTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_ultrasonic_localizer_1a7fd82ab7240a07ae6947313c0769d4bc" compoundref="_ultrasonic_localizer_8java" startline="56" endline="62">ca.mcgill.ecse211.lab5.UltrasonicLocalizer.localize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a0abd08431dae67c7ee0e7a18b5305f91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int [][]</type>
+        <definition>int [][] ca.mcgill.ecse211.sensors.SensorData.getRGB</definition>
+        <argsstring>()</argsstring>
+        <name>getRGB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the rgb data for color sensor</para><para><simplesect kind="return"><para>: rgb data </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="117" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="117" bodyend="129"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_display_1a047e885f7170ba80f60fd3b4b2bc79a9" compoundref="_display_8java" startline="57" endline="106">ca.mcgill.ecse211.lab5.Display.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a7ad543db5c907b4bd3329dbb34b4e9d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double ca.mcgill.ecse211.sensors.SensorData.getA</definition>
+        <argsstring>()</argsstring>
+        <name>getA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the currently stored angle value</para><para><simplesect kind="return"><para>The current angle value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="136" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="136" bodyend="148"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_display_1a047e885f7170ba80f60fd3b4b2bc79a9" compoundref="_display_8java" startline="57" endline="106">ca.mcgill.ecse211.lab5.Display.run</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_navigation_1a318969f4776d0bf4a8721be3d2444a5c" compoundref="_navigation_8java" startline="70" endline="97">ca.mcgill.ecse211.lab5.Navigation.travelTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1lab5_1_1_navigation_1ac2c358ea3663ac06fcf757628a4a4a31" compoundref="_navigation_8java" startline="105" endline="130">ca.mcgill.ecse211.lab5.Navigation.turnTo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ae20bf127c57dcfcb3b7632ca05b6d482" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.sensors.SensorData.setD</definition>
+        <argsstring>(double d)</argsstring>
+        <name>setD</name>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overwrites the distance value. Use for ultrasonic sensor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to overwrite distance with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="155" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="155" bodyend="166"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_ultrasonic_poller_1acc71fac612a72c197244c71d6cf7b6e1" compoundref="_ultrasonic_poller_8java" startline="54" endline="93">ca.mcgill.ecse211.sensors.UltrasonicPoller.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a9828d8b4dfb9b197e8fd149fb7deb63b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.sensors.SensorData.setA</definition>
+        <argsstring>(double a)</argsstring>
+        <name>setA</name>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overwrites the angle value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to overwrite angle with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="173" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="173" bodyend="184"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_gyro_poller_1a2a52059192555ece72190fa44a761d28" compoundref="_gyro_poller_8java" startline="46" endline="50">ca.mcgill.ecse211.sensors.GyroPoller.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ae5e2528566b53218673ebc1ae4683204" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.sensors.SensorData.setRGB</definition>
+        <argsstring>(int i, int r, int g, int b)</argsstring>
+        <name>setRGB</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set rgb data for color sensor with specific id</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id for the color sensor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>red value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>green value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>blue value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="194" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="194" bodyend="207"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_r_g_b_poller_1aa0e804f9185cb172aa1f63c62d13d168" compoundref="_r_g_b_poller_8java" startline="30" endline="33">ca.mcgill.ecse211.sensors.RGBPoller.RGBPoller</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1aeafd49ce71819e8e1a5d5ff6287e7819" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.sensors.SensorData.setL</definition>
+        <argsstring>(double l)</argsstring>
+        <name>setL</name>
+        <param>
+          <type>double</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overwrites the light value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to overwrite the current light value with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="214" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="214" bodyend="225"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_light_poller_1a31751b40132d9402de493aa9ec11d9d5" compoundref="_light_poller_8java" startline="48" endline="56">ca.mcgill.ecse211.sensors.LightPoller.run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements methods to manage data from our sensors</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" line="18" column="1" bodyfile="/home/ccc/Eclipse-Workspace-Oxygen/Lab5-SearchAndLocalize/src/ca/mcgill/ecse211/sensors/SensorData.java" bodystart="18" bodyend="226"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1aeb3f2cc7d016c3fe9144883b0e313b1d" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>angle</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ab9c5af6f1bc0ef5d92797a39a21455fc" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>distance</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1aa1994be142487cad5a77bfd56dd4de24" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>doneReseting</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a7ad543db5c907b4bd3329dbb34b4e9d9" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>getA</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a4e0eabd547726c90bd0b7252557d7ad7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>getDL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a0abd08431dae67c7ee0e7a18b5305f91" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>getRGB</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ab8aef4bdb5d9f3dad399656e00af2539" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>getSensorData</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a9338b722add706ae989ee15cf24f4040" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>isReseting</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1afd69657f252c634cefc3fdc1eef21772" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>light</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a89b5d184a335f6c767c3068408c1c6a1" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>lock</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a726aa6be557dd500129ac35bbdbb7f40" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>MAX_INSTANCES</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a51e7db186028e146fa40567788fa151f" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>numberOfIntances</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ac7f99eb990974f250a5e9539c0f1a8fd" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>rgb</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ac58f186ca2d23fcb03ae50be6265ca51" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>sensorData</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a41b9929f62455a15364385a339b4b910" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>SensorData</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1a9828d8b4dfb9b197e8fd149fb7deb63b" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>setA</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ae20bf127c57dcfcb3b7632ca05b6d482" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>setD</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1aeafd49ce71819e8e1a5d5ff6287e7819" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>setL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1sensors_1_1_sensor_data_1ae5e2528566b53218673ebc1ae4683204" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::sensors::SensorData</scope><name>setRGB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
