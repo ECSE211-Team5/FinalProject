@@ -123,7 +123,7 @@ public class GameParameters {
    * min BRG_UR[0] - BRG_LL[0] = 1
    * max BRG_UR[0] - BRG_LL[0] = 2
    * min BRG_UR[1] - BRG_LL[1] = 1
-   * max BRG_UR[1] - BRG_LL[1] = 2  
+   * max BRG_UR[1] - BRG_LL[1] = 2 
    */
   public static int[] BRG_UR = {11, 5};
 
