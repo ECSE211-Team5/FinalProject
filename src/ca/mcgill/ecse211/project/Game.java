@@ -32,21 +32,21 @@ import lejos.robotics.SampleProvider;
  */
 public class Game {
   // Motor Objects, and Robot related parameters
-  private static final Port usPort = LocalEV3.get().getPort("S1");
+  //private static final Port usPort = LocalEV3.get().getPort("S1");
   // initialize multiple light ports in main
-  private static Port[] lgPorts = new Port[2];
+  private static Port[] lgPorts = new Port[3];
   private static final TextLCD lcd = LocalEV3.get().getTextLCD();
-  private static final Port gPort = LocalEV3.get().getPort("S4");
-  private static EV3GyroSensor gSensor = new EV3GyroSensor(gPort);
+//  private static final Port gPort = LocalEV3.get().getPort("S4");
+//  private static EV3GyroSensor gSensor = new EV3GyroSensor(gPort);
 
   /**
-   * Motor object instance that allows control of the left motor connected to port B
+   * Motor object instance that allows control of the left motor connected to port A
    */
   public static final EV3LargeRegulatedMotor leftMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("A"));
 
   /**
-   * Motor object instance that allows control of the right motor connected to port A
+   * Motor object instance that allows control of the right motor connected to port D
    */
   public static final EV3LargeRegulatedMotor rightMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("D"));
@@ -58,13 +58,13 @@ public class Game {
   /**
    * This variable denotes the radius of our wheels in cm.
    */
-  public static final double WHEEL_RAD = 2.2;
+  public static final double WHEEL_RAD = 2.15;
 
   /**
    * This variable denotes the track distance between the center of the wheels in cm (measured and
    * adjusted based on trial and error).
    */
-  public static double TRACK = 10.3;
+  public static double TRACK = 11.5;
 
   /**
    * Prepare for the game: starting thread, read all arguments
@@ -79,27 +79,29 @@ public class Game {
     SensorData sensorData = SensorData.getSensorData();
 
     // Ultrasonic sensor stuff
-    @SuppressWarnings("resource")
-    SensorModes usSensor = new EV3UltrasonicSensor(usPort);
-    SampleProvider usDistance = usSensor.getMode("Distance");
-    float[] usData = new float[usDistance.sampleSize()];
+    //@SuppressWarnings("resource")
+    //SensorModes usSensor = new EV3UltrasonicSensor(usPort);
+    //SampleProvider usDistance = usSensor.getMode("Distance");
+    //float[] usData = new float[usDistance.sampleSize()];
 
     // Light sesnor sensor stuff
     // @SuppressWarnings("resource")
     lgPorts[0] = LocalEV3.get().getPort("S2");
     lgPorts[1] = LocalEV3.get().getPort("S3");
+    //lgPorts[2] = LocalEV3.get().getPort("S4");
     // lgPorts[2] = LocalEV3.get().getPort("S4");
     EV3ColorSensor[] lgSensors = new EV3ColorSensor[2];
     for (int i = 0; i < lgSensors.length; i++) {
       lgSensors[i] = new EV3ColorSensor(lgPorts[i]);
     }
 
-    SampleProvider backLight = lgSensors[0].getRedMode();
-    SampleProvider frontLight1 = lgSensors[1].getRGBMode();
+    SampleProvider backLight1 = lgSensors[0].getRedMode();
+    SampleProvider backLight2 = lgSensors[1].getRedMode();
+    //SampleProvider frontLight = lgSensors[2].getRGBMode();
 
     // SampleProvider frontLight2 = lgSensors[2].getRedMode();
 
-    SampleProvider gProvider = gSensor.getAngleMode();
+    //SampleProvider gProvider = gSensor.getAngleMode();
 
     // STEP 1: LOCALIZE to (1,1)
     // ButtonChoice left or right
@@ -117,14 +119,16 @@ public class Game {
     odoDisplayThread.start();
 
     // Start ultrasonic and light sensors
-    Thread usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
-    usPoller.start();
-    Thread bLgPoller = new LightPoller(backLight, new float[backLight.sampleSize()], sensorData);
-    bLgPoller.start();
-    Thread fLgPoller1 = new RGBPoller(frontLight1, new float[frontLight1.sampleSize()], sensorData);
-    fLgPoller1.start();
-    Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);
-    gPoller.start();
+    //Thread usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
+    //usPoller.start();
+    Thread bLgPoller1 = new LightPoller(backLight1, new float[backLight1.sampleSize()], sensorData);
+    bLgPoller1.start();
+    Thread bLgPoller2 = new LightPoller(backLight2, new float[backLight2.sampleSize()], sensorData);
+    bLgPoller2.start();
+    //Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight.sampleSize()], sensorData);
+    //fLgPoller1.start();
+//    Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);
+//    gPoller.start();
   }
 
   /**

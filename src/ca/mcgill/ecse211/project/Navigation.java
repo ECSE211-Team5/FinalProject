@@ -30,7 +30,6 @@ public class Navigation {
   private static final int FORWARD_SPEED = 250;
   private static final int ROTATE_SPEED = 80;
   private static final int ACCELERATION = 300;
-  private static final int DISTANCE_THRESHOLD = 25;
 
   private EV3LargeRegulatedMotor leftMotor;
   private EV3LargeRegulatedMotor rightMotor;
@@ -72,20 +71,43 @@ public class Navigation {
   public void travelTo(double x, double y, boolean avoid) {
     double dX = x - odometer.getXYT()[0];
     double dY = y - odometer.getXYT()[1];
-    double theta = Math.atan(dX / dY);
-    if (dY < 0 && theta < Math.PI)
-      theta += Math.PI;
+    //double theta = Math.atan(dX / dY);
+    //if (dY < 0 && theta < Math.PI)
+      //theta += Math.PI;
 
     // Euclidean distance calculation.
-    double distance = Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2));
-
-    turnTo(Math.toDegrees(theta), false, true);
-
+    //double distance = Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2));
+    if(dX > 0) {
+      turnTo(90);
+    }else if(dX < 0) {
+      turnTo(-90);
+    }
+    Move(dX, true);
+   
+    if(dY > 0) {
+      turnTo(0);
+    }else if(dY < 0) {
+      turnTo(180);
+    }
+    Move(dY, true);
+  }
+  
+  public void Move(double distance, boolean correction) {
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
 
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
-    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), false);
+    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
+    
+    while(leftMotor.isMoving() && rightMotor.isMoving()) {
+      if(data.getDL()[1] < -10) {
+        leftMotor.stop();
+      }
+      
+      if(data.getDL()[2] < -10) {
+        rightMotor.stop();
+      }
+    }
   }
 
   /**
@@ -96,14 +118,10 @@ public class Navigation {
    * @param angle The angle we want our robot to turn to (in degrees)
    * @param async whether return instantaneously
    */
-  public void turnTo(double angle, boolean async, boolean useGyro) {
+  public void turnTo(double angle) {
     double dTheta;
 
-    if (useGyro) {
-      dTheta = angle - data.getA();
-    } else {
-      dTheta = angle - odometer.getXYT()[2];
-    }
+    dTheta = angle - odometer.getXYT()[2];
     if (dTheta < 0)
       dTheta += 360;
 
@@ -112,14 +130,14 @@ public class Navigation {
       leftMotor.setSpeed(ROTATE_SPEED);
       rightMotor.setSpeed(ROTATE_SPEED);
       leftMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta), true);
-      rightMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta), async);
+      rightMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta), false);
     }
     // TURN LEFT
     else {
       leftMotor.setSpeed(ROTATE_SPEED);
       rightMotor.setSpeed(ROTATE_SPEED);
       leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), true);
-      rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), async);
+      rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), false);
     }
   }
 

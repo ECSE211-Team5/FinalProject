@@ -61,7 +61,7 @@ public class RingSearcher{
     boolean foundRing = false;
     boolean ColorMatched = false;
     // turn to the angle async
-    navigation.turnTo(angle, false, true);
+    navigation.turnTo(angle);
     // if we found a ring, got for the ring and check its color
     // if the color matches, return true
     // if(foundRing) {

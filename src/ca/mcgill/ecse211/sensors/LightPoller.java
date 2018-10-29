@@ -20,7 +20,9 @@ public class LightPoller extends Thread {
   protected SampleProvider us;
   protected SensorData cont;
   protected float[] lgData;
-
+  protected float lastValue;
+  private static int id;
+  private static int sensorNumber = 0;
   /**
    * This constructor creates an instance of the LightPoller class to provide distance data from an
    * light sensor to our robot.
@@ -37,6 +39,8 @@ public class LightPoller extends Thread {
     this.us = us;
     this.cont = cont;
     this.lgData = lgData;
+    this.id = sensorNumber;
+    sensorNumber++;
   }
 
   /**
@@ -53,12 +57,6 @@ public class LightPoller extends Thread {
       processData();
 
       try {
-        Thread.sleep(30);
-      } catch (InterruptedException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-      }
-      try {
         Thread.sleep(50);
       } catch (Exception e) {
       } // Poor man's timed sampling
@@ -69,6 +67,7 @@ public class LightPoller extends Thread {
     us.fetchSample(lgData, 0); // acquire data
     int distance = (int) (lgData[0] * 100); // extract from buffer, multiply by 100 for convenience
                                             // and allow it to be cast to int
-    cont.setL(distance); // now take action depending on value
+    cont.setL(distance, id); // now take action depending on value
+    lastValue = distance;
   }
 }

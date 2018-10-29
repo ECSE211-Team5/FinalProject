@@ -36,7 +36,7 @@ public class Main {
   /**
    * Whether Enable test
    */
-  public static boolean test = false;
+  public static boolean test = true;
 
   /**
    * Type of test
@@ -53,7 +53,17 @@ public class Main {
     try {
       Game.preparation();
       if (test) {
-        ComponentTest.runTest(cType);
+        final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
+        (new Thread(){
+            public void run() {
+              try {
+                ComponentTest.navigationTest();
+              } catch (OdometerExceptions e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+              }
+            }
+        }).start();
       } else {
         Game.runGame();
       }

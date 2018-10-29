@@ -17,7 +17,7 @@ import ca.mcgill.ecse211.odometer.OdometerExceptions;
  */
 public class SensorData {
   // Sensor data parameters
-  private volatile double light; // Head angle
+  private volatile double[] lights; // Head angle
   private volatile double distance;
   private volatile double angle;
   private volatile int rgb[][];
@@ -49,8 +49,8 @@ public class SensorData {
   protected SensorData() {
     // Default distance value is 40 cm from any walls.
     this.distance = 40;
-    // Default light value is 0.5
-    this.light = 0.5;
+    // Default light value is 0
+    this.lights = new double[2];
     rgb = new int[1][3];
     for (int i = 0; i < rgb.length; i++) {
       for (int j = 0; j < rgb[i].length; j++) {
@@ -88,7 +88,7 @@ public class SensorData {
    * @return the sensor data.
    */
   public double[] getDL() {
-    double[] sensordata = new double[4];
+    double[] sensordata = new double[3];
     lock.lock();
     try {
       while (isReseting) { // If a reset operation is being executed, wait
@@ -98,7 +98,8 @@ public class SensorData {
       }
 
       sensordata[0] = distance;
-      sensordata[1] = light;
+      sensordata[1] = lights[0];
+      sensordata[2] = lights[1];
     } catch (InterruptedException e) {
       // Print exception to screen
       e.printStackTrace();
@@ -211,11 +212,11 @@ public class SensorData {
    * 
    * @param l The value to overwrite the current light value with
    */
-  public void setL(double l) {
+  public void setL(double l, int id) {
     lock.lock();
     isReseting = true;
     try {
-      this.light = l;
+      this.lights[id] = l;
       isReseting = false; // Done reseting
       doneReseting.signalAll(); // Let the other threads know that you are
                                 // done reseting
