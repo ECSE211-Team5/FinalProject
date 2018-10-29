@@ -21,7 +21,7 @@ public class LightPoller extends Thread {
   protected SensorData cont;
   protected float[] lgData;
   protected float lastValue;
-  private static int id;
+  private int id;
   private static int sensorNumber = 0;
   /**
    * This constructor creates an instance of the LightPoller class to provide distance data from an
@@ -67,7 +67,7 @@ public class LightPoller extends Thread {
     us.fetchSample(lgData, 0); // acquire data
     int distance = (int) (lgData[0] * 100); // extract from buffer, multiply by 100 for convenience
                                             // and allow it to be cast to int
-    cont.setL(distance, id); // now take action depending on value
+    cont.setL(distance - lastValue, id); // now take action depending on value
     lastValue = distance;
   }
 }

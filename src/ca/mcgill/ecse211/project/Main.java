@@ -53,7 +53,7 @@ public class Main {
     try {
       Game.preparation();
       if (test) {
-        final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
+        Button.waitForAnyPress(); // Record choice (left or right press)
         (new Thread(){
             public void run() {
               try {
@@ -67,7 +67,8 @@ public class Main {
       } else {
         Game.runGame();
       }
-
+      Button.waitForAnyPress();
+      System.exit(0);
     } catch (OdometerExceptions e) {
       // TODO Auto-generated catch block
       e.printStackTrace();

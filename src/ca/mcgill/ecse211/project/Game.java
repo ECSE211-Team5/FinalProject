@@ -66,6 +66,7 @@ public class Game {
    */
   public static double TRACK = 11.5;
 
+  public static double SEN_DIS = 4.4;
   /**
    * Prepare for the game: starting thread, read all arguments
    * 

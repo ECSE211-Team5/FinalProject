@@ -27,7 +27,7 @@ import lejos.hardware.motor.EV3LargeRegulatedMotor;
  * @author Kamy Moussavi Kafi
  */
 public class Navigation {
-  private static final int FORWARD_SPEED = 250;
+  private static final int FORWARD_SPEED = 100;
   private static final int ROTATE_SPEED = 80;
   private static final int ACCELERATION = 300;
 
@@ -56,69 +56,90 @@ public class Navigation {
   }
 
   /**
-   * (*Improve*)
-   *  This method travel the robot to desired position by following the line (Always rotate 90 degree)
+   * (*Improve*) This method travel the robot to desired position by following the line (Always
+   * rotate 90 degree)
    * 
    * When avoid=true, the nav thread will handle traveling. If you want to travel without avoidance,
    * this is also possible. In this case, the method in the Navigation class is used.
    * 
    * @param x The x coordinate to travel to (in cm)
    * @param y The y coordinate to travel to (in cm)
-   * @param avoid: the robot will pay attention to the distance from ultrasonic sensor to avoid abstacle
-   * when navigating
+   * @param avoid: the robot will pay attention to the distance from ultrasonic sensor to avoid
+   *        abstacle when navigating
    * @param doCorrection
    */
   public void travelTo(double x, double y, boolean avoid) {
     double dX = x - odometer.getXYT()[0];
     double dY = y - odometer.getXYT()[1];
-    //double theta = Math.atan(dX / dY);
-    //if (dY < 0 && theta < Math.PI)
-      //theta += Math.PI;
+    // double theta = Math.atan(dX / dY);
+    // if (dY < 0 && theta < Math.PI)
+    // theta += Math.PI;
 
     // Euclidean distance calculation.
-    //double distance = Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2));
-    if(dX > 0) {
+    // double distance = Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2));
+    double theta = 0;
+    if (dX > 0) {
       turnTo(90);
-    }else if(dX < 0) {
+      theta = 90;
+    } else if (dX < 0) {
       turnTo(-90);
+      theta = -90;
     }
-    Move(dX, true);
-   
-    if(dY > 0) {
+    moveWithCorrection(dX, theta);
+
+    if (dY > 0) {
       turnTo(0);
-    }else if(dY < 0) {
+      theta = 0;
+    } else if (dY < 0) {
       turnTo(180);
+      theta = 180;
     }
-    Move(dY, true);
+    moveWithCorrection(dY, theta);
   }
-  
-  public void Move(double distance, boolean correction) {
+
+  public synchronized void moveWithCorrection(double distance, double theta) {
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
+    int tiles = (int) distance;
+    double more = distance - tiles;
+    // leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
+    // rightMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
+    for (int i = 0; i < tiles; i++) {
+      moveOneTileWithCorrection(theta);
+    }
+    leftMotor.rotate(convertDistance(Game.WHEEL_RAD, more * Game.TILE), true);
+    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, more * Game.TILE), true);
+  }
 
-    leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
-    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
-    
-    while(leftMotor.isMoving() && rightMotor.isMoving()) {
-      if(data.getDL()[1] < -10) {
-        leftMotor.stop();
+  private void moveOneTileWithCorrection(double theta) {
+    leftMotor.forward();
+    rightMotor.forward();
+    while (leftMotor.isMoving() || rightMotor.isMoving()) {
+      double left = data.getDL()[1];
+      double right = data.getDL()[2];
+      if (left < -5) {
+        Sound.beep();
+        leftMotor.stop(true);
       }
-      
-      if(data.getDL()[2] < -10) {
-        rightMotor.stop();
+
+      if (right < -5) {
+        Sound.beep();
+        rightMotor.stop(true);
       }
     }
+    odometer.setTheta(theta);
+    leftMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
+    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), false);
   }
 
   /**
-   * (*Improve* *Consider to discard*)
-   * This method is where the logic for the odometer will run. Use the methods provided from the
-   * OdometerData class to implement the odometer.
+   * (*Improve* *Consider to discard*) This method is where the logic for the odometer will run. Use
+   * the methods provided from the OdometerData class to implement the odometer.
    * 
    * @param angle The angle we want our robot to turn to (in degrees)
    * @param async whether return instantaneously
    */
-  public void turnTo(double angle) {
+  public synchronized void turnTo(double angle) {
     double dTheta;
 
     dTheta = angle - odometer.getXYT()[2];
