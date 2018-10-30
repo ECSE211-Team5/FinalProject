@@ -23,7 +23,7 @@ public class UltrasonicPoller extends Thread {
   private SampleProvider us;
   private SensorData cont;
   private float[] usData;
-  private static final int SLEEP_INTERVAL = 30;
+  private boolean isStarted;
 
   /**
    * This constructor creates an instance of the UltrasonicPoller class to provide distance data
@@ -40,6 +40,7 @@ public class UltrasonicPoller extends Thread {
     this.us = us;
     this.cont = cont;
     this.usData = usData;
+    isStarted = true;
   }
 
   /**
@@ -51,44 +52,33 @@ public class UltrasonicPoller extends Thread {
    * 
    * @see java.lang.Thread#run()
    */
-  public void run() {
+  public synchronized void run() {
     int distance;
-    int sample[] = new int[5];
-    int sorted_sample[] = new int[5];
-    int sample_index = 0;
-    boolean first_five = true;
-    int first_five_counter = 0;
-    while (true) {
-      us.fetchSample(usData, 0); // acquire data
-      // get distance from buffer, multiply by 100 for convenience and allow it to be cast to int
-      distance = (int) (usData[0] * 100.0);
+    try {
+      while (true) {
+        if (!isStarted) {
+          wait();
+        } else {
+          us.fetchSample(usData, 0); // acquire data
+          // get distance from buffer, multiply by 100 for convenience and allow it to be cast to
+          // int
+          distance = (int) (usData[0] * 100.0);
 
-      // filter value
-      sample[sample_index] = distance;
-      sorted_sample = sample.clone();
-      Arrays.sort(sorted_sample);
-
-      // keep track of how many samples have been taken up to 5
-      if (first_five) {
-        first_five_counter++;
-        if (first_five_counter > sample.length - 1) {
-          first_five = false;
+          cont.setD(distance); // now take action depending on value
+          wait(50);
         }
       }
-      // no adjustments for first 5 samples to fill array
-      if (!first_five) {
-        if (distance > sorted_sample[2]) {
-          //distance = sorted_sample[2];
-        }
-      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    } // Poor man's timed sampling
+  }
 
-      cont.setD(distance); // now take action depending on value
-      sample_index = (sample_index + 1) % sample.length;
+  public synchronized boolean isStarted() {
+    return isStarted;
+  }
 
-      try {
-        Thread.sleep(SLEEP_INTERVAL);
-      } catch (Exception e) {
-      } // Poor man's timed sampling
-    }
+  public synchronized void setStart(boolean start) {
+    isStarted = start;
+    notify();
   }
 }

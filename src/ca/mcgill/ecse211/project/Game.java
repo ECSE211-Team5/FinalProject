@@ -96,8 +96,9 @@ public class Game {
       lgSensors[i] = new EV3ColorSensor(lgPorts[i]);
     }
 
-    SampleProvider backLight1 = lgSensors[0].getRedMode();
-    SampleProvider backLight2 = lgSensors[1].getRedMode();
+    SampleProvider backLight[] = new SampleProvider[2];
+    backLight[0] = lgSensors[0].getRedMode();
+    backLight[1] = lgSensors[1].getRedMode();
     //SampleProvider frontLight = lgSensors[2].getRGBMode();
 
     // SampleProvider frontLight2 = lgSensors[2].getRedMode();
@@ -122,10 +123,8 @@ public class Game {
     // Start ultrasonic and light sensors
     //Thread usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
     //usPoller.start();
-    Thread bLgPoller1 = new LightPoller(backLight1, new float[backLight1.sampleSize()], sensorData);
-    bLgPoller1.start();
-    Thread bLgPoller2 = new LightPoller(backLight2, new float[backLight2.sampleSize()], sensorData);
-    bLgPoller2.start();
+    Thread bLgPoller = new LightPoller(backLight, new float[2][backLight[1].sampleSize()], sensorData);
+    bLgPoller.start();
     //Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight.sampleSize()], sensorData);
     //fLgPoller1.start();
 //    Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);

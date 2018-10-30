@@ -102,8 +102,6 @@ public class Navigation {
     rightMotor.setSpeed(FORWARD_SPEED);
     int tiles = (int) distance;
     double more = distance - tiles;
-    // leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
-    // rightMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
     for (int i = 0; i < tiles; i++) {
       moveOneTileWithCorrection(theta);
     }

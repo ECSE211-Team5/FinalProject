@@ -67,7 +67,7 @@ public class Display implements Runnable {
       // Retrieve x, y and Theta information
       position = odo.getXYT();
       data = sensdata.getDL();
-      rgb = sensdata.getRGB()[0];
+      rgb = sensdata.getRGB();
 
       // Print x,y, and theta information
       DecimalFormat numberFormat = new DecimalFormat("######0.00");

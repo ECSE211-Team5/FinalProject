@@ -20,7 +20,7 @@ public class SensorData {
   private volatile double[] lights; // Head angle
   private volatile double distance;
   private volatile double angle;
-  private volatile int rgb[][];
+  private volatile int rgb[];
 
   // Class control variables
   private volatile static int numberOfIntances = 0; // Number of OdometerData
@@ -51,11 +51,9 @@ public class SensorData {
     this.distance = 40;
     // Default light value is 0
     this.lights = new double[2];
-    rgb = new int[1][3];
-    for (int i = 0; i < rgb.length; i++) {
-      for (int j = 0; j < rgb[i].length; j++) {
-        rgb[i][j] = 0;
-      }
+    rgb = new int[3];
+    for (int j = 0; j < rgb.length; j++) {
+      rgb[j] = 0;
     }
   }
 
@@ -115,7 +113,7 @@ public class SensorData {
    * 
    * @return: rgb data
    */
-  public int[][] getRGB() {
+  public int[] getRGB() {
     lock.lock();
     try {
       while (isReseting) {
@@ -192,13 +190,13 @@ public class SensorData {
    * @param g: green value
    * @param b: blue value
    */
-  public void setRGB(int i, int r, int g, int b) {
+  public void setRGB(int r, int g, int b) {
     lock.lock();
     isReseting = true;
     try {
-      rgb[i][0] = r;
-      rgb[i][1] = g;
-      rgb[i][2] = b;
+      rgb[0] = r;
+      rgb[1] = g;
+      rgb[2] = b;
       isReseting = false; // Done reseting
       doneReseting.signalAll(); // Let the other threads know that you are
                                 // done reseting

@@ -24,11 +24,8 @@ public class ComponentTest {
    */
   public static void navigationTest() throws OdometerExceptions {
     Navigation nav = new Navigation(Game.leftMotor, Game.rightMotor);
-    nav.travelTo(1, 1, false);
-    nav.travelTo(2, 1, false);
-    nav.travelTo(3, 2, false);
     nav.travelTo(4, 2, false);
-    nav.travelTo(1, 5, false);
+    nav.travelTo(0, 0, false);
   }
 
   /**

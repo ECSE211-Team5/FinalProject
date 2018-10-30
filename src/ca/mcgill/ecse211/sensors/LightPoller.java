@@ -17,12 +17,14 @@ import lejos.robotics.SampleProvider;
  * @author Kamy Moussavi Kafi
  */
 public class LightPoller extends Thread {
-  protected SampleProvider us;
+  protected SampleProvider us[];
   protected SensorData cont;
-  protected float[] lgData;
-  protected float lastValue;
+  protected float[][] lgData;
+  protected float lastValue[];
   private int id;
+  protected boolean isStarted;
   private static int sensorNumber = 0;
+
   /**
    * This constructor creates an instance of the LightPoller class to provide distance data from an
    * light sensor to our robot.
@@ -35,11 +37,13 @@ public class LightPoller extends Thread {
    *        stored in usData passed to it.
    * @throws OdometerExceptions
    */
-  public LightPoller(SampleProvider us, float[] lgData, SensorData cont) throws OdometerExceptions {
+  public LightPoller(SampleProvider[] us, float[][] lgData, SensorData cont) throws OdometerExceptions {
     this.us = us;
     this.cont = cont;
     this.lgData = lgData;
     this.id = sensorNumber;
+    isStarted = true;
+    lastValue = new float[2];
     sensorNumber++;
   }
 
@@ -52,22 +56,38 @@ public class LightPoller extends Thread {
    * 
    * @see java.lang.Thread#run()
    */
-  public void run() {
-    while (true) {
-      processData();
-
-      try {
-        Thread.sleep(50);
-      } catch (Exception e) {
-      } // Poor man's timed sampling
+  public synchronized void run() {
+    try {
+      while (true) {
+        if (!isStarted) {
+          wait();
+        } else {
+          processData();
+          wait(50);
+        }
+      }
+    } catch (InterruptedException e) {
+      e.printStackTrace();
     }
   }
 
+  public synchronized void setStart(boolean start) {
+    isStarted = start;
+    notify();
+  }
+
+  public synchronized boolean isStarted() {
+    return this.isStarted;
+  }
+
   protected void processData() {
-    us.fetchSample(lgData, 0); // acquire data
-    int distance = (int) (lgData[0] * 100); // extract from buffer, multiply by 100 for convenience
-                                            // and allow it to be cast to int
-    cont.setL(distance - lastValue, id); // now take action depending on value
-    lastValue = distance;
+    for(int i = 0; i < us.length; i++) {
+      us[i].fetchSample(lgData[i], 0); // acquire data
+  
+      int distance = (int) (lgData[i][0] * 100); // extract from buffer, multiply by 100 for convenience
+                                              // and allow it to be cast to int
+      cont.setL(distance - lastValue[i], id); // now take action depending on value
+      lastValue[i] = distance; 
+    }
   }
 }
