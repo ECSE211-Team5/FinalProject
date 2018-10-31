@@ -1,6 +1,5 @@
 package ca.mcgill.ecse211.sensors;
 
-import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
@@ -17,10 +16,10 @@ import ca.mcgill.ecse211.odometer.OdometerExceptions;
  */
 public class SensorData {
   // Sensor data parameters
-  private volatile double[] lights; // Head angle
+  private double[] lights; // Head angle
   private volatile double distance;
   private volatile double angle;
-  private volatile int rgb[];
+  private int rgb[];
 
   // Class control variables
   private volatile static int numberOfIntances = 0; // Number of OdometerData
@@ -30,15 +29,9 @@ public class SensorData {
                                               // OdometerData instances
 
   // Thread control tools
-  private static Lock lock = new ReentrantLock(true); // Fair lock for
-                                                      // concurrent writing
-  private volatile boolean isReseting = false; // Indicates if a thread is
-                                               // trying to reset any
-                                               // position parameters
-  private Condition doneReseting = lock.newCondition(); // Let other threads
-                                                        // know that a reset
-                                                        // operation is
-                                                        // over.
+  private static Lock lightLock = new ReentrantLock(true); // Fair lock for concurrent writing light sensor data
+  
+  private static Lock rgbLock = new ReentrantLock(true); // Fair lock for concurrent writing rgb sensor data
 
   private static SensorData sensorData = null;
 
@@ -80,69 +73,50 @@ public class SensorData {
   }
 
   /**
-   * Return the Sensor data.
+   * Return the ultraSonic distance data.
    * 
-   * @param position the array to store the sensor data
    * @return the sensor data.
    */
-  public double[] getDL() {
-    double[] sensordata = new double[3];
-    lock.lock();
+  public double getD() {
+    return distance;
+  }
+  
+  /**
+   * get the light value data from the two light sensors (protected by lightLock)
+   * @return: data from light sensor
+   */
+  public double[] getL() {    
+    //lock the lock for light sensor value
+    lightLock.lock();
     try {
-      while (isReseting) { // If a reset operation is being executed, wait
-        // until it is over.
-        doneReseting.await(); // Using await() is lighter on the CPU
-        // than simple busy wait.
-      }
-
-      sensordata[0] = distance;
-      sensordata[1] = lights[0];
-      sensordata[2] = lights[1];
-    } catch (InterruptedException e) {
-      // Print exception to screen
-      e.printStackTrace();
+      return lights.clone();
     } finally {
-      lock.unlock();
+      lightLock.unlock();
     }
-
-    return sensordata;
+    
   }
 
   /**
-   * get the rgb data for color sensor
+   * get the rgb data for light sensor (protected by rgb lock)
    * 
    * @return: rgb data
    */
   public int[] getRGB() {
-    lock.lock();
+    rgbLock.lock();
     try {
-      while (isReseting) {
-        doneReseting.await();
-      }
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    } finally {
-      lock.unlock();
+      return rgb.clone();
+    }finally {
+      rgbLock.unlock();
     }
-    return rgb.clone();
   }
 
   /**
-   * This method returns the currently stored angle value
+   * (deprecated, not using)
+   * This method returns the currently stored angle value from the gyro sensor
    * 
    * @return The current angle value
    */
   public double getA() {
-    lock.lock();
-    try {
-      while (isReseting) {
-        doneReseting.await();
-      }
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    } finally {
-      lock.unlock();
-    }
     return angle;
   }
 
@@ -152,74 +126,48 @@ public class SensorData {
    * @param d The value to overwrite distance with
    */
   public void setD(double d) {
-    lock.lock();
-    isReseting = true;
-    try {
       this.distance = d;
-      isReseting = false; // Done reseting
-      doneReseting.signalAll(); // Let the other threads know that you are
-                                // done reseting
-    } finally {
-      lock.unlock();
-    }
   }
 
   /**
+   * (deprecated not usings)
    * This method overwrites the angle value.
    * 
    * @param a The value to overwrite angle with
    */
   public void setA(double a) {
-    lock.lock();
-    isReseting = true;
-    try {
       this.angle = a;
-      isReseting = false; // Done reseting
-      doneReseting.signalAll(); // Let the other threads know that you are
-                                // done reseting
-    } finally {
-      lock.unlock();
-    }
   }
 
   /**
-   * set rgb data for color sensor with specific id
+   * set rgb data for color sensor (protected by rgb lock)
    * 
-   * @param i: id for the color sensor
    * @param r: red value
    * @param g: green value
    * @param b: blue value
    */
   public void setRGB(int r, int g, int b) {
-    lock.lock();
-    isReseting = true;
     try {
+      rgbLock.lock();
       rgb[0] = r;
       rgb[1] = g;
       rgb[2] = b;
-      isReseting = false; // Done reseting
-      doneReseting.signalAll(); // Let the other threads know that you are
-                                // done reseting
     } finally {
-      lock.unlock();
+      rgbLock.unlock();
     }
   }
 
   /**
-   * This method overwrites the light value.
+   * This method overwrites the light value. (protected by light lock)
    * 
    * @param l The value to overwrite the current light value with
    */
   public void setL(double l, int id) {
-    lock.lock();
-    isReseting = true;
     try {
+      lightLock.lock();
       this.lights[id] = l;
-      isReseting = false; // Done reseting
-      doneReseting.signalAll(); // Let the other threads know that you are
-                                // done reseting
     } finally {
-      lock.unlock();
+      lightLock.unlock();
     }
   }
 }

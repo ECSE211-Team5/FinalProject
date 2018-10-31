@@ -144,7 +144,7 @@ public class UltrasonicLocalizer {
     int numberOfReadings = 0;
 
     while (numberOfReadings < READINGS_THRESHOLD) {
-      if (data.getDL()[0] < wallDistance - wallDistanceError)
+      if (data.getD() < wallDistance - wallDistanceError)
         numberOfReadings++;
     }
   }
@@ -156,7 +156,7 @@ public class UltrasonicLocalizer {
     int numberOfReadings = 0;
 
     while (numberOfReadings < READINGS_THRESHOLD) {
-      if (data.getDL()[0] > wallDistance + wallDistanceError)
+      if (data.getD() > wallDistance + wallDistanceError)
         numberOfReadings++;
     }
   }

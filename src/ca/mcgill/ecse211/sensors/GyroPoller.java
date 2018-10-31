@@ -5,7 +5,7 @@ import lejos.robotics.SampleProvider;
 
 /**
  * This class helps our robot to navigate using a gyroscope
- * 
+ * <Not using, deprecated>
  * @author Caspar Cedro
  * @author Percy Chen
  * @author Patrick Erath

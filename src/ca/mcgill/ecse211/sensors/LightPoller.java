@@ -3,6 +3,7 @@ package ca.mcgill.ecse211.sensors;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.ColorCalibrator;
 import ca.mcgill.ecse211.project.Main;
+import ca.mcgill.ecse211.project.ThreadControl;
 import lejos.hardware.Sound;
 import lejos.robotics.SampleProvider;
 
@@ -16,7 +17,7 @@ import lejos.robotics.SampleProvider;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class LightPoller extends Thread {
+public class LightPoller extends Thread implements ThreadControl{
   protected SampleProvider us[];
   protected SensorData cont;
   protected float[][] lgData;
@@ -76,6 +77,10 @@ public class LightPoller extends Thread {
     notify();
   }
 
+  /**
+   * Check if the poller thread is current running
+   * @return
+   */
   public synchronized boolean isStarted() {
     return this.isStarted;
   }

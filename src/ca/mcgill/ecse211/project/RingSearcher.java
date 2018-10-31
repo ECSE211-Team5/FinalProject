@@ -3,8 +3,9 @@ package ca.mcgill.ecse211.project;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.sensors.SensorData;
-import lejos.hardware.Sound;
+import lejos.hardware.motor.BaseRegulatedMotor;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.motor.EV3MediumRegulatedMotor;
 
 /**
  * This class helps our robot to search for rings on a grid
@@ -16,11 +17,11 @@ import lejos.hardware.motor.EV3LargeRegulatedMotor;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class RingSearcher{
+public class RingSearcher extends Thread implements ThreadControl {
   private static final int ACCELERATION = 300;
-  private EV3LargeRegulatedMotor leftMotor;
-  private EV3LargeRegulatedMotor rightMotor;
-  private Navigation navigation;
+  private EV3LargeRegulatedMotor storageMotor;
+  private EV3MediumRegulatedMotor rodMotor;
+  private boolean started = false;
   private Odometer odometer;
   private SensorData data;
 
@@ -34,15 +35,13 @@ public class RingSearcher{
    *        motor
    * @throws OdometerExceptions
    */
-  public RingSearcher(Navigation nav, EV3LargeRegulatedMotor leftMotor,
-      EV3LargeRegulatedMotor rightMotor) throws OdometerExceptions {
+  public RingSearcher(EV3LargeRegulatedMotor storageMotor, EV3MediumRegulatedMotor rodMotor)
+      throws OdometerExceptions {
     this.odometer = Odometer.getOdometer();
-    this.leftMotor = leftMotor;
-    this.rightMotor = rightMotor;
-    navigation = nav;
+    this.storageMotor = storageMotor;
+    this.rodMotor = rodMotor;
     data = SensorData.getSensorData();
-    for (EV3LargeRegulatedMotor motor : new EV3LargeRegulatedMotor[] {this.leftMotor,
-        this.rightMotor}) {
+    for (BaseRegulatedMotor motor : new BaseRegulatedMotor[] {this.storageMotor, this.rodMotor}) {
       motor.stop();
       motor.setAcceleration(ACCELERATION);
     }
@@ -56,12 +55,10 @@ public class RingSearcher{
    * @param target target ring color
    * @return true if it found a ring and the ring has the right color
    */
-  public ColorCalibrator.Color search(int angle, ColorCalibrator.Color target) {
+  public ColorCalibrator.Color search(ColorCalibrator.Color target) {
     double[] position = odometer.getXYT();
-    boolean foundRing = false;
-    boolean ColorMatched = false;
     // turn to the angle async
-    navigation.turnTo(angle);
+
     // if we found a ring, got for the ring and check its color
     // if the color matches, return true
     // if(foundRing) {
@@ -77,13 +74,39 @@ public class RingSearcher{
 
     return ColorCalibrator.getColor();
   }
-  
-  /**
-   * *
-   * This method retrieve ring from the ring set
-   * @return whether retrieved successfully
-   */
-  public boolean retrieveRing() {
-    return true;
+
+  private void retrieveRing() {
+    storageMotor.rotateTo(-45);
+    rodMotor.rotateTo(-70);
+    rodMotor.rotateTo(0);
+  }
+
+  public synchronized void run() {
+    try {
+      while (true) {
+        if (!started) {
+          wait();
+        } else {
+          retrieveRing();
+          wait(100);
+        }
+      }
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+
+  }
+
+  @Override
+  public synchronized boolean isStarted() {
+    return started;
+  }
+
+  @Override
+  public synchronized void setStart(boolean start) {
+    started = start;
+
+    if (started)
+      notify();
   }
 }

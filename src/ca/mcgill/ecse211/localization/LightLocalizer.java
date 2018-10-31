@@ -58,7 +58,7 @@ public class LightLocalizer {
     // 1. GO forward find the y=0 line
     leftMotor.forward();
     rightMotor.forward();
-    while (data.getDL()[1] > blackLineColor);
+    while (data.getL()[0] > blackLineColor);
     Sound.beep();
     odometer.setY(0);
     // 2. Turn and go forward find the x=0 line
@@ -67,7 +67,7 @@ public class LightLocalizer {
     rightMotor.setSpeed(FORWARD_SPEED / 2);
     leftMotor.forward();
     rightMotor.forward();
-    while (data.getDL()[1] > blackLineColor);
+    while (data.getL()[0] > blackLineColor);
     Sound.beep();
     odometer.setX(0);
     leftMotor.setSpeed(FORWARD_SPEED / 2);

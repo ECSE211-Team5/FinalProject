@@ -1,6 +1,7 @@
 package ca.mcgill.ecse211.sensors;
 
 import java.util.Arrays;
+import ca.mcgill.ecse211.project.ThreadControl;
 import lejos.robotics.SampleProvider;
 
 /**
@@ -19,7 +20,7 @@ import lejos.robotics.SampleProvider;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class UltrasonicPoller extends Thread {
+public class UltrasonicPoller extends Thread implements ThreadControl{
   private SampleProvider us;
   private SensorData cont;
   private float[] usData;

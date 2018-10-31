@@ -4,18 +4,16 @@ import ca.mcgill.ecse211.localization.LightLocalizer;
 import ca.mcgill.ecse211.localization.UltrasonicLocalizer;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
-import ca.mcgill.ecse211.sensors.GyroPoller;
 import ca.mcgill.ecse211.sensors.LightPoller;
-import ca.mcgill.ecse211.sensors.RGBPoller;
 import ca.mcgill.ecse211.sensors.SensorData;
 import ca.mcgill.ecse211.sensors.UltrasonicPoller;
 import lejos.hardware.Button;
 import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.lcd.TextLCD;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.motor.EV3MediumRegulatedMotor;
 import lejos.hardware.port.Port;
 import lejos.hardware.sensor.EV3ColorSensor;
-import lejos.hardware.sensor.EV3GyroSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
 import lejos.hardware.sensor.SensorModes;
 import lejos.robotics.SampleProvider;
@@ -31,13 +29,10 @@ import lejos.robotics.SampleProvider;
  * @author Kamy Moussavi Kafi
  */
 public class Game {
-  // Motor Objects, and Robot related parameters
-  //private static final Port usPort = LocalEV3.get().getPort("S1");
-  // initialize multiple light ports in main
-  private static Port[] lgPorts = new Port[3];
-  private static final TextLCD lcd = LocalEV3.get().getTextLCD();
-//  private static final Port gPort = LocalEV3.get().getPort("S4");
-//  private static EV3GyroSensor gSensor = new EV3GyroSensor(gPort);
+  private static ThreadControl rgbThread;
+  private static ThreadControl lightThread;
+  private static ThreadControl motorThread;
+  private static ThreadControl usThread;
 
   /**
    * Motor object instance that allows control of the left motor connected to port A
@@ -50,6 +45,12 @@ public class Game {
    */
   public static final EV3LargeRegulatedMotor rightMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("D"));
+  
+  public static final EV3LargeRegulatedMotor storageMotor =
+      new EV3LargeRegulatedMotor(LocalEV3.get().getPort("C"));
+  
+  public static final EV3MediumRegulatedMotor rodMotor =
+      new EV3MediumRegulatedMotor(LocalEV3.get().getPort("B"));
   /**
    * length of the tile
    */
@@ -64,47 +65,48 @@ public class Game {
    * This variable denotes the track distance between the center of the wheels in cm (measured and
    * adjusted based on trial and error).
    */
-  public static double TRACK = 11.5;
+  public static final double TRACK = 11.5;
 
-  public static double SEN_DIS = 4.4;
+  public static final double SEN_DIS = 4.4;
+  
+  private static boolean hasReadData;
+  
   /**
    * Prepare for the game: starting thread, read all arguments
    * 
    * @throws OdometerExceptions
    */
   public static void preparation() throws OdometerExceptions {
-    Odometer odometer = Odometer.getOdometer(leftMotor, rightMotor, TRACK, WHEEL_RAD);
-    Display odometryDisplay = new Display(lcd);
-
-    // Sensor Related Stuff
-    SensorData sensorData = SensorData.getSensorData();
-
-    // Ultrasonic sensor stuff
-    //@SuppressWarnings("resource")
-    //SensorModes usSensor = new EV3UltrasonicSensor(usPort);
-    //SampleProvider usDistance = usSensor.getMode("Distance");
-    //float[] usData = new float[usDistance.sampleSize()];
-
+    // Motor Objects, and Robot related parameters
+    Port usPort = LocalEV3.get().getPort("S1");
+    // initialize multiple light ports in main
+    Port[] lgPorts = new Port[3];
+    
     // Light sesnor sensor stuff
-    // @SuppressWarnings("resource")
     lgPorts[0] = LocalEV3.get().getPort("S2");
     lgPorts[1] = LocalEV3.get().getPort("S3");
-    //lgPorts[2] = LocalEV3.get().getPort("S4");
-    // lgPorts[2] = LocalEV3.get().getPort("S4");
     EV3ColorSensor[] lgSensors = new EV3ColorSensor[2];
     for (int i = 0; i < lgSensors.length; i++) {
       lgSensors[i] = new EV3ColorSensor(lgPorts[i]);
     }
 
+    Odometer odometer = Odometer.getOdometer(leftMotor, rightMotor, TRACK, WHEEL_RAD);
+
+    // Sensor Related Stuff
+    SensorData sensorData = SensorData.getSensorData();
+
+    // Ultrasonic sensor stuff
+    @SuppressWarnings("resource")
+    SensorModes usSensor = new EV3UltrasonicSensor(usPort);
+    SampleProvider usDistance = usSensor.getMode("Distance");
+    float[] usData = new float[usDistance.sampleSize()];
+
     SampleProvider backLight[] = new SampleProvider[2];
     backLight[0] = lgSensors[0].getRedMode();
     backLight[1] = lgSensors[1].getRedMode();
-    //SampleProvider frontLight = lgSensors[2].getRGBMode();
-
-    // SampleProvider frontLight2 = lgSensors[2].getRedMode();
-
-    //SampleProvider gProvider = gSensor.getAngleMode();
-
+    
+    TextLCD lcd = LocalEV3.get().getTextLCD();
+    Display odometryDisplay = new Display(lcd);
     // STEP 1: LOCALIZE to (1,1)
     // ButtonChoice left or right
     lcd.clear();
@@ -121,10 +123,13 @@ public class Game {
     odoDisplayThread.start();
 
     // Start ultrasonic and light sensors
-    //Thread usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
-    //usPoller.start();
-    Thread bLgPoller = new LightPoller(backLight, new float[2][backLight[1].sampleSize()], sensorData);
-    bLgPoller.start();
+    UltrasonicPoller usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
+    usPoller.start();
+    usThread = usPoller;
+    LightPoller lgPoller = new LightPoller(backLight, new float[2][backLight[1].sampleSize()], sensorData);
+    lgPoller.start();
+    lightThread = lgPoller;
+    
     //Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight.sampleSize()], sensorData);
     //fLgPoller1.start();
 //    Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);
@@ -141,7 +146,7 @@ public class Game {
   /**
    * Read data from the wifi class (using another thread)
    */
-  public static void readData() {
+  public synchronized static void readData() {
     WiFi wifi = new WiFi();
   }
 
@@ -150,22 +155,34 @@ public class Game {
    * 
    * @throws OdometerExceptions
    */
-  public static void runGame() throws OdometerExceptions {
+  public synchronized static void runGame() throws OdometerExceptions {
     final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
     // Start localizing
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
     final LightLocalizer lgLoc = new LightLocalizer(navigation, leftMotor, rightMotor);
-    final RingSearcher searcher = new RingSearcher(navigation, leftMotor, rightMotor);
+    final RingSearcher searcher = new RingSearcher(storageMotor, rodMotor);
     // spawn a new Thread to avoid localization from blocking
     (new Thread() {
       public void run() {
         // target color
 
+        (new Thread() {
+          public void run() {
+            readData();
+            hasReadData = true;
+            notify()
+          }
+        }).start();
         usLoc.localize(buttonChoice);
-        // lgLoc.localize(SC);
-        // gSensor.reset();
-        // // TODO: delete test code
+        lgLoc.localize(GameParameters.SC);
+          try {
+            while(!hasReadData) wait();
+          } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+          }
+        
         // try {
         // Odometer odometer = Odometer.getOdometer();
         // // STEP 2: MOVE TO START OF SEARCH AREA

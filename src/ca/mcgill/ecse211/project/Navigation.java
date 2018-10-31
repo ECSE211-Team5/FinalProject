@@ -113,8 +113,8 @@ public class Navigation {
     leftMotor.forward();
     rightMotor.forward();
     while (leftMotor.isMoving() || rightMotor.isMoving()) {
-      double left = data.getDL()[1];
-      double right = data.getDL()[2];
+      double left = data.getL()[0];
+      double right = data.getL()[1];
       if (left < -5) {
         Sound.beep();
         leftMotor.stop(true);

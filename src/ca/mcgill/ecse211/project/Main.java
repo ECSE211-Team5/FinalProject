@@ -57,7 +57,7 @@ public class Main {
         (new Thread(){
             public void run() {
               try {
-                ComponentTest.navigationTest();
+                ComponentTest.RingMotorTest();
               } catch (OdometerExceptions e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

@@ -66,7 +66,6 @@ public class Display implements Runnable {
 
       // Retrieve x, y and Theta information
       position = odo.getXYT();
-      data = sensdata.getDL();
       rgb = sensdata.getRGB();
 
       // Print x,y, and theta information
@@ -75,8 +74,8 @@ public class Display implements Runnable {
       lcd.drawString("X: " + numberFormat.format(position[0]), 0, 0);
       lcd.drawString("Y: " + numberFormat.format(position[1]), 0, 1);
       lcd.drawString("T: " + numberFormat.format(position[2]), 0, 2);
-      lcd.drawString("LL: " + numberFormat.format(sensdata.getDL()[1]), 0, 3);
-      lcd.drawString("LR: " + numberFormat.format(sensdata.getDL()[2]), 0, 4);
+      lcd.drawString("LL: " + numberFormat.format(sensdata.getL()[0]), 0, 3);
+      lcd.drawString("LR: " + numberFormat.format(sensdata.getL()[1]), 0, 4);
 //      lcd.drawString(String.format("(R: %d G: %d B: %d)", (int) rgb[0], (int) rgb[1], (int) rgb[2]),
 //          0, 4);
 //      if (ColorCalibrator.getColor((int) rgb[0], (int) rgb[1],

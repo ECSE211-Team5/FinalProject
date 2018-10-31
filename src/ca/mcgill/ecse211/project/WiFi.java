@@ -17,4 +17,11 @@ public class WiFi {
   public WiFi() {
     
   }
+  
+  /** (Not Implemented)
+   * read data from wifi
+   */
+  public void readData() {
+    
+  }
 }

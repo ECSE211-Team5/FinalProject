@@ -13,7 +13,7 @@ import lejos.robotics.SampleProvider;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class RGBPoller extends LightPoller {
+public class RGBPoller extends LightPoller{
 
   /**
    * This constructor creates an instance of the RGBPoller class to provide color data from an light
