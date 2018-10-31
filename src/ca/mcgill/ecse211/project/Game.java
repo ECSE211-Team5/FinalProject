@@ -171,7 +171,7 @@ public class Game {
           public void run() {
             readData();
             hasReadData = true;
-            notify()
+            notify();
           }
         }).start();
         usLoc.localize(buttonChoice);
