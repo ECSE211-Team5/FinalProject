@@ -51,7 +51,8 @@ public class Main {
    */
   public static void main(String[] args) {
     try {
-      Game.preparation();
+      Game g = Game.getGame()
+      g.preparation();
       if (test) {
         Button.waitForAnyPress(); // Record choice (left or right press)
         (new Thread(){
@@ -65,7 +66,7 @@ public class Main {
             }
         }).start();
       } else {
-        Game.runGame();
+        g.runGame();
       }
       Button.waitForAnyPress();
       System.exit(0);

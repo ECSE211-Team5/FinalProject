@@ -38,12 +38,15 @@ public class Game {
   //Game State Machines
   public enum Status { Idle, Localization, NavigationSafe, NavigationSearch, RingSearch }
   private Status status;
-
+  private static Game game;
+  
   //------------------------
   // CONSTRUCTOR
   //------------------------
-
-  public Game()
+  /**
+   * Construct of game
+   */
+  private Game()
   {
     setStatus(Status.Idle);
   }
@@ -51,18 +54,29 @@ public class Game {
   //------------------------
   // INTERFACE
   //------------------------
-
+  /**
+   * get the full name of the status
+   * @return
+   */
   public String getStatusFullName()
   {
     String answer = status.toString();
     return answer;
   }
 
+  /**
+   * get the current status of the game
+   * @return
+   */
   public Status getStatus()
   {
     return status;
   }
 
+  /**
+   * perform the localization and go to navigation 
+   * @return
+   */
   public boolean ready()
   {
     boolean wasEventProcessed = false;
@@ -83,6 +97,10 @@ public class Game {
     return wasEventProcessed;
   }
 
+  /**
+   * Navigating to the tunnel and to the search area
+   * @return whether transition successful
+   */
   public boolean localized()
   {
     boolean wasEventProcessed = false;
@@ -103,6 +121,10 @@ public class Game {
     return wasEventProcessed;
   }
 
+  /**
+   * whether transition successful
+   * @return whether transition successful
+   */
   public boolean navigatedToTunnel()
   {
     boolean wasEventProcessed = false;
@@ -128,7 +150,11 @@ public class Game {
 
     return wasEventProcessed;
   }
-
+  
+  /**
+   * Navigate to the starting corner
+   * @return whether transition successful
+   */
   public boolean navigatedToStart()
   {
     boolean wasEventProcessed = false;
@@ -149,6 +175,10 @@ public class Game {
     return wasEventProcessed;
   }
 
+  /**
+   * Navigate to the tree and try find the rings
+   * @return whether transition successful
+   */
   public boolean navigatedToTree()
   {
     boolean wasEventProcessed = false;
@@ -169,6 +199,10 @@ public class Game {
     return wasEventProcessed;
   }
 
+  /**
+   * if ring found, get the ring
+   * @return whether transition successful
+   */
   public boolean ringFound()
   {
     boolean wasEventProcessed = false;
@@ -189,6 +223,10 @@ public class Game {
     return wasEventProcessed;
   }
 
+  /**
+   * In case if the ring is not found
+   * @return whether transition successful
+   */
   public boolean ringNotFound()
   {
     boolean wasEventProcessed = false;
@@ -209,13 +247,21 @@ public class Game {
     return wasEventProcessed;
   }
 
+  /**
+   * set the current status
+   * @param aStatus current status to set
+   */
   private void setStatus(Status aStatus)
   {
     status = aStatus;
   }
-
-  public void delete()
-  {}
+  
+  public static Game getGame() {
+    if(game == null) {
+      game = new Game();
+    }
+    return game;
+  }
   
   private static ThreadControl rgbPoller;
   private static ThreadControl lightPoller;
@@ -273,7 +319,7 @@ public class Game {
    * 
    * @throws OdometerExceptions
    */
-  public static void preparation() throws OdometerExceptions {
+  public void preparation() throws OdometerExceptions {
     // Motor Objects, and Robot related parameters
     Port usPort = LocalEV3.get().getPort("S1");
     // initialize multiple light ports in main
@@ -336,7 +382,7 @@ public class Game {
   /**
    * Read data from the wifi class (using another thread)
    */
-  public synchronized static void readData() {
+  public synchronized void readData() {
     WiFi wifi = new WiFi();
   }
 
@@ -345,7 +391,7 @@ public class Game {
    * 
    * @throws OdometerExceptions
    */
-  public synchronized static void runGame() throws OdometerExceptions {
+  public synchronized void runGame() throws OdometerExceptions {
     final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
     // Start localizing
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
