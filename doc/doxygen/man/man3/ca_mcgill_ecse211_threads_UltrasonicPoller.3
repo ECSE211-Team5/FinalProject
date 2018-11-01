@@ -1,0 +1,76 @@
+.TH "ca.mcgill.ecse211.threads.UltrasonicPoller" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.threads.UltrasonicPoller
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUltrasonicPoller\fP (SampleProvider us, float[] usData, \fBSensorData\fP cont)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrunMethod\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class implements the Ultrasonic Sensor Poller for our Wall Follower\&.
+.PP
+Control of the wall follower is applied periodically by the \fBUltrasonicPoller\fP thread\&. The while loop at the bottom executes in a loop\&. Assuming that the us\&.fetchSample, and cont\&.processUSData methods operate in about 20mS, and that the thread sleeps for 50 mS at the end of each loop, then one cycle through the loop is approximately 70 mS\&. This corresponds to a sampling rate of 1/70mS or about 14 Hz\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file UltrasonicPoller\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ca\&.mcgill\&.ecse211\&.threads\&.UltrasonicPoller\&.UltrasonicPoller (SampleProvider us, float [] usData, \fBSensorData\fP cont)"
+This constructor creates an instance of the \fBUltrasonicPoller\fP class to provide distance data from an ultrasonic sensor to our Wall Follower\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIus\fP a SampleProvider class instance that helps us to store an array of ultrasonic sensor data\&. 
+.br
+\fIusData\fP an array of distance data to be used by our Wall Follower's UltrasonicControllers\&. 
+.br
+\fIcont\fP a BangBangController or PController instance that has accumulated distance data stored in usData passed to it\&. 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file UltrasonicPoller\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.UltrasonicPoller\&.runMethod ()\fC [protected]\fP"
+get us sensor data 
+.PP
+Definition at line 48 of file UltrasonicPoller\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

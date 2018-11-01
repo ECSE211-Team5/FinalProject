@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::threads::RingSearcher</compoundname>
+    <basecompoundref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control" prot="public" virt="non-virtual">ca.mcgill.ecse211.threads.ThreadControl</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a71f82ea170342d2aafcc7372b1c34735" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ca.mcgill.ecse211.threads.RingSearcher.ACCELERATION</definition>
+        <argsstring></argsstring>
+        <name>ACCELERATION</name>
+        <initializer>= 300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a04fb1bfbd7102736ffd0a66185003cf0" prot="private" static="no" mutable="no">
+        <type>EV3LargeRegulatedMotor</type>
+        <definition>EV3LargeRegulatedMotor ca.mcgill.ecse211.threads.RingSearcher.storageMotor</definition>
+        <argsstring></argsstring>
+        <name>storageMotor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="22" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a69b4558be52c0d281f01d3d6e42e00e1" prot="private" static="no" mutable="no">
+        <type>EV3MediumRegulatedMotor</type>
+        <definition>EV3MediumRegulatedMotor ca.mcgill.ecse211.threads.RingSearcher.rodMotor</definition>
+        <argsstring></argsstring>
+        <name>rodMotor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="23" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1ae02595639aa0e47f68a8367eff0cd48d" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean ca.mcgill.ecse211.threads.RingSearcher.started</definition>
+        <argsstring></argsstring>
+        <name>started</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="24" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a0ba2e447e8d1a8b3822b2b5b81a180da" prot="private" static="no" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer" kindref="compound">Odometer</ref></type>
+        <definition>Odometer ca.mcgill.ecse211.threads.RingSearcher.odometer</definition>
+        <argsstring></argsstring>
+        <name>odometer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a531d7f3a9f8d4443ef70433ad11e4c3c" prot="private" static="no" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
+        <definition>SensorData ca.mcgill.ecse211.threads.RingSearcher.data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a58fdaba16c2b961446d1474b76e66e49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ca.mcgill.ecse211.threads.RingSearcher.RingSearcher</definition>
+        <argsstring>(EV3LargeRegulatedMotor storageMotor, EV3MediumRegulatedMotor rodMotor)</argsstring>
+        <name>RingSearcher</name>
+        <param>
+          <type>EV3LargeRegulatedMotor</type>
+          <declname>storageMotor</declname>
+        </param>
+        <param>
+          <type>EV3MediumRegulatedMotor</type>
+          <declname>rodMotor</declname>
+        </param>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This class provides method to check if there is a ring and if the ring is the color we want</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>storagenMotor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motor to move the storage of the robot </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rodMotor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motor for the rod to collect the ring </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OdometerExceptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="36" bodyend="46"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="79" endline="88">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" compoundref="_sensor_data_8java" startline="61" endline="73">ca.mcgill.ecse211.threads.SensorData.getSensorData</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd7a2651a7c5de76a018664c8bf327af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.RingSearcher.retrieveRing</definition>
+        <argsstring>()</argsstring>
+        <name>retrieveRing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this method retrieve the searched ring </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="74" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="74" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.RingSearcher.search</definition>
+        <argsstring>()</argsstring>
+        <name>search</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method searches for the ring and identify its color based using the rod, It will beed based on the color of the ring </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="53" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="53" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a2b03c700b5d232f5aef7c6acf439b7ea" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.RingSearcher.runMethod</definition>
+        <argsstring>()</argsstring>
+        <name>runMethod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="80" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="80" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class helps our robot to search for rings on a grid itself as a thread will search and retrieve the rings</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="67">
+        <label>ca.mcgill.ecse211.threads.RingSearcher</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher"/>
+        <childnode refid="68" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="70">
+        <label>ca.mcgill.ecse211.threads.RingSearcher</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>Runnable</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="20" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a71f82ea170342d2aafcc7372b1c34735" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>ACCELERATION</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a531d7f3a9f8d4443ef70433ad11e4c3c" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>data</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1abb0ba2385c212f3d0d8435267d882536" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>isStarted</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>isStarted</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1ab20c44ff2dafab8981c42fa8bf634dfc" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>lockObject</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a0ba2e447e8d1a8b3822b2b5b81a180da" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>odometer</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd7a2651a7c5de76a018664c8bf327af" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>retrieveRing</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a58fdaba16c2b961446d1474b76e66e49" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>RingSearcher</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a69b4558be52c0d281f01d3d6e42e00e1" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>rodMotor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a03e743000ea2c37080427565e8ec5f35" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>run</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a2b03c700b5d232f5aef7c6acf439b7ea" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>runMethod</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>search</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a16221cdc4ccf637b190934549c708e1f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>setStart</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a7759a6f52b56e15cb37cd25ea31c93c1" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>setWait</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a8252930dab1b067da64cf2afae4fc630" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>shouldWait</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a9c3896500e86e402b8019e1be6500621" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>shouldWait</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1ae02595639aa0e47f68a8367eff0cd48d" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>started</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a04fb1bfbd7102736ffd0a66185003cf0" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>storageMotor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>WAIT_TIME</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RingSearcher</scope><name>waitForThisThread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_767a5cdf02d06b22ddab8eb41b859621" kind="dir">
+    <compoundname>/home/ccc/FinalProject/src/ca/mcgill/ecse211</compoundname>
+    <innerdir refid="dir_2ccd4a9f3a9d9e89aee6eb5e83a2de97">/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization</innerdir>
+    <innerdir refid="dir_558c94cca1eb0abc4916791299d28e3e">/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer</innerdir>
+    <innerdir refid="dir_1d4738738e90ef022b92254ef950b5b7">/home/ccc/FinalProject/src/ca/mcgill/ecse211/project</innerdir>
+    <innerdir refid="dir_54334c177d2c7fd86a15156ae2531032">/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests</innerdir>
+    <innerdir refid="dir_169636a9432b76d8b27cca672999da21">/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/"/>
+  </compounddef>
+</doxygen>

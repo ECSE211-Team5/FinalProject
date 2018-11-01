@@ -1,0 +1,197 @@
+.TH "ca.mcgill.ecse211.project.Navigation" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.project.Navigation
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNavigation\fP (EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor)  throws OdometerExceptions "
+.br
+.ti -1c
+.RI "void \fBtravelTo\fP (double x, double y, boolean avoid)"
+.br
+.ti -1c
+.RI "synchronized void \fBmoveWithCorrection\fP (double distance, double theta)"
+.br
+.ti -1c
+.RI "synchronized void \fBturnTo\fP (double angle)"
+.br
+.ti -1c
+.RI "void \fBfindTunnel\fP (int[] ll, int[] ur)"
+.br
+.ti -1c
+.RI "void \fBgoThroughTunnel\fP ()"
+.br
+.ti -1c
+.RI "void \fBgoToRingSet\fP ()"
+.br
+.ti -1c
+.RI "void \fBapproachRingSet\fP ()"
+.br
+.ti -1c
+.RI "void \fBrotate\fP (int angle)"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBconvertDistance\fP (double radius, double distance)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The Navigator class extends the functionality of the \fBNavigation\fP class\&. It offers an alternative \fBtravelTo()\fP method which uses a state machine to implement obstacle avoidance\&.
+.PP
+The Navigator class does not override any of the methods in \fBNavigation\fP\&. All methods with the same name are overloaded i\&.e\&. the Navigator version takes different parameters than the \fBNavigation\fP version\&.
+.PP
+This is useful if, for instance, you want to force travel without obstacle detection over small distances\&. One place where you might want to do this is in the ObstacleAvoidance class\&. Another place is methods that implement specific features for future milestones such as retrieving an object\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file Navigation\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.Navigation (EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor) throws \fBOdometerExceptions\fP"
+This navigation class constructor sets up our robot to begin navigating a particular map
+.PP
+\fBParameters:\fP
+.RS 4
+\fIleftMotor\fP The EV3LargeRegulatedMotor instance for our left motor 
+.br
+\fIrightMotor\fP The EV3LargeRegulatedMotor instance for our right motor 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file Navigation\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.approachRingSet ()"
+this method approaches the ring set by paying attention to the reading of us sensor, stops at the place when the robot can reach the ring 
+.PP
+Definition at line 195 of file Navigation\&.java\&.
+.SS "static int ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.convertDistance (double radius, double distance)\fC [static]\fP"
+This method allows the conversion of a distance to the total rotation of each wheel need to cover that distance\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIradius\fP The radius of our wheels 
+.br
+\fIdistance\fP The distance traveled 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A converted distance 
+.RE
+.PP
+
+.PP
+Definition at line 225 of file Navigation\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.findTunnel (int [] ll, int [] ur)"
+found the tunnel based on the ll and ur coordinate, after the method, the robot will go the the entrance of the tunnel facing the tunnel 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIll\fP lower left corner coordinate 
+.br
+\fIur\fP upper right corner coordinate 
+.RE
+.PP
+
+.PP
+Definition at line 173 of file Navigation\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.goThroughTunnel ()"
+the method for go through the tunnel (call find tunnel before calling this method) 
+.PP
+Definition at line 180 of file Navigation\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.goToRingSet ()"
+this method navigate the robot to the ring set, find the right position of the ring set 
+.PP
+Definition at line 187 of file Navigation\&.java\&.
+.SS "synchronized void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.moveWithCorrection (double distance, double theta)"
+Move a certain distance with correction (using coordinate system) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdistance\fP distance to cover 
+.br
+\fItheta\fP theta to be corrected each time 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file Navigation\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.rotate (int angle)"
+Rotate the robot by certain angle
+.PP
+\fBParameters:\fP
+.RS 4
+\fIangle\fP The angle to rotate our robot to 
+.RE
+.PP
+
+.PP
+Definition at line 204 of file Navigation\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.stop ()"
+Stop the motor 
+.PP
+Definition at line 212 of file Navigation\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.travelTo (double x, double y, boolean avoid)"
+This method travel the robot to desired position by following the line (Always rotate 90 degree), along with a correction
+.PP
+When avoid=true, the nav thread will handle traveling\&. If you want to travel without avoidance, this is also possible\&. In this case, the method in the \fBNavigation\fP class is used\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP The x coordinate to travel to (in cm) 
+.br
+\fIy\fP The y coordinate to travel to (in cm) 
+.br
+\fIavoid\fP the robot will pay attention to the distance from ultrasonic sensor to avoid abstacle when navigating 
+.RE
+.PP
+
+.PP
+Definition at line 70 of file Navigation\&.java\&.
+.SS "synchronized void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.turnTo (double angle)"
+(\fIImprove\fP \fIConsider to discard\fP) This method is where the logic for the odometer will run\&. Use the methods provided from the OdometerData class to implement the odometer\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIangle\fP The angle we want our robot to turn to (in degrees) 
+.br
+\fIasync\fP whether return instantaneously 
+.RE
+.PP
+
+.PP
+Definition at line 144 of file Navigation\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

@@ -1,0 +1,103 @@
+.TH "ca.mcgill.ecse211.threads.LightPoller" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.threads.LightPoller
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\fP\&.
+.PP
+Inherited by \fBca\&.mcgill\&.ecse211\&.threads\&.RGBPoller\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLightPoller\fP (SampleProvider[] us, float[][] lgData, \fBSensorData\fP cont)  throws OdometerExceptions "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrunMethod\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "SampleProvider \fBus\fP []"
+.br
+.ti -1c
+.RI "\fBSensorData\fP \fBcont\fP"
+.br
+.ti -1c
+.RI "float [][] \fBlgData\fP"
+.br
+.ti -1c
+.RI "float \fBlastValue\fP []"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBWAIT_TIME\fP = 50"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements the Light Sensor Poller for our robot it runs pulls the sensor data every 50 miliseconds 
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file LightPoller\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ca\&.mcgill\&.ecse211\&.threads\&.LightPoller\&.LightPoller (SampleProvider [] us, float lgData[][], \fBSensorData\fP cont) throws \fBOdometerExceptions\fP"
+This constructor creates an instance of the \fBLightPoller\fP class to provide distance data from an light sensor to our robot\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIus\fP a SampleProvider class instance that helps us to store an array of ultrasonic sensor data\&. 
+.br
+\fIlgData\fP an array of distance data to be used by our Wall Follower's UltrasonicControllers\&. 
+.br
+\fIcont\fP a BangBangController or PController instance that has accumulated distance data stored in usData passed to it\&. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIOdometerExceptions\fP 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file LightPoller\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.LightPoller\&.runMethod ()\fC [protected]\fP"
+the run method to be performed in run method, collect light data 
+.PP
+Definition at line 53 of file LightPoller\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

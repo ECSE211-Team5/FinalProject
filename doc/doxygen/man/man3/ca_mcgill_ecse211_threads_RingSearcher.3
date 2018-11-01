@@ -1,0 +1,80 @@
+.TH "ca.mcgill.ecse211.threads.RingSearcher" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.threads.RingSearcher
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRingSearcher\fP (EV3LargeRegulatedMotor storageMotor, EV3MediumRegulatedMotor rodMotor)  throws OdometerExceptions "
+.br
+.ti -1c
+.RI "void \fBretrieveRing\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrunMethod\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class helps our robot to search for rings on a grid itself as a thread will search and retrieve the rings
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file RingSearcher\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ca\&.mcgill\&.ecse211\&.threads\&.RingSearcher\&.RingSearcher (EV3LargeRegulatedMotor storageMotor, EV3MediumRegulatedMotor rodMotor) throws \fBOdometerExceptions\fP"
+This class provides method to check if there is a ring and if the ring is the color we want
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstoragenMotor\fP the motor to move the storage of the robot 
+.br
+\fIrodMotor\fP the motor for the rod to collect the ring 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIOdometerExceptions\fP 
+.RE
+.PP
+
+.PP
+Definition at line 36 of file RingSearcher\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.RingSearcher\&.retrieveRing ()"
+this method retrieve the searched ring 
+.PP
+Definition at line 74 of file RingSearcher\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

@@ -1,0 +1,124 @@
+.TH "ca.mcgill.ecse211.threads.ThreadControl" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.threads.ThreadControl
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Runnable\&.
+.PP
+Inherited by \fBca\&.mcgill\&.ecse211\&.threads\&.LightPoller\fP, \fBca\&.mcgill\&.ecse211\&.threads\&.RingSearcher\fP, and \fBca\&.mcgill\&.ecse211\&.threads\&.UltrasonicPoller\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "synchronized void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "synchronized boolean \fBisStarted\fP ()"
+.br
+.ti -1c
+.RI "synchronized void \fBsetStart\fP (boolean start)"
+.br
+.ti -1c
+.RI "void \fBwaitForThisThread\fP ()"
+.br
+.ti -1c
+.RI "boolean \fBshouldWait\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetWait\fP (boolean shouldWait)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "abstract void \fBrunMethod\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "boolean \fBisStarted\fP"
+.br
+.ti -1c
+.RI "Object \fBlockObject\fP = new Object()"
+.br
+.ti -1c
+.RI "boolean \fBshouldWait\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBWAIT_TIME\fP = 100"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class for thread control with pause and restart functionality 
+.PP
+Definition at line 7 of file ThreadControl\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "synchronized boolean ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.isStarted ()"
+check if this poller thread is running 
+.PP
+\fBReturns:\fP
+.RS 4
+: true if the thread is running, false if the thread is paused 
+.RE
+.PP
+
+.PP
+Definition at line 36 of file ThreadControl\&.java\&.
+.SS "synchronized void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.run ()"
+run method implemented from Runnable class, this run method implements the functionality to pause and restart the thread 
+.PP
+Definition at line 17 of file ThreadControl\&.java\&.
+.SS "synchronized void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.setStart (boolean start)"
+start a paused thread or stop a runing thread 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstart\fP 
+.RE
+.PP
+
+.PP
+Definition at line 44 of file ThreadControl\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.setWait (boolean shouldWait)"
+set if other thread shouldWait for this thread 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIshouldWait\fP 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file ThreadControl\&.java\&.
+.SS "boolean ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.shouldWait ()"
+get shouldWait for this thread 
+.PP
+\fBReturns:\fP
+.RS 4
+: shouldWait 
+.RE
+.PP
+
+.PP
+Definition at line 67 of file ThreadControl\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.waitForThisThread ()"
+wait for this thread until shouldWait is false 
+.PP
+Definition at line 52 of file ThreadControl\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

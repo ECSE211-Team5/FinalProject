@@ -1,0 +1,312 @@
+\hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{}\section{ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data Class Reference}
+\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}\index{ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data@{ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a46cc30522719018a80f89624e0ce458f}{getD} ()
+\item 
+double \mbox{[}$\,$\mbox{]} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL} ()
+\item 
+int \mbox{[}$\,$\mbox{]} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a76313564e284f5cdb66aefce4e595f3b}{get\+R\+GB} ()
+\item 
+double \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6}{getA} ()
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}{setD} (double d)
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a35b1941d44e86b81eb7c625efbd3c8ba}{setA} (double a)
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}{set\+R\+GB} (int r, int g, int b)
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a1c2c38354fc5a66b4667e1d47ab6b20b}{setL} (double l, int id)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static synchronized \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}{get\+Sensor\+Data} ()  throws Odometer\+Exceptions 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a11dcdc9c15184e05a9c84fc3958e26b6}{Sensor\+Data} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements methods to manage data from our sensors
+
+\begin{DoxyAuthor}{Author}
+Caspar Cedro 
+
+Percy Chen 
+
+Patrick Erath 
+
+Anssam Ghezala 
+
+Susan Matuszewski 
+
+Kamy Moussavi Kafi 
+\end{DoxyAuthor}
+
+
+Definition at line 17 of file Sensor\+Data.\+java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a11dcdc9c15184e05a9c84fc3958e26b6}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a11dcdc9c15184e05a9c84fc3958e26b6}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!Sensor\+Data@{Sensor\+Data}}
+\index{Sensor\+Data@{Sensor\+Data}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{Sensor\+Data()}{SensorData()}}
+{\footnotesize\ttfamily ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+Sensor\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Default constructor. The constructor is private. A factory is used instead such that only one instance of this class is ever created. 
+
+Definition at line 42 of file Sensor\+Data.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a11dcdc9c15184e05a9c84fc3958e26b6_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!getA@{getA}}
+\index{getA@{getA}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{get\+A()}{getA()}}
+{\footnotesize\ttfamily double ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+getA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+(deprecated, not using) This method returns the currently stored angle value from the gyro sensor
+
+\begin{DoxyReturn}{Returns}
+The current angle value 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Sensor\+Data.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a46cc30522719018a80f89624e0ce458f}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a46cc30522719018a80f89624e0ce458f}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!getD@{getD}}
+\index{getD@{getD}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{get\+D()}{getD()}}
+{\footnotesize\ttfamily double ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+getD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the ultra\+Sonic distance data.
+
+\begin{DoxyReturn}{Returns}
+the sensor data. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Sensor\+Data.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a46cc30522719018a80f89624e0ce458f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!getL@{getL}}
+\index{getL@{getL}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{get\+L()}{getL()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+getL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the light value data from the two light sensors (protected by light\+Lock) \begin{DoxyReturn}{Returns}
+\+: data from light sensor 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file Sensor\+Data.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a76313564e284f5cdb66aefce4e595f3b}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a76313564e284f5cdb66aefce4e595f3b}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!get\+R\+GB@{get\+R\+GB}}
+\index{get\+R\+GB@{get\+R\+GB}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{get\+R\+G\+B()}{getRGB()}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+get\+R\+GB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the rgb data for light sensor (protected by rgb lock)
+
+\begin{DoxyReturn}{Returns}
+\+: rgb data 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file Sensor\+Data.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a76313564e284f5cdb66aefce4e595f3b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!get\+Sensor\+Data@{get\+Sensor\+Data}}
+\index{get\+Sensor\+Data@{get\+Sensor\+Data}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{get\+Sensor\+Data()}{getSensorData()}}
+{\footnotesize\ttfamily static synchronized \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+get\+Sensor\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
+
+Odometer\+Data factory. Returns an Odometer\+Data instance and makes sure that only one instance is ever created. If the user tries to instantiate multiple objects, the method throws a Multiple\+Odometer\+Data\+Exception.
+
+\begin{DoxyReturn}{Returns}
+An Odometer\+Data object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Odometer\+Exceptions} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 61 of file Sensor\+Data.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a35b1941d44e86b81eb7c625efbd3c8ba}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a35b1941d44e86b81eb7c625efbd3c8ba}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!setA@{setA}}
+\index{setA@{setA}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{set\+A()}{setA()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+setA (\begin{DoxyParamCaption}\item[{double}]{a }\end{DoxyParamCaption})}
+
+(deprecated not usings) This method overwrites the angle value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The value to overwrite angle with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 138 of file Sensor\+Data.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a35b1941d44e86b81eb7c625efbd3c8ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!setD@{setD}}
+\index{setD@{setD}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{set\+D()}{setD()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+setD (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+
+This method overwrites the distance value. Use for ultrasonic sensor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & The value to overwrite distance with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 128 of file Sensor\+Data.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a1c2c38354fc5a66b4667e1d47ab6b20b}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a1c2c38354fc5a66b4667e1d47ab6b20b}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!setL@{setL}}
+\index{setL@{setL}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{set\+L()}{setL()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+setL (\begin{DoxyParamCaption}\item[{double}]{l,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+This method overwrites the light value. (protected by light lock)
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & The value to overwrite the current light value with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 165 of file Sensor\+Data.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a1c2c38354fc5a66b4667e1d47ab6b20b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!set\+R\+GB@{set\+R\+GB}}
+\index{set\+R\+GB@{set\+R\+GB}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
+\subsubsection{\texorpdfstring{set\+R\+G\+B()}{setRGB()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+set\+R\+GB (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+set rgb data for color sensor (protected by rgb lock)
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & red value \\
+\hline
+{\em g} & green value \\
+\hline
+{\em b} & blue value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 149 of file Sensor\+Data.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/Sensor\+Data.\+java\end{DoxyCompactItemize}

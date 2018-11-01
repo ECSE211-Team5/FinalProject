@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type" kind="enum" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::project::GameParameters::AreaType</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a3e0e6dda84dcf0572039c349889217c5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.project.GameParameters.AreaType.Starting</definition>
+        <argsstring></argsstring>
+        <name>Starting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a25564076fdd8880377fbd6eaf753456f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.project.GameParameters.AreaType.Searching</definition>
+        <argsstring></argsstring>
+        <name>Searching</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1ac762256f8b33e7c93c162520a0349769" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.project.GameParameters.AreaType.Dangerous</definition>
+        <argsstring></argsstring>
+        <name>Dangerous</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1afd78c1184c6b82e22bb08ed39ae4e83b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.project.GameParameters.AreaType.StartingBoundary</definition>
+        <argsstring></argsstring>
+        <name>StartingBoundary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a5a3aceb665ba97ac242e77955feed640" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.project.GameParameters.AreaType.SearchingBoundary</definition>
+        <argsstring></argsstring>
+        <name>SearchingBoundary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>the type of areas <simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="24" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="24" bodyend="26"/>
+    <listofallmembers>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1ac762256f8b33e7c93c162520a0349769" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters::AreaType</scope><name>Dangerous</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a25564076fdd8880377fbd6eaf753456f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters::AreaType</scope><name>Searching</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a5a3aceb665ba97ac242e77955feed640" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters::AreaType</scope><name>SearchingBoundary</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a3e0e6dda84dcf0572039c349889217c5" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters::AreaType</scope><name>Starting</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1afd78c1184c6b82e22bb08ed39ae4e83b" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters::AreaType</scope><name>StartingBoundary</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

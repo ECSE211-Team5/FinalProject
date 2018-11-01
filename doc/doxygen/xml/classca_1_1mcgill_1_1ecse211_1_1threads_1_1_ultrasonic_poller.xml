@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::threads::UltrasonicPoller</compoundname>
+    <basecompoundref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control" prot="public" virt="non-virtual">ca.mcgill.ecse211.threads.ThreadControl</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1a7d03db03e5881f4c4a7d47a19afa71ce" prot="private" static="no" mutable="no">
+        <type>SampleProvider</type>
+        <definition>SampleProvider ca.mcgill.ecse211.threads.UltrasonicPoller.us</definition>
+        <argsstring></argsstring>
+        <name>us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="23" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1a7d8529c0dda51bceb22eb94897201d1e" prot="private" static="no" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
+        <definition>SensorData ca.mcgill.ecse211.threads.UltrasonicPoller.cont</definition>
+        <argsstring></argsstring>
+        <name>cont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="24" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1aa86a35edc06b1d33625bf46a61085343" prot="private" static="no" mutable="no">
+        <type>float []</type>
+        <definition>float [] ca.mcgill.ecse211.threads.UltrasonicPoller.usData</definition>
+        <argsstring></argsstring>
+        <name>usData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1ac561f5d04e2b655a4509de8453c0cd07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ca.mcgill.ecse211.threads.UltrasonicPoller.UltrasonicPoller</definition>
+        <argsstring>(SampleProvider us, float[] usData, SensorData cont)</argsstring>
+        <name>UltrasonicPoller</name>
+        <param>
+          <type>SampleProvider</type>
+          <declname>us</declname>
+        </param>
+        <param>
+          <type>float []</type>
+          <declname>usData</declname>
+        </param>
+        <param>
+          <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This constructor creates an instance of the <ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller" kindref="compound">UltrasonicPoller</ref> class to provide distance data from an ultrasonic sensor to our Wall Follower.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>us</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a SampleProvider class instance that helps us to store an array of ultrasonic sensor data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an array of distance data to be used by our Wall Follower&apos;s UltrasonicControllers. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cont</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a BangBangController or PController instance that has accumulated distance data stored in usData passed to it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="38" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="38" bodyend="43"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="36" endline="38">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1a8e6a84342aedc1b72741dbc2e80148c4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.UltrasonicPoller.runMethod</definition>
+        <argsstring>()</argsstring>
+        <name>runMethod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get us sensor data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="48" bodyend="55"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a2c1f8e625478b89aabe6e9911e482ef3" compoundref="_sensor_data_8java" startline="128" endline="130">ca.mcgill.ecse211.threads.SensorData.setD</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the Ultrasonic Sensor Poller for our Wall Follower.</para><para>Control of the wall follower is applied periodically by the <ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller" kindref="compound">UltrasonicPoller</ref> thread. The while loop at the bottom executes in a loop. Assuming that the us.fetchSample, and cont.processUSData methods operate in about 20mS, and that the thread sleeps for 50 mS at the end of each loop, then one cycle through the loop is approximately 70 mS. This corresponds to a sampling rate of 1/70mS or about 14 Hz.</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="87">
+        <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
+        <childnode refid="88" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="89" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="90">
+        <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
+        <childnode refid="91" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="92" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>Runnable</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="22" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="22" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1a7d8529c0dda51bceb22eb94897201d1e" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>cont</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1abb0ba2385c212f3d0d8435267d882536" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>isStarted</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>isStarted</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1ab20c44ff2dafab8981c42fa8bf634dfc" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>lockObject</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a03e743000ea2c37080427565e8ec5f35" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>run</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1a8e6a84342aedc1b72741dbc2e80148c4" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>runMethod</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a16221cdc4ccf637b190934549c708e1f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>setStart</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a7759a6f52b56e15cb37cd25ea31c93c1" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>setWait</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a8252930dab1b067da64cf2afae4fc630" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>shouldWait</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a9c3896500e86e402b8019e1be6500621" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>shouldWait</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1ac561f5d04e2b655a4509de8453c0cd07" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>UltrasonicPoller</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1a7d03db03e5881f4c4a7d47a19afa71ce" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>us</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1aa86a35edc06b1d33625bf46a61085343" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>usData</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>WAIT_TIME</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>waitForThisThread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

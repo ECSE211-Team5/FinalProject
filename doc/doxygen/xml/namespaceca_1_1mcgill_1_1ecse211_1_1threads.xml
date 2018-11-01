@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespaceca_1_1mcgill_1_1ecse211_1_1threads" kind="namespace" language="Java">
+    <compoundname>ca::mcgill::ecse211::threads</compoundname>
+    <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller" prot="public">ca::mcgill::ecse211::threads::GyroPoller</innerclass>
+    <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller" prot="public">ca::mcgill::ecse211::threads::LightPoller</innerclass>
+    <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller" prot="public">ca::mcgill::ecse211::threads::RGBPoller</innerclass>
+    <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher" prot="public">ca::mcgill::ecse211::threads::RingSearcher</innerclass>
+    <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" prot="public">ca::mcgill::ecse211::threads::SensorData</innerclass>
+    <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control" prot="public">ca::mcgill::ecse211::threads::ThreadControl</innerclass>
+    <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller" prot="public">ca::mcgill::ecse211::threads::UltrasonicPoller</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" line="1" column="1"/>
+  </compounddef>
+</doxygen>

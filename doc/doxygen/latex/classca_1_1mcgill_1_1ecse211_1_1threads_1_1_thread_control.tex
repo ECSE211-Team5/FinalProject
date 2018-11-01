@@ -1,0 +1,184 @@
+\hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control}{}\section{ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control Class Reference}
+\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control}\index{ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control@{ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control}}
+
+
+Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+synchronized void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a03e743000ea2c37080427565e8ec5f35}{run} ()
+\item 
+synchronized boolean \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{is\+Started} ()
+\item 
+synchronized void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a16221cdc4ccf637b190934549c708e1f}{set\+Start} (boolean start)
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7}{wait\+For\+This\+Thread} ()
+\item 
+boolean \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{should\+Wait} ()
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a7759a6f52b56e15cb37cd25ea31c93c1}{set\+Wait} (boolean should\+Wait)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a2959c54bdb6c62c9d5569cdf3ccf2418}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a2959c54bdb6c62c9d5569cdf3ccf2418}} 
+abstract void {\bfseries run\+Method} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_abb0ba2385c212f3d0d8435267d882536}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_abb0ba2385c212f3d0d8435267d882536}} 
+boolean {\bfseries is\+Started}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}} 
+Object {\bfseries lock\+Object} = new Object()
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a8252930dab1b067da64cf2afae4fc630}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a8252930dab1b067da64cf2afae4fc630}} 
+boolean {\bfseries should\+Wait}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}} 
+static int {\bfseries W\+A\+I\+T\+\_\+\+T\+I\+ME} = 100
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class for thread control with pause and restart functionality 
+
+Definition at line 7 of file Thread\+Control.\+java.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}!is\+Started@{is\+Started}}
+\index{is\+Started@{is\+Started}!ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}}
+\subsubsection{\texorpdfstring{is\+Started()}{isStarted()}}
+{\footnotesize\ttfamily synchronized boolean ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+is\+Started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+check if this poller thread is running \begin{DoxyReturn}{Returns}
+\+: true if the thread is running, false if the thread is paused 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Thread\+Control.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a03e743000ea2c37080427565e8ec5f35}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a03e743000ea2c37080427565e8ec5f35}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}!run@{run}}
+\index{run@{run}!ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily synchronized void ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+run method implemented from Runnable class, this run method implements the functionality to pause and restart the thread 
+
+Definition at line 17 of file Thread\+Control.\+java.
+
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a16221cdc4ccf637b190934549c708e1f}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a16221cdc4ccf637b190934549c708e1f}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}!set\+Start@{set\+Start}}
+\index{set\+Start@{set\+Start}!ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}}
+\subsubsection{\texorpdfstring{set\+Start()}{setStart()}}
+{\footnotesize\ttfamily synchronized void ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+set\+Start (\begin{DoxyParamCaption}\item[{boolean}]{start }\end{DoxyParamCaption})}
+
+start a paused thread or stop a runing thread 
+\begin{DoxyParams}{Parameters}
+{\em start} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file Thread\+Control.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a16221cdc4ccf637b190934549c708e1f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a7759a6f52b56e15cb37cd25ea31c93c1}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a7759a6f52b56e15cb37cd25ea31c93c1}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}!set\+Wait@{set\+Wait}}
+\index{set\+Wait@{set\+Wait}!ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}}
+\subsubsection{\texorpdfstring{set\+Wait()}{setWait()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+set\+Wait (\begin{DoxyParamCaption}\item[{boolean}]{should\+Wait }\end{DoxyParamCaption})}
+
+set if other thread should\+Wait for this thread 
+\begin{DoxyParams}{Parameters}
+{\em should\+Wait} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 77 of file Thread\+Control.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a7759a6f52b56e15cb37cd25ea31c93c1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}!should\+Wait@{should\+Wait}}
+\index{should\+Wait@{should\+Wait}!ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}}
+\subsubsection{\texorpdfstring{should\+Wait()}{shouldWait()}}
+{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+should\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get should\+Wait for this thread \begin{DoxyReturn}{Returns}
+\+: should\+Wait 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Thread\+Control.\+java.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}!wait\+For\+This\+Thread@{wait\+For\+This\+Thread}}
+\index{wait\+For\+This\+Thread@{wait\+For\+This\+Thread}!ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}}
+\subsubsection{\texorpdfstring{wait\+For\+This\+Thread()}{waitForThisThread()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+wait\+For\+This\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+wait for this thread until should\+Wait is false 
+
+Definition at line 52 of file Thread\+Control.\+java.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/Thread\+Control.\+java\end{DoxyCompactItemize}

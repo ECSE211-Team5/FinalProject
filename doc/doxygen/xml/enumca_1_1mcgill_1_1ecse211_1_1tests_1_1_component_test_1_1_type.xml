@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type" kind="enum" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::tests::ComponentTest::Type</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1a70ec62ab2b745dd99e291459279910ea" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.tests.ComponentTest.Type.Navigation</definition>
+        <argsstring></argsstring>
+        <name>Navigation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="10" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1acdc93de9366f2e6710c7f2fc0e4478c3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.tests.ComponentTest.Type.Localization</definition>
+        <argsstring></argsstring>
+        <name>Localization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="10" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1acb88d74b8bd35b190f8b1b05730c213a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.tests.ComponentTest.Type.UltrasonicSensor</definition>
+        <argsstring></argsstring>
+        <name>UltrasonicSensor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="10" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1aa8c9262ad5014cd52ecce2eec6604510" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.tests.ComponentTest.Type.LightSensor</definition>
+        <argsstring></argsstring>
+        <name>LightSensor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="10" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1ab118eac94e0b37e6871a4c9a788c675e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ca.mcgill.ecse211.tests.ComponentTest.Type.RingDetection</definition>
+        <argsstring></argsstring>
+        <name>RingDetection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="11" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="9" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="9" bodyend="11"/>
+    <listofallmembers>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1aa8c9262ad5014cd52ecce2eec6604510" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest::Type</scope><name>LightSensor</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1acdc93de9366f2e6710c7f2fc0e4478c3" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest::Type</scope><name>Localization</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1a70ec62ab2b745dd99e291459279910ea" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest::Type</scope><name>Navigation</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1ab118eac94e0b37e6871a4c9a788c675e" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest::Type</scope><name>RingDetection</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1acb88d74b8bd35b190f8b1b05730c213a" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest::Type</scope><name>UltrasonicSensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

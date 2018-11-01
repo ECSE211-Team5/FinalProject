@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::localization::LightLocalizer</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a4952a0770d403a9805b726d79fbed910" prot="private" static="no" mutable="no">
+        <type>EV3LargeRegulatedMotor</type>
+        <definition>EV3LargeRegulatedMotor ca.mcgill.ecse211.localization.LightLocalizer.leftMotor</definition>
+        <argsstring></argsstring>
+        <name>leftMotor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="23" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1ac1c5c7776df7861ae05e00ddae287ec2" prot="private" static="no" mutable="no">
+        <type>EV3LargeRegulatedMotor</type>
+        <definition>EV3LargeRegulatedMotor ca.mcgill.ecse211.localization.LightLocalizer.rightMotor</definition>
+        <argsstring></argsstring>
+        <name>rightMotor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="24" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a26e21fe8c912ddaacf831b28dc391f83" prot="private" static="no" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer" kindref="compound">Odometer</ref></type>
+        <definition>Odometer ca.mcgill.ecse211.localization.LightLocalizer.odometer</definition>
+        <argsstring></argsstring>
+        <name>odometer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a09e959a6ea2b952658485bb79b350f58" prot="private" static="no" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
+        <definition>SensorData ca.mcgill.ecse211.localization.LightLocalizer.data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="27" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a53afea3fbe56b2313e13e140ba72bc67" prot="private" static="no" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" kindref="compound">Navigation</ref></type>
+        <definition>Navigation ca.mcgill.ecse211.localization.LightLocalizer.navigation</definition>
+        <argsstring></argsstring>
+        <name>navigation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fe82107f771c1cc70198f6bd5ef97a9" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ca.mcgill.ecse211.localization.LightLocalizer.FORWARD_SPEED</definition>
+        <argsstring></argsstring>
+        <name>FORWARD_SPEED</name>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1ad4be05adbc80ce4345708731059e8156" prot="private" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double ca.mcgill.ecse211.localization.LightLocalizer.SENSOR_DIS</definition>
+        <argsstring></argsstring>
+        <name>SENSOR_DIS</name>
+        <initializer>= 16.3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a5ffff12fb880c5b5052118fc27b03778" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ca.mcgill.ecse211.localization.LightLocalizer.blackLineColor</definition>
+        <argsstring></argsstring>
+        <name>blackLineColor</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ca.mcgill.ecse211.localization.LightLocalizer.LightLocalizer</definition>
+        <argsstring>(Navigation nav, EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor)</argsstring>
+        <name>LightLocalizer</name>
+        <param>
+          <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" kindref="compound">Navigation</ref></type>
+          <declname>nav</declname>
+        </param>
+        <param>
+          <type>EV3LargeRegulatedMotor</type>
+          <declname>leftMotor</declname>
+        </param>
+        <param>
+          <type>EV3LargeRegulatedMotor</type>
+          <declname>rightMotor</declname>
+        </param>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the class constructor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leftMotor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rightMotor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OdometerExceptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="39" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="39" bodyend="46"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="79" endline="88">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" compoundref="_sensor_data_8java" startline="61" endline="73">ca.mcgill.ecse211.threads.SensorData.getSensorData</references>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.localization.LightLocalizer.localize</definition>
+        <argsstring>(int[] sC)</argsstring>
+        <name>localize</name>
+        <param>
+          <type>int []</type>
+          <declname>sC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(<emphasis>Improve</emphasis>) Once the robot know what angle it is facing, this method looks for the x,y axis origins knowing it is in the first tile facing north. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the coordinate to set to after localization </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="54" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="54" bodyend="93"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a39eec50582f0e4bcff8a4669c48e1609" compoundref="_sensor_data_8java" startline="88" endline="97">ca.mcgill.ecse211.threads.SensorData.getL</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a82986438cd462e66520bc62bb4bd2b75" compoundref="_odometer_data_8java" startline="179" endline="190">ca.mcgill.ecse211.odometer.OdometerData.setY</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="144" endline="165">ca.mcgill.ecse211.project.Navigation.turnTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2911d7215e47f3064defe016b46bfeef" compoundref="_odometer_data_8java" startline="161" endline="172">ca.mcgill.ecse211.odometer.OdometerData.setX</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="225" endline="227">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a206492a827a716e6c606dc817cb4ff4d" compoundref="_game_8java" startline="70">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="197" endline="208">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="162" endline="193">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class helps our robot to localize itself using the light sensor</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="22" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="22" bodyend="94"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a5ffff12fb880c5b5052118fc27b03778" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>blackLineColor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a09e959a6ea2b952658485bb79b350f58" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>data</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fe82107f771c1cc70198f6bd5ef97a9" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>FORWARD_SPEED</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a4952a0770d403a9805b726d79fbed910" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>leftMotor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>LightLocalizer</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>localize</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a53afea3fbe56b2313e13e140ba72bc67" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>navigation</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a26e21fe8c912ddaacf831b28dc391f83" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>odometer</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1ac1c5c7776df7861ae05e00ddae287ec2" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>rightMotor</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1ad4be05adbc80ce4345708731059e8156" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>SENSOR_DIS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,136 @@
+\hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller}{}\section{ca.\+mcgill.\+ecse211.\+threads.\+Light\+Poller Class Reference}
+\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller}\index{ca.\+mcgill.\+ecse211.\+threads.\+Light\+Poller@{ca.\+mcgill.\+ecse211.\+threads.\+Light\+Poller}}
+
+
+Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+Light\+Poller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+Light\+Poller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_adc07f842a1cc089195c5e47c2a0e5ee6}{Light\+Poller} (Sample\+Provider\mbox{[}$\,$\mbox{]} us, float\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} lg\+Data, \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} cont)  throws Odometer\+Exceptions 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_aab90a460a4d0c926fb8f3930492a8fb1}{run\+Method} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}} 
+Sample\+Provider {\bfseries us} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}} 
+\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} {\bfseries cont}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}} 
+float \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} {\bfseries lg\+Data}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}} 
+float {\bfseries last\+Value} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ac3eedf8306835f6592bdbec2f5694651}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ac3eedf8306835f6592bdbec2f5694651}} 
+static int {\bfseries W\+A\+I\+T\+\_\+\+T\+I\+ME} = 50
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements the Light Sensor Poller for our robot it runs pulls the sensor data every 50 miliseconds \begin{DoxyAuthor}{Author}
+Caspar Cedro 
+
+Percy Chen 
+
+Patrick Erath 
+
+Anssam Ghezala 
+
+Susan Matuszewski 
+
+Kamy Moussavi Kafi 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Light\+Poller.\+java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_adc07f842a1cc089195c5e47c2a0e5ee6}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_adc07f842a1cc089195c5e47c2a0e5ee6}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller@{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller}!Light\+Poller@{Light\+Poller}}
+\index{Light\+Poller@{Light\+Poller}!ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller@{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller}}
+\subsubsection{\texorpdfstring{Light\+Poller()}{LightPoller()}}
+{\footnotesize\ttfamily ca.\+mcgill.\+ecse211.\+threads.\+Light\+Poller.\+Light\+Poller (\begin{DoxyParamCaption}\item[{Sample\+Provider \mbox{[}$\,$\mbox{]}}]{us,  }\item[{float}]{lg\+Data\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data}}]{cont }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}}
+
+This constructor creates an instance of the \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller}{Light\+Poller} class to provide distance data from an light sensor to our robot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em us} & a Sample\+Provider class instance that helps us to store an array of ultrasonic sensor data. \\
+\hline
+{\em lg\+Data} & an array of distance data to be used by our Wall Follower\textquotesingle{}s Ultrasonic\+Controllers. \\
+\hline
+{\em cont} & a Bang\+Bang\+Controller or P\+Controller instance that has accumulated distance data stored in us\+Data passed to it. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Odometer\+Exceptions} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 40 of file Light\+Poller.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_adc07f842a1cc089195c5e47c2a0e5ee6_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_aab90a460a4d0c926fb8f3930492a8fb1}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_aab90a460a4d0c926fb8f3930492a8fb1}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller@{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller}!run\+Method@{run\+Method}}
+\index{run\+Method@{run\+Method}!ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller@{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller}}
+\subsubsection{\texorpdfstring{run\+Method()}{runMethod()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Light\+Poller.\+run\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+the run method to be performed in run method, collect light data 
+
+Definition at line 53 of file Light\+Poller.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_aab90a460a4d0c926fb8f3930492a8fb1_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/Light\+Poller.\+java\end{DoxyCompactItemize}

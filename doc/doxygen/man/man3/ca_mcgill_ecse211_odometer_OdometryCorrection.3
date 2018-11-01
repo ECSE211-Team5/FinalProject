@@ -1,0 +1,86 @@
+.TH "ca.mcgill.ecse211.odometer.OdometryCorrection" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.odometer.OdometryCorrection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Runnable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOdometryCorrection\fP ()  throws OdometerExceptions "
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.ti -1c
+.RI "void \fBdoCorrection\fP (double angle)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements correction for the odometry on our robot using a light sensor\&.
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file OdometryCorrection\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ca\&.mcgill\&.ecse211\&.odometer\&.OdometryCorrection\&.OdometryCorrection () throws \fBOdometerExceptions\fP"
+This is the default class constructor\&. An existing instance of the odometer is used\&. This is to ensure thread safety\&.
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBOdometerExceptions\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file OdometryCorrection\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometryCorrection\&.doCorrection (double angle)"
+This method corrects our robot's odometer readings
+.PP
+\fBParameters:\fP
+.RS 4
+\fIangle\fP The current angle that the robot is facing 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file OdometryCorrection\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometryCorrection\&.run ()"
+When this thread starts, it will correct the rotation and position of the robot once a blackline is detected
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBOdometerExceptions\fP\fP 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file OdometryCorrection\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

@@ -1,0 +1,111 @@
+\hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher}{}\section{ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher Class Reference}
+\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher}\index{ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher@{ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher}}
+
+
+Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a58fdaba16c2b961446d1474b76e66e49}{Ring\+Searcher} (E\+V3\+Large\+Regulated\+Motor storage\+Motor, E\+V3\+Medium\+Regulated\+Motor rod\+Motor)  throws Odometer\+Exceptions 
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd7a2651a7c5de76a018664c8bf327af}{retrieve\+Ring} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a2b03c700b5d232f5aef7c6acf439b7ea}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a2b03c700b5d232f5aef7c6acf439b7ea}} 
+void {\bfseries run\+Method} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class helps our robot to search for rings on a grid itself as a thread will search and retrieve the rings
+
+\begin{DoxyAuthor}{Author}
+Caspar Cedro 
+
+Percy Chen 
+
+Patrick Erath 
+
+Anssam Ghezala 
+
+Susan Matuszewski 
+
+Kamy Moussavi Kafi 
+\end{DoxyAuthor}
+
+
+Definition at line 20 of file Ring\+Searcher.\+java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a58fdaba16c2b961446d1474b76e66e49}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a58fdaba16c2b961446d1474b76e66e49}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher}!Ring\+Searcher@{Ring\+Searcher}}
+\index{Ring\+Searcher@{Ring\+Searcher}!ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher}}
+\subsubsection{\texorpdfstring{Ring\+Searcher()}{RingSearcher()}}
+{\footnotesize\ttfamily ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher.\+Ring\+Searcher (\begin{DoxyParamCaption}\item[{E\+V3\+Large\+Regulated\+Motor}]{storage\+Motor,  }\item[{E\+V3\+Medium\+Regulated\+Motor}]{rod\+Motor }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}}
+
+This class provides method to check if there is a ring and if the ring is the color we want
+
+
+\begin{DoxyParams}{Parameters}
+{\em storagen\+Motor} & the motor to move the storage of the robot \\
+\hline
+{\em rod\+Motor} & the motor for the rod to collect the ring \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Odometer\+Exceptions} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 36 of file Ring\+Searcher.\+java.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a58fdaba16c2b961446d1474b76e66e49_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd7a2651a7c5de76a018664c8bf327af}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd7a2651a7c5de76a018664c8bf327af}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher}!retrieve\+Ring@{retrieve\+Ring}}
+\index{retrieve\+Ring@{retrieve\+Ring}!ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher}}
+\subsubsection{\texorpdfstring{retrieve\+Ring()}{retrieveRing()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher.\+retrieve\+Ring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+this method retrieve the searched ring 
+
+Definition at line 74 of file Ring\+Searcher.\+java.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/Ring\+Searcher.\+java\end{DoxyCompactItemize}

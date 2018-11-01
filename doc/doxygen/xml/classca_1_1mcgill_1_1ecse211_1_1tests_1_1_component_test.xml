@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::tests::ComponentTest</compoundname>
+    <innerclass refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type" prot="public">ca::mcgill::ecse211::tests::ComponentTest::Type</innerclass>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1adcebcb6d834cb9c2461bccdd9831e74b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.tests.ComponentTest.runTest</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>runTest</name>
+        <param>
+          <type><ref refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type" kindref="compound">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method selects test for each individual components of the design</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="18" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1aa40592bb550b3526402faddbc0d890c7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.tests.ComponentTest.navigationTest</definition>
+        <argsstring>()</argsstring>
+        <name>navigationTest</name>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for Navigation <parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OdometerExceptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="26" bodyend="30"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a40f6d5a8c70b88bf89b2171a02d2813f" compoundref="_game_8java" startline="42">ca.mcgill.ecse211.project.Game.leftMotor</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a637614c1eb769dcdb09d897c66e453a2" compoundref="_game_8java" startline="48">ca.mcgill.ecse211.project.Game.rightMotor</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" compoundref="_navigation_8java" startline="70" endline="97">ca.mcgill.ecse211.project.Navigation.travelTo</references>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.tests.ComponentTest.localizationTest</definition>
+        <argsstring>()</argsstring>
+        <name>localizationTest</name>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for localizationTest <parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OdometerExceptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a05cd9d95458b11ed57ca001a28fffa7c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.tests.ComponentTest.ultrasonicSensorTest</definition>
+        <argsstring>()</argsstring>
+        <name>ultrasonicSensorTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for UltrasonicSensor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3e8288f482b3806a0f3c4668951f3e36" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.tests.ComponentTest.lightSensorTest</definition>
+        <argsstring>()</argsstring>
+        <name>lightSensorTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for lightSensor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="50" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3782f843fd251f8bb14be0cb1d291dd5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ca.mcgill.ecse211.tests.ComponentTest.RingMotorTest</definition>
+        <argsstring>()</argsstring>
+        <name>RingMotorTest</name>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test for ring detection <parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OdometerExceptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="58" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="58" bodyend="77"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a37d42c1d3b40b8eaa429866e37cd86c7" compoundref="_game_8java" startline="54">ca.mcgill.ecse211.project.Game.storageMotor</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad3c828a8e12ad3eaab01d2d846a3716f" compoundref="_game_8java" startline="60">ca.mcgill.ecse211.project.Game.rodMotor</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a16221cdc4ccf637b190934549c708e1f" compoundref="_thread_control_8java" startline="44" endline="47">ca.mcgill.ecse211.threads.ThreadControl.setStart</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af681b5dc675c13ed284071cc135f5fd3" compoundref="_main_8java" startline="52" endline="77">ca.mcgill.ecse211.project.Main.main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="8" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="8" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3e8288f482b3806a0f3c4668951f3e36" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest</scope><name>lightSensorTest</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest</scope><name>localizationTest</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1aa40592bb550b3526402faddbc0d890c7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest</scope><name>navigationTest</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3782f843fd251f8bb14be0cb1d291dd5" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest</scope><name>RingMotorTest</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1adcebcb6d834cb9c2461bccdd9831e74b" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest</scope><name>runTest</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a05cd9d95458b11ed57ca001a28fffa7c" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest</scope><name>ultrasonicSensorTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

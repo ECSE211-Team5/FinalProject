@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::threads::SensorData</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a100eb89b3adb81a1d22fc6d96dae9fdb" prot="private" static="no" mutable="no">
+        <type>double []</type>
+        <definition>double [] ca.mcgill.ecse211.threads.SensorData.lights</definition>
+        <argsstring></argsstring>
+        <name>lights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="19" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8733d0d17afde351a477f83e862e504c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>volatile double ca.mcgill.ecse211.threads.SensorData.distance</definition>
+        <argsstring></argsstring>
+        <name>distance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1ae43d08559fae06d6fe7557ee4cfa4a86" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>volatile double ca.mcgill.ecse211.threads.SensorData.angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1ace37599d8996ca5fb43b41ec90ee11ee" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.threads.SensorData.rgb[]</definition>
+        <argsstring>[]</argsstring>
+        <name>rgb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="22" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a658fe53ae5b82ca058262f1cffece099" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>volatile int ca.mcgill.ecse211.threads.SensorData.numberOfIntances</definition>
+        <argsstring></argsstring>
+        <name>numberOfIntances</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a143ec5b86347654dce9f76f7e11939ee" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int ca.mcgill.ecse211.threads.SensorData.MAX_INSTANCES</definition>
+        <argsstring></argsstring>
+        <name>MAX_INSTANCES</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a19b7687786f65d19c3ba8b523cca392d" prot="private" static="yes" mutable="no">
+        <type>Lock</type>
+        <definition>Lock ca.mcgill.ecse211.threads.SensorData.lightLock</definition>
+        <argsstring></argsstring>
+        <name>lightLock</name>
+        <initializer>= new ReentrantLock(true)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="32" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a4f50d0a64e3029c329a503de6f8b4c37" prot="private" static="yes" mutable="no">
+        <type>Lock</type>
+        <definition>Lock ca.mcgill.ecse211.threads.SensorData.rgbLock</definition>
+        <argsstring></argsstring>
+        <name>rgbLock</name>
+        <initializer>= new ReentrantLock(true)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="34" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a1a52602b8daa10b7068b94dd4655d274" prot="private" static="yes" mutable="no">
+        <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
+        <definition>SensorData ca.mcgill.ecse211.threads.SensorData.sensorData</definition>
+        <argsstring></argsstring>
+        <name>sensorData</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a11dcdc9c15184e05a9c84fc3958e26b6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ca.mcgill.ecse211.threads.SensorData.SensorData</definition>
+        <argsstring>()</argsstring>
+        <name>SensorData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor. The constructor is private. A factory is used instead such that only one instance of this class is ever created. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="42" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="42" bodyend="51"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" compoundref="_sensor_data_8java" startline="61" endline="73">ca.mcgill.ecse211.threads.SensorData.getSensorData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized <ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
+        <definition>static synchronized SensorData ca.mcgill.ecse211.threads.SensorData.getSensorData</definition>
+        <argsstring>()</argsstring>
+        <name>getSensorData</name>
+        <exceptions> throws <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref> </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OdometerData factory. Returns an OdometerData instance and makes sure that only one instance is ever created. If the user tries to instantiate multiple objects, the method throws a MultipleOdometerDataException.</para><para><simplesect kind="return"><para>An OdometerData object </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OdometerExceptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="61" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="61" bodyend="73"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a11dcdc9c15184e05a9c84fc3958e26b6" compoundref="_sensor_data_8java" startline="42" endline="51">ca.mcgill.ecse211.threads.SensorData.SensorData</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" compoundref="_light_localizer_8java" startline="39" endline="46">ca.mcgill.ecse211.localization.LightLocalizer.LightLocalizer</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1a3603202cdb5035c4e4164933b0aebeec" compoundref="_ultrasonic_localizer_8java" startline="43" endline="50">ca.mcgill.ecse211.localization.UltrasonicLocalizer.UltrasonicLocalizer</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1af0970123ca090749bfb2f5b9f478c01d" compoundref="_display_8java" startline="35" endline="39">ca.mcgill.ecse211.project.Display.Display</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a1bcbd1c19309c65a6887ae19bde66765" compoundref="_game_8java" startline="90" endline="148">ca.mcgill.ecse211.project.Game.preparation</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" compoundref="_navigation_8java" startline="45" endline="56">ca.mcgill.ecse211.project.Navigation.Navigation</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a58fdaba16c2b961446d1474b76e66e49" compoundref="_ring_searcher_8java" startline="36" endline="46">ca.mcgill.ecse211.threads.RingSearcher.RingSearcher</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a46cc30522719018a80f89624e0ce458f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double ca.mcgill.ecse211.threads.SensorData.getD</definition>
+        <argsstring>()</argsstring>
+        <name>getD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the ultraSonic distance data.</para><para><simplesect kind="return"><para>the sensor data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="80" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="80" bodyend="82"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a39eec50582f0e4bcff8a4669c48e1609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double []</type>
+        <definition>double [] ca.mcgill.ecse211.threads.SensorData.getL</definition>
+        <argsstring>()</argsstring>
+        <name>getL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the light value data from the two light sensors (protected by lightLock) <simplesect kind="return"><para>: data from light sensor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="88" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="88" bodyend="97"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="54" endline="93">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" compoundref="_display_8java" startline="57" endline="106">ca.mcgill.ecse211.project.Display.run</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" compoundref="_navigation_8java" startline="104" endline="114">ca.mcgill.ecse211.project.Navigation.moveWithCorrection</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a76313564e284f5cdb66aefce4e595f3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int []</type>
+        <definition>int [] ca.mcgill.ecse211.threads.SensorData.getRGB</definition>
+        <argsstring>()</argsstring>
+        <name>getRGB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the rgb data for light sensor (protected by rgb lock)</para><para><simplesect kind="return"><para>: rgb data </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="104" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="104" bodyend="111"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" compoundref="_display_8java" startline="57" endline="106">ca.mcgill.ecse211.project.Display.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1acc8f6cc56f39c8ea6b812cd8b135eca6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double ca.mcgill.ecse211.threads.SensorData.getA</definition>
+        <argsstring>()</argsstring>
+        <name>getA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(deprecated, not using) This method returns the currently stored angle value from the gyro sensor</para><para><simplesect kind="return"><para>The current angle value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="119" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="119" bodyend="121"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" compoundref="_display_8java" startline="57" endline="106">ca.mcgill.ecse211.project.Display.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a2c1f8e625478b89aabe6e9911e482ef3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.SensorData.setD</definition>
+        <argsstring>(double d)</argsstring>
+        <name>setD</name>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overwrites the distance value. Use for ultrasonic sensor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to overwrite distance with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="128" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="128" bodyend="130"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1a8e6a84342aedc1b72741dbc2e80148c4" compoundref="_ultrasonic_poller_8java" startline="48" endline="55">ca.mcgill.ecse211.threads.UltrasonicPoller.runMethod</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a35b1941d44e86b81eb7c625efbd3c8ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.SensorData.setA</definition>
+        <argsstring>(double a)</argsstring>
+        <name>setA</name>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>(deprecated not usings) This method overwrites the angle value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to overwrite angle with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="138" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="138" bodyend="140"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a7a3232e355cece714fa85a3a902d9cfd" compoundref="_gyro_poller_8java" startline="46" endline="50">ca.mcgill.ecse211.threads.GyroPoller.run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.SensorData.setRGB</definition>
+        <argsstring>(int r, int g, int b)</argsstring>
+        <name>setRGB</name>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set rgb data for color sensor (protected by rgb lock)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>red value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>green value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>blue value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="149" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="149" bodyend="158"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a7e23e2fe527b2ecbf4ddc8f988dd70a5" compoundref="_r_g_b_poller_8java" startline="28" endline="30">ca.mcgill.ecse211.threads.RGBPoller.RGBPoller</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a1c2c38354fc5a66b4667e1d47ab6b20b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.SensorData.setL</definition>
+        <argsstring>(double l, int id)</argsstring>
+        <name>setL</name>
+        <param>
+          <type>double</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method overwrites the light value. (protected by light lock)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to overwrite the current light value with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="165" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="165" bodyend="172"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1aab90a460a4d0c926fb8f3930492a8fb1" compoundref="_light_poller_8java" startline="53" endline="62">ca.mcgill.ecse211.threads.LightPoller.runMethod</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements methods to manage data from our sensors</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="17" bodyend="173"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1ae43d08559fae06d6fe7557ee4cfa4a86" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>angle</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8733d0d17afde351a477f83e862e504c" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>distance</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1acc8f6cc56f39c8ea6b812cd8b135eca6" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>getA</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a46cc30522719018a80f89624e0ce458f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>getD</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a39eec50582f0e4bcff8a4669c48e1609" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>getL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a76313564e284f5cdb66aefce4e595f3b" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>getRGB</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>getSensorData</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a19b7687786f65d19c3ba8b523cca392d" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>lightLock</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a100eb89b3adb81a1d22fc6d96dae9fdb" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>lights</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a143ec5b86347654dce9f76f7e11939ee" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>MAX_INSTANCES</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a658fe53ae5b82ca058262f1cffece099" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>numberOfIntances</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1ace37599d8996ca5fb43b41ec90ee11ee" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>rgb</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a4f50d0a64e3029c329a503de6f8b4c37" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>rgbLock</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a1a52602b8daa10b7068b94dd4655d274" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>sensorData</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a11dcdc9c15184e05a9c84fc3958e26b6" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>SensorData</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a35b1941d44e86b81eb7c625efbd3c8ba" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>setA</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a2c1f8e625478b89aabe6e9911e482ef3" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>setD</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a1c2c38354fc5a66b4667e1d47ab6b20b" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>setL</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::SensorData</scope><name>setRGB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

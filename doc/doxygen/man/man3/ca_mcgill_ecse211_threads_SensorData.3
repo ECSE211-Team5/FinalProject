@@ -1,0 +1,192 @@
+.TH "ca.mcgill.ecse211.threads.SensorData" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.threads.SensorData
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBgetD\fP ()"
+.br
+.ti -1c
+.RI "double [] \fBgetL\fP ()"
+.br
+.ti -1c
+.RI "int [] \fBgetRGB\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetA\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetD\fP (double d)"
+.br
+.ti -1c
+.RI "void \fBsetA\fP (double a)"
+.br
+.ti -1c
+.RI "void \fBsetRGB\fP (int r, int g, int b)"
+.br
+.ti -1c
+.RI "void \fBsetL\fP (double l, int id)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static synchronized \fBSensorData\fP \fBgetSensorData\fP ()  throws OdometerExceptions "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSensorData\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements methods to manage data from our sensors
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file SensorData\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.SensorData ()\fC [protected]\fP"
+Default constructor\&. The constructor is private\&. A factory is used instead such that only one instance of this class is ever created\&. 
+.PP
+Definition at line 42 of file SensorData\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "double ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getA ()"
+(deprecated, not using) This method returns the currently stored angle value from the gyro sensor
+.PP
+\fBReturns:\fP
+.RS 4
+The current angle value 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file SensorData\&.java\&.
+.SS "double ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getD ()"
+Return the ultraSonic distance data\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the sensor data\&. 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file SensorData\&.java\&.
+.SS "double [] ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getL ()"
+get the light value data from the two light sensors (protected by lightLock) 
+.PP
+\fBReturns:\fP
+.RS 4
+: data from light sensor 
+.RE
+.PP
+
+.PP
+Definition at line 88 of file SensorData\&.java\&.
+.SS "int [] ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getRGB ()"
+get the rgb data for light sensor (protected by rgb lock)
+.PP
+\fBReturns:\fP
+.RS 4
+: rgb data 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file SensorData\&.java\&.
+.SS "static synchronized \fBSensorData\fP ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getSensorData () throws \fBOdometerExceptions\fP\fC [static]\fP"
+OdometerData factory\&. Returns an OdometerData instance and makes sure that only one instance is ever created\&. If the user tries to instantiate multiple objects, the method throws a MultipleOdometerDataException\&.
+.PP
+\fBReturns:\fP
+.RS 4
+An OdometerData object 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIOdometerExceptions\fP 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file SensorData\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setA (double a)"
+(deprecated not usings) This method overwrites the angle value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP The value to overwrite angle with 
+.RE
+.PP
+
+.PP
+Definition at line 138 of file SensorData\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setD (double d)"
+This method overwrites the distance value\&. Use for ultrasonic sensor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fId\fP The value to overwrite distance with 
+.RE
+.PP
+
+.PP
+Definition at line 128 of file SensorData\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setL (double l, int id)"
+This method overwrites the light value\&. (protected by light lock)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIl\fP The value to overwrite the current light value with 
+.RE
+.PP
+
+.PP
+Definition at line 165 of file SensorData\&.java\&.
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setRGB (int r, int g, int b)"
+set rgb data for color sensor (protected by rgb lock)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIr\fP red value 
+.br
+\fIg\fP green value 
+.br
+\fIb\fP blue value 
+.RE
+.PP
+
+.PP
+Definition at line 149 of file SensorData\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

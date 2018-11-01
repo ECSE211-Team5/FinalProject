@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_54334c177d2c7fd86a15156ae2531032" kind="dir">
+    <compoundname>/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests</compoundname>
+    <innerfile refid="_component_test_8java">ComponentTest.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/"/>
+  </compounddef>
+</doxygen>

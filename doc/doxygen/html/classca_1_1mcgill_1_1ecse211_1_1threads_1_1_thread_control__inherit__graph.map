@@ -1,0 +1,6 @@
+<map id="ca.mcgill.ecse211.threads.ThreadControl" name="ca.mcgill.ecse211.threads.ThreadControl">
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html" title="ca.mcgill.ecse211.threads.\lLightPoller" alt="" coords="357,5,536,47"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html" title="ca.mcgill.ecse211.threads.\lRingSearcher" alt="" coords="357,71,536,112"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller.html" title="ca.mcgill.ecse211.threads.\lUltrasonicPoller" alt="" coords="357,136,536,177"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller.html" title="ca.mcgill.ecse211.threads.\lRGBPoller" alt="" coords="584,5,763,47"/>
+</map>

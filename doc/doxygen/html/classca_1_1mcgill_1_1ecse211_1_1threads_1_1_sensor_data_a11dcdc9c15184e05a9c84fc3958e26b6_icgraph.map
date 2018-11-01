@@ -1,0 +1,10 @@
+<map id="ca.mcgill.ecse211.threads.SensorData.SensorData" name="ca.mcgill.ecse211.threads.SensorData.SensorData">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a8260aba53b4474ca1275e4ce26157977" title="ca.mcgill.ecse211.threads.\lSensorData.getSensorData" alt="" coords="232,169,415,211"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html#aa37a75b7c32c02fe261845021f0734b7" title="ca.mcgill.ecse211.localization.\lLightLocalizer.LightLocalizer" alt="" coords="487,5,687,47"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer.html#a3603202cdb5035c4e4164933b0aebeec" title="ca.mcgill.ecse211.localization.\lUltrasonicLocalizer.UltrasonicLocalizer" alt="" coords="463,71,711,112"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_display.html#af0970123ca090749bfb2f5b9f478c01d" title="ca.mcgill.ecse211.project.\lDisplay.Display" alt="" coords="499,136,674,177"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a1bcbd1c19309c65a6887ae19bde66765" title="ca.mcgill.ecse211.project.\lGame.preparation" alt="" coords="499,201,674,243"/>
+<area shape="rect" id="node8" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#aaee14b67c392ddd951e3ce21224c3e56" title="ca.mcgill.ecse211.project.\lNavigation.Navigation" alt="" coords="499,267,674,308"/>
+<area shape="rect" id="node9" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#a58fdaba16c2b961446d1474b76e66e49" title="ca.mcgill.ecse211.threads.\lRingSearcher.RingSearcher" alt="" coords="495,332,679,373"/>
+<area shape="rect" id="node7" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="759,201,933,243"/>
+</map>

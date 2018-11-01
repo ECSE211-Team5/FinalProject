@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>ca::mcgill::ecse211::threads::ThreadControl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Runnable</basecompoundref>
+    <derivedcompoundref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller" prot="public" virt="non-virtual">ca.mcgill.ecse211.threads.LightPoller</derivedcompoundref>
+    <derivedcompoundref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher" prot="public" virt="non-virtual">ca.mcgill.ecse211.threads.RingSearcher</derivedcompoundref>
+    <derivedcompoundref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller" prot="public" virt="non-virtual">ca.mcgill.ecse211.threads.UltrasonicPoller</derivedcompoundref>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" prot="protected" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.threads.ThreadControl.WAIT_TIME</definition>
+        <argsstring></argsstring>
+        <name>WAIT_TIME</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="8" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1abb0ba2385c212f3d0d8435267d882536" prot="protected" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean ca.mcgill.ecse211.threads.ThreadControl.isStarted</definition>
+        <argsstring></argsstring>
+        <name>isStarted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="9" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1ab20c44ff2dafab8981c42fa8bf634dfc" prot="protected" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object ca.mcgill.ecse211.threads.ThreadControl.lockObject</definition>
+        <argsstring></argsstring>
+        <name>lockObject</name>
+        <initializer>= new Object()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="10" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a8252930dab1b067da64cf2afae4fc630" prot="protected" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean ca.mcgill.ecse211.threads.ThreadControl.shouldWait</definition>
+        <argsstring></argsstring>
+        <name>shouldWait</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="11" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a03e743000ea2c37080427565e8ec5f35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void ca.mcgill.ecse211.threads.ThreadControl.run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>run method implemented from Runnable class, this run method implements the functionality to pause and restart the thread </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="17" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized boolean</type>
+        <definition>synchronized boolean ca.mcgill.ecse211.threads.ThreadControl.isStarted</definition>
+        <argsstring>()</argsstring>
+        <name>isStarted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if this poller thread is running <simplesect kind="return"><para>: true if the thread is running, false if the thread is paused </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="36" bodyend="38"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1adc07f842a1cc089195c5e47c2a0e5ee6" compoundref="_light_poller_8java" startline="40" endline="48">ca.mcgill.ecse211.threads.LightPoller.LightPoller</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1ac561f5d04e2b655a4509de8453c0cd07" compoundref="_ultrasonic_poller_8java" startline="38" endline="43">ca.mcgill.ecse211.threads.UltrasonicPoller.UltrasonicPoller</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a16221cdc4ccf637b190934549c708e1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>synchronized void</type>
+        <definition>synchronized void ca.mcgill.ecse211.threads.ThreadControl.setStart</definition>
+        <argsstring>(boolean start)</argsstring>
+        <name>setStart</name>
+        <param>
+          <type>boolean</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>start a paused thread or stop a runing thread <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="44" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="44" bodyend="47"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3782f843fd251f8bb14be0cb1d291dd5" compoundref="_component_test_8java" startline="58" endline="77">ca.mcgill.ecse211.tests.ComponentTest.RingMotorTest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.ThreadControl.waitForThisThread</definition>
+        <argsstring>()</argsstring>
+        <name>waitForThisThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>wait for this thread until shouldWait is false </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="52" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="52" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a9c3896500e86e402b8019e1be6500621" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean ca.mcgill.ecse211.threads.ThreadControl.shouldWait</definition>
+        <argsstring>()</argsstring>
+        <name>shouldWait</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get shouldWait for this thread <simplesect kind="return"><para>: shouldWait </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="67" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="67" bodyend="71"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a7759a6f52b56e15cb37cd25ea31c93c1" compoundref="_thread_control_8java" startline="77" endline="83">ca.mcgill.ecse211.threads.ThreadControl.setWait</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a7759a6f52b56e15cb37cd25ea31c93c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ca.mcgill.ecse211.threads.ThreadControl.setWait</definition>
+        <argsstring>(boolean shouldWait)</argsstring>
+        <name>setWait</name>
+        <param>
+          <type>boolean</type>
+          <declname>shouldWait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set if other thread shouldWait for this thread <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shouldWait</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="77" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="77" bodyend="83"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a9c3896500e86e402b8019e1be6500621" compoundref="_thread_control_8java" startline="67" endline="71">ca.mcgill.ecse211.threads.ThreadControl.shouldWait</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a2959c54bdb6c62c9d5569cdf3ccf2418" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract void</type>
+        <definition>abstract void ca.mcgill.ecse211.threads.ThreadControl.runMethod</definition>
+        <argsstring>()</argsstring>
+        <name>runMethod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="85" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>class for thread control with pause and restart functionality </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="79">
+        <label>ca.mcgill.ecse211.threads.RingSearcher</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>ca.mcgill.ecse211.threads.RGBPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>ca.mcgill.ecse211.threads.LightPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="76" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="81">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>Runnable</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="7" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="7" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1abb0ba2385c212f3d0d8435267d882536" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>isStarted</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>isStarted</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1ab20c44ff2dafab8981c42fa8bf634dfc" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>lockObject</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a03e743000ea2c37080427565e8ec5f35" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>run</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a2959c54bdb6c62c9d5569cdf3ccf2418" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>runMethod</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a16221cdc4ccf637b190934549c708e1f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>setStart</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a7759a6f52b56e15cb37cd25ea31c93c1" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>setWait</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a8252930dab1b067da64cf2afae4fc630" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>shouldWait</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a9c3896500e86e402b8019e1be6500621" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>shouldWait</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>WAIT_TIME</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::ThreadControl</scope><name>waitForThisThread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
