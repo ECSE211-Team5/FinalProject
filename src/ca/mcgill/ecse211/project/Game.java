@@ -31,6 +31,192 @@ import lejos.robotics.SampleProvider;
  * @author Kamy Moussavi Kafi
  */
 public class Game {
+//------------------------
+  // MEMBER VARIABLES
+  //------------------------
+
+  //Game State Machines
+  public enum Status { Idle, Localization, NavigationSafe, NavigationSearch, RingSearch }
+  private Status status;
+
+  //------------------------
+  // CONSTRUCTOR
+  //------------------------
+
+  public Game()
+  {
+    setStatus(Status.Idle);
+  }
+
+  //------------------------
+  // INTERFACE
+  //------------------------
+
+  public String getStatusFullName()
+  {
+    String answer = status.toString();
+    return answer;
+  }
+
+  public Status getStatus()
+  {
+    return status;
+  }
+
+  public boolean ready()
+  {
+    boolean wasEventProcessed = false;
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case Idle:
+        // line 5 "model.ump"
+        //localize();
+        setStatus(Status.Localization);
+        wasEventProcessed = true;
+        break;
+      default:
+        // Other states do respond to this event
+    }
+
+    return wasEventProcessed;
+  }
+
+  public boolean localized()
+  {
+    boolean wasEventProcessed = false;
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case Localization:
+        // line 8 "model.ump"
+        //navigate();
+        setStatus(Status.NavigationSafe);
+        wasEventProcessed = true;
+        break;
+      default:
+        // Other states do respond to this event
+    }
+
+    return wasEventProcessed;
+  }
+
+  public boolean navigatedToTunnel()
+  {
+    boolean wasEventProcessed = false;
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case NavigationSafe:
+        // line 11 "model.ump"
+        //navigate();
+        setStatus(Status.NavigationSearch);
+        wasEventProcessed = true;
+        break;
+      case NavigationSearch:
+        // line 17 "model.ump"
+        //navigate();
+        setStatus(Status.NavigationSafe);
+        wasEventProcessed = true;
+        break;
+      default:
+        // Other states do respond to this event
+    }
+
+    return wasEventProcessed;
+  }
+
+  public boolean navigatedToStart()
+  {
+    boolean wasEventProcessed = false;
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case NavigationSafe:
+        // line 12 "model.ump"
+        //wait();
+        setStatus(Status.Idle);
+        wasEventProcessed = true;
+        break;
+      default:
+        // Other states do respond to this event
+    }
+
+    return wasEventProcessed;
+  }
+
+  public boolean navigatedToTree()
+  {
+    boolean wasEventProcessed = false;
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case NavigationSearch:
+        // line 16 "model.ump"
+        //searchRing();
+        setStatus(Status.RingSearch);
+        wasEventProcessed = true;
+        break;
+      default:
+        // Other states do respond to this event
+    }
+
+    return wasEventProcessed;
+  }
+
+  public boolean ringFound()
+  {
+    boolean wasEventProcessed = false;
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case RingSearch:
+        // line 20 "model.ump"
+        //navigate();
+        setStatus(Status.NavigationSearch);
+        wasEventProcessed = true;
+        break;
+      default:
+        // Other states do respond to this event
+    }
+
+    return wasEventProcessed;
+  }
+
+  public boolean ringNotFound()
+  {
+    boolean wasEventProcessed = false;
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case RingSearch:
+        // line 21 "model.ump"
+        //navigate();
+        setStatus(Status.NavigationSearch);
+        wasEventProcessed = true;
+        break;
+      default:
+        // Other states do respond to this event
+    }
+
+    return wasEventProcessed;
+  }
+
+  private void setStatus(Status aStatus)
+  {
+    status = aStatus;
+  }
+
+  public void delete()
+  {}
+  
   private static ThreadControl rgbPoller;
   private static ThreadControl lightPoller;
   private static ThreadControl motorControlThread;
