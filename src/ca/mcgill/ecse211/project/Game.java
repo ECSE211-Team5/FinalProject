@@ -4,9 +4,11 @@ import ca.mcgill.ecse211.localization.LightLocalizer;
 import ca.mcgill.ecse211.localization.UltrasonicLocalizer;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
-import ca.mcgill.ecse211.sensors.LightPoller;
-import ca.mcgill.ecse211.sensors.SensorData;
-import ca.mcgill.ecse211.sensors.UltrasonicPoller;
+import ca.mcgill.ecse211.threads.LightPoller;
+import ca.mcgill.ecse211.threads.RingSearcher;
+import ca.mcgill.ecse211.threads.SensorData;
+import ca.mcgill.ecse211.threads.ThreadControl;
+import ca.mcgill.ecse211.threads.UltrasonicPoller;
 import lejos.hardware.Button;
 import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.lcd.TextLCD;
@@ -29,10 +31,10 @@ import lejos.robotics.SampleProvider;
  * @author Kamy Moussavi Kafi
  */
 public class Game {
-  private static ThreadControl rgbThread;
-  private static ThreadControl lightThread;
-  private static ThreadControl motorThread;
-  private static ThreadControl usThread;
+  private static ThreadControl rgbPoller;
+  private static ThreadControl lightPoller;
+  private static ThreadControl motorControlThread;
+  private static ThreadControl usPoller;
 
   /**
    * Motor object instance that allows control of the left motor connected to port A
@@ -132,12 +134,12 @@ public class Game {
     odoDisplayThread.start();
 
     // Start ultrasonic and light sensors
-    UltrasonicPoller usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
-    usPoller.start();
-    usThread = usPoller;
-    LightPoller lgPoller = new LightPoller(backLight, new float[2][backLight[1].sampleSize()], sensorData);
-    lgPoller.start();
-    lightThread = lgPoller;
+    usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
+    Thread usThread = new Thread(usPoller);
+    usThread.start();
+    lightPoller = new LightPoller(backLight, new float[2][backLight[1].sampleSize()], sensorData);
+    Thread lightThread = new Thread(lightPoller);
+    lightThread.start();
     
     //Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight.sampleSize()], sensorData);
     //fLgPoller1.start();

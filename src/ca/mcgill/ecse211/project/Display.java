@@ -3,7 +3,7 @@ package ca.mcgill.ecse211.project;
 import java.text.DecimalFormat;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
-import ca.mcgill.ecse211.sensors.SensorData;
+import ca.mcgill.ecse211.threads.SensorData;
 import lejos.hardware.lcd.TextLCD;
 
 /**

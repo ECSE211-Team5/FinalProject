@@ -1,5 +1,0 @@
-<map id="ca.mcgill.ecse211.odometer.OdometerData.setY" name="ca.mcgill.ecse211.odometer.OdometerData.setY">
-<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html#a9fc3d6cdd897e9db86fc9d71dc914863" title="ca.mcgill.ecse211.localization.\lLightLocalizer.localize" alt="" coords="251,5,451,47"/>
-<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html#aad66a7030ac00f3a9cbe7bc33c25acbf" title="ca.mcgill.ecse211.odometer.\lOdometryCorrection.run" alt="" coords="257,71,446,112"/>
-<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html#a21a351682dc75060d6a5f15ad4775068" title="ca.mcgill.ecse211.odometer.\lOdometryCorrection.doCorrection" alt="" coords="243,136,460,177"/>
-</map>

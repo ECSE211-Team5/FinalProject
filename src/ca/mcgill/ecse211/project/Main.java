@@ -1,15 +1,15 @@
 package ca.mcgill.ecse211.project;
 
-import ca.mcgill.ecse211.Test.ComponentTest;
 import ca.mcgill.ecse211.localization.LightLocalizer;
 import ca.mcgill.ecse211.localization.UltrasonicLocalizer;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
-import ca.mcgill.ecse211.sensors.GyroPoller;
-import ca.mcgill.ecse211.sensors.LightPoller;
-import ca.mcgill.ecse211.sensors.RGBPoller;
-import ca.mcgill.ecse211.sensors.SensorData;
-import ca.mcgill.ecse211.sensors.UltrasonicPoller;
+import ca.mcgill.ecse211.tests.ComponentTest;
+import ca.mcgill.ecse211.threads.GyroPoller;
+import ca.mcgill.ecse211.threads.LightPoller;
+import ca.mcgill.ecse211.threads.RGBPoller;
+import ca.mcgill.ecse211.threads.SensorData;
+import ca.mcgill.ecse211.threads.UltrasonicPoller;
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
 import lejos.hardware.ev3.LocalEV3;
