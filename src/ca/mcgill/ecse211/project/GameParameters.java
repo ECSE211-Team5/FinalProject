@@ -1,6 +1,30 @@
 package ca.mcgill.ecse211.project;
 
+/**
+ * This class contains all the game parameters needed for the competition
+ * 
+ * @author Caspar Cedro
+ * @author Percy Chen
+ * @author Patrick Erath
+ * @author Anssam Ghezala
+ * @author Susan Matuszewski
+ * @author Kamy Moussavi Kafi
+ */
 public class GameParameters {
+  /**
+   * the type of areas
+  * @author Caspar Cedro
+ * @author Percy Chen
+ * @author Patrick Erath
+ * @author Anssam Ghezala
+ * @author Susan Matuszewski
+ * @author Kamy Moussavi Kafi
+   *
+   */
+  public enum AreaType{
+    Starting, Searching, Dangerous, StartingBoundary, SearchingBoundary
+  }
+  
   /**
    * This variables holds the starting corner coordinates for our robot.
    */
@@ -166,4 +190,14 @@ public class GameParameters {
    * max TG_UR[1] - TG_LL[1] = 1
    */
   public static int[] TG_UR = {14, 8};
+  
+  /**
+   * Giving a coordinate, find the type of area it belongs to
+   * @param x: x coordinate
+   * @param y: y coordinate
+   * @return: the type of area the point belongs to
+   */
+  public static AreaType getType(double x, double y) {
+    return AreaType.Searching;
+  }
 }

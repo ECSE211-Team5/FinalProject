@@ -29,10 +29,8 @@ public class RingSearcher extends Thread implements ThreadControl {
   /**
    * This class provides method to check if there is a ring and if the ring is the color we want
    * 
-   * @param nav A Navigation class object instance that controls how our robot moves
-   * @param leftMotor A EV3LargeRegulatedMotor object instance that allows control of the left motor
-   * @param rightMotor A EV3LargeRegulatedMotor object instance that allows control of the right
-   *        motor
+   * @param storagenMotor: the motor to move the storage of the robot
+   * @param rodMotor: the motor for the rod to collect the ring
    * @throws OdometerExceptions
    */
   public RingSearcher(EV3LargeRegulatedMotor storageMotor, EV3MediumRegulatedMotor rodMotor)
@@ -48,14 +46,11 @@ public class RingSearcher extends Thread implements ThreadControl {
   }
 
   /**
-   * This method turn the robot for certain angle and see if there is a right if there is, it will
-   * go to that ring to check its color
+   * This method searches for the ring and identify its color based using the rod,
+   * It will beed based on the color of the ring
    * 
-   * @param angle angle to turn in order to check the ring
-   * @param target target ring color
-   * @return true if it found a ring and the ring has the right color
    */
-  public ColorCalibrator.Color search(ColorCalibrator.Color target) {
+  private void  search() {
     double[] position = odometer.getXYT();
     // turn to the angle async
 
@@ -71,16 +66,20 @@ public class RingSearcher extends Thread implements ThreadControl {
     // }else {
     // Sound.beepSequence();;
     // }
-
-    return ColorCalibrator.getColor();
   }
 
-  private void retrieveRing() {
+  /**
+   * this method retrieve the searched ring
+   */
+  public void retrieveRing() {
     storageMotor.rotateTo(-45);
     rodMotor.rotateTo(-70);
     rodMotor.rotateTo(0);
   }
 
+  /**
+   * run method for the thread performing searching and retrieving of the ring
+   */
   public synchronized void run() {
     try {
       while (true) {

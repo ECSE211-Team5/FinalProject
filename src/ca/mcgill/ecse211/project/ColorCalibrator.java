@@ -11,7 +11,7 @@ package ca.mcgill.ecse211.project;
  * @author Kamy Moussavi Kafi
  */
 public class ColorCalibrator {
-  private static Color currentColor;
+  private static volatile Color currentColor;
 
   /**
    * This enumeration contains the possible colors of the ring under a light sensor

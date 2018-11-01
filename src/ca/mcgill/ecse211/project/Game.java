@@ -46,9 +46,15 @@ public class Game {
   public static final EV3LargeRegulatedMotor rightMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("D"));
   
+  /**
+   * Motor object instance that allows control of the motor on storage rod
+   */
   public static final EV3LargeRegulatedMotor storageMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("C"));
   
+  /**
+   * Motor object instance taht allows control of the motor on the rod for collecting rings
+   */
   public static final EV3MediumRegulatedMotor rodMotor =
       new EV3MediumRegulatedMotor(LocalEV3.get().getPort("B"));
   /**
@@ -67,6 +73,9 @@ public class Game {
    */
   public static final double TRACK = 11.5;
 
+  /**
+   * The distance between light sensor and the center of the robot in cm
+   */
   public static final double SEN_DIS = 4.4;
   
   private static boolean hasReadData;
@@ -137,13 +146,6 @@ public class Game {
   }
 
   /**
-   * perform localization
-   */
-  public static void localization() {
-
-  }
-
-  /**
    * Read data from the wifi class (using another thread)
    */
   public synchronized static void readData() {
@@ -182,22 +184,6 @@ public class Game {
             // TODO Auto-generated catch block
             e.printStackTrace();
           }
-        
-        // try {
-        // Odometer odometer = Odometer.getOdometer();
-        // // STEP 2: MOVE TO START OF SEARCH AREA
-        // navigation.travelTo(LLx, LLy, false);
-        // Sound.beep();
-        // // STEP 3: SEARCH ALL COORDINATES
-        // navigation.travelTo(odometer.getXYT()[0], URy+0.5, true);
-        // navigation.travelTo(URx, URy+0.5, true);
-        // navigation.travelTo(URx, URy, false);
-        // // STEP 4: NAVIGATE TO URx, URy
-        // } catch (OdometerExceptions e) {
-        // // TODO Auto-generated catch block
-        // e.printStackTrace();
-        // }
-
       }
     }).start();
     while (Button.waitForAnyPress() != Button.ID_ESCAPE);

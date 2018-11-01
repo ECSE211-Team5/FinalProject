@@ -56,8 +56,8 @@ public class Navigation {
   }
 
   /**
-   * (*Improve*) This method travel the robot to desired position by following the line (Always
-   * rotate 90 degree)
+   * This method travel the robot to desired position by following the line (Always
+   * rotate 90 degree), along with a correction
    * 
    * When avoid=true, the nav thread will handle traveling. If you want to travel without avoidance,
    * this is also possible. In this case, the method in the Navigation class is used.
@@ -66,7 +66,6 @@ public class Navigation {
    * @param y The y coordinate to travel to (in cm)
    * @param avoid: the robot will pay attention to the distance from ultrasonic sensor to avoid
    *        abstacle when navigating
-   * @param doCorrection
    */
   public void travelTo(double x, double y, boolean avoid) {
     double dX = x - odometer.getXYT()[0];
@@ -97,6 +96,11 @@ public class Navigation {
     moveWithCorrection(dY, theta);
   }
 
+  /**
+   * Move a certain distance with correction (using coordinate system)
+   * @param distance: distance to cover
+   * @param theta: theta to be corrected each time
+   */
   public synchronized void moveWithCorrection(double distance, double theta) {
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
@@ -158,6 +162,38 @@ public class Navigation {
       leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), true);
       rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), false);
     }
+  }
+  
+  /**
+   * found the tunnel based on the ll and ur coordinate, after the method, the robot will go the 
+   * the entrance of the tunnel facing the tunnel
+   * @param ll: lower left corner coordinate
+   * @param ur: upper right corner coordinate
+   */
+  public void findTunnel(int[] ll, int[] ur) {
+    
+  }
+  
+  /**
+   * the method for go through the tunnel (call find tunnel before calling this method)
+   */
+  public void goThroughTunnel() {
+    
+  }
+  
+  /**
+   * this method navigate the robot to the ring set, find the right position of the ring set 
+   */
+  public void goToRingSet() {
+    
+  }
+  
+  /**
+   * this method approaches the ring set by paying attention to the reading of us sensor, stops
+   * at the place when the robot can reach the ring
+   */
+  public void approachRingSet() {
+    
   }
 
   /**
