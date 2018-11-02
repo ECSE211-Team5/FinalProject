@@ -145,7 +145,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Display.java" line="35" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Display.java" bodystart="35" bodyend="39"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="79" endline="88">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="69" endline="78">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" compoundref="_sensor_data_8java" startline="61" endline="73">ca.mcgill.ecse211.threads.SensorData.getSensorData</references>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1a690cd91bcc8024950c2b8e3b2613c801" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -192,7 +192,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Display.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Display.java" bodystart="48" bodyend="52"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="79" endline="88">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="69" endline="78">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

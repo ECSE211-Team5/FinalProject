@@ -1,0 +1,9 @@
+<map id="ca.mcgill.ecse211.tests.ComponentTest.navigationTest" name="ca.mcgill.ecse211.tests.ComponentTest.navigationTest">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ada8a324c1d391698164476d4d728f0c4" title="ca.mcgill.ecse211.project.\lNavigation.travelTo" alt="" coords="257,64,432,105"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="735,5,924,47"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a3bbe0645f2b3b3d0986b4a707fb5a00c" title="ca.mcgill.ecse211.project.\lNavigation.turnTo" alt="" coords="496,64,671,105"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a48eeb9ae2da23664421e8da5642054c7" title="ca.mcgill.ecse211.project.\lNavigation.moveWithCorrection" alt="" coords="480,133,687,175"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ac9e260bcd619ffa4820d7d0de7ea1c12" title="ca.mcgill.ecse211.project.\lNavigation.convertDistance" alt="" coords="738,71,921,112"/>
+<area shape="rect" id="node7" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a39eec50582f0e4bcff8a4669c48e1609" title="ca.mcgill.ecse211.threads.\lSensorData.getL" alt="" coords="740,136,919,177"/>
+<area shape="rect" id="node8" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a419b8f07c2c5374411c8e62298e9a402" title="ca.mcgill.ecse211.odometer.\lOdometerData.setTheta" alt="" coords="735,201,924,243"/>
+</map>

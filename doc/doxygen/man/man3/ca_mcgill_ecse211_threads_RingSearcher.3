@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.RingSearcher" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.RingSearcher" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -68,12 +68,45 @@ This class provides method to check if there is a ring and if the ring is the co
 
 .PP
 Definition at line 36 of file RingSearcher\&.java\&.
+.PP
+.nf
+37                                 {
+38     this\&.odometer = Odometer\&.getOdometer();
+39     this\&.storageMotor = storageMotor;
+40     this\&.rodMotor = rodMotor;
+41     data = SensorData\&.getSensorData();
+42     for (BaseRegulatedMotor motor : new BaseRegulatedMotor[] {this\&.storageMotor, this\&.rodMotor}) {
+43       motor\&.stop();
+44       motor\&.setAcceleration(ACCELERATION);
+45     }
+46   }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.RingSearcher\&.retrieveRing ()"
 this method retrieve the searched ring 
 .PP
 Definition at line 74 of file RingSearcher\&.java\&.
+.PP
+.nf
+74                              {
+75     storageMotor\&.rotateTo(-45);
+76     rodMotor\&.rotateTo(-70);
+77     rodMotor\&.rotateTo(0);
+78   }
+.fi
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.RingSearcher\&.runMethod ()\fC [protected]\fP"
+
+.PP
+Definition at line 80 of file RingSearcher\&.java\&.
+.PP
+.nf
+80                              {
+81     retrieveRing();
+82 
+83   }
+.fi
+
 
 .SH "Author"
 .PP 

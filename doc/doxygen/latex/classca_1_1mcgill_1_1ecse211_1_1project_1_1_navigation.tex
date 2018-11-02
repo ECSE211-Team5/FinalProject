@@ -76,8 +76,21 @@ This navigation class constructor sets up our robot to begin navigating a partic
 
 Definition at line 45 of file Navigation.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+46                                 \{
+47     this.odometer = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
+48     this.leftMotor = leftMotor;
+49     this.rightMotor = rightMotor;
+50     this.data = SensorData.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}{getSensorData}();
+51     \textcolor{keywordflow}{for} (EV3LargeRegulatedMotor motor : \textcolor{keyword}{new} EV3LargeRegulatedMotor[] \{this.leftMotor,
+52         this.rightMotor\}) \{
+53       motor.stop();
+54       motor.setAcceleration(ACCELERATION);
+55     \}
+56   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -97,6 +110,12 @@ this method approaches the ring set by paying attention to the reading of us sen
 
 Definition at line 195 of file Navigation.\+java.
 
+
+\begin{DoxyCode}
+195                                 \{
+196     
+197   \}
+\end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}!convert\+Distance@{convert\+Distance}}
 \index{convert\+Distance@{convert\+Distance}!ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}}
@@ -119,8 +138,13 @@ A converted distance
 
 Definition at line 225 of file Navigation.\+java.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+225                                                                     \{
+226     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int}) ((180.0 * distance) / (Math.PI * radius));
+227   \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -144,6 +168,12 @@ found the tunnel based on the ll and ur coordinate, after the method, the robot 
 
 Definition at line 173 of file Navigation.\+java.
 
+
+\begin{DoxyCode}
+173                                              \{
+174     
+175   \}
+\end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a4b52e605d3ea2f9bcd9481ae2c69ba39}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a4b52e605d3ea2f9bcd9481ae2c69ba39}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}!go\+Through\+Tunnel@{go\+Through\+Tunnel}}
 \index{go\+Through\+Tunnel@{go\+Through\+Tunnel}!ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}}
@@ -154,6 +184,12 @@ the method for go through the tunnel (call find tunnel before calling this metho
 
 Definition at line 180 of file Navigation.\+java.
 
+
+\begin{DoxyCode}
+180                                 \{
+181     
+182   \}
+\end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a0016a23ab5d544148a09948fb1a40e4c}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a0016a23ab5d544148a09948fb1a40e4c}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}!go\+To\+Ring\+Set@{go\+To\+Ring\+Set}}
 \index{go\+To\+Ring\+Set@{go\+To\+Ring\+Set}!ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}}
@@ -164,6 +200,12 @@ this method navigate the robot to the ring set, find the right position of the r
 
 Definition at line 187 of file Navigation.\+java.
 
+
+\begin{DoxyCode}
+187                             \{
+188     
+189   \}
+\end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a48eeb9ae2da23664421e8da5642054c7}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a48eeb9ae2da23664421e8da5642054c7}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}!move\+With\+Correction@{move\+With\+Correction}}
 \index{move\+With\+Correction@{move\+With\+Correction}!ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}}
@@ -181,16 +223,28 @@ Move a certain distance with correction (using coordinate system)
 
 Definition at line 104 of file Navigation.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+104                                                                              \{
+105     leftMotor.setSpeed(FORWARD\_SPEED);
+106     rightMotor.setSpeed(FORWARD\_SPEED);
+107     \textcolor{keywordtype}{int} tiles = (int) distance;
+108     \textcolor{keywordtype}{double} more = distance - tiles;
+109     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < tiles; i++) \{
+110       moveOneTileWithCorrection(theta);
+111     \}
+112     leftMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, more * Game.TILE), \textcolor{keyword}{true});
+113     rightMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, more * Game.TILE), \textcolor{keyword}{true});
+114   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a48eeb9ae2da23664421e8da5642054c7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -214,6 +268,13 @@ Rotate the robot by certain angle
 
 Definition at line 204 of file Navigation.\+java.
 
+
+\begin{DoxyCode}
+204                                 \{
+205     leftMotor.rotate(convertAngle(Game.WHEEL\_RAD, Game.TRACK, angle), \textcolor{keyword}{true});
+206     rightMotor.rotate(-convertAngle(Game.WHEEL\_RAD, Game.TRACK, angle), \textcolor{keyword}{false});
+207   \}
+\end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ae8530d181ffd790ff9dea5eeab54b1a1}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ae8530d181ffd790ff9dea5eeab54b1a1}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}!stop@{stop}}
 \index{stop@{stop}!ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}}
@@ -224,6 +285,13 @@ Stop the motor
 
 Definition at line 212 of file Navigation.\+java.
 
+
+\begin{DoxyCode}
+212                      \{
+213     leftMotor.stop(\textcolor{keyword}{true});
+214     rightMotor.stop(\textcolor{keyword}{false});
+215   \}
+\end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ada8a324c1d391698164476d4d728f0c4}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ada8a324c1d391698164476d4d728f0c4}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}!travel\+To@{travel\+To}}
 \index{travel\+To@{travel\+To}!ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}}
@@ -247,16 +315,45 @@ When avoid=true, the nav thread will handle traveling. If you want to travel wit
 
 Definition at line 70 of file Navigation.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+70                                                           \{
+71     \textcolor{keywordtype}{double} dX = x - odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}()[0];
+72     \textcolor{keywordtype}{double} dY = y - odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}()[1];
+73     \textcolor{comment}{// double theta = Math.atan(dX / dY);}
+74     \textcolor{comment}{// if (dY < 0 && theta < Math.PI)}
+75     \textcolor{comment}{// theta += Math.PI;}
+76 
+77     \textcolor{comment}{// Euclidean distance calculation.}
+78     \textcolor{comment}{// double distance = Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2));}
+79     \textcolor{keywordtype}{double} theta = 0;
+80     \textcolor{keywordflow}{if} (dX > 0) \{
+81       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(90);
+82       theta = 90;
+83     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (dX < 0) \{
+84       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(-90);
+85       theta = -90;
+86     \}
+87     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a48eeb9ae2da23664421e8da5642054c7}{moveWithCorrection}(dX, theta);
+88 
+89     \textcolor{keywordflow}{if} (dY > 0) \{
+90       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(0);
+91       theta = 0;
+92     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (dY < 0) \{
+93       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(180);
+94       theta = 180;
+95     \}
+96     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a48eeb9ae2da23664421e8da5642054c7}{moveWithCorrection}(dY, theta);
+97   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ada8a324c1d391698164476d4d728f0c4_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -282,16 +379,39 @@ Here is the caller graph for this function\+:
 
 Definition at line 144 of file Navigation.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+144                                                 \{
+145     \textcolor{keywordtype}{double} dTheta;
+146 
+147     dTheta = angle - odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}()[2];
+148     \textcolor{keywordflow}{if} (dTheta < 0)
+149       dTheta += 360;
+150 
+151     \textcolor{comment}{// TURN RIGHT}
+152     \textcolor{keywordflow}{if} (dTheta > 180) \{
+153       leftMotor.setSpeed(ROTATE\_SPEED);
+154       rightMotor.setSpeed(ROTATE\_SPEED);
+155       leftMotor.rotate(-convertAngle(Game.WHEEL\_RAD, Game.TRACK, 360 - dTheta), \textcolor{keyword}{true});
+156       rightMotor.rotate(convertAngle(Game.WHEEL\_RAD, Game.TRACK, 360 - dTheta), \textcolor{keyword}{false});
+157     \}
+158     \textcolor{comment}{// TURN LEFT}
+159     \textcolor{keywordflow}{else} \{
+160       leftMotor.setSpeed(ROTATE\_SPEED);
+161       rightMotor.setSpeed(ROTATE\_SPEED);
+162       leftMotor.rotate(convertAngle(Game.WHEEL\_RAD, Game.TRACK, dTheta), \textcolor{keyword}{true});
+163       rightMotor.rotate(-convertAngle(Game.WHEEL\_RAD, Game.TRACK, dTheta), \textcolor{keyword}{false});
+164     \}
+165   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -302,4 +422,4 @@ Here is the caller graph for this function\+:
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/project/Navigation.\+java\end{DoxyCompactItemize}
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/project/\hyperlink{_navigation_8java}{Navigation.\+java}\end{DoxyCompactItemize}

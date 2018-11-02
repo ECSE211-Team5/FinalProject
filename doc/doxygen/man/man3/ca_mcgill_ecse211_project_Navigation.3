@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.Navigation" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.Navigation" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -88,12 +88,32 @@ This navigation class constructor sets up our robot to begin navigating a partic
 
 .PP
 Definition at line 45 of file Navigation\&.java\&.
+.PP
+.nf
+46                                 {
+47     this\&.odometer = Odometer\&.getOdometer();
+48     this\&.leftMotor = leftMotor;
+49     this\&.rightMotor = rightMotor;
+50     this\&.data = SensorData\&.getSensorData();
+51     for (EV3LargeRegulatedMotor motor : new EV3LargeRegulatedMotor[] {this\&.leftMotor,
+52         this\&.rightMotor}) {
+53       motor\&.stop();
+54       motor\&.setAcceleration(ACCELERATION);
+55     }
+56   }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.approachRingSet ()"
 this method approaches the ring set by paying attention to the reading of us sensor, stops at the place when the robot can reach the ring 
 .PP
 Definition at line 195 of file Navigation\&.java\&.
+.PP
+.nf
+195                                 {
+196     
+197   }
+.fi
 .SS "static int ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.convertDistance (double radius, double distance)\fC [static]\fP"
 This method allows the conversion of a distance to the total rotation of each wheel need to cover that distance\&.
 .PP
@@ -112,6 +132,12 @@ A converted distance
 
 .PP
 Definition at line 225 of file Navigation\&.java\&.
+.PP
+.nf
+225                                                                     {
+226     return (int) ((180\&.0 * distance) / (Math\&.PI * radius));
+227   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.findTunnel (int [] ll, int [] ur)"
 found the tunnel based on the ll and ur coordinate, after the method, the robot will go the the entrance of the tunnel facing the tunnel 
 .PP
@@ -125,14 +151,32 @@ found the tunnel based on the ll and ur coordinate, after the method, the robot 
 
 .PP
 Definition at line 173 of file Navigation\&.java\&.
+.PP
+.nf
+173                                              {
+174     
+175   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.goThroughTunnel ()"
 the method for go through the tunnel (call find tunnel before calling this method) 
 .PP
 Definition at line 180 of file Navigation\&.java\&.
+.PP
+.nf
+180                                 {
+181     
+182   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.goToRingSet ()"
 this method navigate the robot to the ring set, find the right position of the ring set 
 .PP
 Definition at line 187 of file Navigation\&.java\&.
+.PP
+.nf
+187                             {
+188     
+189   }
+.fi
 .SS "synchronized void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.moveWithCorrection (double distance, double theta)"
 Move a certain distance with correction (using coordinate system) 
 .PP
@@ -146,6 +190,20 @@ Move a certain distance with correction (using coordinate system)
 
 .PP
 Definition at line 104 of file Navigation\&.java\&.
+.PP
+.nf
+104                                                                              {
+105     leftMotor\&.setSpeed(FORWARD_SPEED);
+106     rightMotor\&.setSpeed(FORWARD_SPEED);
+107     int tiles = (int) distance;
+108     double more = distance - tiles;
+109     for (int i = 0; i < tiles; i++) {
+110       moveOneTileWithCorrection(theta);
+111     }
+112     leftMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, more * Game\&.TILE), true);
+113     rightMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, more * Game\&.TILE), true);
+114   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.rotate (int angle)"
 Rotate the robot by certain angle
 .PP
@@ -157,10 +215,24 @@ Rotate the robot by certain angle
 
 .PP
 Definition at line 204 of file Navigation\&.java\&.
+.PP
+.nf
+204                                 {
+205     leftMotor\&.rotate(convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, angle), true);
+206     rightMotor\&.rotate(-convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, angle), false);
+207   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.stop ()"
 Stop the motor 
 .PP
 Definition at line 212 of file Navigation\&.java\&.
+.PP
+.nf
+212                      {
+213     leftMotor\&.stop(true);
+214     rightMotor\&.stop(false);
+215   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.travelTo (double x, double y, boolean avoid)"
 This method travel the robot to desired position by following the line (Always rotate 90 degree), along with a correction
 .PP
@@ -178,6 +250,37 @@ When avoid=true, the nav thread will handle traveling\&. If you want to travel w
 
 .PP
 Definition at line 70 of file Navigation\&.java\&.
+.PP
+.nf
+70                                                           {
+71     double dX = x - odometer\&.getXYT()[0];
+72     double dY = y - odometer\&.getXYT()[1];
+73     // double theta = Math\&.atan(dX / dY);
+74     // if (dY < 0 && theta < Math\&.PI)
+75     // theta += Math\&.PI;
+76 
+77     // Euclidean distance calculation\&.
+78     // double distance = Math\&.sqrt(Math\&.pow(dX, 2) + Math\&.pow(dY, 2));
+79     double theta = 0;
+80     if (dX > 0) {
+81       turnTo(90);
+82       theta = 90;
+83     } else if (dX < 0) {
+84       turnTo(-90);
+85       theta = -90;
+86     }
+87     moveWithCorrection(dX, theta);
+88 
+89     if (dY > 0) {
+90       turnTo(0);
+91       theta = 0;
+92     } else if (dY < 0) {
+93       turnTo(180);
+94       theta = 180;
+95     }
+96     moveWithCorrection(dY, theta);
+97   }
+.fi
 .SS "synchronized void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.turnTo (double angle)"
 (\fIImprove\fP \fIConsider to discard\fP) This method is where the logic for the odometer will run\&. Use the methods provided from the OdometerData class to implement the odometer\&.
 .PP
@@ -191,6 +294,32 @@ Definition at line 70 of file Navigation\&.java\&.
 
 .PP
 Definition at line 144 of file Navigation\&.java\&.
+.PP
+.nf
+144                                                 {
+145     double dTheta;
+146 
+147     dTheta = angle - odometer\&.getXYT()[2];
+148     if (dTheta < 0)
+149       dTheta += 360;
+150 
+151     // TURN RIGHT
+152     if (dTheta > 180) {
+153       leftMotor\&.setSpeed(ROTATE_SPEED);
+154       rightMotor\&.setSpeed(ROTATE_SPEED);
+155       leftMotor\&.rotate(-convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, 360 - dTheta), true);
+156       rightMotor\&.rotate(convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, 360 - dTheta), false);
+157     }
+158     // TURN LEFT
+159     else {
+160       leftMotor\&.setSpeed(ROTATE_SPEED);
+161       rightMotor\&.setSpeed(ROTATE_SPEED);
+162       leftMotor\&.rotate(convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, dTheta), true);
+163       rightMotor\&.rotate(-convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, dTheta), false);
+164     }
+165   }
+.fi
+
 
 .SH "Author"
 .PP 

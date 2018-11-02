@@ -2,8 +2,7 @@
 \label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher}\index{ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher@{ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher}}
 
 
-Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher\+:
-\nopagebreak
+Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher\+:
 \end{figure}
 
 
-Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher\+:
-\nopagebreak
+Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,8 +28,7 @@ void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd7a2
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a2b03c700b5d232f5aef7c6acf439b7ea}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a2b03c700b5d232f5aef7c6acf439b7ea}} 
-void {\bfseries run\+Method} ()
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a2b03c700b5d232f5aef7c6acf439b7ea}{run\+Method} ()
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -83,8 +80,20 @@ This class provides method to check if there is a ring and if the ring is the co
 
 Definition at line 36 of file Ring\+Searcher.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+37                                 \{
+38     this.odometer = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
+39     this.storageMotor = storageMotor;
+40     this.rodMotor = rodMotor;
+41     data = SensorData.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}{getSensorData}();
+42     \textcolor{keywordflow}{for} (BaseRegulatedMotor motor : \textcolor{keyword}{new} BaseRegulatedMotor[] \{this.storageMotor, this.rodMotor\}) \{
+43       motor.stop();
+44       motor.setAcceleration(ACCELERATION);
+45     \}
+46   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -105,7 +114,48 @@ this method retrieve the searched ring
 Definition at line 74 of file Ring\+Searcher.\+java.
 
 
+\begin{DoxyCode}
+74                              \{
+75     storageMotor.rotateTo(-45);
+76     rodMotor.rotateTo(-70);
+77     rodMotor.rotateTo(0);
+78   \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd7a2651a7c5de76a018664c8bf327af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a2b03c700b5d232f5aef7c6acf439b7ea}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a2b03c700b5d232f5aef7c6acf439b7ea}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher}!run\+Method@{run\+Method}}
+\index{run\+Method@{run\+Method}!ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher}}
+\subsubsection{\texorpdfstring{run\+Method()}{runMethod()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher.\+run\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 80 of file Ring\+Searcher.\+java.
+
+
+\begin{DoxyCode}
+80                              \{
+81     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd7a2651a7c5de76a018664c8bf327af}{retrieveRing}();
+82 
+83   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a2b03c700b5d232f5aef7c6acf439b7ea_cgraph}
+\end{center}
+\end{figure}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/Ring\+Searcher.\+java\end{DoxyCompactItemize}
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/\hyperlink{_ring_searcher_8java}{Ring\+Searcher.\+java}\end{DoxyCompactItemize}

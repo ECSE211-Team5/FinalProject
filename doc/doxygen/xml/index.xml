@@ -42,13 +42,13 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a92e653a6a9f7a31cb7b6f9bc2e732133" kind="function"><name>getColor</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a1acf05f9523b2c0f329d4a7cbf1b9c47" kind="function"><name>getColor</name></member>
   </compound>
-  <compound refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test" kind="class"><name>ca::mcgill::ecse211::tests::ComponentTest</name>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1adcebcb6d834cb9c2461bccdd9831e74b" kind="function"><name>runTest</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1aa40592bb550b3526402faddbc0d890c7" kind="function"><name>navigationTest</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" kind="function"><name>localizationTest</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a05cd9d95458b11ed57ca001a28fffa7c" kind="function"><name>ultrasonicSensorTest</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3e8288f482b3806a0f3c4668951f3e36" kind="function"><name>lightSensorTest</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3782f843fd251f8bb14be0cb1d291dd5" kind="function"><name>RingMotorTest</name></member>
+  <compound refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test" kind="enum"><name>ca::mcgill::ecse211::tests::ComponentTest</name>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a5dc8bf97bc48adf5bee88d425a1a974e" kind="function"><name>runTest</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1aa40592bb550b3526402faddbc0d890c7" kind="function"><name>navigationTest</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" kind="function"><name>localizationTest</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a05cd9d95458b11ed57ca001a28fffa7c" kind="function"><name>ultrasonicSensorTest</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3e8288f482b3806a0f3c4668951f3e36" kind="function"><name>lightSensorTest</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" kind="function"><name>ringMotorTest</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display" kind="class"><name>ca::mcgill::ecse211::project::Display</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1a7ab3b01e19165101ebc842fb4965a986" kind="variable"><name>sensdata</name></member>
@@ -63,23 +63,35 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1a690cd91bcc8024950c2b8e3b2613c801" kind="function"><name>Display</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" kind="function"><name>run</name></member>
   </compound>
-  <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game" kind="class"><name>ca::mcgill::ecse211::project::Game</name>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1af24a953a0c3438670220dde36c532b5d" kind="variable"><name>rgbPoller</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a7616eaaafaa97d162f7c9f838e226c0c" kind="variable"><name>lightPoller</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad092992e355fb48bd63adbf05a21926d" kind="variable"><name>motorControlThread</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1af6fee74efff891793b32352caa110465" kind="variable"><name>usPoller</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab071f6e2caabf0337675487887532973" kind="variable"><name>hasReadData</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a40f6d5a8c70b88bf89b2171a02d2813f" kind="variable"><name>leftMotor</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a637614c1eb769dcdb09d897c66e453a2" kind="variable"><name>rightMotor</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a37d42c1d3b40b8eaa429866e37cd86c7" kind="variable"><name>storageMotor</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad3c828a8e12ad3eaab01d2d846a3716f" kind="variable"><name>rodMotor</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a9a7a353789ddffcb938827410318b4fe" kind="variable"><name>TILE</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a206492a827a716e6c606dc817cb4ff4d" kind="variable"><name>WHEEL_RAD</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1aa445d106d7fba82e78405e64087916b6" kind="variable"><name>TRACK</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a7eb34dc64ead0f2c0db2367f773ae94c" kind="variable"><name>SEN_DIS</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a1bcbd1c19309c65a6887ae19bde66765" kind="function"><name>preparation</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1aff9431d27d78c8b228f468d8ad889a9a" kind="function"><name>readData</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" kind="function"><name>runGame</name></member>
+  <compound refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game" kind="enum"><name>ca::mcgill::ecse211::project::Game</name>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a2e87a39ca9ed981cbeb5eea44e38bf7c" kind="variable"><name>status</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1af24a953a0c3438670220dde36c532b5d" kind="variable"><name>rgbPoller</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a7616eaaafaa97d162f7c9f838e226c0c" kind="variable"><name>lightPoller</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad092992e355fb48bd63adbf05a21926d" kind="variable"><name>motorControlThread</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1af6fee74efff891793b32352caa110465" kind="variable"><name>usPoller</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab071f6e2caabf0337675487887532973" kind="variable"><name>hasReadData</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a7c673571bf50fdb6917a9d7bb671e003" kind="variable"><name>leftMotor</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a7a05fcf37c4435c32270776a427ba0d2" kind="variable"><name>rightMotor</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1af3ba5407b115e9c6e07dffda576f29b7" kind="variable"><name>storageMotor</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1aeb41e5234fcb3b311385f39a07a24a54" kind="variable"><name>rodMotor</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" kind="variable"><name>TILE</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" kind="variable"><name>WHEEL_RAD</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a64cf12cdd6772ac1ce351ff1dfadd626" kind="variable"><name>TRACK</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" kind="variable"><name>SEN_DIS</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a43a5763d183e0bcacd402c872c07273e" kind="function"><name>getStatusFullName</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a620374b3eeb3dd7e0abd26f3ced9053b" kind="function"><name>getStatus</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1af0afcc3fad6172857252b89624f48e32" kind="function"><name>ready</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a6b4c0cfb8de83ba7c6d5dfb24882dc5a" kind="function"><name>localized</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1affc3685219c09f0a4a75cb1ea9366c8e" kind="function"><name>navigatedToTunnel</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a5f387482790bf2c55413a6619b4d00d8" kind="function"><name>navigatedToStart</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1aed641f9ade50f0090096a46d90588eb7" kind="function"><name>navigatedToTree</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a62d510506f1b829fe67dea7270e5b889" kind="function"><name>ringFound</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adc2725f291b0688a62f85db1df1ee2b2" kind="function"><name>ringNotFound</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" kind="function"><name>preparation</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab28110fca0af679acdaea84025746f15" kind="function"><name>readData</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a46cbbf56a4544524174d9d3e63fb9759" kind="function"><name>runGame</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a26faa03e5ececd952eb106a02333e209" kind="function"><name>setStatus</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a52a167474d714aeaed55a877b766cf98" kind="function"><name>getGame</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters" kind="class"><name>ca::mcgill::ecse211::project::GameParameters</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aae8c69151bc01acce692b9119323bb46" kind="variable"><name>SC</name></member>
@@ -139,7 +151,7 @@
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main" kind="class"><name>ca::mcgill::ecse211::project::Main</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af6f7b8fffddcf855f74fe128d2e23ea1" kind="variable"><name>test</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af8faa68af4a989e55864fcafd5df2bee" kind="variable"><name>cType</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1a8dac740460370f76ac0db5dc20824b1f" kind="variable"><name>testType</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af681b5dc675c13ed284071cc135f5fd3" kind="function"><name>main</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" kind="class"><name>ca::mcgill::ecse211::project::Navigation</name>
@@ -252,6 +264,13 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" kind="function"><name>setRGB</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a1c2c38354fc5a66b4667e1d47ab6b20b" kind="function"><name>setL</name></member>
   </compound>
+  <compound refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status" kind="enum"><name>ca::mcgill::ecse211::project::Game::Status</name>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a4ee6ac6711e6f0f96cfbe832f260c89f" kind="variable"><name>Idle</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a25cbd0accfe5929018d9f5e6664f0ea7" kind="variable"><name>Localization</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a1d354aa5f3c05a88b5635633b9f7224e" kind="variable"><name>NavigationSafe</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a3a948816e04ceb3fc752be54f504fb1c" kind="variable"><name>NavigationSearch</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a6cb7397203bf9fa47c9486ede1e8fd6d" kind="variable"><name>RingSearch</name></member>
+  </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control" kind="class"><name>ca::mcgill::ecse211::threads::ThreadControl</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" kind="variable"><name>WAIT_TIME</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1abb0ba2385c212f3d0d8435267d882536" kind="variable"><name>isStarted</name></member>
@@ -318,6 +337,8 @@
   </compound>
   <compound refid="namespacelejos_1_1hardware_1_1sensor" kind="namespace"><name>lejos::hardware::sensor</name>
   </compound>
+  <compound refid="_main_01_page_8md" kind="file"><name>Main Page.md</name>
+  </compound>
   <compound refid="_light_localizer_8java" kind="file"><name>LightLocalizer.java</name>
   </compound>
   <compound refid="_ultrasonic_localizer_8java" kind="file"><name>UltrasonicLocalizer.java</name>
@@ -377,5 +398,7 @@
   <compound refid="dir_54334c177d2c7fd86a15156ae2531032" kind="dir"><name>/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests</name>
   </compound>
   <compound refid="dir_169636a9432b76d8b27cca672999da21" kind="dir"><name>/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
   </compound>
 </doxygenindex>

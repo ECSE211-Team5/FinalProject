@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.localization.UltrasonicLocalizer" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.localization.UltrasonicLocalizer" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -58,6 +58,16 @@ This is the class constructor for a class that helps to localize our robot with 
 
 .PP
 Definition at line 43 of file UltrasonicLocalizer\&.java\&.
+.PP
+.nf
+44                                                                    {
+45     this\&.odometer = Odometer\&.getOdometer();
+46     this\&.data = SensorData\&.getSensorData();
+47     this\&.navigation = nav;
+48     this\&.leftMotor = leftMotor;
+49     this\&.rightMotor = rightMotor;
+50   }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.localization\&.UltrasonicLocalizer\&.localize (int buttonChoice)"
@@ -71,6 +81,17 @@ Wrapper for risingEdge or falling edge methods\&. Left or Right button option\&.
 
 .PP
 Definition at line 57 of file UltrasonicLocalizer\&.java\&.
+.PP
+.nf
+57                                          {
+58     if (buttonChoice == Button\&.ID_RIGHT) {
+59       risingEdge();
+60     } else {
+61       fallingEdge();
+62     }
+63   }
+.fi
+
 
 .SH "Author"
 .PP 

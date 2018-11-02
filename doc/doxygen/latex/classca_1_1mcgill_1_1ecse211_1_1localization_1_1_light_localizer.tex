@@ -27,7 +27,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 22 of file Light\+Localizer.\+java.
+Definition at line 21 of file Light\+Localizer.\+java.
 
 
 
@@ -54,10 +54,19 @@ This is the class constructor
 \end{DoxyExceptions}
 
 
-Definition at line 39 of file Light\+Localizer.\+java.
+Definition at line 38 of file Light\+Localizer.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+39                                                                    \{
+40     this.odometer = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
+41     this.data = SensorData.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}{getSensorData}();
+42     this.navigation = nav;
+43     this.leftMotor = leftMotor;
+44     this.rightMotor = rightMotor;
+45   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -80,18 +89,59 @@ Here is the call graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line 54 of file Light\+Localizer.\+java.
+Definition at line 53 of file Light\+Localizer.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+53                                  \{
+54     leftMotor.setSpeed(FORWARD\_SPEED);
+55     rightMotor.setSpeed(FORWARD\_SPEED);
+56 
+57     \textcolor{comment}{// 1. GO forward find the y=0 line}
+58     leftMotor.forward();
+59     rightMotor.forward();
+60     \textcolor{keywordflow}{while} (data.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[0] > blackLineColor);
+61     Sound.beep();
+62     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(0);
+63     \textcolor{comment}{// 2. Turn and go forward find the x=0 line}
+64     navigation.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(90);
+65     leftMotor.setSpeed(FORWARD\_SPEED / 2);
+66     rightMotor.setSpeed(FORWARD\_SPEED / 2);
+67     leftMotor.forward();
+68     rightMotor.forward();
+69     \textcolor{keywordflow}{while} (data.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[0] > blackLineColor);
+70     Sound.beep();
+71     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(0);
+72     leftMotor.setSpeed(FORWARD\_SPEED / 2);
+73     rightMotor.setSpeed(FORWARD\_SPEED / 2);
+74     \textcolor{comment}{// 3. Go backwards by sensor-wheel center distance in x-direction}
+75     leftMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, -SENSOR\_DIS), \textcolor{keyword}{true});
+76     rightMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, -SENSOR\_DIS), \textcolor{keyword}{false});
+77     \textcolor{comment}{// 4. Go backwards by sensor-wheel center distance in y-direction}
+78     navigation.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(0);
+79     leftMotor.setSpeed(FORWARD\_SPEED / 2);
+80     rightMotor.setSpeed(FORWARD\_SPEED / 2);
+81     \textcolor{keywordtype}{double} sensorDistanceOffset = 2.5;
+82     leftMotor.rotate(
+83         Navigation.convertDistance(Game.WHEEL\_RAD, -SENSOR\_DIS - sensorDistanceOffset),
+84         \textcolor{keyword}{true});
+85     rightMotor.rotate(
+86         Navigation.convertDistance(Game.WHEEL\_RAD, -SENSOR\_DIS - sensorDistanceOffset),
+87         \textcolor{keyword}{false});
+88     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a419b8f07c2c5374411c8e62298e9a402}{setTheta}(0);
+89     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(sC[0]);
+90     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(sC[1]);
+91 
+92   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_a9fc3d6cdd897e9db86fc9d71dc914863_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -102,4 +152,4 @@ Here is the caller graph for this function\+:
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/localization/Light\+Localizer.\+java\end{DoxyCompactItemize}
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/localization/\hyperlink{_light_localizer_8java}{Light\+Localizer.\+java}\end{DoxyCompactItemize}

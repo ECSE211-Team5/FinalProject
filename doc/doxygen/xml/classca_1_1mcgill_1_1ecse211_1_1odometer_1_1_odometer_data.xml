@@ -195,7 +195,7 @@
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="84" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="84" bodyend="106"/>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1af0ff4c5121973a8310cf986e25fa0d87" compoundref="_odometer_8java" startline="109" endline="150">ca.mcgill.ecse211.odometer.Odometer.run</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1af0ff4c5121973a8310cf986e25fa0d87" compoundref="_odometer_8java" startline="99" endline="140">ca.mcgill.ecse211.odometer.Odometer.run</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1aad66a7030ac00f3a9cbe7bc33c25acbf" compoundref="_odometry_correction_8java" startline="50" endline="92">ca.mcgill.ecse211.odometer.OdometryCorrection.run</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1a21a351682dc75060d6a5f15ad4775068" compoundref="_odometry_correction_8java" startline="99" endline="112">ca.mcgill.ecse211.odometer.OdometryCorrection.doCorrection</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" compoundref="_display_8java" startline="57" endline="106">ca.mcgill.ecse211.project.Display.run</referencedby>
@@ -249,7 +249,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="116" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="116" bodyend="132"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1af0ff4c5121973a8310cf986e25fa0d87" compoundref="_odometer_8java" startline="109" endline="150">ca.mcgill.ecse211.odometer.Odometer.run</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1af0ff4c5121973a8310cf986e25fa0d87" compoundref="_odometer_8java" startline="99" endline="140">ca.mcgill.ecse211.odometer.Odometer.run</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2ebc18a13aea6276122d9ef4ee100bb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -322,7 +322,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="161" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="161" bodyend="172"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="54" endline="93">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="53" endline="92">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1aad66a7030ac00f3a9cbe7bc33c25acbf" compoundref="_odometry_correction_8java" startline="50" endline="92">ca.mcgill.ecse211.odometer.OdometryCorrection.run</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1a21a351682dc75060d6a5f15ad4775068" compoundref="_odometry_correction_8java" startline="99" endline="112">ca.mcgill.ecse211.odometer.OdometryCorrection.doCorrection</referencedby>
       </memberdef>
@@ -350,7 +350,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="179" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="179" bodyend="190"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="54" endline="93">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="53" endline="92">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1aad66a7030ac00f3a9cbe7bc33c25acbf" compoundref="_odometry_correction_8java" startline="50" endline="92">ca.mcgill.ecse211.odometer.OdometryCorrection.run</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1a21a351682dc75060d6a5f15ad4775068" compoundref="_odometry_correction_8java" startline="99" endline="112">ca.mcgill.ecse211.odometer.OdometryCorrection.doCorrection</referencedby>
       </memberdef>
@@ -378,7 +378,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="197" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="197" bodyend="208"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="54" endline="93">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="53" endline="92">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" compoundref="_navigation_8java" startline="104" endline="114">ca.mcgill.ecse211.project.Navigation.moveWithCorrection</referencedby>
       </memberdef>

@@ -16,6 +16,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a1bab49cc19ee3b633ddbec4c408927bf" compoundref="_gyro_poller_8java" startline="31" endline="35">ca.mcgill.ecse211.threads.GyroPoller.GyroPoller</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a90507a3d6038ff7ec7881640b5dd4263" prot="protected" static="no" mutable="no">
         <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
@@ -29,6 +30,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" line="18" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a1bab49cc19ee3b633ddbec4c408927bf" compoundref="_gyro_poller_8java" startline="31" endline="35">ca.mcgill.ecse211.threads.GyroPoller.GyroPoller</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a112e433b3561e89927357051f55f8cf1" prot="protected" static="no" mutable="no">
         <type>float []</type>
@@ -42,6 +44,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" line="19" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a1bab49cc19ee3b633ddbec4c408927bf" compoundref="_gyro_poller_8java" startline="31" endline="35">ca.mcgill.ecse211.threads.GyroPoller.GyroPoller</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -115,6 +118,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" bodystart="31" bodyend="35"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1af478329ec7a335a4f3d2d412d5d10091" compoundref="_gyro_poller_8java" startline="17">ca.mcgill.ecse211.threads.GyroPoller.us</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a90507a3d6038ff7ec7881640b5dd4263" compoundref="_gyro_poller_8java" startline="18">ca.mcgill.ecse211.threads.GyroPoller.cont</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a112e433b3561e89927357051f55f8cf1" compoundref="_gyro_poller_8java" startline="19">ca.mcgill.ecse211.threads.GyroPoller.lgData</references>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a7a3232e355cece714fa85a3a902d9cfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -129,7 +135,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" line="46" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" bodystart="46" bodyend="50"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a35b1941d44e86b81eb7c625efbd3c8ba" compoundref="_sensor_data_8java" startline="138" endline="140">ca.mcgill.ecse211.threads.SensorData.setA</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a27f914ed77f23805210998fc0ee2daa7" compoundref="_gyro_poller_8java" startline="52" endline="64">ca.mcgill.ecse211.threads.GyroPoller.processData</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -145,6 +151,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" line="52" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/GyroPoller.java" bodystart="52" bodyend="64"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a35b1941d44e86b81eb7c625efbd3c8ba" compoundref="_sensor_data_8java" startline="138" endline="140">ca.mcgill.ecse211.threads.SensorData.setA</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1a7a3232e355cece714fa85a3a902d9cfd" compoundref="_gyro_poller_8java" startline="46" endline="50">ca.mcgill.ecse211.threads.GyroPoller.run</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

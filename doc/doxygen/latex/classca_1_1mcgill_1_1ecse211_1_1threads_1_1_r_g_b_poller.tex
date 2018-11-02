@@ -2,8 +2,7 @@
 \label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller}\index{ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller@{ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller}}
 
 
-Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller\+:
-\nopagebreak
+Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller\+:
 \end{figure}
 
 
-Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller\+:
-\nopagebreak
+Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,13 +21,12 @@ Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a7e23e2fe527b2ecbf4ddc8f988dd70a5}{R\+G\+B\+Poller} (Sample\+Provider us\mbox{[}$\,$\mbox{]}, float\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} us\+Data, \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} cont)  throws Odometer\+Exceptions 
+\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a7e23e2fe527b2ecbf4ddc8f988dd70a5}{R\+G\+B\+Poller} (Sample\+Provider \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}\mbox{[}$\,$\mbox{]}, float\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} us\+Data, \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont})  throws Odometer\+Exceptions 
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a96db4561c87136de5098497fe30356fe}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a96db4561c87136de5098497fe30356fe}} 
-void {\bfseries run\+Method} ()
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a96db4561c87136de5098497fe30356fe}{run\+Method} ()
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -83,16 +80,46 @@ This constructor creates an instance of the \hyperlink{classca_1_1mcgill_1_1ecse
 
 Definition at line 28 of file R\+G\+B\+Poller.\+java.
 
+
+\begin{DoxyCode}
+28                                                                                                      \{
+29     super(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}, usData, \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont});
+30   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a96db4561c87136de5098497fe30356fe}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a96db4561c87136de5098497fe30356fe}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+R\+G\+B\+Poller@{ca\+::mcgill\+::ecse211\+::threads\+::\+R\+G\+B\+Poller}!run\+Method@{run\+Method}}
+\index{run\+Method@{run\+Method}!ca\+::mcgill\+::ecse211\+::threads\+::\+R\+G\+B\+Poller@{ca\+::mcgill\+::ecse211\+::threads\+::\+R\+G\+B\+Poller}}
+\subsubsection{\texorpdfstring{run\+Method()}{runMethod()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller.\+run\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file R\+G\+B\+Poller.\+java.
+
+
+\begin{DoxyCode}
+33                              \{
+34     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}[0].fetchSample(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0], 0); \textcolor{comment}{// acquire data at offset 0}
+35     \textcolor{comment}{// get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int}
+36     \textcolor{keywordtype}{int} r = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][0] * 100); \textcolor{comment}{// extract from buffer, cast to int}
+37     \textcolor{keywordtype}{int} g = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][1] * 100); \textcolor{comment}{// extract from buffer, cast to int}
+38     \textcolor{keywordtype}{int} b = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][2] * 100); \textcolor{comment}{// extract from buffer, cast to int}
+39     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont}.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}{setRGB}(r, g, b); \textcolor{comment}{// now take action depending on value}
+40   \}
+\end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a7e23e2fe527b2ecbf4ddc8f988dd70a5_cgraph}
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a96db4561c87136de5098497fe30356fe_cgraph}
 \end{center}
 \end{figure}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/R\+G\+B\+Poller.\+java\end{DoxyCompactItemize}
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/\hyperlink{_r_g_b_poller_8java}{R\+G\+B\+Poller.\+java}\end{DoxyCompactItemize}

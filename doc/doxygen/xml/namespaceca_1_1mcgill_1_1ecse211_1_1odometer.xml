@@ -9,12 +9,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>This class is meant as a skeleton for the odometer class to be used.</para><para><simplesect kind="author"><para>Rodrigo Silva </para></simplesect>
-<simplesect kind="author"><para>Dirk Dubois </para></simplesect>
-<simplesect kind="author"><para>Derek Yu </para></simplesect>
-<simplesect kind="author"><para>Karim El-Baba </para></simplesect>
-<simplesect kind="author"><para>Michael Smith </para></simplesect>
-</para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/Odometer.java" line="11" column="1"/>
+    </detaileddescription>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/Odometer.java" line="1" column="1"/>
   </compounddef>
 </doxygen>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sc',['SC',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#aae8c69151bc01acce692b9119323bb46',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['sen_5fdis',['SEN_DIS',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a7eb34dc64ead0f2c0db2367f773ae94c',1,'ca::mcgill::ecse211::project::Game']]],
-  ['storagemotor',['storageMotor',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a37d42c1d3b40b8eaa429866e37cd86c7',1,'ca::mcgill::ecse211::project::Game']]]
+  ['navigation',['Navigation',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type.html#a70ec62ab2b745dd99e291459279910ea',1,'ca::mcgill::ecse211::tests::ComponentTest::Type']]],
+  ['navigationsafe',['NavigationSafe',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status.html#a1d354aa5f3c05a88b5635633b9f7224e',1,'ca::mcgill::ecse211::project::Game::Status']]],
+  ['navigationsearch',['NavigationSearch',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status.html#a3a948816e04ceb3fc752be54f504fb1c',1,'ca::mcgill::ecse211::project::Game::Status']]]
 ];

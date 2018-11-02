@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.odometer.OdometryCorrection" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.odometer.OdometryCorrection" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -56,6 +56,14 @@ This is the default class constructor\&. An existing instance of the odometer is
 
 .PP
 Definition at line 38 of file OdometryCorrection\&.java\&.
+.PP
+.nf
+38                                                         {
+39 
+40     this\&.odometer = Odometer\&.getOdometer();
+41 
+42   }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometryCorrection\&.doCorrection (double angle)"
@@ -69,6 +77,23 @@ This method corrects our robot's odometer readings
 
 .PP
 Definition at line 99 of file OdometryCorrection\&.java\&.
+.PP
+.nf
+99                                          {
+100     double[] position = odometer\&.getXYT();
+101     // Check that our robot's angle is within certain bounds and correct odometer if required\&.
+102     if (angle < 5 || angle > 355) {
+103       int sensorCoor = (int) Math\&.round(position[1] - SENSOR_DIS / Game\&.TILE);
+104       odometer\&.setY(sensorCoor + SENSOR_DIS / Game\&.TILE);
+105     } else if (angle < 185 && angle > 175) {
+106       int sensorCoor = (int) Math\&.round(position[1] + SENSOR_DIS / Game\&.TILE);
+107       odometer\&.setY(sensorCoor - SENSOR_DIS / Game\&.TILE);
+108     } else if (angle < 95 && angle > 85) {
+109       int sensorCoor = (int) Math\&.round(position[0] - SENSOR_DIS / Game\&.TILE);
+110       odometer\&.setX(sensorCoor + SENSOR_DIS / Game\&.TILE);
+111     }
+112   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometryCorrection\&.run ()"
 When this thread starts, it will correct the rotation and position of the robot once a blackline is detected
 .PP
@@ -80,6 +105,53 @@ When this thread starts, it will correct the rotation and position of the robot 
 
 .PP
 Definition at line 50 of file OdometryCorrection\&.java\&.
+.PP
+.nf
+50                     {
+51     long correctionStart, correctionEnd;
+52     boolean onTopOfLine = false;
+53 
+54     while (true) {
+55       correctionStart = System\&.currentTimeMillis();
+56 
+57       // TODO Trigger correction (When do I have information to correct?)
+58       // Fetch the sample at offset 0
+59       myColorSample\&.fetchSample(sampleColor, 0);
+60 
+61       // Check if sensor read black line and didn't already read the same one
+62       if (sampleColor[0] < LINE_COLOR_THRESHOLD && !onTopOfLine) {
+63 
+64         // Sensed new line
+65         Sound\&.beep();
+66         onTopOfLine = true;
+67 
+68         double x = odometer\&.getXYT()[0];
+69         double y = odometer\&.getXYT()[1];
+70 
+71         if (Math\&.abs(x % TILE_WIDTH) < Math\&.abs(y % TILE_WIDTH)) {
+72           odometer\&.setX(Math\&.round(x / TILE_WIDTH) * TILE_WIDTH);
+73         } else {
+74           odometer\&.setY(Math\&.round(y / TILE_WIDTH) * TILE_WIDTH);
+75         }
+76 
+77       } else if (sampleColor[0] > LINE_COLOR_THRESHOLD) {
+78         // No longer on top of line, reset to false
+79         onTopOfLine = false;
+80       }
+81 
+82       // this ensure the odometry correction occurs only once every period
+83       correctionEnd = System\&.currentTimeMillis();
+84       if (correctionEnd - correctionStart < CORRECTION_PERIOD) {
+85         try {
+86           Thread\&.sleep(CORRECTION_PERIOD - (correctionEnd - correctionStart));
+87         } catch (InterruptedException e) {
+88           // there is nothing to be done here
+89         }
+90       }
+91     }
+92   }
+.fi
+
 
 .SH "Author"
 .PP 

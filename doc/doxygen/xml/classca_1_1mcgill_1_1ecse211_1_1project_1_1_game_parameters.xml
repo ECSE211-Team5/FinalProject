@@ -17,7 +17,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="31" bodyend="-1"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="162" endline="193">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a46cbbf56a4544524174d9d3e63fb9759" compoundref="_game_8java" startline="378" endline="410">ca.mcgill.ecse211.project.Game.runGame</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aec739d9ebcbd75db6a77ec288ff974cf" prot="public" static="yes" mutable="no">
         <type>int []</type>
@@ -337,6 +337,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="200" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="200" bodyend="202"/>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a25564076fdd8880377fbd6eaf753456f" compoundref="_game_parameters_8java" startline="25">ca.mcgill.ecse211.project.GameParameters.AreaType.Searching</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

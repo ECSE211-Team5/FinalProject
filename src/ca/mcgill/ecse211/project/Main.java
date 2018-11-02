@@ -5,7 +5,7 @@ import ca.mcgill.ecse211.tests.ComponentTest;
 import lejos.hardware.Button;
 
 /**
- * This class implements the main starting point for the Search and Localize lab
+ * This class implements the main starting point for our final project
  * 
  * @author Caspar Cedro
  * @author Percy Chen
@@ -16,39 +16,38 @@ import lejos.hardware.Button;
  */
 public class Main {
   /**
-   * Whether Enable test
+   * This variable decides whether or not to enable our tests
    */
   public static boolean test = true;
 
   /**
-   * Type of test
+   * This variable stores the type of test that we want to perform
    */
-  public static ComponentTest.Type cType = ComponentTest.Type.LightSensor;
+  public static ComponentTest.Type testType = ComponentTest.Type.LightSensor;
 
   /**
-   * This method is our main entry point - instantiate objects used and set up sensor.
+   * This method is our main entry point - instantiate objects and loop indefinitely
    * 
-   * @param args an array of arguments that can be passed in via commandline or otherwise.
+   * @param args an array of arguments that can be passed in via command line or otherwise
    * @throws OdometerExceptions
    */
   public static void main(String[] args) {
     try {
-      Game g = Game.getGame();
-      g.preparation();
+      Game.getGame().preparation(); // for brevity and less object instantiations
       if (test) {
-        Button.waitForAnyPress(); // Record choice (left or right press)
-        (new Thread(){
-            public void run() {
-              try {
-                ComponentTest.RingMotorTest();
-              } catch (OdometerExceptions e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-              }
+        Button.waitForAnyPress(); // Wait for a button on the EV3 Brick to be pressed
+        (new Thread() {
+          public void run() {
+            try {
+              ComponentTest.runTest(testType);
+            } catch (Exception e) {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
             }
+          }
         }).start();
       } else {
-        g.runGame();
+        Game.getGame().runGame(); // for brevity and less object instantiations
       }
       Button.waitForAnyPress();
       System.exit(0);
@@ -56,6 +55,5 @@ public class Main {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
-
   }
 }

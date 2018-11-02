@@ -2,8 +2,7 @@
 \label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller}\index{ca.\+mcgill.\+ecse211.\+threads.\+Ultrasonic\+Poller@{ca.\+mcgill.\+ecse211.\+threads.\+Ultrasonic\+Poller}}
 
 
-Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ultrasonic\+Poller\+:
-\nopagebreak
+Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ultrasonic\+Poller\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ultrasonic\+Poller\+:
 \end{figure}
 
 
-Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ultrasonic\+Poller\+:
-\nopagebreak
+Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ultrasonic\+Poller\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -53,7 +51,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 22 of file Ultrasonic\+Poller.\+java.
+Definition at line 21 of file Ultrasonic\+Poller.\+java.
 
 
 
@@ -77,10 +75,18 @@ This constructor creates an instance of the \hyperlink{classca_1_1mcgill_1_1ecse
 \end{DoxyParams}
 
 
-Definition at line 38 of file Ultrasonic\+Poller.\+java.
+Definition at line 37 of file Ultrasonic\+Poller.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+37                                                                               \{
+38     this.us = us;
+39     this.cont = cont;
+40     this.usData = usData;
+41     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted} = \textcolor{keyword}{true};
+42   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -98,10 +104,20 @@ Here is the call graph for this function\+:
 
 get us sensor data 
 
-Definition at line 48 of file Ultrasonic\+Poller.\+java.
+Definition at line 47 of file Ultrasonic\+Poller.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+47                              \{
+48     us.fetchSample(usData, 0); \textcolor{comment}{// acquire data}
+49     \textcolor{comment}{// get distance from buffer, multiply by 100 for convenience and allow it to be cast to}
+50     \textcolor{comment}{// int}
+51     \textcolor{keywordtype}{int} distance = (int) (usData[0] * 100.0);
+52 
+53     cont.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}{setD}(distance); \textcolor{comment}{// now take action depending on value}
+54   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -112,4 +128,4 @@ Here is the call graph for this function\+:
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/Ultrasonic\+Poller.\+java\end{DoxyCompactItemize}
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/threads/\hyperlink{_ultrasonic_poller_8java}{Ultrasonic\+Poller.\+java}\end{DoxyCompactItemize}

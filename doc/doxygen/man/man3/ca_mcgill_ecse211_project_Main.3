@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.Main" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.Main" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,12 +20,12 @@ ca.mcgill.ecse211.project.Main
 .RI "static boolean \fBtest\fP = true"
 .br
 .ti -1c
-.RI "static ComponentTest\&.Type \fBcType\fP = ComponentTest\&.Type\&.LightSensor"
+.RI "static ComponentTest\&.Type \fBtestType\fP = \fBComponentTest\&.Type\&.LightSensor\fP"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
-This class implements the main starting point for the Search and Localize lab
+This class implements the main starting point for our final project
 .PP
 \fBAuthor:\fP
 .RS 4
@@ -44,15 +44,15 @@ Kamy Moussavi Kafi
 .PP
 
 .PP
-Definition at line 35 of file Main\&.java\&.
+Definition at line 17 of file Main\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "static void ca\&.mcgill\&.ecse211\&.project\&.Main\&.main (String [] args)\fC [static]\fP"
-This method is our main entry point - instantiate objects used and set up sensor\&.
+This method is our main entry point - instantiate objects and loop indefinitely
 .PP
 \fBParameters:\fP
 .RS 4
-\fIargs\fP an array of arguments that can be passed in via commandline or otherwise\&. 
+\fIargs\fP an array of arguments that can be passed in via command line or otherwise 
 .RE
 .PP
 \fBExceptions:\fP
@@ -62,17 +62,45 @@ This method is our main entry point - instantiate objects used and set up sensor
 .PP
 
 .PP
-Definition at line 52 of file Main\&.java\&.
+Definition at line 34 of file Main\&.java\&.
+.PP
+.nf
+34                                          {
+35     try {
+36       Game\&.getGame()\&.preparation(); // for brevity and less object instantiations
+37       if (test) {
+38         Button\&.waitForAnyPress(); // Wait for a button on the EV3 Brick to be pressed
+39         (new Thread() {
+40           public void run() {
+41             try {
+42               ComponentTest\&.runTest(testType);
+43             } catch (Exception e) {
+44               // TODO Auto-generated catch block
+45               e\&.printStackTrace();
+46             }
+47           }
+48         })\&.start();
+49       } else {
+50         Game\&.getGame()\&.runGame(); // for brevity and less object instantiations
+51       }
+52       Button\&.waitForAnyPress();
+53       System\&.exit(0);
+54     } catch (OdometerExceptions e) {
+55       // TODO Auto-generated catch block
+56       e\&.printStackTrace();
+57     }
+58   }
+.fi
 .SH "Member Data Documentation"
 .PP 
-.SS "ComponentTest\&.Type ca\&.mcgill\&.ecse211\&.project\&.Main\&.cType = ComponentTest\&.Type\&.LightSensor\fC [static]\fP"
-Type of test 
-.PP
-Definition at line 44 of file Main\&.java\&.
 .SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Main\&.test = true\fC [static]\fP"
-Whether Enable test 
+This variable decides whether or not to enable our tests 
 .PP
-Definition at line 39 of file Main\&.java\&.
+Definition at line 21 of file Main\&.java\&.
+.SS "ComponentTest\&.Type ca\&.mcgill\&.ecse211\&.project\&.Main\&.testType = \fBComponentTest\&.Type\&.LightSensor\fP\fC [static]\fP"
+This variable stores the type of test that we want to perform 
+.PP
+Definition at line 26 of file Main\&.java\&.
 
 .SH "Author"
 .PP 

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="23" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="23" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="22" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1a7d8529c0dda51bceb22eb94897201d1e" prot="private" static="no" mutable="no">
         <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="24" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="24" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="23" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1aa86a35edc06b1d33625bf46a61085343" prot="private" static="no" mutable="no">
         <type>float []</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="25" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="24" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -90,7 +90,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="38" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="38" bodyend="43"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="37" bodyend="42"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="36" endline="38">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
       </memberdef>
       </sectiondef>
@@ -106,7 +106,7 @@
 <para>get us sensor data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="48" bodyend="55"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="47" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="47" bodyend="54"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a2c1f8e625478b89aabe6e9911e482ef3" compoundref="_sensor_data_8java" startline="128" endline="130">ca.mcgill.ecse211.threads.SensorData.setD</references>
       </memberdef>
       </sectiondef>
@@ -121,40 +121,40 @@
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="87">
+      <node id="89">
         <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
-        <childnode refid="88" relation="public-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="88">
+      <node id="90">
         <label>ca.mcgill.ecse211.threads.ThreadControl</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="89" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="89">
-        <label>Runnable</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="90">
-        <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
         <childnode refid="91" relation="public-inheritance">
         </childnode>
       </node>
       <node id="91">
-        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="92" relation="public-inheritance">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="92">
+        <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
+        <childnode refid="93" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="92">
+      <node id="93">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="94" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="94">
         <label>Runnable</label>
       </node>
     </collaborationgraph>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="22" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="22" bodyend="56"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="21" bodyend="55"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1a7d8529c0dda51bceb22eb94897201d1e" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>cont</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1abb0ba2385c212f3d0d8435267d882536" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::UltrasonicPoller</scope><name>isStarted</name></member>

@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.tests.ComponentTest" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.tests.ComponentTest" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,7 +17,7 @@ ca.mcgill.ecse211.tests.ComponentTest
 
 .in +1c
 .ti -1c
-.RI "static void \fBrunTest\fP (\fBType\fP type)"
+.RI "static void \fBrunTest\fP (\fBType\fP testType)  throws Exception "
 .br
 .ti -1c
 .RI "static void \fBnavigationTest\fP ()  throws OdometerExceptions "
@@ -32,20 +32,45 @@ ca.mcgill.ecse211.tests.ComponentTest
 .RI "static void \fBlightSensorTest\fP ()"
 .br
 .ti -1c
-.RI "static void \fBRingMotorTest\fP ()  throws OdometerExceptions "
+.RI "static void \fBringMotorTest\fP ()  throws OdometerExceptions "
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 8 of file ComponentTest\&.java\&.
+This singleton contains all the methods and structures necessary to test our robot and its components
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file ComponentTest\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.lightSensorTest ()\fC [static]\fP"
 Test for lightSensor 
 .PP
-Definition at line 50 of file ComponentTest\&.java\&.
+Definition at line 89 of file ComponentTest\&.java\&.
+.PP
+.nf
+89                                        {
+90 
+91   }
+.fi
 .SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.localizationTest () throws \fBOdometerExceptions\fP\fC [static]\fP"
-Test for localizationTest 
+Test for localizationTest
 .PP
 \fBExceptions:\fP
 .RS 4
@@ -54,9 +79,15 @@ Test for localizationTest
 .PP
 
 .PP
-Definition at line 36 of file ComponentTest\&.java\&.
+Definition at line 75 of file ComponentTest\&.java\&.
+.PP
+.nf
+75                                                                   {
+76 
+77   }
+.fi
 .SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.navigationTest () throws \fBOdometerExceptions\fP\fC [static]\fP"
-Test for Navigation 
+Test for Navigation
 .PP
 \fBExceptions:\fP
 .RS 4
@@ -65,9 +96,17 @@ Test for Navigation
 .PP
 
 .PP
-Definition at line 26 of file ComponentTest\&.java\&.
-.SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.RingMotorTest () throws \fBOdometerExceptions\fP\fC [static]\fP"
-Test for ring detection 
+Definition at line 64 of file ComponentTest\&.java\&.
+.PP
+.nf
+64                                                                 {
+65     Navigation nav = new Navigation(Game\&.leftMotor, Game\&.rightMotor);
+66     nav\&.travelTo(4, 2, false);
+67     nav\&.travelTo(0, 0, false);
+68   }
+.fi
+.SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.ringMotorTest () throws \fBOdometerExceptions\fP\fC [static]\fP"
+Test for ring detection
 .PP
 \fBExceptions:\fP
 .RS 4
@@ -76,8 +115,29 @@ Test for ring detection
 .PP
 
 .PP
-Definition at line 58 of file ComponentTest\&.java\&.
-.SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.runTest (\fBType\fP type)\fC [static]\fP"
+Definition at line 98 of file ComponentTest\&.java\&.
+.PP
+.nf
+98                                                                {
+99     final RingSearcher searcher = new RingSearcher(Game\&.storageMotor, Game\&.rodMotor);
+100     searcher\&.setStart(true);
+101     Thread t = new Thread(searcher);
+102     t\&.start();
+103     try {
+104       Thread\&.sleep(20000);
+105     } catch (InterruptedException e) {
+106       e\&.printStackTrace();
+107     }
+108     searcher\&.setStart(false);
+109     try {
+110       Thread\&.sleep(2000);
+111     } catch (InterruptedException e) {
+112       e\&.printStackTrace();
+113     }
+114     searcher\&.setStart(true);
+115   }
+.fi
+.SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.runTest (\fBType\fP testType) throws Exception\fC [static]\fP"
 This method selects test for each individual components of the design
 .PP
 \fBParameters:\fP
@@ -85,13 +145,54 @@ This method selects test for each individual components of the design
 \fItype\fP 
 .RE
 .PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
 
 .PP
-Definition at line 18 of file ComponentTest\&.java\&.
+Definition at line 32 of file ComponentTest\&.java\&.
+.PP
+.nf
+32                                                              {
+33     try {
+34       switch (testType) {
+35         case Navigation:
+36           ComponentTest\&.navigationTest();
+37           break;
+38         case Localization:
+39           ComponentTest\&.localizationTest();
+40           break;
+41         case UltrasonicSensor:
+42           ComponentTest\&.ultrasonicSensorTest();
+43           break;
+44         case LightSensor:
+45           ComponentTest\&.lightSensorTest();
+46           break;
+47         case RingDetection:
+48           ComponentTest\&.ringMotorTest();
+49           break;
+50         default:
+51           System\&.out\&.println("Invalid test type selected");
+52           break;
+53       }
+54     } catch (Exception e) {
+55       throw e;
+56     }
+57   }
+.fi
 .SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.ultrasonicSensorTest ()\fC [static]\fP"
 Test for UltrasonicSensor 
 .PP
-Definition at line 43 of file ComponentTest\&.java\&.
+Definition at line 82 of file ComponentTest\&.java\&.
+.PP
+.nf
+82                                             {
+83 
+84   }
+.fi
+
 
 .SH "Author"
 .PP 

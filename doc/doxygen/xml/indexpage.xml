@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>ECSE211-F2018 Final Project V1.0</title>
+    <detaileddescription>
+<para><heading level="1">Overview:</heading>
+</para><para>Documentation for group 5&apos;s final project for ECSE211 Fall 2018</para><para><heading level="1">Documentation:</heading>
+</para><para><ulink url="https://ecse211-group5.herokuapp.com/doc/">Online Javadoc Documentation</ulink></para><para><ulink url="https://ecse211-group5.herokuapp.com/doc/doxygen/html/">Online Doxygen Documentation</ulink></para><para><heading level="1">List of Open-Source Projects Used:</heading>
+</para><para><itemizedlist>
+<listitem><para>Eclipse</para></listitem><listitem><para>LeJos</para></listitem><listitem><para>Java</para></listitem><listitem><para>Doxygen </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

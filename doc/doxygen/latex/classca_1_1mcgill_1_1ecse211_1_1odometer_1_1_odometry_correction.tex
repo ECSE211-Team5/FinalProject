@@ -2,8 +2,7 @@
 \label{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction}\index{ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction@{ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction}}
 
 
-Inheritance diagram for ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction\+:
-\nopagebreak
+Inheritance diagram for ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction\
 \end{figure}
 
 
-Collaboration diagram for ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction\+:
-\nopagebreak
+Collaboration diagram for ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -71,8 +69,15 @@ This is the default class constructor. An existing instance of the odometer is u
 
 Definition at line 38 of file Odometry\+Correction.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+38                                                         \{
+39 
+40     this.odometer = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
+41 
+42   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -99,8 +104,24 @@ This method corrects our robot\textquotesingle{}s odometer readings
 
 Definition at line 99 of file Odometry\+Correction.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+99                                          \{
+100     \textcolor{keywordtype}{double}[] position = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}();
+101     \textcolor{comment}{// Check that our robot's angle is within certain bounds and correct odometer if required.}
+102     \textcolor{keywordflow}{if} (angle < 5 || angle > 355) \{
+103       \textcolor{keywordtype}{int} sensorCoor = (int) Math.round(position[1] - SENSOR\_DIS / Game.TILE);
+104       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(sensorCoor + SENSOR\_DIS / Game.TILE);
+105     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (angle < 185 && angle > 175) \{
+106       \textcolor{keywordtype}{int} sensorCoor = (int) Math.round(position[1] + SENSOR\_DIS / Game.TILE);
+107       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(sensorCoor - SENSOR\_DIS / Game.TILE);
+108     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (angle < 95 && angle > 85) \{
+109       \textcolor{keywordtype}{int} sensorCoor = (int) Math.round(position[0] - SENSOR\_DIS / Game.TILE);
+110       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(sensorCoor + SENSOR\_DIS / Game.TILE);
+111     \}
+112   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -124,8 +145,53 @@ When this thread starts, it will correct the rotation and position of the robot 
 
 Definition at line 50 of file Odometry\+Correction.\+java.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+50                     \{
+51     \textcolor{keywordtype}{long} correctionStart, correctionEnd;
+52     \textcolor{keywordtype}{boolean} onTopOfLine = \textcolor{keyword}{false};
+53 
+54     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
+55       correctionStart = System.currentTimeMillis();
+56 
+57       \textcolor{comment}{// TODO Trigger correction (When do I have information to correct?)}
+58       \textcolor{comment}{// Fetch the sample at offset 0}
+59       myColorSample.fetchSample(sampleColor, 0);
+60 
+61       \textcolor{comment}{// Check if sensor read black line and didn't already read the same one}
+62       \textcolor{keywordflow}{if} (sampleColor[0] < LINE\_COLOR\_THRESHOLD && !onTopOfLine) \{
+63 
+64         \textcolor{comment}{// Sensed new line}
+65         Sound.beep();
+66         onTopOfLine = \textcolor{keyword}{true};
+67 
+68         \textcolor{keywordtype}{double} x = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}()[0];
+69         \textcolor{keywordtype}{double} y = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}()[1];
+70 
+71         \textcolor{keywordflow}{if} (Math.abs(x % TILE\_WIDTH) < Math.abs(y % TILE\_WIDTH)) \{
+72           odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(Math.round(x / TILE\_WIDTH) * TILE\_WIDTH);
+73         \} \textcolor{keywordflow}{else} \{
+74           odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(Math.round(y / TILE\_WIDTH) * TILE\_WIDTH);
+75         \}
+76 
+77       \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (sampleColor[0] > LINE\_COLOR\_THRESHOLD) \{
+78         \textcolor{comment}{// No longer on top of line, reset to false}
+79         onTopOfLine = \textcolor{keyword}{false};
+80       \}
+81 
+82       \textcolor{comment}{// this ensure the odometry correction occurs only once every period}
+83       correctionEnd = System.currentTimeMillis();
+84       \textcolor{keywordflow}{if} (correctionEnd - correctionStart < CORRECTION\_PERIOD) \{
+85         \textcolor{keywordflow}{try} \{
+86           Thread.sleep(CORRECTION\_PERIOD - (correctionEnd - correctionStart));
+87         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+88           \textcolor{comment}{// there is nothing to be done here}
+89         \}
+90       \}
+91     \}
+92   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -136,4 +202,4 @@ Here is the call graph for this function\+:
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/odometer/Odometry\+Correction.\+java\end{DoxyCompactItemize}
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/odometer/\hyperlink{_odometry_correction_8java}{Odometry\+Correction.\+java}\end{DoxyCompactItemize}

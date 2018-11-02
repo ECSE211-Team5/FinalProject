@@ -28,6 +28,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afa2d71de18f6276782a702d7b74066e3" compoundref="_game_parameters_8java" startline="200" endline="202">ca.mcgill.ecse211.project.GameParameters.getType</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1ac762256f8b33e7c93c162520a0349769" prot="public" static="no" mutable="no">
         <type></type>

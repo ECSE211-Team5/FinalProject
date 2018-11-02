@@ -61,7 +61,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="28" bodyend="30"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" compoundref="_sensor_data_8java" startline="149" endline="158">ca.mcgill.ecse211.threads.SensorData.setRGB</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="17">ca.mcgill.ecse211.threads.LightPoller.us</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.cont</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -77,6 +78,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="33" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="33" bodyend="40"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="17">ca.mcgill.ecse211.threads.LightPoller.us</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" compoundref="_light_poller_8java" startline="19">ca.mcgill.ecse211.threads.LightPoller.lgData</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.cont</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" compoundref="_sensor_data_8java" startline="149" endline="158">ca.mcgill.ecse211.threads.SensorData.setRGB</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

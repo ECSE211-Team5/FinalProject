@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.RGBPoller" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.RGBPoller" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ Inherits \fBca\&.mcgill\&.ecse211\&.threads\&.LightPoller\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBRGBPoller\fP (SampleProvider us[], float[][] usData, \fBSensorData\fP cont)  throws OdometerExceptions "
+.RI "\fBRGBPoller\fP (SampleProvider \fBus\fP[], float[][] usData, \fBSensorData\fP \fBcont\fP)  throws OdometerExceptions "
 .br
 .in -1c
 .SS "Protected Member Functions"
@@ -67,6 +67,30 @@ This constructor creates an instance of the \fBRGBPoller\fP class to provide col
 
 .PP
 Definition at line 28 of file RGBPoller\&.java\&.
+.PP
+.nf
+28                                                                                                      {
+29     super(us, usData, cont);
+30   }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.RGBPoller\&.runMethod ()\fC [protected]\fP"
+
+.PP
+Definition at line 33 of file RGBPoller\&.java\&.
+.PP
+.nf
+33                              {
+34     us[0]\&.fetchSample(lgData[0], 0); // acquire data at offset 0
+35     // get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int
+36     int r = (int) (lgData[0][0] * 100); // extract from buffer, cast to int
+37     int g = (int) (lgData[0][1] * 100); // extract from buffer, cast to int
+38     int b = (int) (lgData[0][2] * 100); // extract from buffer, cast to int
+39     cont\&.setRGB(r, g, b); // now take action depending on value
+40   }
+.fi
+
 
 .SH "Author"
 .PP 

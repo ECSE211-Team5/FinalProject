@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.odometer.OdometerData" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.odometer.OdometerData" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -70,6 +70,14 @@ Definition at line 16 of file OdometerData\&.java\&.
 Default constructor\&. The constructor is private\&. A factory is used instead such that only one instance of this class is ever created\&. 
 .PP
 Definition at line 47 of file OdometerData\&.java\&.
+.PP
+.nf
+47                            {
+48     this\&.x = 0;
+49     this\&.y = 0;
+50     this\&.theta = 0;
+51   }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "static synchronized \fBOdometerData\fP ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.getOdometerData () throws \fBOdometerExceptions\fP\fC [static]\fP"
@@ -88,6 +96,22 @@ An \fBOdometerData\fP object
 
 .PP
 Definition at line 61 of file OdometerData\&.java\&.
+.PP
+.nf
+61                                                                                       {
+62     if (odoData != null) { // Return existing object
+63       return odoData;
+64     } else if (numberOfIntances < MAX_INSTANCES) { // create object and
+65                                                    // return it
+66       odoData = new OdometerData();
+67       numberOfIntances += 1;
+68       return odoData;
+69     } else {
+70       throw new OdometerExceptions("Only one intance of the Odometer can be created\&.");
+71     }
+72 
+73   }
+.fi
 .SS "double [] ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.getXYT ()"
 Return the Odomometer data\&. 
 .PP
@@ -106,6 +130,32 @@ the odometer data\&.
 
 .PP
 Definition at line 84 of file OdometerData\&.java\&.
+.PP
+.nf
+84                            {
+85     double[] position = new double[4];
+86     lock\&.lock();
+87     try {
+88       while (isReseting) { // If a reset operation is being executed, wait
+89         // until it is over\&.
+90         doneReseting\&.await(); // Using await() is lighter on the CPU
+91         // than simple busy wait\&.
+92       }
+93 
+94       position[0] = x;
+95       position[1] = y;
+96       position[2] = theta;
+97 
+98     } catch (InterruptedException e) {
+99       // Print exception to screen
+100       e\&.printStackTrace();
+101     } finally {
+102       lock\&.unlock();
+103     }
+104 
+105     return position;
+106   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.setTheta (double theta)"
 Overrides theta\&. Use for odometry correction\&.
 .PP
@@ -117,6 +167,21 @@ Overrides theta\&. Use for odometry correction\&.
 
 .PP
 Definition at line 197 of file OdometerData\&.java\&.
+.PP
+.nf
+197                                      {
+198     lock\&.lock();
+199     isReseting = true;
+200     try {
+201       this\&.theta = theta;
+202       isReseting = false; // Done reseting
+203       doneReseting\&.signalAll(); // Let the other threads know that you are
+204                                 // done reseting
+205     } finally {
+206       lock\&.unlock();
+207     }
+208   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.setX (double x)"
 Overrides x\&. Use for odometry correction\&.
 .PP
@@ -128,6 +193,21 @@ Overrides x\&. Use for odometry correction\&.
 
 .PP
 Definition at line 161 of file OdometerData\&.java\&.
+.PP
+.nf
+161                              {
+162     lock\&.lock();
+163     isReseting = true;
+164     try {
+165       this\&.x = x;
+166       isReseting = false; // Done reseting
+167       doneReseting\&.signalAll(); // Let the other threads know that you are
+168                                 // done reseting
+169     } finally {
+170       lock\&.unlock();
+171     }
+172   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.setXYT (double x, double y, double theta)"
 Overrides the values of x, y and theta\&. Use for odometry correction\&.
 .PP
@@ -143,6 +223,23 @@ Overrides the values of x, y and theta\&. Use for odometry correction\&.
 
 .PP
 Definition at line 141 of file OdometerData\&.java\&.
+.PP
+.nf
+141                                                        {
+142     lock\&.lock();
+143     isReseting = true;
+144     try {
+145       this\&.x = x;
+146       this\&.y = y;
+147       this\&.theta = theta;
+148       isReseting = false; // Done reseting
+149       doneReseting\&.signalAll(); // Let the other threads know that you are
+150                                 // done reseting
+151     } finally {
+152       lock\&.unlock();
+153     }
+154   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.setY (double y)"
 Overrides y\&. Use for odometry correction\&.
 .PP
@@ -154,6 +251,21 @@ Overrides y\&. Use for odometry correction\&.
 
 .PP
 Definition at line 179 of file OdometerData\&.java\&.
+.PP
+.nf
+179                              {
+180     lock\&.lock();
+181     isReseting = true;
+182     try {
+183       this\&.y = y;
+184       isReseting = false; // Done reseting
+185       doneReseting\&.signalAll(); // Let the other threads know that you are
+186                                 // done reseting
+187     } finally {
+188       lock\&.unlock();
+189     }
+190   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.update (double dx, double dy, double dtheta)"
 Adds dx, dy and dtheta to the current values of x, y and theta, respectively\&. Useful for odometry\&.
 .PP
@@ -169,6 +281,27 @@ Adds dx, dy and dtheta to the current values of x, y and theta, respectively\&. 
 
 .PP
 Definition at line 116 of file OdometerData\&.java\&.
+.PP
+.nf
+116                                                           {
+117     lock\&.lock();
+118     isReseting = true;
+119     try {
+120       x += dx;
+121       y += dy;
+122       theta = (theta + (360 + dtheta) % 360) % 360; // keeps the updates
+123                                                     // within 360
+124                                                     // degrees
+125       isReseting = false; // Done reseting
+126       doneReseting\&.signalAll(); // Let the other threads know that you are
+127                                 // done reseting
+128     } finally {
+129       lock\&.unlock();
+130     }
+131 
+132   }
+.fi
+
 
 .SH "Author"
 .PP 

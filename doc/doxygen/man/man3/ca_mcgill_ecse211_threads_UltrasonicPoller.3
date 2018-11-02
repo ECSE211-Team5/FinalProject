@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.UltrasonicPoller" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.UltrasonicPoller" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -46,7 +46,7 @@ Kamy Moussavi Kafi
 .PP
 
 .PP
-Definition at line 22 of file UltrasonicPoller\&.java\&.
+Definition at line 21 of file UltrasonicPoller\&.java\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ca\&.mcgill\&.ecse211\&.threads\&.UltrasonicPoller\&.UltrasonicPoller (SampleProvider us, float [] usData, \fBSensorData\fP cont)"
@@ -63,13 +63,34 @@ This constructor creates an instance of the \fBUltrasonicPoller\fP class to prov
 .PP
 
 .PP
-Definition at line 38 of file UltrasonicPoller\&.java\&.
+Definition at line 37 of file UltrasonicPoller\&.java\&.
+.PP
+.nf
+37                                                                               {
+38     this\&.us = us;
+39     this\&.cont = cont;
+40     this\&.usData = usData;
+41     isStarted = true;
+42   }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.UltrasonicPoller\&.runMethod ()\fC [protected]\fP"
 get us sensor data 
 .PP
-Definition at line 48 of file UltrasonicPoller\&.java\&.
+Definition at line 47 of file UltrasonicPoller\&.java\&.
+.PP
+.nf
+47                              {
+48     us\&.fetchSample(usData, 0); // acquire data
+49     // get distance from buffer, multiply by 100 for convenience and allow it to be cast to
+50     // int
+51     int distance = (int) (usData[0] * 100\&.0);
+52 
+53     cont\&.setD(distance); // now take action depending on value
+54   }
+.fi
+
 
 .SH "Author"
 .PP 

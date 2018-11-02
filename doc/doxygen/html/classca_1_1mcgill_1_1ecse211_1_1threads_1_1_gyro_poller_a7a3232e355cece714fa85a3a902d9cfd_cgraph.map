@@ -1,3 +1,4 @@
 <map id="ca.mcgill.ecse211.threads.GyroPoller.run" name="ca.mcgill.ecse211.threads.GyroPoller.run">
-<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a35b1941d44e86b81eb7c625efbd3c8ba" title="ca.mcgill.ecse211.threads.\lSensorData.setA" alt="" coords="232,5,411,47"/>
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller.html#a27f914ed77f23805210998fc0ee2daa7" title="ca.mcgill.ecse211.threads.\lGyroPoller.processData" alt="" coords="232,5,411,47"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a35b1941d44e86b81eb7c625efbd3c8ba" title="ca.mcgill.ecse211.threads.\lSensorData.setA" alt="" coords="459,5,637,47"/>
 </map>

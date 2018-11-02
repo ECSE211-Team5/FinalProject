@@ -10,7 +10,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">ca.mcgill.ecse211.project;</highlight></codeline>
+<codeline lineno="1" refid="namespaceca_1_1mcgill_1_1ecse211_1_1project" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">ca.mcgill.ecse211.project;</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13" refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator" kindref="compound">ColorCalibrator</ref><sp/>{</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>Color<sp/>currentColor;</highlight></codeline>

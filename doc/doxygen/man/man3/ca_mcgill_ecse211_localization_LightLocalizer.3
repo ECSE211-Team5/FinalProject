@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.localization.LightLocalizer" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.localization.LightLocalizer" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -37,7 +37,7 @@ Kamy Moussavi Kafi
 .PP
 
 .PP
-Definition at line 22 of file LightLocalizer\&.java\&.
+Definition at line 21 of file LightLocalizer\&.java\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ca\&.mcgill\&.ecse211\&.localization\&.LightLocalizer\&.LightLocalizer (\fBNavigation\fP nav, EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor) throws \fBOdometerExceptions\fP"
@@ -57,7 +57,17 @@ This is the class constructor
 .PP
 
 .PP
-Definition at line 39 of file LightLocalizer\&.java\&.
+Definition at line 38 of file LightLocalizer\&.java\&.
+.PP
+.nf
+39                                                                    {
+40     this\&.odometer = Odometer\&.getOdometer();
+41     this\&.data = SensorData\&.getSensorData();
+42     this\&.navigation = nav;
+43     this\&.leftMotor = leftMotor;
+44     this\&.rightMotor = rightMotor;
+45   }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.localization\&.LightLocalizer\&.localize (int [] sC)"
@@ -70,7 +80,51 @@ Definition at line 39 of file LightLocalizer\&.java\&.
 .PP
 
 .PP
-Definition at line 54 of file LightLocalizer\&.java\&.
+Definition at line 53 of file LightLocalizer\&.java\&.
+.PP
+.nf
+53                                  {
+54     leftMotor\&.setSpeed(FORWARD_SPEED);
+55     rightMotor\&.setSpeed(FORWARD_SPEED);
+56 
+57     // 1\&. GO forward find the y=0 line
+58     leftMotor\&.forward();
+59     rightMotor\&.forward();
+60     while (data\&.getL()[0] > blackLineColor);
+61     Sound\&.beep();
+62     odometer\&.setY(0);
+63     // 2\&. Turn and go forward find the x=0 line
+64     navigation\&.turnTo(90);
+65     leftMotor\&.setSpeed(FORWARD_SPEED / 2);
+66     rightMotor\&.setSpeed(FORWARD_SPEED / 2);
+67     leftMotor\&.forward();
+68     rightMotor\&.forward();
+69     while (data\&.getL()[0] > blackLineColor);
+70     Sound\&.beep();
+71     odometer\&.setX(0);
+72     leftMotor\&.setSpeed(FORWARD_SPEED / 2);
+73     rightMotor\&.setSpeed(FORWARD_SPEED / 2);
+74     // 3\&. Go backwards by sensor-wheel center distance in x-direction
+75     leftMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, -SENSOR_DIS), true);
+76     rightMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, -SENSOR_DIS), false);
+77     // 4\&. Go backwards by sensor-wheel center distance in y-direction
+78     navigation\&.turnTo(0);
+79     leftMotor\&.setSpeed(FORWARD_SPEED / 2);
+80     rightMotor\&.setSpeed(FORWARD_SPEED / 2);
+81     double sensorDistanceOffset = 2\&.5;
+82     leftMotor\&.rotate(
+83         Navigation\&.convertDistance(Game\&.WHEEL_RAD, -SENSOR_DIS - sensorDistanceOffset),
+84         true);
+85     rightMotor\&.rotate(
+86         Navigation\&.convertDistance(Game\&.WHEEL_RAD, -SENSOR_DIS - sensorDistanceOffset),
+87         false);
+88     odometer\&.setTheta(0);
+89     odometer\&.setX(sC[0]);
+90     odometer\&.setY(sC[1]);
+91 
+92   }
+.fi
+
 
 .SH "Author"
 .PP 

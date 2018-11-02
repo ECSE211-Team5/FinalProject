@@ -61,8 +61,32 @@ A Color enumeration value
 
 Definition at line 38 of file Color\+Calibrator.\+java.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+\begin{DoxyCode}
+38                                                     \{
+39     \textcolor{keywordflow}{if} ((r >= lowerYellowRBound && r <= upperYellowRBound)
+40         && (g >= lowerYellowGBound && g <= upperYellowGBound)
+41         && (b >= lowerYellowBBound && b <= upperYellowBBound)) \{
+42       currentColor = Color.Yellow;
+43     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((r >= lowerBlueRBound && r <= upperBlueRBound)
+44         && (g >= lowerBlueGBound && g <= upperBlueGBound)
+45         && (b >= lowerBlueBBound && b <= upperBlueBBound)) \{
+46       currentColor = Color.Blue;
+47     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((r >= lowerGreenRBound && r <= upperGreenRBound)
+48         && (g >= lowerGreenGBound && g <= upperGreenGBound)
+49         && (b >= lowerGreenBBound && b <= upperGreenBBound)) \{
+50       currentColor = Color.Green;
+51     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((r >= lowerOrangeRBound && r <= upperOrangeRBound)
+52         && (g >= lowerOrangeGBound && g <= upperOrangeGBound) && (b == OrangeBBound)) \{
+53       currentColor = Color.Orange;
+54     \} \textcolor{keywordflow}{else} \{
+55       currentColor = Color.Other;
+56     \}
+57 
+58     \textcolor{keywordflow}{return} currentColor;
+59   \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -85,7 +109,16 @@ current color detected by the light\+Sensor
 Definition at line 66 of file Color\+Calibrator.\+java.
 
 
+\begin{DoxyCode}
+66                                  \{
+67     \textcolor{keywordflow}{if} (currentColor != null)
+68       \textcolor{keywordflow}{return} currentColor;
+69     \textcolor{keywordflow}{else}
+70       \textcolor{keywordflow}{return} Color.Other;
+71   \}
+\end{DoxyCode}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/project/Color\+Calibrator.\+java\end{DoxyCompactItemize}
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/project/\hyperlink{_color_calibrator_8java}{Color\+Calibrator.\+java}\end{DoxyCompactItemize}

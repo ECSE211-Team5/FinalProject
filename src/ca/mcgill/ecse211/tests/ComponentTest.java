@@ -5,7 +5,20 @@ import ca.mcgill.ecse211.project.Game;
 import ca.mcgill.ecse211.project.Navigation;
 import ca.mcgill.ecse211.threads.RingSearcher;
 
-public class ComponentTest {
+/**
+ * This singleton contains all the methods and structures necessary to test our robot and its
+ * components
+ * 
+ * @author Caspar Cedro
+ * @author Percy Chen
+ * @author Patrick Erath
+ * @author Anssam Ghezala
+ * @author Susan Matuszewski
+ * @author Kamy Moussavi Kafi
+ */
+public enum ComponentTest {
+  INSTANCE;
+
   public enum Type {
     Navigation, Localization, UltrasonicSensor, LightSensor, RingDetection
   }
@@ -14,14 +27,39 @@ public class ComponentTest {
    * This method selects test for each individual components of the design
    * 
    * @param type
+   * @throws Exception 
    */
-  public static void runTest(Type type) {
-
+  public static void runTest(Type testType) throws Exception {
+    try {
+      switch (testType) {
+        case Navigation:
+          ComponentTest.navigationTest();
+          break;
+        case Localization:
+          ComponentTest.localizationTest();
+          break;
+        case UltrasonicSensor:
+          ComponentTest.ultrasonicSensorTest();
+          break;
+        case LightSensor:
+          ComponentTest.lightSensorTest();
+          break;
+        case RingDetection:
+          ComponentTest.ringMotorTest();
+          break;
+        default:
+          System.out.println("Invalid test type selected");
+          break;
+      }
+    } catch (Exception e) {
+      throw e;
+    }
   }
 
   /**
    * Test for Navigation
-   * @throws OdometerExceptions 
+   * 
+   * @throws OdometerExceptions
    */
   public static void navigationTest() throws OdometerExceptions {
     Navigation nav = new Navigation(Game.leftMotor, Game.rightMotor);
@@ -31,10 +69,11 @@ public class ComponentTest {
 
   /**
    * Test for localizationTest
-   * @throws OdometerExceptions 
+   * 
+   * @throws OdometerExceptions
    */
   public static void localizationTest() throws OdometerExceptions {
-  
+
   }
 
   /**
@@ -53,9 +92,10 @@ public class ComponentTest {
 
   /**
    * Test for ring detection
-   * @throws OdometerExceptions 
+   * 
+   * @throws OdometerExceptions
    */
-  public static void RingMotorTest() throws OdometerExceptions {
+  public static void ringMotorTest() throws OdometerExceptions {
     final RingSearcher searcher = new RingSearcher(Game.storageMotor, Game.rodMotor);
     searcher.setStart(true);
     Thread t = new Thread(searcher);
@@ -63,17 +103,14 @@ public class ComponentTest {
     try {
       Thread.sleep(20000);
     } catch (InterruptedException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
     searcher.setStart(false);
     try {
       Thread.sleep(2000);
     } catch (InterruptedException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
     searcher.setStart(true);
   }
-
 }

@@ -176,7 +176,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="43" bodyend="50"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="79" endline="88">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="69" endline="78">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" compoundref="_sensor_data_8java" startline="61" endline="73">ca.mcgill.ecse211.threads.SensorData.getSensorData</references>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -207,7 +207,7 @@
         <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="144" endline="165">ca.mcgill.ecse211.project.Navigation.turnTo</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="197" endline="208">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a46cc30522719018a80f89624e0ce458f" compoundref="_sensor_data_8java" startline="80" endline="82">ca.mcgill.ecse211.threads.SensorData.getD</references>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="162" endline="193">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a46cbbf56a4544524174d9d3e63fb9759" compoundref="_game_8java" startline="378" endline="410">ca.mcgill.ecse211.project.Game.runGame</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

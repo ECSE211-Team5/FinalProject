@@ -2,8 +2,7 @@
 \label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main}\index{ca.\+mcgill.\+ecse211.\+project.\+Main@{ca.\+mcgill.\+ecse211.\+project.\+Main}}
 
 
-Collaboration diagram for ca.\+mcgill.\+ecse211.\+project.\+Main\+:
-\nopagebreak
+Collaboration diagram for ca.\+mcgill.\+ecse211.\+project.\+Main\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,12 +19,12 @@ static void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af681b5d
 \item 
 static boolean \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af6f7b8fffddcf855f74fe128d2e23ea1}{test} = true
 \item 
-static Component\+Test.\+Type \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af8faa68af4a989e55864fcafd5df2bee}{c\+Type} = Component\+Test.\+Type.\+Light\+Sensor
+static Component\+Test.\+Type \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_a8dac740460370f76ac0db5dc20824b1f}{test\+Type} = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_aa8c9262ad5014cd52ecce2eec6604510}{Component\+Test.\+Type.\+Light\+Sensor}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-This class implements the main starting point for the Search and Localize lab
+This class implements the main starting point for our final project
 
 \begin{DoxyAuthor}{Author}
 Caspar Cedro 
@@ -42,7 +41,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 35 of file Main.\+java.
+Definition at line 17 of file Main.\+java.
 
 
 
@@ -53,11 +52,11 @@ Definition at line 35 of file Main.\+java.
 \subsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+project.\+Main.\+main (\begin{DoxyParamCaption}\item[{String \mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-This method is our main entry point -\/ instantiate objects used and set up sensor.
+This method is our main entry point -\/ instantiate objects and loop indefinitely
 
 
 \begin{DoxyParams}{Parameters}
-{\em args} & an array of arguments that can be passed in via commandline or otherwise. \\
+{\em args} & an array of arguments that can be passed in via command line or otherwise \\
 \hline
 \end{DoxyParams}
 
@@ -67,8 +66,36 @@ This method is our main entry point -\/ instantiate objects used and set up sens
 \end{DoxyExceptions}
 
 
-Definition at line 52 of file Main.\+java.
+Definition at line 34 of file Main.\+java.
 
+
+\begin{DoxyCode}
+34                                          \{
+35     \textcolor{keywordflow}{try} \{
+36       Game.getGame().preparation(); \textcolor{comment}{// for brevity and less object instantiations}
+37       \textcolor{keywordflow}{if} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af6f7b8fffddcf855f74fe128d2e23ea1}{test}) \{
+38         Button.waitForAnyPress(); \textcolor{comment}{// Wait for a button on the EV3 Brick to be pressed}
+39         (\textcolor{keyword}{new} Thread() \{
+40           \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{
+41             \textcolor{keywordflow}{try} \{
+42               ComponentTest.runTest(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_a8dac740460370f76ac0db5dc20824b1f}{testType});
+43             \} \textcolor{keywordflow}{catch} (Exception e) \{
+44               \textcolor{comment}{// TODO Auto-generated catch block}
+45               e.printStackTrace();
+46             \}
+47           \}
+48         \}).start();
+49       \} \textcolor{keywordflow}{else} \{
+50         Game.getGame().runGame(); \textcolor{comment}{// for brevity and less object instantiations}
+51       \}
+52       Button.waitForAnyPress();
+53       System.exit(0);
+54     \} \textcolor{keywordflow}{catch} (OdometerExceptions e) \{
+55       \textcolor{comment}{// TODO Auto-generated catch block}
+56       e.printStackTrace();
+57     \}
+58   \}
+\end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -80,28 +107,28 @@ Here is the call graph for this function\+:
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af8faa68af4a989e55864fcafd5df2bee}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af8faa68af4a989e55864fcafd5df2bee}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Main@{ca\+::mcgill\+::ecse211\+::project\+::\+Main}!c\+Type@{c\+Type}}
-\index{c\+Type@{c\+Type}!ca\+::mcgill\+::ecse211\+::project\+::\+Main@{ca\+::mcgill\+::ecse211\+::project\+::\+Main}}
-\subsubsection{\texorpdfstring{c\+Type}{cType}}
-{\footnotesize\ttfamily Component\+Test.\+Type ca.\+mcgill.\+ecse211.\+project.\+Main.\+c\+Type = Component\+Test.\+Type.\+Light\+Sensor\hspace{0.3cm}{\ttfamily [static]}}
-
-Type of test 
-
-Definition at line 44 of file Main.\+java.
-
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af6f7b8fffddcf855f74fe128d2e23ea1}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af6f7b8fffddcf855f74fe128d2e23ea1}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Main@{ca\+::mcgill\+::ecse211\+::project\+::\+Main}!test@{test}}
 \index{test@{test}!ca\+::mcgill\+::ecse211\+::project\+::\+Main@{ca\+::mcgill\+::ecse211\+::project\+::\+Main}}
 \subsubsection{\texorpdfstring{test}{test}}
 {\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Main.\+test = true\hspace{0.3cm}{\ttfamily [static]}}
 
-Whether Enable test 
+This variable decides whether or not to enable our tests 
 
-Definition at line 39 of file Main.\+java.
+Definition at line 21 of file Main.\+java.
+
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_a8dac740460370f76ac0db5dc20824b1f}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_a8dac740460370f76ac0db5dc20824b1f}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Main@{ca\+::mcgill\+::ecse211\+::project\+::\+Main}!test\+Type@{test\+Type}}
+\index{test\+Type@{test\+Type}!ca\+::mcgill\+::ecse211\+::project\+::\+Main@{ca\+::mcgill\+::ecse211\+::project\+::\+Main}}
+\subsubsection{\texorpdfstring{test\+Type}{testType}}
+{\footnotesize\ttfamily Component\+Test.\+Type ca.\+mcgill.\+ecse211.\+project.\+Main.\+test\+Type = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_aa8c9262ad5014cd52ecce2eec6604510}{Component\+Test.\+Type.\+Light\+Sensor}\hspace{0.3cm}{\ttfamily [static]}}
+
+This variable stores the type of test that we want to perform 
+
+Definition at line 26 of file Main.\+java.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/project/Main.\+java\end{DoxyCompactItemize}
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/project/\hyperlink{_main_8java}{Main.\+java}\end{DoxyCompactItemize}

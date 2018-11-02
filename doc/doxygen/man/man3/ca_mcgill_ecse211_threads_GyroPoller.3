@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.GyroPoller" 3 "Thu Nov 1 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.GyroPoller" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ Inherits Runnable\&.
 
 .in +1c
 .ti -1c
-.RI "\fBGyroPoller\fP (SampleProvider us, float[] lgData, \fBSensorData\fP cont)  throws OdometerExceptions "
+.RI "\fBGyroPoller\fP (SampleProvider \fBus\fP, float[] \fBlgData\fP, \fBSensorData\fP \fBcont\fP)  throws OdometerExceptions "
 .br
 .ti -1c
 .RI "void \fBrun\fP ()"
@@ -89,8 +89,36 @@ This constructor creates an instance of the \fBGyroPoller\fP class to aid naviga
 
 .PP
 Definition at line 31 of file GyroPoller\&.java\&.
+.PP
+.nf
+31                                                                                                   {
+32     this\&.us = us;
+33     this\&.cont = cont;
+34     this\&.lgData = lgData;
+35   }
+.fi
 .SH "Member Function Documentation"
 .PP 
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.GyroPoller\&.processData ()\fC [protected]\fP"
+
+.PP
+Definition at line 52 of file GyroPoller\&.java\&.
+.PP
+.nf
+52                                {
+53     us\&.fetchSample(lgData, 0); // acquire data
+54     int distance = (int) (lgData[0]); // extract from buffer, cast to int
+55     // Ensure the distance is between 0 and 360
+56     while (distance < 0) {
+57       distance += 360;
+58     }
+59 
+60     while (distance > 360) {
+61       distance -= 360;
+62     }
+63     cont\&.setA(distance); // now take action depending on value
+64   }
+.fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.GyroPoller\&.run ()"
 This method is called by a \fBUltrasonicPoller\fP (Thread) instance when it is asked to start executing
 .PP
@@ -104,6 +132,32 @@ java\&.lang\&.Thread::run()
 
 .PP
 Definition at line 46 of file GyroPoller\&.java\&.
+.PP
+.nf
+46                     {
+47     while (true) {
+48       processData();
+49     }
+50   }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSensorData\fP ca\&.mcgill\&.ecse211\&.threads\&.GyroPoller\&.cont\fC [protected]\fP"
+
+.PP
+Definition at line 18 of file GyroPoller\&.java\&.
+.SS "\fBGyroPoller\fP ca\&.mcgill\&.ecse211\&.threads\&.GyroPoller\&.Instance"
+
+.PP
+Definition at line 20 of file GyroPoller\&.java\&.
+.SS "float [] ca\&.mcgill\&.ecse211\&.threads\&.GyroPoller\&.lgData\fC [protected]\fP"
+
+.PP
+Definition at line 19 of file GyroPoller\&.java\&.
+.SS "SampleProvider ca\&.mcgill\&.ecse211\&.threads\&.GyroPoller\&.us\fC [protected]\fP"
+
+.PP
+Definition at line 17 of file GyroPoller\&.java\&.
 
 .SH "Author"
 .PP 

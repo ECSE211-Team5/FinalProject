@@ -1,13 +1,3 @@
-/**
- * This class is meant as a skeleton for the odometer class to be used.
- * 
- * @author Rodrigo Silva
- * @author Dirk Dubois
- * @author Derek Yu
- * @author Karim El-Baba
- * @author Michael Smith
- */
-
 package ca.mcgill.ecse211.odometer;
 
 import ca.mcgill.ecse211.project.Game;

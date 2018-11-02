@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="namespaceca_1_1mcgill_1_1ecse211_1_1tests" kind="namespace" language="Java">
     <compoundname>ca::mcgill::ecse211::tests</compoundname>
-    <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test" prot="public">ca::mcgill::ecse211::tests::ComponentTest</innerclass>
+    <innerclass refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test" prot="public">ca::mcgill::ecse211::tests::ComponentTest</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

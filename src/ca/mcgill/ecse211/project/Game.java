@@ -21,7 +21,7 @@ import lejos.hardware.sensor.SensorModes;
 import lejos.robotics.SampleProvider;
 
 /**
- * This class implements the main starting point for the Search and Localize lab
+ * This singleton contains all the methods and structures necessary to start competing in a game
  * 
  * @author Caspar Cedro
  * @author Percy Chen
@@ -30,63 +30,54 @@ import lejos.robotics.SampleProvider;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class Game {
-//------------------------
+public enum Game {
+  INSTANCE;
+  // ------------------------
   // MEMBER VARIABLES
-  //------------------------
+  // ------------------------
 
-  //Game State Machines
-  public enum Status { Idle, Localization, NavigationSafe, NavigationSearch, RingSearch }
-  private Status status;
-  private static Game game;
-  
-  //------------------------
-  // CONSTRUCTOR
-  //------------------------
-  /**
-   * Construct of game
-   */
-  private Game()
-  {
-    setStatus(Status.Idle);
+  // Game State Machines
+  public enum Status {
+    Idle, Localization, NavigationSafe, NavigationSearch, RingSearch
   }
 
-  //------------------------
+  private Status status = Status.Idle;
+
+  // ------------------------
   // INTERFACE
-  //------------------------
+  // ------------------------
   /**
    * get the full name of the status
+   * 
    * @return
    */
-  public String getStatusFullName()
-  {
+  public String getStatusFullName() {
     String answer = status.toString();
     return answer;
   }
 
   /**
    * get the current status of the game
+   * 
    * @return
    */
-  public Status getStatus()
-  {
+  public Status getStatus() {
     return status;
   }
 
   /**
-   * perform the localization and go to navigation 
+   * perform the localization and go to navigation
+   * 
    * @return
    */
-  public boolean ready()
-  {
+  public boolean ready() {
     boolean wasEventProcessed = false;
-    
+
     Status aStatus = status;
-    switch (aStatus)
-    {
+    switch (aStatus) {
       case Idle:
         // line 5 "model.ump"
-        //localize();
+        // localize();
         setStatus(Status.Localization);
         wasEventProcessed = true;
         break;
@@ -99,18 +90,17 @@ public class Game {
 
   /**
    * Navigating to the tunnel and to the search area
+   * 
    * @return whether transition successful
    */
-  public boolean localized()
-  {
+  public boolean localized() {
     boolean wasEventProcessed = false;
-    
+
     Status aStatus = status;
-    switch (aStatus)
-    {
+    switch (aStatus) {
       case Localization:
         // line 8 "model.ump"
-        //navigate();
+        // navigate();
         setStatus(Status.NavigationSafe);
         wasEventProcessed = true;
         break;
@@ -123,24 +113,23 @@ public class Game {
 
   /**
    * whether transition successful
+   * 
    * @return whether transition successful
    */
-  public boolean navigatedToTunnel()
-  {
+  public boolean navigatedToTunnel() {
     boolean wasEventProcessed = false;
-    
+
     Status aStatus = status;
-    switch (aStatus)
-    {
+    switch (aStatus) {
       case NavigationSafe:
         // line 11 "model.ump"
-        //navigate();
+        // navigate();
         setStatus(Status.NavigationSearch);
         wasEventProcessed = true;
         break;
       case NavigationSearch:
         // line 17 "model.ump"
-        //navigate();
+        // navigate();
         setStatus(Status.NavigationSafe);
         wasEventProcessed = true;
         break;
@@ -150,21 +139,20 @@ public class Game {
 
     return wasEventProcessed;
   }
-  
+
   /**
    * Navigate to the starting corner
+   * 
    * @return whether transition successful
    */
-  public boolean navigatedToStart()
-  {
+  public boolean navigatedToStart() {
     boolean wasEventProcessed = false;
-    
+
     Status aStatus = status;
-    switch (aStatus)
-    {
+    switch (aStatus) {
       case NavigationSafe:
         // line 12 "model.ump"
-        //wait();
+        // wait();
         setStatus(Status.Idle);
         wasEventProcessed = true;
         break;
@@ -177,18 +165,17 @@ public class Game {
 
   /**
    * Navigate to the tree and try find the rings
+   * 
    * @return whether transition successful
    */
-  public boolean navigatedToTree()
-  {
+  public boolean navigatedToTree() {
     boolean wasEventProcessed = false;
-    
+
     Status aStatus = status;
-    switch (aStatus)
-    {
+    switch (aStatus) {
       case NavigationSearch:
         // line 16 "model.ump"
-        //searchRing();
+        // searchRing();
         setStatus(Status.RingSearch);
         wasEventProcessed = true;
         break;
@@ -201,18 +188,17 @@ public class Game {
 
   /**
    * if ring found, get the ring
+   * 
    * @return whether transition successful
    */
-  public boolean ringFound()
-  {
+  public boolean ringFound() {
     boolean wasEventProcessed = false;
-    
+
     Status aStatus = status;
-    switch (aStatus)
-    {
+    switch (aStatus) {
       case RingSearch:
         // line 20 "model.ump"
-        //navigate();
+        // navigate();
         setStatus(Status.NavigationSearch);
         wasEventProcessed = true;
         break;
@@ -225,18 +211,17 @@ public class Game {
 
   /**
    * In case if the ring is not found
+   * 
    * @return whether transition successful
    */
-  public boolean ringNotFound()
-  {
+  public boolean ringNotFound() {
     boolean wasEventProcessed = false;
-    
+
     Status aStatus = status;
-    switch (aStatus)
-    {
+    switch (aStatus) {
       case RingSearch:
         // line 21 "model.ump"
-        //navigate();
+        // navigate();
         setStatus(Status.NavigationSearch);
         wasEventProcessed = true;
         break;
@@ -249,20 +234,17 @@ public class Game {
 
   /**
    * set the current status
+   * 
    * @param aStatus current status to set
    */
-  private void setStatus(Status aStatus)
-  {
+  private void setStatus(Status aStatus) {
     status = aStatus;
   }
-  
+
   public static Game getGame() {
-    if(game == null) {
-      game = new Game();
-    }
-    return game;
+    return INSTANCE;
   }
-  
+
   private static ThreadControl rgbPoller;
   private static ThreadControl lightPoller;
   private static ThreadControl motorControlThread;
@@ -279,18 +261,19 @@ public class Game {
    */
   public static final EV3LargeRegulatedMotor rightMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("D"));
-  
+
   /**
    * Motor object instance that allows control of the motor on storage rod
    */
   public static final EV3LargeRegulatedMotor storageMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("C"));
-  
+
   /**
    * Motor object instance taht allows control of the motor on the rod for collecting rings
    */
   public static final EV3MediumRegulatedMotor rodMotor =
       new EV3MediumRegulatedMotor(LocalEV3.get().getPort("B"));
+
   /**
    * length of the tile
    */
@@ -311,9 +294,9 @@ public class Game {
    * The distance between light sensor and the center of the robot in cm
    */
   public static final double SEN_DIS = 4.4;
-  
+
   private static boolean hasReadData;
-  
+
   /**
    * Prepare for the game: starting thread, read all arguments
    * 
@@ -324,7 +307,7 @@ public class Game {
     Port usPort = LocalEV3.get().getPort("S1");
     // initialize multiple light ports in main
     Port[] lgPorts = new Port[3];
-    
+
     // Light sesnor sensor stuff
     lgPorts[0] = LocalEV3.get().getPort("S2");
     lgPorts[1] = LocalEV3.get().getPort("S3");
@@ -347,7 +330,7 @@ public class Game {
     SampleProvider backLight[] = new SampleProvider[2];
     backLight[0] = lgSensors[0].getRedMode();
     backLight[1] = lgSensors[1].getRedMode();
-    
+
     TextLCD lcd = LocalEV3.get().getTextLCD();
     Display odometryDisplay = new Display(lcd);
     // STEP 1: LOCALIZE to (1,1)
@@ -372,11 +355,12 @@ public class Game {
     lightPoller = new LightPoller(backLight, new float[2][backLight[1].sampleSize()], sensorData);
     Thread lightThread = new Thread(lightPoller);
     lightThread.start();
-    
-    //Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight.sampleSize()], sensorData);
-    //fLgPoller1.start();
-//    Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);
-//    gPoller.start();
+
+    // Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight.sampleSize()],
+    // sensorData);
+    // fLgPoller1.start();
+    // Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);
+    // gPoller.start();
   }
 
   /**
@@ -412,12 +396,13 @@ public class Game {
         }).start();
         usLoc.localize(buttonChoice);
         lgLoc.localize(GameParameters.SC);
-          try {
-            while(!hasReadData) wait();
-          } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-          }
+        try {
+          while (!hasReadData)
+            wait();
+        } catch (InterruptedException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
       }
     }).start();
     while (Button.waitForAnyPress() != Button.ID_ESCAPE);
