@@ -1,9 +1,6 @@
 package ca.mcgill.ecse211.threads;
 
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
-import ca.mcgill.ecse211.project.ColorCalibrator;
-import ca.mcgill.ecse211.project.Main;
-import lejos.hardware.Sound;
 import lejos.robotics.SampleProvider;
 
 /**

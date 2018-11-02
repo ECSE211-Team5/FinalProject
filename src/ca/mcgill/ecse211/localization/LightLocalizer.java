@@ -3,7 +3,6 @@ package ca.mcgill.ecse211.localization;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.Game;
-import ca.mcgill.ecse211.project.Main;
 import ca.mcgill.ecse211.project.Navigation;
 import ca.mcgill.ecse211.threads.SensorData;
 import lejos.hardware.Sound;

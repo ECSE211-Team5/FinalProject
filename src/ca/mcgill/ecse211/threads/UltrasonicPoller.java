@@ -1,6 +1,5 @@
 package ca.mcgill.ecse211.threads;
 
-import java.util.Arrays;
 import lejos.robotics.SampleProvider;
 
 /**
