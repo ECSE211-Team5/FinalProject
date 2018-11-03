@@ -23,6 +23,8 @@ Collaboration diagram for ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher\+:\no
 \item 
 \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a58fdaba16c2b961446d1474b76e66e49}{Ring\+Searcher} (E\+V3\+Large\+Regulated\+Motor storage\+Motor, E\+V3\+Medium\+Regulated\+Motor rod\+Motor)  throws Odometer\+Exceptions 
 \item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd2b2c172ea393ce4185027c8a12780f}{search} ()
+\item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd7a2651a7c5de76a018664c8bf327af}{retrieve\+Ring} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
@@ -93,7 +95,8 @@ Definition at line 36 of file Ring\+Searcher.\+java.
 45     \}
 46   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -142,9 +145,10 @@ Definition at line 80 of file Ring\+Searcher.\+java.
 
 \begin{DoxyCode}
 80                              \{
-81     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd7a2651a7c5de76a018664c8bf327af}{retrieveRing}();
-82 
-83   \}
+81     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd2b2c172ea393ce4185027c8a12780f}{search}();
+82     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd7a2651a7c5de76a018664c8bf327af}{retrieveRing}();
+83 
+84   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
@@ -152,6 +156,52 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_a2b03c700b5d232f5aef7c6acf439b7ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd2b2c172ea393ce4185027c8a12780f}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd2b2c172ea393ce4185027c8a12780f}} 
+\index{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher}!search@{search}}
+\index{search@{search}!ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::threads\+::\+Ring\+Searcher}}
+\subsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Ring\+Searcher.\+search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method searches for the ring and identify its color based using the rod, It will beep based on the color of the ring 
+
+Definition at line 53 of file Ring\+Searcher.\+java.
+
+
+\begin{DoxyCode}
+53                         \{
+54     \textcolor{keywordtype}{double}[] position = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}();
+55     \textcolor{comment}{// turn to the angle async}
+56 
+57     \textcolor{comment}{// if we found a ring, got for the ring and check its color}
+58     \textcolor{comment}{// if the color matches, return true}
+59     \textcolor{comment}{// if(foundRing) \{}
+60     \textcolor{comment}{// ColorCalibrator.Color color = goForRingColor();}
+61     \textcolor{comment}{// //navigation.travelBackTo(position[0], position[1]);}
+62     \textcolor{comment}{// if(color == target) \{}
+63     \textcolor{comment}{// Sound.twoBeeps();}
+64     \textcolor{comment}{// ColorMatched = true;}
+65     \textcolor{comment}{// \}}
+66     \textcolor{comment}{// \}else \{}
+67     \textcolor{comment}{// Sound.beepSequence();;}
+68     \textcolor{comment}{// \}}
+69   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd2b2c172ea393ce4185027c8a12780f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_abd2b2c172ea393ce4185027c8a12780f_icgraph}
 \end{center}
 \end{figure}
 

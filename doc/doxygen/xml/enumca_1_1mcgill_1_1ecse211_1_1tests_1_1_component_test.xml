@@ -67,8 +67,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="64" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="64" bodyend="68"/>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a7c673571bf50fdb6917a9d7bb671e003" compoundref="_game_8java" startline="256">ca.mcgill.ecse211.project.Game.leftMotor</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a7a05fcf37c4435c32270776a427ba0d2" compoundref="_game_8java" startline="262">ca.mcgill.ecse211.project.Game.rightMotor</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a7c673571bf50fdb6917a9d7bb671e003" compoundref="_game_8java" startline="257">ca.mcgill.ecse211.project.Game.leftMotor</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a7a05fcf37c4435c32270776a427ba0d2" compoundref="_game_8java" startline="263">ca.mcgill.ecse211.project.Game.rightMotor</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" compoundref="_navigation_8java" startline="70" endline="97">ca.mcgill.ecse211.project.Navigation.travelTo</references>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a5dc8bf97bc48adf5bee88d425a1a974e" compoundref="_component_test_8java" startline="32" endline="57">ca.mcgill.ecse211.tests.ComponentTest.runTest</referencedby>
       </memberdef>
@@ -144,8 +144,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="98" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="98" bodyend="115"/>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1af3ba5407b115e9c6e07dffda576f29b7" compoundref="_game_8java" startline="268">ca.mcgill.ecse211.project.Game.storageMotor</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1aeb41e5234fcb3b311385f39a07a24a54" compoundref="_game_8java" startline="274">ca.mcgill.ecse211.project.Game.rodMotor</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1af3ba5407b115e9c6e07dffda576f29b7" compoundref="_game_8java" startline="269">ca.mcgill.ecse211.project.Game.storageMotor</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1aeb41e5234fcb3b311385f39a07a24a54" compoundref="_game_8java" startline="275">ca.mcgill.ecse211.project.Game.rodMotor</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a16221cdc4ccf637b190934549c708e1f" compoundref="_thread_control_8java" startline="44" endline="47">ca.mcgill.ecse211.threads.ThreadControl.setStart</references>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a5dc8bf97bc48adf5bee88d425a1a974e" compoundref="_component_test_8java" startline="32" endline="57">ca.mcgill.ecse211.tests.ComponentTest.runTest</referencedby>
       </memberdef>

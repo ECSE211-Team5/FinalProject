@@ -87,35 +87,34 @@
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1aed641f9ade50f0090096a46d90588eb7" kind="function"><name>navigatedToTree</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a62d510506f1b829fe67dea7270e5b889" kind="function"><name>ringFound</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adc2725f291b0688a62f85db1df1ee2b2" kind="function"><name>ringNotFound</name></member>
-    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" kind="function"><name>preparation</name></member>
-    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab28110fca0af679acdaea84025746f15" kind="function"><name>readData</name></member>
-    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a46cbbf56a4544524174d9d3e63fb9759" kind="function"><name>runGame</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a26faa03e5ececd952eb106a02333e209" kind="function"><name>setStatus</name></member>
-    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a52a167474d714aeaed55a877b766cf98" kind="function"><name>getGame</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a1bcbd1c19309c65a6887ae19bde66765" kind="function"><name>preparation</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1aff9431d27d78c8b228f468d8ad889a9a" kind="function"><name>readData</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" kind="function"><name>runGame</name></member>
   </compound>
-  <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters" kind="class"><name>ca::mcgill::ecse211::project::GameParameters</name>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aae8c69151bc01acce692b9119323bb46" kind="variable"><name>SC</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aec739d9ebcbd75db6a77ec288ff974cf" kind="variable"><name>Grid_LL</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ab79c9c891076d29cbe5ac053f617c381" kind="variable"><name>Grid_UR</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a5a299e93e098c89d12be1072947d3bcb" kind="variable"><name>TR</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a15bc3c24f73d1ad29b6fe7fd9e1ef0e6" kind="variable"><name>PlayerTeamNumber</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a51c899921677197f960f39e6ed42c780" kind="variable"><name>RedTeam</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aca550f5067892ceeb8f44ede61bbc90e" kind="variable"><name>GreenTeam</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1acf0dce5eb9dc754248f0c3de997d2809" kind="variable"><name>RedCorner</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a7fe7f10f96800fbd5f2331e3aa608b66" kind="variable"><name>GreenCorner</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ae3eb3c87467d3a7760cd619a96379a9e" kind="variable"><name>Red_LL</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a81ddd789119962c32fe6d7f9cce4f240" kind="variable"><name>Red_UR</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a24e38b735e194403bf2b9877241969c1" kind="variable"><name>Green_LL</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aedb13ca3822f3581bdffd464891b1494" kind="variable"><name>Green_UR</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a8695da7f04954ea1513082740fd2d57f" kind="variable"><name>BRR_LL</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a720d0ae20fc2466e7b77fda14bf374f3" kind="variable"><name>BRR_UR</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ae6824f16adf03173062767f99d46b6e0" kind="variable"><name>BRG_LL</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a644c339e7b0f11c5780f9c7de34e1e07" kind="variable"><name>BRG_UR</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ac642730053a35524ce70866289ca10b9" kind="variable"><name>TR_LL</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a45c465e9f0b53a4e752a398036be13f5" kind="variable"><name>TR_UR</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a0fefeecefd65deabea205bd9d628bf76" kind="variable"><name>TG_LL</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa8220987d04f322d9480db7cc073ffd2" kind="variable"><name>TG_UR</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afa2d71de18f6276782a702d7b74066e3" kind="function"><name>getType</name></member>
+  <compound refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters" kind="enum"><name>ca::mcgill::ecse211::project::GameParameters</name>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1af3944d1bc80c4c8a6cabce66e030f4b7" kind="variable"><name>SC</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ab190471dbd9bb10d8cef92c1b8bea826" kind="variable"><name>Grid_LL</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afbbca622863f674dfb00dcd93e1328cb" kind="variable"><name>Grid_UR</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a0ed6f1e9007b69576e5d812a6bac5d57" kind="variable"><name>TR</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa3fb61a4aa9d34ab4dd029eccb6e056c" kind="variable"><name>PlayerTeamNumber</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ad36fe5629718c944df7317e53145850c" kind="variable"><name>RedTeam</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a1d6292807667d219edc172574c2aedbc" kind="variable"><name>GreenTeam</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a32c7cd626fc62900751de1d1c90a675a" kind="variable"><name>RedCorner</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a9009c5953b92c367929f1bff83242817" kind="variable"><name>GreenCorner</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a228f8de2cfe936bd57ae6d11a105ec0a" kind="variable"><name>Red_LL</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa49e34a93b64510ac751d9f13ecd856a" kind="variable"><name>Red_UR</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a61a9d0a51170a714a5f6c8b0f8f33c87" kind="variable"><name>Green_LL</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a440b053e05055a9e8bc1c5bfbcc95f1f" kind="variable"><name>Green_UR</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a452ed98d5ec8e07aa5f5c0a2c2263458" kind="variable"><name>BRR_LL</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aefb77c1f98954bda66481fe3abd13f0f" kind="variable"><name>BRR_UR</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1af8a9e469d8fc78ac6103ef0ef7fef877" kind="variable"><name>BRG_LL</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a3ca679020eda08648fac727c3e4967e0" kind="variable"><name>BRG_UR</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1acf49674ae3df21e6f5b8c3cc23df29c7" kind="variable"><name>TR_LL</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a496948b6c073e09925f5f7dfbe72b6f0" kind="variable"><name>TR_UR</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a77757f49c202194b774b714c9a072db5" kind="variable"><name>TG_LL</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ae3f44f7d83c3a246157a70f9e590e48a" kind="variable"><name>TG_UR</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afa2d71de18f6276782a702d7b74066e3" kind="function"><name>getType</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller" kind="class"><name>ca::mcgill::ecse211::threads::GyroPoller</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller_1af478329ec7a335a4f3d2d412d5d10091" kind="variable"><name>us</name></member>
@@ -239,8 +238,8 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a0ba2e447e8d1a8b3822b2b5b81a180da" kind="variable"><name>odometer</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a531d7f3a9f8d4443ef70433ad11e4c3c" kind="variable"><name>data</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a58fdaba16c2b961446d1474b76e66e49" kind="function"><name>RingSearcher</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd7a2651a7c5de76a018664c8bf327af" kind="function"><name>retrieveRing</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" kind="function"><name>search</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd7a2651a7c5de76a018664c8bf327af" kind="function"><name>retrieveRing</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a2b03c700b5d232f5aef7c6acf439b7ea" kind="function"><name>runMethod</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kind="class"><name>ca::mcgill::ecse211::threads::SensorData</name>

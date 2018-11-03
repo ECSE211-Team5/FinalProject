@@ -26,14 +26,14 @@ public class Main {
   public static ComponentTest.Type testType = ComponentTest.Type.LightSensor;
 
   /**
-   * This method is our main entry point - instantiate objects and loop indefinitely
+   * This method is our main entry point - instantiate objects and halt until a button is pressed
    * 
    * @param args an array of arguments that can be passed in via command line or otherwise
    * @throws OdometerExceptions
    */
   public static void main(String[] args) {
     try {
-      Game.getGame().preparation(); // for brevity and less object instantiations
+      Game.preparation(); // for brevity and less object instantiations
       if (test) {
         Button.waitForAnyPress(); // Wait for a button on the EV3 Brick to be pressed
         (new Thread() {
@@ -47,7 +47,7 @@ public class Main {
           }
         }).start();
       } else {
-        Game.getGame().runGame(); // for brevity and less object instantiations
+        Game.runGame(); // for brevity and less object instantiations
       }
       Button.waitForAnyPress();
       System.exit(0);

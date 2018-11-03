@@ -1,7 +1,7 @@
 <map id="ca.mcgill.ecse211.project.Navigation.convertDistance" name="ca.mcgill.ecse211.project.Navigation.convertDistance">
 <area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html#a9fc3d6cdd897e9db86fc9d71dc914863" title="ca.mcgill.ecse211.localization.\lLightLocalizer.localize" alt="" coords="239,5,439,47"/>
 <area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a48eeb9ae2da23664421e8da5642054c7" title="ca.mcgill.ecse211.project.\lNavigation.moveWithCorrection" alt="" coords="236,71,443,112"/>
-<area shape="rect" id="node3" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a46cbbf56a4544524174d9d3e63fb9759" title="ca.mcgill.ecse211.project.\lGame.runGame" alt="" coords="728,5,903,47"/>
+<area shape="rect" id="node3" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a790740a4ed299c9b985401ea8c4d5010" title="ca.mcgill.ecse211.project.\lGame.runGame" alt="" coords="728,5,903,47"/>
 <area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="1177,39,1352,80"/>
 <area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ada8a324c1d391698164476d4d728f0c4" title="ca.mcgill.ecse211.project.\lNavigation.travelTo" alt="" coords="491,71,665,112"/>
 <area shape="rect" id="node7" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#aa40592bb550b3526402faddbc0d890c7" title="ca.mcgill.ecse211.tests.\lComponentTest.navigationTest" alt="" coords="713,71,917,112"/>

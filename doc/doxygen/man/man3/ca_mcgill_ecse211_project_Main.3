@@ -48,7 +48,7 @@ Definition at line 17 of file Main\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "static void ca\&.mcgill\&.ecse211\&.project\&.Main\&.main (String [] args)\fC [static]\fP"
-This method is our main entry point - instantiate objects and loop indefinitely
+This method is our main entry point - instantiate objects and halt until a button is pressed
 .PP
 \fBParameters:\fP
 .RS 4
@@ -67,7 +67,7 @@ Definition at line 34 of file Main\&.java\&.
 .nf
 34                                          {
 35     try {
-36       Game\&.getGame()\&.preparation(); // for brevity and less object instantiations
+36       Game\&.preparation(); // for brevity and less object instantiations
 37       if (test) {
 38         Button\&.waitForAnyPress(); // Wait for a button on the EV3 Brick to be pressed
 39         (new Thread() {
@@ -81,7 +81,7 @@ Definition at line 34 of file Main\&.java\&.
 47           }
 48         })\&.start();
 49       } else {
-50         Game\&.getGame()\&.runGame(); // for brevity and less object instantiations
+50         Game\&.runGame(); // for brevity and less object instantiations
 51       }
 52       Button\&.waitForAnyPress();
 53       System\&.exit(0);

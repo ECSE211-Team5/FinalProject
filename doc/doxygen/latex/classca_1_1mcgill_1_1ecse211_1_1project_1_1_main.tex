@@ -52,7 +52,7 @@ Definition at line 17 of file Main.\+java.
 \subsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+project.\+Main.\+main (\begin{DoxyParamCaption}\item[{String \mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-This method is our main entry point -\/ instantiate objects and loop indefinitely
+This method is our main entry point -\/ instantiate objects and halt until a button is pressed
 
 
 \begin{DoxyParams}{Parameters}
@@ -72,7 +72,7 @@ Definition at line 34 of file Main.\+java.
 \begin{DoxyCode}
 34                                          \{
 35     \textcolor{keywordflow}{try} \{
-36       Game.getGame().preparation(); \textcolor{comment}{// for brevity and less object instantiations}
+36       Game.preparation(); \textcolor{comment}{// for brevity and less object instantiations}
 37       \textcolor{keywordflow}{if} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af6f7b8fffddcf855f74fe128d2e23ea1}{test}) \{
 38         Button.waitForAnyPress(); \textcolor{comment}{// Wait for a button on the EV3 Brick to be pressed}
 39         (\textcolor{keyword}{new} Thread() \{
@@ -86,7 +86,7 @@ Definition at line 34 of file Main.\+java.
 47           \}
 48         \}).start();
 49       \} \textcolor{keywordflow}{else} \{
-50         Game.getGame().runGame(); \textcolor{comment}{// for brevity and less object instantiations}
+50         Game.runGame(); \textcolor{comment}{// for brevity and less object instantiations}
 51       \}
 52       Button.waitForAnyPress();
 53       System.exit(0);

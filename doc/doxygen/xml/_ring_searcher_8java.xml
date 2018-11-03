@@ -38,7 +38,7 @@
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>search()<sp/>{</highlight></codeline>
+<codeline lineno="53" refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" kindref="member">search</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">[]<sp/>position<sp/>=<sp/>odometer.<ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" kindref="member">getXYT</ref>();</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>turn<sp/>to<sp/>the<sp/>angle<sp/>async</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
@@ -63,10 +63,11 @@
 <codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
 <codeline lineno="80" refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a2b03c700b5d232f5aef7c6acf439b7ea" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a2b03c700b5d232f5aef7c6acf439b7ea" kindref="member">runMethod</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd7a2651a7c5de76a018664c8bf327af" kindref="member">retrieveRing</ref>();</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" kindref="member">search</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd7a2651a7c5de76a018664c8bf327af" kindref="member">retrieveRing</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java"/>
   </compounddef>

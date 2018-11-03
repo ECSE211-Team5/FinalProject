@@ -201,7 +201,7 @@
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" compoundref="_display_8java" startline="57" endline="106">ca.mcgill.ecse211.project.Display.run</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" compoundref="_navigation_8java" startline="70" endline="97">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="144" endline="165">ca.mcgill.ecse211.project.Navigation.turnTo</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a58fdaba16c2b961446d1474b76e66e49" compoundref="_ring_searcher_8java" startline="36" endline="46">ca.mcgill.ecse211.threads.RingSearcher.RingSearcher</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" compoundref="_ring_searcher_8java" startline="53" endline="69">ca.mcgill.ecse211.threads.RingSearcher.search</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1aaa06f190d634299fcb1b97a1891dad85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

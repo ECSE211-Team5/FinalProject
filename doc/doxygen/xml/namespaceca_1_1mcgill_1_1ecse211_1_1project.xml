@@ -5,7 +5,7 @@
     <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator" prot="public">ca::mcgill::ecse211::project::ColorCalibrator</innerclass>
     <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display" prot="public">ca::mcgill::ecse211::project::Display</innerclass>
     <innerclass refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game" prot="public">ca::mcgill::ecse211::project::Game</innerclass>
-    <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters" prot="public">ca::mcgill::ecse211::project::GameParameters</innerclass>
+    <innerclass refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters" prot="public">ca::mcgill::ecse211::project::GameParameters</innerclass>
     <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main" prot="public">ca::mcgill::ecse211::project::Main</innerclass>
     <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" prot="public">ca::mcgill::ecse211::project::Navigation</innerclass>
     <innerclass refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi" prot="public">ca::mcgill::ecse211::project::WiFi</innerclass>

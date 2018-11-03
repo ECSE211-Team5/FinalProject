@@ -27,7 +27,7 @@ public enum ComponentTest {
    * This method selects test for each individual components of the design
    * 
    * @param type
-   * @throws Exception 
+   * @throws Exception
    */
   public static void runTest(Type testType) throws Exception {
     try {

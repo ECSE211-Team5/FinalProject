@@ -47,10 +47,10 @@ public class RingSearcher extends ThreadControl {
 
   /**
    * This method searches for the ring and identify its color based using the rod,
-   * It will beed based on the color of the ring
+   * It will beep based on the color of the ring
    * 
    */
-  private void  search() {
+  public void  search() {
     double[] position = odometer.getXYT();
     // turn to the angle async
 
@@ -78,6 +78,7 @@ public class RingSearcher extends ThreadControl {
   }
 
   protected void runMethod() {
+    search();
     retrieveRing();
 
   }

@@ -15,6 +15,9 @@ Inherits \fBca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\fP\&.
 .RI "\fBRingSearcher\fP (EV3LargeRegulatedMotor storageMotor, EV3MediumRegulatedMotor rodMotor)  throws OdometerExceptions "
 .br
 .ti -1c
+.RI "void \fBsearch\fP ()"
+.br
+.ti -1c
 .RI "void \fBretrieveRing\fP ()"
 .br
 .in -1c
@@ -102,9 +105,34 @@ Definition at line 80 of file RingSearcher\&.java\&.
 .PP
 .nf
 80                              {
-81     retrieveRing();
-82 
-83   }
+81     search();
+82     retrieveRing();
+83 
+84   }
+.fi
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.RingSearcher\&.search ()"
+This method searches for the ring and identify its color based using the rod, It will beep based on the color of the ring 
+.PP
+Definition at line 53 of file RingSearcher\&.java\&.
+.PP
+.nf
+53                         {
+54     double[] position = odometer\&.getXYT();
+55     // turn to the angle async
+56 
+57     // if we found a ring, got for the ring and check its color
+58     // if the color matches, return true
+59     // if(foundRing) {
+60     // ColorCalibrator\&.Color color = goForRingColor();
+61     // //navigation\&.travelBackTo(position[0], position[1]);
+62     // if(color == target) {
+63     // Sound\&.twoBeeps();
+64     // ColorMatched = true;
+65     // }
+66     // }else {
+67     // Sound\&.beepSequence();;
+68     // }
+69   }
 .fi
 
 

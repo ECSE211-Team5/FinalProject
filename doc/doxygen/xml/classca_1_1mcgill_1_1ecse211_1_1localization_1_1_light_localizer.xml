@@ -194,9 +194,9 @@
         <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="144" endline="165">ca.mcgill.ecse211.project.Navigation.turnTo</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2911d7215e47f3064defe016b46bfeef" compoundref="_odometer_data_8java" startline="161" endline="172">ca.mcgill.ecse211.odometer.OdometerData.setX</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="225" endline="227">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="285">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="286">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="197" endline="208">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a46cbbf56a4544524174d9d3e63fb9759" compoundref="_game_8java" startline="378" endline="410">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="379" endline="413">ca.mcgill.ecse211.project.Game.runGame</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

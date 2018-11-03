@@ -46,7 +46,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This method is our main entry point - instantiate objects and loop indefinitely</para><para><parameterlist kind="param"><parameteritem>
+<para>This method is our main entry point - instantiate objects and halt until a button is pressed</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>args</parametername>
 </parameternamelist>
@@ -66,11 +66,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" line="34" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" bodystart="34" bodyend="58"/>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a52a167474d714aeaed55a877b766cf98" compoundref="_game_8java" startline="244" endline="246">ca.mcgill.ecse211.project.Game.getGame</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="305" endline="364">ca.mcgill.ecse211.project.Game.preparation</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a1bcbd1c19309c65a6887ae19bde66765" compoundref="_game_8java" startline="306" endline="365">ca.mcgill.ecse211.project.Game.preparation</references>
         <references refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a5dc8bf97bc48adf5bee88d425a1a974e" compoundref="_component_test_8java" startline="32" endline="57">ca.mcgill.ecse211.tests.ComponentTest.runTest</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1a8dac740460370f76ac0db5dc20824b1f" compoundref="_main_8java" startline="26">ca.mcgill.ecse211.project.Main.testType</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a46cbbf56a4544524174d9d3e63fb9759" compoundref="_game_8java" startline="378" endline="410">ca.mcgill.ecse211.project.Game.runGame</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="379" endline="413">ca.mcgill.ecse211.project.Game.runGame</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

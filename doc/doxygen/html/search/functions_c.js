@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['search',['search',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#abd2b2c172ea393ce4185027c8a12780f',1,'ca::mcgill::ecse211::threads::RingSearcher']]],
   ['sensordata',['SensorData',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a11dcdc9c15184e05a9c84fc3958e26b6',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['seta',['setA',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a35b1941d44e86b81eb7c625efbd3c8ba',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['setd',['setD',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a2c1f8e625478b89aabe6e9911e482ef3',1,'ca::mcgill::ecse211::threads::SensorData']]],

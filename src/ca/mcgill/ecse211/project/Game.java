@@ -36,11 +36,16 @@ public enum Game {
   // MEMBER VARIABLES
   // ------------------------
 
-  // Game State Machines
+  /**
+   * Game State Machines
+   */
   public enum Status {
     Idle, Localization, NavigationSafe, NavigationSearch, RingSearch
   }
 
+  /**
+   * 
+   */
   private Status status = Status.Idle;
 
   // ------------------------
@@ -241,10 +246,6 @@ public enum Game {
     status = aStatus;
   }
 
-  public static Game getGame() {
-    return INSTANCE;
-  }
-
   private static ThreadControl rgbPoller;
   private static ThreadControl lightPoller;
   private static ThreadControl motorControlThread;
@@ -302,7 +303,7 @@ public enum Game {
    * 
    * @throws OdometerExceptions
    */
-  public void preparation() throws OdometerExceptions {
+  public static void preparation() throws OdometerExceptions {
     // Motor Objects, and Robot related parameters
     Port usPort = LocalEV3.get().getPort("S1");
     // initialize multiple light ports in main
@@ -366,7 +367,7 @@ public enum Game {
   /**
    * Read data from the wifi class (using another thread)
    */
-  public synchronized void readData() {
+  public synchronized static void readData() {
     WiFi wifi = new WiFi();
   }
 
@@ -375,7 +376,7 @@ public enum Game {
    * 
    * @throws OdometerExceptions
    */
-  public synchronized void runGame() throws OdometerExceptions {
+  public synchronized static void runGame() throws OdometerExceptions {
     final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
     // Start localizing
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
@@ -396,6 +397,10 @@ public enum Game {
         }).start();
         usLoc.localize(buttonChoice);
         lgLoc.localize(GameParameters.SC);
+        searcher.search();
+        searcher.retrieveRing();
+        //ug collision detection always on
+        //navigate to start
         try {
           while (!hasReadData)
             wait();
@@ -405,7 +410,5 @@ public enum Game {
         }
       }
     }).start();
-    while (Button.waitForAnyPress() != Button.ID_ESCAPE);
-    System.exit(0);
   }
 }

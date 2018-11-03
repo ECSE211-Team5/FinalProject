@@ -227,11 +227,11 @@
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="104" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="104" bodyend="114"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="225" endline="227">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="285">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="280">ca.mcgill.ecse211.project.Game.TILE</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="286">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="281">ca.mcgill.ecse211.project.Game.TILE</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a39eec50582f0e4bcff8a4669c48e1609" compoundref="_sensor_data_8java" startline="88" endline="97">ca.mcgill.ecse211.threads.SensorData.getL</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="197" endline="208">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" compoundref="_game_8java" startline="296">ca.mcgill.ecse211.project.Game.SEN_DIS</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" compoundref="_game_8java" startline="297">ca.mcgill.ecse211.project.Game.SEN_DIS</references>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" compoundref="_navigation_8java" startline="70" endline="97">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -266,8 +266,8 @@
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="144" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="144" bodyend="165"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="285">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a64cf12cdd6772ac1ce351ff1dfadd626" compoundref="_game_8java" startline="291">ca.mcgill.ecse211.project.Game.TRACK</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="286">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a64cf12cdd6772ac1ce351ff1dfadd626" compoundref="_game_8java" startline="292">ca.mcgill.ecse211.project.Game.TRACK</references>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="53" endline="92">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ada8a324c1d391698164476d4d728f0c4" compoundref="_navigation_8java" startline="70" endline="97">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
@@ -371,8 +371,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="204" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="204" bodyend="207"/>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="285">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a64cf12cdd6772ac1ce351ff1dfadd626" compoundref="_game_8java" startline="291">ca.mcgill.ecse211.project.Game.TRACK</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="286">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a64cf12cdd6772ac1ce351ff1dfadd626" compoundref="_game_8java" startline="292">ca.mcgill.ecse211.project.Game.TRACK</references>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae8530d181ffd790ff9dea5eeab54b1a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
