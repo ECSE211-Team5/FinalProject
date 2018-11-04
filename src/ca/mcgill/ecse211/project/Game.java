@@ -46,7 +46,7 @@ public enum Game {
   /**
    * This variable stores the current state that our robot is in during a competition
    */
-  private Status status = Status.Idle;
+  private static Status status = Status.Idle;
 
   // ------------------------
   // INTERFACE
@@ -57,8 +57,7 @@ public enum Game {
    * @return A string of the status variable
    */
   public String getStatusFullName() {
-    String answer = status.toString();
-    return answer;
+    return status.toString();
   }
 
   /**
@@ -75,7 +74,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean ready() {
+  public static boolean ready() {
     boolean wasEventProcessed = false;
 
     switch (status) {
@@ -97,7 +96,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean localized() {
+  public static boolean localized() {
     boolean wasEventProcessed = false;
 
     switch (status) {
@@ -119,7 +118,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean navigatedToTunnel() {
+  public static boolean navigatedToTunnel() {
     boolean wasEventProcessed = false;
 
     switch (status) {
@@ -146,15 +145,15 @@ public enum Game {
    * This method navigates our robot to the starting corner
    * 
    * @return A boolean that denotes whether our state transition occurred
-   * @throws InterruptedException 
+   * @throws InterruptedException
    */
-  public boolean navigatedToStart() throws InterruptedException {
+  public static boolean navigatedToStart() throws InterruptedException {
     boolean wasEventProcessed = false;
 
     switch (status) {
       case NavigationSafe:
         // line 12 "model.ump"
-        wait();
+        //wait();
         setStatus(Status.Idle);
         wasEventProcessed = true;
         break;
@@ -170,7 +169,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean navigatedToTree() {
+  public static boolean navigatedToTree() {
     boolean wasEventProcessed = false;
 
     switch (status) {
@@ -192,7 +191,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean ringFound() {
+  public static boolean ringFound() {
     boolean wasEventProcessed = false;
 
     switch (status) {
@@ -214,7 +213,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean ringNotFound() {
+  public static boolean ringNotFound() {
     boolean wasEventProcessed = false;
 
     switch (status) {
@@ -236,27 +235,27 @@ public enum Game {
    * 
    * @param newStatus The new state to set as our robot's current status
    */
-  private void setStatus(Status newStatus) {
+  private static void setStatus(Status newStatus) {
     status = newStatus;
   }
 
   /**
-   * 
+   * This variable stores a ThreadController instance that controls our RGB sensor
    */
   private static ThreadControl rgbPoller;
-  
+
   /**
-   * 
+   * This variable stores a ThreadController instance that controls our light sensor
    */
   private static ThreadControl lightPoller;
-  
+
   /**
-   * 
+   * This variable stores a ThreadController instance that controls our motors
    */
   private static ThreadControl motorControlThread;
-  
+
   /**
-   * 
+   * This variable stores a ThreadController instance that controls our ultrasonic sensor
    */
   private static ThreadControl usPoller;
 
@@ -295,23 +294,86 @@ public enum Game {
   public static final double WHEEL_RAD = 2.15;
 
   /**
-   * This variable denotes the track distance between the center of the wheels in cm (measured and
-   * adjusted based on trial and error).
+   * This variable holds the track distance between the center of the wheels in cm (measured and
+   * adjusted based on trial and error)
    */
   public static final double TRACK = 11.5;
 
   /**
-   * The variable stores the distance between light sensor and center of the robot in cm
+   * This variable stores the distance between the light sensor and center of the robot in cm
    */
   public static final double SEN_DIS = 4.4;
 
   /**
-   * 
+   * This variable decides when GameParameter data has been successfully read over WiFi
    */
   private static boolean hasReadData;
 
   /**
-   * Prepare for the game: starting thread, read all arguments
+   * Read data from the WiFi class (using another thread)
+   */
+  public synchronized static void readData() {
+    WiFi wifi = new WiFi();
+  }
+
+  /**
+   * This method localizes our robot to the starting position
+   */
+  private synchronized static void localize() {
+    switch (status) {
+      case Idle:
+        localized();
+        break;
+      default:
+        break;
+    }
+  }
+
+  /**
+   * This method navigates our robot to a desired location
+   */
+  private synchronized static void navigate() {
+    switch (status) {
+      case Localization:
+        //go to start
+        break;
+      case NavigationSafe:
+        navigatedToTunnel();
+        break;
+      case NavigationSearch:
+        navigatedToTree();
+        break;
+      case RingSearch:
+        searchRing();
+        break;
+      default:
+        break;
+    }
+  }
+
+  /**
+   * This method makes our robot search for a ring
+   */
+  private synchronized static void searchRing() {
+    switch (status) {
+      case NavigationSearch:
+        for(int i = 0; i < 4; i++) {
+          navigatedToTree();
+          if(ringFound()) {
+            
+          } else {
+            ringNotFound();
+          }
+        }
+        break;
+      default:
+        break;
+    }
+  }
+
+  /**
+   * This method performs all the object instantiations and preparations necessary to get our robot
+   * to compete
    * 
    * @throws OdometerExceptions
    */
@@ -377,14 +439,7 @@ public enum Game {
   }
 
   /**
-   * Read data from the wifi class (using another thread)
-   */
-  public synchronized static void readData() {
-    WiFi wifi = new WiFi();
-  }
-
-  /**
-   * This method contains main logic for the game plays
+   * This method is called when the after the robot has been prepared and is ready to compete
    * 
    * @throws OdometerExceptions
    */
@@ -400,6 +455,11 @@ public enum Game {
       public void run() {
         // target color
 
+        ready();
+        localized();
+
+        
+        
         (new Thread() {
           public void run() {
             readData();
@@ -407,12 +467,6 @@ public enum Game {
             notify();
           }
         }).start();
-        usLoc.localize(buttonChoice);
-        lgLoc.localize(GameParameters.SC);
-        searcher.search();
-        searcher.retrieveRing();
-        //ug collision detection always on
-        //navigate to start
         try {
           while (!hasReadData)
             wait();
@@ -420,28 +474,13 @@ public enum Game {
           // TODO Auto-generated catch block
           e.printStackTrace();
         }
+        usLoc.localize(buttonChoice);
+        lgLoc.localize(GameParameters.SC);
+        searcher.search();
+        searcher.retrieveRing();
+        // ug collision detection always on
+        // navigate to start
       }
     }).start();
-  }
-  
-  /**
-   * This method
-   */
-  private void localize() {
-    
-  }
-  
-  /**
-   * This method
-   */
-  private void navigate() {
-    
-  }
-  
-  /**
-   * This method
-   */
-  private void searchRing() {
-    
   }
 }

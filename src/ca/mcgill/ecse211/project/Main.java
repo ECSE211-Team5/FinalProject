@@ -51,7 +51,7 @@ public class Main {
       }
       Button.waitForAnyPress();
       System.exit(0);
-    } catch (OdometerExceptions e) {
+    } catch (Exception e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
