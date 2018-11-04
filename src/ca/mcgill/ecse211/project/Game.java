@@ -56,7 +56,7 @@ public enum Game {
    * 
    * @return A string of the status variable
    */
-  public String getStatusFullName() {
+  public static String getStatusFullName() {
     return status.toString();
   }
 
@@ -65,7 +65,7 @@ public enum Game {
    * 
    * @return A Status enumeration value
    */
-  public Status getStatus() {
+  public static Status getStatus() {
     return status;
   }
 
@@ -74,14 +74,14 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public static boolean ready() {
+  public synchronized static boolean ready() {
     boolean wasEventProcessed = false;
 
     switch (status) {
       case Idle:
         // line 5 "model.ump"
-        localize();
         setStatus(Status.Localization);
+        localize(status);
         wasEventProcessed = true;
         break;
       default:
@@ -96,14 +96,14 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public static boolean localized() {
+  public synchronized static boolean localized() {
     boolean wasEventProcessed = false;
 
     switch (status) {
       case Localization:
         // line 8 "model.ump"
-        navigate();
         setStatus(Status.NavigationSafe);
+        navigate(status);
         wasEventProcessed = true;
         break;
       default:
@@ -118,20 +118,20 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public static boolean navigatedToTunnel() {
+  public synchronized static boolean navigatedToTunnel() {
     boolean wasEventProcessed = false;
 
     switch (status) {
       case NavigationSafe:
         // line 11 "model.ump"
-        navigate();
         setStatus(Status.NavigationSearch);
+        navigate(status);
         wasEventProcessed = true;
         break;
       case NavigationSearch:
         // line 17 "model.ump"
-        navigate();
         setStatus(Status.NavigationSafe);
+        navigate(status);
         wasEventProcessed = true;
         break;
       default:
@@ -147,13 +147,14 @@ public enum Game {
    * @return A boolean that denotes whether our state transition occurred
    * @throws InterruptedException
    */
-  public static boolean navigatedToStart() throws InterruptedException {
+  public synchronized static boolean navigatedToStart() throws InterruptedException {
     boolean wasEventProcessed = false;
 
     switch (status) {
       case NavigationSafe:
         // line 12 "model.ump"
         //wait();
+        //blocking thread here or while loop.
         setStatus(Status.Idle);
         wasEventProcessed = true;
         break;
@@ -169,14 +170,14 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public static boolean navigatedToTree() {
+  public synchronized static boolean navigatedToTree() {
     boolean wasEventProcessed = false;
 
     switch (status) {
       case NavigationSearch:
         // line 16 "model.ump"
-        searchRing();
         setStatus(Status.RingSearch);
+        searchRing();
         wasEventProcessed = true;
         break;
       default:
@@ -191,14 +192,14 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public static boolean ringFound() {
+  public synchronized static boolean ringFound() {
     boolean wasEventProcessed = false;
 
     switch (status) {
       case RingSearch:
         // line 20 "model.ump"
-        navigate();
         setStatus(Status.NavigationSearch);
+        navigate(status);
         wasEventProcessed = true;
         break;
       default:
@@ -213,14 +214,14 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public static boolean ringNotFound() {
+  public synchronized static boolean ringNotFound() {
     boolean wasEventProcessed = false;
 
     switch (status) {
       case RingSearch:
         // line 21 "model.ump"
-        navigate();
         setStatus(Status.NavigationSearch);
+        navigate(status);
         wasEventProcessed = true;
         break;
       default:
@@ -235,7 +236,7 @@ public enum Game {
    * 
    * @param newStatus The new state to set as our robot's current status
    */
-  private static void setStatus(Status newStatus) {
+  private synchronized static void setStatus(Status newStatus) {
     status = newStatus;
   }
 
@@ -319,9 +320,9 @@ public enum Game {
   /**
    * This method localizes our robot to the starting position
    */
-  private synchronized static void localize() {
-    switch (status) {
-      case Idle:
+  private synchronized static void localize(Status oldStatus) {
+    switch (oldStatus) {
+      case Localization:
         localized();
         break;
       default:
@@ -332,10 +333,10 @@ public enum Game {
   /**
    * This method navigates our robot to a desired location
    */
-  private synchronized static void navigate() {
-    switch (status) {
+  private synchronized static void navigate(Status oldStatus) {
+    switch (oldStatus) {
       case Localization:
-        //go to start
+        navigatedToTunnel();
         break;
       case NavigationSafe:
         navigatedToTunnel();
@@ -377,7 +378,7 @@ public enum Game {
    * 
    * @throws OdometerExceptions
    */
-  public static void preparation() throws OdometerExceptions {
+  public synchronized static void preparation() throws OdometerExceptions {
     // Motor Objects, and Robot related parameters
     Port usPort = LocalEV3.get().getPort("S1");
     // initialize multiple light ports in main
@@ -456,7 +457,6 @@ public enum Game {
         // target color
 
         ready();
-        localized();
 
         
         
