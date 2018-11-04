@@ -21,6 +21,11 @@ public enum GameParameters {
   }
   
   /**
+   * This variable stores the current area that our robot is in during a competition
+   */
+  public static AreaType area = AreaType.Starting;
+  
+  /**
    * This variables holds the starting corner coordinates for our robot
    */
   public static int[] SC = {-1, -1};
@@ -196,6 +201,6 @@ public enum GameParameters {
    * @return the type of area the point belongs to
    */
   public static AreaType getType(double x, double y) {
-    return AreaType.Searching;
+    return area;
   }
 }

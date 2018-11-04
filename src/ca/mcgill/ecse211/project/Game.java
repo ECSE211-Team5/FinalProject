@@ -37,14 +37,14 @@ public enum Game {
   // ------------------------
 
   /**
-   * Game State Machines
+   * This enumeration stores the possible states that our robot can be in during a competition
    */
   public enum Status {
     Idle, Localization, NavigationSafe, NavigationSearch, RingSearch
   }
 
   /**
-   * 
+   * This variable stores the current state that our robot is in during a competition
    */
   private Status status = Status.Idle;
 
@@ -52,9 +52,9 @@ public enum Game {
   // INTERFACE
   // ------------------------
   /**
-   * get the full name of the status
+   * This method gets a string representation of the status of our robot
    * 
-   * @return
+   * @return A string of the status variable
    */
   public String getStatusFullName() {
     String answer = status.toString();
@@ -62,27 +62,26 @@ public enum Game {
   }
 
   /**
-   * get the current status of the game
+   * This method gets the current status of our robot
    * 
-   * @return
+   * @return A Status enumeration value
    */
   public Status getStatus() {
     return status;
   }
 
   /**
-   * perform the localization and go to navigation
+   * This method performs localizes our robot
    * 
-   * @return
+   * @return A boolean that denotes whether our state transition occurred
    */
   public boolean ready() {
     boolean wasEventProcessed = false;
 
-    Status aStatus = status;
-    switch (aStatus) {
+    switch (status) {
       case Idle:
         // line 5 "model.ump"
-        // localize();
+        localize();
         setStatus(Status.Localization);
         wasEventProcessed = true;
         break;
@@ -94,18 +93,17 @@ public enum Game {
   }
 
   /**
-   * Navigating to the tunnel and to the search area
+   * This method prepares our robot to navigate to a tunnel or search area
    * 
-   * @return whether transition successful
+   * @return A boolean that denotes whether our state transition occurred
    */
   public boolean localized() {
     boolean wasEventProcessed = false;
 
-    Status aStatus = status;
-    switch (aStatus) {
+    switch (status) {
       case Localization:
         // line 8 "model.ump"
-        // navigate();
+        navigate();
         setStatus(Status.NavigationSafe);
         wasEventProcessed = true;
         break;
@@ -117,24 +115,23 @@ public enum Game {
   }
 
   /**
-   * whether transition successful
+   * This method navigates our robot to the tunnel or search area
    * 
-   * @return whether transition successful
+   * @return A boolean that denotes whether our state transition occurred
    */
   public boolean navigatedToTunnel() {
     boolean wasEventProcessed = false;
 
-    Status aStatus = status;
-    switch (aStatus) {
+    switch (status) {
       case NavigationSafe:
         // line 11 "model.ump"
-        // navigate();
+        navigate();
         setStatus(Status.NavigationSearch);
         wasEventProcessed = true;
         break;
       case NavigationSearch:
         // line 17 "model.ump"
-        // navigate();
+        navigate();
         setStatus(Status.NavigationSafe);
         wasEventProcessed = true;
         break;
@@ -146,18 +143,18 @@ public enum Game {
   }
 
   /**
-   * Navigate to the starting corner
+   * This method navigates our robot to the starting corner
    * 
-   * @return whether transition successful
+   * @return A boolean that denotes whether our state transition occurred
+   * @throws InterruptedException 
    */
-  public boolean navigatedToStart() {
+  public boolean navigatedToStart() throws InterruptedException {
     boolean wasEventProcessed = false;
 
-    Status aStatus = status;
-    switch (aStatus) {
+    switch (status) {
       case NavigationSafe:
         // line 12 "model.ump"
-        // wait();
+        wait();
         setStatus(Status.Idle);
         wasEventProcessed = true;
         break;
@@ -169,18 +166,17 @@ public enum Game {
   }
 
   /**
-   * Navigate to the tree and try find the rings
+   * This method navigates our robot to the tree and tries to find rings
    * 
-   * @return whether transition successful
+   * @return A boolean that denotes whether our state transition occurred
    */
   public boolean navigatedToTree() {
     boolean wasEventProcessed = false;
 
-    Status aStatus = status;
-    switch (aStatus) {
+    switch (status) {
       case NavigationSearch:
         // line 16 "model.ump"
-        // searchRing();
+        searchRing();
         setStatus(Status.RingSearch);
         wasEventProcessed = true;
         break;
@@ -192,18 +188,17 @@ public enum Game {
   }
 
   /**
-   * if ring found, get the ring
+   * This method is called when a ring is found and obtains it
    * 
-   * @return whether transition successful
+   * @return A boolean that denotes whether our state transition occurred
    */
   public boolean ringFound() {
     boolean wasEventProcessed = false;
 
-    Status aStatus = status;
-    switch (aStatus) {
+    switch (status) {
       case RingSearch:
         // line 20 "model.ump"
-        // navigate();
+        navigate();
         setStatus(Status.NavigationSearch);
         wasEventProcessed = true;
         break;
@@ -215,18 +210,17 @@ public enum Game {
   }
 
   /**
-   * In case if the ring is not found
+   * This method is called when a ring is not found
    * 
-   * @return whether transition successful
+   * @return A boolean that denotes whether our state transition occurred
    */
   public boolean ringNotFound() {
     boolean wasEventProcessed = false;
 
-    Status aStatus = status;
-    switch (aStatus) {
+    switch (status) {
       case RingSearch:
         // line 21 "model.ump"
-        // navigate();
+        navigate();
         setStatus(Status.NavigationSearch);
         wasEventProcessed = true;
         break;
@@ -238,17 +232,32 @@ public enum Game {
   }
 
   /**
-   * set the current status
+   * This method sets the current state that our robot is in
    * 
-   * @param aStatus current status to set
+   * @param newStatus The new state to set as our robot's current status
    */
-  private void setStatus(Status aStatus) {
-    status = aStatus;
+  private void setStatus(Status newStatus) {
+    status = newStatus;
   }
 
+  /**
+   * 
+   */
   private static ThreadControl rgbPoller;
+  
+  /**
+   * 
+   */
   private static ThreadControl lightPoller;
+  
+  /**
+   * 
+   */
   private static ThreadControl motorControlThread;
+  
+  /**
+   * 
+   */
   private static ThreadControl usPoller;
 
   /**
@@ -270,18 +279,18 @@ public enum Game {
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("C"));
 
   /**
-   * Motor object instance taht allows control of the motor on the rod for collecting rings
+   * Motor object instance that allows control of the motor on the rod for collecting rings
    */
   public static final EV3MediumRegulatedMotor rodMotor =
       new EV3MediumRegulatedMotor(LocalEV3.get().getPort("B"));
 
   /**
-   * length of the tile
+   * This variable stores the length of a tile in cm
    */
   public static final double TILE = 30.48;
 
   /**
-   * This variable denotes the radius of our wheels in cm.
+   * This variable stores the radius of our wheels in cm
    */
   public static final double WHEEL_RAD = 2.15;
 
@@ -292,10 +301,13 @@ public enum Game {
   public static final double TRACK = 11.5;
 
   /**
-   * The distance between light sensor and the center of the robot in cm
+   * The variable stores the distance between light sensor and center of the robot in cm
    */
   public static final double SEN_DIS = 4.4;
 
+  /**
+   * 
+   */
   private static boolean hasReadData;
 
   /**
@@ -410,5 +422,26 @@ public enum Game {
         }
       }
     }).start();
+  }
+  
+  /**
+   * This method
+   */
+  private void localize() {
+    
+  }
+  
+  /**
+   * This method
+   */
+  private void navigate() {
+    
+  }
+  
+  /**
+   * This method
+   */
+  private void searchRing() {
+    
   }
 }
