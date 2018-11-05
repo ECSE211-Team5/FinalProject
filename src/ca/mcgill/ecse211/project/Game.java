@@ -39,9 +39,8 @@ public enum Game {
   /**
    * This enumeration stores the possible states that our robot can be in during a competition
    */
-  public enum Status {
-    Idle, Localization, NavigationSafe, NavigationSearch, RingSearch
-  }
+  public enum Status { Idle, Localized, AtTunnel, AtTree, RingSearch }
+
 
   /**
    * This variable stores the current state that our robot is in during a competition
@@ -74,36 +73,17 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public synchronized static boolean ready() {
+  public boolean ready()
+  {
     boolean wasEventProcessed = false;
-
-    switch (status) {
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
       case Idle:
         // line 5 "model.ump"
-        setStatus(Status.Localization);
-        localize(status);
-        wasEventProcessed = true;
-        break;
-      default:
-        // Other states do respond to this event
-    }
-
-    return wasEventProcessed;
-  }
-
-  /**
-   * This method prepares our robot to navigate to a tunnel or search area
-   * 
-   * @return A boolean that denotes whether our state transition occurred
-   */
-  public synchronized static boolean localized() {
-    boolean wasEventProcessed = false;
-
-    switch (status) {
-      case Localization:
-        // line 8 "model.ump"
-        setStatus(Status.NavigationSafe);
-        navigate(status);
+        localizeAndReadData();
+        setStatus(Status.Localized);
         wasEventProcessed = true;
         break;
       default:
@@ -118,20 +98,23 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public synchronized static boolean navigatedToTunnel() {
+  public boolean navigateToTunnel()
+  {
     boolean wasEventProcessed = false;
-
-    switch (status) {
-      case NavigationSafe:
-        // line 11 "model.ump"
-        setStatus(Status.NavigationSearch);
-        navigate(status);
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case Localized:
+        // line 8 "model.ump"
+        navigateTunnel();
+        setStatus(Status.AtTunnel);
         wasEventProcessed = true;
         break;
-      case NavigationSearch:
+      case AtTree:
         // line 17 "model.ump"
-        setStatus(Status.NavigationSafe);
-        navigate(status);
+        navigateBackTunnel();
+        setStatus(Status.AtTunnel);
         wasEventProcessed = true;
         break;
       default:
@@ -147,14 +130,16 @@ public enum Game {
    * @return A boolean that denotes whether our state transition occurred
    * @throws InterruptedException
    */
-  public synchronized static boolean navigatedToStart() throws InterruptedException {
+  public boolean navigateToStart()
+  {
     boolean wasEventProcessed = false;
-
-    switch (status) {
-      case NavigationSafe:
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case AtTunnel:
         // line 12 "model.ump"
-        //wait();
-        //blocking thread here or while loop.
+        navigateStart();
         setStatus(Status.Idle);
         wasEventProcessed = true;
         break;
@@ -170,14 +155,23 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public synchronized static boolean navigatedToTree() {
+  public boolean navigateToTree()
+  {
     boolean wasEventProcessed = false;
-
-    switch (status) {
-      case NavigationSearch:
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
+      case AtTunnel:
+        // line 11 "model.ump"
+        navigateTree();
+        setStatus(Status.AtTree);
+        wasEventProcessed = true;
+        break;
+      case AtTree:
         // line 16 "model.ump"
-        setStatus(Status.RingSearch);
         searchRing();
+        setStatus(Status.RingSearch);
         wasEventProcessed = true;
         break;
       default:
@@ -192,14 +186,17 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public synchronized static boolean ringFound() {
+  public boolean ringFound()
+  {
     boolean wasEventProcessed = false;
-
-    switch (status) {
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
       case RingSearch:
         // line 20 "model.ump"
-        setStatus(Status.NavigationSearch);
-        navigate(status);
+        searchTree();
+        setStatus(Status.AtTree);
         wasEventProcessed = true;
         break;
       default:
@@ -214,14 +211,17 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public synchronized static boolean ringNotFound() {
+  public boolean ringNotFound()
+  {
     boolean wasEventProcessed = false;
-
-    switch (status) {
+    
+    Status aStatus = status;
+    switch (aStatus)
+    {
       case RingSearch:
         // line 21 "model.ump"
-        setStatus(Status.NavigationSearch);
-        navigate(status);
+        searchTree();
+        setStatus(Status.AtTree);
         wasEventProcessed = true;
         break;
       default:
@@ -313,63 +313,58 @@ public enum Game {
   /**
    * Read data from the WiFi class (using another thread)
    */
-  public synchronized static void readData() {
+  public synchronized void readData() {
     WiFi wifi = new WiFi();
   }
 
   /**
    * This method localizes our robot to the starting position
+   * localize and read data at the same time
    */
-  private synchronized static void localize(Status oldStatus) {
-    switch (oldStatus) {
-      case Localization:
-        localized();
-        break;
-      default:
-        break;
-    }
+  private synchronized void localizeAndReadData() {
+   
   }
 
   /**
-   * This method navigates our robot to a desired location
+   * This method navigates our robot to and go through the tunnel (from safe area to search area)
    */
-  private synchronized static void navigate(Status oldStatus) {
-    switch (oldStatus) {
-      case Localization:
-        navigatedToTunnel();
-        break;
-      case NavigationSafe:
-        navigatedToTunnel();
-        break;
-      case NavigationSearch:
-        navigatedToTree();
-        break;
-      case RingSearch:
-        searchRing();
-        break;
-      default:
-        break;
-    }
+  private void navigateTunnel() {
+    
+  }
+  
+  /**
+   * This method navigates our robot to and go though the tunnel (from search area to safe area)
+   */
+  private void navigateBackTunnel() {
+    
   }
 
   /**
-   * This method makes our robot search for a ring
+   * This method makes our robot navigate back to the starting position (after in the safe area)
    */
-  private synchronized static void searchRing() {
-    switch (status) {
-      case NavigationSearch:
-        for(int i = 0; i < 4; i++) {
-          navigatedToTree();
-          if(ringFound()) {
-            
-          } else {
-            ringNotFound();
-          }
-        }
-        break;
-      default:
-        break;
-    }
+  private static void navigateStart() {
+   
+  }
+  
+  /**
+   * This method navigates the robot to the tree position (Facing one side of the tree)
+   */
+  private void navigateTree() {
+    
+  }
+  
+  /**
+   * This method search and retrieve for the ring
+   */
+  private void searchRing() {
+    
+  }
+  
+  /**
+   * This method go to one other side of the tree(){
+   */
+  private void searchTree() {
+    
   }
 
   /**
@@ -378,7 +373,7 @@ public enum Game {
    * 
    * @throws OdometerExceptions
    */
-  public synchronized static void preparation() throws OdometerExceptions {
+  public static void preparation() throws OdometerExceptions {
     // Motor Objects, and Robot related parameters
     Port usPort = LocalEV3.get().getPort("S1");
     // initialize multiple light ports in main
@@ -444,7 +439,7 @@ public enum Game {
    * 
    * @throws OdometerExceptions
    */
-  public synchronized static void runGame() throws OdometerExceptions {
+  public static void runGame() throws OdometerExceptions {
     final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
     // Start localizing
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
@@ -456,17 +451,7 @@ public enum Game {
       public void run() {
         // target color
 
-        ready();
-
-        
-        
-        (new Thread() {
-          public void run() {
-            readData();
-            hasReadData = true;
-            notify();
-          }
-        }).start();
+        INSTANCE.ready();
         try {
           while (!hasReadData)
             wait();
