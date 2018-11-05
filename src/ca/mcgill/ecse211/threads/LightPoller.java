@@ -48,13 +48,15 @@ public class LightPoller extends ThreadControl{
    * the run method to be performed in run method, collect light data
    */
   protected void runMethod() {
+    double l[] = new double[2];
     for(int i = 0; i < us.length; i++) {
       us[i].fetchSample(lgData[i], 0); // acquire data
   
       int distance = (int) (lgData[i][0] * 100); // extract from buffer, multiply by 100 for convenience
                                               // and allow it to be cast to int
-      cont.setL(distance - lastValue[i], id); // now take action depending on value
+      l[i] = distance - lastValue[i]; // now take action depending on value
       lastValue[i] = distance; 
     }
+    cont.setL(l);
   }
 }

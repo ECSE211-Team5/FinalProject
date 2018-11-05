@@ -275,14 +275,14 @@ public enum Game {
   /**
    * Motor object instance that allows control of the motor on storage rod
    */
-  public static final EV3LargeRegulatedMotor storageMotor =
-      new EV3LargeRegulatedMotor(LocalEV3.get().getPort("C"));
-
-  /**
-   * Motor object instance that allows control of the motor on the rod for collecting rings
-   */
-  public static final EV3MediumRegulatedMotor rodMotor =
-      new EV3MediumRegulatedMotor(LocalEV3.get().getPort("B"));
+//  public static final EV3LargeRegulatedMotor storageMotor =
+//      new EV3LargeRegulatedMotor(LocalEV3.get().getPort("C"));
+//
+//  /**
+//   * Motor object instance that allows control of the motor on the rod for collecting rings
+//   */
+//  public static final EV3MediumRegulatedMotor rodMotor =
+//      new EV3MediumRegulatedMotor(LocalEV3.get().getPort("B"));
 
   /**
    * This variable stores the length of a tile in cm
@@ -379,7 +379,7 @@ public enum Game {
     // initialize multiple light ports in main
     Port[] lgPorts = new Port[3];
 
-    // Light sesnor sensor stuff
+    // Light sensor sensor stuff
     lgPorts[0] = LocalEV3.get().getPort("S2");
     lgPorts[1] = LocalEV3.get().getPort("S3");
     EV3ColorSensor[] lgSensors = new EV3ColorSensor[2];
@@ -445,7 +445,7 @@ public enum Game {
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
     final LightLocalizer lgLoc = new LightLocalizer(navigation, leftMotor, rightMotor);
-    final RingSearcher searcher = new RingSearcher(storageMotor, rodMotor);
+    //final RingSearcher searcher = new RingSearcher(storageMotor, rodMotor);
     // spawn a new Thread to avoid localization from blocking
     (new Thread() {
       public void run() {
@@ -461,8 +461,8 @@ public enum Game {
         }
         usLoc.localize(buttonChoice);
         lgLoc.localize(GameParameters.SC);
-        searcher.search();
-        searcher.retrieveRing();
+       // searcher.search();
+        //searcher.retrieveRing();
         // ug collision detection always on
         // navigate to start
       }

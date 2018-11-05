@@ -1,9 +1,13 @@
 package ca.mcgill.ecse211.tests;
 
+import ca.mcgill.ecse211.localization.LightLocalizer;
+import ca.mcgill.ecse211.localization.UltrasonicLocalizer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.Game;
+import ca.mcgill.ecse211.project.GameParameters;
 import ca.mcgill.ecse211.project.Navigation;
 import ca.mcgill.ecse211.threads.RingSearcher;
+import lejos.hardware.Button;
 
 /**
  * This singleton contains all the methods and structures necessary to test our robot and its
@@ -45,7 +49,7 @@ public enum ComponentTest {
           ComponentTest.lightSensorTest();
           break;
         case RingDetection:
-          ComponentTest.ringMotorTest();
+          //ComponentTest.ringMotorTest();
           break;
         default:
           System.out.println("Invalid test type selected");
@@ -73,7 +77,11 @@ public enum ComponentTest {
    * @throws OdometerExceptions
    */
   public static void localizationTest() throws OdometerExceptions {
-
+    Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
+    UltrasonicLocalizer us = new UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+    LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+    us.localize(Button.ID_LEFT);
+    lgLoc.localize(GameParameters.SC);
   }
 
   /**
@@ -95,22 +103,22 @@ public enum ComponentTest {
    * 
    * @throws OdometerExceptions
    */
-  public static void ringMotorTest() throws OdometerExceptions {
-    final RingSearcher searcher = new RingSearcher(Game.storageMotor, Game.rodMotor);
-    searcher.setStart(true);
-    Thread t = new Thread(searcher);
-    t.start();
-    try {
-      Thread.sleep(20000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-    searcher.setStart(false);
-    try {
-      Thread.sleep(2000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-    searcher.setStart(true);
-  }
+//  public static void ringMotorTest() throws OdometerExceptions {
+//    final RingSearcher searcher = new RingSearcher(Game.storageMotor, Game.rodMotor);
+//    searcher.setStart(true);
+//    Thread t = new Thread(searcher);
+//    t.start();
+//    try {
+//      Thread.sleep(20000);
+//    } catch (InterruptedException e) {
+//      e.printStackTrace();
+//    }
+//    searcher.setStart(false);
+//    try {
+//      Thread.sleep(2000);
+//    } catch (InterruptedException e) {
+//      e.printStackTrace();
+//    }
+//    searcher.setStart(true);
+//  }
 }
