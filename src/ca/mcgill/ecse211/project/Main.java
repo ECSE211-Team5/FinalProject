@@ -23,7 +23,7 @@ public class Main {
   /**
    * This variable stores the type of test that we want to perform
    */
-  public static ComponentTest.Type testType = ComponentTest.Type.LightSensor;
+  public static ComponentTest.Type testType = ComponentTest.Type.Localization;
 
   /**
    * This method is our main entry point - instantiate objects and halt until a button is pressed

@@ -27,7 +27,7 @@ public class UltrasonicLocalizer {
   private SensorData data;
   private Navigation navigation;
 
-  private static final int READINGS_THRESHOLD = 10;
+  private static final int READINGS_THRESHOLD = 40;
   private static final double wallDistance = 40.0;
   private static final double wallDistanceError = 5;
 

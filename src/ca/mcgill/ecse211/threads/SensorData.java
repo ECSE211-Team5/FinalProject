@@ -162,10 +162,11 @@ public class SensorData {
    * 
    * @param l The value to overwrite the current light value with
    */
-  public void setL(double l, int id) {
+  public void setL(double l[]) {
     try {
       lightLock.lock();
-      this.lights[id] = l;
+      this.lights[0] = l[0];
+      this.lights[1] = l[1];
     } finally {
       lightLock.unlock();
     }

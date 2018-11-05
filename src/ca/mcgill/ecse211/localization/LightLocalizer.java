@@ -25,9 +25,9 @@ public class LightLocalizer {
 	private Odometer odometer;
 	private SensorData data;
 	private Navigation navigation;
-	private static final int FORWARD_SPEED = 200;
+	private static final int FORWARD_SPEED = 100;
 	private static final double SENSOR_DIS = 16.3;
-	private static final int blackLineColor = 20;
+	private static final int blackLineColor = -5;
   /**
    * This is the class constructor
    * 
@@ -57,33 +57,49 @@ public class LightLocalizer {
     // 1. GO forward find the y=0 line
     leftMotor.forward();
     rightMotor.forward();
-    while (data.getL()[0] > blackLineColor);
+    while (leftMotor.isMoving() || rightMotor.isMoving()) {
+      if (data.getL()[0] < blackLineColor) {
+        leftMotor.stop(true);
+      }
+      if (data.getL()[1] < blackLineColor) {
+        rightMotor.stop(true);
+      }
+    }
+    odometer.setTheta(0.0);
     Sound.beep();
     odometer.setY(0);
     // 2. Turn and go forward find the x=0 line
     navigation.turnTo(90);
-    leftMotor.setSpeed(FORWARD_SPEED / 2);
-    rightMotor.setSpeed(FORWARD_SPEED / 2);
+    leftMotor.setSpeed(FORWARD_SPEED);
+    rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.forward();
     rightMotor.forward();
-    while (data.getL()[0] > blackLineColor);
+    while (leftMotor.isMoving() || rightMotor.isMoving()) {
+      if (data.getL()[0] < blackLineColor) {
+        leftMotor.stop(true);
+      }
+      if (data.getL()[1] < blackLineColor) {
+        rightMotor.stop(true);
+      }
+    }
+    odometer.setTheta(90.0);
     Sound.beep();
     odometer.setX(0);
-    leftMotor.setSpeed(FORWARD_SPEED / 2);
-    rightMotor.setSpeed(FORWARD_SPEED / 2);
+    leftMotor.setSpeed(FORWARD_SPEED);
+    rightMotor.setSpeed(FORWARD_SPEED);
     // 3. Go backwards by sensor-wheel center distance in x-direction
-    leftMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, -SENSOR_DIS), true);
-    rightMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, -SENSOR_DIS), false);
+    leftMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
+    rightMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), false);
     // 4. Go backwards by sensor-wheel center distance in y-direction
     navigation.turnTo(0);
-    leftMotor.setSpeed(FORWARD_SPEED / 2);
-    rightMotor.setSpeed(FORWARD_SPEED / 2);
-    double sensorDistanceOffset = 2.5;
+    leftMotor.setSpeed(FORWARD_SPEED);
+    rightMotor.setSpeed(FORWARD_SPEED);
+    //double sensorDistanceOffset = 2.5;
     leftMotor.rotate(
-        Navigation.convertDistance(Game.WHEEL_RAD, -SENSOR_DIS - sensorDistanceOffset),
+        Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS),
         true);
     rightMotor.rotate(
-        Navigation.convertDistance(Game.WHEEL_RAD, -SENSOR_DIS - sensorDistanceOffset),
+        Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS),
         false);
     odometer.setTheta(0);
     odometer.setX(sC[0]);
