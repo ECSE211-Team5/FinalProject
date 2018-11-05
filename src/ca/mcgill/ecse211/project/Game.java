@@ -258,7 +258,7 @@ public enum Game {
   /**
    * This variable stores a ThreadController instance that controls our ultrasonic sensor
    */
-  private static ThreadControl usPoller;
+  public static ThreadControl usPoller;
 
   /**
    * Motor object instance that allows control of the left motor connected to port A

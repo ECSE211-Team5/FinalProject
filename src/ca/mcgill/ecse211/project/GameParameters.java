@@ -28,7 +28,7 @@ public enum GameParameters {
   /**
    * This variables holds the starting corner coordinates for our robot
    */
-  public static int[] SC = {-1, -1};
+  public static int[] SC = {0, 0};
   
   /**
    * This variable stores the lower left coordinates of the entire grid

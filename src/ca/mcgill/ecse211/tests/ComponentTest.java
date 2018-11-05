@@ -8,6 +8,7 @@ import ca.mcgill.ecse211.project.GameParameters;
 import ca.mcgill.ecse211.project.Navigation;
 import ca.mcgill.ecse211.threads.RingSearcher;
 import lejos.hardware.Button;
+import lejos.hardware.Sound;
 
 /**
  * This singleton contains all the methods and structures necessary to test our robot and its
@@ -82,6 +83,14 @@ public enum ComponentTest {
     LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
     us.localize(Button.ID_LEFT);
     lgLoc.localize(GameParameters.SC);
+    Game.usPoller.setStart(false);
+    navigation.travelTo(6, 4, false);
+    Sound.twoBeeps();
+    navigation.travelTo(2, 3, false);
+    Sound.twoBeeps();
+    navigation.travelTo(0, 0, false);
+    Game.usPoller.setStart(true);
+
   }
 
   /**

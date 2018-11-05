@@ -117,9 +117,10 @@ public class UltrasonicLocalizer {
     angle1 = odometer.getXYT()[2];
 
     // 2. Turn left until we see the second wall, then turn right
+    navigation.turn(-20);
     rightMotor.forward();
     leftMotor.backward();
-
+    
     turnAwayFromWall();
     turnToWall();
     Sound.beep();

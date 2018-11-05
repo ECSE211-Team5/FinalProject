@@ -39,6 +39,7 @@ public class UltrasonicPoller extends ThreadControl{
     this.cont = cont;
     this.usData = usData;
     isStarted = true;
+    WAIT_TIME = 30;
   }
   
   /**
@@ -49,7 +50,6 @@ public class UltrasonicPoller extends ThreadControl{
     // get distance from buffer, multiply by 100 for convenience and allow it to be cast to
     // int
     int distance = (int) (usData[0] * 100.0);
-    System.out.println(distance);
     cont.setD(distance); // now take action depending on value
   }
 }

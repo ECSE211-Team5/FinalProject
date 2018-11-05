@@ -1,5 +1,7 @@
 package ca.mcgill.ecse211.threads;
 
+import lejos.hardware.Sound;
+
 /**
  * class for thread control with pause and restart functionality
  *
@@ -18,6 +20,7 @@ public abstract class ThreadControl implements Runnable{
     try {
       while (true) {
         if (!isStarted) {
+          Sound.beepSequence();
           wait();
         } else {
           runMethod();

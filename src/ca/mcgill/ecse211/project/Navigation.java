@@ -27,7 +27,7 @@ import lejos.hardware.motor.EV3LargeRegulatedMotor;
  * @author Kamy Moussavi Kafi
  */
 public class Navigation {
-  private static final int FORWARD_SPEED = 100;
+  private static final int FORWARD_SPEED = 120;
   private static final int ROTATE_SPEED = 80;
   private static final int ACCELERATION = 300;
 
@@ -67,7 +67,7 @@ public class Navigation {
    * @param avoid: the robot will pay attention to the distance from ultrasonic sensor to avoid
    *        abstacle when navigating
    */
-  public void travelTo(double x, double y, boolean avoid) {
+  public void travelTo(int x, int y, boolean avoid) {
     double dX = x - odometer.getXYT()[0];
     double dY = y - odometer.getXYT()[1];
     // double theta = Math.atan(dX / dY);
@@ -77,23 +77,25 @@ public class Navigation {
     // Euclidean distance calculation.
     // double distance = Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2));
     double theta = 0;
-    if (dX > 0) {
+    if (dX > 0.1) {
       turnTo(90);
       theta = 90;
-    } else if (dX < 0) {
+    } else if (dX < -0.1) {
       turnTo(-90);
       theta = -90;
     }
     moveWithCorrection(dX, theta);
-
-    if (dY > 0) {
+    odometer.setX(x);
+    
+    if (dY > 0.1) {
       turnTo(0);
       theta = 0;
-    } else if (dY < 0) {
+    } else if (dY < -0.1) {
       turnTo(180);
       theta = 180;
     }
     moveWithCorrection(dY, theta);
+    odometer.setY(y);
   }
 
   /**
@@ -104,13 +106,12 @@ public class Navigation {
   public synchronized void moveWithCorrection(double distance, double theta) {
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
-    int tiles = (int) distance;
-    double more = distance - tiles;
+
+    //correct error of the distance
+    int tiles = Math.abs((int)Math.round(distance));
     for (int i = 0; i < tiles; i++) {
       moveOneTileWithCorrection(theta);
     }
-    leftMotor.rotate(convertDistance(Game.WHEEL_RAD, more * Game.TILE), true);
-    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, more * Game.TILE), true);
   }
 
   private void moveOneTileWithCorrection(double theta) {
@@ -120,12 +121,10 @@ public class Navigation {
       double left = data.getL()[0];
       double right = data.getL()[1];
       if (left < -5) {
-        Sound.beep();
         leftMotor.stop(true);
       }
 
       if (right < -5) {
-        Sound.beep();
         rightMotor.stop(true);
       }
     }
@@ -201,7 +200,7 @@ public class Navigation {
    * 
    * @param angle The angle to rotate our robot to
    */
-  public void rotate(int angle) {
+  public void turn(int angle) {
     leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, angle), true);
     rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, angle), false);
   }
