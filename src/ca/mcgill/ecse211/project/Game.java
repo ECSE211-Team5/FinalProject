@@ -5,7 +5,6 @@ import ca.mcgill.ecse211.localization.UltrasonicLocalizer;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.threads.LightPoller;
-import ca.mcgill.ecse211.threads.RingSearcher;
 import ca.mcgill.ecse211.threads.SensorData;
 import ca.mcgill.ecse211.threads.ThreadControl;
 import ca.mcgill.ecse211.threads.UltrasonicPoller;
@@ -13,7 +12,6 @@ import lejos.hardware.Button;
 import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.lcd.TextLCD;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
-import lejos.hardware.motor.EV3MediumRegulatedMotor;
 import lejos.hardware.port.Port;
 import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
@@ -309,12 +307,12 @@ public enum Game {
    * This variable decides when GameParameter data has been successfully read over WiFi
    */
   private static boolean hasReadData;
-
+  
   /**
    * Read data from the WiFi class (using another thread)
    */
   public synchronized void readData() {
-    WiFi wifi = new WiFi();
+    WiFi wifi = new WiFi(); 
   }
 
   /**
