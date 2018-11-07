@@ -33,13 +33,13 @@ public class Main {
    */
   public static void main(String[] args) {
     try {
-      Game.preparation(); // for brevity and less object instantiations
+      Game.INSTANCE.preparation(); // for brevity and less object instantiations
       if (test) {
         Button.waitForAnyPress(); // Wait for a button on the EV3 Brick to be pressed
         (new Thread() {
           public void run() {
             try {
-              ComponentTest.runTest(testType);
+              ComponentTest.tunnelTest();
             } catch (Exception e) {
               // TODO Auto-generated catch block
               e.printStackTrace();
@@ -47,7 +47,7 @@ public class Main {
           }
         }).start();
       } else {
-        Game.runGame(); // for brevity and less object instantiations
+        Game.INSTANCE.runGame(); // for brevity and less object instantiations
       }
       Button.waitForAnyPress();
       System.exit(0);

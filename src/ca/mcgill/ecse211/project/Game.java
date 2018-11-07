@@ -43,7 +43,7 @@ public enum Game {
   /**
    * This variable stores the current state that our robot is in during a competition
    */
-  private static Status status = Status.Idle;
+  private Status status = Status.Idle;
 
   // ------------------------
   // INTERFACE
@@ -53,7 +53,7 @@ public enum Game {
    * 
    * @return A string of the status variable
    */
-  public static String getStatusFullName() {
+  public String getStatusFullName() {
     return status.toString();
   }
 
@@ -62,7 +62,7 @@ public enum Game {
    * 
    * @return A Status enumeration value
    */
-  public static Status getStatus() {
+  public Status getStatus() {
     return status;
   }
 
@@ -71,7 +71,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean ready()
+  public boolean ready(UltrasonicLocalizer us, LightLocalizer lgLoc)
   {
     boolean wasEventProcessed = false;
     
@@ -80,7 +80,12 @@ public enum Game {
     {
       case Idle:
         // line 5 "model.ump"
-        localizeAndReadData();
+        try {
+          localizeAndReadData(us, lgLoc);
+        } catch (OdometerExceptions e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
         setStatus(Status.Localized);
         wasEventProcessed = true;
         break;
@@ -234,29 +239,29 @@ public enum Game {
    * 
    * @param newStatus The new state to set as our robot's current status
    */
-  private synchronized static void setStatus(Status newStatus) {
+  private synchronized void setStatus(Status newStatus) {
     status = newStatus;
   }
 
   /**
    * This variable stores a ThreadController instance that controls our RGB sensor
    */
-  private static ThreadControl rgbPoller;
+  private ThreadControl rgbPoller;
 
   /**
    * This variable stores a ThreadController instance that controls our light sensor
    */
-  private static ThreadControl lightPoller;
+  private ThreadControl lightPoller;
 
   /**
    * This variable stores a ThreadController instance that controls our motors
    */
-  private static ThreadControl motorControlThread;
+  private ThreadControl motorControlThread;
 
   /**
    * This variable stores a ThreadController instance that controls our ultrasonic sensor
    */
-  public static ThreadControl usPoller;
+  public ThreadControl usPoller;
 
   /**
    * Motor object instance that allows control of the left motor connected to port A
@@ -302,11 +307,6 @@ public enum Game {
    * This variable stores the distance between the light sensor and center of the robot in cm
    */
   public static final double SEN_DIS = 4.4;
-
-  /**
-   * This variable decides when GameParameter data has been successfully read over WiFi
-   */
-  private static boolean hasReadData;
   
   /**
    * Read data from the WiFi class (using another thread)
@@ -318,9 +318,13 @@ public enum Game {
   /**
    * This method localizes our robot to the starting position
    * localize and read data at the same time
+   * @throws OdometerExceptions 
    */
-  private synchronized void localizeAndReadData() {
-   
+  private synchronized void localizeAndReadData(UltrasonicLocalizer us, LightLocalizer lgLoc) throws OdometerExceptions {
+    us.localize(Button.ID_LEFT);
+    lgLoc.localize(GameParameters.SC);
+    int[] starting = GameParameters.SC;
+    Odometer.getOdometer().setXYT(starting[0], starting[1], starting[2]);
   }
 
   /**
@@ -371,7 +375,7 @@ public enum Game {
    * 
    * @throws OdometerExceptions
    */
-  public static void preparation() throws OdometerExceptions {
+  public void preparation() throws OdometerExceptions {
     // Motor Objects, and Robot related parameters
     Port usPort = LocalEV3.get().getPort("S1");
     // initialize multiple light ports in main
@@ -437,7 +441,7 @@ public enum Game {
    * 
    * @throws OdometerExceptions
    */
-  public static void runGame() throws OdometerExceptions {
+  public void runGame() throws OdometerExceptions {
     final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
     // Start localizing
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
@@ -449,14 +453,8 @@ public enum Game {
       public void run() {
         // target color
 
-        INSTANCE.ready();
-        try {
-          while (!hasReadData)
-            wait();
-        } catch (InterruptedException e) {
-          // TODO Auto-generated catch block
-          e.printStackTrace();
-        }
+        INSTANCE.ready(usLoc, lgLoc);
+
         usLoc.localize(buttonChoice);
         lgLoc.localize(GameParameters.SC);
        // searcher.search();
