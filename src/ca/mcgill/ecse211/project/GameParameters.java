@@ -113,6 +113,26 @@ public enum GameParameters {
    * max Green_UR[1] - Green_LL[1] = 10
    */
   public static int[] Green_UR = {15, 4};
+  
+  /**
+   * This variable stores the lower left hand corner of the island zone
+   * [0] = x coordinate, [1] = y coordinate
+   * min Island_UR[0] - Island_LL[0] = 2
+   * max Island_UR[0] - Island_LL[0] = 10
+   * min Island_UR[1] - Island_LL[1] = 2
+   * max Island_UR[1] - Island_LL[1] = 10 
+   */
+  public static int[] Island_LL = {10, 0};
+
+  /**
+   * This variable stores the upper right hand corner of the island zone
+   * [0] = x coordinate, [1] = y coordinate
+   * min Island_UR[0] - Island_LL[0] = 2
+   * max Island_UR[0] - Island_LL[0] = 10
+   * min Island_UR[1] - Island_LL[1] = 2
+   * max Island_UR[1] - Island_LL[1] = 10
+   */
+  public static int[] Island_UR = {15, 4};
 
   /**
    * This variable stores the lower left hand corner of the red tunnel footprint

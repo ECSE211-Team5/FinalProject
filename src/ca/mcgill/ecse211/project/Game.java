@@ -312,7 +312,7 @@ public enum Game {
    * Read data from the WiFi class (using another thread)
    */
   public synchronized void readData() {
-    WiFi wifi = new WiFi(); 
+    //WiFi wifi = new WiFi(); 
   }
 
   /**
