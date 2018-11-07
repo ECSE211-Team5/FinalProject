@@ -4,6 +4,7 @@ import ca.mcgill.ecse211.localization.LightLocalizer;
 import ca.mcgill.ecse211.localization.UltrasonicLocalizer;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
+import ca.mcgill.ecse211.project.GameParameters.DemoType;
 import ca.mcgill.ecse211.threads.LightPoller;
 import ca.mcgill.ecse211.threads.SensorData;
 import ca.mcgill.ecse211.threads.ThreadControl;
@@ -312,7 +313,8 @@ public enum Game {
    * Read data from the WiFi class (using another thread)
    */
   public synchronized void readData() {
-    //WiFi wifi = new WiFi(); 
+    //WiFi wifi = new WiFi();
+    WiFi.readData();
   }
 
   /**
@@ -439,6 +441,8 @@ public enum Game {
    */
   public static void runGame() throws OdometerExceptions {
     final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
+    GameParameters.Demo = DemoType.Beta;
+    GameParameters.PlayerTeamNumber = 1;
     // Start localizing
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);

@@ -15,20 +15,18 @@ import ca.mcgill.ecse211.WiFiClient.WifiConnection;
  */
 public enum WiFi {
   INSTANCE;
-  
+
   // ** Set these as appropriate for your team and current situation **
   private static final String SERVER_IP = "192.168.2.1";
-  private static final int TEAM_NUMBER = 1;
 
-  // Enable/disable printing of debug info from the WiFi class
-  private static final boolean ENABLE_DEBUG_WIFI_PRINT = true;
-  
-  private WifiConnection conn = new WifiConnection(SERVER_IP, TEAM_NUMBER, ENABLE_DEBUG_WIFI_PRINT);
-  
   /**
-   * read data from wifi
+   * This method sets up a connection to a locally hosted server and reads Game Parameter values
+   * from it.
    */
-  public void readData() {
+  public static void readData() {
+    WifiConnection connection =
+        new WifiConnection(SERVER_IP, GameParameters.PlayerTeamNumber, true);
+
     try {
       /*
        * getData() will connect to the server and wait until the user/TA presses the "Start" button
@@ -41,9 +39,9 @@ public enum WiFi {
        * will receive a message saying an invalid team number was specified and getData() will throw
        * an exception letting you know.
        */
-      Map data = conn.getData();
-      
-      //GameParameters.SC = ((Long) data.get("RedTeam")).intValue();
+      Map data = connection.getData();
+
+      // GameParameters.SC = ((Long) data.get("RedTeam")).intValue();
       GameParameters.RedTeam = ((Long) data.get("RedTeam")).intValue();
       GameParameters.GreenTeam = ((Long) data.get("GreenTeam")).intValue();
       GameParameters.RedCorner = ((Long) data.get("RedCorner")).intValue();
@@ -53,61 +51,114 @@ public enum WiFi {
       GameParameters.Red_LL[1] = ((Long) data.get("Red_LL_y")).intValue();
       GameParameters.Red_UR[0] = ((Long) data.get("Red_UR_x")).intValue();
       GameParameters.Red_UR[1] = ((Long) data.get("Red_UR_y")).intValue();
-      
+
       GameParameters.Green_LL[0] = ((Long) data.get("Green_LL_x")).intValue();
       GameParameters.Green_LL[1] = ((Long) data.get("Green_LL_y")).intValue();
       GameParameters.Green_UR[0] = ((Long) data.get("Green_UR_x")).intValue();
       GameParameters.Green_UR[1] = ((Long) data.get("Green_UR_y")).intValue();
-      
-      //GameParameters.Grid_LL[0] = ((Long) data.get("Green_LL_x")).intValue();
-      //GameParameters.Grid_LL[1] = ((Long) data.get("Green_LL_y")).intValue();
-      //GameParameters.Grid_UR[0] = ((Long) data.get("Green_UR_x")).intValue();
-      //GameParameters.Grid_UR[1] = ((Long) data.get("Green_UR_y")).intValue();
 
       GameParameters.Island_LL[0] = ((Long) data.get("Island_LL_x")).intValue();
       GameParameters.Island_LL[1] = ((Long) data.get("Island_LL_y")).intValue();
       GameParameters.Island_UR[0] = ((Long) data.get("Island_UR_x")).intValue();
       GameParameters.Island_UR[1] = ((Long) data.get("Island_UR_y")).intValue();
 
-      GameParameters.BRR_LL[0] = ((Long) data.get("TNR_LL_x")).intValue();
-      GameParameters.BRR_LL[1] = ((Long) data.get("TNR_LL_y")).intValue();
-      GameParameters.BRR_UR[0] = ((Long) data.get("TNR_UR_x")).intValue();
-      GameParameters.BRR_UR[1] = ((Long) data.get("TNR_UR_y")).intValue();
-      
-      GameParameters.BRG_LL[0] = ((Long) data.get("TNG_LL_x")).intValue();
-      GameParameters.BRG_LL[1] = ((Long) data.get("TNG_LL_y")).intValue();
-      GameParameters.BRG_UR[0] = ((Long) data.get("TNG_UR_x")).intValue();
-      GameParameters.BRG_UR[1] = ((Long) data.get("TNG_UR_y")).intValue();
-      
-      GameParameters.TR_LL[0] = ((Long) data.get("TR_x")).intValue();
-      GameParameters.TR_LL[1] = ((Long) data.get("TR_y")).intValue();
-      GameParameters.TR_UR[0] = ((Long) data.get("Island_UR_x")).intValue();
-      GameParameters.TR_UR[1] = ((Long) data.get("Island_UR_y")).intValue();
-      
-      GameParameters.TG_LL[0] = ((Long) data.get("TG_x")).intValue();
-      GameParameters.TG_LL[1] = ((Long) data.get("TG_y")).intValue();
-      GameParameters.TG_UR[0] = ((Long) data.get("Island_UR_x")).intValue();
-      GameParameters.TG_UR[1] = ((Long) data.get("Island_UR_y")).intValue();
-      
-      // Example 1: Print out all received data
-      System.out.println("Map:\n" + data);
+      GameParameters.TNR_LL[0] = ((Long) data.get("TNR_LL_x")).intValue();
+      GameParameters.TNR_LL[1] = ((Long) data.get("TNR_LL_y")).intValue();
+      GameParameters.TNR_UR[0] = ((Long) data.get("TNR_UR_x")).intValue();
+      GameParameters.TNR_UR[1] = ((Long) data.get("TNR_UR_y")).intValue();
 
-      // Example 2 : Print out specific values
-      int redTeam = ((Long) data.get("RedTeam")).intValue();
-      System.out.println("Red Team: " + redTeam);
+      GameParameters.TNG_LL[0] = ((Long) data.get("TNG_LL_x")).intValue();
+      GameParameters.TNG_LL[1] = ((Long) data.get("TNG_LL_y")).intValue();
+      GameParameters.TNG_UR[0] = ((Long) data.get("TNG_UR_x")).intValue();
+      GameParameters.TNG_UR[1] = ((Long) data.get("TNG_UR_y")).intValue();
 
-      int TR_x = ((Long) data.get("TR_x")).intValue();
-      System.out.println("X component of the red ring tree: " + TR_x);
+      GameParameters.TR[0] = ((Long) data.get("TR_x")).intValue();
+      GameParameters.TR[1] = ((Long) data.get("TR_y")).intValue();
 
-      // Example 3: Compare value
-      int tn_ll_x =  ((Long) data.get("TNR_LL_x")).intValue();
-      if (tn_ll_x < 5) {
-        System.out.println("Red Tunnel LL corner X < 5");
+      GameParameters.TG[0] = ((Long) data.get("TG_x")).intValue();
+      GameParameters.TG[1] = ((Long) data.get("TG_y")).intValue();
+
+      if (GameParameters.Demo == GameParameters.DemoType.Beta) {
+        GameParameters.Grid_UR[0] = 8;
+        GameParameters.Grid_UR[1] = 8;
+
+        if (GameParameters.Green_UR[0] - GameParameters.Green_LL[0] < 2
+            || GameParameters.Green_UR[0] - GameParameters.Green_LL[0] > 8
+            || GameParameters.Green_UR[1] - GameParameters.Green_LL[1] < 2
+            || GameParameters.Green_UR[1] - GameParameters.Green_LL[1] > 8) {
+          throw new Exception("Green zone coordinates out of bounds");
+        }
+
+        if (GameParameters.Island_UR[0] - GameParameters.Island_LL[0] < 2
+            || GameParameters.Island_UR[0] - GameParameters.Island_LL[0] > 8
+            || GameParameters.Island_UR[1] - GameParameters.Island_LL[1] < 2
+            || GameParameters.Island_UR[1] - GameParameters.Island_LL[1] > 8) {
+          throw new Exception("Green zone coordinates out of bounds");
+        }
+
+        if (GameParameters.TNG_UR[0] - GameParameters.TNG_LL[0] < 1
+            || GameParameters.TNG_UR[0] - GameParameters.TNG_LL[0] > 2
+            || GameParameters.TNG_UR[1] - GameParameters.TNG_LL[1] < 1
+            || GameParameters.TNG_UR[1] - GameParameters.TNG_LL[1] > 2) {
+          throw new Exception("Green tunnel coordinates out of bounds");
+        }
+
+        if (GameParameters.TG[0] < 0 || GameParameters.TG[0] > 7 || GameParameters.TG[1] < 0
+            || GameParameters.TG[1] > 7) {
+          throw new Exception("Green tree coordinates out of bounds");
+        }
+      } else {
+        GameParameters.Grid_UR[0] = 15;
+        GameParameters.Grid_UR[1] = 9;
+
+        if (GameParameters.Red_UR[0] - GameParameters.Red_LL[0] < 2
+            || GameParameters.Red_UR[0] - GameParameters.Red_LL[0] > 10
+            || GameParameters.Red_UR[1] - GameParameters.Red_LL[1] < 2
+            || GameParameters.Red_UR[1] - GameParameters.Red_LL[1] > 10) {
+          throw new Exception("Red zone coordinates out of bounds");
+        }
+
+        if (GameParameters.Green_UR[0] - GameParameters.Green_LL[0] < 2
+            || GameParameters.Green_UR[0] - GameParameters.Green_LL[0] > 10
+            || GameParameters.Green_UR[1] - GameParameters.Green_LL[1] < 2
+            || GameParameters.Green_UR[1] - GameParameters.Green_LL[1] > 10) {
+          throw new Exception("Green zone coordinates out of bounds");
+        }
+
+        if (GameParameters.Island_UR[0] - GameParameters.Island_LL[0] < 2
+            || GameParameters.Island_UR[0] - GameParameters.Island_LL[0] > 10
+            || GameParameters.Island_UR[1] - GameParameters.Island_LL[1] < 2
+            || GameParameters.Island_UR[1] - GameParameters.Island_LL[1] > 10) {
+          throw new Exception("Island zone coordinates out of bounds");
+        }
+
+        if (GameParameters.TNR_UR[0] - GameParameters.TNR_LL[0] < 1
+            || GameParameters.TNR_UR[0] - GameParameters.TNR_LL[0] > 2
+            || GameParameters.TNR_UR[1] - GameParameters.TNR_LL[1] < 1
+            || GameParameters.TNR_UR[1] - GameParameters.TNR_LL[1] > 2) {
+          throw new Exception("Red tunnel coordinates out of bounds");
+        }
+
+        if (GameParameters.TNG_UR[0] - GameParameters.TNG_LL[0] < 1
+            || GameParameters.TNG_UR[0] - GameParameters.TNG_LL[0] > 2
+            || GameParameters.TNG_UR[1] - GameParameters.TNG_LL[1] < 1
+            || GameParameters.TNG_UR[1] - GameParameters.TNG_LL[1] > 2) {
+          throw new Exception("Green tunnel coordinates out of bounds");
+        }
+
+        if (GameParameters.TR[0] < 0 || GameParameters.TR[0] > 14 || GameParameters.TR[1] < 0
+            || GameParameters.TR[1] > 8) {
+          throw new Exception("Red tree coordinates out of bounds");
+        }
+
+        if (GameParameters.TG[0] < 0 || GameParameters.TG[0] > 14 || GameParameters.TG[1] < 0
+            || GameParameters.TG[1] > 8) {
+          throw new Exception("Green tree coordinates out of bounds");
+        }
       }
-      else {
-        System.out.println("Red Tunnel LL corner X >= 5");
-      }
-
+      
+      //set SC here
+      //GameParameters.SC[0];
     } catch (Exception e) {
       System.err.println("Error: " + e.getMessage());
     }
