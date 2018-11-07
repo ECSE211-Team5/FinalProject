@@ -73,7 +73,7 @@ public enum ComponentTest {
     nav.travelToWithCorrection(0, 0, false);
   }
   
-  public static void tunnelTest() throws OdometerExceptions {
+  public static void tunnelTest() throws Exception {
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
 
     UltrasonicLocalizer us = new UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);

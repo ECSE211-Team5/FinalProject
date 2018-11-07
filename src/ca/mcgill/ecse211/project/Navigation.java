@@ -197,11 +197,20 @@ public class Navigation {
    * found the tunnel based on the ll and ur coordinate, after the method, the robot will go the 
    * the entrance of the tunnel facing the tunnel it returns the distance it needs to go for [x] and [y]
    * in order to go through the tunnel
+   * @throws Exception 
    */
-  public void goThroughTunnel() {
+  public void goThroughTunnel() throws Exception {
     int distance = 0;
-    int[] ll = GameParameters.TN_LL;
-    int[] ur = GameParameters.TN_UR;
+    int[] ll, ur;
+    if(GameParameters.PlayerTeamNumber == GameParameters.RedTeam) {
+      ll = GameParameters.TNR_LL;
+      ur = GameParameters.TNR_UR;
+    } else if (GameParameters.PlayerTeamNumber == GameParameters.GreenTeam) {
+      ll = GameParameters.TNG_LL;
+      ur = GameParameters.TNG_UR;
+    } else {
+      throw new Exception ("Invalid team number");
+    }
     int[] lr = {ll[0], ur[1]};
     int[] ul = {ur[0], ll[1]};
     ArrayList<int[]> notIn = new ArrayList<int[]>();

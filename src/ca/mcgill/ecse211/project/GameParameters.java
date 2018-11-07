@@ -17,7 +17,7 @@ public enum GameParameters {
    * This enumeration contains the possible types of areas that our robot is currently located in
    */
   public enum AreaType {
-    Starting, Searching, Dangerous, StartingBoundary, SearchingBoundary
+    InStarting, Searching, Dangerous, StartingBoundary, SearchingBoundary
   }
   
   /**
@@ -30,7 +30,7 @@ public enum GameParameters {
   /**
    * This variable stores the current area that our robot is in during a competition
    */
-  public static AreaType Area = AreaType.Starting;
+  public static AreaType Area = AreaType.InStarting;
   
   /**
    * This variable stores the current demo type that our robot is in during a competition
@@ -213,9 +213,32 @@ public enum GameParameters {
    * @param x x coordinate
    * @param y y coordinate
    * @return the type of area the point belongs to
+   * @throws Exception 
    */
-  public static AreaType getType(double x, double y) {
-    // TODO: switch the area enum store
-    return Area;
+  public static AreaType getType(int x, int y) throws Exception {
+    if(PlayerTeamNumber == RedTeam) {
+      if(x >= Red_LL[0] && x <= Red_UR[0] && y >= Red_LL[1] && y <= Red_UR[1]) {
+        return AreaType.InStarting;
+      }
+    } else if (PlayerTeamNumber == GreenTeam) {
+      if(x >= Green_LL[0] && x <= Green_UR[0] && y >= Green_LL[1] && y <= Green_UR[1]) {
+        return AreaType.InStarting;
+      }
+    } else {
+        throw new Exception ("Invalid team number");
+    }
+    
+    return AreaType.Dangerous;
+  }
+  
+  public static double[] average(int[] p1, int[] p2) {
+    double[] result = new double[2];
+    result[0] = (double)(p1[0]+p2[0])/2;
+    result[1] = (double)(p1[1]+p2[1])/2;
+    return result;
+  }
+  
+  public static int distanceFromStartingPoint(int x, int y) {
+    return (int)(Math.pow(SC[0] - x, 2) + Math.pow(SC[1] - y, 2));
   }
 }
