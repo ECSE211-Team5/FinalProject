@@ -102,7 +102,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean navigateToTunnel()
+  public boolean navigateToTunnel(Navigation navigation)
   {
     boolean wasEventProcessed = false;
     
@@ -111,7 +111,7 @@ public enum Game {
     {
       case Localized:
         // line 8 "model.ump"
-        navigateTunnel();
+        navigateTunnel(navigation);
         setStatus(Status.AtTunnel);
         wasEventProcessed = true;
         break;
@@ -332,8 +332,13 @@ public enum Game {
   /**
    * This method navigates our robot to and go through the tunnel (from safe area to search area)
    */
-  private void navigateTunnel() {
-    
+  private void navigateTunnel(Navigation nav) {
+    try {
+      nav.goThroughTunnel();
+    } catch (Exception e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
   
   /**
@@ -458,9 +463,7 @@ public enum Game {
         // target color
 
         INSTANCE.ready(usLoc, lgLoc);
-
-        usLoc.localize(buttonChoice);
-        lgLoc.localize(GameParameters.SC);
+        INSTANCE.navigateTunnel(navigation);
        // searcher.search();
         //searcher.retrieveRing();
         // ug collision detection always on

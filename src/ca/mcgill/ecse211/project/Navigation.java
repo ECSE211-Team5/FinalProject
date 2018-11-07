@@ -233,10 +233,12 @@ public class Navigation {
     leftMotor.backward();
     rightMotor.backward();
     moveUntilLineDetection();
+    //move for one line to correct in the entrance
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.forward();
     rightMotor.forward();
+    //travel through the tunnel
     moveUntilLineDetection();
     forward(250, distance);
   }

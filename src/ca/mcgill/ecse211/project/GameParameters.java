@@ -81,12 +81,12 @@ public enum GameParameters {
   /**
    * This variable stores the starting corner for the red team, possible values are [0,3]
    */
-  public static int RedCorner = -1;
+  public static int UsCorner = -1;
   
   /**
    * This variable stores the starting corner for the green team, possible values are [0,3]
    */
-  public static int GreenCorner = -1;
+  public static int OCorner = -1;
 
   /**
    * This variable stores the lower left hand corner of the red zone
@@ -116,7 +116,7 @@ public enum GameParameters {
    * min Green_UR[1] - Green_LL[1] = 2
    * max Green_UR[1] - Green_LL[1] = 10 
    */
-  public static int[] Green_LL = {10, 0};
+  public static int[] OPPO_LL = {10, 0};
 
   /**
    * This variable stores the upper right hand corner of the green zone
@@ -126,7 +126,7 @@ public enum GameParameters {
    * min Green_UR[1] - Green_LL[1] = 2
    * max Green_UR[1] - Green_LL[1] = 10
    */
-  public static int[] Green_UR = {15, 4};
+  public static int[] OPPO_UR = {15, 4};
   
   /**
    * This variable stores the lower left hand corner of the island zone
@@ -196,7 +196,7 @@ public enum GameParameters {
    * min TR_UR[1] - TR_LL[1] = 1
    * max TR_UR[1] - TR_LL[1] = 1
    */
-  public static int[] TR = {7, 6};
+  public static int[] TREE_US = {7, 6};
 
   /**
    * This variable stores the coordinates of the green player ring set
@@ -206,7 +206,7 @@ public enum GameParameters {
    * min TG_UR[1] - TG_LL[1] = 1
    * max TG_UR[1] - TG_LL[1] = 1
    */
-  public static int[] TG = {13, 7};
+  public static int[] TTEE_O = {13, 7};
   
   /**
    * Giving a coordinate, find the type of area it belongs to

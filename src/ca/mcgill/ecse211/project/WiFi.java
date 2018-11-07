@@ -40,27 +40,52 @@ public enum WiFi {
        * an exception letting you know.
        */
       Map data = connection.getData();
-      String tunnel = "TNG_LL_x";
+      String tunnelUs = "TNR_LL_";
+      String tunnelO = "TNG_LL_";
+      String ringUs = "TR_";
+      String ringO = "TG_";
+      String startingUs = "Red_";
+      String startingO = "Green_";
+      String cornerUs = "RedCorner";
+      String cornerO = "GreenCorner";
       
-      
-      // GameParameters.SC = ((Long) data.get("RedTeam")).intValue();
       GameParameters.RedTeam = ((Long) data.get("RedTeam")).intValue();
       GameParameters.GreenTeam = ((Long) data.get("GreenTeam")).intValue();
- 
+      if(GameParameters.RedTeam == GameParameters.PlayerTeamNumber) {
+      }else if(GameParameters.GreenTeam == GameParameters.PlayerTeamNumber) {
+        String s = tunnelO;
+        tunnelO = tunnelUs;
+        tunnelUs = s;
+        //change ring set
+        s = ringO;
+        ringO = ringUs;
+        ringUs = s;
+        //change starting corner
+        s = startingUs;
+        startingO = startingUs;
+        startingUs = s;
+        //change corner
+        s = cornerO;
+        cornerO = cornerUs;
+        cornerUs = s;
+        
+      }else {
+        throw new Exception("Bad Team Number");
+      }
       
       
-      GameParameters.RedCorner = ((Long) data.get("RedCorner")).intValue();
-      GameParameters.GreenCorner = ((Long) data.get("GreenCorner")).intValue();
+      GameParameters.UsCorner = ((Long) data.get(cornerUs)).intValue();
+      GameParameters.OCorner = ((Long) data.get(cornerO)).intValue();
 
-      GameParameters.US_LL[0] = ((Long) data.get("Red_LL_x")).intValue();
-      GameParameters.US_LL[1] = ((Long) data.get("Red_LL_y")).intValue();
-      GameParameters.US_UR[0] = ((Long) data.get("Red_UR_x")).intValue();
-      GameParameters.US_UR[1] = ((Long) data.get("Red_UR_y")).intValue();
+      GameParameters.US_LL[0] = ((Long) data.get(startingUs+"LL_x")).intValue();
+      GameParameters.US_LL[1] = ((Long) data.get(startingUs+"LL_y")).intValue();
+      GameParameters.US_UR[0] = ((Long) data.get(startingUs+"UR_x")).intValue();
+      GameParameters.US_UR[1] = ((Long) data.get(startingUs+"UR_y")).intValue();
 
-      GameParameters.Green_LL[0] = ((Long) data.get("Green_LL_x")).intValue();
-      GameParameters.Green_LL[1] = ((Long) data.get("Green_LL_y")).intValue();
-      GameParameters.Green_UR[0] = ((Long) data.get("Green_UR_x")).intValue();
-      GameParameters.Green_UR[1] = ((Long) data.get("Green_UR_y")).intValue();
+      GameParameters.OPPO_LL[0] = ((Long) data.get(startingO+"LL_x")).intValue();
+      GameParameters.OPPO_LL[1] = ((Long) data.get(startingO+"LL_y")).intValue();
+      GameParameters.OPPO_UR[0] = ((Long) data.get(startingO+"UR_x")).intValue();
+      GameParameters.OPPO_UR[1] = ((Long) data.get(startingO+"UR_y")).intValue();
       
       //GameParameters.Grid_LL[0] = ((Long) data.get("Green_LL_x")).intValue();
       //GameParameters.Grid_LL[1] = ((Long) data.get("Green_LL_y")).intValue();
@@ -72,30 +97,49 @@ public enum WiFi {
       GameParameters.Island_UR[0] = ((Long) data.get("Island_UR_x")).intValue();
       GameParameters.Island_UR[1] = ((Long) data.get("Island_UR_y")).intValue();
 
-      GameParameters.TN_LL[0] = ((Long) data.get("TNR_LL_x")).intValue();
-      GameParameters.TN_LL[1] = ((Long) data.get("TNR_LL_y")).intValue();
-      GameParameters.TN_UR[0] = ((Long) data.get("TNR_UR_x")).intValue();
-      GameParameters.TN_UR[1] = ((Long) data.get("TNR_UR_y")).intValue();
+      GameParameters.TN_LL[0] = ((Long) data.get(tunnelUs+"LL_x")).intValue();
+      GameParameters.TN_LL[1] = ((Long) data.get(tunnelUs+"LL_y")).intValue();
+      GameParameters.TN_UR[0] = ((Long) data.get(tunnelUs+"UR_x")).intValue();
+      GameParameters.TN_UR[1] = ((Long) data.get(tunnelUs+"UR_y")).intValue();
 
-      GameParameters.TNO_LL[0] = ((Long) data.get("TNG_LL_x")).intValue();
-      GameParameters.TNO_LL[1] = ((Long) data.get("TNG_LL_y")).intValue();
-      GameParameters.TNO_UR[0] = ((Long) data.get("TNG_UR_x")).intValue();
-      GameParameters.TNO_UR[1] = ((Long) data.get("TNG_UR_y")).intValue();
+      GameParameters.TNO_LL[0] = ((Long) data.get(tunnelO+"LL_x")).intValue();
+      GameParameters.TNO_LL[1] = ((Long) data.get(tunnelO+"LL_y")).intValue();
+      GameParameters.TNO_UR[0] = ((Long) data.get(tunnelO+"UR_x")).intValue();
+      GameParameters.TNO_UR[1] = ((Long) data.get(tunnelO+"UR_y")).intValue();
 
-      GameParameters.TR[0] = ((Long) data.get("TR_x")).intValue();
-      GameParameters.TR[1] = ((Long) data.get("TR_y")).intValue();
+      GameParameters.TREE_US[0] = ((Long) data.get(ringUs+"x")).intValue();
+      GameParameters.TREE_US[1] = ((Long) data.get(ringUs+"y")).intValue();
 
-      GameParameters.TG[0] = ((Long) data.get("TG_x")).intValue();
-      GameParameters.TG[1] = ((Long) data.get("TG_y")).intValue();
+      GameParameters.TTEE_O[0] = ((Long) data.get(ringO+"x")).intValue();
+      GameParameters.TTEE_O[1] = ((Long) data.get(ringO+"y")).intValue();
 
       if (GameParameters.Demo == GameParameters.DemoType.Beta) {
         GameParameters.Grid_UR[0] = 8;
         GameParameters.Grid_UR[1] = 8;
+        
+        switch(GameParameters.UsCorner) {
+          case 0:
+            int[] sc0 = {1,1,0};
+            GameParameters.SC = sc0;
+            break;
+          case 1:
+            int[] sc1 = {7,1,0};
+            GameParameters.SC = sc1;
+            break;
+          case 2:
+            int[] sc2 = {1,7,180};
+            GameParameters.SC = sc2;
+            break;
+          case 3:
+            int[] sc3 = {7,7,180};
+            GameParameters.SC = sc3;
+            break;
+        }
 
-        if (GameParameters.Green_UR[0] - GameParameters.Green_LL[0] < 2
-            || GameParameters.Green_UR[0] - GameParameters.Green_LL[0] > 8
-            || GameParameters.Green_UR[1] - GameParameters.Green_LL[1] < 2
-            || GameParameters.Green_UR[1] - GameParameters.Green_LL[1] > 8) {
+        if (GameParameters.OPPO_UR[0] - GameParameters.OPPO_LL[0] < 2
+            || GameParameters.OPPO_UR[0] - GameParameters.OPPO_LL[0] > 8
+            || GameParameters.OPPO_UR[1] - GameParameters.OPPO_LL[1] < 2
+            || GameParameters.OPPO_UR[1] - GameParameters.OPPO_LL[1] > 8) {
           throw new Exception("Green zone coordinates out of bounds");
         }
 
@@ -113,14 +157,33 @@ public enum WiFi {
           throw new Exception("Green tunnel coordinates out of bounds");
         }
 
-        if (GameParameters.TG[0] < 0 || GameParameters.TG[0] > 7 || GameParameters.TG[1] < 0
-            || GameParameters.TG[1] > 7) {
+        if (GameParameters.TTEE_O[0] < 0 || GameParameters.TTEE_O[0] > 7 || GameParameters.TTEE_O[1] < 0
+            || GameParameters.TTEE_O[1] > 7) {
           throw new Exception("Green tree coordinates out of bounds");
         }
       } else {
         GameParameters.Grid_UR[0] = 15;
         GameParameters.Grid_UR[1] = 9;
-
+ 
+        switch(GameParameters.UsCorner) {
+          case 0:
+            int[] sc0 = {1,1,0};
+            GameParameters.SC = sc0;
+            break;
+          case 1:
+            int[] sc1 = {14,1,0};
+            GameParameters.SC = sc1;
+            break;
+          case 2:
+            int[] sc2 = {1,8,180};
+            GameParameters.SC = sc2;
+            break;
+          case 3:
+            int[] sc3 = {14,8,180};
+            GameParameters.SC = sc3;
+            break;
+        }
+        
         if (GameParameters.US_UR[0] - GameParameters.US_LL[0] < 2
             || GameParameters.US_UR[0] - GameParameters.US_LL[0] > 10
             || GameParameters.US_UR[1] - GameParameters.US_LL[1] < 2
@@ -128,10 +191,10 @@ public enum WiFi {
           throw new Exception("Red zone coordinates out of bounds");
         }
 
-        if (GameParameters.Green_UR[0] - GameParameters.Green_LL[0] < 2
-            || GameParameters.Green_UR[0] - GameParameters.Green_LL[0] > 10
-            || GameParameters.Green_UR[1] - GameParameters.Green_LL[1] < 2
-            || GameParameters.Green_UR[1] - GameParameters.Green_LL[1] > 10) {
+        if (GameParameters.OPPO_UR[0] - GameParameters.OPPO_LL[0] < 2
+            || GameParameters.OPPO_UR[0] - GameParameters.OPPO_LL[0] > 10
+            || GameParameters.OPPO_UR[1] - GameParameters.OPPO_LL[1] < 2
+            || GameParameters.OPPO_UR[1] - GameParameters.OPPO_LL[1] > 10) {
           throw new Exception("Green zone coordinates out of bounds");
         }
 
@@ -156,13 +219,13 @@ public enum WiFi {
           throw new Exception("Green tunnel coordinates out of bounds");
         }
 
-        if (GameParameters.TR[0] < 0 || GameParameters.TR[0] > 14 || GameParameters.TR[1] < 0
-            || GameParameters.TR[1] > 8) {
+        if (GameParameters.TREE_US[0] < 0 || GameParameters.TREE_US[0] > 14 || GameParameters.TREE_US[1] < 0
+            || GameParameters.TREE_US[1] > 8) {
           throw new Exception("Red tree coordinates out of bounds");
         }
 
-        if (GameParameters.TG[0] < 0 || GameParameters.TG[0] > 14 || GameParameters.TG[1] < 0
-            || GameParameters.TG[1] > 8) {
+        if (GameParameters.TTEE_O[0] < 0 || GameParameters.TTEE_O[0] > 14 || GameParameters.TTEE_O[1] < 0
+            || GameParameters.TTEE_O[1] > 8) {
           throw new Exception("Green tree coordinates out of bounds");
         }
       }
