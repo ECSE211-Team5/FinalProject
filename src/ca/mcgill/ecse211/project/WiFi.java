@@ -13,7 +13,9 @@ import ca.mcgill.ecse211.WiFiClient.WifiConnection;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class WiFi {
+public enum WiFi {
+  INSTANCE;
+  
   // ** Set these as appropriate for your team and current situation **
   private static final String SERVER_IP = "192.168.2.1";
   private static final int TEAM_NUMBER = 1;
@@ -24,13 +26,6 @@ public class WiFi {
   private WifiConnection conn = new WifiConnection(SERVER_IP, TEAM_NUMBER, ENABLE_DEBUG_WIFI_PRINT);
   
   /**
-   * Constructs a WiFi class instance
-   */
-  public WiFi() {
-    //not needed
-  }
-  
-  /** (Not Implemented)
    * read data from wifi
    */
   public void readData() {
@@ -47,7 +42,54 @@ public class WiFi {
        * an exception letting you know.
        */
       Map data = conn.getData();
+      
+      //GameParameters.SC = ((Long) data.get("RedTeam")).intValue();
+      GameParameters.RedTeam = ((Long) data.get("RedTeam")).intValue();
+      GameParameters.GreenTeam = ((Long) data.get("GreenTeam")).intValue();
+      GameParameters.RedCorner = ((Long) data.get("RedCorner")).intValue();
+      GameParameters.GreenCorner = ((Long) data.get("GreenCorner")).intValue();
 
+      GameParameters.US_LL[0] = ((Long) data.get("Red_LL_x")).intValue();
+      GameParameters.US_LL[1] = ((Long) data.get("Red_LL_y")).intValue();
+      GameParameters.US_UR[0] = ((Long) data.get("Red_UR_x")).intValue();
+      GameParameters.US_UR[1] = ((Long) data.get("Red_UR_y")).intValue();
+      
+      GameParameters.Oppo_LL[0] = ((Long) data.get("Green_LL_x")).intValue();
+      GameParameters.Oppo_LL[1] = ((Long) data.get("Green_LL_y")).intValue();
+      GameParameters.Oppo_LL[0] = ((Long) data.get("Green_UR_x")).intValue();
+      GameParameters.Oppo_LL[1] = ((Long) data.get("Green_UR_y")).intValue();
+      
+      //GameParameters.Grid_LL[0] = ((Long) data.get("Green_LL_x")).intValue();
+      //GameParameters.Grid_LL[1] = ((Long) data.get("Green_LL_y")).intValue();
+      //GameParameters.Grid_UR[0] = ((Long) data.get("Green_UR_x")).intValue();
+      //GameParameters.Grid_UR[1] = ((Long) data.get("Green_UR_y")).intValue();
+
+      GameParameters.Island_LL[0] = ((Long) data.get("Island_LL_x")).intValue();
+      GameParameters.Island_LL[1] = ((Long) data.get("Island_LL_y")).intValue();
+      GameParameters.Island_UR[0] = ((Long) data.get("Island_UR_x")).intValue();
+      GameParameters.Island_UR[1] = ((Long) data.get("Island_UR_y")).intValue();
+
+      GameParameters.TN_LL[0] = ((Long) data.get("TNR_LL_x")).intValue();
+      GameParameters.TN_LL[1] = ((Long) data.get("TNR_LL_y")).intValue();
+      GameParameters.TN_UR[0] = ((Long) data.get("TNR_UR_x")).intValue();
+      GameParameters.TN_UR[1] = ((Long) data.get("TNR_UR_y")).intValue();
+      
+      GameParameters.TNO_LL[0] = ((Long) data.get("TNG_LL_x")).intValue();
+      GameParameters.TNO_LL[1] = ((Long) data.get("TNG_LL_y")).intValue();
+      GameParameters.TNO_UR[0] = ((Long) data.get("TNG_UR_x")).intValue();
+      GameParameters.TNO_UR[1] = ((Long) data.get("TNG_UR_y")).intValue();
+      
+      GameParameters.TR_LL[0] = ((Long) data.get("TR_x")).intValue();
+      GameParameters.TR_LL[1] = ((Long) data.get("TR_y")).intValue();
+      GameParameters.TR_UR[0] = ((Long) data.get("Island_UR_x")).intValue();
+      GameParameters.TR_UR[1] = ((Long) data.get("Island_UR_y")).intValue();
+      
+      GameParameters.TG_LL[0] = ((Long) data.get("TG_x")).intValue();
+      GameParameters.TG_LL[1] = ((Long) data.get("TG_y")).intValue();
+      GameParameters.TG_UR[0] = ((Long) data.get("Island_UR_x")).intValue();
+      GameParameters.TG_UR[1] = ((Long) data.get("Island_UR_y")).intValue();
+      
+      GameParameters.hasRead = true;
       // Example 1: Print out all received data
       System.out.println("Map:\n" + data);
 
