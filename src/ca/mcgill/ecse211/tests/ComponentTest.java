@@ -2,6 +2,7 @@ package ca.mcgill.ecse211.tests;
 
 import ca.mcgill.ecse211.localization.LightLocalizer;
 import ca.mcgill.ecse211.localization.UltrasonicLocalizer;
+import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.Game;
 import ca.mcgill.ecse211.project.GameParameters;
@@ -68,8 +69,19 @@ public enum ComponentTest {
    */
   public static void navigationTest() throws OdometerExceptions {
     Navigation nav = new Navigation(Game.leftMotor, Game.rightMotor);
-    nav.travelTo(4, 2, false);
-    nav.travelTo(0, 0, false);
+    nav.travelToWithCorrection(4, 2, false);
+    nav.travelToWithCorrection(0, 0, false);
+  }
+  
+  public static void tunnelTest() throws OdometerExceptions {
+    Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
+
+    UltrasonicLocalizer us = new UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+    LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+    us.localize(Button.ID_LEFT);
+    lgLoc.localize(GameParameters.SC);
+    Odometer.getOdometer().setXYT(1, 1, 0);
+    navigation.goThroughTunnel();
   }
 
   /**
@@ -83,13 +95,13 @@ public enum ComponentTest {
     LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
     us.localize(Button.ID_LEFT);
     lgLoc.localize(GameParameters.SC);
-    Game.usPoller.setStart(false);
-    navigation.travelTo(6, 4, false);
+    Game.INSTANCE.usPoller.setStart(false);
+    navigation.travelToWithCorrection(6, 4, false);
     Sound.twoBeeps();
-    navigation.travelTo(2, 3, false);
+    navigation.travelToWithCorrection(2, 3, false);
     Sound.twoBeeps();
-    navigation.travelTo(0, 0, false);
-    Game.usPoller.setStart(true);
+    navigation.travelToWithCorrection(0, 0, false);
+    Game.INSTANCE.usPoller.setStart(true);
 
   }
 

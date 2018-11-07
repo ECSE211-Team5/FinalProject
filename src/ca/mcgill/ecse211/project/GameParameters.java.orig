@@ -10,12 +10,11 @@ package ca.mcgill.ecse211.project;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public enum GameParameters {
-  INSTANCE;
-  
+public class GameParameters {  
   /**
    * This enumeration contains the possible types of areas that our robot is currently located in
    */
+<<<<<<< HEAD
   public enum AreaType {
     Starting, Searching, Dangerous, StartingBoundary, SearchingBoundary
   }
@@ -36,11 +35,18 @@ public enum GameParameters {
    * This variable stores the current demo type that our robot is in during a competition
    */
   public static DemoType Demo = DemoType.Beta;
+=======
+  public enum AreaType{
+    InStarting, Searching, Dangerous, StartingBoundary, SearchingBoundary
+  }
+  
+  public static boolean hasRead = false;
+>>>>>>> ad8ff9c6833a79fe64dc6c285aed65a095095a2e
   
   /**
-   * This variables holds the starting corner coordinates for our robot
+   * This variables holds the starting corner coordinates and rotation for our robot
    */
-  public static int[] SC = {0, 0};
+  public static int[] SC = {1, 1, 0};
   
   /**
    * This variable stores the lower left coordinates of the entire grid
@@ -55,6 +61,7 @@ public enum GameParameters {
   public static int[] Grid_UR = {8, 8};
 
   /**
+<<<<<<< HEAD
    * This variable holds the color of the target ring in the range [1,4]
    * 1 indicates a BLUE ring
    * 2 indicates a GREEN ring
@@ -64,6 +71,8 @@ public enum GameParameters {
   public static int TargetRing = -1;
 
   /**
+=======
+>>>>>>> ad8ff9c6833a79fe64dc6c285aed65a095095a2e
    * This variable stores the number of the team our robot is on
    */
   public static int PlayerTeamNumber = -1;
@@ -89,44 +98,44 @@ public enum GameParameters {
   public static int GreenCorner = -1;
 
   /**
-   * This variable stores the lower left hand corner of the red zone
+   * This variable stores the lower left hand corner of the our team zone
    * [0] = x coordinate, [1] = y coordinate
    * min Red_UR[0] - Red_LL[0] = 2
    * max Red_UR[0] - Red_LL[0] = 10 
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] Red_LL = {0, 5};
+  public static int[] US_LL = {0, 0};
 
   /**
-   * This variable stores the upper right hand corner of the red zone
+   * This variable stores the upper right hand corner of the out team zone
    * [0] = x coordinate, [1] = y coordinate
    * min Red_UR[0] - Red_LL[0] = 2
    * max Red_UR[0] - Red_LL[0] = 10 
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] Red_UR = {4, 9};
+  public static int[] US_UR = {4, 4};
   
   /**
-   * This variable stores the lower left hand corner of the green zone
+   * This variable stores the lower left hand corner of the other team's zone
    * [0] = x coordinate, [1] = y coordinate
    * min Green_UR[0] - Green_LL[0] = 2
    * max Green_UR[0] - Green_LL[0] = 10
    * min Green_UR[1] - Green_LL[1] = 2
    * max Green_UR[1] - Green_LL[1] = 10 
    */
-  public static int[] Green_LL = {10, 0};
+  public static int[] Oppo_LL = {10, 0};
 
   /**
-   * This variable stores the upper right hand corner of the green zone
+   * This variable stores the upper right hand corner of the other team's zone
    * [0] = x coordinate, [1] = y coordinate
    * min Green_UR[0] - Green_LL[0] = 2
    * max Green_UR[0] - Green_LL[0] = 10
    * min Green_UR[1] - Green_LL[1] = 2
    * max Green_UR[1] - Green_LL[1] = 10
    */
-  public static int[] Green_UR = {15, 4};
+  public static int[] Oppo_UR = {15, 4};
   
   /**
    * This variable stores the lower left hand corner of the island zone
@@ -149,51 +158,65 @@ public enum GameParameters {
   public static int[] Island_UR = {15, 4};
 
   /**
-   * This variable stores the lower left hand corner of the red tunnel footprint
+   * This variable stores the lower left hand corner of the our tunnel footprint
    * [0] = x coordinate, [1] = y coordinate
    * min BRR_UR[0] - BRR_LL[0] = 1
    * max BRR_UR[0] - BRR_LL[0] = 2 
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
+<<<<<<< HEAD
   public static int[] TNR_LL = {4, 7};
+=======
+  public static int[] TN_LL = {4, 2};
+>>>>>>> ad8ff9c6833a79fe64dc6c285aed65a095095a2e
 
   /**
-   * This variable stores the upper right hand corner of the red tunnel footprint
+   * This variable stores the upper right hand corner of the our tunnel footprint
    * [0] = x coordinate, [1] = y coordinate
    * min BRR_UR[0] - BRR_LL[0] = 1
    * max BRR_UR[0] - BRR_LL[0] = 2 
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
+<<<<<<< HEAD
   public static int[] TNR_UR = {6, 8};
+=======
+  public static int[] TN_UR = {6, 3};
+>>>>>>> ad8ff9c6833a79fe64dc6c285aed65a095095a2e
 
   /**
-   * This variable stores the lower left hand corner of the green tunnel footprint
+   * This variable stores the lower left hand corner of the Other Team tunnel footprint
    * [0] = x coordinate, [1] = y coordinate
    * min BRG_UR[0] - BRG_LL[0] = 1
    * max BRG_UR[0] - BRG_LL[0] = 2
    * min BRG_UR[1] - BRG_LL[1] = 1
    * max BRG_UR[1] - BRG_LL[1] = 2 
    */
+<<<<<<< HEAD
   public static int[] TNG_LL = {10, 3};
+=======
+  public static int[] TNO_LL = {10, 3};
+>>>>>>> ad8ff9c6833a79fe64dc6c285aed65a095095a2e
 
   /**
-   * This variable stores the upper right hand corner of the green tunnel footprint
+   * This variable stores the upper right hand corner of the Other Team tunnel footprint
    * [0] = x coordinate, [1] = y coordinate
    * min BRG_UR[0] - BRG_LL[0] = 1
    * max BRG_UR[0] - BRG_LL[0] = 2
    * min BRG_UR[1] - BRG_LL[1] = 1
    * max BRG_UR[1] - BRG_LL[1] = 2 
    */
+<<<<<<< HEAD
   public static int[] TNG_UR = {11, 5};
+=======
+  public static int[] TNO_UR = {11, 5};
+>>>>>>> ad8ff9c6833a79fe64dc6c285aed65a095095a2e
 
   /**
    * This variable stores the coordinates of the red player ring set
    * [0] = x coordinate, [1] = y coordinate
    * min TR_UR[0] - TR_LL[0] = 1
-   * max TR_UR[0] - TR_LL[0] = 1
-   * min TR_UR[1] - TR_LL[1] = 1
    * max TR_UR[1] - TR_LL[1] = 1
    */
   public static int[] TR = {7, 6};
@@ -202,8 +225,6 @@ public enum GameParameters {
    * This variable stores the coordinates of the green player ring set
    * [0] = x coordinate, [1] = y coordinate
    * min TG_UR[0] - TG_LL[0] = 1
-   * max TG_UR[0] - TG_LL[0] = 1
-   * min TG_UR[1] - TG_LL[1] = 1
    * max TG_UR[1] - TG_LL[1] = 1
    */
   public static int[] TG = {13, 7};
@@ -214,8 +235,28 @@ public enum GameParameters {
    * @param y y coordinate
    * @return the type of area the point belongs to
    */
+<<<<<<< HEAD
   public static AreaType getType(double x, double y) {
     // TODO: switch the area enum store
     return Area;
+=======
+  public static AreaType getType(int x, int y) {
+    if(x >= US_LL[0] && x <= US_UR[0] && y >= US_LL[1] && y <= US_UR[1]) {
+      return AreaType.InStarting;
+    }
+    
+    return AreaType.Dangerous;
+  }
+  
+  public static double[] average(int[] p1, int[] p2) {
+    double[] result = new double[2];
+    result[0] = (double)(p1[0]+p2[0])/2;
+    result[1] = (double)(p1[1]+p2[1])/2;
+    return result;
+  }
+  
+  public static int distanceFromStartingPoint(int x, int y) {
+    return (int)(Math.pow(SC[0] - x, 2) + Math.pow(SC[1] - y, 2));
+>>>>>>> ad8ff9c6833a79fe64dc6c285aed65a095095a2e
   }
 }
