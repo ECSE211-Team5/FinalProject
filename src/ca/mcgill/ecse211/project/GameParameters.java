@@ -66,7 +66,7 @@ public enum GameParameters {
   /**
    * This variable stores the number of the team our robot is on
    */
-  public static int PlayerTeamNumber = -1;
+  public static int PlayerTeamNumber = 5;
 
   /**
    * This variable stores the team starting out from the red zone, possible values are [1,20]
@@ -96,7 +96,7 @@ public enum GameParameters {
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] Red_LL = {0, 5};
+  public static int[] US_LL = {0, 5};
 
   /**
    * This variable stores the upper right hand corner of the red zone
@@ -106,7 +106,7 @@ public enum GameParameters {
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] Red_UR = {4, 9};
+  public static int[] US_UR = {4, 9};
   
   /**
    * This variable stores the lower left hand corner of the green zone
@@ -156,7 +156,7 @@ public enum GameParameters {
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
-  public static int[] TNR_LL = {4, 7};
+  public static int[] TN_LL = {4, 7};
 
   /**
    * This variable stores the upper right hand corner of the red tunnel footprint
@@ -166,7 +166,7 @@ public enum GameParameters {
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
-  public static int[] TNR_UR = {6, 8};
+  public static int[] TN_UR = {6, 8};
 
   /**
    * This variable stores the lower left hand corner of the green tunnel footprint
@@ -176,7 +176,7 @@ public enum GameParameters {
    * min BRG_UR[1] - BRG_LL[1] = 1
    * max BRG_UR[1] - BRG_LL[1] = 2 
    */
-  public static int[] TNG_LL = {10, 3};
+  public static int[] TNO_LL = {10, 3};
 
   /**
    * This variable stores the upper right hand corner of the green tunnel footprint
@@ -186,7 +186,7 @@ public enum GameParameters {
    * min BRG_UR[1] - BRG_LL[1] = 1
    * max BRG_UR[1] - BRG_LL[1] = 2 
    */
-  public static int[] TNG_UR = {11, 5};
+  public static int[] TNO_UR = {11, 5};
 
   /**
    * This variable stores the coordinates of the red player ring set
@@ -216,16 +216,8 @@ public enum GameParameters {
    * @throws Exception 
    */
   public static AreaType getType(int x, int y) throws Exception {
-    if(PlayerTeamNumber == RedTeam) {
-      if(x >= Red_LL[0] && x <= Red_UR[0] && y >= Red_LL[1] && y <= Red_UR[1]) {
-        return AreaType.InStarting;
-      }
-    } else if (PlayerTeamNumber == GreenTeam) {
-      if(x >= Green_LL[0] && x <= Green_UR[0] && y >= Green_LL[1] && y <= Green_UR[1]) {
-        return AreaType.InStarting;
-      }
-    } else {
-        throw new Exception ("Invalid team number");
+    if(x >= US_LL[0] && x <= US_UR[0] && y >= US_LL[1] && y <= US_UR[1]) {
+      return AreaType.InStarting;
     }
     
     return AreaType.Dangerous;
