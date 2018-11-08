@@ -165,36 +165,39 @@ Definition at line 57 of file Display.\+java.
 76       lcd.drawString(\textcolor{stringliteral}{"T: "} + numberFormat.format(position[2]), 0, 2);
 77       lcd.drawString(\textcolor{stringliteral}{"LL: "} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[0]), 0, 3);
 78       lcd.drawString(\textcolor{stringliteral}{"LR: "} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[1]), 0, 4);
-79 \textcolor{comment}{//      lcd.drawString(String.format("(R: %d G: %d B: %d)", (int) rgb[0], (int) rgb[1], (int) rgb[2]),}
-80 \textcolor{comment}{//          0, 4);}
-81 \textcolor{comment}{//      if (ColorCalibrator.getColor((int) rgb[0], (int) rgb[1],}
-82 \textcolor{comment}{//          (int) rgb[2]) != ColorCalibrator.Color.Other) \{}
-83 \textcolor{comment}{//        lcd.drawString("Object Detected", 0, 5);}
-84 \textcolor{comment}{//      \} else \{}
-85 \textcolor{comment}{//        // Draw whitespace on our display}
-86 \textcolor{comment}{//        lcd.drawString("                   ", 0, 5);}
-87 \textcolor{comment}{//      \}}
-88 
-89       lcd.drawString(String.format(\textcolor{stringliteral}{"%1$-10s"}, ColorCalibrator.getColor().toString()), 0, 6);
-90       lcd.drawString(\textcolor{stringliteral}{"A:"} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6}{getA}()), 0, 7);
-91 
-92       \textcolor{comment}{// lcd.drawString(String.format("(r: %f", rgb[0]), 0, 3);}
-93       \textcolor{comment}{// lcd.drawString(String.format("(g: %f", rgb[1]), 0, 4);}
-94       \textcolor{comment}{// lcd.drawString(String.format("(b: %f", rgb[2]), 0, 5);}
-95 
-96       \textcolor{comment}{// This ensures that the data is updated only once every period}
-97       updateEnd = System.currentTimeMillis();
-98       \textcolor{keywordflow}{if} (updateEnd - updateStart < DISPLAY\_PERIOD) \{
-99         \textcolor{keywordflow}{try} \{
-100           Thread.sleep(DISPLAY\_PERIOD - (updateEnd - updateStart));
-101         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-102           e.printStackTrace();
-103         \}
-104       \}
-105     \} \textcolor{keywordflow}{while} ((updateEnd - tStart) <= timeout);
-106   \}
+79       lcd.drawString(\textcolor{stringliteral}{"D: "} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a46cc30522719018a80f89624e0ce458f}{getD}()), 0, 5);
+80 
+81 \textcolor{comment}{//      lcd.drawString(String.format("(R: %d G: %d B: %d)", (int) rgb[0], (int) rgb[1], (int) rgb[2]),}
+82 \textcolor{comment}{//          0, 4);}
+83 \textcolor{comment}{//      if (ColorCalibrator.getColor((int) rgb[0], (int) rgb[1],}
+84 \textcolor{comment}{//          (int) rgb[2]) != ColorCalibrator.Color.Other) \{}
+85 \textcolor{comment}{//        lcd.drawString("Object Detected", 0, 5);}
+86 \textcolor{comment}{//      \} else \{}
+87 \textcolor{comment}{//        // Draw whitespace on our display}
+88 \textcolor{comment}{//        lcd.drawString("                   ", 0, 5);}
+89 \textcolor{comment}{//      \}}
+90 
+91       lcd.drawString(String.format(\textcolor{stringliteral}{"%1$-10s"}, ColorCalibrator.getColor().toString()), 0, 6);
+92       lcd.drawString(\textcolor{stringliteral}{"A:"} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6}{getA}()), 0, 7);
+93 
+94       \textcolor{comment}{// lcd.drawString(String.format("(r: %f", rgb[0]), 0, 3);}
+95       \textcolor{comment}{// lcd.drawString(String.format("(g: %f", rgb[1]), 0, 4);}
+96       \textcolor{comment}{// lcd.drawString(String.format("(b: %f", rgb[2]), 0, 5);}
+97 
+98       \textcolor{comment}{// This ensures that the data is updated only once every period}
+99       updateEnd = System.currentTimeMillis();
+100       \textcolor{keywordflow}{if} (updateEnd - updateStart < DISPLAY\_PERIOD) \{
+101         \textcolor{keywordflow}{try} \{
+102           Thread.sleep(DISPLAY\_PERIOD - (updateEnd - updateStart));
+103         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+104           e.printStackTrace();
+105         \}
+106       \}
+107     \} \textcolor{keywordflow}{while} ((updateEnd - tStart) <= timeout);
+108   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

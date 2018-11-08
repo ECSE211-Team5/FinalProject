@@ -75,7 +75,7 @@
         <definition>final int ca.mcgill.ecse211.localization.LightLocalizer.FORWARD_SPEED</definition>
         <argsstring></argsstring>
         <name>FORWARD_SPEED</name>
-        <initializer>= 200</initializer>
+        <initializer>= 100</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -103,7 +103,7 @@
         <definition>final int ca.mcgill.ecse211.localization.LightLocalizer.blackLineColor</definition>
         <argsstring></argsstring>
         <name>blackLineColor</name>
-        <initializer>= 20</initializer>
+        <initializer>= -5</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -188,15 +188,17 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="53" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="53" bodyend="92"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="53" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="53" bodyend="108"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a39eec50582f0e4bcff8a4669c48e1609" compoundref="_sensor_data_8java" startline="88" endline="97">ca.mcgill.ecse211.threads.SensorData.getL</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a82986438cd462e66520bc62bb4bd2b75" compoundref="_odometer_data_8java" startline="179" endline="190">ca.mcgill.ecse211.odometer.OdometerData.setY</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="144" endline="165">ca.mcgill.ecse211.project.Navigation.turnTo</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2911d7215e47f3064defe016b46bfeef" compoundref="_odometer_data_8java" startline="161" endline="172">ca.mcgill.ecse211.odometer.OdometerData.setX</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="225" endline="227">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="286">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="197" endline="208">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="379" endline="413">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a82986438cd462e66520bc62bb4bd2b75" compoundref="_odometer_data_8java" startline="179" endline="190">ca.mcgill.ecse211.odometer.OdometerData.setY</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="173" endline="194">ca.mcgill.ecse211.project.Navigation.turnTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2911d7215e47f3064defe016b46bfeef" compoundref="_odometer_data_8java" startline="161" endline="172">ca.mcgill.ecse211.odometer.OdometerData.setX</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="346" endline="348">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="299">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" compoundref="_game_8java" startline="310">ca.mcgill.ecse211.project.Game.SEN_DIS</references>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab28110fca0af679acdaea84025746f15" compoundref="_game_8java" startline="315" endline="318">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" compoundref="_component_test_8java" startline="92" endline="106">ca.mcgill.ecse211.tests.ComponentTest.localizationTest</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -209,7 +211,7 @@
 <simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="21" bodyend="93"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/LightLocalizer.java" bodystart="21" bodyend="109"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a5ffff12fb880c5b5052118fc27b03778" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>blackLineColor</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a09e959a6ea2b952658485bb79b350f58" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::LightLocalizer</scope><name>data</name></member>

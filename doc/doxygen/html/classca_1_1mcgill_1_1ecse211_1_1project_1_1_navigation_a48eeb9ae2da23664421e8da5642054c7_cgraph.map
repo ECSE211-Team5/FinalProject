@@ -1,5 +1,5 @@
 <map id="ca.mcgill.ecse211.project.Navigation.moveWithCorrection" name="ca.mcgill.ecse211.project.Navigation.moveWithCorrection">
-<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ac9e260bcd619ffa4820d7d0de7ea1c12" title="ca.mcgill.ecse211.project.\lNavigation.convertDistance" alt="" coords="263,5,446,47"/>
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a419b8f07c2c5374411c8e62298e9a402" title="ca.mcgill.ecse211.odometer.\lOdometerData.setTheta" alt="" coords="260,5,449,47"/>
 <area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a39eec50582f0e4bcff8a4669c48e1609" title="ca.mcgill.ecse211.threads.\lSensorData.getL" alt="" coords="265,71,444,112"/>
-<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a419b8f07c2c5374411c8e62298e9a402" title="ca.mcgill.ecse211.odometer.\lOdometerData.setTheta" alt="" coords="260,136,449,177"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ac9e260bcd619ffa4820d7d0de7ea1c12" title="ca.mcgill.ecse211.project.\lNavigation.convertDistance" alt="" coords="263,136,446,177"/>
 </map>

@@ -3,23 +3,56 @@
   <compounddef id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters" kind="enum" language="Java" prot="public">
     <compoundname>ca::mcgill::ecse211::project::GameParameters</compoundname>
     <innerclass refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type" prot="public">ca::mcgill::ecse211::project::GameParameters::AreaType</innerclass>
+    <innerclass refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type" prot="public">ca::mcgill::ecse211::project::GameParameters::DemoType</innerclass>
       <sectiondef kind="public-type">
       </sectiondef>
       <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a32080f9c0e2e23c0feefc272620a07ad" prot="public" static="yes" mutable="no">
+        <type><ref refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type" kindref="compound">AreaType</ref></type>
+        <definition> static  AreaType ca.mcgill.ecse211.project.GameParameters.Area</definition>
+        <argsstring></argsstring>
+        <name>Area</name>
+        <initializer>= <ref refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a90e9cb33114c7af62aa86684942265e5" kindref="member">AreaType.InStarting</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the current area that our robot is in during a competition </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="33" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a36e932159f5f7e0f5e2e78f00d6f7e93" prot="public" static="yes" mutable="no">
+        <type><ref refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type" kindref="compound">DemoType</ref></type>
+        <definition> static  DemoType ca.mcgill.ecse211.project.GameParameters.Demo</definition>
+        <argsstring></argsstring>
+        <name>Demo</name>
+        <initializer>= <ref refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_1a8d4e576df991cb52b50ae54b2812aa7f" kindref="member">DemoType.Beta</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the current demo type that our robot is in during a competition </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="38" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="38" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="451" endline="473">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
+      </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1af3944d1bc80c4c8a6cabce66e030f4b7" prot="public" static="yes" mutable="no">
         <type>int []</type>
         <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.SC</definition>
         <argsstring></argsstring>
         <name>SC</name>
-        <initializer>= {-1, -1}</initializer>
+        <initializer>= {1, 1, 0}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
 <para>This variables holds the starting corner coordinates for our robot </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="29" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="379" endline="413">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab28110fca0af679acdaea84025746f15" compoundref="_game_8java" startline="315" endline="318">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" compoundref="_component_test_8java" startline="92" endline="106">ca.mcgill.ecse211.tests.ComponentTest.localizationTest</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ab190471dbd9bb10d8cef92c1b8bea826" prot="public" static="yes" mutable="no">
         <type>int []</type>
@@ -33,27 +66,29 @@
 <para>This variable stores the lower left coordinates of the entire grid </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="34" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="34" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afbbca622863f674dfb00dcd93e1328cb" prot="public" static="yes" mutable="no">
         <type>int []</type>
         <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.Grid_UR</definition>
         <argsstring></argsstring>
         <name>Grid_UR</name>
-        <initializer>= {15, 9}</initializer>
+        <initializer>= {8, 8}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This variable stores the upper right coordinates of the entire grid </para>        </detaileddescription>
+<para>This variable stores the upper right coordinates of the entire grid (8,8) for Beta Demo (15,9) for Final Demo </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="39" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="39" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="55" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="167" endline="179">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a0ed6f1e9007b69576e5d812a6bac5d57" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a58f3515615bd8e55a036615a23b8ff80" prot="public" static="yes" mutable="no">
         <type>int</type>
-        <definition> static  int ca.mcgill.ecse211.project.GameParameters.TR</definition>
+        <definition> static  int ca.mcgill.ecse211.project.GameParameters.TargetRing</definition>
         <argsstring></argsstring>
-        <name>TR</name>
+        <name>TargetRing</name>
         <initializer>= -1</initializer>
         <briefdescription>
         </briefdescription>
@@ -61,21 +96,23 @@
 <para>This variable holds the color of the target ring in the range [1,4] 1 indicates a BLUE ring 2 indicates a GREEN ring 3 indicates a YELLOW ring 4 indicates an ORANGE ring </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="48" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="64" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa3fb61a4aa9d34ab4dd029eccb6e056c" prot="public" static="yes" mutable="no">
         <type>int</type>
         <definition> static  int ca.mcgill.ecse211.project.GameParameters.PlayerTeamNumber</definition>
         <argsstring></argsstring>
         <name>PlayerTeamNumber</name>
-        <initializer>= -1</initializer>
+        <initializer>= 5</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
 <para>This variable stores the number of the team our robot is on </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="53" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="53" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="69" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="69" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="451" endline="473">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ad36fe5629718c944df7317e53145850c" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -89,7 +126,8 @@
 <para>This variable stores the team starting out from the red zone, possible values are [1,20] </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="58" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="58" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="74" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="74" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a1d6292807667d219edc172574c2aedbc" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -103,13 +141,14 @@
 <para>This variable stores the team starting out from the green zone, possible values are [1,20] </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="63" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="63" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="79" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="79" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a32c7cd626fc62900751de1d1c90a675a" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a5268b4efd3f069f08cca810e309b51dd" prot="public" static="yes" mutable="no">
         <type>int</type>
-        <definition> static  int ca.mcgill.ecse211.project.GameParameters.RedCorner</definition>
+        <definition> static  int ca.mcgill.ecse211.project.GameParameters.UsCorner</definition>
         <argsstring></argsstring>
-        <name>RedCorner</name>
+        <name>UsCorner</name>
         <initializer>= -1</initializer>
         <briefdescription>
         </briefdescription>
@@ -117,13 +156,14 @@
 <para>This variable stores the starting corner for the red team, possible values are [0,3] </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="68" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="68" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="84" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="84" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a9009c5953b92c367929f1bff83242817" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a8aba47cbe70ca0c782183a1c956197e7" prot="public" static="yes" mutable="no">
         <type>int</type>
-        <definition> static  int ca.mcgill.ecse211.project.GameParameters.GreenCorner</definition>
+        <definition> static  int ca.mcgill.ecse211.project.GameParameters.OCorner</definition>
         <argsstring></argsstring>
-        <name>GreenCorner</name>
+        <name>OCorner</name>
         <initializer>= -1</initializer>
         <briefdescription>
         </briefdescription>
@@ -131,27 +171,29 @@
 <para>This variable stores the starting corner for the green team, possible values are [0,3] </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="73" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="73" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="89" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="89" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a228f8de2cfe936bd57ae6d11a105ec0a" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4b437dfb1ca3a0898631dfd670828202" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.Red_LL</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.US_LL</definition>
         <argsstring></argsstring>
-        <name>Red_LL</name>
-        <initializer>= {0, 5}</initializer>
+        <name>US_LL</name>
+        <initializer>= {0, 0}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
 <para>This variable stores the lower left hand corner of the red zone [0] = x coordinate, [1] = y coordinate min Red_UR[0] - Red_LL[0] = 2 max Red_UR[0] - Red_LL[0] = 10 min Red_UR[1] - Red_LL[1] = 2 max Red_UR[1] - Red_LL[1] = 10 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="83" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="83" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="99" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="99" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa49e34a93b64510ac751d9f13ecd856a" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ab53ad7cced40d028fd0bbc3472cd2f8d" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.Red_UR</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.US_UR</definition>
         <argsstring></argsstring>
-        <name>Red_UR</name>
+        <name>US_UR</name>
         <initializer>= {4, 9}</initializer>
         <briefdescription>
         </briefdescription>
@@ -159,13 +201,14 @@
 <para>This variable stores the upper right hand corner of the red zone [0] = x coordinate, [1] = y coordinate min Red_UR[0] - Red_LL[0] = 2 max Red_UR[0] - Red_LL[0] = 10 min Red_UR[1] - Red_LL[1] = 2 max Red_UR[1] - Red_LL[1] = 10 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="93" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="93" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="109" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="109" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a61a9d0a51170a714a5f6c8b0f8f33c87" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a7ae1bf6f8937b8098396452d8b30e423" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.Green_LL</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.OPPO_LL</definition>
         <argsstring></argsstring>
-        <name>Green_LL</name>
+        <name>OPPO_LL</name>
         <initializer>= {10, 0}</initializer>
         <briefdescription>
         </briefdescription>
@@ -173,13 +216,14 @@
 <para>This variable stores the lower left hand corner of the green zone [0] = x coordinate, [1] = y coordinate min Green_UR[0] - Green_LL[0] = 2 max Green_UR[0] - Green_LL[0] = 10 min Green_UR[1] - Green_LL[1] = 2 max Green_UR[1] - Green_LL[1] = 10 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="103" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="103" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="119" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="119" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a440b053e05055a9e8bc1c5bfbcc95f1f" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4b23cfeb18fdeecaeecb59280a455170" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.Green_UR</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.OPPO_UR</definition>
         <argsstring></argsstring>
-        <name>Green_UR</name>
+        <name>OPPO_UR</name>
         <initializer>= {15, 4}</initializer>
         <briefdescription>
         </briefdescription>
@@ -187,41 +231,78 @@
 <para>This variable stores the upper right hand corner of the green zone [0] = x coordinate, [1] = y coordinate min Green_UR[0] - Green_LL[0] = 2 max Green_UR[0] - Green_LL[0] = 10 min Green_UR[1] - Green_LL[1] = 2 max Green_UR[1] - Green_LL[1] = 10 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="113" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="113" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="129" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="129" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a452ed98d5ec8e07aa5f5c0a2c2263458" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a70576bc98218fc0b4a7b2d3b2d56ed2b" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.BRR_LL</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.Island_LL</definition>
         <argsstring></argsstring>
-        <name>BRR_LL</name>
-        <initializer>= {4, 7}</initializer>
+        <name>Island_LL</name>
+        <initializer>= {10, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the lower left hand corner of the island zone [0] = x coordinate, [1] = y coordinate min Island_UR[0] - Island_LL[0] = 2 max Island_UR[0] - Island_LL[0] = 10 min Island_UR[1] - Island_LL[1] = 2 max Island_UR[1] - Island_LL[1] = 10 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="139" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="139" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ac442a5d4a39d6ffae29a183eca5934d3" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.Island_UR</definition>
+        <argsstring></argsstring>
+        <name>Island_UR</name>
+        <initializer>= {15, 4}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This variable stores the upper right hand corner of the island zone [0] = x coordinate, [1] = y coordinate min Island_UR[0] - Island_LL[0] = 2 max Island_UR[0] - Island_LL[0] = 10 min Island_UR[1] - Island_LL[1] = 2 max Island_UR[1] - Island_LL[1] = 10 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="149" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="149" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aff67c7474a260a8bcbb245a7c7d5b009" prot="public" static="yes" mutable="no">
+        <type>int []</type>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TN_LL</definition>
+        <argsstring></argsstring>
+        <name>TN_LL</name>
+        <initializer>= {3, 2}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
 <para>This variable stores the lower left hand corner of the red tunnel footprint [0] = x coordinate, [1] = y coordinate min BRR_UR[0] - BRR_LL[0] = 1 max BRR_UR[0] - BRR_LL[0] = 2 min BRR_UR[1] - BRR_LL[1] = 1 max BRR_UR[1] - BRR_LL[1] = 2 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="123" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="123" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="159" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="159" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="167" endline="179">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="202" endline="272">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aefb77c1f98954bda66481fe3abd13f0f" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa47abaface63a254570f9a82c4e1fe0d" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.BRR_UR</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TN_UR</definition>
         <argsstring></argsstring>
-        <name>BRR_UR</name>
-        <initializer>= {6, 8}</initializer>
+        <name>TN_UR</name>
+        <initializer>= {5, 3}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
 <para>This variable stores the upper right hand corner of the red tunnel footprint [0] = x coordinate, [1] = y coordinate min BRR_UR[0] - BRR_LL[0] = 1 max BRR_UR[0] - BRR_LL[0] = 2 min BRR_UR[1] - BRR_LL[1] = 1 max BRR_UR[1] - BRR_LL[1] = 2 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="133" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="133" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="169" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="169" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="167" endline="179">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="202" endline="272">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1af8a9e469d8fc78ac6103ef0ef7fef877" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a951a1759354ae42a5030e36100f553bc" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.BRG_LL</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TNO_LL</definition>
         <argsstring></argsstring>
-        <name>BRG_LL</name>
+        <name>TNO_LL</name>
         <initializer>= {10, 3}</initializer>
         <briefdescription>
         </briefdescription>
@@ -229,13 +310,14 @@
 <para>This variable stores the lower left hand corner of the green tunnel footprint [0] = x coordinate, [1] = y coordinate min BRG_UR[0] - BRG_LL[0] = 1 max BRG_UR[0] - BRG_LL[0] = 2 min BRG_UR[1] - BRG_LL[1] = 1 max BRG_UR[1] - BRG_LL[1] = 2 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="143" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="143" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="179" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="179" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a3ca679020eda08648fac727c3e4967e0" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a72ff54e8c60bb2b9d5a06f8377375b8f" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.BRG_UR</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TNO_UR</definition>
         <argsstring></argsstring>
-        <name>BRG_UR</name>
+        <name>TNO_UR</name>
         <initializer>= {11, 5}</initializer>
         <briefdescription>
         </briefdescription>
@@ -243,79 +325,56 @@
 <para>This variable stores the upper right hand corner of the green tunnel footprint [0] = x coordinate, [1] = y coordinate min BRG_UR[0] - BRG_LL[0] = 1 max BRG_UR[0] - BRG_LL[0] = 2 min BRG_UR[1] - BRG_LL[1] = 1 max BRG_UR[1] - BRG_LL[1] = 2 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="153" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="153" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="189" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="189" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1acf49674ae3df21e6f5b8c3cc23df29c7" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a2449dac1067326f888e8b9e8b5276c18" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TR_LL</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TREE_US</definition>
         <argsstring></argsstring>
-        <name>TR_LL</name>
+        <name>TREE_US</name>
         <initializer>= {7, 6}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This variable stores the lower left hand corner of the red player ring set [0] = x coordinate, [1] = y coordinate min TR_UR[0] - TR_LL[0] = 1 max TR_UR[0] - TR_LL[0] = 1 min TR_UR[1] - TR_LL[1] = 1 max TR_UR[1] - TR_LL[1] = 1 </para>        </detaileddescription>
+<para>This variable stores the coordinates of the red player ring set [0] = x coordinate, [1] = y coordinate min TR_UR[0] - TR_LL[0] = 1 max TR_UR[0] - TR_LL[0] = 1 min TR_UR[1] - TR_LL[1] = 1 max TR_UR[1] - TR_LL[1] = 1 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="163" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="163" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="199" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="199" bodyend="-1"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="167" endline="179">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a496948b6c073e09925f5f7dfbe72b6f0" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a50543aed3d1731225cee6fe50ebcefe0" prot="public" static="yes" mutable="no">
         <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TR_UR</definition>
+        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TTEE_O</definition>
         <argsstring></argsstring>
-        <name>TR_UR</name>
-        <initializer>= {8, 7}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>This variable stores the upper right hand corner of the red player ring set [0] = x coordinate, [1] = y coordinate min TR_UR[0] - TR_LL[0] = 1 max TR_UR[0] - TR_LL[0] = 1 min TR_UR[1] - TR_LL[1] = 1 max TR_UR[1] - TR_LL[1] = 1 </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="173" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="173" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a77757f49c202194b774b714c9a072db5" prot="public" static="yes" mutable="no">
-        <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TG_LL</definition>
-        <argsstring></argsstring>
-        <name>TG_LL</name>
+        <name>TTEE_O</name>
         <initializer>= {13, 7}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This variable stores the lower left hand corner of the green player ring set [0] = x coordinate, [1] = y coordinate min TG_UR[0] - TG_LL[0] = 1 max TG_UR[0] - TG_LL[0] = 1 min TG_UR[1] - TG_LL[1] = 1 max TG_UR[1] - TG_LL[1] = 1 </para>        </detaileddescription>
+<para>This variable stores the coordinates of the green player ring set [0] = x coordinate, [1] = y coordinate min TG_UR[0] - TG_LL[0] = 1 max TG_UR[0] - TG_LL[0] = 1 min TG_UR[1] - TG_LL[1] = 1 max TG_UR[1] - TG_LL[1] = 1 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="183" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="183" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ae3f44f7d83c3a246157a70f9e590e48a" prot="public" static="yes" mutable="no">
-        <type>int []</type>
-        <definition> static  int [] ca.mcgill.ecse211.project.GameParameters.TG_UR</definition>
-        <argsstring></argsstring>
-        <name>TG_UR</name>
-        <initializer>= {14, 8}</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>This variable stores the upper right hand corner of the green player ring set [0] = x coordinate, [1] = y coordinate min TG_UR[0] - TG_LL[0] = 1 max TG_UR[0] - TG_LL[0] = 1 min TG_UR[1] - TG_LL[1] = 1 max TG_UR[1] - TG_LL[1] = 1 </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="193" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="193" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="209" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="209" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afa2d71de18f6276782a702d7b74066e3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type" kindref="compound">AreaType</ref></type>
         <definition>static AreaType ca.mcgill.ecse211.project.GameParameters.getType</definition>
-        <argsstring>(double x, double y)</argsstring>
+        <argsstring>(int x, int y)</argsstring>
         <name>getType</name>
         <param>
-          <type>double</type>
+          <type>int</type>
           <declname>x</declname>
         </param>
         <param>
-          <type>double</type>
+          <type>int</type>
           <declname>y</declname>
         </param>
+        <exceptions> throws Exception </exceptions>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -335,48 +394,80 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>the type of area the point belongs to </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="201" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="201" bodyend="203"/>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a25564076fdd8880377fbd6eaf753456f" compoundref="_game_parameters_8java" startline="23">ca.mcgill.ecse211.project.GameParameters.AreaType.Searching</references>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="218" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="218" bodyend="224"/>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a90e9cb33114c7af62aa86684942265e5" compoundref="_game_parameters_8java" startline="20">ca.mcgill.ecse211.project.GameParameters.AreaType.InStarting</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1ac762256f8b33e7c93c162520a0349769" compoundref="_game_parameters_8java" startline="20">ca.mcgill.ecse211.project.GameParameters.AreaType.Dangerous</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="202" endline="272">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>This class contains all the game parameters needed for the competition</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<para>This singleton contains all the game parameters needed for the competition</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
 <simplesect kind="author"><para>Percy Chen </para></simplesect>
 <simplesect kind="author"><para>Patrick Erath </para></simplesect>
 <simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
 <simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="13" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="13" bodyend="204"/>
+    <collaborationgraph>
+      <node id="20">
+        <label>ca.mcgill.ecse211.project.GameParameters</label>
+        <link refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>Area</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>Demo</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>ca.mcgill.ecse211.project.GameParameters.DemoType</label>
+        <link refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type"/>
+      </node>
+      <node id="21">
+        <label>ca.mcgill.ecse211.project.GameParameters.AreaType</label>
+        <link refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="13" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="13" bodyend="225"/>
     <listofallmembers>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1af8a9e469d8fc78ac6103ef0ef7fef877" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>BRG_LL</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a3ca679020eda08648fac727c3e4967e0" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>BRG_UR</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a452ed98d5ec8e07aa5f5c0a2c2263458" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>BRR_LL</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aefb77c1f98954bda66481fe3abd13f0f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>BRR_UR</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afa2d71de18f6276782a702d7b74066e3" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>getType</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a61a9d0a51170a714a5f6c8b0f8f33c87" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Green_LL</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a440b053e05055a9e8bc1c5bfbcc95f1f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Green_UR</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a9009c5953b92c367929f1bff83242817" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>GreenCorner</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a32080f9c0e2e23c0feefc272620a07ad" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Area</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a36e932159f5f7e0f5e2e78f00d6f7e93" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Demo</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>getType</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a1d6292807667d219edc172574c2aedbc" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>GreenTeam</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ab190471dbd9bb10d8cef92c1b8bea826" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Grid_LL</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afbbca622863f674dfb00dcd93e1328cb" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Grid_UR</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a632d56a3288e5e239e0b8fa1012e8a99" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>INSTANCE</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a70576bc98218fc0b4a7b2d3b2d56ed2b" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Island_LL</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ac442a5d4a39d6ffae29a183eca5934d3" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Island_UR</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a8aba47cbe70ca0c782183a1c956197e7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>OCorner</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a7ae1bf6f8937b8098396452d8b30e423" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>OPPO_LL</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4b23cfeb18fdeecaeecb59280a455170" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>OPPO_UR</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa3fb61a4aa9d34ab4dd029eccb6e056c" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>PlayerTeamNumber</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a228f8de2cfe936bd57ae6d11a105ec0a" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Red_LL</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa49e34a93b64510ac751d9f13ecd856a" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>Red_UR</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a32c7cd626fc62900751de1d1c90a675a" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>RedCorner</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ad36fe5629718c944df7317e53145850c" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>RedTeam</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1af3944d1bc80c4c8a6cabce66e030f4b7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>SC</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a77757f49c202194b774b714c9a072db5" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TG_LL</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ae3f44f7d83c3a246157a70f9e590e48a" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TG_UR</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a0ed6f1e9007b69576e5d812a6bac5d57" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TR</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1acf49674ae3df21e6f5b8c3cc23df29c7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TR_LL</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a496948b6c073e09925f5f7dfbe72b6f0" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TR_UR</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a58f3515615bd8e55a036615a23b8ff80" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TargetRing</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aff67c7474a260a8bcbb245a7c7d5b009" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TN_LL</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa47abaface63a254570f9a82c4e1fe0d" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TN_UR</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a951a1759354ae42a5030e36100f553bc" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TNO_LL</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a72ff54e8c60bb2b9d5a06f8377375b8f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TNO_UR</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a2449dac1067326f888e8b9e8b5276c18" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TREE_US</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a50543aed3d1731225cee6fe50ebcefe0" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>TTEE_O</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4b437dfb1ca3a0898631dfd670828202" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>US_LL</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ab53ad7cced40d028fd0bbc3472cd2f8d" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>US_UR</name></member>
+      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a5268b4efd3f069f08cca810e309b51dd" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters</scope><name>UsCorner</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

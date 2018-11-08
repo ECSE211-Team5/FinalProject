@@ -84,7 +84,8 @@ Definition at line 37 of file Ultrasonic\+Poller.\+java.
 39     this.cont = cont;
 40     this.usData = usData;
 41     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted} = \textcolor{keyword}{true};
-42   \}
+42     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}{WAIT\_TIME} = 30;
+43   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -104,16 +105,15 @@ Here is the call graph for this function\+:\nopagebreak
 
 get us sensor data 
 
-Definition at line 47 of file Ultrasonic\+Poller.\+java.
+Definition at line 48 of file Ultrasonic\+Poller.\+java.
 
 
 \begin{DoxyCode}
-47                              \{
-48     us.fetchSample(usData, 0); \textcolor{comment}{// acquire data}
-49     \textcolor{comment}{// get distance from buffer, multiply by 100 for convenience and allow it to be cast to}
-50     \textcolor{comment}{// int}
-51     \textcolor{keywordtype}{int} distance = (int) (usData[0] * 100.0);
-52 
+48                              \{
+49     us.fetchSample(usData, 0); \textcolor{comment}{// acquire data}
+50     \textcolor{comment}{// get distance from buffer, multiply by 100 for convenience and allow it to be cast to}
+51     \textcolor{comment}{// int}
+52     \textcolor{keywordtype}{int} distance = (int) (usData[0] * 100.0);
 53     cont.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}{setD}(distance); \textcolor{comment}{// now take action depending on value}
 54   \}
 \end{DoxyCode}

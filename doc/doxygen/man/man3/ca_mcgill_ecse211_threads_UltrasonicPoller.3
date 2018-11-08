@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.UltrasonicPoller" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.UltrasonicPoller" 3 "Thu Nov 8 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -71,22 +71,22 @@ Definition at line 37 of file UltrasonicPoller\&.java\&.
 39     this\&.cont = cont;
 40     this\&.usData = usData;
 41     isStarted = true;
-42   }
+42     WAIT_TIME = 30;
+43   }
 .fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.UltrasonicPoller\&.runMethod ()\fC [protected]\fP"
 get us sensor data 
 .PP
-Definition at line 47 of file UltrasonicPoller\&.java\&.
+Definition at line 48 of file UltrasonicPoller\&.java\&.
 .PP
 .nf
-47                              {
-48     us\&.fetchSample(usData, 0); // acquire data
-49     // get distance from buffer, multiply by 100 for convenience and allow it to be cast to
-50     // int
-51     int distance = (int) (usData[0] * 100\&.0);
-52 
+48                              {
+49     us\&.fetchSample(usData, 0); // acquire data
+50     // get distance from buffer, multiply by 100 for convenience and allow it to be cast to
+51     // int
+52     int distance = (int) (usData[0] * 100\&.0);
 53     cont\&.setD(distance); // now take action depending on value
 54   }
 .fi

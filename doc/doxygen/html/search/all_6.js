@@ -4,6 +4,8 @@ var searchData=
   ['game_2ejava',['Game.java',['../_game_8java.html',1,'']]],
   ['gameparameters',['GameParameters',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html',1,'ca::mcgill::ecse211::project']]],
   ['gameparameters_2ejava',['GameParameters.java',['../_game_parameters_8java.html',1,'']]],
+  ['gameutil',['GameUtil',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html',1,'ca::mcgill::ecse211::project']]],
+  ['gameutil_2ejava',['GameUtil.java',['../_game_util_8java.html',1,'']]],
   ['geta',['getA',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#acc8f6cc56f39c8ea6b812cd8b135eca6',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['getcolor',['getColor',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a92e653a6a9f7a31cb7b6f9bc2e732133',1,'ca.mcgill.ecse211.project.ColorCalibrator.getColor(int r, int g, int b)'],['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a1acf05f9523b2c0f329d4a7cbf1b9c47',1,'ca.mcgill.ecse211.project.ColorCalibrator.getColor()']]],
   ['getd',['getD',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a46cc30522719018a80f89624e0ce458f',1,'ca::mcgill::ecse211::threads::SensorData']]],
@@ -14,16 +16,11 @@ var searchData=
   ['getsensordata',['getSensorData',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a8260aba53b4474ca1275e4ce26157977',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['getstatus',['getStatus',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a620374b3eeb3dd7e0abd26f3ced9053b',1,'ca::mcgill::ecse211::project::Game']]],
   ['getstatusfullname',['getStatusFullName',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a43a5763d183e0bcacd402c872c07273e',1,'ca::mcgill::ecse211::project::Game']]],
-  ['gettype',['getType',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#afa2d71de18f6276782a702d7b74066e3',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['gettype',['getType',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a4e7713b30588fc0b2af065db0b198b2c',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['getxyt',['getXYT',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
   ['gothroughtunnel',['goThroughTunnel',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a4b52e605d3ea2f9bcd9481ae2c69ba39',1,'ca::mcgill::ecse211::project::Navigation']]],
   ['gotoringset',['goToRingSet',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a0016a23ab5d544148a09948fb1a40e4c',1,'ca::mcgill::ecse211::project::Navigation']]],
-  ['green_5fll',['Green_LL',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a61a9d0a51170a714a5f6c8b0f8f33c87',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['green_5fur',['Green_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a440b053e05055a9e8bc1c5bfbcc95f1f',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['greencorner',['GreenCorner',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a9009c5953b92c367929f1bff83242817',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['greenteam',['GreenTeam',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a1d6292807667d219edc172574c2aedbc',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['grid_5fll',['Grid_LL',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#ab190471dbd9bb10d8cef92c1b8bea826',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['grid_5fur',['Grid_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#afbbca622863f674dfb00dcd93e1328cb',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['gyropoller',['GyroPoller',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller.html',1,'ca.mcgill.ecse211.threads.GyroPoller'],['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller.html#a1bab49cc19ee3b633ddbec4c408927bf',1,'ca.mcgill.ecse211.threads.GyroPoller.GyroPoller()']]],
-  ['gyropoller_2ejava',['GyroPoller.java',['../_gyro_poller_8java.html',1,'']]]
+  ['grid_5fur',['Grid_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#afbbca622863f674dfb00dcd93e1328cb',1,'ca::mcgill::ecse211::project::GameParameters']]]
 ];

@@ -19,7 +19,7 @@ static void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af681b5d
 \item 
 static boolean \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af6f7b8fffddcf855f74fe128d2e23ea1}{test} = true
 \item 
-static Component\+Test.\+Type \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_a8dac740460370f76ac0db5dc20824b1f}{test\+Type} = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_aa8c9262ad5014cd52ecce2eec6604510}{Component\+Test.\+Type.\+Light\+Sensor}
+static Component\+Test.\+Type \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_a8dac740460370f76ac0db5dc20824b1f}{test\+Type} = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_acdc93de9366f2e6710c7f2fc0e4478c3}{Component\+Test.\+Type.\+Localization}
 \end{DoxyCompactItemize}
 
 
@@ -72,13 +72,13 @@ Definition at line 34 of file Main.\+java.
 \begin{DoxyCode}
 34                                          \{
 35     \textcolor{keywordflow}{try} \{
-36       Game.preparation(); \textcolor{comment}{// for brevity and less object instantiations}
+36       Game.INSTANCE.preparation(); \textcolor{comment}{// for brevity and less object instantiations}
 37       \textcolor{keywordflow}{if} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_af6f7b8fffddcf855f74fe128d2e23ea1}{test}) \{
 38         Button.waitForAnyPress(); \textcolor{comment}{// Wait for a button on the EV3 Brick to be pressed}
 39         (\textcolor{keyword}{new} Thread() \{
 40           \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{
 41             \textcolor{keywordflow}{try} \{
-42               ComponentTest.runTest(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_a8dac740460370f76ac0db5dc20824b1f}{testType});
+42               ComponentTest.tunnelTest();
 43             \} \textcolor{keywordflow}{catch} (Exception e) \{
 44               \textcolor{comment}{// TODO Auto-generated catch block}
 45               e.printStackTrace();
@@ -86,11 +86,11 @@ Definition at line 34 of file Main.\+java.
 47           \}
 48         \}).start();
 49       \} \textcolor{keywordflow}{else} \{
-50         Game.runGame(); \textcolor{comment}{// for brevity and less object instantiations}
+50         Game.INSTANCE.runGame(); \textcolor{comment}{// for brevity and less object instantiations}
 51       \}
 52       Button.waitForAnyPress();
 53       System.exit(0);
-54     \} \textcolor{keywordflow}{catch} (OdometerExceptions e) \{
+54     \} \textcolor{keywordflow}{catch} (Exception e) \{
 55       \textcolor{comment}{// TODO Auto-generated catch block}
 56       e.printStackTrace();
 57     \}
@@ -121,7 +121,7 @@ Definition at line 21 of file Main.\+java.
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Main@{ca\+::mcgill\+::ecse211\+::project\+::\+Main}!test\+Type@{test\+Type}}
 \index{test\+Type@{test\+Type}!ca\+::mcgill\+::ecse211\+::project\+::\+Main@{ca\+::mcgill\+::ecse211\+::project\+::\+Main}}
 \subsubsection{\texorpdfstring{test\+Type}{testType}}
-{\footnotesize\ttfamily Component\+Test.\+Type ca.\+mcgill.\+ecse211.\+project.\+Main.\+test\+Type = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_aa8c9262ad5014cd52ecce2eec6604510}{Component\+Test.\+Type.\+Light\+Sensor}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily Component\+Test.\+Type ca.\+mcgill.\+ecse211.\+project.\+Main.\+test\+Type = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_acdc93de9366f2e6710c7f2fc0e4478c3}{Component\+Test.\+Type.\+Localization}\hspace{0.3cm}{\ttfamily [static]}}
 
 This variable stores the type of test that we want to perform 
 

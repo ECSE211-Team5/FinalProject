@@ -4,7 +4,7 @@ var searchData=
   ['sensordata',['SensorData',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a11dcdc9c15184e05a9c84fc3958e26b6',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['seta',['setA',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a35b1941d44e86b81eb7c625efbd3c8ba',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['setd',['setD',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a2c1f8e625478b89aabe6e9911e482ef3',1,'ca::mcgill::ecse211::threads::SensorData']]],
-  ['setl',['setL',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a1c2c38354fc5a66b4667e1d47ab6b20b',1,'ca::mcgill::ecse211::threads::SensorData']]],
+  ['setl',['setL',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#af905a6f2825716ae1a39bf7f6be09477',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['setrgb',['setRGB',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a6ad23111ecd378099f0b4ed0b6d398bc',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['setstart',['setStart',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a16221cdc4ccf637b190934549c708e1f',1,'ca::mcgill::ecse211::threads::ThreadControl']]],
   ['settheta',['setTheta',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a419b8f07c2c5374411c8e62298e9a402',1,'ca::mcgill::ecse211::odometer::OdometerData']]],

@@ -128,18 +128,21 @@ Definition at line 50 of file Light\+Poller.\+java.
 
 \begin{DoxyCode}
 50                              \{
-51     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}.length; i++) \{
-52       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}[i].fetchSample(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[i], 0); \textcolor{comment}{// acquire data}
-53   
-54       \textcolor{keywordtype}{int} distance = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[i][0] * 100); \textcolor{comment}{// extract from buffer, multiply by 100 for
+51     \textcolor{keywordtype}{double} l[] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
+52     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}.length; i++) \{
+53       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}[i].fetchSample(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[i], 0); \textcolor{comment}{// acquire data}
+54   
+55       \textcolor{keywordtype}{int} distance = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[i][0] * 100); \textcolor{comment}{// extract from buffer, multiply by 100 for
        convenience}
-55                                               \textcolor{comment}{// and allow it to be cast to int}
-56       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont}.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a1c2c38354fc5a66b4667e1d47ab6b20b}{setL}(distance - \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}{lastValue}[i], \textcolor{keywordtype}{id}); \textcolor{comment}{// now take action depending on value}
-57       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}{lastValue}[i] = distance; 
-58     \}
-59   \}
+56                                               \textcolor{comment}{// and allow it to be cast to int}
+57       l[i] = distance - \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}{lastValue}[i]; \textcolor{comment}{// now take action depending on value}
+58       lastValue[i] = distance; 
+59     \}
+60     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont}.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_af905a6f2825716ae1a39bf7f6be09477}{setL}(l);
+61   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

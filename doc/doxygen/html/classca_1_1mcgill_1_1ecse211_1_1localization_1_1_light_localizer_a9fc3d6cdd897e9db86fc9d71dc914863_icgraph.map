@@ -1,4 +1,5 @@
 <map id="ca.mcgill.ecse211.localization.LightLocalizer.localize" name="ca.mcgill.ecse211.localization.LightLocalizer.localize">
-<area shape="rect" id="node2" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a790740a4ed299c9b985401ea8c4d5010" title="ca.mcgill.ecse211.project.\lGame.runGame" alt="" coords="253,5,428,47"/>
-<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="476,5,651,47"/>
+<area shape="rect" id="node2" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab28110fca0af679acdaea84025746f15" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="271,5,446,47"/>
+<area shape="rect" id="node3" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#ad11712dd74c5c64e84cd71186a59a087" title="ca.mcgill.ecse211.tests.\lComponentTest.localizationTest" alt="" coords="253,71,464,112"/>
+<area shape="rect" id="node4" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5dc8bf97bc48adf5bee88d425a1a974e" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="512,71,676,112"/>
 </map>

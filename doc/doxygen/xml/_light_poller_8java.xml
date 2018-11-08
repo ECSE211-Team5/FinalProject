@@ -9,7 +9,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">ca.mcgill.ecse211.threads;</highlight></codeline>
+<codeline lineno="1" refid="namespaceca_1_1mcgill_1_1ecse211_1_1threads" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">ca.mcgill.ecse211.threads;</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/><ref refid="namespaceca" kindref="compound">ca</ref>.<ref refid="namespaceca_1_1mcgill" kindref="compound">mcgill</ref>.<ref refid="namespaceca_1_1mcgill_1_1ecse211" kindref="compound">ecse211</ref>.<ref refid="namespaceca_1_1mcgill_1_1ecse211_1_1odometer" kindref="compound">odometer</ref>.<ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions" kindref="compound">OdometerExceptions</ref>;</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>lejos.robotics.SampleProvider;</highlight></codeline>
@@ -34,16 +34,18 @@
 <codeline lineno="45"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50" refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1aab90a460a4d0c926fb8f3930492a8fb1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1aab90a460a4d0c926fb8f3930492a8fb1" kindref="member">runMethod</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>us.length;<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>us[i].fetchSample(lgData[i],<sp/>0);<sp/></highlight><highlight class="comment">//<sp/>acquire<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>distance<sp/>=<sp/>(int)<sp/>(lgData[i][0]<sp/>*<sp/>100);<sp/></highlight><highlight class="comment">//<sp/>extract<sp/>from<sp/>buffer,<sp/>multiply<sp/>by<sp/>100<sp/>for<sp/>convenience</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>allow<sp/>it<sp/>to<sp/>be<sp/>cast<sp/>to<sp/>int</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cont.<ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a1c2c38354fc5a66b4667e1d47ab6b20b" kindref="member">setL</ref>(distance<sp/>-<sp/>lastValue[i],<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>now<sp/>take<sp/>action<sp/>depending<sp/>on<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lastValue[i]<sp/>=<sp/>distance;<sp/></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>l[]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">[2];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>us.length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>us[i].fetchSample(lgData[i],<sp/>0);<sp/></highlight><highlight class="comment">//<sp/>acquire<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>distance<sp/>=<sp/>(int)<sp/>(lgData[i][0]<sp/>*<sp/>100);<sp/></highlight><highlight class="comment">//<sp/>extract<sp/>from<sp/>buffer,<sp/>multiply<sp/>by<sp/>100<sp/>for<sp/>convenience</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>allow<sp/>it<sp/>to<sp/>be<sp/>cast<sp/>to<sp/>int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>l[i]<sp/>=<sp/>distance<sp/>-<sp/>lastValue[i];<sp/></highlight><highlight class="comment">//<sp/>now<sp/>take<sp/>action<sp/>depending<sp/>on<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lastValue[i]<sp/>=<sp/>distance;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>cont.<ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1af905a6f2825716ae1a39bf7f6be09477" kindref="member">setL</ref>(l);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java"/>
   </compounddef>

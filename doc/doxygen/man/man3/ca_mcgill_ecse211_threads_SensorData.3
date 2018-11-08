@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.SensorData" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.SensorData" 3 "Thu Nov 8 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,7 +31,7 @@ ca.mcgill.ecse211.threads.SensorData
 .RI "void \fBsetRGB\fP (int r, int g, int b)"
 .br
 .ti -1c
-.RI "void \fBsetL\fP (double l, int id)"
+.RI "void \fBsetL\fP (double l[])"
 .br
 .in -1c
 .SS "Static Public Member Functions"
@@ -237,7 +237,7 @@ Definition at line 128 of file SensorData\&.java\&.
 129       this\&.distance = d;
 130   }
 .fi
-.SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setL (double l, int id)"
+.SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setL (double l[])"
 This method overwrites the light value\&. (protected by light lock)
 .PP
 \fBParameters:\fP
@@ -250,14 +250,15 @@ This method overwrites the light value\&. (protected by light lock)
 Definition at line 165 of file SensorData\&.java\&.
 .PP
 .nf
-165                                      {
+165                                {
 166     try {
 167       lightLock\&.lock();
-168       this\&.lights[id] = l;
-169     } finally {
-170       lightLock\&.unlock();
-171     }
-172   }
+168       this\&.lights[0] = l[0];
+169       this\&.lights[1] = l[1];
+170     } finally {
+171       lightLock\&.unlock();
+172     }
+173   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setRGB (int r, int g, int b)"
 set rgb data for color sensor (protected by rgb lock)

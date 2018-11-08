@@ -2,7 +2,8 @@
 \label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game}\index{ca.\+mcgill.\+ecse211.\+project.\+Game@{ca.\+mcgill.\+ecse211.\+project.\+Game}}
 
 
-Collaboration diagram for ca.\+mcgill.\+ecse211.\+project.\+Game\+:\nopagebreak
+Collaboration diagram for ca.\+mcgill.\+ecse211.\+project.\+Game\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,28 +22,28 @@ String \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a43a5763d183e0
 \item 
 \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status}{Status} \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a620374b3eeb3dd7e0abd26f3ced9053b}{get\+Status} ()
 \item 
-boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af0afcc3fad6172857252b89624f48e32}{ready} ()
+boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a5b304a6a59ddee3f8c7d37bba8a4c129}{ready} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer}{Ultrasonic\+Localizer} us, \hyperlink{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer}{Light\+Localizer} lg\+Loc)
 \item 
-boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6b4c0cfb8de83ba7c6d5dfb24882dc5a}{localized} ()
+boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af5cb4d96a0075ef2d4ab5e0be90b8875}{navigate\+To\+Tunnel} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation}{Navigation} navigation)
 \item 
-boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_affc3685219c09f0a4a75cb1ea9366c8e}{navigated\+To\+Tunnel} ()
+boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a863962c648d0aaab59e870dea837780f}{navigate\+To\+Start} ()
 \item 
-boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a5f387482790bf2c55413a6619b4d00d8}{navigated\+To\+Start} ()
-\item 
-boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aed641f9ade50f0090096a46d90588eb7}{navigated\+To\+Tree} ()
+boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a62445c3fa08038f033d4bf8c17021eca}{navigate\+To\+Tree} ()
 \item 
 boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a62d510506f1b829fe67dea7270e5b889}{ring\+Found} ()
 \item 
 boolean \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_adc2725f291b0688a62f85db1df1ee2b2}{ring\+Not\+Found} ()
+\item 
+synchronized void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ab28110fca0af679acdaea84025746f15}{read\+Data} ()
+\item 
+void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a8f3c5b18f98ee56f5f03afd72fa40bcb}{preparation} ()  throws Odometer\+Exceptions 
+\item 
+void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_adf69abe44e952d627fb9e6a2f678cb5e}{run\+Game} ()  throws Odometer\+Exceptions 
 \end{DoxyCompactItemize}
-\subsection*{Static Public Member Functions}
+\subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a1bcbd1c19309c65a6887ae19bde66765}{preparation} ()  throws Odometer\+Exceptions 
-\item 
-static synchronized void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aff9431d27d78c8b228f468d8ad889a9a}{read\+Data} ()
-\item 
-static synchronized void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a790740a4ed299c9b985401ea8c4d5010}{run\+Game} ()  throws Odometer\+Exceptions 
+\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control}{Thread\+Control} \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{us\+Poller}
 \end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
@@ -50,10 +51,6 @@ static synchronized void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_g
 static final E\+V3\+Large\+Regulated\+Motor \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{left\+Motor}
 \item 
 static final E\+V3\+Large\+Regulated\+Motor \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{right\+Motor}
-\item 
-static final E\+V3\+Large\+Regulated\+Motor \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af3ba5407b115e9c6e07dffda576f29b7}{storage\+Motor}
-\item 
-static final E\+V3\+Medium\+Regulated\+Motor \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aeb41e5234fcb3b311385f39a07a24a54}{rod\+Motor}
 \item 
 static final double \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a72c2224ad4dd557dde445ebc4baaf531}{T\+I\+LE} = 30.\+48
 \item 
@@ -83,7 +80,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 33 of file Game.\+java.
+Definition at line 32 of file Game.\+java.
 
 
 
@@ -94,20 +91,20 @@ Definition at line 33 of file Game.\+java.
 \subsubsection{\texorpdfstring{get\+Status()}{getStatus()}}
 {\footnotesize\ttfamily \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status}{Status} ca.\+mcgill.\+ecse211.\+project.\+Game.\+get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-get the current status of the game
+This method gets the current status of our robot
 
 \begin{DoxyReturn}{Returns}
-
+A \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status}{Status} enumeration value 
 \end{DoxyReturn}
 
 
-Definition at line 69 of file Game.\+java.
+Definition at line 66 of file Game.\+java.
 
 
 \begin{DoxyCode}
-69                             \{
-70     \textcolor{keywordflow}{return} status;
-71   \}
+66                             \{
+67     \textcolor{keywordflow}{return} status;
+68   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a43a5763d183e0bcacd402c872c07273e}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a43a5763d183e0bcacd402c872c07273e}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!get\+Status\+Full\+Name@{get\+Status\+Full\+Name}}
@@ -115,175 +112,153 @@ Definition at line 69 of file Game.\+java.
 \subsubsection{\texorpdfstring{get\+Status\+Full\+Name()}{getStatusFullName()}}
 {\footnotesize\ttfamily String ca.\+mcgill.\+ecse211.\+project.\+Game.\+get\+Status\+Full\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-get the full name of the status
+This method gets a string representation of the status of our robot
 
 \begin{DoxyReturn}{Returns}
-
+A string of the status variable 
 \end{DoxyReturn}
 
 
-Definition at line 59 of file Game.\+java.
+Definition at line 57 of file Game.\+java.
 
 
 \begin{DoxyCode}
-59                                     \{
-60     String answer = status.toString();
-61     \textcolor{keywordflow}{return} answer;
-62   \}
+57                                     \{
+58     \textcolor{keywordflow}{return} status.toString();
+59   \}
 \end{DoxyCode}
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6b4c0cfb8de83ba7c6d5dfb24882dc5a}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6b4c0cfb8de83ba7c6d5dfb24882dc5a}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!localized@{localized}}
-\index{localized@{localized}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
-\subsubsection{\texorpdfstring{localized()}{localized()}}
-{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+localized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a863962c648d0aaab59e870dea837780f}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a863962c648d0aaab59e870dea837780f}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!navigate\+To\+Start@{navigate\+To\+Start}}
+\index{navigate\+To\+Start@{navigate\+To\+Start}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
+\subsubsection{\texorpdfstring{navigate\+To\+Start()}{navigateToStart()}}
+{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+navigate\+To\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Navigating to the tunnel and to the search area
+This method navigates our robot to the starting corner
 
 \begin{DoxyReturn}{Returns}
-whether transition successful 
+A boolean that denotes whether our state transition occurred 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Interrupted\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 137 of file Game.\+java.
+
+
+\begin{DoxyCode}
+138   \{
+139     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
+140     
+141     Status aStatus = status;
+142     \textcolor{keywordflow}{switch} (aStatus)
+143     \{
+144       \textcolor{keywordflow}{case} AtTunnel:
+145         \textcolor{comment}{// line 12 "model.ump"}
+146         navigateStart();
+147         setStatus(Status.Idle);
+148         wasEventProcessed = \textcolor{keyword}{true};
+149         \textcolor{keywordflow}{break};
+150       \textcolor{keywordflow}{default}:
+151         \textcolor{comment}{// Other states do respond to this event}
+152     \}
+153 
+154     \textcolor{keywordflow}{return} wasEventProcessed;
+155   \}
+\end{DoxyCode}
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a62445c3fa08038f033d4bf8c17021eca}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a62445c3fa08038f033d4bf8c17021eca}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!navigate\+To\+Tree@{navigate\+To\+Tree}}
+\index{navigate\+To\+Tree@{navigate\+To\+Tree}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
+\subsubsection{\texorpdfstring{navigate\+To\+Tree()}{navigateToTree()}}
+{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+navigate\+To\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method navigates our robot to the tree and tries to find rings
+
+\begin{DoxyReturn}{Returns}
+A boolean that denotes whether our state transition occurred 
 \end{DoxyReturn}
 
 
-Definition at line 101 of file Game.\+java.
+Definition at line 162 of file Game.\+java.
 
 
 \begin{DoxyCode}
-101                              \{
-102     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-103 
-104     Status aStatus = status;
-105     \textcolor{keywordflow}{switch} (aStatus) \{
-106       \textcolor{keywordflow}{case} Localization:
-107         \textcolor{comment}{// line 8 "model.ump"}
-108         \textcolor{comment}{// navigate();}
-109         setStatus(Status.NavigationSafe);
-110         wasEventProcessed = \textcolor{keyword}{true};
-111         \textcolor{keywordflow}{break};
-112       \textcolor{keywordflow}{default}:
-113         \textcolor{comment}{// Other states do respond to this event}
-114     \}
-115 
-116     \textcolor{keywordflow}{return} wasEventProcessed;
-117   \}
+163   \{
+164     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
+165     
+166     Status aStatus = status;
+167     \textcolor{keywordflow}{switch} (aStatus)
+168     \{
+169       \textcolor{keywordflow}{case} AtTunnel:
+170         \textcolor{comment}{// line 11 "model.ump"}
+171         navigateTree();
+172         setStatus(Status.AtTree);
+173         wasEventProcessed = \textcolor{keyword}{true};
+174         \textcolor{keywordflow}{break};
+175       \textcolor{keywordflow}{case} AtTree:
+176         \textcolor{comment}{// line 16 "model.ump"}
+177         searchRing();
+178         setStatus(Status.RingSearch);
+179         wasEventProcessed = \textcolor{keyword}{true};
+180         \textcolor{keywordflow}{break};
+181       \textcolor{keywordflow}{default}:
+182         \textcolor{comment}{// Other states do respond to this event}
+183     \}
+184 
+185     \textcolor{keywordflow}{return} wasEventProcessed;
+186   \}
 \end{DoxyCode}
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a5f387482790bf2c55413a6619b4d00d8}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a5f387482790bf2c55413a6619b4d00d8}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!navigated\+To\+Start@{navigated\+To\+Start}}
-\index{navigated\+To\+Start@{navigated\+To\+Start}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
-\subsubsection{\texorpdfstring{navigated\+To\+Start()}{navigatedToStart()}}
-{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+navigated\+To\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af5cb4d96a0075ef2d4ab5e0be90b8875}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af5cb4d96a0075ef2d4ab5e0be90b8875}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!navigate\+To\+Tunnel@{navigate\+To\+Tunnel}}
+\index{navigate\+To\+Tunnel@{navigate\+To\+Tunnel}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
+\subsubsection{\texorpdfstring{navigate\+To\+Tunnel()}{navigateToTunnel()}}
+{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+navigate\+To\+Tunnel (\begin{DoxyParamCaption}\item[{\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation}{Navigation}}]{navigation }\end{DoxyParamCaption})}
 
-Navigate to the starting corner
+This method navigates our robot to the tunnel or search area
 
 \begin{DoxyReturn}{Returns}
-whether transition successful 
+A boolean that denotes whether our state transition occurred 
 \end{DoxyReturn}
 
 
-Definition at line 153 of file Game.\+java.
+Definition at line 105 of file Game.\+java.
 
 
 \begin{DoxyCode}
-153                                     \{
-154     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-155 
-156     Status aStatus = status;
-157     \textcolor{keywordflow}{switch} (aStatus) \{
-158       \textcolor{keywordflow}{case} NavigationSafe:
-159         \textcolor{comment}{// line 12 "model.ump"}
-160         \textcolor{comment}{// wait();}
-161         setStatus(Status.Idle);
-162         wasEventProcessed = \textcolor{keyword}{true};
-163         \textcolor{keywordflow}{break};
-164       \textcolor{keywordflow}{default}:
-165         \textcolor{comment}{// Other states do respond to this event}
-166     \}
-167 
-168     \textcolor{keywordflow}{return} wasEventProcessed;
-169   \}
+106   \{
+107     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
+108     
+109     Status aStatus = status;
+110     \textcolor{keywordflow}{switch} (aStatus)
+111     \{
+112       \textcolor{keywordflow}{case} Localized:
+113         \textcolor{comment}{// line 8 "model.ump"}
+114         navigateTunnel(navigation);
+115         setStatus(Status.AtTunnel);
+116         wasEventProcessed = \textcolor{keyword}{true};
+117         \textcolor{keywordflow}{break};
+118       \textcolor{keywordflow}{case} AtTree:
+119         \textcolor{comment}{// line 17 "model.ump"}
+120         navigateBackTunnel();
+121         setStatus(Status.AtTunnel);
+122         wasEventProcessed = \textcolor{keyword}{true};
+123         \textcolor{keywordflow}{break};
+124       \textcolor{keywordflow}{default}:
+125         \textcolor{comment}{// Other states do respond to this event}
+126     \}
+127 
+128     \textcolor{keywordflow}{return} wasEventProcessed;
+129   \}
 \end{DoxyCode}
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aed641f9ade50f0090096a46d90588eb7}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aed641f9ade50f0090096a46d90588eb7}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!navigated\+To\+Tree@{navigated\+To\+Tree}}
-\index{navigated\+To\+Tree@{navigated\+To\+Tree}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
-\subsubsection{\texorpdfstring{navigated\+To\+Tree()}{navigatedToTree()}}
-{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+navigated\+To\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Navigate to the tree and try find the rings
-
-\begin{DoxyReturn}{Returns}
-whether transition successful 
-\end{DoxyReturn}
-
-
-Definition at line 176 of file Game.\+java.
-
-
-\begin{DoxyCode}
-176                                    \{
-177     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-178 
-179     Status aStatus = status;
-180     \textcolor{keywordflow}{switch} (aStatus) \{
-181       \textcolor{keywordflow}{case} NavigationSearch:
-182         \textcolor{comment}{// line 16 "model.ump"}
-183         \textcolor{comment}{// searchRing();}
-184         setStatus(Status.RingSearch);
-185         wasEventProcessed = \textcolor{keyword}{true};
-186         \textcolor{keywordflow}{break};
-187       \textcolor{keywordflow}{default}:
-188         \textcolor{comment}{// Other states do respond to this event}
-189     \}
-190 
-191     \textcolor{keywordflow}{return} wasEventProcessed;
-192   \}
-\end{DoxyCode}
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_affc3685219c09f0a4a75cb1ea9366c8e}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_affc3685219c09f0a4a75cb1ea9366c8e}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!navigated\+To\+Tunnel@{navigated\+To\+Tunnel}}
-\index{navigated\+To\+Tunnel@{navigated\+To\+Tunnel}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
-\subsubsection{\texorpdfstring{navigated\+To\+Tunnel()}{navigatedToTunnel()}}
-{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+navigated\+To\+Tunnel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-whether transition successful
-
-\begin{DoxyReturn}{Returns}
-whether transition successful 
-\end{DoxyReturn}
-
-
-Definition at line 124 of file Game.\+java.
-
-
-\begin{DoxyCode}
-124                                      \{
-125     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-126 
-127     Status aStatus = status;
-128     \textcolor{keywordflow}{switch} (aStatus) \{
-129       \textcolor{keywordflow}{case} NavigationSafe:
-130         \textcolor{comment}{// line 11 "model.ump"}
-131         \textcolor{comment}{// navigate();}
-132         setStatus(Status.NavigationSearch);
-133         wasEventProcessed = \textcolor{keyword}{true};
-134         \textcolor{keywordflow}{break};
-135       \textcolor{keywordflow}{case} NavigationSearch:
-136         \textcolor{comment}{// line 17 "model.ump"}
-137         \textcolor{comment}{// navigate();}
-138         setStatus(Status.NavigationSafe);
-139         wasEventProcessed = \textcolor{keyword}{true};
-140         \textcolor{keywordflow}{break};
-141       \textcolor{keywordflow}{default}:
-142         \textcolor{comment}{// Other states do respond to this event}
-143     \}
-144 
-145     \textcolor{keywordflow}{return} wasEventProcessed;
-146   \}
-\end{DoxyCode}
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a1bcbd1c19309c65a6887ae19bde66765}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a1bcbd1c19309c65a6887ae19bde66765}} 
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a8f3c5b18f98ee56f5f03afd72fa40bcb}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a8f3c5b18f98ee56f5f03afd72fa40bcb}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!preparation@{preparation}}
 \index{preparation@{preparation}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
 \subsubsection{\texorpdfstring{preparation()}{preparation()}}
-{\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+project.\+Game.\+preparation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+project.\+Game.\+preparation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}}
 
-Prepare for the game\+: starting thread, read all arguments
+This method performs all the object instantiations and preparations necessary to get our robot to compete
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -292,138 +267,145 @@ Prepare for the game\+: starting thread, read all arguments
 \end{DoxyExceptions}
 
 
-Definition at line 306 of file Game.\+java.
+Definition at line 385 of file Game.\+java.
 
 
 \begin{DoxyCode}
-306                                                              \{
-307     \textcolor{comment}{// Motor Objects, and Robot related parameters}
-308     Port usPort = LocalEV3.get().getPort(\textcolor{stringliteral}{"S1"});
-309     \textcolor{comment}{// initialize multiple light ports in main}
-310     Port[] lgPorts = \textcolor{keyword}{new} Port[3];
-311 
-312     \textcolor{comment}{// Light sesnor sensor stuff}
-313     lgPorts[0] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S2"});
-314     lgPorts[1] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S3"});
-315     EV3ColorSensor[] lgSensors = \textcolor{keyword}{new} EV3ColorSensor[2];
-316     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < lgSensors.length; i++) \{
-317       lgSensors[i] = \textcolor{keyword}{new} EV3ColorSensor(lgPorts[i]);
-318     \}
-319 
-320     Odometer odometer = Odometer.getOdometer(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor}, 
+385                                                       \{
+386     \textcolor{comment}{// Motor Objects, and Robot related parameters}
+387     Port usPort = LocalEV3.get().getPort(\textcolor{stringliteral}{"S1"});
+388     \textcolor{comment}{// initialize multiple light ports in main}
+389     Port[] lgPorts = \textcolor{keyword}{new} Port[3];
+390 
+391     \textcolor{comment}{// Light sensor sensor stuff}
+392     lgPorts[0] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S2"});
+393     lgPorts[1] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S3"});
+394     EV3ColorSensor[] lgSensors = \textcolor{keyword}{new} EV3ColorSensor[2];
+395     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < lgSensors.length; i++) \{
+396       lgSensors[i] = \textcolor{keyword}{new} EV3ColorSensor(lgPorts[i]);
+397     \}
+398 
+399     Odometer odometer = Odometer.getOdometer(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor}, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a64cf12cdd6772ac1ce351ff1dfadd626}{TRACK}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a91bd64670c2a91d006c907142783b1f8}{WHEEL\_RAD});
-321 
-322     \textcolor{comment}{// Sensor Related Stuff}
-323     SensorData sensorData = SensorData.getSensorData();
-324 
-325     \textcolor{comment}{// Ultrasonic sensor stuff}
-326     @SuppressWarnings(\textcolor{stringliteral}{"resource"})
-327     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
-328     SampleProvider usDistance = usSensor.getMode("Distance");
-329     \textcolor{keywordtype}{float}[] usData = new \textcolor{keywordtype}{float}[usDistance.sampleSize()];
-330 
-331     SampleProvider backLight[] = new SampleProvider[2];
-332     backLight[0] = lgSensors[0].getRedMode();
-333     backLight[1] = lgSensors[1].getRedMode();
-334 
-335     TextLCD lcd = LocalEV3.get().getTextLCD();
-336     Display odometryDisplay = new Display(lcd);
-337     \textcolor{comment}{// STEP 1: LOCALIZE to (1,1)}
-338     \textcolor{comment}{// ButtonChoice left or right}
-339     lcd.clear();
-340     lcd.drawString("<  Left  |  Right >", 0, 0);
-341     lcd.drawString(" falling | rising  ", 0, 1);
-342     lcd.drawString("  edge   |  edge   ", 0, 2);
-343     lcd.drawString("        \(\backslash\)\(\backslash\)/        ", 0, 3);
-344     lcd.drawString("  Color Detection  ", 0, 4);
-345 
-346     \textcolor{comment}{// Start odometer and odometer display}
-347     Thread odoThread = new Thread(odometer);
-348     odoThread.start();
-349     Thread odoDisplayThread = new Thread(odometryDisplay);
-350     odoDisplayThread.start();
-351 
-352     \textcolor{comment}{// Start ultrasonic and light sensors}
-353     usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
-354     Thread usThread = new Thread(usPoller);
-355     usThread.start();
-356     lightPoller = new LightPoller(backLight, new \textcolor{keywordtype}{float}[2][backLight[1].sampleSize()], sensorData);
-357     Thread lightThread = new Thread(lightPoller);
-358     lightThread.start();
-359 
-360     \textcolor{comment}{// Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight.sampleSize()],}
-361     \textcolor{comment}{// sensorData);}
-362     \textcolor{comment}{// fLgPoller1.start();}
-363     \textcolor{comment}{// Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);}
-364     \textcolor{comment}{// gPoller.start();}
-365   \}
+400 
+401     \textcolor{comment}{// Sensor Related Stuff}
+402     SensorData sensorData = SensorData.getSensorData();
+403 
+404     \textcolor{comment}{// Ultrasonic sensor stuff}
+405     @SuppressWarnings(\textcolor{stringliteral}{"resource"})
+406     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
+407     SampleProvider usDistance = usSensor.getMode("Distance");
+408     \textcolor{keywordtype}{float}[] usData = new \textcolor{keywordtype}{float}[usDistance.sampleSize()];
+409 
+410     SampleProvider backLight[] = new SampleProvider[2];
+411     backLight[0] = lgSensors[0].getRedMode();
+412     backLight[1] = lgSensors[1].getRedMode();
+413 
+414     TextLCD lcd = LocalEV3.get().getTextLCD();
+415     Display odometryDisplay = new Display(lcd);
+416     \textcolor{comment}{// STEP 1: LOCALIZE to (1,1)}
+417     \textcolor{comment}{// ButtonChoice left or right}
+418     lcd.clear();
+419     lcd.drawString("<  Left  |  Right >", 0, 0);
+420     lcd.drawString(" falling | rising  ", 0, 1);
+421     lcd.drawString("  edge   |  edge   ", 0, 2);
+422     lcd.drawString("        \(\backslash\)\(\backslash\)/        ", 0, 3);
+423     lcd.drawString("  Color Detection  ", 0, 4);
+424 
+425     \textcolor{comment}{// Start odometer and odometer display}
+426     Thread odoThread = new Thread(odometer);
+427     odoThread.start();
+428     Thread odoDisplayThread = new Thread(odometryDisplay);
+429     odoDisplayThread.start();
+430 
+431     \textcolor{comment}{// Start ultrasonic and light sensors}
+432     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller} = new UltrasonicPoller(usDistance, usData, sensorData);
+433     Thread usThread = new Thread(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller});
+434     usThread.start();
+435     lightPoller = new LightPoller(backLight, new \textcolor{keywordtype}{float}[2][backLight[1].sampleSize()], sensorData);
+436     Thread lightThread = new Thread(lightPoller);
+437     lightThread.start();
+438 
+439     \textcolor{comment}{// Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight.sampleSize()],}
+440     \textcolor{comment}{// sensorData);}
+441     \textcolor{comment}{// fLgPoller1.start();}
+442     \textcolor{comment}{// Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);}
+443     \textcolor{comment}{// gPoller.start();}
+444   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a1bcbd1c19309c65a6887ae19bde66765_cgraph}
+\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a8f3c5b18f98ee56f5f03afd72fa40bcb_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ab28110fca0af679acdaea84025746f15}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ab28110fca0af679acdaea84025746f15}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!read\+Data@{read\+Data}}
+\index{read\+Data@{read\+Data}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
+\subsubsection{\texorpdfstring{read\+Data()}{readData()}}
+{\footnotesize\ttfamily synchronized void ca.\+mcgill.\+ecse211.\+project.\+Game.\+read\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read data from the \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi}{Wi\+Fi} class (using another thread) 
+
+Definition at line 315 of file Game.\+java.
+
+
+\begin{DoxyCode}
+315                                       \{
+316     \textcolor{comment}{//WiFi wifi = new WiFi();}
+317     WiFi.readData();
+318   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a1bcbd1c19309c65a6887ae19bde66765_icgraph}
+\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ab28110fca0af679acdaea84025746f15_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aff9431d27d78c8b228f468d8ad889a9a}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aff9431d27d78c8b228f468d8ad889a9a}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!read\+Data@{read\+Data}}
-\index{read\+Data@{read\+Data}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
-\subsubsection{\texorpdfstring{read\+Data()}{readData()}}
-{\footnotesize\ttfamily static synchronized void ca.\+mcgill.\+ecse211.\+project.\+Game.\+read\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-Read data from the wifi class (using another thread) 
-
-Definition at line 370 of file Game.\+java.
-
-
-\begin{DoxyCode}
-370                                              \{
-371     WiFi wifi = \textcolor{keyword}{new} WiFi();
-372   \}
-\end{DoxyCode}
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af0afcc3fad6172857252b89624f48e32}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af0afcc3fad6172857252b89624f48e32}} 
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a5b304a6a59ddee3f8c7d37bba8a4c129}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a5b304a6a59ddee3f8c7d37bba8a4c129}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!ready@{ready}}
 \index{ready@{ready}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
 \subsubsection{\texorpdfstring{ready()}{ready()}}
-{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+ready (\begin{DoxyParamCaption}\item[{\hyperlink{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer}{Ultrasonic\+Localizer}}]{us,  }\item[{\hyperlink{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer}{Light\+Localizer}}]{lg\+Loc }\end{DoxyParamCaption})}
 
-perform the localization and go to navigation
+This method performs localizes our robot
 
 \begin{DoxyReturn}{Returns}
-
+A boolean that denotes whether our state transition occurred 
 \end{DoxyReturn}
 
 
-Definition at line 78 of file Game.\+java.
+Definition at line 75 of file Game.\+java.
 
 
 \begin{DoxyCode}
-78                          \{
-79     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-80 
-81     Status aStatus = status;
-82     \textcolor{keywordflow}{switch} (aStatus) \{
-83       \textcolor{keywordflow}{case} Idle:
-84         \textcolor{comment}{// line 5 "model.ump"}
-85         \textcolor{comment}{// localize();}
-86         setStatus(Status.Localization);
-87         wasEventProcessed = \textcolor{keyword}{true};
-88         \textcolor{keywordflow}{break};
-89       \textcolor{keywordflow}{default}:
-90         \textcolor{comment}{// Other states do respond to this event}
-91     \}
-92 
-93     \textcolor{keywordflow}{return} wasEventProcessed;
-94   \}
+76   \{
+77     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
+78     
+79     Status aStatus = status;
+80     \textcolor{keywordflow}{switch} (aStatus)
+81     \{
+82       \textcolor{keywordflow}{case} Idle:
+83         \textcolor{comment}{// line 5 "model.ump"}
+84         \textcolor{keywordflow}{try} \{
+85           localizeAndReadData(us, lgLoc);
+86         \} \textcolor{keywordflow}{catch} (OdometerExceptions e) \{
+87           \textcolor{comment}{// TODO Auto-generated catch block}
+88           e.printStackTrace();
+89         \}
+90         setStatus(Status.Localized);
+91         wasEventProcessed = \textcolor{keyword}{true};
+92         \textcolor{keywordflow}{break};
+93       \textcolor{keywordflow}{default}:
+94         \textcolor{comment}{// Other states do respond to this event}
+95     \}
+96 
+97     \textcolor{keywordflow}{return} wasEventProcessed;
+98   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a62d510506f1b829fe67dea7270e5b889}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a62d510506f1b829fe67dea7270e5b889}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!ring\+Found@{ring\+Found}}
@@ -431,34 +413,35 @@ Definition at line 78 of file Game.\+java.
 \subsubsection{\texorpdfstring{ring\+Found()}{ringFound()}}
 {\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+ring\+Found (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-if ring found, get the ring
+This method is called when a ring is found and obtains it
 
 \begin{DoxyReturn}{Returns}
-whether transition successful 
+A boolean that denotes whether our state transition occurred 
 \end{DoxyReturn}
 
 
-Definition at line 199 of file Game.\+java.
+Definition at line 193 of file Game.\+java.
 
 
 \begin{DoxyCode}
-199                              \{
-200     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-201 
-202     Status aStatus = status;
-203     \textcolor{keywordflow}{switch} (aStatus) \{
-204       \textcolor{keywordflow}{case} RingSearch:
-205         \textcolor{comment}{// line 20 "model.ump"}
-206         \textcolor{comment}{// navigate();}
-207         setStatus(Status.NavigationSearch);
-208         wasEventProcessed = \textcolor{keyword}{true};
-209         \textcolor{keywordflow}{break};
-210       \textcolor{keywordflow}{default}:
-211         \textcolor{comment}{// Other states do respond to this event}
-212     \}
-213 
-214     \textcolor{keywordflow}{return} wasEventProcessed;
-215   \}
+194   \{
+195     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
+196     
+197     Status aStatus = status;
+198     \textcolor{keywordflow}{switch} (aStatus)
+199     \{
+200       \textcolor{keywordflow}{case} RingSearch:
+201         \textcolor{comment}{// line 20 "model.ump"}
+202         searchTree();
+203         setStatus(Status.AtTree);
+204         wasEventProcessed = \textcolor{keyword}{true};
+205         \textcolor{keywordflow}{break};
+206       \textcolor{keywordflow}{default}:
+207         \textcolor{comment}{// Other states do respond to this event}
+208     \}
+209 
+210     \textcolor{keywordflow}{return} wasEventProcessed;
+211   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_adc2725f291b0688a62f85db1df1ee2b2}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_adc2725f291b0688a62f85db1df1ee2b2}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!ring\+Not\+Found@{ring\+Not\+Found}}
@@ -466,42 +449,43 @@ Definition at line 199 of file Game.\+java.
 \subsubsection{\texorpdfstring{ring\+Not\+Found()}{ringNotFound()}}
 {\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+project.\+Game.\+ring\+Not\+Found (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-In case if the ring is not found
+This method is called when a ring is not found
 
 \begin{DoxyReturn}{Returns}
-whether transition successful 
+A boolean that denotes whether our state transition occurred 
 \end{DoxyReturn}
 
 
-Definition at line 222 of file Game.\+java.
+Definition at line 218 of file Game.\+java.
 
 
 \begin{DoxyCode}
-222                                 \{
-223     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-224 
-225     Status aStatus = status;
-226     \textcolor{keywordflow}{switch} (aStatus) \{
-227       \textcolor{keywordflow}{case} RingSearch:
-228         \textcolor{comment}{// line 21 "model.ump"}
-229         \textcolor{comment}{// navigate();}
-230         setStatus(Status.NavigationSearch);
-231         wasEventProcessed = \textcolor{keyword}{true};
-232         \textcolor{keywordflow}{break};
-233       \textcolor{keywordflow}{default}:
-234         \textcolor{comment}{// Other states do respond to this event}
-235     \}
-236 
-237     \textcolor{keywordflow}{return} wasEventProcessed;
-238   \}
+219   \{
+220     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
+221     
+222     Status aStatus = status;
+223     \textcolor{keywordflow}{switch} (aStatus)
+224     \{
+225       \textcolor{keywordflow}{case} RingSearch:
+226         \textcolor{comment}{// line 21 "model.ump"}
+227         searchTree();
+228         setStatus(Status.AtTree);
+229         wasEventProcessed = \textcolor{keyword}{true};
+230         \textcolor{keywordflow}{break};
+231       \textcolor{keywordflow}{default}:
+232         \textcolor{comment}{// Other states do respond to this event}
+233     \}
+234 
+235     \textcolor{keywordflow}{return} wasEventProcessed;
+236   \}
 \end{DoxyCode}
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a790740a4ed299c9b985401ea8c4d5010}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a790740a4ed299c9b985401ea8c4d5010}} 
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_adf69abe44e952d627fb9e6a2f678cb5e}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_adf69abe44e952d627fb9e6a2f678cb5e}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!run\+Game@{run\+Game}}
 \index{run\+Game@{run\+Game}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
 \subsubsection{\texorpdfstring{run\+Game()}{runGame()}}
-{\footnotesize\ttfamily static synchronized void ca.\+mcgill.\+ecse211.\+project.\+Game.\+run\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+project.\+Game.\+run\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}}
 
-This method contains main logic for the game plays
+This method is called when the after the robot has been prepared and is ready to compete
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -510,65 +494,36 @@ This method contains main logic for the game plays
 \end{DoxyExceptions}
 
 
-Definition at line 379 of file Game.\+java.
+Definition at line 451 of file Game.\+java.
 
 
 \begin{DoxyCode}
-379                                                                       \{
-380     \textcolor{keyword}{final} \textcolor{keywordtype}{int} buttonChoice = Button.waitForAnyPress(); \textcolor{comment}{// Record choice (left or right press)}
-381     \textcolor{comment}{// Start localizing}
-382     \textcolor{keyword}{final} Navigation navigation = \textcolor{keyword}{new} Navigation(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
-383     \textcolor{keyword}{final} UltrasonicLocalizer usLoc = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, 
+451                                                   \{
+452     \textcolor{keyword}{final} \textcolor{keywordtype}{int} buttonChoice = Button.waitForAnyPress(); \textcolor{comment}{// Record choice (left or right press)}
+453     GameParameters.Demo = DemoType.Beta;
+454     GameParameters.PlayerTeamNumber = 1;
+455     \textcolor{comment}{// Start localizing}
+456     \textcolor{keyword}{final} Navigation navigation = \textcolor{keyword}{new} Navigation(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
+457     \textcolor{keyword}{final} UltrasonicLocalizer usLoc = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
-384     \textcolor{keyword}{final} LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, 
+458     \textcolor{keyword}{final} LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
-385     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af3ba5407b115e9c6e07dffda576f29b7}{storageMotor}, 
-      \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aeb41e5234fcb3b311385f39a07a24a54}{rodMotor});
-386     \textcolor{comment}{// spawn a new Thread to avoid localization from blocking}
-387     (\textcolor{keyword}{new} Thread() \{
-388       \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{
-389         \textcolor{comment}{// target color}
-390 
-391         (\textcolor{keyword}{new} Thread() \{
-392           \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{
-393             \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aff9431d27d78c8b228f468d8ad889a9a}{readData}();
-394             hasReadData = \textcolor{keyword}{true};
-395             notify();
-396           \}
-397         \}).start();
-398         usLoc.localize(buttonChoice);
-399         lgLoc.localize(GameParameters.SC);
-400         searcher.search();
-401         searcher.retrieveRing();
-402         \textcolor{comment}{//ug collision detection always on}
-403         \textcolor{comment}{//navigate to start}
-404         \textcolor{keywordflow}{try} \{
-405           \textcolor{keywordflow}{while} (!hasReadData)
-406             wait();
-407         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-408           \textcolor{comment}{// TODO Auto-generated catch block}
-409           e.printStackTrace();
-410         \}
-411       \}
-412     \}).start();
-413   \}
+459     \textcolor{comment}{//final RingSearcher searcher = new RingSearcher(storageMotor, rodMotor);}
+460     \textcolor{comment}{// spawn a new Thread to avoid localization from blocking}
+461     (\textcolor{keyword}{new} Thread() \{
+462       \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{
+463         \textcolor{comment}{// target color}
+464 
+465         \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.ready(usLoc, lgLoc);
+466         \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.navigateTunnel(navigation);
+467        \textcolor{comment}{// searcher.search();}
+468         \textcolor{comment}{//searcher.retrieveRing();}
+469         \textcolor{comment}{// ug collision detection always on}
+470         \textcolor{comment}{// navigate to start}
+471       \}
+472     \}).start();
+473   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a790740a4ed299c9b985401ea8c4d5010_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a790740a4ed299c9b985401ea8c4d5010_icgraph}
-\end{center}
-\end{figure}
 
 
 \subsection{Member Data Documentation}
@@ -585,7 +540,7 @@ Here is the caller graph for this function\+:
 \end{DoxyCode}
 Motor object instance that allows control of the left motor connected to port A 
 
-Definition at line 257 of file Game.\+java.
+Definition at line 270 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!right\+Motor@{right\+Motor}}
@@ -600,22 +555,7 @@ Definition at line 257 of file Game.\+java.
 \end{DoxyCode}
 Motor object instance that allows control of the right motor connected to port D 
 
-Definition at line 263 of file Game.\+java.
-
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aeb41e5234fcb3b311385f39a07a24a54}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aeb41e5234fcb3b311385f39a07a24a54}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!rod\+Motor@{rod\+Motor}}
-\index{rod\+Motor@{rod\+Motor}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
-\subsubsection{\texorpdfstring{rod\+Motor}{rodMotor}}
-{\footnotesize\ttfamily  static  final E\+V3\+Medium\+Regulated\+Motor ca.\+mcgill.\+ecse211.\+project.\+Game.\+rod\+Motor\hspace{0.3cm}{\ttfamily [static]}}
-
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-=
-      \textcolor{keyword}{new} EV3MediumRegulatedMotor(LocalEV3.get().getPort(\textcolor{stringliteral}{"B"}))
-\end{DoxyCode}
-Motor object instance taht allows control of the motor on the rod for collecting rings 
-
-Definition at line 275 of file Game.\+java.
+Definition at line 276 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ab940d1a52b9759294dc0229e0fd6bc06}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ab940d1a52b9759294dc0229e0fd6bc06}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!S\+E\+N\+\_\+\+D\+IS@{S\+E\+N\+\_\+\+D\+IS}}
@@ -623,24 +563,9 @@ Definition at line 275 of file Game.\+java.
 \subsubsection{\texorpdfstring{S\+E\+N\+\_\+\+D\+IS}{SEN\_DIS}}
 {\footnotesize\ttfamily  static  final double ca.\+mcgill.\+ecse211.\+project.\+Game.\+S\+E\+N\+\_\+\+D\+IS = 4.\+4\hspace{0.3cm}{\ttfamily [static]}}
 
-The distance between light sensor and the center of the robot in cm 
+This variable stores the distance between the light sensor and center of the robot in cm 
 
-Definition at line 297 of file Game.\+java.
-
-\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af3ba5407b115e9c6e07dffda576f29b7}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af3ba5407b115e9c6e07dffda576f29b7}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!storage\+Motor@{storage\+Motor}}
-\index{storage\+Motor@{storage\+Motor}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
-\subsubsection{\texorpdfstring{storage\+Motor}{storageMotor}}
-{\footnotesize\ttfamily  static  final E\+V3\+Large\+Regulated\+Motor ca.\+mcgill.\+ecse211.\+project.\+Game.\+storage\+Motor\hspace{0.3cm}{\ttfamily [static]}}
-
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-=
-      \textcolor{keyword}{new} EV3LargeRegulatedMotor(LocalEV3.get().getPort(\textcolor{stringliteral}{"C"}))
-\end{DoxyCode}
-Motor object instance that allows control of the motor on storage rod 
-
-Definition at line 269 of file Game.\+java.
+Definition at line 310 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a72c2224ad4dd557dde445ebc4baaf531}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a72c2224ad4dd557dde445ebc4baaf531}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!T\+I\+LE@{T\+I\+LE}}
@@ -648,9 +573,9 @@ Definition at line 269 of file Game.\+java.
 \subsubsection{\texorpdfstring{T\+I\+LE}{TILE}}
 {\footnotesize\ttfamily  static  final double ca.\+mcgill.\+ecse211.\+project.\+Game.\+T\+I\+LE = 30.\+48\hspace{0.3cm}{\ttfamily [static]}}
 
-length of the tile 
+Motor object instance that allows control of the motor on storage rod Motor object instance that allows control of the motor on the rod for collecting rings This variable stores the length of a tile in cm 
 
-Definition at line 281 of file Game.\+java.
+Definition at line 294 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a64cf12cdd6772ac1ce351ff1dfadd626}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a64cf12cdd6772ac1ce351ff1dfadd626}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!T\+R\+A\+CK@{T\+R\+A\+CK}}
@@ -658,9 +583,19 @@ Definition at line 281 of file Game.\+java.
 \subsubsection{\texorpdfstring{T\+R\+A\+CK}{TRACK}}
 {\footnotesize\ttfamily  static  final double ca.\+mcgill.\+ecse211.\+project.\+Game.\+T\+R\+A\+CK = 11.\+5\hspace{0.3cm}{\ttfamily [static]}}
 
-This variable denotes the track distance between the center of the wheels in cm (measured and adjusted based on trial and error). 
+This variable holds the track distance between the center of the wheels in cm (measured and adjusted based on trial and error) 
 
-Definition at line 292 of file Game.\+java.
+Definition at line 305 of file Game.\+java.
+
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!us\+Poller@{us\+Poller}}
+\index{us\+Poller@{us\+Poller}!ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}}
+\subsubsection{\texorpdfstring{us\+Poller}{usPoller}}
+{\footnotesize\ttfamily \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control}{Thread\+Control} ca.\+mcgill.\+ecse211.\+project.\+Game.\+us\+Poller}
+
+This variable stores a Thread\+Controller instance that controls our ultrasonic sensor 
+
+Definition at line 265 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a91bd64670c2a91d006c907142783b1f8}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a91bd64670c2a91d006c907142783b1f8}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!W\+H\+E\+E\+L\+\_\+\+R\+AD@{W\+H\+E\+E\+L\+\_\+\+R\+AD}}
@@ -668,9 +603,9 @@ Definition at line 292 of file Game.\+java.
 \subsubsection{\texorpdfstring{W\+H\+E\+E\+L\+\_\+\+R\+AD}{WHEEL\_RAD}}
 {\footnotesize\ttfamily  static  final double ca.\+mcgill.\+ecse211.\+project.\+Game.\+W\+H\+E\+E\+L\+\_\+\+R\+AD = 2.\+15\hspace{0.3cm}{\ttfamily [static]}}
 
-This variable denotes the radius of our wheels in cm. 
+This variable stores the radius of our wheels in cm 
 
-Definition at line 286 of file Game.\+java.
+Definition at line 299 of file Game.\+java.
 
 
 

@@ -95,60 +95,60 @@
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="57">
+      <node id="60">
         <label>ca.mcgill.ecse211.threads.RGBPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller"/>
-        <childnode refid="58" relation="public-inheritance">
+        <childnode refid="61" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="58">
+      <node id="61">
         <label>ca.mcgill.ecse211.threads.LightPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
-        <childnode refid="59" relation="public-inheritance">
+        <childnode refid="62" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="59">
+      <node id="62">
         <label>ca.mcgill.ecse211.threads.ThreadControl</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="60" relation="public-inheritance">
+        <childnode refid="63" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="60">
+      <node id="63">
         <label>Runnable</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="61">
+      <node id="64">
         <label>ca.mcgill.ecse211.threads.RGBPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller"/>
-        <childnode refid="62" relation="public-inheritance">
+        <childnode refid="65" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="65">
+      <node id="68">
         <label>SampleProvider</label>
       </node>
-      <node id="62">
+      <node id="65">
         <label>ca.mcgill.ecse211.threads.LightPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
-        <childnode refid="63" relation="public-inheritance">
+        <childnode refid="66" relation="public-inheritance">
         </childnode>
-        <childnode refid="65" relation="usage">
+        <childnode refid="68" relation="usage">
           <edgelabel>us</edgelabel>
         </childnode>
-        <childnode refid="66" relation="usage">
+        <childnode refid="69" relation="usage">
           <edgelabel>cont</edgelabel>
         </childnode>
       </node>
-      <node id="63">
+      <node id="66">
         <label>ca.mcgill.ecse211.threads.ThreadControl</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="64" relation="public-inheritance">
+        <childnode refid="67" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="64">
+      <node id="67">
         <label>Runnable</label>
       </node>
-      <node id="66">
+      <node id="69">
         <label>ca.mcgill.ecse211.threads.SensorData</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data"/>
       </node>

@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['sc',['SC',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#af3944d1bc80c4c8a6cabce66e030f4b7',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['searching',['Searching',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a25564076fdd8880377fbd6eaf753456f',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['searchingboundary',['SearchingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a5a3aceb665ba97ac242e77955feed640',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['sen_5fdis',['SEN_DIS',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab940d1a52b9759294dc0229e0fd6bc06',1,'ca::mcgill::ecse211::project::Game']]],
-  ['shouldwait',['shouldWait',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a8252930dab1b067da64cf2afae4fc630',1,'ca::mcgill::ecse211::threads::ThreadControl']]],
-  ['starting',['Starting',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a3e0e6dda84dcf0572039c349889217c5',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['startingboundary',['StartingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#afd78c1184c6b82e22bb08ed39ae4e83b',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['storagemotor',['storageMotor',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#af3ba5407b115e9c6e07dffda576f29b7',1,'ca::mcgill::ecse211::project::Game']]]
+  ['ocorner',['OCorner',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a8aba47cbe70ca0c782183a1c956197e7',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['oppo_5fll',['OPPO_LL',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a7ae1bf6f8937b8098396452d8b30e423',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['oppo_5fur',['OPPO_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a4b23cfeb18fdeecaeecb59280a455170',1,'ca::mcgill::ecse211::project::GameParameters']]]
 ];

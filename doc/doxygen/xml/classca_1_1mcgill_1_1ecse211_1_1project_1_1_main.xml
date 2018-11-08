@@ -22,7 +22,7 @@
         <definition>ComponentTest.Type ca.mcgill.ecse211.project.Main.testType</definition>
         <argsstring></argsstring>
         <name>testType</name>
-        <initializer>= <ref refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1aa8c9262ad5014cd52ecce2eec6604510" kindref="member">ComponentTest.Type.LightSensor</ref></initializer>
+        <initializer>= <ref refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1acdc93de9366f2e6710c7f2fc0e4478c3" kindref="member">ComponentTest.Type.Localization</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -30,7 +30,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" bodystart="26" bodyend="-1"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af681b5dc675c13ed284071cc135f5fd3" compoundref="_main_8java" startline="34" endline="58">ca.mcgill.ecse211.project.Main.main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -66,10 +65,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" line="34" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" bodystart="34" bodyend="58"/>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a1bcbd1c19309c65a6887ae19bde66765" compoundref="_game_8java" startline="306" endline="365">ca.mcgill.ecse211.project.Game.preparation</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a5dc8bf97bc48adf5bee88d425a1a974e" compoundref="_component_test_8java" startline="32" endline="57">ca.mcgill.ecse211.tests.ComponentTest.runTest</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1a8dac740460370f76ac0db5dc20824b1f" compoundref="_main_8java" startline="26">ca.mcgill.ecse211.project.Main.testType</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="379" endline="413">ca.mcgill.ecse211.project.Game.runGame</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a6584b6534b14ba43dc1444084a925a20" compoundref="_game_8java" startline="33">ca.mcgill.ecse211.project.Game.INSTANCE</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="76" endline="85">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -83,14 +80,14 @@
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="36">
+      <node id="37">
         <label>ca.mcgill.ecse211.project.Main</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main"/>
-        <childnode refid="37" relation="usage">
+        <childnode refid="38" relation="usage">
           <edgelabel>testType</edgelabel>
         </childnode>
       </node>
-      <node id="37">
+      <node id="38">
         <label>ca.mcgill.ecse211.tests.ComponentTest</label>
         <link refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test"/>
       </node>

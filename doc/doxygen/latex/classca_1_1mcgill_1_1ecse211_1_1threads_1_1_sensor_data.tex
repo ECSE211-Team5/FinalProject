@@ -17,7 +17,7 @@ void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a35b1941
 \item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}{set\+R\+GB} (int r, int g, int b)
 \item 
-void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a1c2c38354fc5a66b4667e1d47ab6b20b}{setL} (double l, int id)
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_af905a6f2825716ae1a39bf7f6be09477}{setL} (double l\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -109,7 +109,8 @@ Definition at line 119 of file Sensor\+Data.\+java.
 120     \textcolor{keywordflow}{return} angle;
 121   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -205,7 +206,8 @@ Definition at line 104 of file Sensor\+Data.\+java.
 110     \}
 111   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -248,7 +250,8 @@ Definition at line 61 of file Sensor\+Data.\+java.
 72 
 73   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -286,13 +289,6 @@ Definition at line 138 of file Sensor\+Data.\+java.
 139       this.angle = a;
 140   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a35b1941d44e86b81eb7c625efbd3c8ba_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!setD@{setD}}
 \index{setD@{setD}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
@@ -316,18 +312,19 @@ Definition at line 128 of file Sensor\+Data.\+java.
 129       this.distance = d;
 130   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a1c2c38354fc5a66b4667e1d47ab6b20b}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a1c2c38354fc5a66b4667e1d47ab6b20b}} 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_af905a6f2825716ae1a39bf7f6be09477}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_af905a6f2825716ae1a39bf7f6be09477}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!setL@{setL}}
 \index{setL@{setL}!ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}}
 \subsubsection{\texorpdfstring{set\+L()}{setL()}}
-{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+setL (\begin{DoxyParamCaption}\item[{double}]{l,  }\item[{int}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+setL (\begin{DoxyParamCaption}\item[{double}]{l\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 This method overwrites the light value. (protected by light lock)
 
@@ -342,20 +339,22 @@ Definition at line 165 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-165                                      \{
+165                                \{
 166     \textcolor{keywordflow}{try} \{
 167       lightLock.lock();
-168       this.lights[id] = l;
-169     \} \textcolor{keywordflow}{finally} \{
-170       lightLock.unlock();
-171     \}
-172   \}
+168       this.lights[0] = l[0];
+169       this.lights[1] = l[1];
+170     \} \textcolor{keywordflow}{finally} \{
+171       lightLock.unlock();
+172     \}
+173   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a1c2c38354fc5a66b4667e1d47ab6b20b_icgraph}
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_af905a6f2825716ae1a39bf7f6be09477_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}} 
@@ -392,7 +391,8 @@ Definition at line 149 of file Sensor\+Data.\+java.
 157     \}
 158   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.Game" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.Game" 3 "Thu Nov 8 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,19 +23,16 @@ ca.mcgill.ecse211.project.Game
 .RI "\fBStatus\fP \fBgetStatus\fP ()"
 .br
 .ti -1c
-.RI "boolean \fBready\fP ()"
+.RI "boolean \fBready\fP (\fBUltrasonicLocalizer\fP us, \fBLightLocalizer\fP lgLoc)"
 .br
 .ti -1c
-.RI "boolean \fBlocalized\fP ()"
+.RI "boolean \fBnavigateToTunnel\fP (\fBNavigation\fP navigation)"
 .br
 .ti -1c
-.RI "boolean \fBnavigatedToTunnel\fP ()"
+.RI "boolean \fBnavigateToStart\fP ()"
 .br
 .ti -1c
-.RI "boolean \fBnavigatedToStart\fP ()"
-.br
-.ti -1c
-.RI "boolean \fBnavigatedToTree\fP ()"
+.RI "boolean \fBnavigateToTree\fP ()"
 .br
 .ti -1c
 .RI "boolean \fBringFound\fP ()"
@@ -43,18 +40,21 @@ ca.mcgill.ecse211.project.Game
 .ti -1c
 .RI "boolean \fBringNotFound\fP ()"
 .br
+.ti -1c
+.RI "synchronized void \fBreadData\fP ()"
+.br
+.ti -1c
+.RI "void \fBpreparation\fP ()  throws OdometerExceptions "
+.br
+.ti -1c
+.RI "void \fBrunGame\fP ()  throws OdometerExceptions "
+.br
 .in -1c
-.SS "Static Public Member Functions"
+.SS "Public Attributes"
 
 .in +1c
 .ti -1c
-.RI "static void \fBpreparation\fP ()  throws OdometerExceptions "
-.br
-.ti -1c
-.RI "static synchronized void \fBreadData\fP ()"
-.br
-.ti -1c
-.RI "static synchronized void \fBrunGame\fP ()  throws OdometerExceptions "
+.RI "\fBThreadControl\fP \fBusPoller\fP"
 .br
 .in -1c
 .SS "Static Public Attributes"
@@ -65,12 +65,6 @@ ca.mcgill.ecse211.project.Game
 .br
 .ti -1c
 .RI "static final EV3LargeRegulatedMotor \fBrightMotor\fP"
-.br
-.ti -1c
-.RI "static final EV3LargeRegulatedMotor \fBstorageMotor\fP"
-.br
-.ti -1c
-.RI "static final EV3MediumRegulatedMotor \fBrodMotor\fP"
 .br
 .ti -1c
 .RI "static final double \fBTILE\fP = 30\&.48"
@@ -106,174 +100,158 @@ Kamy Moussavi Kafi
 .PP
 
 .PP
-Definition at line 33 of file Game\&.java\&.
+Definition at line 32 of file Game\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBStatus\fP ca\&.mcgill\&.ecse211\&.project\&.Game\&.getStatus ()"
-get the current status of the game
+This method gets the current status of our robot
 .PP
 \fBReturns:\fP
 .RS 4
+A \fBStatus\fP enumeration value 
 .RE
 .PP
 
 .PP
-Definition at line 69 of file Game\&.java\&.
+Definition at line 66 of file Game\&.java\&.
 .PP
 .nf
-69                             {
-70     return status;
-71   }
+66                             {
+67     return status;
+68   }
 .fi
 .SS "String ca\&.mcgill\&.ecse211\&.project\&.Game\&.getStatusFullName ()"
-get the full name of the status
+This method gets a string representation of the status of our robot
 .PP
 \fBReturns:\fP
 .RS 4
+A string of the status variable 
 .RE
 .PP
 
 .PP
-Definition at line 59 of file Game\&.java\&.
+Definition at line 57 of file Game\&.java\&.
 .PP
 .nf
-59                                     {
-60     String answer = status\&.toString();
-61     return answer;
-62   }
+57                                     {
+58     return status\&.toString();
+59   }
 .fi
-.SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.localized ()"
-Navigating to the tunnel and to the search area
+.SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.navigateToStart ()"
+This method navigates our robot to the starting corner
 .PP
 \fBReturns:\fP
 .RS 4
-whether transition successful 
+A boolean that denotes whether our state transition occurred 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIInterruptedException\fP 
 .RE
 .PP
 
 .PP
-Definition at line 101 of file Game\&.java\&.
+Definition at line 137 of file Game\&.java\&.
 .PP
 .nf
-101                              {
-102     boolean wasEventProcessed = false;
-103 
-104     Status aStatus = status;
-105     switch (aStatus) {
-106       case Localization:
-107         // line 8 "model\&.ump"
-108         // navigate();
-109         setStatus(Status\&.NavigationSafe);
-110         wasEventProcessed = true;
-111         break;
-112       default:
-113         // Other states do respond to this event
-114     }
-115 
-116     return wasEventProcessed;
-117   }
+138   {
+139     boolean wasEventProcessed = false;
+140     
+141     Status aStatus = status;
+142     switch (aStatus)
+143     {
+144       case AtTunnel:
+145         // line 12 "model\&.ump"
+146         navigateStart();
+147         setStatus(Status\&.Idle);
+148         wasEventProcessed = true;
+149         break;
+150       default:
+151         // Other states do respond to this event
+152     }
+153 
+154     return wasEventProcessed;
+155   }
 .fi
-.SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.navigatedToStart ()"
-Navigate to the starting corner
+.SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.navigateToTree ()"
+This method navigates our robot to the tree and tries to find rings
 .PP
 \fBReturns:\fP
 .RS 4
-whether transition successful 
+A boolean that denotes whether our state transition occurred 
 .RE
 .PP
 
 .PP
-Definition at line 153 of file Game\&.java\&.
+Definition at line 162 of file Game\&.java\&.
 .PP
 .nf
-153                                     {
-154     boolean wasEventProcessed = false;
-155 
-156     Status aStatus = status;
-157     switch (aStatus) {
-158       case NavigationSafe:
-159         // line 12 "model\&.ump"
-160         // wait();
-161         setStatus(Status\&.Idle);
-162         wasEventProcessed = true;
-163         break;
-164       default:
-165         // Other states do respond to this event
-166     }
-167 
-168     return wasEventProcessed;
-169   }
+163   {
+164     boolean wasEventProcessed = false;
+165     
+166     Status aStatus = status;
+167     switch (aStatus)
+168     {
+169       case AtTunnel:
+170         // line 11 "model\&.ump"
+171         navigateTree();
+172         setStatus(Status\&.AtTree);
+173         wasEventProcessed = true;
+174         break;
+175       case AtTree:
+176         // line 16 "model\&.ump"
+177         searchRing();
+178         setStatus(Status\&.RingSearch);
+179         wasEventProcessed = true;
+180         break;
+181       default:
+182         // Other states do respond to this event
+183     }
+184 
+185     return wasEventProcessed;
+186   }
 .fi
-.SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.navigatedToTree ()"
-Navigate to the tree and try find the rings
+.SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.navigateToTunnel (\fBNavigation\fP navigation)"
+This method navigates our robot to the tunnel or search area
 .PP
 \fBReturns:\fP
 .RS 4
-whether transition successful 
+A boolean that denotes whether our state transition occurred 
 .RE
 .PP
 
 .PP
-Definition at line 176 of file Game\&.java\&.
+Definition at line 105 of file Game\&.java\&.
 .PP
 .nf
-176                                    {
-177     boolean wasEventProcessed = false;
-178 
-179     Status aStatus = status;
-180     switch (aStatus) {
-181       case NavigationSearch:
-182         // line 16 "model\&.ump"
-183         // searchRing();
-184         setStatus(Status\&.RingSearch);
-185         wasEventProcessed = true;
-186         break;
-187       default:
-188         // Other states do respond to this event
-189     }
-190 
-191     return wasEventProcessed;
-192   }
+106   {
+107     boolean wasEventProcessed = false;
+108     
+109     Status aStatus = status;
+110     switch (aStatus)
+111     {
+112       case Localized:
+113         // line 8 "model\&.ump"
+114         navigateTunnel(navigation);
+115         setStatus(Status\&.AtTunnel);
+116         wasEventProcessed = true;
+117         break;
+118       case AtTree:
+119         // line 17 "model\&.ump"
+120         navigateBackTunnel();
+121         setStatus(Status\&.AtTunnel);
+122         wasEventProcessed = true;
+123         break;
+124       default:
+125         // Other states do respond to this event
+126     }
+127 
+128     return wasEventProcessed;
+129   }
 .fi
-.SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.navigatedToTunnel ()"
-whether transition successful
-.PP
-\fBReturns:\fP
-.RS 4
-whether transition successful 
-.RE
-.PP
-
-.PP
-Definition at line 124 of file Game\&.java\&.
-.PP
-.nf
-124                                      {
-125     boolean wasEventProcessed = false;
-126 
-127     Status aStatus = status;
-128     switch (aStatus) {
-129       case NavigationSafe:
-130         // line 11 "model\&.ump"
-131         // navigate();
-132         setStatus(Status\&.NavigationSearch);
-133         wasEventProcessed = true;
-134         break;
-135       case NavigationSearch:
-136         // line 17 "model\&.ump"
-137         // navigate();
-138         setStatus(Status\&.NavigationSafe);
-139         wasEventProcessed = true;
-140         break;
-141       default:
-142         // Other states do respond to this event
-143     }
-144 
-145     return wasEventProcessed;
-146   }
-.fi
-.SS "static void ca\&.mcgill\&.ecse211\&.project\&.Game\&.preparation () throws \fBOdometerExceptions\fP\fC [static]\fP"
-Prepare for the game: starting thread, read all arguments
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.Game\&.preparation () throws \fBOdometerExceptions\fP"
+This method performs all the object instantiations and preparations necessary to get our robot to compete
 .PP
 \fBExceptions:\fP
 .RS 4
@@ -282,174 +260,184 @@ Prepare for the game: starting thread, read all arguments
 .PP
 
 .PP
-Definition at line 306 of file Game\&.java\&.
+Definition at line 385 of file Game\&.java\&.
 .PP
 .nf
-306                                                              {
-307     // Motor Objects, and Robot related parameters
-308     Port usPort = LocalEV3\&.get()\&.getPort("S1");
-309     // initialize multiple light ports in main
-310     Port[] lgPorts = new Port[3];
-311 
-312     // Light sesnor sensor stuff
-313     lgPorts[0] = LocalEV3\&.get()\&.getPort("S2");
-314     lgPorts[1] = LocalEV3\&.get()\&.getPort("S3");
-315     EV3ColorSensor[] lgSensors = new EV3ColorSensor[2];
-316     for (int i = 0; i < lgSensors\&.length; i++) {
-317       lgSensors[i] = new EV3ColorSensor(lgPorts[i]);
-318     }
-319 
-320     Odometer odometer = Odometer\&.getOdometer(leftMotor, rightMotor, TRACK, WHEEL_RAD);
-321 
-322     // Sensor Related Stuff
-323     SensorData sensorData = SensorData\&.getSensorData();
-324 
-325     // Ultrasonic sensor stuff
-326     @SuppressWarnings("resource")
-327     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
-328     SampleProvider usDistance = usSensor\&.getMode("Distance");
-329     float[] usData = new float[usDistance\&.sampleSize()];
-330 
-331     SampleProvider backLight[] = new SampleProvider[2];
-332     backLight[0] = lgSensors[0]\&.getRedMode();
-333     backLight[1] = lgSensors[1]\&.getRedMode();
-334 
-335     TextLCD lcd = LocalEV3\&.get()\&.getTextLCD();
-336     Display odometryDisplay = new Display(lcd);
-337     // STEP 1: LOCALIZE to (1,1)
-338     // ButtonChoice left or right
-339     lcd\&.clear();
-340     lcd\&.drawString("<  Left  |  Right >", 0, 0);
-341     lcd\&.drawString(" falling | rising  ", 0, 1);
-342     lcd\&.drawString("  edge   |  edge   ", 0, 2);
-343     lcd\&.drawString("        \\/        ", 0, 3);
-344     lcd\&.drawString("  Color Detection  ", 0, 4);
-345 
-346     // Start odometer and odometer display
-347     Thread odoThread = new Thread(odometer);
-348     odoThread\&.start();
-349     Thread odoDisplayThread = new Thread(odometryDisplay);
-350     odoDisplayThread\&.start();
-351 
-352     // Start ultrasonic and light sensors
-353     usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
-354     Thread usThread = new Thread(usPoller);
-355     usThread\&.start();
-356     lightPoller = new LightPoller(backLight, new float[2][backLight[1]\&.sampleSize()], sensorData);
-357     Thread lightThread = new Thread(lightPoller);
-358     lightThread\&.start();
-359 
-360     // Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight\&.sampleSize()],
-361     // sensorData);
-362     // fLgPoller1\&.start();
-363     // Thread gPoller = new GyroPoller(gProvider, new float[gProvider\&.sampleSize()], sensorData);
-364     // gPoller\&.start();
-365   }
+385                                                       {
+386     // Motor Objects, and Robot related parameters
+387     Port usPort = LocalEV3\&.get()\&.getPort("S1");
+388     // initialize multiple light ports in main
+389     Port[] lgPorts = new Port[3];
+390 
+391     // Light sensor sensor stuff
+392     lgPorts[0] = LocalEV3\&.get()\&.getPort("S2");
+393     lgPorts[1] = LocalEV3\&.get()\&.getPort("S3");
+394     EV3ColorSensor[] lgSensors = new EV3ColorSensor[2];
+395     for (int i = 0; i < lgSensors\&.length; i++) {
+396       lgSensors[i] = new EV3ColorSensor(lgPorts[i]);
+397     }
+398 
+399     Odometer odometer = Odometer\&.getOdometer(leftMotor, rightMotor, TRACK, WHEEL_RAD);
+400 
+401     // Sensor Related Stuff
+402     SensorData sensorData = SensorData\&.getSensorData();
+403 
+404     // Ultrasonic sensor stuff
+405     @SuppressWarnings("resource")
+406     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
+407     SampleProvider usDistance = usSensor\&.getMode("Distance");
+408     float[] usData = new float[usDistance\&.sampleSize()];
+409 
+410     SampleProvider backLight[] = new SampleProvider[2];
+411     backLight[0] = lgSensors[0]\&.getRedMode();
+412     backLight[1] = lgSensors[1]\&.getRedMode();
+413 
+414     TextLCD lcd = LocalEV3\&.get()\&.getTextLCD();
+415     Display odometryDisplay = new Display(lcd);
+416     // STEP 1: LOCALIZE to (1,1)
+417     // ButtonChoice left or right
+418     lcd\&.clear();
+419     lcd\&.drawString("<  Left  |  Right >", 0, 0);
+420     lcd\&.drawString(" falling | rising  ", 0, 1);
+421     lcd\&.drawString("  edge   |  edge   ", 0, 2);
+422     lcd\&.drawString("        \\/        ", 0, 3);
+423     lcd\&.drawString("  Color Detection  ", 0, 4);
+424 
+425     // Start odometer and odometer display
+426     Thread odoThread = new Thread(odometer);
+427     odoThread\&.start();
+428     Thread odoDisplayThread = new Thread(odometryDisplay);
+429     odoDisplayThread\&.start();
+430 
+431     // Start ultrasonic and light sensors
+432     usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
+433     Thread usThread = new Thread(usPoller);
+434     usThread\&.start();
+435     lightPoller = new LightPoller(backLight, new float[2][backLight[1]\&.sampleSize()], sensorData);
+436     Thread lightThread = new Thread(lightPoller);
+437     lightThread\&.start();
+438 
+439     // Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight\&.sampleSize()],
+440     // sensorData);
+441     // fLgPoller1\&.start();
+442     // Thread gPoller = new GyroPoller(gProvider, new float[gProvider\&.sampleSize()], sensorData);
+443     // gPoller\&.start();
+444   }
 .fi
-.SS "static synchronized void ca\&.mcgill\&.ecse211\&.project\&.Game\&.readData ()\fC [static]\fP"
-Read data from the wifi class (using another thread) 
+.SS "synchronized void ca\&.mcgill\&.ecse211\&.project\&.Game\&.readData ()"
+Read data from the \fBWiFi\fP class (using another thread) 
 .PP
-Definition at line 370 of file Game\&.java\&.
+Definition at line 315 of file Game\&.java\&.
 .PP
 .nf
-370                                              {
-371     WiFi wifi = new WiFi();
-372   }
+315                                       {
+316     //WiFi wifi = new WiFi();
+317     WiFi\&.readData();
+318   }
 .fi
-.SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.ready ()"
-perform the localization and go to navigation
+.SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.ready (\fBUltrasonicLocalizer\fP us, \fBLightLocalizer\fP lgLoc)"
+This method performs localizes our robot
 .PP
 \fBReturns:\fP
 .RS 4
+A boolean that denotes whether our state transition occurred 
 .RE
 .PP
 
 .PP
-Definition at line 78 of file Game\&.java\&.
+Definition at line 75 of file Game\&.java\&.
 .PP
 .nf
-78                          {
-79     boolean wasEventProcessed = false;
-80 
-81     Status aStatus = status;
-82     switch (aStatus) {
-83       case Idle:
-84         // line 5 "model\&.ump"
-85         // localize();
-86         setStatus(Status\&.Localization);
-87         wasEventProcessed = true;
-88         break;
-89       default:
-90         // Other states do respond to this event
-91     }
-92 
-93     return wasEventProcessed;
-94   }
+76   {
+77     boolean wasEventProcessed = false;
+78     
+79     Status aStatus = status;
+80     switch (aStatus)
+81     {
+82       case Idle:
+83         // line 5 "model\&.ump"
+84         try {
+85           localizeAndReadData(us, lgLoc);
+86         } catch (OdometerExceptions e) {
+87           // TODO Auto-generated catch block
+88           e\&.printStackTrace();
+89         }
+90         setStatus(Status\&.Localized);
+91         wasEventProcessed = true;
+92         break;
+93       default:
+94         // Other states do respond to this event
+95     }
+96 
+97     return wasEventProcessed;
+98   }
 .fi
 .SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.ringFound ()"
-if ring found, get the ring
+This method is called when a ring is found and obtains it
 .PP
 \fBReturns:\fP
 .RS 4
-whether transition successful 
+A boolean that denotes whether our state transition occurred 
 .RE
 .PP
 
 .PP
-Definition at line 199 of file Game\&.java\&.
+Definition at line 193 of file Game\&.java\&.
 .PP
 .nf
-199                              {
-200     boolean wasEventProcessed = false;
-201 
-202     Status aStatus = status;
-203     switch (aStatus) {
-204       case RingSearch:
-205         // line 20 "model\&.ump"
-206         // navigate();
-207         setStatus(Status\&.NavigationSearch);
-208         wasEventProcessed = true;
-209         break;
-210       default:
-211         // Other states do respond to this event
-212     }
-213 
-214     return wasEventProcessed;
-215   }
+194   {
+195     boolean wasEventProcessed = false;
+196     
+197     Status aStatus = status;
+198     switch (aStatus)
+199     {
+200       case RingSearch:
+201         // line 20 "model\&.ump"
+202         searchTree();
+203         setStatus(Status\&.AtTree);
+204         wasEventProcessed = true;
+205         break;
+206       default:
+207         // Other states do respond to this event
+208     }
+209 
+210     return wasEventProcessed;
+211   }
 .fi
 .SS "boolean ca\&.mcgill\&.ecse211\&.project\&.Game\&.ringNotFound ()"
-In case if the ring is not found
+This method is called when a ring is not found
 .PP
 \fBReturns:\fP
 .RS 4
-whether transition successful 
+A boolean that denotes whether our state transition occurred 
 .RE
 .PP
 
 .PP
-Definition at line 222 of file Game\&.java\&.
+Definition at line 218 of file Game\&.java\&.
 .PP
 .nf
-222                                 {
-223     boolean wasEventProcessed = false;
-224 
-225     Status aStatus = status;
-226     switch (aStatus) {
-227       case RingSearch:
-228         // line 21 "model\&.ump"
-229         // navigate();
-230         setStatus(Status\&.NavigationSearch);
-231         wasEventProcessed = true;
-232         break;
-233       default:
-234         // Other states do respond to this event
-235     }
-236 
-237     return wasEventProcessed;
-238   }
+219   {
+220     boolean wasEventProcessed = false;
+221     
+222     Status aStatus = status;
+223     switch (aStatus)
+224     {
+225       case RingSearch:
+226         // line 21 "model\&.ump"
+227         searchTree();
+228         setStatus(Status\&.AtTree);
+229         wasEventProcessed = true;
+230         break;
+231       default:
+232         // Other states do respond to this event
+233     }
+234 
+235     return wasEventProcessed;
+236   }
 .fi
-.SS "static synchronized void ca\&.mcgill\&.ecse211\&.project\&.Game\&.runGame () throws \fBOdometerExceptions\fP\fC [static]\fP"
-This method contains main logic for the game plays
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.Game\&.runGame () throws \fBOdometerExceptions\fP"
+This method is called when the after the robot has been prepared and is ready to compete
 .PP
 \fBExceptions:\fP
 .RS 4
@@ -458,44 +446,32 @@ This method contains main logic for the game plays
 .PP
 
 .PP
-Definition at line 379 of file Game\&.java\&.
+Definition at line 451 of file Game\&.java\&.
 .PP
 .nf
-379                                                                       {
-380     final int buttonChoice = Button\&.waitForAnyPress(); // Record choice (left or right press)
-381     // Start localizing
-382     final Navigation navigation = new Navigation(leftMotor, rightMotor);
-383     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
-384     final LightLocalizer lgLoc = new LightLocalizer(navigation, leftMotor, rightMotor);
-385     final RingSearcher searcher = new RingSearcher(storageMotor, rodMotor);
-386     // spawn a new Thread to avoid localization from blocking
-387     (new Thread() {
-388       public void run() {
-389         // target color
-390 
-391         (new Thread() {
-392           public void run() {
-393             readData();
-394             hasReadData = true;
-395             notify();
-396           }
-397         })\&.start();
-398         usLoc\&.localize(buttonChoice);
-399         lgLoc\&.localize(GameParameters\&.SC);
-400         searcher\&.search();
-401         searcher\&.retrieveRing();
-402         //ug collision detection always on
-403         //navigate to start
-404         try {
-405           while (!hasReadData)
-406             wait();
-407         } catch (InterruptedException e) {
-408           // TODO Auto-generated catch block
-409           e\&.printStackTrace();
-410         }
-411       }
-412     })\&.start();
-413   }
+451                                                   {
+452     final int buttonChoice = Button\&.waitForAnyPress(); // Record choice (left or right press)
+453     GameParameters\&.Demo = DemoType\&.Beta;
+454     GameParameters\&.PlayerTeamNumber = 1;
+455     // Start localizing
+456     final Navigation navigation = new Navigation(leftMotor, rightMotor);
+457     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
+458     final LightLocalizer lgLoc = new LightLocalizer(navigation, leftMotor, rightMotor);
+459     //final RingSearcher searcher = new RingSearcher(storageMotor, rodMotor);
+460     // spawn a new Thread to avoid localization from blocking
+461     (new Thread() {
+462       public void run() {
+463         // target color
+464 
+465         INSTANCE\&.ready(usLoc, lgLoc);
+466         INSTANCE\&.navigateTunnel(navigation);
+467        // searcher\&.search();
+468         //searcher\&.retrieveRing();
+469         // ug collision detection always on
+470         // navigate to start
+471       }
+472     })\&.start();
+473   }
 .fi
 .SH "Member Data Documentation"
 .PP 
@@ -508,7 +484,7 @@ Definition at line 379 of file Game\&.java\&.
 .fi
 Motor object instance that allows control of the left motor connected to port A 
 .PP
-Definition at line 257 of file Game\&.java\&.
+Definition at line 270 of file Game\&.java\&.
 .SS " static  final EV3LargeRegulatedMotor ca\&.mcgill\&.ecse211\&.project\&.Game\&.rightMotor\fC [static]\fP"
 \fBInitial value:\fP
 .PP
@@ -518,43 +494,27 @@ Definition at line 257 of file Game\&.java\&.
 .fi
 Motor object instance that allows control of the right motor connected to port D 
 .PP
-Definition at line 263 of file Game\&.java\&.
-.SS " static  final EV3MediumRegulatedMotor ca\&.mcgill\&.ecse211\&.project\&.Game\&.rodMotor\fC [static]\fP"
-\fBInitial value:\fP
-.PP
-.nf
-=
-      new EV3MediumRegulatedMotor(LocalEV3\&.get()\&.getPort("B"))
-.fi
-Motor object instance taht allows control of the motor on the rod for collecting rings 
-.PP
-Definition at line 275 of file Game\&.java\&.
+Definition at line 276 of file Game\&.java\&.
 .SS " static  final double ca\&.mcgill\&.ecse211\&.project\&.Game\&.SEN_DIS = 4\&.4\fC [static]\fP"
-The distance between light sensor and the center of the robot in cm 
+This variable stores the distance between the light sensor and center of the robot in cm 
 .PP
-Definition at line 297 of file Game\&.java\&.
-.SS " static  final EV3LargeRegulatedMotor ca\&.mcgill\&.ecse211\&.project\&.Game\&.storageMotor\fC [static]\fP"
-\fBInitial value:\fP
-.PP
-.nf
-=
-      new EV3LargeRegulatedMotor(LocalEV3\&.get()\&.getPort("C"))
-.fi
-Motor object instance that allows control of the motor on storage rod 
-.PP
-Definition at line 269 of file Game\&.java\&.
+Definition at line 310 of file Game\&.java\&.
 .SS " static  final double ca\&.mcgill\&.ecse211\&.project\&.Game\&.TILE = 30\&.48\fC [static]\fP"
-length of the tile 
+Motor object instance that allows control of the motor on storage rod Motor object instance that allows control of the motor on the rod for collecting rings This variable stores the length of a tile in cm 
 .PP
-Definition at line 281 of file Game\&.java\&.
+Definition at line 294 of file Game\&.java\&.
 .SS " static  final double ca\&.mcgill\&.ecse211\&.project\&.Game\&.TRACK = 11\&.5\fC [static]\fP"
-This variable denotes the track distance between the center of the wheels in cm (measured and adjusted based on trial and error)\&. 
+This variable holds the track distance between the center of the wheels in cm (measured and adjusted based on trial and error) 
 .PP
-Definition at line 292 of file Game\&.java\&.
+Definition at line 305 of file Game\&.java\&.
+.SS "\fBThreadControl\fP ca\&.mcgill\&.ecse211\&.project\&.Game\&.usPoller"
+This variable stores a ThreadController instance that controls our ultrasonic sensor 
+.PP
+Definition at line 265 of file Game\&.java\&.
 .SS " static  final double ca\&.mcgill\&.ecse211\&.project\&.Game\&.WHEEL_RAD = 2\&.15\fC [static]\fP"
-This variable denotes the radius of our wheels in cm\&. 
+This variable stores the radius of our wheels in cm 
 .PP
-Definition at line 286 of file Game\&.java\&.
+Definition at line 299 of file Game\&.java\&.
 
 .SH "Author"
 .PP 

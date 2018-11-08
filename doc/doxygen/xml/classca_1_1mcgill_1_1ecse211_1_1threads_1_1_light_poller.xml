@@ -173,7 +173,7 @@
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="17">ca.mcgill.ecse211.threads.LightPoller.us</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.cont</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" compoundref="_light_poller_8java" startline="19">ca.mcgill.ecse211.threads.LightPoller.lgData</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="36" endline="38">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="39" endline="41">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -188,8 +188,8 @@
 <para>the run method to be performed in run method, collect light data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="50" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="50" bodyend="59"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a1c2c38354fc5a66b4667e1d47ab6b20b" compoundref="_sensor_data_8java" startline="165" endline="172">ca.mcgill.ecse211.threads.SensorData.setL</references>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="50" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="50" bodyend="61"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1af905a6f2825716ae1a39bf7f6be09477" compoundref="_sensor_data_8java" startline="165" endline="173">ca.mcgill.ecse211.threads.SensorData.setL</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -203,59 +203,59 @@
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="29">
+      <node id="30">
         <label>ca.mcgill.ecse211.threads.RGBPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller"/>
-        <childnode refid="26" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>ca.mcgill.ecse211.threads.LightPoller</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
         <childnode refid="27" relation="public-inheritance">
         </childnode>
       </node>
       <node id="27">
-        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <label>ca.mcgill.ecse211.threads.LightPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
         <childnode refid="28" relation="public-inheritance">
         </childnode>
       </node>
       <node id="28">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
         <label>Runnable</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="33">
+      <node id="34">
         <label>SampleProvider</label>
       </node>
-      <node id="30">
+      <node id="31">
         <label>ca.mcgill.ecse211.threads.LightPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
-        <childnode refid="31" relation="public-inheritance">
-        </childnode>
-        <childnode refid="33" relation="usage">
-          <edgelabel>us</edgelabel>
+        <childnode refid="32" relation="public-inheritance">
         </childnode>
         <childnode refid="34" relation="usage">
+          <edgelabel>us</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
           <edgelabel>cont</edgelabel>
         </childnode>
       </node>
-      <node id="31">
+      <node id="32">
         <label>ca.mcgill.ecse211.threads.ThreadControl</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="32" relation="public-inheritance">
+        <childnode refid="33" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="32">
+      <node id="33">
         <label>Runnable</label>
       </node>
-      <node id="34">
+      <node id="35">
         <label>ca.mcgill.ecse211.threads.SensorData</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="16" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="16" bodyend="60"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="16" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="16" bodyend="62"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>cont</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a81f7ed4eb2aee15bcf08b7396d68f5ac" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>id</name></member>

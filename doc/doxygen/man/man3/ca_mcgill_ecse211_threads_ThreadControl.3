@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.ThreadControl" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.ThreadControl" 3 "Thu Nov 8 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -63,7 +63,7 @@ Inherited by \fBca\&.mcgill\&.ecse211\&.threads\&.LightPoller\fP, \fBca\&.mcgill
 .PP 
 class for thread control with pause and restart functionality 
 .PP
-Definition at line 7 of file ThreadControl\&.java\&.
+Definition at line 9 of file ThreadControl\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "synchronized boolean ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.isStarted ()"
@@ -76,33 +76,34 @@ check if this poller thread is running
 .PP
 
 .PP
-Definition at line 36 of file ThreadControl\&.java\&.
+Definition at line 39 of file ThreadControl\&.java\&.
 .PP
 .nf
-36                                           {
-37     return this\&.isStarted;
-38   }
+39                                           {
+40     return this\&.isStarted;
+41   }
 .fi
 .SS "synchronized void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.run ()"
 run method implemented from Runnable class, this run method implements the functionality to pause and restart the thread 
 .PP
-Definition at line 17 of file ThreadControl\&.java\&.
+Definition at line 19 of file ThreadControl\&.java\&.
 .PP
 .nf
-17                                  {
-18     try {
-19       while (true) {
-20         if (!isStarted) {
-21           wait();
-22         } else {
-23           runMethod();
-24           wait(WAIT_TIME);
-25         }
-26       }
-27     } catch (InterruptedException e) {
-28       e\&.printStackTrace();
-29     }
-30   }
+19                                  {
+20     try {
+21       while (true) {
+22         if (!isStarted) {
+23           Sound\&.beepSequence();
+24           wait();
+25         } else {
+26           runMethod();
+27           wait(WAIT_TIME);
+28         }
+29       }
+30     } catch (InterruptedException e) {
+31       e\&.printStackTrace();
+32     }
+33   }
 .fi
 .SS "abstract void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.runMethod ()\fC [abstract]\fP, \fC [protected]\fP"
 
@@ -116,13 +117,13 @@ start a paused thread or stop a runing thread
 .PP
 
 .PP
-Definition at line 44 of file ThreadControl\&.java\&.
+Definition at line 47 of file ThreadControl\&.java\&.
 .PP
 .nf
-44                                                    {
-45     isStarted = start;
-46     notify();
-47   }
+47                                                    {
+48     isStarted = start;
+49     notify();
+50   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.setWait (boolean shouldWait)"
 set if other thread shouldWait for this thread 
@@ -134,16 +135,16 @@ set if other thread shouldWait for this thread
 .PP
 
 .PP
-Definition at line 77 of file ThreadControl\&.java\&.
+Definition at line 80 of file ThreadControl\&.java\&.
 .PP
 .nf
-77                                           {
-78     synchronized(lockObject) {
-79       this\&.shouldWait = shouldWait;
-80       
-81       if(!shouldWait) lockObject\&.notifyAll();
-82     }
-83   }
+80                                           {
+81     synchronized(lockObject) {
+82       this\&.shouldWait = shouldWait;
+83       
+84       if(!shouldWait) lockObject\&.notifyAll();
+85     }
+86   }
 .fi
 .SS "boolean ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.shouldWait ()"
 get shouldWait for this thread 
@@ -155,50 +156,50 @@ get shouldWait for this thread
 .PP
 
 .PP
-Definition at line 67 of file ThreadControl\&.java\&.
+Definition at line 70 of file ThreadControl\&.java\&.
 .PP
 .nf
-67                               {
-68     synchronized(lockObject) {
-69       return shouldWait;
-70     }
-71   }
+70                               {
+71     synchronized(lockObject) {
+72       return shouldWait;
+73     }
+74   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.waitForThisThread ()"
 wait for this thread until shouldWait is false 
 .PP
-Definition at line 52 of file ThreadControl\&.java\&.
+Definition at line 55 of file ThreadControl\&.java\&.
 .PP
 .nf
-52                                   {
-53     synchronized(lockObject) {
-54       try {
-55         lockObject\&.wait();
-56       } catch (InterruptedException e) {
-57         // TODO Auto-generated catch block
-58         e\&.printStackTrace();
-59       }
-60     }
-61   }
+55                                   {
+56     synchronized(lockObject) {
+57       try {
+58         lockObject\&.wait();
+59       } catch (InterruptedException e) {
+60         // TODO Auto-generated catch block
+61         e\&.printStackTrace();
+62       }
+63     }
+64   }
 .fi
 .SH "Member Data Documentation"
 .PP 
 .SS "boolean ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.isStarted\fC [protected]\fP"
 
 .PP
-Definition at line 9 of file ThreadControl\&.java\&.
+Definition at line 11 of file ThreadControl\&.java\&.
 .SS "Object ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.lockObject = new Object()\fC [protected]\fP"
 
 .PP
-Definition at line 10 of file ThreadControl\&.java\&.
+Definition at line 12 of file ThreadControl\&.java\&.
 .SS "boolean ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.shouldWait\fC [protected]\fP"
 
 .PP
-Definition at line 11 of file ThreadControl\&.java\&.
+Definition at line 13 of file ThreadControl\&.java\&.
 .SS "int ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.WAIT_TIME = 100\fC [static]\fP, \fC [protected]\fP"
 
 .PP
-Definition at line 8 of file ThreadControl\&.java\&.
+Definition at line 10 of file ThreadControl\&.java\&.
 
 .SH "Author"
 .PP 

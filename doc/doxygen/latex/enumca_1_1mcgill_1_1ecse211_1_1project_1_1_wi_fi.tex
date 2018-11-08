@@ -1,0 +1,272 @@
+\hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi}{}\section{ca.\+mcgill.\+ecse211.\+project.\+Wi\+Fi Enum Reference}
+\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi}\index{ca.\+mcgill.\+ecse211.\+project.\+Wi\+Fi@{ca.\+mcgill.\+ecse211.\+project.\+Wi\+Fi}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_a3488726983cda70dbde6f05c9c762f16}{read\+Data} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements the ability to receive game parameters over \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi}{Wi\+Fi}
+
+\begin{DoxyAuthor}{Author}
+Caspar Cedro 
+
+Percy Chen 
+
+Patrick Erath 
+
+Anssam Ghezala 
+
+Susan Matuszewski 
+
+Kamy Moussavi Kafi 
+\end{DoxyAuthor}
+
+
+Definition at line 16 of file Wi\+Fi.\+java.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_a3488726983cda70dbde6f05c9c762f16}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_a3488726983cda70dbde6f05c9c762f16}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Wi\+Fi@{ca\+::mcgill\+::ecse211\+::project\+::\+Wi\+Fi}!read\+Data@{read\+Data}}
+\index{read\+Data@{read\+Data}!ca\+::mcgill\+::ecse211\+::project\+::\+Wi\+Fi@{ca\+::mcgill\+::ecse211\+::project\+::\+Wi\+Fi}}
+\subsubsection{\texorpdfstring{read\+Data()}{readData()}}
+{\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+project.\+Wi\+Fi.\+read\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method sets up a connection to a locally hosted server and reads \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game}{Game} Parameter values from it. 
+
+Definition at line 26 of file Wi\+Fi.\+java.
+
+
+\begin{DoxyCode}
+26                                 \{
+27     WifiConnection connection =
+28         \textcolor{keyword}{new} WifiConnection(SERVER\_IP, GameParameters.PlayerTeamNumber, \textcolor{keyword}{true});
+29 
+30     \textcolor{keywordflow}{try} \{
+31       \textcolor{comment}{/*}
+32 \textcolor{comment}{       * getData() will connect to the server and wait until the user/TA presses the "Start" button}
+33 \textcolor{comment}{       * in the GUI on their laptop with the data filled in. Once it's waiting, you can kill it by}
+34 \textcolor{comment}{       * pressing the upper left hand corner button (back/escape) on the EV3. getData() will throw}
+35 \textcolor{comment}{       * exceptions if it can't connect to the server (e.g. wrong IP address, server not running on}
+36 \textcolor{comment}{       * laptop, not connected to WiFi router, etc.). It will also throw an exception if it connects}
+37 \textcolor{comment}{       * but receives corrupted data or a message from the server saying something went wrong. For}
+38 \textcolor{comment}{       * example, if TEAM\_NUMBER is set to 1 above but the server expects teams 17 and 5, this robot}
+39 \textcolor{comment}{       * will receive a message saying an invalid team number was specified and getData() will throw}
+40 \textcolor{comment}{       * an exception letting you know.}
+41 \textcolor{comment}{       */}
+42       Map data = connection.getData();
+43       String tunnelUs = \textcolor{stringliteral}{"TNR\_LL\_"};
+44       String tunnelO = \textcolor{stringliteral}{"TNG\_LL\_"};
+45       String ringUs = \textcolor{stringliteral}{"TR\_"};
+46       String ringO = \textcolor{stringliteral}{"TG\_"};
+47       String startingUs = \textcolor{stringliteral}{"Red\_"};
+48       String startingO = \textcolor{stringliteral}{"Green\_"};
+49       String cornerUs = \textcolor{stringliteral}{"RedCorner"};
+50       String cornerO = \textcolor{stringliteral}{"GreenCorner"};
+51       
+52       GameParameters.RedTeam = ((Long) data.get(\textcolor{stringliteral}{"RedTeam"})).intValue();
+53       GameParameters.GreenTeam = ((Long) data.get(\textcolor{stringliteral}{"GreenTeam"})).intValue();
+54       \textcolor{keywordflow}{if}(GameParameters.RedTeam == GameParameters.PlayerTeamNumber) \{
+55       \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(GameParameters.GreenTeam == GameParameters.PlayerTeamNumber) \{
+56         String s = tunnelO;
+57         tunnelO = tunnelUs;
+58         tunnelUs = s;
+59         \textcolor{comment}{//change ring set}
+60         s = ringO;
+61         ringO = ringUs;
+62         ringUs = s;
+63         \textcolor{comment}{//change starting corner}
+64         s = startingUs;
+65         startingO = startingUs;
+66         startingUs = s;
+67         \textcolor{comment}{//change corner}
+68         s = cornerO;
+69         cornerO = cornerUs;
+70         cornerUs = s;
+71         
+72       \}\textcolor{keywordflow}{else} \{
+73         \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Bad Team Number"});
+74       \}
+75       
+76       
+77       GameParameters.UsCorner = ((Long) data.get(cornerUs)).intValue();
+78       GameParameters.OCorner = ((Long) data.get(cornerO)).intValue();
+79 
+80       GameParameters.US\_LL[0] = ((Long) data.get(startingUs+\textcolor{stringliteral}{"LL\_x"})).intValue();
+81       GameParameters.US\_LL[1] = ((Long) data.get(startingUs+\textcolor{stringliteral}{"LL\_y"})).intValue();
+82       GameParameters.US\_UR[0] = ((Long) data.get(startingUs+\textcolor{stringliteral}{"UR\_x"})).intValue();
+83       GameParameters.US\_UR[1] = ((Long) data.get(startingUs+\textcolor{stringliteral}{"UR\_y"})).intValue();
+84 
+85       GameParameters.OPPO\_LL[0] = ((Long) data.get(startingO+\textcolor{stringliteral}{"LL\_x"})).intValue();
+86       GameParameters.OPPO\_LL[1] = ((Long) data.get(startingO+\textcolor{stringliteral}{"LL\_y"})).intValue();
+87       GameParameters.OPPO\_UR[0] = ((Long) data.get(startingO+\textcolor{stringliteral}{"UR\_x"})).intValue();
+88       GameParameters.OPPO\_UR[1] = ((Long) data.get(startingO+\textcolor{stringliteral}{"UR\_y"})).intValue();
+89       
+90       \textcolor{comment}{//GameParameters.Grid\_LL[0] = ((Long) data.get("Green\_LL\_x")).intValue();}
+91       \textcolor{comment}{//GameParameters.Grid\_LL[1] = ((Long) data.get("Green\_LL\_y")).intValue();}
+92       \textcolor{comment}{//GameParameters.Grid\_UR[0] = ((Long) data.get("Green\_UR\_x")).intValue();}
+93       \textcolor{comment}{//GameParameters.Grid\_UR[1] = ((Long) data.get("Green\_UR\_y")).intValue();}
+94 
+95       GameParameters.Island\_LL[0] = ((Long) data.get(\textcolor{stringliteral}{"Island\_LL\_x"})).intValue();
+96       GameParameters.Island\_LL[1] = ((Long) data.get(\textcolor{stringliteral}{"Island\_LL\_y"})).intValue();
+97       GameParameters.Island\_UR[0] = ((Long) data.get(\textcolor{stringliteral}{"Island\_UR\_x"})).intValue();
+98       GameParameters.Island\_UR[1] = ((Long) data.get(\textcolor{stringliteral}{"Island\_UR\_y"})).intValue();
+99 
+100       GameParameters.TN\_LL[0] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"LL\_x"})).intValue();
+101       GameParameters.TN\_LL[1] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"LL\_y"})).intValue();
+102       GameParameters.TN\_UR[0] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"UR\_x"})).intValue();
+103       GameParameters.TN\_UR[1] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"UR\_y"})).intValue();
+104 
+105       GameParameters.TNO\_LL[0] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"LL\_x"})).intValue();
+106       GameParameters.TNO\_LL[1] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"LL\_y"})).intValue();
+107       GameParameters.TNO\_UR[0] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"UR\_x"})).intValue();
+108       GameParameters.TNO\_UR[1] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"UR\_y"})).intValue();
+109 
+110       GameParameters.TREE\_US[0] = ((Long) data.get(ringUs+\textcolor{stringliteral}{"x"})).intValue();
+111       GameParameters.TREE\_US[1] = ((Long) data.get(ringUs+\textcolor{stringliteral}{"y"})).intValue();
+112 
+113       GameParameters.TTEE\_O[0] = ((Long) data.get(ringO+\textcolor{stringliteral}{"x"})).intValue();
+114       GameParameters.TTEE\_O[1] = ((Long) data.get(ringO+\textcolor{stringliteral}{"y"})).intValue();
+115 
+116       \textcolor{keywordflow}{if} (GameParameters.Demo == GameParameters.DemoType.Beta) \{
+117         GameParameters.Grid\_UR[0] = 8;
+118         GameParameters.Grid\_UR[1] = 8;
+119         
+120         \textcolor{keywordflow}{switch}(GameParameters.UsCorner) \{
+121           \textcolor{keywordflow}{case} 0:
+122             \textcolor{keywordtype}{int}[] sc0 = \{1,1,0\};
+123             GameParameters.SC = sc0;
+124             \textcolor{keywordflow}{break};
+125           \textcolor{keywordflow}{case} 1:
+126             \textcolor{keywordtype}{int}[] sc1 = \{7,1,0\};
+127             GameParameters.SC = sc1;
+128             \textcolor{keywordflow}{break};
+129           \textcolor{keywordflow}{case} 2:
+130             \textcolor{keywordtype}{int}[] sc2 = \{1,7,180\};
+131             GameParameters.SC = sc2;
+132             \textcolor{keywordflow}{break};
+133           \textcolor{keywordflow}{case} 3:
+134             \textcolor{keywordtype}{int}[] sc3 = \{7,7,180\};
+135             GameParameters.SC = sc3;
+136             \textcolor{keywordflow}{break};
+137         \}
+138 
+139         \textcolor{keywordflow}{if} (GameParameters.OPPO\_UR[0] - GameParameters.OPPO\_LL[0] < 2
+140             || GameParameters.OPPO\_UR[0] - GameParameters.OPPO\_LL[0] > 8
+141             || GameParameters.OPPO\_UR[1] - GameParameters.OPPO\_LL[1] < 2
+142             || GameParameters.OPPO\_UR[1] - GameParameters.OPPO\_LL[1] > 8) \{
+143           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Green zone coordinates out of bounds"});
+144         \}
+145 
+146         \textcolor{keywordflow}{if} (GameParameters.Island\_UR[0] - GameParameters.Island\_LL[0] < 2
+147             || GameParameters.Island\_UR[0] - GameParameters.Island\_LL[0] > 8
+148             || GameParameters.Island\_UR[1] - GameParameters.Island\_LL[1] < 2
+149             || GameParameters.Island\_UR[1] - GameParameters.Island\_LL[1] > 8) \{
+150           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Green zone coordinates out of bounds"});
+151         \}
+152 
+153         \textcolor{keywordflow}{if} (GameParameters.TN\_UR[0] - GameParameters.TN\_LL[0] < 1
+154             || GameParameters.TN\_UR[0] - GameParameters.TN\_LL[0] > 2
+155             || GameParameters.TN\_UR[1] - GameParameters.TN\_LL[1] < 1
+156             || GameParameters.TN\_UR[1] - GameParameters.TN\_LL[1] > 2) \{
+157           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Green tunnel coordinates out of bounds"});
+158         \}
+159 
+160         \textcolor{keywordflow}{if} (GameParameters.TTEE\_O[0] < 0 || GameParameters.TTEE\_O[0] > 7 || GameParameters.TTEE\_O[1] < 0
+161             || GameParameters.TTEE\_O[1] > 7) \{
+162           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Green tree coordinates out of bounds"});
+163         \}
+164       \} \textcolor{keywordflow}{else} \{
+165         GameParameters.Grid\_UR[0] = 15;
+166         GameParameters.Grid\_UR[1] = 9;
+167  
+168         \textcolor{keywordflow}{switch}(GameParameters.UsCorner) \{
+169           \textcolor{keywordflow}{case} 0:
+170             \textcolor{keywordtype}{int}[] sc0 = \{1,1,0\};
+171             GameParameters.SC = sc0;
+172             \textcolor{keywordflow}{break};
+173           \textcolor{keywordflow}{case} 1:
+174             \textcolor{keywordtype}{int}[] sc1 = \{14,1,0\};
+175             GameParameters.SC = sc1;
+176             \textcolor{keywordflow}{break};
+177           \textcolor{keywordflow}{case} 2:
+178             \textcolor{keywordtype}{int}[] sc2 = \{1,8,180\};
+179             GameParameters.SC = sc2;
+180             \textcolor{keywordflow}{break};
+181           \textcolor{keywordflow}{case} 3:
+182             \textcolor{keywordtype}{int}[] sc3 = \{14,8,180\};
+183             GameParameters.SC = sc3;
+184             \textcolor{keywordflow}{break};
+185         \}
+186         
+187         \textcolor{keywordflow}{if} (GameParameters.US\_UR[0] - GameParameters.US\_LL[0] < 2
+188             || GameParameters.US\_UR[0] - GameParameters.US\_LL[0] > 10
+189             || GameParameters.US\_UR[1] - GameParameters.US\_LL[1] < 2
+190             || GameParameters.US\_UR[1] - GameParameters.US\_LL[1] > 10) \{
+191           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Red zone coordinates out of bounds"});
+192         \}
+193 
+194         \textcolor{keywordflow}{if} (GameParameters.OPPO\_UR[0] - GameParameters.OPPO\_LL[0] < 2
+195             || GameParameters.OPPO\_UR[0] - GameParameters.OPPO\_LL[0] > 10
+196             || GameParameters.OPPO\_UR[1] - GameParameters.OPPO\_LL[1] < 2
+197             || GameParameters.OPPO\_UR[1] - GameParameters.OPPO\_LL[1] > 10) \{
+198           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Green zone coordinates out of bounds"});
+199         \}
+200 
+201         \textcolor{keywordflow}{if} (GameParameters.Island\_UR[0] - GameParameters.Island\_LL[0] < 2
+202             || GameParameters.Island\_UR[0] - GameParameters.Island\_LL[0] > 10
+203             || GameParameters.Island\_UR[1] - GameParameters.Island\_LL[1] < 2
+204             || GameParameters.Island\_UR[1] - GameParameters.Island\_LL[1] > 10) \{
+205           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Island zone coordinates out of bounds"});
+206         \}
+207 
+208         \textcolor{keywordflow}{if} (GameParameters.TN\_UR[0] - GameParameters.TN\_LL[0] < 1
+209             || GameParameters.TN\_UR[0] - GameParameters.TN\_LL[0] > 2
+210             || GameParameters.TN\_UR[1] - GameParameters.TN\_LL[1] < 1
+211             || GameParameters.TN\_UR[1] - GameParameters.TN\_LL[1] > 2) \{
+212           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Red tunnel coordinates out of bounds"});
+213         \}
+214 
+215         \textcolor{keywordflow}{if} (GameParameters.TN\_UR[0] - GameParameters.TN\_LL[0] < 1
+216             || GameParameters.TN\_UR[0] - GameParameters.TN\_LL[0] > 2
+217             || GameParameters.TN\_UR[1] - GameParameters.TN\_LL[1] < 1
+218             || GameParameters.TN\_UR[1] - GameParameters.TN\_LL[1] > 2) \{
+219           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Green tunnel coordinates out of bounds"});
+220         \}
+221 
+222         \textcolor{keywordflow}{if} (GameParameters.TREE\_US[0] < 0 || GameParameters.TREE\_US[0] > 14 || GameParameters.TREE\_US[1] < 
+      0
+223             || GameParameters.TREE\_US[1] > 8) \{
+224           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Red tree coordinates out of bounds"});
+225         \}
+226 
+227         \textcolor{keywordflow}{if} (GameParameters.TTEE\_O[0] < 0 || GameParameters.TTEE\_O[0] > 14 || GameParameters.TTEE\_O[1] < 0
+228             || GameParameters.TTEE\_O[1] > 8) \{
+229           \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\textcolor{stringliteral}{"Green tree coordinates out of bounds"});
+230         \}
+231       \}
+232       
+233       \textcolor{comment}{//set SC here}
+234       \textcolor{comment}{//GameParameters.SC[0];}
+235     \} \textcolor{keywordflow}{catch} (Exception e) \{
+236       System.err.println(\textcolor{stringliteral}{"Error: "} + e.getMessage());
+237     \}
+238   \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_a3488726983cda70dbde6f05c9c762f16_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this enum was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/project/\hyperlink{_wi_fi_8java}{Wi\+Fi.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,145 @@
+.TH "ca.mcgill.ecse211.project.GameUtil" 3 "Thu Nov 8 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.project.GameUtil
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBPathFinder\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static boolean \fBisSafe\fP (int[] coor)"
+.br
+.ti -1c
+.RI "static double [] \fBaverage\fP (int[] p1, int[] p2)"
+.br
+.ti -1c
+.RI "static int \fBdistanceFromRobot\fP (int x, int y)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBGame\fP utility class with handy functionalities can be used in the game
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file GameUtil\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static double [] ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.average (int [] p1, int [] p2)\fC [static]\fP"
+find the average of the two coordinates 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp1\fP 
+.br
+\fIp2\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 187 of file GameUtil\&.java\&.
+.PP
+.nf
+187                                                      {
+188     double[] result = new double[2];
+189     result[0] = (double) (p1[0] + p2[0]) / 2;
+190     result[1] = (double) (p1[1] + p2[1]) / 2;
+191     return result;
+192   }
+.fi
+.SS "static int ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.distanceFromRobot (int x, int y)\fC [static]\fP"
+find the shortest distance from the starting point to two points 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 200 of file GameUtil\&.java\&.
+.PP
+.nf
+200                                                     {
+201     try {
+202       double[] position = Odometer\&.getOdometer()\&.getXYT();
+203       return (int) (Math\&.pow(Math\&.round(position[0]) - x, 2) + Math\&.pow(Math\&.round(position[1]) - y, 2));
+204     } catch (OdometerExceptions e) {
+205       // TODO Auto-generated catch block
+206       e\&.printStackTrace();
+207     }
+208     return Integer\&.MAX_VALUE;
+209   }
+.fi
+.SS "static boolean ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.isSafe (int [] coor)\fC [static]\fP"
+check if one coordinate is safe based on (it is not a wall, tree or inside a tunnel) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcoor\fP coordinate array 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+: true if safe, false otherwise 
+.RE
+.PP
+
+.PP
+Definition at line 167 of file GameUtil\&.java\&.
+.PP
+.nf
+167                                            {
+168     int x = coor[0];
+169     int y = coor[1];
+170     boolean inTunnel = x > GameParameters\&.TN_LL[0] && x < GameParameters\&.TN_LL[1]
+171         && y > GameParameters\&.TN_UR[0] && y < GameParameters\&.TN_UR[1];
+172     boolean isTree = x == GameParameters\&.TREE_US[0] && y == GameParameters\&.TREE_US[1];
+173     boolean outBound =
+174         x <= 0 || x >= GameParameters\&.Grid_UR[0] || y <= 0 || y >= GameParameters\&.Grid_UR[1];
+175     if (inTunnel || isTree || outBound) {
+176       return false;
+177     }
+178     return true;
+179   }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

@@ -90,8 +90,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="37" bodyend="42"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="36" endline="38">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="37" bodyend="43"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="39" endline="41">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" compoundref="_thread_control_8java" startline="10">ca.mcgill.ecse211.threads.ThreadControl.WAIT_TIME</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -106,7 +107,7 @@
 <para>get us sensor data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="47" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="47" bodyend="54"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="48" bodyend="54"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a2c1f8e625478b89aabe6e9911e482ef3" compoundref="_sensor_data_8java" startline="128" endline="130">ca.mcgill.ecse211.threads.SensorData.setD</references>
       </memberdef>
       </sectiondef>
@@ -121,23 +122,6 @@
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="89">
-        <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
-        <childnode refid="90" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="90">
-        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="91" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="91">
-        <label>Runnable</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="92">
         <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
@@ -151,6 +135,23 @@
         </childnode>
       </node>
       <node id="94">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="95">
+        <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="97" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="97">
         <label>Runnable</label>
       </node>
     </collaborationgraph>

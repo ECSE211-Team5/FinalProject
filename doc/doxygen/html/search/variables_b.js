@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['ultrasonicsensor',['UltrasonicSensor',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type.html#acb88d74b8bd35b190f8b1b05730c213a',1,'ca::mcgill::ecse211::tests::ComponentTest::Type']]],
-  ['us',['us',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller.html#af478329ec7a335a4f3d2d412d5d10091',1,'ca.mcgill.ecse211.threads.GyroPoller.us()'],['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html#ab6a9cb770bbf71f586697633db1475ff',1,'ca.mcgill.ecse211.threads.LightPoller.us()']]]
+  ['redteam',['RedTeam',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#ad36fe5629718c944df7317e53145850c',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['rightmotor',['rightMotor',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a7a05fcf37c4435c32270776a427ba0d2',1,'ca::mcgill::ecse211::project::Game']]],
+  ['ringdetection',['RingDetection',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type.html#ab118eac94e0b37e6871a4c9a788c675e',1,'ca::mcgill::ecse211::tests::ComponentTest::Type']]],
+  ['ringsearch',['RingSearch',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status.html#a6cb7397203bf9fa47c9486ede1e8fd6d',1,'ca::mcgill::ecse211::project::Game::Status']]]
 ];

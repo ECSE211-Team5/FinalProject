@@ -10,9 +10,8 @@ var searchData=
   ['getsensordata',['getSensorData',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a8260aba53b4474ca1275e4ce26157977',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['getstatus',['getStatus',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a620374b3eeb3dd7e0abd26f3ced9053b',1,'ca::mcgill::ecse211::project::Game']]],
   ['getstatusfullname',['getStatusFullName',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a43a5763d183e0bcacd402c872c07273e',1,'ca::mcgill::ecse211::project::Game']]],
-  ['gettype',['getType',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#afa2d71de18f6276782a702d7b74066e3',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['gettype',['getType',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a4e7713b30588fc0b2af065db0b198b2c',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['getxyt',['getXYT',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
   ['gothroughtunnel',['goThroughTunnel',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a4b52e605d3ea2f9bcd9481ae2c69ba39',1,'ca::mcgill::ecse211::project::Navigation']]],
-  ['gotoringset',['goToRingSet',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a0016a23ab5d544148a09948fb1a40e4c',1,'ca::mcgill::ecse211::project::Navigation']]],
-  ['gyropoller',['GyroPoller',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_gyro_poller.html#a1bab49cc19ee3b633ddbec4c408927bf',1,'ca::mcgill::ecse211::threads::GyroPoller']]]
+  ['gotoringset',['goToRingSet',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a0016a23ab5d544148a09948fb1a40e4c',1,'ca::mcgill::ecse211::project::Navigation']]]
 ];

@@ -148,7 +148,6 @@
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="53" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="53" bodyend="69"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="379" endline="413">ca.mcgill.ecse211.project.Game.runGame</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a2b03c700b5d232f5aef7c6acf439b7ea" compoundref="_ring_searcher_8java" startline="80" endline="84">ca.mcgill.ecse211.threads.RingSearcher.runMethod</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd7a2651a7c5de76a018664c8bf327af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -163,7 +162,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" line="74" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RingSearcher.java" bodystart="74" bodyend="78"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a790740a4ed299c9b985401ea8c4d5010" compoundref="_game_8java" startline="379" endline="413">ca.mcgill.ecse211.project.Game.runGame</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a2b03c700b5d232f5aef7c6acf439b7ea" compoundref="_ring_searcher_8java" startline="80" endline="84">ca.mcgill.ecse211.threads.RingSearcher.runMethod</referencedby>
       </memberdef>
       </sectiondef>
@@ -195,23 +193,6 @@
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="67">
-        <label>ca.mcgill.ecse211.threads.RingSearcher</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher"/>
-        <childnode refid="68" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="68">
-        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="69" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="69">
-        <label>Runnable</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="70">
         <label>ca.mcgill.ecse211.threads.RingSearcher</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher"/>
@@ -225,6 +206,23 @@
         </childnode>
       </node>
       <node id="72">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="73">
+        <label>ca.mcgill.ecse211.threads.RingSearcher</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="75">
         <label>Runnable</label>
       </node>
     </collaborationgraph>

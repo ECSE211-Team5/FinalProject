@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.Main" 3 "Fri Nov 2 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.Main" 3 "Thu Nov 8 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,7 +20,7 @@ ca.mcgill.ecse211.project.Main
 .RI "static boolean \fBtest\fP = true"
 .br
 .ti -1c
-.RI "static ComponentTest\&.Type \fBtestType\fP = \fBComponentTest\&.Type\&.LightSensor\fP"
+.RI "static ComponentTest\&.Type \fBtestType\fP = \fBComponentTest\&.Type\&.Localization\fP"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -67,13 +67,13 @@ Definition at line 34 of file Main\&.java\&.
 .nf
 34                                          {
 35     try {
-36       Game\&.preparation(); // for brevity and less object instantiations
+36       Game\&.INSTANCE\&.preparation(); // for brevity and less object instantiations
 37       if (test) {
 38         Button\&.waitForAnyPress(); // Wait for a button on the EV3 Brick to be pressed
 39         (new Thread() {
 40           public void run() {
 41             try {
-42               ComponentTest\&.runTest(testType);
+42               ComponentTest\&.tunnelTest();
 43             } catch (Exception e) {
 44               // TODO Auto-generated catch block
 45               e\&.printStackTrace();
@@ -81,11 +81,11 @@ Definition at line 34 of file Main\&.java\&.
 47           }
 48         })\&.start();
 49       } else {
-50         Game\&.runGame(); // for brevity and less object instantiations
+50         Game\&.INSTANCE\&.runGame(); // for brevity and less object instantiations
 51       }
 52       Button\&.waitForAnyPress();
 53       System\&.exit(0);
-54     } catch (OdometerExceptions e) {
+54     } catch (Exception e) {
 55       // TODO Auto-generated catch block
 56       e\&.printStackTrace();
 57     }
@@ -97,7 +97,7 @@ Definition at line 34 of file Main\&.java\&.
 This variable decides whether or not to enable our tests 
 .PP
 Definition at line 21 of file Main\&.java\&.
-.SS "ComponentTest\&.Type ca\&.mcgill\&.ecse211\&.project\&.Main\&.testType = \fBComponentTest\&.Type\&.LightSensor\fP\fC [static]\fP"
+.SS "ComponentTest\&.Type ca\&.mcgill\&.ecse211\&.project\&.Main\&.testType = \fBComponentTest\&.Type\&.Localization\fP\fC [static]\fP"
 This variable stores the type of test that we want to perform 
 .PP
 Definition at line 26 of file Main\&.java\&.

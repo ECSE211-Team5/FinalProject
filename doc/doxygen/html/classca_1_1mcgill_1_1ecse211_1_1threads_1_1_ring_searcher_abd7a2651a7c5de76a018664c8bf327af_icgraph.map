@@ -1,5 +1,3 @@
 <map id="ca.mcgill.ecse211.threads.RingSearcher.retrieveRing" name="ca.mcgill.ecse211.threads.RingSearcher.retrieveRing">
-<area shape="rect" id="node2" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a790740a4ed299c9b985401ea8c4d5010" title="ca.mcgill.ecse211.project.\lGame.runGame" alt="" coords="234,5,409,47"/>
-<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#a2b03c700b5d232f5aef7c6acf439b7ea" title="ca.mcgill.ecse211.threads.\lRingSearcher.runMethod" alt="" coords="232,71,411,112"/>
-<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="459,5,633,47"/>
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#a2b03c700b5d232f5aef7c6acf439b7ea" title="ca.mcgill.ecse211.threads.\lRingSearcher.runMethod" alt="" coords="232,5,411,47"/>
 </map>

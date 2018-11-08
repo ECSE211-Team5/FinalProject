@@ -1,0 +1,174 @@
+\hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util}{}\section{ca.\+mcgill.\+ecse211.\+project.\+Game\+Util Class Reference}
+\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util}\index{ca.\+mcgill.\+ecse211.\+project.\+Game\+Util@{ca.\+mcgill.\+ecse211.\+project.\+Game\+Util}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Path\+Finder}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042}{is\+Safe} (int\mbox{[}$\,$\mbox{]} coor)
+\item 
+static double \mbox{[}$\,$\mbox{]} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4}{average} (int\mbox{[}$\,$\mbox{]} p1, int\mbox{[}$\,$\mbox{]} p2)
+\item 
+static int \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a16770a5be37a6b27cc8c87e76e6d7d08}{distance\+From\+Robot} (int x, int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game}{Game} utility class with handy functionalities can be used in the game
+
+\begin{DoxyAuthor}{Author}
+Caspar Cedro 
+
+Percy Chen 
+
+Patrick Erath 
+
+Anssam Ghezala 
+
+Susan Matuszewski 
+
+Kamy Moussavi Kafi 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Game\+Util.\+java.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!average@{average}}
+\index{average@{average}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
+\subsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily static double \mbox{[}$\,$\mbox{]} ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+average (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{p1,  }\item[{int \mbox{[}$\,$\mbox{]}}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+find the average of the two coordinates 
+\begin{DoxyParams}{Parameters}
+{\em p1} & \\
+\hline
+{\em p2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 187 of file Game\+Util.\+java.
+
+
+\begin{DoxyCode}
+187                                                      \{
+188     \textcolor{keywordtype}{double}[] result = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
+189     result[0] = (double) (p1[0] + p2[0]) / 2;
+190     result[1] = (double) (p1[1] + p2[1]) / 2;
+191     \textcolor{keywordflow}{return} result;
+192   \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a16770a5be37a6b27cc8c87e76e6d7d08}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a16770a5be37a6b27cc8c87e76e6d7d08}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!distance\+From\+Robot@{distance\+From\+Robot}}
+\index{distance\+From\+Robot@{distance\+From\+Robot}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
+\subsubsection{\texorpdfstring{distance\+From\+Robot()}{distanceFromRobot()}}
+{\footnotesize\ttfamily static int ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+distance\+From\+Robot (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+find the shortest distance from the starting point to two points 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 200 of file Game\+Util.\+java.
+
+
+\begin{DoxyCode}
+200                                                     \{
+201     \textcolor{keywordflow}{try} \{
+202       \textcolor{keywordtype}{double}[] position = Odometer.getOdometer().getXYT();
+203       \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int}) (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
+204     \} \textcolor{keywordflow}{catch} (OdometerExceptions e) \{
+205       \textcolor{comment}{// TODO Auto-generated catch block}
+206       e.printStackTrace();
+207     \}
+208     \textcolor{keywordflow}{return} Integer.MAX\_VALUE;
+209   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a16770a5be37a6b27cc8c87e76e6d7d08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a16770a5be37a6b27cc8c87e76e6d7d08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!is\+Safe@{is\+Safe}}
+\index{is\+Safe@{is\+Safe}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
+\subsubsection{\texorpdfstring{is\+Safe()}{isSafe()}}
+{\footnotesize\ttfamily static boolean ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+is\+Safe (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{coor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+check if one coordinate is safe based on (it is not a wall, tree or inside a tunnel) 
+\begin{DoxyParams}{Parameters}
+{\em coor} & coordinate array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: true if safe, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 167 of file Game\+Util.\+java.
+
+
+\begin{DoxyCode}
+167                                            \{
+168     \textcolor{keywordtype}{int} x = coor[0];
+169     \textcolor{keywordtype}{int} y = coor[1];
+170     \textcolor{keywordtype}{boolean} inTunnel = x > GameParameters.TN\_LL[0] && x < GameParameters.TN\_LL[1]
+171         && y > GameParameters.TN\_UR[0] && y < GameParameters.TN\_UR[1];
+172     \textcolor{keywordtype}{boolean} isTree = x == GameParameters.TREE\_US[0] && y == GameParameters.TREE\_US[1];
+173     \textcolor{keywordtype}{boolean} outBound =
+174         x <= 0 || x >= GameParameters.Grid\_UR[0] || y <= 0 || y >= GameParameters.Grid\_UR[1];
+175     \textcolor{keywordflow}{if} (inTunnel || isTree || outBound) \{
+176       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+177     \}
+178     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+179   \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ccc/\+Final\+Project/src/ca/mcgill/ecse211/project/\hyperlink{_game_util_8java}{Game\+Util.\+java}\end{DoxyCompactItemize}
