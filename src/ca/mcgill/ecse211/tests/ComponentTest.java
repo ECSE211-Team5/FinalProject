@@ -76,10 +76,10 @@ public enum ComponentTest {
   public static void tunnelTest() throws Exception {
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
 
-    UltrasonicLocalizer us = new UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);
-    LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
-    us.localize(Button.ID_LEFT);
-    lgLoc.localize(GameParameters.SC);
+    //UltrasonicLocalizer us = new UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+    //LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+    //us.localize(Button.ID_LEFT);
+    //lgLoc.localize(GameParameters.SC);
     Odometer.getOdometer().setXYT(1, 1, 0);
     navigation.goThroughTunnel();
   }

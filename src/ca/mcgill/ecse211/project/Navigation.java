@@ -217,29 +217,21 @@ public class Navigation {
       }
     }
     if(points.get(0)[0] == points.get(1)[0]) {
-      distance= Math.abs(notIn.get(0)[0] - points.get(0)[0]);
+      distance= Math.abs(notIn.get(0)[0] - points.get(0)[0]) +1;
 
       travelToTunnel(points, 0);
       
     }else {
-      distance= Math.abs(notIn.get(0)[1] - points.get(0)[1]); 
+      distance= Math.abs(notIn.get(0)[1] - points.get(0)[1]) +1; 
       travelToTunnel(points, 1);
     }
     
    
     double[] tunnelEnd = GameParameters.average(notIn.get(0), notIn.get(1));
     turnTo(Math.toDegrees(calculateAngleTo(tunnelEnd[0], tunnelEnd[1])));
-    //goback To correct
-    leftMotor.backward();
-    rightMotor.backward();
-    moveUntilLineDetection();
-    //move for one line to correct in the entrance
-    leftMotor.setSpeed(FORWARD_SPEED);
-    rightMotor.setSpeed(FORWARD_SPEED);
-    leftMotor.forward();
-    rightMotor.forward();
-    //travel through the tunnel
-    moveUntilLineDetection();
+    
+    //turn left -6 to correct the effect of the weight
+    turn(-6);
     forward(250, distance);
   }
   
@@ -251,6 +243,9 @@ public class Navigation {
     int[] closePoint = GameParameters.distanceFromStartingPoint(points.get(0)[0], points.get(0)[1]) > 
     GameParameters.distanceFromStartingPoint(points.get(1)[0], points.get(1)[1])? 
                                               points.get(1) : points.get(0);
+    System.out.println("Point: " + closePoint[0] + ", " + closePoint[1]);
+    System.out.println(n);
+    
     int[] plusOne = new int[2];
     int[] minusOne = new int[2];
       
@@ -274,7 +269,7 @@ public class Navigation {
     }
     //travel to the point
     this.travelToWithCorrection(beforePoint[0], beforePoint[1], false);
-    travelTo(center[0], center[1]);
+    forward(FORWARD_SPEED, 0.5);
   }
   
   /**
@@ -302,7 +297,7 @@ public class Navigation {
     rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, angle), false);
   }
   
-  public void forward(int speed, int distance) {
+  public void forward(int speed, double distance) {
     leftMotor.setSpeed(speed);
     rightMotor.setSpeed(speed);
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);

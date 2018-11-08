@@ -40,7 +40,7 @@ public enum GameParameters {
   /**
    * This variables holds the starting corner coordinates for our robot
    */
-  public static int[] SC = {0, 0};
+  public static int[] SC = {1, 1, 0};
   
   /**
    * This variable stores the lower left coordinates of the entire grid
@@ -96,7 +96,7 @@ public enum GameParameters {
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] US_LL = {0, 5};
+  public static int[] US_LL = {0, 0};
 
   /**
    * This variable stores the upper right hand corner of the red zone
@@ -156,7 +156,7 @@ public enum GameParameters {
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
-  public static int[] TN_LL = {4, 7};
+  public static int[] TN_LL = {3, 2};
 
   /**
    * This variable stores the upper right hand corner of the red tunnel footprint
@@ -166,7 +166,7 @@ public enum GameParameters {
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
-  public static int[] TN_UR = {6, 8};
+  public static int[] TN_UR = {5, 3};
 
   /**
    * This variable stores the lower left hand corner of the green tunnel footprint
