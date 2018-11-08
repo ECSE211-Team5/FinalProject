@@ -222,15 +222,4 @@ public enum GameParameters {
     
     return AreaType.Dangerous;
   }
-  
-  public static double[] average(int[] p1, int[] p2) {
-    double[] result = new double[2];
-    result[0] = (double)(p1[0]+p2[0])/2;
-    result[1] = (double)(p1[1]+p2[1])/2;
-    return result;
-  }
-  
-  public static int distanceFromStartingPoint(int x, int y) {
-    return (int)(Math.pow(SC[0] - x, 2) + Math.pow(SC[1] - y, 2));
-  }
 }

@@ -227,9 +227,14 @@ public class Navigation {
     }
     
    
-    double[] tunnelEnd = GameParameters.average(notIn.get(0), notIn.get(1));
-    turnTo(Math.toDegrees(calculateAngleTo(tunnelEnd[0], tunnelEnd[1])));
+    double[] tunnelEnd = GameUtil.average(notIn.get(0), notIn.get(1));
     
+    
+    turnTo(Math.toDegrees(calculateAngleTo(tunnelEnd[0], tunnelEnd[1])));
+    //goback To correct
+    leftMotor.backward();
+    rightMotor.backward();
+    moveUntilLineDetection();
     //turn left -6 to correct the effect of the weight
     turn(-6);
     forward(250, distance);
@@ -240,8 +245,8 @@ public class Navigation {
    * @param n :0: x, 1: y
    */
   private void travelToTunnel(ArrayList<int[]> points, int n) {
-    int[] closePoint = GameParameters.distanceFromStartingPoint(points.get(0)[0], points.get(0)[1]) > 
-    GameParameters.distanceFromStartingPoint(points.get(1)[0], points.get(1)[1])? 
+    int[] closePoint = GameUtil.distanceFromStartingPoint(points.get(0)[0], points.get(0)[1]) > 
+    GameUtil.distanceFromStartingPoint(points.get(1)[0], points.get(1)[1])? 
                                               points.get(1) : points.get(0);
     System.out.println("Point: " + closePoint[0] + ", " + closePoint[1]);
     System.out.println(n);
@@ -258,10 +263,10 @@ public class Navigation {
         minusOne[i] = closePoint[i]; 
       }
     }
-    boolean isMinus = GameParameters.distanceFromStartingPoint(plusOne[0], plusOne[1]) > 
-    GameParameters.distanceFromStartingPoint(minusOne[0], minusOne[1]);
+    boolean isMinus = GameUtil.distanceFromStartingPoint(plusOne[0], plusOne[1]) > 
+    GameUtil.distanceFromStartingPoint(minusOne[0], minusOne[1]);
     int beforePoint[] = isMinus? minusOne : plusOne;
-    double[] center = GameParameters.average(points.get(0), points.get(1));
+    double[] center = GameUtil.average(points.get(0), points.get(1));
     if(isMinus) {
       center[n]  = center[n] - 1;
     }else {
@@ -269,7 +274,7 @@ public class Navigation {
     }
     //travel to the point
     this.travelToWithCorrection(beforePoint[0], beforePoint[1], false);
-    forward(FORWARD_SPEED, 0.5);
+    travelTo(center[0], center[1]);
   }
   
   /**
