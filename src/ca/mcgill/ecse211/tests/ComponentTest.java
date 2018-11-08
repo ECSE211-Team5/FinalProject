@@ -6,8 +6,8 @@ import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.Game;
 import ca.mcgill.ecse211.project.GameParameters;
+import ca.mcgill.ecse211.project.GameUtil;
 import ca.mcgill.ecse211.project.Navigation;
-import ca.mcgill.ecse211.threads.RingSearcher;
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
 
@@ -75,12 +75,15 @@ public enum ComponentTest {
   
   public static void tunnelTest() throws Exception {
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
-
+    GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+    GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
     //UltrasonicLocalizer us = new UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);
     //LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
     //us.localize(Button.ID_LEFT);
     //lgLoc.localize(GameParameters.SC);
     Odometer.getOdometer().setXYT(1, 1, 0);
+    navigation.goThroughTunnel();
+    navigation.travelToWithCorrection(4, 6, false);
     navigation.goThroughTunnel();
   }
 

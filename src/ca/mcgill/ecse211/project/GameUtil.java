@@ -17,6 +17,8 @@ import ca.mcgill.ecse211.odometer.OdometerExceptions;
  *
  */
 public class GameUtil {
+  public static PathFinder startingFinder;
+  public static PathFinder searchingFinder;
   /**
    * Class that find the shortest path from one point to another with constraints 
    * inside one area
@@ -27,7 +29,7 @@ public class GameUtil {
    * @author Susan Matuszewski
    * @author Kamy Moussavi Kafi
    */
-  static class PathFinder {
+  public static class PathFinder {
     int[] ll;
     int[] ur;
     int width, length;
@@ -79,13 +81,13 @@ public class GameUtil {
         if (parent == -1)
           break;
         if (parent == node + 1) {
-          instruction.add(0, 'L');
+          instruction.add('L');
         } else if (parent == node - 1) {
-          instruction.add(0, 'R');
+          instruction.add('R');
         } else if (parent == node + (width + 1)) {
-          instruction.add(0, 'D');
+          instruction.add('D');
         } else {
-          instruction.add(0, 'U');
+          instruction.add('U');
         }
         node = parent;
       }

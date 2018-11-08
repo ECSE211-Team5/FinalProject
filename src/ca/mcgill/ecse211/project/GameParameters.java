@@ -106,7 +106,7 @@ public enum GameParameters {
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] US_UR = {4, 9};
+  public static int[] US_UR = {3, 3};
   
   /**
    * This variable stores the lower left hand corner of the green zone
@@ -116,7 +116,7 @@ public enum GameParameters {
    * min Green_UR[1] - Green_LL[1] = 2
    * max Green_UR[1] - Green_LL[1] = 10 
    */
-  public static int[] OPPO_LL = {10, 0};
+  public static int[] OPPO_LL = {0, 5};
 
   /**
    * This variable stores the upper right hand corner of the green zone
@@ -126,7 +126,7 @@ public enum GameParameters {
    * min Green_UR[1] - Green_LL[1] = 2
    * max Green_UR[1] - Green_LL[1] = 10
    */
-  public static int[] OPPO_UR = {15, 4};
+  public static int[] OPPO_UR = {6, 8};
   
   /**
    * This variable stores the lower left hand corner of the island zone
@@ -136,7 +136,7 @@ public enum GameParameters {
    * min Island_UR[1] - Island_LL[1] = 2
    * max Island_UR[1] - Island_LL[1] = 10 
    */
-  public static int[] Island_LL = {10, 0};
+  public static int[] Island_LL = {0, 5};
 
   /**
    * This variable stores the upper right hand corner of the island zone
@@ -146,7 +146,7 @@ public enum GameParameters {
    * min Island_UR[1] - Island_LL[1] = 2
    * max Island_UR[1] - Island_LL[1] = 10
    */
-  public static int[] Island_UR = {15, 4};
+  public static int[] Island_UR = {6, 8};
 
   /**
    * This variable stores the lower left hand corner of the red tunnel footprint
@@ -156,7 +156,7 @@ public enum GameParameters {
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
-  public static int[] TN_LL = {3, 2};
+  public static int[] TN_LL = {2, 3};
 
   /**
    * This variable stores the upper right hand corner of the red tunnel footprint
@@ -166,7 +166,7 @@ public enum GameParameters {
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
-  public static int[] TN_UR = {5, 3};
+  public static int[] TN_UR = {3, 5};
 
   /**
    * This variable stores the lower left hand corner of the green tunnel footprint
@@ -215,9 +215,12 @@ public enum GameParameters {
    * @return the type of area the point belongs to
    * @throws Exception 
    */
-  public static AreaType getType(int x, int y) throws Exception {
+  public static AreaType getType(int x, int y){
     if(x >= US_LL[0] && x <= US_UR[0] && y >= US_LL[1] && y <= US_UR[1]) {
       return AreaType.InStarting;
+    }
+    if(x >= Island_LL[0] && x <= Island_UR[0] && y >= Island_LL[1] && y <= Island_UR[1]) {
+      return AreaType.Searching;
     }
     
     return AreaType.Dangerous;

@@ -94,36 +94,73 @@ public class Navigation {
    *        abstacle when navigating
    */
   public void travelToWithCorrection(int x, int y, boolean avoid) {
-    double dX = x - odometer.getXYT()[0];
-    double dY = y - odometer.getXYT()[1];
-    // double theta = Math.atan(dX / dY);
-    // if (dY < 0 && theta < Math.PI)
-    // theta += Math.PI;
-
-    // Euclidean distance calculation.
-    // double distance = Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2));
-    double theta = 0;
-    if (dX > 0.1) {
-      turnTo(90);
-      theta = 90;
-    } else if (dX < -0.1) {
-      turnTo(-90);
-      theta = -90;
+    int px = (int)Math.round(odometer.getXYT()[0]);
+    int py = (int)Math.round(odometer.getXYT()[1]);
+    int[] cur = {px, py};
+    int[] destination = {x, y};
+    ArrayList<Character> instruction = new ArrayList<Character>();
+    if(GameParameters.getType(px, py) == GameParameters.AreaType.InStarting) {
+      GameUtil.startingFinder.tryFindPath(cur, destination, instruction);
+    }else{
+      GameUtil.searchingFinder.tryFindPath(cur, destination, instruction);
     }
-    moveWithCorrection(dX, theta);
-    odometer.setX(x);
-    
-    if (dY > 0.1) {
-      turnTo(0);
-      theta = 0;
-    } else if (dY < -0.1) {
-      turnTo(180);
-      theta = 180;
+    char lastStep = ' ';
+    int theta = 0;
+    while(instruction.size() > 0) {
+      char step = instruction.remove(instruction.size()-1);
+      if(step != lastStep) {
+        theta = charToRotation(step);
+        turnTo(theta);
+      }
+      if(step == 'L') {
+        px--;
+      }else if(step == 'R') {
+        px++;
+      }else if(step == 'U') {
+        py++;
+      }else {
+        py--;
+      }
+      lastStep = step;
+      moveWithCorrection(1, theta);
+      odometer.setX(px);
+      odometer.setY(py);
     }
-    moveWithCorrection(dY, theta);
-    odometer.setY(y);
+//    if (dX > 0.1) {
+//      turnTo(90);
+//      theta = 90;
+//    } else if (dX < -0.1) {
+//      turnTo(-90);
+//      theta = -90;
+//    }
+//    moveWithCorrection(dX, theta);
+//    odometer.setX(x);
+//    
+//    if (dY > 0.1) {
+//      turnTo(0);
+//      theta = 0;
+//    } else if (dY < -0.1) {
+//      turnTo(180);
+//      theta = 180;
+//    }
+//    moveWithCorrection(dY, theta);
+//    odometer.setY(y);
   }
 
+  private int charToRotation(char direction) {
+    switch(direction) {
+      case 'U':
+        return 0;
+      case 'D':
+        return 180;
+      case 'L':
+        return 270;
+      case 'R':
+        return 90;
+       default: 
+         return 0;
+    }
+  }
   /**
    * Move a certain distance with correction (using coordinate system)
    * @param distance: distance to cover
@@ -141,6 +178,8 @@ public class Navigation {
   }
 
   private void moveOneTileWithCorrection(double theta) {
+    leftMotor.setSpeed(FORWARD_SPEED);
+    rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.forward();
     rightMotor.forward();
     moveUntilLineDetection();
@@ -155,7 +194,7 @@ public class Navigation {
         leftMotor.stop(true);
       }
 
-      if (right < -5) {
+      if (right < -10) {
         rightMotor.stop(true);
       }
     }
@@ -181,14 +220,14 @@ public class Navigation {
     if (dTheta > 180) {
       leftMotor.setSpeed(ROTATE_SPEED);
       rightMotor.setSpeed(ROTATE_SPEED);
-      leftMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta), true);
+      leftMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta)-10, true);
       rightMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta) + 10, false);
     }
     // TURN LEFT
     else {
       leftMotor.setSpeed(ROTATE_SPEED);
       rightMotor.setSpeed(ROTATE_SPEED);
-      leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), true);
+      leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta)+5, true);
       rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta) - 5, false);
     }
   }
@@ -207,7 +246,7 @@ public class Navigation {
     int[] lr = {ll[0], ur[1]};
     int[] ul = {ur[0], ll[1]};
     ArrayList<int[]> notIn = new ArrayList<int[]>();
-    int[][] corners = {ll, lr, ul, ur};
+    int[][] corners = {ll.clone(), lr.clone(), ul.clone(), ur.clone()};
     ArrayList<int[]> points = new ArrayList<int[]>();
     double[] position = odometer.getXYT();
     for(int[] point : corners) {
@@ -253,19 +292,16 @@ public class Navigation {
     //rotate additional sensor distance to make sure the sensor will not on the balck line
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
     rightMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), false);
-    leftMotor.forward();
-    rightMotor.forward();
-    moveUntilLineDetection();
-    //correnctAngle
-    odometer.setTheta(angleThoughTunnel);
-    
+    this.moveOneTileWithCorrection(angleThoughTunnel);
+    double[] after = GameUtil.average(notIn.get(0), notIn.get(1));
+    odometer.setX(after[0]);
+    odometer.setY(after[1]);
     //go to the nearest safe point near tunnel
     for(int[] p : notIn) {
       if(GameUtil.isSafe(p)) {
         double toPointAngle = Math.toDegrees(calculateAngleTo(p[0], p[1]));
         turnTo(toPointAngle);
-        moveUntilLineDetection();
-        odometer.setTheta(toPointAngle);
+        this.moveOneTileWithCorrection(toPointAngle);
         break;
       }
     }
@@ -281,10 +317,11 @@ public class Navigation {
                                               points.get(1) : points.get(0);
     
     int[] beforePoint = closePoint;
-    beforePoint[n] = closePoint[n] + multiplier * 1;
+    for(int i = 0; i < points.size(); i++) {
+      points.get(i)[n] = points.get(i)[n] + multiplier * 1;
+    }
     double[] center = GameUtil.average(points.get(0), points.get(1));
-    center[n]  = center[n] + multiplier * 1;
-    
+
     //travel to the point
     this.travelToWithCorrection(beforePoint[0], beforePoint[1], false);
     travelTo(center[0], center[1]);
