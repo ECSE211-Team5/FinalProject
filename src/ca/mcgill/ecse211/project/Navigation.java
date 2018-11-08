@@ -209,8 +209,10 @@ public class Navigation {
     ArrayList<int[]> notIn = new ArrayList<int[]>();
     int[][] corners = {ll, lr, ul, ur};
     ArrayList<int[]> points = new ArrayList<int[]>();
+    double[] position = odometer.getXYT();
     for(int[] point : corners) {
-      if(GameParameters.getType(point[0], point[1]) == GameParameters.AreaType.InStarting) {
+      if(GameParameters.getType(point[0], point[1]) == GameParameters.getType((int)Math.round(position[0]), 
+                                                                               (int)Math.round(position[1]))) {
         points.add(point);
       }else {
         notIn.add(point);
@@ -218,60 +220,71 @@ public class Navigation {
     }
     if(points.get(0)[0] == points.get(1)[0]) {
       distance= Math.abs(notIn.get(0)[0] - points.get(0)[0]) +1;
-
-      travelToTunnel(points, 0);
-      
+      int multi = notIn.get(0)[0] - points.get(0)[0] < 0? 1 : -1;
+      travelToTunnel(points, 0, multi);
+      for(int i = 0; i < notIn.size(); i++) {
+        notIn.get(i)[0] = notIn.get(i)[0] - multi * 1;
+      }
     }else {
       distance= Math.abs(notIn.get(0)[1] - points.get(0)[1]) +1; 
-      travelToTunnel(points, 1);
+      int multi = notIn.get(0)[1] - points.get(0)[1] < 0? 1 : -1;
+      travelToTunnel(points, 1, multi);
+      for(int i = 0; i < notIn.size(); i++) {
+        notIn.get(i)[1] = notIn.get(i)[1] - multi * 1;
+      }
     }
     
    
     double[] tunnelEnd = GameUtil.average(notIn.get(0), notIn.get(1));
     
-    
-    turnTo(Math.toDegrees(calculateAngleTo(tunnelEnd[0], tunnelEnd[1])));
+    double angleThoughTunnel = Math.toDegrees(calculateAngleTo(tunnelEnd[0], tunnelEnd[1]));
+    turnTo(angleThoughTunnel);
     //goback To correct
     leftMotor.backward();
     rightMotor.backward();
     moveUntilLineDetection();
+    
     //turn left -6 to correct the effect of the weight
     turn(-6);
     forward(250, distance);
+    odometer.setTheta(angleThoughTunnel);
+    
+    //Find a nearest safe point
+    //rotate additional sensor distance to make sure the sensor will not on the balck line
+    leftMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
+    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), false);
+    leftMotor.forward();
+    rightMotor.forward();
+    moveUntilLineDetection();
+    //correnctAngle
+    odometer.setTheta(angleThoughTunnel);
+    
+    //go to the nearest safe point near tunnel
+    for(int[] p : notIn) {
+      if(GameUtil.isSafe(p)) {
+        double toPointAngle = Math.toDegrees(calculateAngleTo(p[0], p[1]));
+        turnTo(toPointAngle);
+        moveUntilLineDetection();
+        odometer.setTheta(toPointAngle);
+        break;
+      }
+    }
   }
   
   /**
    * 
    * @param n :0: x, 1: y
    */
-  private void travelToTunnel(ArrayList<int[]> points, int n) {
-    int[] closePoint = GameUtil.distanceFromStartingPoint(points.get(0)[0], points.get(0)[1]) > 
-    GameUtil.distanceFromStartingPoint(points.get(1)[0], points.get(1)[1])? 
+  private void travelToTunnel(ArrayList<int[]> points, int n, int multiplier) {
+    int[] closePoint = GameUtil.distanceFromRobot(points.get(0)[0], points.get(0)[1]) > 
+    GameUtil.distanceFromRobot(points.get(1)[0], points.get(1)[1])? 
                                               points.get(1) : points.get(0);
-    System.out.println("Point: " + closePoint[0] + ", " + closePoint[1]);
-    System.out.println(n);
     
-    int[] plusOne = new int[2];
-    int[] minusOne = new int[2];
-      
-     for(int i = 0; i < closePoint.length; i++) {
-      if(i == n) {
-        plusOne[n] = closePoint[n] + 1;
-        minusOne[n] = closePoint[n] - 1;
-      }else {
-        plusOne[i] = closePoint[i];
-        minusOne[i] = closePoint[i]; 
-      }
-    }
-    boolean isMinus = GameUtil.distanceFromStartingPoint(plusOne[0], plusOne[1]) > 
-    GameUtil.distanceFromStartingPoint(minusOne[0], minusOne[1]);
-    int beforePoint[] = isMinus? minusOne : plusOne;
+    int[] beforePoint = closePoint;
+    beforePoint[n] = closePoint[n] + multiplier * 1;
     double[] center = GameUtil.average(points.get(0), points.get(1));
-    if(isMinus) {
-      center[n]  = center[n] - 1;
-    }else {
-      center[n]  = center[n] + 1;
-    }
+    center[n]  = center[n] + multiplier * 1;
+    
     //travel to the point
     this.travelToWithCorrection(beforePoint[0], beforePoint[1], false);
     travelTo(center[0], center[1]);
@@ -302,6 +315,11 @@ public class Navigation {
     rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, angle), false);
   }
   
+  /**
+   * Move the robot forward
+   * @param speed: speed to be taken
+   * @param distance: distacne to travel
+   */
   public void forward(int speed, double distance) {
     leftMotor.setSpeed(speed);
     rightMotor.setSpeed(speed);
