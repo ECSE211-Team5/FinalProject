@@ -40,7 +40,7 @@ public enum GameParameters {
   /**
    * This variables holds the starting corner coordinates for our robot
    */
-  public static int[] SC = {1, 1, 0};
+  public static int[] SC = {1, 7, 90};
   
   /**
    * This variable stores the lower left coordinates of the entire grid
@@ -96,7 +96,7 @@ public enum GameParameters {
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] US_LL = {0, 0};
+  public static int[] US_LL = {0, 6};
 
   /**
    * This variable stores the upper right hand corner of the red zone
@@ -106,7 +106,7 @@ public enum GameParameters {
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] US_UR = {3, 3};
+  public static int[] US_UR = {3, 8};
   
   /**
    * This variable stores the lower left hand corner of the green zone
@@ -136,7 +136,7 @@ public enum GameParameters {
    * min Island_UR[1] - Island_LL[1] = 2
    * max Island_UR[1] - Island_LL[1] = 10 
    */
-  public static int[] Island_LL = {0, 5};
+  public static int[] Island_LL = {4, 5};
 
   /**
    * This variable stores the upper right hand corner of the island zone
@@ -156,7 +156,7 @@ public enum GameParameters {
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
-  public static int[] TN_LL = {2, 3};
+  public static int[] TN_LL = {2, 6};
 
   /**
    * This variable stores the upper right hand corner of the red tunnel footprint
@@ -166,7 +166,7 @@ public enum GameParameters {
    * min BRR_UR[1] - BRR_LL[1] = 1
    * max BRR_UR[1] - BRR_LL[1] = 2 
    */
-  public static int[] TN_UR = {3, 5};
+  public static int[] TN_UR = {4, 7};
 
   /**
    * This variable stores the lower left hand corner of the green tunnel footprint

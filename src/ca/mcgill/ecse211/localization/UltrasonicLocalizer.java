@@ -19,7 +19,7 @@ import lejos.hardware.motor.EV3LargeRegulatedMotor;
  * @author Kamy Moussavi Kafi
  */
 public class UltrasonicLocalizer {
-  private static final int ROTATE_SPEED = 80;
+  private static final int ROTATE_SPEED = 200;
   private EV3LargeRegulatedMotor leftMotor;
   private EV3LargeRegulatedMotor rightMotor;
 
@@ -117,7 +117,7 @@ public class UltrasonicLocalizer {
     angle1 = odometer.getXYT()[2];
 
     // 2. Turn left until we see the second wall, then turn right
-    navigation.turn(-20);
+    navigation.turn(-50);
     rightMotor.forward();
     leftMotor.backward();
     

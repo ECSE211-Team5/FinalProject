@@ -39,7 +39,7 @@ public class Main {
         (new Thread() {
           public void run() {
             try {
-              ComponentTest.tunnelTest();
+              ComponentTest.ringMotorTest();
             } catch (Exception e) {
               // TODO Auto-generated catch block
               e.printStackTrace();
@@ -49,8 +49,8 @@ public class Main {
       } else {
         Game.INSTANCE.runGame(); // for brevity and less object instantiations
       }
-      Button.waitForAnyPress();
-      System.exit(0);
+      //Button.waitForAnyPress();
+      //System.exit(0);
     } catch (Exception e) {
       // TODO Auto-generated catch block
       e.printStackTrace();

@@ -8,6 +8,7 @@ import ca.mcgill.ecse211.project.Game;
 import ca.mcgill.ecse211.project.GameParameters;
 import ca.mcgill.ecse211.project.GameUtil;
 import ca.mcgill.ecse211.project.Navigation;
+import ca.mcgill.ecse211.threads.RingSearcher;
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
 
@@ -81,9 +82,8 @@ public enum ComponentTest {
     //LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
     //us.localize(Button.ID_LEFT);
     //lgLoc.localize(GameParameters.SC);
-    Odometer.getOdometer().setXYT(1, 1, 0);
+    Odometer.getOdometer().setXYT(1, 7, 90);
     navigation.goThroughTunnel();
-    navigation.travelToWithCorrection(4, 6, false);
     navigation.goThroughTunnel();
   }
 
@@ -98,14 +98,6 @@ public enum ComponentTest {
     LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
     us.localize(Button.ID_LEFT);
     lgLoc.localize(GameParameters.SC);
-    Game.INSTANCE.usPoller.setStart(false);
-    navigation.travelToWithCorrection(6, 4, false);
-    Sound.twoBeeps();
-    navigation.travelToWithCorrection(2, 3, false);
-    Sound.twoBeeps();
-    navigation.travelToWithCorrection(0, 0, false);
-    Game.INSTANCE.usPoller.setStart(true);
-
   }
 
   /**
@@ -127,22 +119,12 @@ public enum ComponentTest {
    * 
    * @throws OdometerExceptions
    */
-//  public static void ringMotorTest() throws OdometerExceptions {
-//    final RingSearcher searcher = new RingSearcher(Game.storageMotor, Game.rodMotor);
-//    searcher.setStart(true);
-//    Thread t = new Thread(searcher);
-//    t.start();
-//    try {
-//      Thread.sleep(20000);
-//    } catch (InterruptedException e) {
-//      e.printStackTrace();
-//    }
-//    searcher.setStart(false);
-//    try {
-//      Thread.sleep(2000);
-//    } catch (InterruptedException e) {
-//      e.printStackTrace();
-//    }
-//    searcher.setStart(true);
-//  }
+  public static void ringMotorTest() throws OdometerExceptions {
+    final RingSearcher searcher = new RingSearcher(Game.sensorMotor, Game.rodMotor);
+    Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
+    while(true) {
+      Button.waitForAnyPress();
+      navigation.approachRingSet(searcher);
+    }
+  }
 }

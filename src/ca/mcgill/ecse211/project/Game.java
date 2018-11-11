@@ -6,6 +6,7 @@ import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.GameParameters.DemoType;
 import ca.mcgill.ecse211.threads.LightPoller;
+import ca.mcgill.ecse211.threads.RingSearcher;
 import ca.mcgill.ecse211.threads.SensorData;
 import ca.mcgill.ecse211.threads.ThreadControl;
 import ca.mcgill.ecse211.threads.UltrasonicPoller;
@@ -279,14 +280,14 @@ public enum Game {
   /**
    * Motor object instance that allows control of the motor on storage rod
    */
-//  public static final EV3LargeRegulatedMotor storageMotor =
-//      new EV3LargeRegulatedMotor(LocalEV3.get().getPort("C"));
-//
+  public static final EV3LargeRegulatedMotor sensorMotor =
+      new EV3LargeRegulatedMotor(LocalEV3.get().getPort("C"));
+
 //  /**
 //   * Motor object instance that allows control of the motor on the rod for collecting rings
 //   */
-//  public static final EV3MediumRegulatedMotor rodMotor =
-//      new EV3MediumRegulatedMotor(LocalEV3.get().getPort("B"));
+  public static final EV3LargeRegulatedMotor rodMotor =
+      new EV3LargeRegulatedMotor(LocalEV3.get().getPort("B"));
 
   /**
    * This variable stores the length of a tile in cm
@@ -456,7 +457,7 @@ public enum Game {
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
     final LightLocalizer lgLoc = new LightLocalizer(navigation, leftMotor, rightMotor);
-    //final RingSearcher searcher = new RingSearcher(storageMotor, rodMotor);
+    final RingSearcher searcher = new RingSearcher(sensorMotor, rodMotor);
     // spawn a new Thread to avoid localization from blocking
     (new Thread() {
       public void run() {

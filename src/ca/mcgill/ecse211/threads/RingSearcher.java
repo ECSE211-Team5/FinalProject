@@ -19,8 +19,8 @@ import lejos.hardware.motor.EV3MediumRegulatedMotor;
  */
 public class RingSearcher extends ThreadControl {
   private static final int ACCELERATION = 300;
-  private EV3LargeRegulatedMotor storageMotor;
-  private EV3MediumRegulatedMotor rodMotor;
+  private EV3LargeRegulatedMotor sensorMotor;
+  private EV3LargeRegulatedMotor rodMotor;
   private boolean started = false;
   private Odometer odometer;
   private SensorData data;
@@ -33,13 +33,16 @@ public class RingSearcher extends ThreadControl {
    * @param rodMotor: the motor for the rod to collect the ring
    * @throws OdometerExceptions
    */
-  public RingSearcher(EV3LargeRegulatedMotor storageMotor, EV3MediumRegulatedMotor rodMotor)
+  public RingSearcher(EV3LargeRegulatedMotor sensorMotor, EV3LargeRegulatedMotor rodMotor)
       throws OdometerExceptions {
     this.odometer = Odometer.getOdometer();
-    this.storageMotor = storageMotor;
+    this.sensorMotor = sensorMotor;
     this.rodMotor = rodMotor;
+    rodMotor.setSpeed(250);
+    rodMotor.setAcceleration(3000);
+    this.sensorMotor.setSpeed(50);
     data = SensorData.getSensorData();
-    for (BaseRegulatedMotor motor : new BaseRegulatedMotor[] {this.storageMotor, this.rodMotor}) {
+    for (BaseRegulatedMotor motor : new BaseRegulatedMotor[] {this.sensorMotor, this.rodMotor}) {
       motor.stop();
       motor.setAcceleration(ACCELERATION);
     }
@@ -51,30 +54,20 @@ public class RingSearcher extends ThreadControl {
    * 
    */
   public void  search() {
-    double[] position = odometer.getXYT();
-    // turn to the angle async
-
-    // if we found a ring, got for the ring and check its color
-    // if the color matches, return true
-    // if(foundRing) {
-    // ColorCalibrator.Color color = goForRingColor();
-    // //navigation.travelBackTo(position[0], position[1]);
-    // if(color == target) {
-    // Sound.twoBeeps();
-    // ColorMatched = true;
-    // }
-    // }else {
-    // Sound.beepSequence();;
-    // }
+    sensorMotor.rotate(-170);
+    sensorMotor.rotate(170);
   }
 
+  public void prepareRetrieve() {
+    rodMotor.rotate(180);
+  }
   /**
    * this method retrieve the searched ring
    */
   public void retrieveRing() {
-    storageMotor.rotateTo(-45);
-    rodMotor.rotateTo(-70);
-    rodMotor.rotateTo(0);
+    rodMotor.rotate(60);
+    rodMotor.rotate(-60);
+    rodMotor.rotate(180);
   }
 
   protected void runMethod() {
