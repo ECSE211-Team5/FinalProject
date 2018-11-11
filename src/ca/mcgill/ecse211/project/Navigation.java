@@ -56,7 +56,7 @@ public class Navigation {
     }
   }
 
-  private double calculateAngleTo(double x, double y) {
+  public double calculateAngleTo(double x, double y) {
     double dX = x - odometer.getXYT()[0];
     double dY = y - odometer.getXYT()[1];
     double theta = Math.atan(dX / dY);
@@ -352,14 +352,19 @@ public class Navigation {
    * the place when the robot can reach the ring
    */
   public void approachRingSet(RingSearcher searcher) {
+    leftMotor.setSpeed(FORWARD_SPEED);
+    rightMotor.setSpeed(FORWARD_SPEED);
+    leftMotor.backward();
+    rightMotor.backward();
+    moveUntilLineDetection();
     searcher.search();
     searcher.prepareRetrieve();
-    forward(FORWARD_SPEED, 7/Game.TILE);
+    forward(FORWARD_SPEED, 8/Game.TILE);
     leftMotor.rotate(-30, false);
     searcher.retrieveRing();
     leftMotor.rotate(30, false);
 
-    forward(FORWARD_SPEED, -7/Game.TILE);
+    forward(FORWARD_SPEED, -8/Game.TILE);
 
   }
 

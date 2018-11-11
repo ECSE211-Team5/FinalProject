@@ -96,7 +96,7 @@ public enum GameParameters {
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] US_LL = {0, 6};
+  public static int[] US_LL = {0, 0};
 
   /**
    * This variable stores the upper right hand corner of the red zone
@@ -106,7 +106,7 @@ public enum GameParameters {
    * min Red_UR[1] - Red_LL[1] = 2
    * max Red_UR[1] - Red_LL[1] = 10 
    */
-  public static int[] US_UR = {3, 8};
+  public static int[] US_UR = {8, 8};
   
   /**
    * This variable stores the lower left hand corner of the green zone
@@ -196,7 +196,7 @@ public enum GameParameters {
    * min TR_UR[1] - TR_LL[1] = 1
    * max TR_UR[1] - TR_LL[1] = 1
    */
-  public static int[] TREE_US = {7, 6};
+  public static int[] TREE_US = {2, 2};
 
   /**
    * This variable stores the coordinates of the green player ring set

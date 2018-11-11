@@ -122,8 +122,14 @@ public enum ComponentTest {
   public static void ringMotorTest() throws OdometerExceptions {
     final RingSearcher searcher = new RingSearcher(Game.sensorMotor, Game.rodMotor);
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
-    while(true) {
-      Button.waitForAnyPress();
+    GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+    GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
+    Odometer.getOdometer().setXYT(1, 1, 0);
+    int[] tree = {2,2};
+    int[][] other = {{2,1}, {3,2}, {2,3}, {1,2}};
+    for(int i = 0; i < 4; i++) {
+      navigation.travelToWithCorrection(other[i][0], other[i][1],false);
+      navigation.turn(-90);
       navigation.approachRingSet(searcher);
     }
   }
