@@ -12,6 +12,7 @@ package ca.mcgill.ecse211.project;
  */
 public class ColorCalibrator {
   private static volatile Color currentColor;
+  private static int [] colour_frequency = {0, 0, 0, 0, 0};
 
   /**
    * This enumeration contains the possible colors of the ring under a light sensor
@@ -68,5 +69,75 @@ public class ColorCalibrator {
       return currentColor;
     else
       return Color.Other;
+  }
+  
+  /** 
+   * This method keeps track of how many of each colour were detected
+   * by increasing the count in the array
+   * @param c The Color detected by the light sensor
+   */
+  public static void setFrequency(Color c) {
+    switch (c) {
+      case Other:
+        colour_frequency[0] ++;
+        break;
+      case Blue:
+        colour_frequency[1] ++;
+        break;
+      case Green:
+        colour_frequency[2] ++;
+        break;
+      case Yellow:
+        colour_frequency[3] ++;
+        break;
+      case Orange:
+        colour_frequency[4] ++;
+      default:
+        break;
+    }
+  }
+  
+  /**
+   * This method returns the most frequent colour detected from multiple samples
+   * 
+   * @return most frequent colour detected
+   */
+  public static Color getMostFrequenct() {
+    Color c = Color.Other;
+    int frequency = colour_frequency[0];
+    for (int i = 0; i < colour_frequency.length; i++) {
+      if (colour_frequency[i] > frequency) {
+        frequency = colour_frequency[i];
+        switch (i) {
+          case 0:
+            c = Color.Other;
+            break;
+          case 1: 
+            c = Color.Blue;
+            break;
+          case 2:
+            c = Color.Green;
+            break;
+          case 3:
+            c = Color.Yellow;
+            break;
+          case 4:
+            c = Color.Orange;
+            break;
+        }
+      }
+    }
+    resetFrequency();
+    return c;
+  }
+  
+  /**
+   * This method resets the colour_frequency array to 0
+   * 
+   */
+  public static void resetFrequency() {
+    for (int i = 0; i < colour_frequency.length; i ++) {
+      colour_frequency[i] = 0;
+    }
   }
 }

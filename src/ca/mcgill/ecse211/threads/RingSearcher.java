@@ -2,6 +2,9 @@ package ca.mcgill.ecse211.threads;
 
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
+import ca.mcgill.ecse211.project.ColorCalibrator;
+import ca.mcgill.ecse211.project.Game;
+import lejos.hardware.Sound;
 import lejos.hardware.motor.BaseRegulatedMotor;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.motor.EV3MediumRegulatedMotor;
@@ -55,8 +58,32 @@ public class RingSearcher{
   public void  search() {
     sensorMotor.rotate(-180);
     sensorMotor.rotate(180);
-    
     //TODO: add method for decide the color and beeps
+    //determine most frequent colour detected and beep accordingly
+    Game.INSTANCE.rgbPoller.setStart(false);
+    switch (ColorCalibrator.getMostFrequenct()) {
+      case Orange:
+        Sound.beep();
+        Sound.beep();
+        Sound.beep();
+        Sound.beep();
+        break;
+      case Yellow:
+        Sound.beep();
+        Sound.beep();
+        Sound.beep();
+        break;
+      case Green:
+        Sound.beep();
+        Sound.beep();
+        break;
+      case Blue:
+        Sound.beep();
+        break;
+      default:
+        break;
+    }
+    Game.INSTANCE.rgbPoller.setStart(true);
   }
   
   /**

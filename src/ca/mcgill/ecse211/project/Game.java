@@ -193,7 +193,7 @@ public enum Game {
   /**
    * This variable stores a ThreadController instance that controls our RGB sensor
    */
-  private ThreadControl rgbPoller;
+  public ThreadControl rgbPoller;
 
   /**
    * This variable stores a ThreadController instance that controls our light sensor
