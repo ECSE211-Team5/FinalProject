@@ -261,6 +261,8 @@ public class Navigation {
         notIn.add(point);
       }
     }
+    
+    //find the direction and length of the tunnel
     if (points.get(0)[0] == points.get(1)[0]) {
       distance = Math.abs(notIn.get(0)[0] - points.get(0)[0]) + 1;
       int multi = notIn.get(0)[0] - points.get(0)[0] < 0 ? 1 : -1;
@@ -314,7 +316,7 @@ public class Navigation {
   }
 
   /**
-   * 
+   * This method navigate the robot to the entrance of the tunnel
    * @param n :0: x, 1: y
    */
   private void travelToTunnel(ArrayList<int[]> points, int n, int multiplier) {
@@ -326,8 +328,6 @@ public class Navigation {
         break;
       }
     }
-//        GameUtil.distanceFromRobot(points.get(0)[0], points.get(0)[1]) > GameUtil
-//        .distanceFromRobot(points.get(1)[0], points.get(1)[1]) ? points.get(1) : points.get(0);
 
     int[] beforePoint = safePoint;
     for (int i = 0; i < points.size(); i++) {
@@ -351,24 +351,32 @@ public class Navigation {
    * this method approaches the ring set by paying attention to the reading of us sensor, stops at
    * the place when the robot can reach the ring
    */
-  public void approachRingSet(RingSearcher searcher) {
+  public void searchRingSet(RingSearcher searcher) {
+    //Go backward to detect the line and correct the rotation
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.backward();
     rightMotor.backward();
     moveUntilLineDetection();
+    //Forward for 3 cm (approach the ring set)
     forward(FORWARD_SPEED, 3/Game.TILE);
+    //rotate a little to the left to make sure that the sensor can detect the ring
     leftMotor.rotate(-30, false);
+    //detect the ring color and beep based on the color
     searcher.search();
+    //rotate back
     leftMotor.rotate(30, false);
+    //prepare for retrieving the ring 
     searcher.prepareRetrieve();
+    //go to the position where ring can be retrieved
     forward(FORWARD_SPEED, 5/Game.TILE);
+    //rotate a little to the left to make sure not influence the other ring
     leftMotor.rotate(-30, false);
     searcher.retrieveRing();
     leftMotor.rotate(30, false);
+    //go back to original position
     forward(FORWARD_SPEED, -8/Game.TILE);
-    searcher.resetRing();
-
+    searcher.resetRodMotor();
   }
 
   /**

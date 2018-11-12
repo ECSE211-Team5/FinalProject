@@ -123,15 +123,15 @@ public enum WiFi {
             GameParameters.SC = sc0;
             break;
           case 1:
-            int[] sc1 = {7,1,0};
+            int[] sc1 = {7,1,270};
             GameParameters.SC = sc1;
             break;
           case 2:
-            int[] sc2 = {1,7,180};
+            int[] sc2 = {7,7,180};
             GameParameters.SC = sc2;
             break;
           case 3:
-            int[] sc3 = {7,7,180};
+            int[] sc3 = {1,7,90};
             GameParameters.SC = sc3;
             break;
         }
@@ -171,15 +171,15 @@ public enum WiFi {
             GameParameters.SC = sc0;
             break;
           case 1:
-            int[] sc1 = {14,1,0};
+            int[] sc1 = {14,1,270};
             GameParameters.SC = sc1;
             break;
           case 2:
-            int[] sc2 = {1,8,180};
+            int[] sc2 = {14,8,180};
             GameParameters.SC = sc2;
             break;
           case 3:
-            int[] sc3 = {14,8,180};
+            int[] sc3 = {1,8,90};
             GameParameters.SC = sc3;
             break;
         }

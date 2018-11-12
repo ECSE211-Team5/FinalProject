@@ -17,7 +17,7 @@ import lejos.hardware.motor.EV3MediumRegulatedMotor;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class RingSearcher extends ThreadControl {
+public class RingSearcher{
   private static final int ACCELERATION = 3000;
   private EV3LargeRegulatedMotor sensorMotor;
   private EV3LargeRegulatedMotor rodMotor;
@@ -55,11 +55,17 @@ public class RingSearcher extends ThreadControl {
   public void  search() {
     sensorMotor.rotate(-180);
     sensorMotor.rotate(180);
+    
+    //TODO: add method for decide the color and beeps
   }
-
+  
+  /**
+   * This method rotate the rod to a suitable position for retrieve the ring
+   */
   public void prepareRetrieve() {
     rodMotor.rotate(170);
   }
+  
   /**
    * this method retrieve the searched ring
    */
@@ -68,13 +74,24 @@ public class RingSearcher extends ThreadControl {
     rodMotor.rotate(-80);
   }
   
-  public void resetRing() {
+  /**
+   * Rotate the rod back to the original position
+   */
+  public void resetRodMotor() {
     rodMotor.rotate(-170);
   }
-
-  protected void runMethod() {
-    search();
-    retrieveRing();
-
+  
+  /**
+   * Protect the ring from dropping
+   */
+  public void protectRing() {
+    rodMotor.rotate(270);
+  }
+  
+  /**
+   * unload all rings
+   */
+  public void unloadRing() {
+    rodMotor.backward();
   }
 }

@@ -40,7 +40,7 @@ public enum Game {
   /**
    * This enumeration stores the possible states that our robot can be in during a competition
    */
-  public enum Status { Idle, Localized, AtTunnel, AtTree, RingSearch }
+  public enum Status { Idle, Localized, AtTunnel, AtTree }
 
 
   /**
@@ -104,7 +104,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean navigateToTunnel(Navigation navigation)
+  public boolean navigateToTunnel(Navigation navigation, RingSearcher searcher)
   {
     boolean wasEventProcessed = false;
     
@@ -119,7 +119,7 @@ public enum Game {
         break;
       case AtTree:
         // line 17 "model.ump"
-        navigateBackTunnel();
+        navigateBackTunnel(navigation, searcher);
         setStatus(Status.AtTunnel);
         wasEventProcessed = true;
         break;
@@ -136,7 +136,7 @@ public enum Game {
    * @return A boolean that denotes whether our state transition occurred
    * @throws InterruptedException
    */
-  public boolean navigateToStart()
+  public boolean navigateToStart(Navigation navigation, RingSearcher searcher)
   {
     boolean wasEventProcessed = false;
     
@@ -145,7 +145,7 @@ public enum Game {
     {
       case AtTunnel:
         // line 12 "model.ump"
-        navigateStart();
+        navigateStart(navigation, searcher);
         setStatus(Status.Idle);
         wasEventProcessed = true;
         break;
@@ -161,7 +161,7 @@ public enum Game {
    * 
    * @return A boolean that denotes whether our state transition occurred
    */
-  public boolean navigateToTree()
+  public boolean navigateToAndSearcherTree(Navigation nav, RingSearcher searcher)
   {
     boolean wasEventProcessed = false;
     
@@ -169,64 +169,8 @@ public enum Game {
     switch (aStatus)
     {
       case AtTunnel:
-        // line 11 "model.ump"
-        navigateTree();
-        setStatus(Status.AtTree);
-        wasEventProcessed = true;
-        break;
-      case AtTree:
         // line 16 "model.ump"
-        searchRing();
-        setStatus(Status.RingSearch);
-        wasEventProcessed = true;
-        break;
-      default:
-        // Other states do respond to this event
-    }
-
-    return wasEventProcessed;
-  }
-
-  /**
-   * This method is called when a ring is found and obtains it
-   * 
-   * @return A boolean that denotes whether our state transition occurred
-   */
-  public boolean ringFound()
-  {
-    boolean wasEventProcessed = false;
-    
-    Status aStatus = status;
-    switch (aStatus)
-    {
-      case RingSearch:
-        // line 20 "model.ump"
-        searchTree();
-        setStatus(Status.AtTree);
-        wasEventProcessed = true;
-        break;
-      default:
-        // Other states do respond to this event
-    }
-
-    return wasEventProcessed;
-  }
-
-  /**
-   * This method is called when a ring is not found
-   * 
-   * @return A boolean that denotes whether our state transition occurred
-   */
-  public boolean ringNotFound()
-  {
-    boolean wasEventProcessed = false;
-    
-    Status aStatus = status;
-    switch (aStatus)
-    {
-      case RingSearch:
-        // line 21 "model.ump"
-        searchTree();
+        searchRing(nav, searcher);
         setStatus(Status.AtTree);
         wasEventProcessed = true;
         break;
@@ -255,11 +199,6 @@ public enum Game {
    * This variable stores a ThreadController instance that controls our light sensor
    */
   private ThreadControl lightPoller;
-
-  /**
-   * This variable stores a ThreadController instance that controls our motors
-   */
-  private ThreadControl motorControlThread;
 
   /**
    * This variable stores a ThreadController instance that controls our ultrasonic sensor
@@ -314,8 +253,7 @@ public enum Game {
   /**
    * Read data from the WiFi class (using another thread)
    */
-  public synchronized void readData() {
-    //WiFi wifi = new WiFi();
+  public void readData() {
     WiFi.readData();
   }
 
@@ -324,8 +262,11 @@ public enum Game {
    * localize and read data at the same time
    * @throws OdometerExceptions 
    */
-  private synchronized void localizeAndReadData(UltrasonicLocalizer us, LightLocalizer lgLoc) throws OdometerExceptions {
+  private void localizeAndReadData(UltrasonicLocalizer us, LightLocalizer lgLoc) throws OdometerExceptions {
+    this.rgbPoller.setStart(false);
+    readData();
     us.localize(Button.ID_LEFT);
+    this.usPoller.setStart(false);
     lgLoc.localize(GameParameters.SC);
     int[] starting = GameParameters.SC;
     Odometer.getOdometer().setXYT(starting[0], starting[1], starting[2]);
@@ -346,38 +287,45 @@ public enum Game {
   /**
    * This method navigates our robot to and go though the tunnel (from search area to safe area)
    */
-  private void navigateBackTunnel() {
-    
+  private void navigateBackTunnel(Navigation nav, RingSearcher searcher) {
+    try {
+      rgbPoller.setStart(false);
+      searcher.protectRing();
+      nav.goThroughTunnel();
+    } catch (Exception e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
   /**
    * This method makes our robot navigate back to the starting position (after in the safe area)
+   * and then try to drop all rings
    */
-  private static void navigateStart() {
-   
-  }
-  
-  /**
-   * This method navigates the robot to the tree position (Facing one side of the tree)
-   */
-  private void navigateTree() {
-    
-  }
-  
-  /**
-   * This method search and retrieve for the ring
-   */
-  private void searchRing() {
-    
-  }
-  
-  /**
-   * This method go to one other side of the tree(){
-   */
-  private void searchTree() {
-    
+  private static void navigateStart(Navigation nav, RingSearcher searcher) {
+    int[] starting = GameParameters.SC;
+    nav.travelToWithCorrection(starting[0], starting[1], false);
+    searcher.unloadRing();
   }
 
+  /**
+   * This method search and retrieve for the ring set from each side, including navigation from
+   * the exit of tunnel to the ring set
+   */
+  private void searchRing(Navigation navigation, RingSearcher searcher) {
+    this.rgbPoller.setStart(true);
+    int[] tree = GameParameters.TREE_US;
+    int[][] treeSides = {{tree[0], tree[1] + 1}, {tree[0]-1, tree[1]}, {tree[0], tree[1]-1}, {tree[0]+1, tree[1]}};
+    for(int[] side : treeSides) {
+      if(GameUtil.isSafe(side)) {
+        navigation.travelToWithCorrection(side[0], side[1], false);
+        // turn facing the ring set
+        navigation.turnTo(Math.toDegrees(navigation.calculateAngleTo(tree[0], tree[1])));
+        navigation.searchRingSet(searcher);
+      }
+    }
+  }
+  
   /**
    * This method performs all the object instantiations and preparations necessary to get our robot
    * to compete
@@ -447,8 +395,10 @@ public enum Game {
     Thread rgbThread = new Thread(rgbPoller);
     
     rgbThread.start();
-    // Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);
-    // gPoller.start();
+    
+    //instantiate path finder
+    GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+    GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
   }
 
   /**
@@ -457,7 +407,6 @@ public enum Game {
    * @throws OdometerExceptions
    */
   public void runGame() throws OdometerExceptions {
-    final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
     GameParameters.Demo = DemoType.Beta;
     GameParameters.PlayerTeamNumber = 1;
     // Start localizing
@@ -465,17 +414,18 @@ public enum Game {
     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
     final LightLocalizer lgLoc = new LightLocalizer(navigation, leftMotor, rightMotor);
     final RingSearcher searcher = new RingSearcher(sensorMotor, rodMotor);
+    
+    final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
     // spawn a new Thread to avoid localization from blocking
     (new Thread() {
       public void run() {
         // target color
 
         INSTANCE.ready(usLoc, lgLoc);
-        INSTANCE.navigateTunnel(navigation);
-       // searcher.search();
-        //searcher.retrieveRing();
-        // ug collision detection always on
-        // navigate to start
+        INSTANCE.navigateToTunnel(navigation, searcher);
+        INSTANCE.navigateToAndSearcherTree(navigation, searcher);
+        INSTANCE.navigateToTunnel(navigation, searcher);
+        INSTANCE.navigateToStart(navigation, searcher);
       }
     }).start();
   }

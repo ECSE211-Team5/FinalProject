@@ -49,8 +49,8 @@ public class Main {
       } else {
         Game.INSTANCE.runGame(); // for brevity and less object instantiations
       }
-      //Button.waitForAnyPress();
-      //System.exit(0);
+      Button.waitForAnyPress();
+      System.exit(0);
     } catch (Exception e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
