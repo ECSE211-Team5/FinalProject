@@ -223,15 +223,15 @@ public class Navigation {
     if (dTheta > 180) {
       leftMotor.setSpeed(ROTATE_SPEED);
       rightMotor.setSpeed(ROTATE_SPEED);
-      leftMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta) - 10, true);
-      rightMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta) + 10, false);
+      leftMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta), true);
+      rightMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta), false);
     }
     // TURN LEFT
     else {
       leftMotor.setSpeed(ROTATE_SPEED);
       rightMotor.setSpeed(ROTATE_SPEED);
-      leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta) + 5, true);
-      rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta) - 5, false);
+      leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), true);
+      rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), false);
     }
   }
 
@@ -357,14 +357,17 @@ public class Navigation {
     leftMotor.backward();
     rightMotor.backward();
     moveUntilLineDetection();
+    forward(FORWARD_SPEED, 3/Game.TILE);
+    leftMotor.rotate(-30, false);
     searcher.search();
+    leftMotor.rotate(30, false);
     searcher.prepareRetrieve();
-    forward(FORWARD_SPEED, 8/Game.TILE);
+    forward(FORWARD_SPEED, 5/Game.TILE);
     leftMotor.rotate(-30, false);
     searcher.retrieveRing();
     leftMotor.rotate(30, false);
-
     forward(FORWARD_SPEED, -8/Game.TILE);
+    searcher.resetRing();
 
   }
 

@@ -20,12 +20,12 @@ public class ColorCalibrator {
     Orange, Green, Blue, Yellow, Other
   }
 
-  private final static int lowerYellowRBound = 8, upperYellowRBound = 12, lowerYellowGBound = 6,
-      upperYellowGBound = 8, lowerYellowBBound = 0, upperYellowBBound = 1, lowerBlueRBound = 1,
-      upperBlueRBound = 2, lowerBlueGBound = 4, upperBlueGBound = 12, lowerBlueBBound = 5,
-      upperBlueBBound = 10, lowerGreenRBound = 2, upperGreenRBound = 4, lowerGreenGBound = 6,
-      upperGreenGBound = 9, lowerGreenBBound = 0, upperGreenBBound = 1, lowerOrangeRBound = 6,
-      upperOrangeRBound = 10, lowerOrangeGBound = 1, upperOrangeGBound = 3, OrangeBBound = 0;
+  private final static int lowerYellowRBound = 9, upperYellowRBound = 14, lowerYellowGBound = 7,
+      upperYellowGBound = 10, lowerYellowBBound = 0, upperYellowBBound = 2, lowerBlueRBound = 0,
+      upperBlueRBound = 1, lowerBlueGBound = 6, upperBlueGBound = 8, lowerBlueBBound = 3,
+      upperBlueBBound = 8, lowerGreenRBound = 1, upperGreenRBound = 8, lowerGreenGBound = 5,
+      upperGreenGBound = 9, lowerGreenBBound = 0, upperGreenBBound = 2, lowerOrangeRBound = 13,
+      upperOrangeRBound = 20, lowerOrangeGBound = 2, upperOrangeGBound = 4, OrangeBBound = 0;
 
   /**
    * This method returns the color of the ring currently under the light sensor

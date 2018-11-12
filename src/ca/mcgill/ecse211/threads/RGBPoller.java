@@ -1,6 +1,8 @@
 package ca.mcgill.ecse211.threads;
 
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
+import ca.mcgill.ecse211.project.ColorCalibrator;
+import lejos.hardware.Sound;
 import lejos.robotics.SampleProvider;
 
 /**
@@ -37,5 +39,24 @@ public class RGBPoller extends LightPoller{
     int g = (int) (lgData[0][1] * 100); // extract from buffer, cast to int
     int b = (int) (lgData[0][2] * 100); // extract from buffer, cast to int
     cont.setRGB(r, g, b); // now take action depending on value
+    
+    switch (ColorCalibrator.getColor(r, g, b)) {
+      case Orange:
+        System.out.println("orange");
+        break;
+      case Yellow:
+        System.out.println("yellow");
+        break;
+      case Green:
+        System.out.println("green");
+        break;
+      case Blue:
+        System.out.println("blue");
+        break;
+      default:
+        break;
+    }
+    
+    
   }
 }

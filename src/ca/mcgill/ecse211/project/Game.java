@@ -6,6 +6,7 @@ import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.GameParameters.DemoType;
 import ca.mcgill.ecse211.threads.LightPoller;
+import ca.mcgill.ecse211.threads.RGBPoller;
 import ca.mcgill.ecse211.threads.RingSearcher;
 import ca.mcgill.ecse211.threads.SensorData;
 import ca.mcgill.ecse211.threads.ThreadControl;
@@ -308,7 +309,7 @@ public enum Game {
   /**
    * This variable stores the distance between the light sensor and center of the robot in cm
    */
-  public static final double SEN_DIS = 4.4;
+  public static final double SEN_DIS = 4.2;
   
   /**
    * Read data from the WiFi class (using another thread)
@@ -392,7 +393,8 @@ public enum Game {
     // Light sensor sensor stuff
     lgPorts[0] = LocalEV3.get().getPort("S2");
     lgPorts[1] = LocalEV3.get().getPort("S3");
-    EV3ColorSensor[] lgSensors = new EV3ColorSensor[2];
+    lgPorts[2] = LocalEV3.get().getPort("S4");
+    EV3ColorSensor[] lgSensors = new EV3ColorSensor[3];
     for (int i = 0; i < lgSensors.length; i++) {
       lgSensors[i] = new EV3ColorSensor(lgPorts[i]);
     }
@@ -411,6 +413,10 @@ public enum Game {
     SampleProvider backLight[] = new SampleProvider[2];
     backLight[0] = lgSensors[0].getRedMode();
     backLight[1] = lgSensors[1].getRedMode();
+    
+    //colour detection sensor
+    SampleProvider frontLight[] = new SampleProvider[1];
+    frontLight[0] = lgSensors[2].getRGBMode();
 
     TextLCD lcd = LocalEV3.get().getTextLCD();
     Display odometryDisplay = new Display(lcd);
@@ -437,9 +443,10 @@ public enum Game {
     Thread lightThread = new Thread(lightPoller);
     lightThread.start();
 
-    // Thread fLgPoller1 = new RGBPoller(frontLight, new float[frontLight.sampleSize()],
-    // sensorData);
-    // fLgPoller1.start();
+    RGBPoller rgbPoller = new RGBPoller(frontLight, new float[1][frontLight[0].sampleSize()], sensorData);
+    Thread rgbThread = new Thread(rgbPoller);
+    
+    rgbThread.start();
     // Thread gPoller = new GyroPoller(gProvider, new float[gProvider.sampleSize()], sensorData);
     // gPoller.start();
   }

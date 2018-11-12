@@ -18,7 +18,7 @@ import lejos.hardware.motor.EV3MediumRegulatedMotor;
  * @author Kamy Moussavi Kafi
  */
 public class RingSearcher extends ThreadControl {
-  private static final int ACCELERATION = 300;
+  private static final int ACCELERATION = 3000;
   private EV3LargeRegulatedMotor sensorMotor;
   private EV3LargeRegulatedMotor rodMotor;
   private boolean started = false;
@@ -39,7 +39,6 @@ public class RingSearcher extends ThreadControl {
     this.sensorMotor = sensorMotor;
     this.rodMotor = rodMotor;
     rodMotor.setSpeed(250);
-    rodMotor.setAcceleration(3000);
     this.sensorMotor.setSpeed(50);
     data = SensorData.getSensorData();
     for (BaseRegulatedMotor motor : new BaseRegulatedMotor[] {this.sensorMotor, this.rodMotor}) {
@@ -54,20 +53,23 @@ public class RingSearcher extends ThreadControl {
    * 
    */
   public void  search() {
-    sensorMotor.rotate(-170);
-    sensorMotor.rotate(170);
+    sensorMotor.rotate(-180);
+    sensorMotor.rotate(180);
   }
 
   public void prepareRetrieve() {
-    rodMotor.rotate(180);
+    rodMotor.rotate(170);
   }
   /**
    * this method retrieve the searched ring
    */
   public void retrieveRing() {
-    rodMotor.rotate(60);
-    rodMotor.rotate(-60);
-    rodMotor.rotate(180);
+    rodMotor.rotate(80);
+    rodMotor.rotate(-80);
+  }
+  
+  public void resetRing() {
+    rodMotor.rotate(-170);
   }
 
   protected void runMethod() {

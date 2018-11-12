@@ -120,6 +120,7 @@ public enum ComponentTest {
    * @throws OdometerExceptions
    */
   public static void ringMotorTest() throws OdometerExceptions {
+    Game.INSTANCE.usPoller.setStart(false);
     final RingSearcher searcher = new RingSearcher(Game.sensorMotor, Game.rodMotor);
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
     GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
