@@ -226,8 +226,12 @@ public enum WiFi {
         }**/
       }
       
-      //set SC here
-      //GameParameters.SC[0];
+      //set data read to true
+      synchronized(GameParameters.waitDataObject) {
+        GameParameters.hasDataRead = true;
+        GameParameters.waitDataObject.notify();
+      }
+      
     } catch (Exception e) {
       e.printStackTrace();
     }

@@ -266,10 +266,22 @@ public enum Game {
    */
   private void localizeAndReadData(UltrasonicLocalizer us, LightLocalizer lgLoc) throws OdometerExceptions {
     this.rgbPoller.setStart(false);
-    readData();
+    (new Thread() {public void run() {
+      readData();
+    }}).start();
     us.localize(Button.ID_LEFT);
     this.usPoller.setStart(false);
     lgLoc.localize(GameParameters.SC);
+    synchronized(GameParameters.waitDataObject) {
+      while(!GameParameters.hasDataRead) {
+        try {
+          GameParameters.waitDataObject.wait();
+        } catch (InterruptedException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
+    }
     int[] starting = GameParameters.SC;
     Odometer.getOdometer().setXYT(starting[0], starting[1], starting[2]);
   }
@@ -416,10 +428,6 @@ public enum Game {
     
     final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
     // spawn a new Thread to avoid localization from blocking
-    (new Thread() {
-      public void run() {
-        // target color
-
         INSTANCE.ready(usLoc, lgLoc);
         //instantiate path finder
         GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
@@ -428,7 +436,5 @@ public enum Game {
         INSTANCE.navigateToAndSearcherTree(navigation, searcher);
         INSTANCE.navigateToTunnel(navigation, searcher);
         INSTANCE.navigateToStart(navigation, searcher);
-      }
-    }).start();
   }
 }
