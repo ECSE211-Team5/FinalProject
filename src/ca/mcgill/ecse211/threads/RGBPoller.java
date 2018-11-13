@@ -40,7 +40,6 @@ public class RGBPoller extends LightPoller{
     int g = (int) (lgData[0][1] * 100); // extract from buffer, cast to int
     int b = (int) (lgData[0][2] * 100); // extract from buffer, cast to int
     cont.setRGB(r, g, b); // now take action depending on value
-    
     switch (ColorCalibrator.getColor(r, g, b)) {
       case Orange:
         ColorCalibrator.setFrequency(ColorCalibrator.Color.Orange);

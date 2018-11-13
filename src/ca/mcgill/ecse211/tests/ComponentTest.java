@@ -9,6 +9,7 @@ import ca.mcgill.ecse211.project.GameParameters;
 import ca.mcgill.ecse211.project.GameUtil;
 import ca.mcgill.ecse211.project.Navigation;
 import ca.mcgill.ecse211.threads.RingSearcher;
+import ca.mcgill.ecse211.threads.SensorData;
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
 
@@ -27,7 +28,7 @@ public enum ComponentTest {
   INSTANCE;
 
   public enum Type {
-    Navigation, Localization, UltrasonicSensor, LightSensor, RingDetection
+    Navigation, Localization, UltrasonicSensor, LightSensor, RingDetection, ColorDetection
   }
 
   /**
@@ -53,6 +54,9 @@ public enum ComponentTest {
           break;
         case RingDetection:
           ComponentTest.ringMotorTest();
+          break;
+        case ColorDetection:
+         // ComponentTest.colorCalibrationTest();
           break;
         default:
           System.out.println("Invalid test type selected");
@@ -127,5 +131,19 @@ public enum ComponentTest {
       navigation.turn(-90);
       navigation.searchRingSet(searcher);
     }
+  }
+  
+  public static void colorCalibrationTest() {
+    
+   try {
+    SensorData data =  SensorData.getSensorData();
+    
+    
+  } catch (OdometerExceptions e) {
+    // TODO Auto-generated catch block
+    e.printStackTrace();
+  }
+    
+    
   }
 }

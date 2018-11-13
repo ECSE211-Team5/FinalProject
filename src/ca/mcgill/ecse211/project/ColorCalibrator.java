@@ -25,8 +25,8 @@ public class ColorCalibrator {
       upperYellowGBound = 10, lowerYellowBBound = 0, upperYellowBBound = 2, lowerBlueRBound = 0,
       upperBlueRBound = 1, lowerBlueGBound = 6, upperBlueGBound = 8, lowerBlueBBound = 3,
       upperBlueBBound = 8, lowerGreenRBound = 1, upperGreenRBound = 8, lowerGreenGBound = 5,
-      upperGreenGBound = 9, lowerGreenBBound = 0, upperGreenBBound = 2, lowerOrangeRBound = 13,
-      upperOrangeRBound = 20, lowerOrangeGBound = 2, upperOrangeGBound = 4, OrangeBBound = 0;
+      upperGreenGBound = 9, lowerGreenBBound = 0, upperGreenBBound = 2, lowerOrangeRBound = 8,
+      upperOrangeRBound = 20, lowerOrangeGBound = 0, upperOrangeGBound = 4, lowerOrangeBBound = 0, upperOrangeBBound = 1;
 
   /**
    * This method returns the color of the ring currently under the light sensor
@@ -50,7 +50,7 @@ public class ColorCalibrator {
         && (b >= lowerGreenBBound && b <= upperGreenBBound)) {
       currentColor = Color.Green;
     } else if ((r >= lowerOrangeRBound && r <= upperOrangeRBound)
-        && (g >= lowerOrangeGBound && g <= upperOrangeGBound) && (b == OrangeBBound)) {
+        && (g >= lowerOrangeGBound && g <= upperOrangeGBound) && ( b >= lowerOrangeBBound && b <= upperOrangeBBound )) {
       currentColor = Color.Orange;
     } else {
       currentColor = Color.Other;
