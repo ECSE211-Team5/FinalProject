@@ -20,7 +20,7 @@ public abstract class ThreadControl implements Runnable{
     try {
       while (true) {
         if (!isStarted) {
-          Sound.beepSequence();
+  //        Sound.beepSequence();
           wait();
         } else {
           runMethod();

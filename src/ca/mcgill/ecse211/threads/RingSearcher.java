@@ -60,7 +60,9 @@ public class RingSearcher{
     sensorMotor.rotate(180);
     //TODO: add method for decide the color and beeps
     //determine most frequent colour detected and beep accordingly
+ //   System.out.println("here");
     Game.INSTANCE.rgbPoller.setStart(false);
+ //   System.out.println("here stopped");
     switch (ColorCalibrator.getMostFrequenct()) {
       case Orange:
         Sound.beep();
@@ -79,6 +81,8 @@ public class RingSearcher{
         break;
       case Blue:
         Sound.beep();
+        break;
+      case Other:
         break;
       default:
         break;

@@ -18,12 +18,12 @@ public class Main {
   /**
    * This variable decides whether or not to enable our tests
    */
-  public static boolean test = true;
+  public static boolean test = false;
 
   /**
    * This variable stores the type of test that we want to perform
    */
-  public static ComponentTest.Type testType = ComponentTest.Type.Localization;
+  public static ComponentTest.Type testType = ComponentTest.Type.RingDetection;
 
   /**
    * This method is our main entry point - instantiate objects and halt until a button is pressed

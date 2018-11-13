@@ -101,12 +101,17 @@ public class Navigation {
     int[] destination = {x, y};
     ArrayList<Character> instruction = new ArrayList<Character>();
     if (GameParameters.getType(px, py) == GameParameters.AreaType.InStarting) {
+      System.out.println("THTRHTH");
       GameUtil.startingFinder.tryFindPath(cur, destination, instruction);
+      
     } else {
+      System.out.println("ELSE");
+
       GameUtil.searchingFinder.tryFindPath(cur, destination, instruction);
     }
     char lastStep = ' ';
     int theta = 0;
+    System.out.println(instruction.size());
     while (instruction.size() > 0) {
       char step = instruction.remove(instruction.size() - 1);
       if (step != lastStep) {

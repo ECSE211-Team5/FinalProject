@@ -89,6 +89,7 @@ public enum Game {
           // TODO Auto-generated catch block
           e.printStackTrace();
         }
+        System.out.println("YqsdpkqsoihqiufdhqiudhqY");
         setStatus(Status.Localized);
         wasEventProcessed = true;
         break;
@@ -116,6 +117,7 @@ public enum Game {
         navigateTunnel(navigation);
         setStatus(Status.AtTunnel);
         wasEventProcessed = true;
+        System.out.println("YEYEYEY");
         break;
       case AtTree:
         // line 17 "model.ump"
@@ -391,14 +393,12 @@ public enum Game {
     Thread lightThread = new Thread(lightPoller);
     lightThread.start();
 
-    RGBPoller rgbPoller = new RGBPoller(frontLight, new float[1][frontLight[0].sampleSize()], sensorData);
+    rgbPoller = new RGBPoller(frontLight, new float[1][frontLight[0].sampleSize()], sensorData);
     Thread rgbThread = new Thread(rgbPoller);
     
     rgbThread.start();
     
-    //instantiate path finder
-    GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
-    GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
+   
   }
 
   /**
@@ -408,7 +408,6 @@ public enum Game {
    */
   public void runGame() throws OdometerExceptions {
     GameParameters.Demo = DemoType.Beta;
-    GameParameters.PlayerTeamNumber = 1;
     // Start localizing
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
@@ -422,6 +421,9 @@ public enum Game {
         // target color
 
         INSTANCE.ready(usLoc, lgLoc);
+        //instantiate path finder
+        GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+        GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
         INSTANCE.navigateToTunnel(navigation, searcher);
         INSTANCE.navigateToAndSearcherTree(navigation, searcher);
         INSTANCE.navigateToTunnel(navigation, searcher);

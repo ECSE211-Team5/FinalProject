@@ -78,9 +78,6 @@ public class ColorCalibrator {
    */
   public static void setFrequency(Color c) {
     switch (c) {
-      case Other:
-        colour_frequency[0] ++;
-        break;
       case Blue:
         colour_frequency[1] ++;
         break;
@@ -106,26 +103,13 @@ public class ColorCalibrator {
     Color c = Color.Other;
     int frequency = colour_frequency[0];
     for (int i = 0; i < colour_frequency.length; i++) {
-      if (colour_frequency[i] > frequency) {
+      if (colour_frequency[i] >= frequency) {
         frequency = colour_frequency[i];
-        switch (i) {
-          case 0:
-            c = Color.Other;
-            break;
-          case 1: 
-            c = Color.Blue;
-            break;
-          case 2:
-            c = Color.Green;
-            break;
-          case 3:
-            c = Color.Yellow;
-            break;
-          case 4:
-            c = Color.Orange;
-            break;
-        }
+        c = getGetColor(i);
       }
+    }
+    if(frequency == 0) {
+      c = Color.Other;
     }
     resetFrequency();
     return c;
@@ -139,5 +123,26 @@ public class ColorCalibrator {
     for (int i = 0; i < colour_frequency.length; i ++) {
       colour_frequency[i] = 0;
     }
+  }
+  public static Color getGetColor(int i) {
+    Color c = Color.Other;
+    switch (i) {
+      case 0:
+        c = Color.Other;
+        break;
+      case 1: 
+        c = Color.Blue;
+        break;
+      case 2:
+        c = Color.Green;
+        break;
+      case 3:
+        c = Color.Yellow;
+        break;
+      case 4:
+        c = Color.Orange;
+        break;
+    }
+    return c;
   }
 }

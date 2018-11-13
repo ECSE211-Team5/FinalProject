@@ -17,7 +17,7 @@ public enum WiFi {
   INSTANCE;
   
   // ** Set these as appropriate for your team and current situation **
-  private static final String SERVER_IP = "192.168.2.1";
+  private static final String SERVER_IP = "192.168.2.40";
 
   /**
    * This method sets up a connection to a locally hosted server and reads Game Parameter values
@@ -40,19 +40,21 @@ public enum WiFi {
        * an exception letting you know.
        */
       Map data = connection.getData();
-      String tunnelUs = "TNR_LL_";
-      String tunnelO = "TNG_LL_";
+      String tunnelUs = "TNR_";
+      String tunnelO = "TNG_";
       String ringUs = "TR_";
       String ringO = "TG_";
       String startingUs = "Red_";
       String startingO = "Green_";
       String cornerUs = "RedCorner";
       String cornerO = "GreenCorner";
-      
+     
       GameParameters.RedTeam = ((Long) data.get("RedTeam")).intValue();
       GameParameters.GreenTeam = ((Long) data.get("GreenTeam")).intValue();
+
       if(GameParameters.RedTeam == GameParameters.PlayerTeamNumber) {
       }else if(GameParameters.GreenTeam == GameParameters.PlayerTeamNumber) {
+        System.out.println("GREEEN");
         String s = tunnelO;
         tunnelO = tunnelUs;
         tunnelUs = s;
@@ -61,7 +63,7 @@ public enum WiFi {
         ringO = ringUs;
         ringUs = s;
         //change starting corner
-        s = startingUs;
+        s = startingO;
         startingO = startingUs;
         startingUs = s;
         //change corner
@@ -101,6 +103,11 @@ public enum WiFi {
       GameParameters.TN_LL[1] = ((Long) data.get(tunnelUs+"LL_y")).intValue();
       GameParameters.TN_UR[0] = ((Long) data.get(tunnelUs+"UR_x")).intValue();
       GameParameters.TN_UR[1] = ((Long) data.get(tunnelUs+"UR_y")).intValue();
+      System.out.println(" GameParameters.TN_LL[0] " +  GameParameters.TN_LL[0]);
+      System.out.println(" GameParameters.TN_LL[1] " +  GameParameters.TN_LL[1]);
+      System.out.println(" GameParameters.TN_UR[0] " +  GameParameters.TN_UR[0]);
+      System.out.println(" GameParameters.TN_UR[1] " +  GameParameters.TN_UR[1]);
+
 
       GameParameters.TNO_LL[0] = ((Long) data.get(tunnelO+"LL_x")).intValue();
       GameParameters.TNO_LL[1] = ((Long) data.get(tunnelO+"LL_y")).intValue();
@@ -135,7 +142,7 @@ public enum WiFi {
             GameParameters.SC = sc3;
             break;
         }
-
+/**
         if (GameParameters.OPPO_UR[0] - GameParameters.OPPO_LL[0] < 2
             || GameParameters.OPPO_UR[0] - GameParameters.OPPO_LL[0] > 8
             || GameParameters.OPPO_UR[1] - GameParameters.OPPO_LL[1] < 2
@@ -150,17 +157,12 @@ public enum WiFi {
           throw new Exception("Green zone coordinates out of bounds");
         }
 
-        if (GameParameters.TN_UR[0] - GameParameters.TN_LL[0] < 1
-            || GameParameters.TN_UR[0] - GameParameters.TN_LL[0] > 2
-            || GameParameters.TN_UR[1] - GameParameters.TN_LL[1] < 1
-            || GameParameters.TN_UR[1] - GameParameters.TN_LL[1] > 2) {
-          throw new Exception("Green tunnel coordinates out of bounds");
-        }
 
         if (GameParameters.TTEE_O[0] < 0 || GameParameters.TTEE_O[0] > 7 || GameParameters.TTEE_O[1] < 0
             || GameParameters.TTEE_O[1] > 7) {
           throw new Exception("Green tree coordinates out of bounds");
         }
+        **/
       } else {
         GameParameters.Grid_UR[0] = 15;
         GameParameters.Grid_UR[1] = 9;
@@ -183,7 +185,7 @@ public enum WiFi {
             GameParameters.SC = sc3;
             break;
         }
-        
+      /**  
         if (GameParameters.US_UR[0] - GameParameters.US_LL[0] < 2
             || GameParameters.US_UR[0] - GameParameters.US_LL[0] > 10
             || GameParameters.US_UR[1] - GameParameters.US_LL[1] < 2
@@ -212,12 +214,6 @@ public enum WiFi {
           throw new Exception("Red tunnel coordinates out of bounds");
         }
 
-        if (GameParameters.TN_UR[0] - GameParameters.TN_LL[0] < 1
-            || GameParameters.TN_UR[0] - GameParameters.TN_LL[0] > 2
-            || GameParameters.TN_UR[1] - GameParameters.TN_LL[1] < 1
-            || GameParameters.TN_UR[1] - GameParameters.TN_LL[1] > 2) {
-          throw new Exception("Green tunnel coordinates out of bounds");
-        }
 
         if (GameParameters.TREE_US[0] < 0 || GameParameters.TREE_US[0] > 14 || GameParameters.TREE_US[1] < 0
             || GameParameters.TREE_US[1] > 8) {
@@ -227,13 +223,13 @@ public enum WiFi {
         if (GameParameters.TTEE_O[0] < 0 || GameParameters.TTEE_O[0] > 14 || GameParameters.TTEE_O[1] < 0
             || GameParameters.TTEE_O[1] > 8) {
           throw new Exception("Green tree coordinates out of bounds");
-        }
+        }**/
       }
       
       //set SC here
       //GameParameters.SC[0];
     } catch (Exception e) {
-      System.err.println("Error: " + e.getMessage());
+      e.printStackTrace();
     }
   }
 }

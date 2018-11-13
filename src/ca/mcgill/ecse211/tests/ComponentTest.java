@@ -52,7 +52,7 @@ public enum ComponentTest {
           ComponentTest.lightSensorTest();
           break;
         case RingDetection:
-          //ComponentTest.ringMotorTest();
+          ComponentTest.ringMotorTest();
           break;
         default:
           System.out.println("Invalid test type selected");
