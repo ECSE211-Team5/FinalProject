@@ -135,14 +135,7 @@ public enum ComponentTest {
   
   public static void colorCalibrationTest() {
     
-   try {
-    SensorData data =  SensorData.getSensorData();
-    
-    
-  } catch (OdometerExceptions e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-  }
+ 
     
     
   }

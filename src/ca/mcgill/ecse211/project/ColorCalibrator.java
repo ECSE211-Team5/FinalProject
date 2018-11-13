@@ -25,8 +25,8 @@ public class ColorCalibrator {
       upperYellowGBound = 10, lowerYellowBBound = 0, upperYellowBBound = 2, lowerBlueRBound = 0,
       upperBlueRBound = 1, lowerBlueGBound = 6, upperBlueGBound = 8, lowerBlueBBound = 3,
       upperBlueBBound = 8, lowerGreenRBound = 1, upperGreenRBound = 8, lowerGreenGBound = 5,
-      upperGreenGBound = 9, lowerGreenBBound = 0, upperGreenBBound = 2, lowerOrangeRBound = 8,
-      upperOrangeRBound = 20, lowerOrangeGBound = 0, upperOrangeGBound = 4, lowerOrangeBBound = 0, upperOrangeBBound = 1;
+      upperGreenGBound = 9, lowerGreenBBound = 0, upperGreenBBound = 2, lowerOrangeRBound = 10,
+      upperOrangeRBound = 20, lowerOrangeGBound = 0, upperOrangeGBound = 3, lowerOrangeBBound = 0, upperOrangeBBound = 1;
 
   /**
    * This method returns the color of the ring currently under the light sensor
@@ -37,20 +37,14 @@ public class ColorCalibrator {
    * @return A Color enumeration value
    */
   public static Color getColor(int r, int g, int b) {
-    if ((r >= lowerYellowRBound && r <= upperYellowRBound)
-        && (g >= lowerYellowGBound && g <= upperYellowGBound)
-        && (b >= lowerYellowBBound && b <= upperYellowBBound)) {
+    if (r>= lowerYellowRBound && g >= lowerYellowGBound) {
       currentColor = Color.Yellow;
-    } else if ((r >= lowerBlueRBound && r <= upperBlueRBound)
-        && (g >= lowerBlueGBound && g <= upperBlueGBound)
-        && (b >= lowerBlueBBound && b <= upperBlueBBound)) {
+    } else if ( (b >= lowerBlueBBound )) {
       currentColor = Color.Blue;
     } else if ((r >= lowerGreenRBound && r <= upperGreenRBound)
-        && (g >= lowerGreenGBound && g <= upperGreenGBound)
         && (b >= lowerGreenBBound && b <= upperGreenBBound)) {
       currentColor = Color.Green;
-    } else if ((r >= lowerOrangeRBound && r <= upperOrangeRBound)
-        && (g >= lowerOrangeGBound && g <= upperOrangeGBound) && ( b >= lowerOrangeBBound && b <= upperOrangeBBound )) {
+    } else if (r>=lowerOrangeRBound && g <= upperOrangeGBound ) {
       currentColor = Color.Orange;
     } else {
       currentColor = Color.Other;
