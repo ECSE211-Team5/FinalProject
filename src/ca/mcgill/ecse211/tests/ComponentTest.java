@@ -28,7 +28,7 @@ public enum ComponentTest {
   INSTANCE;
 
   public enum Type {
-    Navigation, Localization, UltrasonicSensor, LightSensor, RingDetection, ColorDetection
+    Navigation, Localization, UltrasonicSensor, LightSensor, RingDetection
   }
 
   /**
@@ -54,9 +54,6 @@ public enum ComponentTest {
           break;
         case RingDetection:
           ComponentTest.ringMotorTest();
-          break;
-        case ColorDetection:
-         // ComponentTest.colorCalibrationTest();
           break;
         default:
           System.out.println("Invalid test type selected");
@@ -123,6 +120,8 @@ public enum ComponentTest {
     Game.INSTANCE.usPoller.setStart(false);
     final RingSearcher searcher = new RingSearcher(Game.sensorMotor, Game.rodMotor);
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
+    GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+    GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
     Odometer.getOdometer().setXYT(1, 1, 0);
     int[] tree = {2,2};
     int[][] other = {{2,1}, {3,2}, {2,3}, {1,2}};
@@ -133,10 +132,4 @@ public enum ComponentTest {
     }
   }
   
-  public static void colorCalibrationTest() {
-    
- 
-    
-    
-  }
 }

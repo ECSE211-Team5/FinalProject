@@ -89,7 +89,7 @@ public enum Game {
           // TODO Auto-generated catch block
           e.printStackTrace();
         }
-        System.out.println("YqsdpkqsoihqiufdhqiudhqY");
+    //    System.out.println("YqsdpkqsoihqiufdhqiudhqY");
         setStatus(Status.Localized);
         wasEventProcessed = true;
         break;
@@ -117,7 +117,7 @@ public enum Game {
         navigateTunnel(navigation);
         setStatus(Status.AtTunnel);
         wasEventProcessed = true;
-        System.out.println("YEYEYEY");
+       // System.out.println("YEYEYEY");
         break;
       case AtTree:
         // line 17 "model.ump"

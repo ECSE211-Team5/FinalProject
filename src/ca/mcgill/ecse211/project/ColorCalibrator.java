@@ -20,8 +20,9 @@ public class ColorCalibrator {
   public static enum Color {
     Orange, Green, Blue, Yellow, Other
   }
+  //this is v1
 
-  private final static int lowerYellowRBound = 9, upperYellowRBound = 14, lowerYellowGBound = 7,
+  private final static int lowerYellowRBound = 9, upperYellowRBound = 14, lowerYellowGBound = 4,
       upperYellowGBound = 10, lowerYellowBBound = 0, upperYellowBBound = 2, lowerBlueRBound = 0,
       upperBlueRBound = 1, lowerBlueGBound = 6, upperBlueGBound = 8, lowerBlueBBound = 3,
       upperBlueBBound = 8, lowerGreenRBound = 1, upperGreenRBound = 8, lowerGreenGBound = 5,
@@ -37,21 +38,26 @@ public class ColorCalibrator {
    * @return A Color enumeration value
    */
   public static Color getColor(int r, int g, int b) {
-    if (r>= lowerYellowRBound && g >= lowerYellowGBound) {
+    if (r>2*g && b<5 ) {
+      currentColor = Color.Orange;
+    } else if (g>2*r && b<5) {
+      currentColor = Color.Green;
+      
+      }else if ((r>= lowerYellowRBound && g >= lowerYellowGBound) || ((r>= 7 && r <= 9) && (g >=0 && g <= 2))) {
       currentColor = Color.Yellow;
     } else if ( (b >= lowerBlueBBound )) {
       currentColor = Color.Blue;
-    } else if ((r >= lowerGreenRBound && r <= upperGreenRBound)
-        && (b >= lowerGreenBBound && b <= upperGreenBBound)) {
-      currentColor = Color.Green;
-    } else if (r>=lowerOrangeRBound && g <= upperOrangeGBound ) {
-      currentColor = Color.Orange;
     } else {
       currentColor = Color.Other;
     }
 
     return currentColor;
   }
+  /**
+   * (r >= lowerGreenRBound && r <= 5)
+        && (b >= lowerGreenBBound && b <= upperGreenBBound) && (g <= 12 && g >= 6)
+        GREEN
+   */
 
   /**
    * This method gets the last color of the ring under the light sensor
