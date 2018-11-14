@@ -358,15 +358,18 @@ public class Navigation {
    * this method approaches the ring set by paying attention to the reading of us sensor, stops at
    * the place when the robot can reach the ring
    */
-  public void searchRingSet(RingSearcher searcher) {
+  public void searchRingSet(RingSearcher searcher, boolean correct) {
     //Go backward to detect the line and correct the rotation
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
-    leftMotor.backward();
-    rightMotor.backward();
-    moveUntilLineDetection();
-    //Forward for 3 cm (approach the ring set)
-    forward(FORWARD_SPEED, 3/Game.TILE);
+    
+    if(correct) {
+      leftMotor.backward();
+      rightMotor.backward();
+      moveUntilLineDetection();
+      //Forward for 3 cm (approach the ring set)
+      forward(FORWARD_SPEED, 3/Game.TILE);
+    }
     //rotate a little to the left to make sure that the sensor can detect the ring
     leftMotor.rotate(-30, false);
     //detect the ring color and beep based on the color

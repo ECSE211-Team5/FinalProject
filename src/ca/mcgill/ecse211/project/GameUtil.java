@@ -19,9 +19,10 @@ import ca.mcgill.ecse211.odometer.OdometerExceptions;
 public class GameUtil {
   public static PathFinder startingFinder;
   public static PathFinder searchingFinder;
+
   /**
-   * Class that find the shortest path from one point to another with constraints 
-   * inside one area
+   * Class that find the shortest path from one point to another with constraints inside one area
+   * 
    * @author Caspar Cedro
    * @author Percy Chen
    * @author Patrick Erath
@@ -36,7 +37,8 @@ public class GameUtil {
     int[] points;
 
     /**
-     * Constructor of the path finder, 
+     * Constructor of the path finder,
+     * 
      * @param ll: the lower left corner of the area
      * @param ur: the upper right corner of the area
      */
@@ -50,6 +52,7 @@ public class GameUtil {
 
     /**
      * Try find a path from cur to destination, return false if no such path exists
+     * 
      * @param cur: current position of the robot
      * @param destination: destination inside one area of the robot
      * @param instruction: instruction that guide the robot to the destination if such path exists
@@ -97,6 +100,7 @@ public class GameUtil {
 
     /**
      * bfs the area
+     * 
      * @param i: starting node
      * @param j: ending node
      * @param visited: an array keeps track of visited nodes
@@ -122,8 +126,9 @@ public class GameUtil {
     }
 
     /**
-     * get a children of one node based on the constraint (cannot be a tree, cannot be in the tunnel,
-     * cannot be a wall etc)
+     * get a children of one node based on the constraint (cannot be a tree, cannot be in the
+     * tunnel, cannot be a wall etc)
+     * 
      * @param i: the index representation of the node
      * @return a list of child, if any
      */
@@ -142,6 +147,7 @@ public class GameUtil {
 
     /**
      * transfer a coordinate to index representation
+     * 
      * @param coor
      * @return
      */
@@ -152,6 +158,7 @@ public class GameUtil {
 
     /**
      * transfer a index representation to its coordinate
+     * 
      * @param i
      * @return
      */
@@ -163,6 +170,7 @@ public class GameUtil {
 
   /**
    * check if one coordinate is safe based on (it is not a wall, tree or inside a tunnel)
+   * 
    * @param coor: coordinate array
    * @return: true if safe, false otherwise
    */
@@ -182,6 +190,7 @@ public class GameUtil {
 
   /**
    * find the average of the two coordinates
+   * 
    * @param p1
    * @param p2
    * @return
@@ -195,6 +204,7 @@ public class GameUtil {
 
   /**
    * find the distance from the starting point to two points
+   * 
    * @param x
    * @param y
    * @return
@@ -209,23 +219,39 @@ public class GameUtil {
     }
     return Integer.MAX_VALUE;
   }
-  
+
   /**
    * find closest point from a set of points
+   * 
    * @param points: a set of points
    * @return
    */
   public static int findClosestPointToRobot(int[][] points) {
     int minIndex = 0;
     double distance = Integer.MAX_VALUE;
-    
-    for(int i = 0; i < points.length; i++) {
+
+    for (int i = 0; i < points.length; i++) {
       double thisDistance = distanceFromRobot(points[i][0], points[i][1]);
-      if(thisDistance < distance) {
+      if (thisDistance < distance) {
         minIndex = i;
         distance = thisDistance;
       }
     }
     return minIndex;
+  }
+
+  public static boolean isBoundary(int[] coor) {
+    int x = coor[0];
+    int y = coor[1];
+    boolean onLY = x == GameParameters.Island_LL[0]
+        && (y >= GameParameters.Island_LL[1] && y <= GameParameters.Island_UR[1]);
+    boolean onRY = x == GameParameters.Island_UR[0]
+        && (y >= GameParameters.Island_LL[1] && y <= GameParameters.Island_UR[1]);
+    boolean onLX = y == GameParameters.Island_LL[1]
+        && (x >= GameParameters.Island_LL[0] && x <= GameParameters.Island_UR[0]);
+    boolean onUX = y == GameParameters.Island_UR[1]
+        && (x >= GameParameters.Island_LL[0] && x <= GameParameters.Island_UR[0]);
+
+    return onLY || onRY || onLX || onUX;
   }
 }

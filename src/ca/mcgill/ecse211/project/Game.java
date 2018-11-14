@@ -12,6 +12,7 @@ import ca.mcgill.ecse211.threads.SensorData;
 import ca.mcgill.ecse211.threads.ThreadControl;
 import ca.mcgill.ecse211.threads.UltrasonicPoller;
 import lejos.hardware.Button;
+import lejos.hardware.Sound;
 import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.lcd.TextLCD;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
@@ -267,24 +268,13 @@ public enum Game {
   private void localizeAndReadData(UltrasonicLocalizer us, LightLocalizer lgLoc) throws OdometerExceptions {
     this.rgbPoller.setStart(false);
     //read data at the same time as the localization
-    (new Thread() {public void run() {
       readData();
-    }}).start();
     
     //perform localization
     us.localize(Button.ID_LEFT);
     this.usPoller.setStart(false);
     lgLoc.localize(GameParameters.SC);
-    synchronized(GameParameters.waitDataObject) {
-      while(!GameParameters.hasDataRead) {
-        try {
-          GameParameters.waitDataObject.wait();
-        } catch (InterruptedException e) {
-          // TODO Auto-generated catch block
-          e.printStackTrace();
-        }
-      }
-    }
+    Sound.beep();
     int[] starting = GameParameters.SC;
     Odometer.getOdometer().setXYT(starting[0], starting[1], starting[2]);
   }
@@ -344,7 +334,8 @@ public enum Game {
         navigation.travelToWithCorrection(side[0], side[1], false);
         // turn facing the ring set
         navigation.turnTo(Math.toDegrees(navigation.calculateAngleTo(tree[0], tree[1])));
-        navigation.searchRingSet(searcher);
+        boolean doCorrection = !GameUtil.isBoundary(side);
+        navigation.searchRingSet(searcher, doCorrection);
       }
     }
   }

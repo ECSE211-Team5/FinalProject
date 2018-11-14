@@ -42,7 +42,6 @@ public class ColorCalibrator {
       currentColor = Color.Orange;
     } else if (g>2*r && b<3) {
       currentColor = Color.Green;
-      
       }else if ((r>= lowerYellowRBound && g >= lowerYellowGBound) || ((r>= 7 && r <= 9) && (g >=0 && g <= 2))) {
       currentColor = Color.Yellow;
     } else if ( (b >= lowerBlueBBound )) {
