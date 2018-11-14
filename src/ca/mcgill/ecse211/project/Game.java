@@ -266,9 +266,12 @@ public enum Game {
    */
   private void localizeAndReadData(UltrasonicLocalizer us, LightLocalizer lgLoc) throws OdometerExceptions {
     this.rgbPoller.setStart(false);
+    //read data at the same time as the localization
     (new Thread() {public void run() {
       readData();
     }}).start();
+    
+    //perform localization
     us.localize(Button.ID_LEFT);
     this.usPoller.setStart(false);
     lgLoc.localize(GameParameters.SC);
@@ -330,7 +333,13 @@ public enum Game {
     this.rgbPoller.setStart(true);
     int[] tree = GameParameters.TREE_US;
     int[][] treeSides = {{tree[0], tree[1] + 1}, {tree[0]-1, tree[1]}, {tree[0], tree[1]-1}, {tree[0]+1, tree[1]}};
-    for(int[] side : treeSides) {
+    
+    //Find the nearest point relative to the robot
+    int startingIndex = GameUtil.findClosestPointToRobot(treeSides);
+    
+    //search the tree counterclockwise
+    for(int i = 0; i < treeSides.length; i++) {
+      int[] side = treeSides[(startingIndex+i)%treeSides.length];
       if(GameUtil.isSafe(side)) {
         navigation.travelToWithCorrection(side[0], side[1], false);
         // turn facing the ring set

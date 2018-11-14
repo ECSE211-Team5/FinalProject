@@ -100,20 +100,22 @@ public class Navigation {
     int[] cur = {px, py};
     int[] destination = {x, y};
     ArrayList<Character> instruction = new ArrayList<Character>();
+    
+    //use path finder to find path based on different area the robot is at
+    //OUT: instruction: contains a list of instruction for the robot to move to the destination
     if (GameParameters.getType(px, py) == GameParameters.AreaType.InStarting) {
-   //   System.out.println("THTRHTH");
       GameUtil.startingFinder.tryFindPath(cur, destination, instruction);
       
     } else {
-  //    System.out.println("ELSE");
-
       GameUtil.searchingFinder.tryFindPath(cur, destination, instruction);
     }
+    
+    //use the instruction modified by the pathFind to move to the destination
     char lastStep = ' ';
     int theta = 0;
-  //  System.out.println(instruction.size());
     while (instruction.size() > 0) {
       char step = instruction.remove(instruction.size() - 1);
+      //if the step is different from the last one, rotate to corresponding rotation
       if (step != lastStep) {
         theta = charToRotation(step);
         turnTo(theta);
@@ -132,25 +134,6 @@ public class Navigation {
       odometer.setX(px);
       odometer.setY(py);
     }
-    // if (dX > 0.1) {
-    // turnTo(90);
-    // theta = 90;
-    // } else if (dX < -0.1) {
-    // turnTo(-90);
-    // theta = -90;
-    // }
-    // moveWithCorrection(dX, theta);
-    // odometer.setX(x);
-    //
-    // if (dY > 0.1) {
-    // turnTo(0);
-    // theta = 0;
-    // } else if (dY < -0.1) {
-    // turnTo(180);
-    // theta = 180;
-    // }
-    // moveWithCorrection(dY, theta);
-    // odometer.setY(y);
   }
 
   private int charToRotation(char direction) {
@@ -250,14 +233,21 @@ public class Navigation {
   public void goThroughTunnel() throws Exception {
     int distance = 0;
     int[] ll, ur;
+    //first use ll and ur coordinate to calculate lr and ul of the tunnel
     ll = GameParameters.TN_LL;
     ur = GameParameters.TN_UR;
     int[] lr = {ll[0], ur[1]};
     int[] ul = {ur[0], ll[1]};
-    ArrayList<int[]> notIn = new ArrayList<int[]>();
+    
+    //clone the four points (to make sure we are not modifying the original one)
     int[][] corners = {ll.clone(), lr.clone(), ul.clone(), ur.clone()};
+    ArrayList<int[]> notIn = new ArrayList<int[]>();
     ArrayList<int[]> points = new ArrayList<int[]>();
     double[] position = odometer.getXYT();
+    
+    //search for the points that are the same as the current area of the robot
+    //these are the entrance of the tunnel, also find the other two points, those
+    //are the exit of the tunnel
     for (int[] point : corners) {
       if (GameParameters.getType(point[0], point[1]) == GameParameters
           .getType((int) Math.round(position[0]), (int) Math.round(position[1]))) {
@@ -268,27 +258,36 @@ public class Navigation {
     }
     
     //find the direction and length of the tunnel
+    //we know the entrance two points of the tunnel, so this means 
+    //the two points must have either x or y coordinate identical.
+    //that's the direction of the tunnel as well
+    //after identify it's direction, we find whether it is positive 
+    //or negative directed
     if (points.get(0)[0] == points.get(1)[0]) {
       distance = Math.abs(notIn.get(0)[0] - points.get(0)[0]) + 1;
       int multi = notIn.get(0)[0] - points.get(0)[0] < 0 ? 1 : -1;
-      travelToTunnel(points, 0, multi);
+      travelToTunnelEntrance(points, 0, multi);
       for (int i = 0; i < notIn.size(); i++) {
+        //this step is to find the nearest two points that we can go two
+        //after exit the tunnel
         notIn.get(i)[0] = notIn.get(i)[0] - multi * 1;
       }
     } else {
       distance = Math.abs(notIn.get(0)[1] - points.get(0)[1]) + 1;
       int multi = notIn.get(0)[1] - points.get(0)[1] < 0 ? 1 : -1;
-      travelToTunnel(points, 1, multi);
+      travelToTunnelEntrance(points, 1, multi);
       for (int i = 0; i < notIn.size(); i++) {
+      //this step is to find the nearest two points that we can go two
+      //after exit the tunnel
         notIn.get(i)[1] = notIn.get(i)[1] - multi * 1;
       }
     }
 
-
+    
     double[] tunnelEnd = GameUtil.average(notIn.get(0), notIn.get(1));
-
     double angleThoughTunnel = Math.toDegrees(calculateAngleTo(tunnelEnd[0], tunnelEnd[1]));
     turnTo(angleThoughTunnel);
+    
     // goback To correct
     leftMotor.backward();
     rightMotor.backward();
@@ -299,8 +298,7 @@ public class Navigation {
     forward(250, distance);
     odometer.setTheta(angleThoughTunnel);
 
-    // Find a nearest safe point
-    // rotate additional sensor distance to make sure the sensor will not on the balck line
+    // rotate additional sensor distances to make sure the sensor will not on the balck line
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, 2*Game.SEN_DIS), true);
     rightMotor.rotate(convertDistance(Game.WHEEL_RAD, 2*Game.SEN_DIS), false);
     this.moveOneTileWithCorrection(angleThoughTunnel);
@@ -324,9 +322,10 @@ public class Navigation {
    * This method navigate the robot to the entrance of the tunnel
    * @param n :0: x, 1: y
    */
-  private void travelToTunnel(ArrayList<int[]> points, int n, int multiplier) {
+  private void travelToTunnelEntrance(ArrayList<int[]> points, int n, int multiplier) {
     int[] safePoint = new int[2];
     
+    //find the first safe point
     for(int[] p : points) {
       if(GameUtil.isSafe(p)) {
         safePoint = p;
@@ -335,6 +334,7 @@ public class Navigation {
     }
 
     int[] beforePoint = safePoint;
+    //find the nearst points to the entrance of the tunnel
     for (int i = 0; i < points.size(); i++) {
       points.get(i)[n] = points.get(i)[n] + multiplier * 1;
     }

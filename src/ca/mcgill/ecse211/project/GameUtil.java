@@ -194,19 +194,38 @@ public class GameUtil {
   }
 
   /**
-   * find the shortest distance from the starting point to two points
+   * find the distance from the starting point to two points
    * @param x
    * @param y
    * @return
    */
-  public static int distanceFromRobot(int x, int y) {
+  public static double distanceFromRobot(int x, int y) {
     try {
       double[] position = Odometer.getOdometer().getXYT();
-      return (int) (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
+      return (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
     } catch (OdometerExceptions e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
     return Integer.MAX_VALUE;
+  }
+  
+  /**
+   * find closest point from a set of points
+   * @param points: a set of points
+   * @return
+   */
+  public static int findClosestPointToRobot(int[][] points) {
+    int minIndex = 0;
+    double distance = Integer.MAX_VALUE;
+    
+    for(int i = 0; i < points.length; i++) {
+      double thisDistance = distanceFromRobot(points[i][0], points[i][1]);
+      if(thisDistance < distance) {
+        minIndex = i;
+        distance = thisDistance;
+      }
+    }
+    return minIndex;
   }
 }
