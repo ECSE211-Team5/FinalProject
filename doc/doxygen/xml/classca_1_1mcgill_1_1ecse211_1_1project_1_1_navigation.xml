@@ -15,21 +15,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="30" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a82b05b985ae3649bc9e515fb03428d82" prot="private" static="yes" mutable="no">
         <type>final int</type>
         <definition>final int ca.mcgill.ecse211.project.Navigation.ROTATE_SPEED</definition>
         <argsstring></argsstring>
         <name>ROTATE_SPEED</name>
-        <initializer>= 80</initializer>
+        <initializer>= 150</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="31" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="32" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae680802d48058814c87158c38f3cad34" prot="private" static="yes" mutable="no">
         <type>final int</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="32" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="32" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="33" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="34" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="34" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="35" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a2ec143983071420e10579c211e2d5f0f" prot="private" static="no" mutable="no">
         <type>EV3LargeRegulatedMotor</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="35" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="35" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a20d49ac52063aa11a31a0cdbfdb90aa8" prot="private" static="no" mutable="no">
         <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer" kindref="compound">Odometer</ref></type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="36" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad915718f10b304ba6d7c2366037e8022" prot="private" static="no" mutable="no">
         <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="37" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="38" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -136,10 +136,34 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="45" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="45" bodyend="56"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="46" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="46" bodyend="57"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="69" endline="78">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" compoundref="_sensor_data_8java" startline="61" endline="73">ca.mcgill.ecse211.threads.SensorData.getSensorData</references>
+      </memberdef>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4376e54162df8f123ca3b52e4fd2f38d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double ca.mcgill.ecse211.project.Navigation.calculateAngleTo</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>calculateAngleTo</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="59" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="59" bodyend="66"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" compoundref="_navigation_8java" startline="68" endline="83">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -160,13 +184,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="67" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="67" bodyend="82"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="68" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="68" bodyend="83"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="173" endline="194">ca.mcgill.ecse211.project.Navigation.turnTo</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="346" endline="348">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="299">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="294">ca.mcgill.ecse211.project.Game.TILE</references>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="202" endline="272">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4376e54162df8f123ca3b52e4fd2f38d" compoundref="_navigation_8java" startline="59" endline="66">ca.mcgill.ecse211.project.Navigation.calculateAngleTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="203" endline="224">ca.mcgill.ecse211.project.Navigation.turnTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="426" endline="428">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="242">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="237">ca.mcgill.ecse211.project.Game.TILE</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -213,15 +238,20 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="96" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="96" bodyend="125"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="97" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="97" bodyend="137"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="173" endline="194">ca.mcgill.ecse211.project.Navigation.turnTo</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" compoundref="_navigation_8java" startline="132" endline="141">ca.mcgill.ecse211.project.Navigation.moveWithCorrection</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="229" endline="238">ca.mcgill.ecse211.project.GameParameters.getType</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a90e9cb33114c7af62aa86684942265e5" compoundref="_game_parameters_8java" startline="31">ca.mcgill.ecse211.project.GameParameters.AreaType.InStarting</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a84ec23eabf60cb20895815e7b390e3f2" compoundref="_game_util_8java" startline="20">ca.mcgill.ecse211.project.GameUtil.startingFinder</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1acedc99ad369450d6b2d7711c2d63027a" compoundref="_game_util_8java" startline="21">ca.mcgill.ecse211.project.GameUtil.searchingFinder</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="203" endline="224">ca.mcgill.ecse211.project.Navigation.turnTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" compoundref="_navigation_8java" startline="160" endline="169">ca.mcgill.ecse211.project.Navigation.moveWithCorrection</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2911d7215e47f3064defe016b46bfeef" compoundref="_odometer_data_8java" startline="161" endline="172">ca.mcgill.ecse211.odometer.OdometerData.setX</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a82986438cd462e66520bc62bb4bd2b75" compoundref="_odometer_data_8java" startline="179" endline="190">ca.mcgill.ecse211.odometer.OdometerData.setY</references>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="202" endline="272">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1aa40592bb550b3526402faddbc0d890c7" compoundref="_component_test_8java" startline="70" endline="74">ca.mcgill.ecse211.tests.ComponentTest.navigationTest</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" compoundref="_component_test_8java" startline="92" endline="106">ca.mcgill.ecse211.tests.ComponentTest.localizationTest</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1aa40592bb550b3526402faddbc0d890c7" compoundref="_component_test_8java" startline="72" endline="76">ca.mcgill.ecse211.tests.ComponentTest.navigationTest</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="119" endline="133">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>synchronized void</type>
@@ -239,7 +269,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Move a certain distance with correction (using coordinate system) <parameterlist kind="param"><parameteritem>
+<para>Move a certain distance with correction (using coordinate system)</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>distance</parametername>
 </parameternamelist>
@@ -257,13 +287,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="132" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="132" bodyend="141"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="160" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="160" bodyend="169"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="197" endline="208">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a39eec50582f0e4bcff8a4669c48e1609" compoundref="_sensor_data_8java" startline="88" endline="97">ca.mcgill.ecse211.threads.SensorData.getL</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="346" endline="348">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="299">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" compoundref="_game_8java" startline="310">ca.mcgill.ecse211.project.Game.SEN_DIS</references>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="96" endline="125">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="426" endline="428">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="242">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" compoundref="_game_8java" startline="253">ca.mcgill.ecse211.project.Game.SEN_DIS</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="97" endline="137">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>synchronized void</type>
@@ -295,15 +325,16 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="173" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="173" bodyend="194"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="203" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="203" bodyend="224"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="299">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a64cf12cdd6772ac1ce351ff1dfadd626" compoundref="_game_8java" startline="305">ca.mcgill.ecse211.project.Game.TRACK</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="242">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a64cf12cdd6772ac1ce351ff1dfadd626" compoundref="_game_8java" startline="248">ca.mcgill.ecse211.project.Game.TRACK</references>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="53" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" compoundref="_navigation_8java" startline="67" endline="82">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="96" endline="125">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="202" endline="272">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" compoundref="_navigation_8java" startline="68" endline="83">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="97" endline="137">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -314,7 +345,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>found the tunnel based on the ll and ur coordinate, after the method, the robot will go the the entrance of the tunnel facing the tunnel it returns the distance it needs to go for [x] and [y] in order to go through the tunnel <parameterlist kind="exception"><parameteritem>
+<para>found the tunnel based on the ll and ur coordinate, after the method, the robot will go the the entrance of the tunnel facing the tunnel it returns the distance it needs to go for [x] and [y] in order to go through the tunnel</para><para><parameterlist kind="exception"><parameteritem>
 <parameternamelist>
 <parametername>Exception</parametername>
 </parameternamelist>
@@ -325,25 +356,27 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="202" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="202" bodyend="272"/>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aff67c7474a260a8bcbb245a7c7d5b009" compoundref="_game_parameters_8java" startline="159">ca.mcgill.ecse211.project.GameParameters.TN_LL</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa47abaface63a254570f9a82c4e1fe0d" compoundref="_game_parameters_8java" startline="169">ca.mcgill.ecse211.project.GameParameters.TN_UR</references>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="233" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="233" bodyend="319"/>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aff67c7474a260a8bcbb245a7c7d5b009" compoundref="_game_parameters_8java" startline="170">ca.mcgill.ecse211.project.GameParameters.TN_LL</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa47abaface63a254570f9a82c4e1fe0d" compoundref="_game_parameters_8java" startline="180">ca.mcgill.ecse211.project.GameParameters.TN_UR</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="218" endline="224">ca.mcgill.ecse211.project.GameParameters.getType</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1ae5c5c445ab84516991219ca3783fcaa4" compoundref="_game_util_8java" startline="187" endline="192">ca.mcgill.ecse211.project.GameUtil.average</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="173" endline="194">ca.mcgill.ecse211.project.Navigation.turnTo</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" compoundref="_navigation_8java" startline="313" endline="316">ca.mcgill.ecse211.project.Navigation.turn</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7c66610c5b7496ddb35d342ab2cd3f08" compoundref="_navigation_8java" startline="323" endline="328">ca.mcgill.ecse211.project.Navigation.forward</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="229" endline="238">ca.mcgill.ecse211.project.GameParameters.getType</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1ae5c5c445ab84516991219ca3783fcaa4" compoundref="_game_util_8java" startline="189" endline="194">ca.mcgill.ecse211.project.GameUtil.average</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4376e54162df8f123ca3b52e4fd2f38d" compoundref="_navigation_8java" startline="59" endline="66">ca.mcgill.ecse211.project.Navigation.calculateAngleTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="203" endline="224">ca.mcgill.ecse211.project.Navigation.turnTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" compoundref="_navigation_8java" startline="392" endline="395">ca.mcgill.ecse211.project.Navigation.turn</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7c66610c5b7496ddb35d342ab2cd3f08" compoundref="_navigation_8java" startline="403" endline="408">ca.mcgill.ecse211.project.Navigation.forward</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="197" endline="208">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="346" endline="348">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="299">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" compoundref="_game_8java" startline="310">ca.mcgill.ecse211.project.Game.SEN_DIS</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="167" endline="179">ca.mcgill.ecse211.project.GameUtil.isSafe</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a16770a5be37a6b27cc8c87e76e6d7d08" compoundref="_game_util_8java" startline="200" endline="209">ca.mcgill.ecse211.project.GameUtil.distanceFromRobot</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="96" endline="125">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" compoundref="_navigation_8java" startline="67" endline="82">ca.mcgill.ecse211.project.Navigation.travelTo</references>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab28110fca0af679acdaea84025746f15" compoundref="_game_8java" startline="315" endline="318">ca.mcgill.ecse211.project.Game.readData</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="76" endline="85">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="426" endline="428">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="242">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" compoundref="_game_8java" startline="253">ca.mcgill.ecse211.project.Game.SEN_DIS</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2911d7215e47f3064defe016b46bfeef" compoundref="_odometer_data_8java" startline="161" endline="172">ca.mcgill.ecse211.odometer.OdometerData.setX</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a82986438cd462e66520bc62bb4bd2b75" compoundref="_odometer_data_8java" startline="179" endline="190">ca.mcgill.ecse211.odometer.OdometerData.setY</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="169" endline="181">ca.mcgill.ecse211.project.GameUtil.isSafe</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="97" endline="137">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" compoundref="_navigation_8java" startline="68" endline="83">ca.mcgill.ecse211.project.Navigation.travelTo</references>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="78" endline="85">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a0016a23ab5d544148a09948fb1a40e4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -356,20 +389,32 @@
 <para>this method navigate the robot to the ring set, find the right position of the ring set </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="296" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="296" bodyend="298"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="351" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="351" bodyend="353"/>
       </memberdef>
-      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1d8075346dbc151ca366e211e9056ccc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a720271c3961b2819183210ad6106beff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void ca.mcgill.ecse211.project.Navigation.approachRingSet</definition>
-        <argsstring>()</argsstring>
-        <name>approachRingSet</name>
+        <definition>void ca.mcgill.ecse211.project.Navigation.searchRingSet</definition>
+        <argsstring>(RingSearcher searcher)</argsstring>
+        <name>searchRingSet</name>
+        <param>
+          <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher" kindref="compound">RingSearcher</ref></type>
+          <declname>searcher</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
 <para>this method approaches the ring set by paying attention to the reading of us sensor, stops at the place when the robot can reach the ring </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="304" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="304" bodyend="306"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="359" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="359" bodyend="385"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7c66610c5b7496ddb35d342ab2cd3f08" compoundref="_navigation_8java" startline="403" endline="408">ca.mcgill.ecse211.project.Navigation.forward</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="237">ca.mcgill.ecse211.project.Game.TILE</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" compoundref="_ring_searcher_8java" startline="58" endline="91">ca.mcgill.ecse211.threads.RingSearcher.search</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a6cbee26320e250b07e4f4b14f60d39a0" compoundref="_ring_searcher_8java" startline="96" endline="98">ca.mcgill.ecse211.threads.RingSearcher.prepareRetrieve</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd7a2651a7c5de76a018664c8bf327af" compoundref="_ring_searcher_8java" startline="103" endline="106">ca.mcgill.ecse211.threads.RingSearcher.retrieveRing</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a3d6f49addfa2bd5d61903287c68aefd6" compoundref="_ring_searcher_8java" startline="111" endline="113">ca.mcgill.ecse211.threads.RingSearcher.resetRodMotor</references>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="119" endline="133">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -394,11 +439,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="313" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="313" bodyend="316"/>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="299">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a64cf12cdd6772ac1ce351ff1dfadd626" compoundref="_game_8java" startline="305">ca.mcgill.ecse211.project.Game.TRACK</references>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="392" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="392" bodyend="395"/>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="242">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a64cf12cdd6772ac1ce351ff1dfadd626" compoundref="_game_8java" startline="248">ca.mcgill.ecse211.project.Game.TRACK</references>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="202" endline="272">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="119" endline="133">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7c66610c5b7496ddb35d342ab2cd3f08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -416,7 +462,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Move the robot forward <parameterlist kind="param"><parameteritem>
+<para>Move the robot forward</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>speed</parametername>
 </parameternamelist>
@@ -434,11 +480,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="323" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="323" bodyend="328"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="346" endline="348">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="299">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="294">ca.mcgill.ecse211.project.Game.TILE</references>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="202" endline="272">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="403" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="403" bodyend="408"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="426" endline="428">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="242">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="237">ca.mcgill.ecse211.project.Game.TILE</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a720271c3961b2819183210ad6106beff" compoundref="_navigation_8java" startline="359" endline="385">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae8530d181ffd790ff9dea5eeab54b1a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -451,22 +498,18 @@
 <para>Stop the motor </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="333" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="333" bodyend="336"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="413" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="413" bodyend="416"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4376e54162df8f123ca3b52e4fd2f38d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>double</type>
-        <definition>double ca.mcgill.ecse211.project.Navigation.calculateAngleTo</definition>
-        <argsstring>(double x, double y)</argsstring>
-        <name>calculateAngleTo</name>
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad57ac485f5c26a13f297136e3a0f7e94" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.project.Navigation.charToRotation</definition>
+        <argsstring>(char direction)</argsstring>
+        <name>charToRotation</name>
         <param>
-          <type>double</type>
-          <declname>x</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>y</declname>
+          <type>char</type>
+          <declname>direction</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -474,7 +517,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="58" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="58" bodyend="65"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="139" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="139" bodyend="152"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -491,7 +534,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="143" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="143" bodyend="148"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="171" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="171" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a64f35546a4ed268ade52a0c7e6235fce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -504,13 +547,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="150" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="150" bodyend="164"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="180" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="180" bodyend="194"/>
       </memberdef>
-      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a037872cdc18b172c1230eb513df741ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3339b0f8f42617fd6a10de6e1b85c7bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void ca.mcgill.ecse211.project.Navigation.travelToTunnel</definition>
+        <definition>void ca.mcgill.ecse211.project.Navigation.travelToTunnelEntrance</definition>
         <argsstring>(ArrayList&lt; int[]&gt; points, int n, int multiplier)</argsstring>
-        <name>travelToTunnel</name>
+        <name>travelToTunnelEntrance</name>
         <param>
           <type>ArrayList&lt; int[]&gt;</type>
           <declname>points</declname>
@@ -526,7 +569,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para>This method navigate the robot to the entrance of the tunnel <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>n</parametername>
 </parameternamelist>
@@ -537,7 +580,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="278" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="278" bodyend="291"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="325" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="325" bodyend="346"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -576,12 +619,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="346" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="346" bodyend="348"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="426" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="426" bodyend="428"/>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="53" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" compoundref="_navigation_8java" startline="67" endline="82">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" compoundref="_navigation_8java" startline="132" endline="141">ca.mcgill.ecse211.project.Navigation.moveWithCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="202" endline="272">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7c66610c5b7496ddb35d342ab2cd3f08" compoundref="_navigation_8java" startline="323" endline="328">ca.mcgill.ecse211.project.Navigation.forward</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" compoundref="_navigation_8java" startline="68" endline="83">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" compoundref="_navigation_8java" startline="160" endline="169">ca.mcgill.ecse211.project.Navigation.moveWithCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7c66610c5b7496ddb35d342ab2cd3f08" compoundref="_navigation_8java" startline="403" endline="408">ca.mcgill.ecse211.project.Navigation.forward</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -631,7 +674,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="358" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="358" bodyend="360"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="438" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="438" bodyend="440"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -644,11 +687,11 @@
 <simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="29" bodyend="361"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Navigation.java" bodystart="30" bodyend="441"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae680802d48058814c87158c38f3cad34" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>ACCELERATION</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1d8075346dbc151ca366e211e9056ccc" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>approachRingSet</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4376e54162df8f123ca3b52e4fd2f38d" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>calculateAngleTo</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4376e54162df8f123ca3b52e4fd2f38d" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>calculateAngleTo</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad57ac485f5c26a13f297136e3a0f7e94" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>charToRotation</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a434c589a16c077ff25dd93121f93c2a7" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>convertAngle</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>convertDistance</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad915718f10b304ba6d7c2366037e8022" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>data</name></member>
@@ -664,9 +707,10 @@
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a20d49ac52063aa11a31a0cdbfdb90aa8" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>odometer</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a2ec143983071420e10579c211e2d5f0f" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>rightMotor</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a82b05b985ae3649bc9e515fb03428d82" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>ROTATE_SPEED</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a720271c3961b2819183210ad6106beff" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>searchRingSet</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae8530d181ffd790ff9dea5eeab54b1a1" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>stop</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>travelTo</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a037872cdc18b172c1230eb513df741ee" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>travelToTunnel</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3339b0f8f42617fd6a10de6e1b85c7bc" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>travelToTunnelEntrance</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>travelToWithCorrection</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>turn</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Navigation</scope><name>turnTo</name></member>

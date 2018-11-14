@@ -14,8 +14,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="41" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="41" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a863962c648d0aaab59e870dea837780f" compoundref="_game_8java" startline="137" endline="155">ca.mcgill.ecse211.project.Game.navigateToStart</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1aa9d873f6cd4ef177c1622c24f72b0e0a" compoundref="_game_8java" startline="141" endline="159">ca.mcgill.ecse211.project.Game.navigateToStart</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a7d3a789bd51e152bd2643e7214a178f8" prot="public" static="no" mutable="no">
         <type></type>
@@ -28,8 +28,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="41" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="41" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a5b304a6a59ddee3f8c7d37bba8a4c129" compoundref="_game_8java" startline="75" endline="98">ca.mcgill.ecse211.project.Game.ready</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a5b304a6a59ddee3f8c7d37bba8a4c129" compoundref="_game_8java" startline="77" endline="101">ca.mcgill.ecse211.project.Game.ready</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a7ebcaa409a8a78b543975cca230f51a3" prot="public" static="no" mutable="no">
         <type></type>
@@ -42,8 +42,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="41" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="41" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1af5cb4d96a0075ef2d4ab5e0be90b8875" compoundref="_game_8java" startline="105" endline="129">ca.mcgill.ecse211.project.Game.navigateToTunnel</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ad3d03cffa33c927317d8fcba0c928a24" compoundref="_game_8java" startline="108" endline="133">ca.mcgill.ecse211.project.Game.navigateToTunnel</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1ae3a62c62aab81b3a4ada7940139ff936" prot="public" static="no" mutable="no">
         <type></type>
@@ -56,37 +56,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="41" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="41" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a62445c3fa08038f033d4bf8c17021eca" compoundref="_game_8java" startline="162" endline="186">ca.mcgill.ecse211.project.Game.navigateToTree</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a62d510506f1b829fe67dea7270e5b889" compoundref="_game_8java" startline="193" endline="211">ca.mcgill.ecse211.project.Game.ringFound</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adc2725f291b0688a62f85db1df1ee2b2" compoundref="_game_8java" startline="218" endline="236">ca.mcgill.ecse211.project.Game.ringNotFound</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a6cb7397203bf9fa47c9486ede1e8fd6d" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>ca.mcgill.ecse211.project.Game.Status.RingSearch</definition>
-        <argsstring></argsstring>
-        <name>RingSearch</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="41" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="41" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a62445c3fa08038f033d4bf8c17021eca" compoundref="_game_8java" startline="162" endline="186">ca.mcgill.ecse211.project.Game.navigateToTree</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a623ef585f41a45d778590392314ea352" compoundref="_game_8java" startline="166" endline="184">ca.mcgill.ecse211.project.Game.navigateToAndSearcherTree</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>This enumeration stores the possible states that our robot can be in during a competition </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="41" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="41" bodyend="41"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Game.java" bodystart="43" bodyend="43"/>
     <listofallmembers>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1ae3a62c62aab81b3a4ada7940139ff936" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game::Status</scope><name>AtTree</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a7ebcaa409a8a78b543975cca230f51a3" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game::Status</scope><name>AtTunnel</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a4ee6ac6711e6f0f96cfbe832f260c89f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game::Status</scope><name>Idle</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a7d3a789bd51e152bd2643e7214a178f8" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game::Status</scope><name>Localized</name></member>
-      <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a6cb7397203bf9fa47c9486ede1e8fd6d" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Game::Status</scope><name>RingSearch</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

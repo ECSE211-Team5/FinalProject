@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.ThreadControl" 3 "Thu Nov 8 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.ThreadControl" 3 "Wed Nov 14 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,7 +9,7 @@ ca.mcgill.ecse211.threads.ThreadControl
 .PP
 Inherits Runnable\&.
 .PP
-Inherited by \fBca\&.mcgill\&.ecse211\&.threads\&.LightPoller\fP, \fBca\&.mcgill\&.ecse211\&.threads\&.RingSearcher\fP, and \fBca\&.mcgill\&.ecse211\&.threads\&.UltrasonicPoller\fP\&.
+Inherited by \fBca\&.mcgill\&.ecse211\&.threads\&.LightPoller\fP, and \fBca\&.mcgill\&.ecse211\&.threads\&.UltrasonicPoller\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -93,7 +93,7 @@ Definition at line 19 of file ThreadControl\&.java\&.
 20     try {
 21       while (true) {
 22         if (!isStarted) {
-23           Sound\&.beepSequence();
+23   //        Sound\&.beepSequence();
 24           wait();
 25         } else {
 26           runMethod();

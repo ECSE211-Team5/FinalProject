@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['ocorner',['OCorner',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a8aba47cbe70ca0c782183a1c956197e7',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['odometer',['Odometer',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer.html',1,'ca::mcgill::ecse211::odometer']]],
-  ['odometer_2ejava',['Odometer.java',['../_odometer_8java.html',1,'']]],
-  ['odometerdata',['OdometerData',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html',1,'ca.mcgill.ecse211.odometer.OdometerData'],['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a91412854b75c41bf3af7c8892ec0fe87',1,'ca.mcgill.ecse211.odometer.OdometerData.OdometerData()']]],
-  ['odometerdata_2ejava',['OdometerData.java',['../_odometer_data_8java.html',1,'']]],
-  ['odometerexceptions',['OdometerExceptions',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions.html',1,'ca.mcgill.ecse211.odometer.OdometerExceptions'],['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions.html#a25aa31baebe4906716a920929f0284d2',1,'ca.mcgill.ecse211.odometer.OdometerExceptions.OdometerExceptions()']]],
-  ['odometerexceptions_2ejava',['OdometerExceptions.java',['../_odometer_exceptions_8java.html',1,'']]],
-  ['odometrycorrection',['OdometryCorrection',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html',1,'ca.mcgill.ecse211.odometer.OdometryCorrection'],['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html#ad80b45e0bc4bf935494e075edcec739c',1,'ca.mcgill.ecse211.odometer.OdometryCorrection.OdometryCorrection()']]],
-  ['odometrycorrection_2ejava',['OdometryCorrection.java',['../_odometry_correction_8java.html',1,'']]],
-  ['oppo_5fll',['OPPO_LL',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a7ae1bf6f8937b8098396452d8b30e423',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['oppo_5fur',['OPPO_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a4b23cfeb18fdeecaeecb59280a455170',1,'ca::mcgill::ecse211::project::GameParameters']]]
+  ['navigatetoandsearchertree',['navigateToAndSearcherTree',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a623ef585f41a45d778590392314ea352',1,'ca::mcgill::ecse211::project::Game']]],
+  ['navigatetostart',['navigateToStart',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#aa9d873f6cd4ef177c1622c24f72b0e0a',1,'ca::mcgill::ecse211::project::Game']]],
+  ['navigatetotunnel',['navigateToTunnel',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ad3d03cffa33c927317d8fcba0c928a24',1,'ca::mcgill::ecse211::project::Game']]],
+  ['navigation',['Navigation',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html',1,'ca.mcgill.ecse211.project.Navigation'],['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type.html#a70ec62ab2b745dd99e291459279910ea',1,'ca.mcgill.ecse211.tests.ComponentTest.Type.Navigation()'],['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#aaee14b67c392ddd951e3ce21224c3e56',1,'ca.mcgill.ecse211.project.Navigation.Navigation()']]],
+  ['navigation_2ejava',['Navigation.java',['../_navigation_8java.html',1,'']]],
+  ['navigationtest',['navigationTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#aa40592bb550b3526402faddbc0d890c7',1,'ca::mcgill::ecse211::tests::ComponentTest']]]
 ];

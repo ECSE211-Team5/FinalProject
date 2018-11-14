@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ca',['ca',['../namespaceca.html',1,'']]],
+  ['calculateangleto',['calculateAngleTo',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a4376e54162df8f123ca3b52e4fd2f38d',1,'ca::mcgill::ecse211::project::Navigation']]],
   ['colorcalibrator',['ColorCalibrator',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html',1,'ca::mcgill::ecse211::project']]],
   ['colorcalibrator_2ejava',['ColorCalibrator.java',['../_color_calibrator_8java.html',1,'']]],
   ['componenttest',['ComponentTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html',1,'ca::mcgill::ecse211::tests']]],

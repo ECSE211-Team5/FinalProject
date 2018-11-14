@@ -1,10 +1,10 @@
 <map id="ca.mcgill.ecse211.project.Navigation.moveWithCorrection" name="ca.mcgill.ecse211.project.Navigation.moveWithCorrection">
-<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ae7230e905494002087416294f12cae6a" title="ca.mcgill.ecse211.project.\lNavigation.travelToWithCorrection" alt="" coords="260,103,483,144"/>
-<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a4b52e605d3ea2f9bcd9481ae2c69ba39" title="ca.mcgill.ecse211.project.\lNavigation.goThroughTunnel" alt="" coords="542,37,730,79"/>
-<area shape="rect" id="node7" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#aa40592bb550b3526402faddbc0d890c7" title="ca.mcgill.ecse211.tests.\lComponentTest.navigationTest" alt="" coords="534,103,738,144"/>
-<area shape="rect" id="node9" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#ad11712dd74c5c64e84cd71186a59a087" title="ca.mcgill.ecse211.tests.\lComponentTest.localizationTest" alt="" coords="531,168,741,209"/>
-<area shape="rect" id="node4" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab28110fca0af679acdaea84025746f15" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="792,5,967,47"/>
-<area shape="rect" id="node5" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#ae85caa20c6391bacc4fdbd411ee3f113" title="ca.mcgill.ecse211.tests.\lComponentTest.tunnelTest" alt="" coords="789,71,969,112"/>
-<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="1017,71,1192,112"/>
-<area shape="rect" id="node8" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5dc8bf97bc48adf5bee88d425a1a974e" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="797,152,961,193"/>
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ae7230e905494002087416294f12cae6a" title="ca.mcgill.ecse211.project.\lNavigation.travelToWithCorrection" alt="" coords="260,101,483,143"/>
+<area shape="rect" id="node3" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="785,5,960,47"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a4b52e605d3ea2f9bcd9481ae2c69ba39" title="ca.mcgill.ecse211.project.\lNavigation.goThroughTunnel" alt="" coords="539,68,727,109"/>
+<area shape="rect" id="node6" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#aa40592bb550b3526402faddbc0d890c7" title="ca.mcgill.ecse211.tests.\lComponentTest.navigationTest" alt="" coords="531,133,735,175"/>
+<area shape="rect" id="node8" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a1ecca45b47067d825683cf46dcf22b62" title="ca.mcgill.ecse211.tests.\lComponentTest.ringMotorTest" alt="" coords="533,199,732,240"/>
+<area shape="rect" id="node5" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#ae85caa20c6391bacc4fdbd411ee3f113" title="ca.mcgill.ecse211.tests.\lComponentTest.tunnelTest" alt="" coords="783,71,963,112"/>
+<area shape="rect" id="node7" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5dc8bf97bc48adf5bee88d425a1a974e" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="791,136,955,177"/>
+<area shape="rect" id="node9" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="785,201,960,243"/>
 </map>

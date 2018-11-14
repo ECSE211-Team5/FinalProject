@@ -14,8 +14,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="20" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="218" endline="224">ca.mcgill.ecse211.project.GameParameters.getType</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="229" endline="238">ca.mcgill.ecse211.project.GameParameters.getType</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="97" endline="137">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a25564076fdd8880377fbd6eaf753456f" prot="public" static="no" mutable="no">
         <type></type>
@@ -28,7 +29,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="20" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="229" endline="238">ca.mcgill.ecse211.project.GameParameters.getType</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1ac762256f8b33e7c93c162520a0349769" prot="public" static="no" mutable="no">
         <type></type>
@@ -41,8 +43,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="20" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="218" endline="224">ca.mcgill.ecse211.project.GameParameters.getType</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="229" endline="238">ca.mcgill.ecse211.project.GameParameters.getType</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1afd78c1184c6b82e22bb08ed39ae4e83b" prot="public" static="no" mutable="no">
         <type></type>
@@ -55,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="20" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a5a3aceb665ba97ac242e77955feed640" prot="public" static="no" mutable="no">
         <type></type>
@@ -68,14 +70,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="20" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="32" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="31" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>This enumeration contains the possible types of areas that our robot is currently located in </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="19" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="19" bodyend="21"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="30" bodyend="32"/>
     <listofallmembers>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1ac762256f8b33e7c93c162520a0349769" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters::AreaType</scope><name>Dangerous</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a90e9cb33114c7af62aa86684942265e5" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters::AreaType</scope><name>InStarting</name></member>

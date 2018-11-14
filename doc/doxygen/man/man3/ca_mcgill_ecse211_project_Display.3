@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.Display" 3 "Thu Nov 8 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.Display" 3 "Wed Nov 14 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -120,15 +120,15 @@ Definition at line 57 of file Display\&.java\&.
 71       // Print x,y, and theta information
 72       DecimalFormat numberFormat = new DecimalFormat("######0\&.00");
 73       // The last two parameters to lcd\&.drawString denote the x and y coordinate to draw at\&.
-74       lcd\&.drawString("X: " + numberFormat\&.format(position[0]), 0, 0);
-75       lcd\&.drawString("Y: " + numberFormat\&.format(position[1]), 0, 1);
-76       lcd\&.drawString("T: " + numberFormat\&.format(position[2]), 0, 2);
-77       lcd\&.drawString("LL: " + numberFormat\&.format(sensdata\&.getL()[0]), 0, 3);
-78       lcd\&.drawString("LR: " + numberFormat\&.format(sensdata\&.getL()[1]), 0, 4);
-79       lcd\&.drawString("D: " + numberFormat\&.format(sensdata\&.getD()), 0, 5);
+74    //   lcd\&.drawString("X: " + numberFormat\&.format(position[0]), 0, 0);
+75    //   lcd\&.drawString("Y: " + numberFormat\&.format(position[1]), 0, 1);
+76   //    lcd\&.drawString("T: " + numberFormat\&.format(position[2]), 0, 2);
+77 //      lcd\&.drawString("LL: " + numberFormat\&.format(sensdata\&.getL()[0]), 0, 3);
+78 //      lcd\&.drawString("LR: " + numberFormat\&.format(sensdata\&.getL()[1]), 0, 4);
+79 //      lcd\&.drawString("D: " + numberFormat\&.format(sensdata\&.getD()), 0, 5);
 80 
-81 //      lcd\&.drawString(String\&.format("(R: %d G: %d B: %d)", (int) rgb[0], (int) rgb[1], (int) rgb[2]),
-82 //          0, 4);
+81       lcd\&.drawString(String\&.format("(R: %d G: %d B: %d)", (int) rgb[0], (int) rgb[1], (int) rgb[2]),
+82           0, 4);
 83 //      if (ColorCalibrator\&.getColor((int) rgb[0], (int) rgb[1],
 84 //          (int) rgb[2]) != ColorCalibrator\&.Color\&.Other) {
 85 //        lcd\&.drawString("Object Detected", 0, 5);
@@ -140,9 +140,9 @@ Definition at line 57 of file Display\&.java\&.
 91       lcd\&.drawString(String\&.format("%1$-10s", ColorCalibrator\&.getColor()\&.toString()), 0, 6);
 92       lcd\&.drawString("A:" + numberFormat\&.format(sensdata\&.getA()), 0, 7);
 93 
-94       // lcd\&.drawString(String\&.format("(r: %f", rgb[0]), 0, 3);
-95       // lcd\&.drawString(String\&.format("(g: %f", rgb[1]), 0, 4);
-96       // lcd\&.drawString(String\&.format("(b: %f", rgb[2]), 0, 5);
+94 //       lcd\&.drawString(String\&.format("(r: %d", (int)rgb[0]), 0, 3);
+95 //       lcd\&.drawString(String\&.format("(g: %d", (int)rgb[1]), 0, 4);
+96 //       lcd\&.drawString(String\&.format("(b: %d", (int)rgb[2]), 0, 5);
 97 
 98       // This ensures that the data is updated only once every period
 99       updateEnd = System\&.currentTimeMillis();

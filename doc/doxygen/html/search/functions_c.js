@@ -1,9 +1,11 @@
 var searchData=
 [
   ['search',['search',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#abd2b2c172ea393ce4185027c8a12780f',1,'ca::mcgill::ecse211::threads::RingSearcher']]],
+  ['searchringset',['searchRingSet',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a720271c3961b2819183210ad6106beff',1,'ca::mcgill::ecse211::project::Navigation']]],
   ['sensordata',['SensorData',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a11dcdc9c15184e05a9c84fc3958e26b6',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['seta',['setA',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a35b1941d44e86b81eb7c625efbd3c8ba',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['setd',['setD',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a2c1f8e625478b89aabe6e9911e482ef3',1,'ca::mcgill::ecse211::threads::SensorData']]],
+  ['setfrequency',['setFrequency',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a40906193773ead0bfd582f188413c97a',1,'ca::mcgill::ecse211::project::ColorCalibrator']]],
   ['setl',['setL',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#af905a6f2825716ae1a39bf7f6be09477',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['setrgb',['setRGB',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a6ad23111ecd378099f0b4ed0b6d398bc',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['setstart',['setStart',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a16221cdc4ccf637b190934549c708e1f',1,'ca::mcgill::ecse211::threads::ThreadControl']]],

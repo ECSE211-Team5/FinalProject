@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="29" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1acdc93de9366f2e6710c7f2fc0e4478c3" prot="public" static="no" mutable="no">
         <type></type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="29" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1acb88d74b8bd35b190f8b1b05730c213a" prot="public" static="no" mutable="no">
         <type></type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="29" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1aa8c9262ad5014cd52ecce2eec6604510" prot="public" static="no" mutable="no">
         <type></type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="29" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="31" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1ab118eac94e0b37e6871a4c9a788c675e" prot="public" static="no" mutable="no">
         <type></type>
@@ -66,14 +66,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="29" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="32" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="31" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="28" bodyend="30"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java" bodystart="30" bodyend="32"/>
     <listofallmembers>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1aa8c9262ad5014cd52ecce2eec6604510" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest::Type</scope><name>LightSensor</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type_1acdc93de9366f2e6710c7f2fc0e4478c3" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::tests::ComponentTest::Type</scope><name>Localization</name></member>

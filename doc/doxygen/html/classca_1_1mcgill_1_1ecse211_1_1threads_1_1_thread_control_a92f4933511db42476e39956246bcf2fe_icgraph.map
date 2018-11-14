@@ -1,4 +1,5 @@
 <map id="ca.mcgill.ecse211.threads.ThreadControl.isStarted" name="ca.mcgill.ecse211.threads.ThreadControl.isStarted">
 <area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html#adc07f842a1cc089195c5e47c2a0e5ee6" title="ca.mcgill.ecse211.threads.\lLightPoller.LightPoller" alt="" coords="248,5,427,47"/>
-<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller.html#ac561f5d04e2b655a4509de8453c0cd07" title="ca.mcgill.ecse211.threads.\lUltrasonicPoller.UltrasonicPoller" alt="" coords="232,71,443,112"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller.html#a7e23e2fe527b2ecbf4ddc8f988dd70a5" title="ca.mcgill.ecse211.threads.\lRGBPoller.RGBPoller" alt="" coords="248,71,427,112"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller.html#ac561f5d04e2b655a4509de8453c0cd07" title="ca.mcgill.ecse211.threads.\lUltrasonicPoller.UltrasonicPoller" alt="" coords="232,136,443,177"/>
 </map>

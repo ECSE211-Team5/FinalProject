@@ -49,7 +49,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 16 of file R\+G\+B\+Poller.\+java.
+Definition at line 18 of file R\+G\+B\+Poller.\+java.
 
 
 
@@ -78,14 +78,23 @@ This constructor creates an instance of the \hyperlink{classca_1_1mcgill_1_1ecse
 \end{DoxyExceptions}
 
 
-Definition at line 28 of file R\+G\+B\+Poller.\+java.
+Definition at line 30 of file R\+G\+B\+Poller.\+java.
 
 
 \begin{DoxyCode}
-28                                                                                                      \{
-29     super(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}, usData, \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont});
-30   \}
+30                                                                                                      \{
+31     super(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}, usData, \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont});
+32     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted} = \textcolor{keyword}{true};
+33   \}
 \end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_a7e23e2fe527b2ecbf4ddc8f988dd70a5_cgraph}
+\end{center}
+\end{figure}
 
 
 \subsection{Member Function Documentation}
@@ -97,20 +106,44 @@ Definition at line 28 of file R\+G\+B\+Poller.\+java.
 
 
 
-Definition at line 33 of file R\+G\+B\+Poller.\+java.
+Definition at line 36 of file R\+G\+B\+Poller.\+java.
 
 
 \begin{DoxyCode}
-33                              \{
-34     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}[0].fetchSample(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0], 0); \textcolor{comment}{// acquire data at offset 0}
-35     \textcolor{comment}{// get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int}
-36     \textcolor{keywordtype}{int} r = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][0] * 100); \textcolor{comment}{// extract from buffer, cast to int}
-37     \textcolor{keywordtype}{int} g = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][1] * 100); \textcolor{comment}{// extract from buffer, cast to int}
-38     \textcolor{keywordtype}{int} b = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][2] * 100); \textcolor{comment}{// extract from buffer, cast to int}
-39     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont}.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}{setRGB}(r, g, b); \textcolor{comment}{// now take action depending on value}
-40   \}
+36                              \{
+37     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}[0].fetchSample(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0], 0); \textcolor{comment}{// acquire data at offset 0}
+38     \textcolor{comment}{// get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int}
+39     \textcolor{keywordtype}{int} r = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][0] * 100); \textcolor{comment}{// extract from buffer, cast to int}
+40     \textcolor{keywordtype}{int} g = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][1] * 100); \textcolor{comment}{// extract from buffer, cast to int}
+41     \textcolor{keywordtype}{int} b = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][2] * 100); \textcolor{comment}{// extract from buffer, cast to int}
+42     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont}.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}{setRGB}(r, g, b); \textcolor{comment}{// now take action depending on value}
+43     \textcolor{keywordflow}{switch} (ColorCalibrator.getColor(r, g, b)) \{
+44       \textcolor{keywordflow}{case} Orange:
+45         ColorCalibrator.setFrequency(ColorCalibrator.Color.Orange);
+46     \textcolor{comment}{//    System.out.println("orange");}
+47         \textcolor{keywordflow}{break};
+48       \textcolor{keywordflow}{case} Yellow:
+49         ColorCalibrator.setFrequency(ColorCalibrator.Color.Yellow);
+50      \textcolor{comment}{//   System.out.println("yellow");}
+51         \textcolor{keywordflow}{break};
+52       \textcolor{keywordflow}{case} Green:
+53         ColorCalibrator.setFrequency(ColorCalibrator.Color.Green);
+54      \textcolor{comment}{//   System.out.println("green");}
+55         \textcolor{keywordflow}{break};
+56       \textcolor{keywordflow}{case} Blue:
+57         ColorCalibrator.setFrequency(ColorCalibrator.Color.Blue);
+58     \textcolor{comment}{//    System.out.println("blue");}
+59         \textcolor{keywordflow}{break};
+60       \textcolor{keywordflow}{default}:
+61         ColorCalibrator.setFrequency(ColorCalibrator.Color.Other);
+62         \textcolor{keywordflow}{break};
+63     \}
+64     
+65     
+66   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
