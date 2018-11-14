@@ -29,7 +29,7 @@ import lejos.hardware.motor.EV3LargeRegulatedMotor;
  */
 public class Navigation {
   private static final int FORWARD_SPEED = 140;
-  private static final int ROTATE_SPEED = 150;
+  private static final int ROTATE_SPEED = 250;
   private static final int ACCELERATION = 300;
 
   private EV3LargeRegulatedMotor leftMotor;
@@ -190,7 +190,7 @@ public class Navigation {
       }
     }
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
-    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), false);
+    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS+0.5), false);
   }
 
   /**
@@ -289,12 +289,14 @@ public class Navigation {
     turnTo(angleThoughTunnel);
     
     // goback To correct
+    leftMotor.setSpeed(FORWARD_SPEED);
+    rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.backward();
     rightMotor.backward();
     moveUntilLineDetection();
 
     // turn left -6 to correct the effect of the weight
-    turn(-6);
+    turn(-5);
     forward(250, distance);
     odometer.setTheta(angleThoughTunnel);
 
@@ -324,7 +326,9 @@ public class Navigation {
    */
   private void travelToTunnelEntrance(ArrayList<int[]> points, int n, int multiplier) {
     int[] safePoint = new int[2];
-    
+    for (int i = 0; i < points.size(); i++) {
+      points.get(i)[n] = points.get(i)[n] + multiplier * 1;
+    }
     //find the first safe point
     for(int[] p : points) {
       if(GameUtil.isSafe(p)) {
@@ -335,9 +339,7 @@ public class Navigation {
 
     int[] beforePoint = safePoint;
     //find the nearst points to the entrance of the tunnel
-    for (int i = 0; i < points.size(); i++) {
-      points.get(i)[n] = points.get(i)[n] + multiplier * 1;
-    }
+
     double[] center = GameUtil.average(points.get(0), points.get(1));
 
     // travel to the point
@@ -376,9 +378,9 @@ public class Navigation {
     //go to the position where ring can be retrieved
     forward(FORWARD_SPEED, 5/Game.TILE);
     //rotate a little to the left to make sure not influence the other ring
-    leftMotor.rotate(-30, false);
+    //leftMotor.rotate(-20, false);
     searcher.retrieveRing();
-    leftMotor.rotate(30, false);
+    //leftMotor.rotate(20, false);
     //go back to original position
     forward(FORWARD_SPEED, -8/Game.TILE);
     searcher.resetRodMotor();

@@ -26,7 +26,7 @@ public class ColorCalibrator {
       upperYellowGBound = 10, lowerYellowBBound = 0, upperYellowBBound = 2, lowerBlueRBound = 0,
       upperBlueRBound = 1, lowerBlueGBound = 6, upperBlueGBound = 8, lowerBlueBBound = 3,
       upperBlueBBound = 8, lowerGreenRBound = 1, upperGreenRBound = 8, lowerGreenGBound = 5,
-      upperGreenGBound = 9, lowerGreenBBound = 0, upperGreenBBound = 2, lowerOrangeRBound = 10,
+      upperGreenGBound = 9, lowerGreenBBound = 0, upperGreenBBound = 2, lowerOrangeRBound = 8,
       upperOrangeRBound = 20, lowerOrangeGBound = 0, upperOrangeGBound = 3, lowerOrangeBBound = 0, upperOrangeBBound = 1;
 
   /**
@@ -38,9 +38,9 @@ public class ColorCalibrator {
    * @return A Color enumeration value
    */
   public static Color getColor(int r, int g, int b) {
-    if (r>2*g && b<5 ) {
+    if (r>2*g && b<3 && r>lowerOrangeRBound ) {
       currentColor = Color.Orange;
-    } else if (g>2*r && b<5) {
+    } else if (g>2*r && b<3) {
       currentColor = Color.Green;
       
       }else if ((r>= lowerYellowRBound && g >= lowerYellowGBound) || ((r>= 7 && r <= 9) && (g >=0 && g <= 2))) {

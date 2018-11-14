@@ -169,8 +169,8 @@ public class GameUtil {
   public static boolean isSafe(int[] coor) {
     int x = coor[0];
     int y = coor[1];
-    boolean inTunnel = x > GameParameters.TN_LL[0] && x < GameParameters.TN_LL[1]
-        && y > GameParameters.TN_UR[0] && y < GameParameters.TN_UR[1];
+    boolean inTunnel = x >= GameParameters.TN_LL[0] && x <= GameParameters.TN_UR[0]
+        && y >= GameParameters.TN_LL[1] && y <= GameParameters.TN_UR[1];
     boolean isTree = x == GameParameters.TREE_US[0] && y == GameParameters.TREE_US[1];
     boolean outBound =
         x <= 0 || x >= GameParameters.Grid_UR[0] || y <= 0 || y >= GameParameters.Grid_UR[1];
