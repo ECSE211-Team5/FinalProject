@@ -4,8 +4,7 @@
 <area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html" title="ca.mcgill.ecse211.odometer.\lOdometryCorrection" alt="" coords="243,71,432,112"/>
 <area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_display.html" title="ca.mcgill.ecse211.project.\lDisplay" alt="" coords="250,136,425,177"/>
 <area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html" title="ca.mcgill.ecse211.threads.\lThreadControl" alt="" coords="248,201,427,243"/>
-<area shape="rect" id="node7" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html" title="ca.mcgill.ecse211.threads.\lLightPoller" alt="" coords="480,136,659,177"/>
-<area shape="rect" id="node9" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html" title="ca.mcgill.ecse211.threads.\lRingSearcher" alt="" coords="480,201,659,243"/>
-<area shape="rect" id="node10" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller.html" title="ca.mcgill.ecse211.threads.\lUltrasonicPoller" alt="" coords="480,267,659,308"/>
-<area shape="rect" id="node8" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller.html" title="ca.mcgill.ecse211.threads.\lRGBPoller" alt="" coords="707,136,885,177"/>
+<area shape="rect" id="node7" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html" title="ca.mcgill.ecse211.threads.\lLightPoller" alt="" coords="480,168,659,209"/>
+<area shape="rect" id="node9" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller.html" title="ca.mcgill.ecse211.threads.\lUltrasonicPoller" alt="" coords="480,233,659,275"/>
+<area shape="rect" id="node8" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller.html" title="ca.mcgill.ecse211.threads.\lRGBPoller" alt="" coords="707,168,885,209"/>
 </map>

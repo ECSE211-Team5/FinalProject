@@ -19,6 +19,8 @@ static void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a
 static void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a05cd9d95458b11ed57ca001a28fffa7c}{ultrasonic\+Sensor\+Test} ()
 \item 
 static void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a3e8288f482b3806a0f3c4668951f3e36}{light\+Sensor\+Test} ()
+\item 
+static void \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a1ecca45b47067d825683cf46dcf22b62}{ring\+Motor\+Test} ()  throws Odometer\+Exceptions 
 \end{DoxyCompactItemize}
 
 
@@ -40,7 +42,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 25 of file Component\+Test.\+java.
+Definition at line 27 of file Component\+Test.\+java.
 
 
 
@@ -53,16 +55,15 @@ Definition at line 25 of file Component\+Test.\+java.
 
 Test for light\+Sensor 
 
-Definition at line 118 of file Component\+Test.\+java.
+Definition at line 110 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-118                                        \{
-119 
-120   \}
+110                                        \{
+111 
+112   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -94,15 +95,7 @@ Definition at line 92 of file Component\+Test.\+java.
 95     LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
 96     us.localize(Button.ID\_LEFT);
 97     lgLoc.localize(GameParameters.SC);
-98     Game.INSTANCE.usPoller.setStart(\textcolor{keyword}{false});
-99     navigation.travelToWithCorrection(6, 4, \textcolor{keyword}{false});
-100     Sound.twoBeeps();
-101     navigation.travelToWithCorrection(2, 3, \textcolor{keyword}{false});
-102     Sound.twoBeeps();
-103     navigation.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
-104     Game.INSTANCE.usPoller.setStart(\textcolor{keyword}{true});
-105 
-106   \}
+98   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
@@ -135,15 +128,15 @@ Test for Navigation
 \end{DoxyExceptions}
 
 
-Definition at line 70 of file Component\+Test.\+java.
+Definition at line 72 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-70                                                                 \{
-71     Navigation nav = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-72     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
-73     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
-74   \}
+72                                                                 \{
+73     Navigation nav = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+74     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+75     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+76   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
@@ -159,6 +152,57 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_aa40592bb550b3526402faddbc0d890c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a1ecca45b47067d825683cf46dcf22b62}\label{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a1ecca45b47067d825683cf46dcf22b62}} 
+\index{ca\+::mcgill\+::ecse211\+::tests\+::\+Component\+Test@{ca\+::mcgill\+::ecse211\+::tests\+::\+Component\+Test}!ring\+Motor\+Test@{ring\+Motor\+Test}}
+\index{ring\+Motor\+Test@{ring\+Motor\+Test}!ca\+::mcgill\+::ecse211\+::tests\+::\+Component\+Test@{ca\+::mcgill\+::ecse211\+::tests\+::\+Component\+Test}}
+\subsubsection{\texorpdfstring{ring\+Motor\+Test()}{ringMotorTest()}}
+{\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+ring\+Motor\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
+
+Test for ring detection
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Odometer\+Exceptions} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 119 of file Component\+Test.\+java.
+
+
+\begin{DoxyCode}
+119                                                                \{
+120     Game.INSTANCE.usPoller.setStart(\textcolor{keyword}{false});
+121     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(Game.sensorMotor, Game.rodMotor);
+122     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+123     GameUtil.searchingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
+124     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
+125     Odometer.getOdometer().setXYT(1, 1, 0);
+126     \textcolor{keywordtype}{int}[] tree = \{2,2\};
+127     \textcolor{keywordtype}{int}[][] other = \{\{2,1\}, \{3,2\}, \{2,3\}, \{1,2\}\};
+128     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 4; i++) \{
+129       navigation.travelToWithCorrection(other[i][0], other[i][1],\textcolor{keyword}{false});
+130       navigation.turn(-90);
+131       navigation.searchRingSet(searcher);
+132     \}
+133   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a1ecca45b47067d825683cf46dcf22b62_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a1ecca45b47067d825683cf46dcf22b62_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a5dc8bf97bc48adf5bee88d425a1a974e}\label{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a5dc8bf97bc48adf5bee88d425a1a974e}} 
@@ -181,36 +225,36 @@ This method selects test for each individual components of the design
 \end{DoxyExceptions}
 
 
-Definition at line 38 of file Component\+Test.\+java.
+Definition at line 40 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-38                                                              \{
-39     \textcolor{keywordflow}{try} \{
-40       \textcolor{keywordflow}{switch} (testType) \{
-41         \textcolor{keywordflow}{case} Navigation:
-42           ComponentTest.navigationTest();
-43           \textcolor{keywordflow}{break};
-44         \textcolor{keywordflow}{case} Localization:
-45           ComponentTest.localizationTest();
-46           \textcolor{keywordflow}{break};
-47         \textcolor{keywordflow}{case} UltrasonicSensor:
-48           ComponentTest.ultrasonicSensorTest();
-49           \textcolor{keywordflow}{break};
-50         \textcolor{keywordflow}{case} LightSensor:
-51           ComponentTest.lightSensorTest();
-52           \textcolor{keywordflow}{break};
-53         \textcolor{keywordflow}{case} RingDetection:
-54           \textcolor{comment}{//ComponentTest.ringMotorTest();}
-55           \textcolor{keywordflow}{break};
-56         \textcolor{keywordflow}{default}:
-57           System.out.println(\textcolor{stringliteral}{"Invalid test type selected"});
-58           \textcolor{keywordflow}{break};
-59       \}
-60     \} \textcolor{keywordflow}{catch} (Exception e) \{
-61       \textcolor{keywordflow}{throw} e;
-62     \}
-63   \}
+40                                                              \{
+41     \textcolor{keywordflow}{try} \{
+42       \textcolor{keywordflow}{switch} (testType) \{
+43         \textcolor{keywordflow}{case} Navigation:
+44           ComponentTest.navigationTest();
+45           \textcolor{keywordflow}{break};
+46         \textcolor{keywordflow}{case} Localization:
+47           ComponentTest.localizationTest();
+48           \textcolor{keywordflow}{break};
+49         \textcolor{keywordflow}{case} UltrasonicSensor:
+50           ComponentTest.ultrasonicSensorTest();
+51           \textcolor{keywordflow}{break};
+52         \textcolor{keywordflow}{case} LightSensor:
+53           ComponentTest.lightSensorTest();
+54           \textcolor{keywordflow}{break};
+55         \textcolor{keywordflow}{case} RingDetection:
+56           ComponentTest.ringMotorTest();
+57           \textcolor{keywordflow}{break};
+58         \textcolor{keywordflow}{default}:
+59           System.out.println(\textcolor{stringliteral}{"Invalid test type selected"});
+60           \textcolor{keywordflow}{break};
+61       \}
+62     \} \textcolor{keywordflow}{catch} (Exception e) \{
+63       \textcolor{keywordflow}{throw} e;
+64     \}
+65   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
@@ -228,18 +272,16 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line 76 of file Component\+Test.\+java.
+Definition at line 78 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-76                                                    \{
-77     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-78 
-79     \textcolor{comment}{//UltrasonicLocalizer us = new UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);}
-80     \textcolor{comment}{//LightLocalizer lgLoc = new LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);}
-81     \textcolor{comment}{//us.localize(Button.ID\_LEFT);}
-82     \textcolor{comment}{//lgLoc.localize(GameParameters.SC);}
-83     Odometer.getOdometer().setXYT(1, 1, 0);
+78                                                    \{
+79     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+80     GameUtil.searchingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
+81     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
+82     Odometer.getOdometer().setXYT(1, 7, 90);
+83     navigation.goThroughTunnel();
 84     navigation.goThroughTunnel();
 85   \}
 \end{DoxyCode}
@@ -251,14 +293,6 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_ae85caa20c6391bacc4fdbd411ee3f113_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_ae85caa20c6391bacc4fdbd411ee3f113_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a05cd9d95458b11ed57ca001a28fffa7c}\label{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a05cd9d95458b11ed57ca001a28fffa7c}} 
 \index{ca\+::mcgill\+::ecse211\+::tests\+::\+Component\+Test@{ca\+::mcgill\+::ecse211\+::tests\+::\+Component\+Test}!ultrasonic\+Sensor\+Test@{ultrasonic\+Sensor\+Test}}
 \index{ultrasonic\+Sensor\+Test@{ultrasonic\+Sensor\+Test}!ca\+::mcgill\+::ecse211\+::tests\+::\+Component\+Test@{ca\+::mcgill\+::ecse211\+::tests\+::\+Component\+Test}}
@@ -267,13 +301,13 @@ Here is the caller graph for this function\+:
 
 Test for Ultrasonic\+Sensor 
 
-Definition at line 111 of file Component\+Test.\+java.
+Definition at line 103 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-111                                             \{
-112 
-113   \}
+103                                             \{
+104 
+105   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak

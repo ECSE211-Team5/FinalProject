@@ -192,13 +192,13 @@
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a39eec50582f0e4bcff8a4669c48e1609" compoundref="_sensor_data_8java" startline="88" endline="97">ca.mcgill.ecse211.threads.SensorData.getL</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="197" endline="208">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a82986438cd462e66520bc62bb4bd2b75" compoundref="_odometer_data_8java" startline="179" endline="190">ca.mcgill.ecse211.odometer.OdometerData.setY</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="173" endline="194">ca.mcgill.ecse211.project.Navigation.turnTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="203" endline="224">ca.mcgill.ecse211.project.Navigation.turnTo</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2911d7215e47f3064defe016b46bfeef" compoundref="_odometer_data_8java" startline="161" endline="172">ca.mcgill.ecse211.odometer.OdometerData.setX</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="346" endline="348">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="299">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" compoundref="_game_8java" startline="310">ca.mcgill.ecse211.project.Game.SEN_DIS</references>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab28110fca0af679acdaea84025746f15" compoundref="_game_8java" startline="315" endline="318">ca.mcgill.ecse211.project.Game.readData</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" compoundref="_component_test_8java" startline="92" endline="106">ca.mcgill.ecse211.tests.ComponentTest.localizationTest</referencedby>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" compoundref="_navigation_8java" startline="426" endline="428">ca.mcgill.ecse211.project.Navigation.convertDistance</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a91bd64670c2a91d006c907142783b1f8" compoundref="_game_8java" startline="242">ca.mcgill.ecse211.project.Game.WHEEL_RAD</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ab940d1a52b9759294dc0229e0fd6bc06" compoundref="_game_8java" startline="253">ca.mcgill.ecse211.project.Game.SEN_DIS</references>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" compoundref="_component_test_8java" startline="92" endline="98">ca.mcgill.ecse211.tests.ComponentTest.localizationTest</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

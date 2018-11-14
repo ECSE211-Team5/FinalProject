@@ -160,15 +160,15 @@ Definition at line 57 of file Display.\+java.
 71       \textcolor{comment}{// Print x,y, and theta information}
 72       DecimalFormat numberFormat = \textcolor{keyword}{new} DecimalFormat(\textcolor{stringliteral}{"######0.00"});
 73       \textcolor{comment}{// The last two parameters to lcd.drawString denote the x and y coordinate to draw at.}
-74       lcd.drawString(\textcolor{stringliteral}{"X: "} + numberFormat.format(position[0]), 0, 0);
-75       lcd.drawString(\textcolor{stringliteral}{"Y: "} + numberFormat.format(position[1]), 0, 1);
-76       lcd.drawString(\textcolor{stringliteral}{"T: "} + numberFormat.format(position[2]), 0, 2);
-77       lcd.drawString(\textcolor{stringliteral}{"LL: "} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[0]), 0, 3);
-78       lcd.drawString(\textcolor{stringliteral}{"LR: "} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[1]), 0, 4);
-79       lcd.drawString(\textcolor{stringliteral}{"D: "} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a46cc30522719018a80f89624e0ce458f}{getD}()), 0, 5);
+74    \textcolor{comment}{//   lcd.drawString("X: " + numberFormat.format(position[0]), 0, 0);}
+75    \textcolor{comment}{//   lcd.drawString("Y: " + numberFormat.format(position[1]), 0, 1);}
+76   \textcolor{comment}{//    lcd.drawString("T: " + numberFormat.format(position[2]), 0, 2);}
+77 \textcolor{comment}{//      lcd.drawString("LL: " + numberFormat.format(sensdata.getL()[0]), 0, 3);}
+78 \textcolor{comment}{//      lcd.drawString("LR: " + numberFormat.format(sensdata.getL()[1]), 0, 4);}
+79 \textcolor{comment}{//      lcd.drawString("D: " + numberFormat.format(sensdata.getD()), 0, 5);}
 80 
-81 \textcolor{comment}{//      lcd.drawString(String.format("(R: %d G: %d B: %d)", (int) rgb[0], (int) rgb[1], (int) rgb[2]),}
-82 \textcolor{comment}{//          0, 4);}
+81       lcd.drawString(String.format(\textcolor{stringliteral}{"(R: %d G: %d B: %d)"}, (\textcolor{keywordtype}{int}) rgb[0], (\textcolor{keywordtype}{int}) rgb[1], (\textcolor{keywordtype}{int}) rgb[2]),
+82           0, 4);
 83 \textcolor{comment}{//      if (ColorCalibrator.getColor((int) rgb[0], (int) rgb[1],}
 84 \textcolor{comment}{//          (int) rgb[2]) != ColorCalibrator.Color.Other) \{}
 85 \textcolor{comment}{//        lcd.drawString("Object Detected", 0, 5);}
@@ -180,9 +180,9 @@ Definition at line 57 of file Display.\+java.
 91       lcd.drawString(String.format(\textcolor{stringliteral}{"%1$-10s"}, ColorCalibrator.getColor().toString()), 0, 6);
 92       lcd.drawString(\textcolor{stringliteral}{"A:"} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6}{getA}()), 0, 7);
 93 
-94       \textcolor{comment}{// lcd.drawString(String.format("(r: %f", rgb[0]), 0, 3);}
-95       \textcolor{comment}{// lcd.drawString(String.format("(g: %f", rgb[1]), 0, 4);}
-96       \textcolor{comment}{// lcd.drawString(String.format("(b: %f", rgb[2]), 0, 5);}
+94 \textcolor{comment}{//       lcd.drawString(String.format("(r: %d", (int)rgb[0]), 0, 3);}
+95 \textcolor{comment}{//       lcd.drawString(String.format("(g: %d", (int)rgb[1]), 0, 4);}
+96 \textcolor{comment}{//       lcd.drawString(String.format("(b: %d", (int)rgb[2]), 0, 5);}
 97 
 98       \textcolor{comment}{// This ensures that the data is updated only once every period}
 99       updateEnd = System.currentTimeMillis();

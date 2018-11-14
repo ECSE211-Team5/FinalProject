@@ -20,7 +20,7 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>lejos.hardware.motor.EV3LargeRegulatedMotor;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21" refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer" kindref="compound">UltrasonicLocalizer</ref><sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ROTATE_SPEED<sp/>=<sp/>80;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ROTATE_SPEED<sp/>=<sp/>200;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>EV3LargeRegulatedMotor<sp/>leftMotor;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>EV3LargeRegulatedMotor<sp/>rightMotor;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
@@ -98,7 +98,7 @@
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>angle1<sp/>=<sp/>odometer.<ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" kindref="member">getXYT</ref>()[2];</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2.<sp/>Turn<sp/>left<sp/>until<sp/>we<sp/>see<sp/>the<sp/>second<sp/>wall,<sp/>then<sp/>turn<sp/>right</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>navigation.<ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" kindref="member">turn</ref>(-20);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>navigation.<ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" kindref="member">turn</ref>(-50);</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>rightMotor.forward();</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>leftMotor.backward();</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>

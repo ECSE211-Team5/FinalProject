@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.RGBPoller" 3 "Thu Nov 8 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.RGBPoller" 3 "Wed Nov 14 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -44,7 +44,7 @@ Kamy Moussavi Kafi
 .PP
 
 .PP
-Definition at line 16 of file RGBPoller\&.java\&.
+Definition at line 18 of file RGBPoller\&.java\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ca\&.mcgill\&.ecse211\&.threads\&.RGBPoller\&.RGBPoller (SampleProvider us[], float usData[][], \fBSensorData\fP cont) throws \fBOdometerExceptions\fP"
@@ -66,29 +66,53 @@ This constructor creates an instance of the \fBRGBPoller\fP class to provide col
 .PP
 
 .PP
-Definition at line 28 of file RGBPoller\&.java\&.
+Definition at line 30 of file RGBPoller\&.java\&.
 .PP
 .nf
-28                                                                                                      {
-29     super(us, usData, cont);
-30   }
+30                                                                                                      {
+31     super(us, usData, cont);
+32     isStarted = true;
+33   }
 .fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.RGBPoller\&.runMethod ()\fC [protected]\fP"
 
 .PP
-Definition at line 33 of file RGBPoller\&.java\&.
+Definition at line 36 of file RGBPoller\&.java\&.
 .PP
 .nf
-33                              {
-34     us[0]\&.fetchSample(lgData[0], 0); // acquire data at offset 0
-35     // get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int
-36     int r = (int) (lgData[0][0] * 100); // extract from buffer, cast to int
-37     int g = (int) (lgData[0][1] * 100); // extract from buffer, cast to int
-38     int b = (int) (lgData[0][2] * 100); // extract from buffer, cast to int
-39     cont\&.setRGB(r, g, b); // now take action depending on value
-40   }
+36                              {
+37     us[0]\&.fetchSample(lgData[0], 0); // acquire data at offset 0
+38     // get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int
+39     int r = (int) (lgData[0][0] * 100); // extract from buffer, cast to int
+40     int g = (int) (lgData[0][1] * 100); // extract from buffer, cast to int
+41     int b = (int) (lgData[0][2] * 100); // extract from buffer, cast to int
+42     cont\&.setRGB(r, g, b); // now take action depending on value
+43     switch (ColorCalibrator\&.getColor(r, g, b)) {
+44       case Orange:
+45         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Orange);
+46     //    System\&.out\&.println("orange");
+47         break;
+48       case Yellow:
+49         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Yellow);
+50      //   System\&.out\&.println("yellow");
+51         break;
+52       case Green:
+53         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Green);
+54      //   System\&.out\&.println("green");
+55         break;
+56       case Blue:
+57         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Blue);
+58     //    System\&.out\&.println("blue");
+59         break;
+60       default:
+61         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Other);
+62         break;
+63     }
+64     
+65     
+66   }
 .fi
 
 

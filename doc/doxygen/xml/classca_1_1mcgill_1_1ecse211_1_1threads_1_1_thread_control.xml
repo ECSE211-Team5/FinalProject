@@ -4,7 +4,6 @@
     <compoundname>ca::mcgill::ecse211::threads::ThreadControl</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Runnable</basecompoundref>
     <derivedcompoundref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller" prot="public" virt="non-virtual">ca.mcgill.ecse211.threads.LightPoller</derivedcompoundref>
-    <derivedcompoundref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher" prot="public" virt="non-virtual">ca.mcgill.ecse211.threads.RingSearcher</derivedcompoundref>
     <derivedcompoundref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller" prot="public" virt="non-virtual">ca.mcgill.ecse211.threads.UltrasonicPoller</derivedcompoundref>
       <sectiondef kind="protected-static-attrib">
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" prot="protected" static="yes" mutable="no">
@@ -97,6 +96,7 @@
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="39" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="39" bodyend="41"/>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1adc07f842a1cc089195c5e47c2a0e5ee6" compoundref="_light_poller_8java" startline="37" endline="45">ca.mcgill.ecse211.threads.LightPoller.LightPoller</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a7e23e2fe527b2ecbf4ddc8f988dd70a5" compoundref="_r_g_b_poller_8java" startline="30" endline="33">ca.mcgill.ecse211.threads.RGBPoller.RGBPoller</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller_1ac561f5d04e2b655a4509de8453c0cd07" compoundref="_ultrasonic_poller_8java" startline="37" endline="43">ca.mcgill.ecse211.threads.UltrasonicPoller.UltrasonicPoller</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a16221cdc4ccf637b190934549c708e1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -123,6 +123,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" line="47" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/ThreadControl.java" bodystart="47" bodyend="50"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -205,48 +206,42 @@
     <detaileddescription>
 <para>class for thread control with pause and restart functionality </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="84">
-        <label>ca.mcgill.ecse211.threads.RingSearcher</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher"/>
-        <childnode refid="80" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="85">
+      <node id="81">
         <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
-        <childnode refid="80" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="83">
-        <label>ca.mcgill.ecse211.threads.RGBPoller</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller"/>
-        <childnode refid="82" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="82">
-        <label>ca.mcgill.ecse211.threads.LightPoller</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
-        <childnode refid="80" relation="public-inheritance">
+        <childnode refid="77" relation="public-inheritance">
         </childnode>
       </node>
       <node id="80">
-        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="81" relation="public-inheritance">
+        <label>ca.mcgill.ecse211.threads.RGBPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller"/>
+        <childnode refid="79" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="81">
+      <node id="79">
+        <label>ca.mcgill.ecse211.threads.LightPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="78" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="78">
         <label>Runnable</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="86">
+      <node id="82">
         <label>ca.mcgill.ecse211.threads.ThreadControl</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="87" relation="public-inheritance">
+        <childnode refid="83" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="87">
+      <node id="83">
         <label>Runnable</label>
       </node>
     </collaborationgraph>

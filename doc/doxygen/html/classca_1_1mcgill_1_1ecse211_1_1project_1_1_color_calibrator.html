@@ -84,6 +84,14 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a92e653a6a9f7a31cb7b6f9bc2e732133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1acf05f9523b2c0f329d4a7cbf1b9c47"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a1acf05f9523b2c0f329d4a7cbf1b9c47">getColor</a> ()</td></tr>
 <tr class="separator:a1acf05f9523b2c0f329d4a7cbf1b9c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40906193773ead0bfd582f188413c97a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a40906193773ead0bfd582f188413c97a">setFrequency</a> (Color c)</td></tr>
+<tr class="separator:a40906193773ead0bfd582f188413c97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d65927aaa2041f933dbdc19c3d2a412"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a3d65927aaa2041f933dbdc19c3d2a412">getMostFrequenct</a> ()</td></tr>
+<tr class="separator:a3d65927aaa2041f933dbdc19c3d2a412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6148d75e3a105016580e90ed1ea9bc9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#ab6148d75e3a105016580e90ed1ea9bc9">resetFrequency</a> ()</td></tr>
+<tr class="separator:ab6148d75e3a105016580e90ed1ea9bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1d9cef0739971dbe00cc16712be0fe"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#acb1d9cef0739971dbe00cc16712be0fe">getGetColor</a> (int i)</td></tr>
+<tr class="separator:acb1d9cef0739971dbe00cc16712be0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is used to check the color of a ring under a light sensor</p>
@@ -151,13 +159,14 @@ Kamy Moussavi Kafi </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Color enumeration value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_color_calibrator_8java_source.html#l00038">38</a> of file <a class="el" href="_color_calibrator_8java_source.html">ColorCalibrator.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                                    {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> ((r &gt;= lowerYellowRBound &amp;&amp; r &lt;= upperYellowRBound)</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        &amp;&amp; (g &gt;= lowerYellowGBound &amp;&amp; g &lt;= upperYellowGBound)</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        &amp;&amp; (b &gt;= lowerYellowBBound &amp;&amp; b &lt;= upperYellowBBound)) {</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      currentColor = Color.Yellow;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((r &gt;= lowerBlueRBound &amp;&amp; r &lt;= upperBlueRBound)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        &amp;&amp; (g &gt;= lowerBlueGBound &amp;&amp; g &lt;= upperBlueGBound)</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        &amp;&amp; (b &gt;= lowerBlueBBound &amp;&amp; b &lt;= upperBlueBBound)) {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      currentColor = Color.Blue;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((r &gt;= lowerGreenRBound &amp;&amp; r &lt;= upperGreenRBound)</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        &amp;&amp; (g &gt;= lowerGreenGBound &amp;&amp; g &lt;= upperGreenGBound)</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        &amp;&amp; (b &gt;= lowerGreenBBound &amp;&amp; b &lt;= upperGreenBBound)) {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      currentColor = Color.Green;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((r &gt;= lowerOrangeRBound &amp;&amp; r &lt;= upperOrangeRBound)</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        &amp;&amp; (g &gt;= lowerOrangeGBound &amp;&amp; g &lt;= upperOrangeGBound) &amp;&amp; (b == OrangeBBound)) {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      currentColor = Color.Orange;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      currentColor = Color.Other;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> currentColor;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="_color_calibrator_8java_source.html#l00040">40</a> of file <a class="el" href="_color_calibrator_8java_source.html">ColorCalibrator.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                                    {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (r&gt;2*g &amp;&amp; b&lt;5 ) {</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      currentColor = Color.Orange;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (g&gt;2*r &amp;&amp; b&lt;5) {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      currentColor = Color.Green;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      </div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      }<span class="keywordflow">else</span> <span class="keywordflow">if</span> ((r&gt;= lowerYellowRBound &amp;&amp; g &gt;= lowerYellowGBound) || ((r&gt;= 7 &amp;&amp; r &lt;= 9) &amp;&amp; (g &gt;=0 &amp;&amp; g &lt;= 2))) {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      currentColor = Color.Yellow;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( (b &gt;= lowerBlueBBound )) {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      currentColor = Color.Blue;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      currentColor = Color.Other;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> currentColor;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a92e653a6a9f7a31cb7b6f9bc2e732133_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a92e653a6a9f7a31cb7b6f9bc2e732133_icgraph" alt=""/></div>
 <map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a92e653a6a9f7a31cb7b6f9bc2e732133_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a92e653a6a9f7a31cb7b6f9bc2e732133_icgraph">
-<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display.html#ab508a8bc2b738499bec2c432a814cba5" title="ca.mcgill.ecse211.project.\lDisplay.run" alt="" coords="228,5,403,47"/>
+<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display.html#ab508a8bc2b738499bec2c432a814cba5" title="ca.mcgill.ecse211.project.\lDisplay.run" alt="" coords="230,5,405,47"/>
+<area shape="rect" id="node3" href="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller.html#a96db4561c87136de5098497fe30356fe" title="ca.mcgill.ecse211.threads.\lRGBPoller.runMethod" alt="" coords="228,71,407,112"/>
 </map>
 </div>
 
@@ -185,11 +194,190 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This method gets the last color of the ring under the light sensor</p>
+<p>(r &gt;= lowerGreenRBound &amp;&amp; r &lt;= 5) &amp;&amp; (b &gt;= lowerGreenBBound &amp;&amp; b &lt;= upperGreenBBound) &amp;&amp; (g &lt;= 12 &amp;&amp; g &gt;= 6) GREEN This method gets the last color of the ring under the light sensor</p>
 <dl class="section return"><dt>Returns</dt><dd>current color detected by the lightSensor </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_color_calibrator_8java_source.html#l00066">66</a> of file <a class="el" href="_color_calibrator_8java_source.html">ColorCalibrator.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                 {</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (currentColor != null)</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> currentColor;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">return</span> Color.Other;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="_color_calibrator_8java_source.html#l00067">67</a> of file <a class="el" href="_color_calibrator_8java_source.html">ColorCalibrator.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                 {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (currentColor != null)</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> currentColor;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">return</span> Color.Other;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="acb1d9cef0739971dbe00cc16712be0fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb1d9cef0739971dbe00cc16712be0fe">&#9670;&nbsp;</a></span>getGetColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Color ca.mcgill.ecse211.project.ColorCalibrator.getGetColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_color_calibrator_8java_source.html#l00127">127</a> of file <a class="el" href="_color_calibrator_8java_source.html">ColorCalibrator.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                                         {</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    Color c = Color.Other;</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">switch</span> (i) {</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordflow">case</span> 0:</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        c = Color.Other;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordflow">case</span> 1: </div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        c = Color.Blue;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordflow">case</span> 2:</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        c = Color.Green;</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      <span class="keywordflow">case</span> 3:</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        c = Color.Yellow;</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keywordflow">case</span> 4:</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        c = Color.Orange;</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span> c;</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_acb1d9cef0739971dbe00cc16712be0fe_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_acb1d9cef0739971dbe00cc16712be0fe_icgraph" alt=""/></div>
+<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_acb1d9cef0739971dbe00cc16712be0fe_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_acb1d9cef0739971dbe00cc16712be0fe_icgraph">
+<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a3d65927aaa2041f933dbdc19c3d2a412" title="ca.mcgill.ecse211.project.\lColorCalibrator.getMostFrequenct" alt="" coords="236,39,455,80"/>
+<area shape="rect" id="node3" href="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#abd2b2c172ea393ce4185027c8a12780f" title="ca.mcgill.ecse211.threads.\lRingSearcher.search" alt="" coords="503,39,681,80"/>
+<area shape="rect" id="node4" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a720271c3961b2819183210ad6106beff" title="ca.mcgill.ecse211.project.\lNavigation.searchRingSet" alt="" coords="729,39,904,80"/>
+<area shape="rect" id="node5" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="964,5,1139,47"/>
+<area shape="rect" id="node6" href="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a1ecca45b47067d825683cf46dcf22b62" title="ca.mcgill.ecse211.tests.\lComponentTest.ringMotorTest" alt="" coords="952,71,1151,112"/>
+<area shape="rect" id="node7" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="1199,37,1373,79"/>
+<area shape="rect" id="node8" href="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5dc8bf97bc48adf5bee88d425a1a974e" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="1204,103,1368,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3d65927aaa2041f933dbdc19c3d2a412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d65927aaa2041f933dbdc19c3d2a412">&#9670;&nbsp;</a></span>getMostFrequenct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Color ca.mcgill.ecse211.project.ColorCalibrator.getMostFrequenct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method returns the most frequent colour detected from multiple samples</p>
+<dl class="section return"><dt>Returns</dt><dd>most frequent colour detected </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_color_calibrator_8java_source.html#l00102">102</a> of file <a class="el" href="_color_calibrator_8java_source.html">ColorCalibrator.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                         {</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    Color c = Color.Other;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> frequency = colour_frequency[0];</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; colour_frequency.length; i++) {</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">if</span> (colour_frequency[i] &gt;= frequency) {</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        frequency = colour_frequency[i];</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        c = <a class="code" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#acb1d9cef0739971dbe00cc16712be0fe">getGetColor</a>(i);</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      }</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span>(frequency == 0) {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      c = Color.Other;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#ab6148d75e3a105016580e90ed1ea9bc9">resetFrequency</a>();</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> c;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div><div class="ttc" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_html_ab6148d75e3a105016580e90ed1ea9bc9"><div class="ttname"><a href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#ab6148d75e3a105016580e90ed1ea9bc9">ca.mcgill.ecse211.project.ColorCalibrator.resetFrequency</a></div><div class="ttdeci">static void resetFrequency()</div><div class="ttdef"><b>Definition:</b> <a href="_color_calibrator_8java_source.html#l00122">ColorCalibrator.java:122</a></div></div>
+<div class="ttc" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_html_acb1d9cef0739971dbe00cc16712be0fe"><div class="ttname"><a href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#acb1d9cef0739971dbe00cc16712be0fe">ca.mcgill.ecse211.project.ColorCalibrator.getGetColor</a></div><div class="ttdeci">static Color getGetColor(int i)</div><div class="ttdef"><b>Definition:</b> <a href="_color_calibrator_8java_source.html#l00127">ColorCalibrator.java:127</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a3d65927aaa2041f933dbdc19c3d2a412_cgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a3d65927aaa2041f933dbdc19c3d2a412_cgraph" alt=""/></div>
+<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a3d65927aaa2041f933dbdc19c3d2a412_cgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a3d65927aaa2041f933dbdc19c3d2a412_cgraph">
+<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#acb1d9cef0739971dbe00cc16712be0fe" title="ca.mcgill.ecse211.project.\lColorCalibrator.getGetColor" alt="" coords="282,5,465,47"/>
+<area shape="rect" id="node3" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#ab6148d75e3a105016580e90ed1ea9bc9" title="ca.mcgill.ecse211.project.\lColorCalibrator.resetFrequency" alt="" coords="272,71,475,112"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a3d65927aaa2041f933dbdc19c3d2a412_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a3d65927aaa2041f933dbdc19c3d2a412_icgraph" alt=""/></div>
+<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a3d65927aaa2041f933dbdc19c3d2a412_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a3d65927aaa2041f933dbdc19c3d2a412_icgraph">
+<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#abd2b2c172ea393ce4185027c8a12780f" title="ca.mcgill.ecse211.threads.\lRingSearcher.search" alt="" coords="272,39,451,80"/>
+<area shape="rect" id="node3" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a720271c3961b2819183210ad6106beff" title="ca.mcgill.ecse211.project.\lNavigation.searchRingSet" alt="" coords="499,39,673,80"/>
+<area shape="rect" id="node4" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="733,5,908,47"/>
+<area shape="rect" id="node5" href="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a1ecca45b47067d825683cf46dcf22b62" title="ca.mcgill.ecse211.tests.\lComponentTest.ringMotorTest" alt="" coords="721,71,920,112"/>
+<area shape="rect" id="node6" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="968,37,1143,79"/>
+<area shape="rect" id="node7" href="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5dc8bf97bc48adf5bee88d425a1a974e" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="973,103,1137,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab6148d75e3a105016580e90ed1ea9bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6148d75e3a105016580e90ed1ea9bc9">&#9670;&nbsp;</a></span>resetFrequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ca.mcgill.ecse211.project.ColorCalibrator.resetFrequency </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method resets the colour_frequency array to 0 </p>
+
+<p class="definition">Definition at line <a class="el" href="_color_calibrator_8java_source.html#l00122">122</a> of file <a class="el" href="_color_calibrator_8java_source.html">ColorCalibrator.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                                      {</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; colour_frequency.length; i ++) {</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      colour_frequency[i] = 0;</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_ab6148d75e3a105016580e90ed1ea9bc9_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_ab6148d75e3a105016580e90ed1ea9bc9_icgraph" alt=""/></div>
+<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_ab6148d75e3a105016580e90ed1ea9bc9_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_ab6148d75e3a105016580e90ed1ea9bc9_icgraph">
+<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a3d65927aaa2041f933dbdc19c3d2a412" title="ca.mcgill.ecse211.project.\lColorCalibrator.getMostFrequenct" alt="" coords="256,39,475,80"/>
+<area shape="rect" id="node3" href="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#abd2b2c172ea393ce4185027c8a12780f" title="ca.mcgill.ecse211.threads.\lRingSearcher.search" alt="" coords="523,39,701,80"/>
+<area shape="rect" id="node4" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a720271c3961b2819183210ad6106beff" title="ca.mcgill.ecse211.project.\lNavigation.searchRingSet" alt="" coords="749,39,924,80"/>
+<area shape="rect" id="node5" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="984,5,1159,47"/>
+<area shape="rect" id="node6" href="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a1ecca45b47067d825683cf46dcf22b62" title="ca.mcgill.ecse211.tests.\lComponentTest.ringMotorTest" alt="" coords="972,71,1171,112"/>
+<area shape="rect" id="node7" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="1219,37,1393,79"/>
+<area shape="rect" id="node8" href="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5dc8bf97bc48adf5bee88d425a1a974e" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="1224,103,1388,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a40906193773ead0bfd582f188413c97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40906193773ead0bfd582f188413c97a">&#9670;&nbsp;</a></span>setFrequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ca.mcgill.ecse211.project.ColorCalibrator.setFrequency </td>
+          <td>(</td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method keeps track of how many of each colour were detected by increasing the count in the array </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The Color detected by the light sensor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_color_calibrator_8java_source.html#l00079">79</a> of file <a class="el" href="_color_calibrator_8java_source.html">ColorCalibrator.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                           {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">switch</span> (c) {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">case</span> Blue:</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        colour_frequency[1] ++;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">case</span> Green:</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        colour_frequency[2] ++;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">case</span> Yellow:</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        colour_frequency[3] ++;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">case</span> Orange:</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        colour_frequency[4] ++;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordflow">default</span>:</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a40906193773ead0bfd582f188413c97a_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a40906193773ead0bfd582f188413c97a_icgraph" alt=""/></div>
+<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a40906193773ead0bfd582f188413c97a_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_a40906193773ead0bfd582f188413c97a_icgraph">
+<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller.html#a96db4561c87136de5098497fe30356fe" title="ca.mcgill.ecse211.threads.\lRGBPoller.runMethod" alt="" coords="245,5,424,47"/>
+</map>
+</div>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

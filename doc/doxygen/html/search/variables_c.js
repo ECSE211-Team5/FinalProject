@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['sc',['SC',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#af3944d1bc80c4c8a6cabce66e030f4b7',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['searching',['Searching',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a25564076fdd8880377fbd6eaf753456f',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['searchingboundary',['SearchingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a5a3aceb665ba97ac242e77955feed640',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['sen_5fdis',['SEN_DIS',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab940d1a52b9759294dc0229e0fd6bc06',1,'ca::mcgill::ecse211::project::Game']]],
-  ['shouldwait',['shouldWait',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a8252930dab1b067da64cf2afae4fc630',1,'ca::mcgill::ecse211::threads::ThreadControl']]],
-  ['startingboundary',['StartingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#afd78c1184c6b82e22bb08ed39ae4e83b',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]]
+  ['redteam',['RedTeam',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#ad36fe5629718c944df7317e53145850c',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['rgbpoller',['rgbPoller',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#af24a953a0c3438670220dde36c532b5d',1,'ca::mcgill::ecse211::project::Game']]],
+  ['rightmotor',['rightMotor',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a7a05fcf37c4435c32270776a427ba0d2',1,'ca::mcgill::ecse211::project::Game']]],
+  ['ringdetection',['RingDetection',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type.html#ab118eac94e0b37e6871a4c9a788c675e',1,'ca::mcgill::ecse211::tests::ComponentTest::Type']]],
+  ['rodmotor',['rodMotor',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#abc070af2fa5a5cda6d81977b35aacfb4',1,'ca::mcgill::ecse211::project::Game']]]
 ];

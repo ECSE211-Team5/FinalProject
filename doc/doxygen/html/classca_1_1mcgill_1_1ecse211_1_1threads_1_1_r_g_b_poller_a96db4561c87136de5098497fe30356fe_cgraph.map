@@ -1,3 +1,5 @@
 <map id="ca.mcgill.ecse211.threads.RGBPoller.runMethod" name="ca.mcgill.ecse211.threads.RGBPoller.runMethod">
-<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a6ad23111ecd378099f0b4ed0b6d398bc" title="ca.mcgill.ecse211.threads.\lSensorData.setRGB" alt="" coords="232,5,411,47"/>
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a6ad23111ecd378099f0b4ed0b6d398bc" title="ca.mcgill.ecse211.threads.\lSensorData.setRGB" alt="" coords="239,5,417,47"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a92e653a6a9f7a31cb7b6f9bc2e732133" title="ca.mcgill.ecse211.project.\lColorCalibrator.getColor" alt="" coords="241,71,415,112"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a40906193773ead0bfd582f188413c97a" title="ca.mcgill.ecse211.project.\lColorCalibrator.setFrequency" alt="" coords="232,136,424,177"/>
 </map>
