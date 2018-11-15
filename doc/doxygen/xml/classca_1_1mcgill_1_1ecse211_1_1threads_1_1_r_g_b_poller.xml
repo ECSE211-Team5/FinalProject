@@ -63,7 +63,7 @@
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="30" bodyend="33"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="17">ca.mcgill.ecse211.threads.LightPoller.us</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.cont</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="39" endline="41">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="37" endline="39">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -83,8 +83,8 @@
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" compoundref="_light_poller_8java" startline="19">ca.mcgill.ecse211.threads.LightPoller.lgData</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.cont</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" compoundref="_sensor_data_8java" startline="149" endline="158">ca.mcgill.ecse211.threads.SensorData.setRGB</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a92e653a6a9f7a31cb7b6f9bc2e732133" compoundref="_color_calibrator_8java" startline="40" endline="55">ca.mcgill.ecse211.project.ColorCalibrator.getColor</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" compoundref="_color_calibrator_8java" startline="79" endline="95">ca.mcgill.ecse211.project.ColorCalibrator.setFrequency</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a92e653a6a9f7a31cb7b6f9bc2e732133" compoundref="_color_calibrator_8java" startline="40" endline="54">ca.mcgill.ecse211.project.ColorCalibrator.getColor</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" compoundref="_color_calibrator_8java" startline="78" endline="94">ca.mcgill.ecse211.project.ColorCalibrator.setFrequency</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

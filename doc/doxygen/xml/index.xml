@@ -138,6 +138,7 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1ae5c5c445ab84516991219ca3783fcaa4" kind="function"><name>average</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1ae373ebc3ec91ed3bf9dd7304a482a3f5" kind="function"><name>distanceFromRobot</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a6e0ee94b800ca3727ca8009782abda14" kind="function"><name>findClosestPointToRobot</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1aa9819819c4de2ef025caac87d0c0b0db" kind="function"><name>isBoundary</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer" kind="class"><name>ca::mcgill::ecse211::localization::LightLocalizer</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a4952a0770d403a9805b726d79fbed910" kind="variable"><name>leftMotor</name></member>
@@ -146,7 +147,6 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a09e959a6ea2b952658485bb79b350f58" kind="variable"><name>data</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a53afea3fbe56b2313e13e140ba72bc67" kind="variable"><name>navigation</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fe82107f771c1cc70198f6bd5ef97a9" kind="variable"><name>FORWARD_SPEED</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1ad4be05adbc80ce4345708731059e8156" kind="variable"><name>SENSOR_DIS</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a5ffff12fb880c5b5052118fc27b03778" kind="variable"><name>blackLineColor</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" kind="function"><name>LightLocalizer</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" kind="function"><name>localize</name></member>
@@ -183,7 +183,7 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" kind="function"><name>turnTo</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" kind="function"><name>goThroughTunnel</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a0016a23ab5d544148a09948fb1a40e4c" kind="function"><name>goToRingSet</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a720271c3961b2819183210ad6106beff" kind="function"><name>searchRingSet</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a80ab0e4146d1725b60407bdb91f12a30" kind="function"><name>searchRingSet</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" kind="function"><name>turn</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7c66610c5b7496ddb35d342ab2cd3f08" kind="function"><name>forward</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae8530d181ffd790ff9dea5eeab54b1a1" kind="function"><name>stop</name></member>

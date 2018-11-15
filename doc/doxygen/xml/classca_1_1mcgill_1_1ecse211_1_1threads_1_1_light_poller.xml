@@ -173,7 +173,7 @@
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="17">ca.mcgill.ecse211.threads.LightPoller.us</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.cont</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" compoundref="_light_poller_8java" startline="19">ca.mcgill.ecse211.threads.LightPoller.lgData</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="39" endline="41">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="37" endline="39">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">

@@ -5,7 +5,7 @@ var searchData=
   ['searching',['Searching',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a25564076fdd8880377fbd6eaf753456f',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
   ['searchingboundary',['SearchingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a5a3aceb665ba97ac242e77955feed640',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
   ['searchingfinder',['searchingFinder',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#acedc99ad369450d6b2d7711c2d63027a',1,'ca::mcgill::ecse211::project::GameUtil']]],
-  ['searchringset',['searchRingSet',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a720271c3961b2819183210ad6106beff',1,'ca::mcgill::ecse211::project::Navigation']]],
+  ['searchringset',['searchRingSet',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a80ab0e4146d1725b60407bdb91f12a30',1,'ca::mcgill::ecse211::project::Navigation']]],
   ['sen_5fdis',['SEN_DIS',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab940d1a52b9759294dc0229e0fd6bc06',1,'ca::mcgill::ecse211::project::Game']]],
   ['sensordata',['SensorData',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html',1,'ca.mcgill.ecse211.threads.SensorData'],['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a11dcdc9c15184e05a9c84fc3958e26b6',1,'ca.mcgill.ecse211.threads.SensorData.SensorData()']]],
   ['sensordata_2ejava',['SensorData.java',['../_sensor_data_8java.html',1,'']]],

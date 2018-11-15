@@ -209,26 +209,26 @@ public enum Game {
   public ThreadControl usPoller;
 
   /**
-   * Motor object instance that allows control of the left motor connected to port A
+   * This variable stores an EV3LargeRegulatedMotor object instance that allows control of the left motor connected to port A
    */
   public static final EV3LargeRegulatedMotor leftMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("A"));
 
   /**
-   * Motor object instance that allows control of the right motor connected to port D
+   * This variable stores an EV3LargeRegulatedMotor object instance that allows control of the right motor connected to port D
    */
   public static final EV3LargeRegulatedMotor rightMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("D"));
 
   /**
-   * Motor object instance that allows control of the motor on storage rod
+   * This variable stores an EV3LargeRegulatedMotor object instance that allows control of the motor on storage rod
    */
   public static final EV3LargeRegulatedMotor sensorMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("C"));
 
-//  /**
-//   * Motor object instance that allows control of the motor on the rod for collecting rings
-//   */
+ /**
+  * This variable stores an EV3LargeRegulatedMotor object instance that allows control of the motor on the rod for collecting rings
+  */
   public static final EV3LargeRegulatedMotor rodMotor =
       new EV3LargeRegulatedMotor(LocalEV3.get().getPort("B"));
 
@@ -254,7 +254,7 @@ public enum Game {
   public static final double SEN_DIS = 4.2;
   
   /**
-   * Read data from the WiFi class (using another thread)
+   * This method reads data from the WiFi class (using another thread)
    */
   public void readData() {
     WiFi.readData();

@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.GameUtil" 3 "Wed Nov 14 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.GameUtil" 3 "Thu Nov 15 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,6 +27,9 @@ ca.mcgill.ecse211.project.GameUtil
 .br
 .ti -1c
 .RI "static int \fBfindClosestPointToRobot\fP (int[][] points)"
+.br
+.ti -1c
+.RI "static boolean \fBisBoundary\fP (int[] coor)"
 .br
 .in -1c
 .SS "Static Public Attributes"
@@ -64,7 +67,7 @@ Definition at line 19 of file GameUtil\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "static double [] ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.average (int [] p1, int [] p2)\fC [static]\fP"
-find the average of the two coordinates 
+find the average of the two coordinates
 .PP
 \fBParameters:\fP
 .RS 4
@@ -79,18 +82,18 @@ find the average of the two coordinates
 .PP
 
 .PP
-Definition at line 189 of file GameUtil\&.java\&.
+Definition at line 198 of file GameUtil\&.java\&.
 .PP
 .nf
-189                                                      {
-190     double[] result = new double[2];
-191     result[0] = (double) (p1[0] + p2[0]) / 2;
-192     result[1] = (double) (p1[1] + p2[1]) / 2;
-193     return result;
-194   }
+198                                                      {
+199     double[] result = new double[2];
+200     result[0] = (double) (p1[0] + p2[0]) / 2;
+201     result[1] = (double) (p1[1] + p2[1]) / 2;
+202     return result;
+203   }
 .fi
 .SS "static double ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.distanceFromRobot (int x, int y)\fC [static]\fP"
-find the distance from the starting point to two points 
+find the distance from the starting point to two points
 .PP
 \fBParameters:\fP
 .RS 4
@@ -105,22 +108,22 @@ find the distance from the starting point to two points
 .PP
 
 .PP
-Definition at line 202 of file GameUtil\&.java\&.
+Definition at line 212 of file GameUtil\&.java\&.
 .PP
 .nf
-202                                                        {
-203     try {
-204       double[] position = Odometer\&.getOdometer()\&.getXYT();
-205       return (Math\&.pow(Math\&.round(position[0]) - x, 2) + Math\&.pow(Math\&.round(position[1]) - y, 2));
-206     } catch (OdometerExceptions e) {
-207       // TODO Auto-generated catch block
-208       e\&.printStackTrace();
-209     }
-210     return Integer\&.MAX_VALUE;
-211   }
+212                                                        {
+213     try {
+214       double[] position = Odometer\&.getOdometer()\&.getXYT();
+215       return (Math\&.pow(Math\&.round(position[0]) - x, 2) + Math\&.pow(Math\&.round(position[1]) - y, 2));
+216     } catch (OdometerExceptions e) {
+217       // TODO Auto-generated catch block
+218       e\&.printStackTrace();
+219     }
+220     return Integer\&.MAX_VALUE;
+221   }
 .fi
 .SS "static int ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.findClosestPointToRobot (int points[][])\fC [static]\fP"
-find closest point from a set of points 
+find closest point from a set of points
 .PP
 \fBParameters:\fP
 .RS 4
@@ -133,25 +136,46 @@ find closest point from a set of points
 .PP
 
 .PP
-Definition at line 218 of file GameUtil\&.java\&.
+Definition at line 229 of file GameUtil\&.java\&.
 .PP
 .nf
-218                                                             {
-219     int minIndex = 0;
-220     double distance = Integer\&.MAX_VALUE;
-221     
-222     for(int i = 0; i < points\&.length; i++) {
-223       double thisDistance = distanceFromRobot(points[i][0], points[i][1]);
-224       if(thisDistance < distance) {
-225         minIndex = i;
-226         distance = thisDistance;
-227       }
-228     }
-229     return minIndex;
-230   }
+229                                                             {
+230     int minIndex = 0;
+231     double distance = Integer\&.MAX_VALUE;
+232 
+233     for (int i = 0; i < points\&.length; i++) {
+234       double thisDistance = distanceFromRobot(points[i][0], points[i][1]);
+235       if (thisDistance < distance) {
+236         minIndex = i;
+237         distance = thisDistance;
+238       }
+239     }
+240     return minIndex;
+241   }
+.fi
+.SS "static boolean ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.isBoundary (int [] coor)\fC [static]\fP"
+
+.PP
+Definition at line 243 of file GameUtil\&.java\&.
+.PP
+.nf
+243                                                {
+244     int x = coor[0];
+245     int y = coor[1];
+246     boolean onLY = x == GameParameters\&.Island_LL[0]
+247         && (y >= GameParameters\&.Island_LL[1] && y <= GameParameters\&.Island_UR[1]);
+248     boolean onRY = x == GameParameters\&.Island_UR[0]
+249         && (y >= GameParameters\&.Island_LL[1] && y <= GameParameters\&.Island_UR[1]);
+250     boolean onLX = y == GameParameters\&.Island_LL[1]
+251         && (x >= GameParameters\&.Island_LL[0] && x <= GameParameters\&.Island_UR[0]);
+252     boolean onUX = y == GameParameters\&.Island_UR[1]
+253         && (x >= GameParameters\&.Island_LL[0] && x <= GameParameters\&.Island_UR[0]);
+254 
+255     return onLY || onRY || onLX || onUX;
+256   }
 .fi
 .SS "static boolean ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.isSafe (int [] coor)\fC [static]\fP"
-check if one coordinate is safe based on (it is not a wall, tree or inside a tunnel) 
+check if one coordinate is safe based on (it is not a wall, tree or inside a tunnel)
 .PP
 \fBParameters:\fP
 .RS 4
@@ -165,22 +189,22 @@ check if one coordinate is safe based on (it is not a wall, tree or inside a tun
 .PP
 
 .PP
-Definition at line 169 of file GameUtil\&.java\&.
+Definition at line 177 of file GameUtil\&.java\&.
 .PP
 .nf
-169                                            {
-170     int x = coor[0];
-171     int y = coor[1];
-172     boolean inTunnel = x > GameParameters\&.TN_LL[0] && x < GameParameters\&.TN_LL[1]
-173         && y > GameParameters\&.TN_UR[0] && y < GameParameters\&.TN_UR[1];
-174     boolean isTree = x == GameParameters\&.TREE_US[0] && y == GameParameters\&.TREE_US[1];
-175     boolean outBound =
-176         x <= 0 || x >= GameParameters\&.Grid_UR[0] || y <= 0 || y >= GameParameters\&.Grid_UR[1];
-177     if (inTunnel || isTree || outBound) {
-178       return false;
-179     }
-180     return true;
-181   }
+177                                            {
+178     int x = coor[0];
+179     int y = coor[1];
+180     boolean inTunnel = x >= GameParameters\&.TN_LL[0] && x <= GameParameters\&.TN_UR[0]
+181         && y >= GameParameters\&.TN_LL[1] && y <= GameParameters\&.TN_UR[1];
+182     boolean isTree = x == GameParameters\&.TREE_US[0] && y == GameParameters\&.TREE_US[1];
+183     boolean outBound =
+184         x <= 0 || x >= GameParameters\&.Grid_UR[0] || y <= 0 || y >= GameParameters\&.Grid_UR[1];
+185     if (inTunnel || isTree || outBound) {
+186       return false;
+187     }
+188     return true;
+189   }
 .fi
 .SH "Member Data Documentation"
 .PP 

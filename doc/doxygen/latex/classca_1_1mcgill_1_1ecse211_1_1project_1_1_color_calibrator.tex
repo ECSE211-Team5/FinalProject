@@ -72,25 +72,23 @@ Definition at line 40 of file Color\+Calibrator.\+java.
 
 \begin{DoxyCode}
 40                                                     \{
-41     \textcolor{keywordflow}{if} (r>2*g && b<5 ) \{
+41     \textcolor{keywordflow}{if} (r>2*g && b<3 && r>lowerOrangeRBound ) \{
 42       currentColor = Color.Orange;
-43     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (g>2*r && b<5) \{
+43     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (g>2*r && b<3) \{
 44       currentColor = Color.Green;
-45       
-46       \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((r>= lowerYellowRBound && g >= lowerYellowGBound) || ((r>= 7 && r <= 9) && (g >=0 && g <= 2
+45       \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((r>= lowerYellowRBound && g >= lowerYellowGBound) || ((r>= 7 && r <= 9) && (g >=0 && g <= 2
       ))) \{
-47       currentColor = Color.Yellow;
-48     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( (b >= lowerBlueBBound )) \{
-49       currentColor = Color.Blue;
-50     \} \textcolor{keywordflow}{else} \{
-51       currentColor = Color.Other;
-52     \}
-53 
-54     \textcolor{keywordflow}{return} currentColor;
-55   \}
+46       currentColor = Color.Yellow;
+47     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( (b >= lowerBlueBBound )) \{
+48       currentColor = Color.Blue;
+49     \} \textcolor{keywordflow}{else} \{
+50       currentColor = Color.Other;
+51     \}
+52 
+53     \textcolor{keywordflow}{return} currentColor;
+54   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -110,16 +108,16 @@ current color detected by the light\+Sensor
 \end{DoxyReturn}
 
 
-Definition at line 67 of file Color\+Calibrator.\+java.
+Definition at line 66 of file Color\+Calibrator.\+java.
 
 
 \begin{DoxyCode}
-67                                  \{
-68     \textcolor{keywordflow}{if} (currentColor != null)
-69       \textcolor{keywordflow}{return} currentColor;
-70     \textcolor{keywordflow}{else}
-71       \textcolor{keywordflow}{return} Color.Other;
-72   \}
+66                                  \{
+67     \textcolor{keywordflow}{if} (currentColor != null)
+68       \textcolor{keywordflow}{return} currentColor;
+69     \textcolor{keywordflow}{else}
+70       \textcolor{keywordflow}{return} Color.Other;
+71   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_acb1d9cef0739971dbe00cc16712be0fe}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_acb1d9cef0739971dbe00cc16712be0fe}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Color\+Calibrator@{ca\+::mcgill\+::ecse211\+::project\+::\+Color\+Calibrator}!get\+Get\+Color@{get\+Get\+Color}}
@@ -129,31 +127,31 @@ Definition at line 67 of file Color\+Calibrator.\+java.
 
 
 
-Definition at line 127 of file Color\+Calibrator.\+java.
+Definition at line 126 of file Color\+Calibrator.\+java.
 
 
 \begin{DoxyCode}
-127                                          \{
-128     Color c = Color.Other;
-129     \textcolor{keywordflow}{switch} (i) \{
-130       \textcolor{keywordflow}{case} 0:
-131         c = Color.Other;
-132         \textcolor{keywordflow}{break};
-133       \textcolor{keywordflow}{case} 1: 
-134         c = Color.Blue;
-135         \textcolor{keywordflow}{break};
-136       \textcolor{keywordflow}{case} 2:
-137         c = Color.Green;
-138         \textcolor{keywordflow}{break};
-139       \textcolor{keywordflow}{case} 3:
-140         c = Color.Yellow;
-141         \textcolor{keywordflow}{break};
-142       \textcolor{keywordflow}{case} 4:
-143         c = Color.Orange;
-144         \textcolor{keywordflow}{break};
-145     \}
-146     \textcolor{keywordflow}{return} c;
-147   \}
+126                                          \{
+127     Color c = Color.Other;
+128     \textcolor{keywordflow}{switch} (i) \{
+129       \textcolor{keywordflow}{case} 0:
+130         c = Color.Other;
+131         \textcolor{keywordflow}{break};
+132       \textcolor{keywordflow}{case} 1: 
+133         c = Color.Blue;
+134         \textcolor{keywordflow}{break};
+135       \textcolor{keywordflow}{case} 2:
+136         c = Color.Green;
+137         \textcolor{keywordflow}{break};
+138       \textcolor{keywordflow}{case} 3:
+139         c = Color.Yellow;
+140         \textcolor{keywordflow}{break};
+141       \textcolor{keywordflow}{case} 4:
+142         c = Color.Orange;
+143         \textcolor{keywordflow}{break};
+144     \}
+145     \textcolor{keywordflow}{return} c;
+146   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -176,25 +174,25 @@ most frequent colour detected
 \end{DoxyReturn}
 
 
-Definition at line 102 of file Color\+Calibrator.\+java.
+Definition at line 101 of file Color\+Calibrator.\+java.
 
 
 \begin{DoxyCode}
-102                                          \{
-103     Color c = Color.Other;
-104     \textcolor{keywordtype}{int} frequency = colour\_frequency[0];
-105     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < colour\_frequency.length; i++) \{
-106       \textcolor{keywordflow}{if} (colour\_frequency[i] >= frequency) \{
-107         frequency = colour\_frequency[i];
-108         c = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_acb1d9cef0739971dbe00cc16712be0fe}{getGetColor}(i);
-109       \}
-110     \}
-111     \textcolor{keywordflow}{if}(frequency == 0) \{
-112       c = Color.Other;
-113     \}
-114     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_ab6148d75e3a105016580e90ed1ea9bc9}{resetFrequency}();
-115     \textcolor{keywordflow}{return} c;
-116   \}
+101                                          \{
+102     Color c = Color.Other;
+103     \textcolor{keywordtype}{int} frequency = colour\_frequency[0];
+104     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < colour\_frequency.length; i++) \{
+105       \textcolor{keywordflow}{if} (colour\_frequency[i] >= frequency) \{
+106         frequency = colour\_frequency[i];
+107         c = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_acb1d9cef0739971dbe00cc16712be0fe}{getGetColor}(i);
+108       \}
+109     \}
+110     \textcolor{keywordflow}{if}(frequency == 0) \{
+111       c = Color.Other;
+112     \}
+113     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_ab6148d75e3a105016580e90ed1ea9bc9}{resetFrequency}();
+114     \textcolor{keywordflow}{return} c;
+115   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
@@ -220,15 +218,15 @@ Here is the caller graph for this function\+:
 
 This method resets the colour\+\_\+frequency array to 0 
 
-Definition at line 122 of file Color\+Calibrator.\+java.
+Definition at line 121 of file Color\+Calibrator.\+java.
 
 
 \begin{DoxyCode}
-122                                       \{
-123     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < colour\_frequency.length; i ++) \{
-124       colour\_frequency[i] = 0;
-125     \}
-126   \}
+121                                       \{
+122     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < colour\_frequency.length; i ++) \{
+123       colour\_frequency[i] = 0;
+124     \}
+125   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -251,27 +249,27 @@ This method keeps track of how many of each colour were detected by increasing t
 \end{DoxyParams}
 
 
-Definition at line 79 of file Color\+Calibrator.\+java.
+Definition at line 78 of file Color\+Calibrator.\+java.
 
 
 \begin{DoxyCode}
-79                                            \{
-80     \textcolor{keywordflow}{switch} (c) \{
-81       \textcolor{keywordflow}{case} Blue:
-82         colour\_frequency[1] ++;
-83         \textcolor{keywordflow}{break};
-84       \textcolor{keywordflow}{case} Green:
-85         colour\_frequency[2] ++;
-86         \textcolor{keywordflow}{break};
-87       \textcolor{keywordflow}{case} Yellow:
-88         colour\_frequency[3] ++;
-89         \textcolor{keywordflow}{break};
-90       \textcolor{keywordflow}{case} Orange:
-91         colour\_frequency[4] ++;
-92       \textcolor{keywordflow}{default}:
-93         \textcolor{keywordflow}{break};
-94     \}
-95   \}
+78                                            \{
+79     \textcolor{keywordflow}{switch} (c) \{
+80       \textcolor{keywordflow}{case} Blue:
+81         colour\_frequency[1] ++;
+82         \textcolor{keywordflow}{break};
+83       \textcolor{keywordflow}{case} Green:
+84         colour\_frequency[2] ++;
+85         \textcolor{keywordflow}{break};
+86       \textcolor{keywordflow}{case} Yellow:
+87         colour\_frequency[3] ++;
+88         \textcolor{keywordflow}{break};
+89       \textcolor{keywordflow}{case} Orange:
+90         colour\_frequency[4] ++;
+91       \textcolor{keywordflow}{default}:
+92         \textcolor{keywordflow}{break};
+93     \}
+94   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak

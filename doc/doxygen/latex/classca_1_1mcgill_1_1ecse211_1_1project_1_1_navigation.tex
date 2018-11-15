@@ -19,7 +19,7 @@ void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a4b52e605
 \item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a0016a23ab5d544148a09948fb1a40e4c}{go\+To\+Ring\+Set} ()
 \item 
-void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a720271c3961b2819183210ad6106beff}{search\+Ring\+Set} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher}{Ring\+Searcher} searcher)
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a80ab0e4146d1725b60407bdb91f12a30}{search\+Ring\+Set} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher}{Ring\+Searcher} searcher, boolean correct)
 \item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ad74286ad36d333bfaf57661837457b76}{turn} (int angle)
 \item 
@@ -94,8 +94,7 @@ Definition at line 46 of file Navigation.\+java.
 56     \}
 57   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -126,16 +125,14 @@ Definition at line 59 of file Navigation.\+java.
 65     \textcolor{keywordflow}{return} theta;
 66   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a4376e54162df8f123ca3b52e4fd2f38d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -162,13 +159,13 @@ A converted distance
 \end{DoxyReturn}
 
 
-Definition at line 426 of file Navigation.\+java.
+Definition at line 431 of file Navigation.\+java.
 
 
 \begin{DoxyCode}
-426                                                                     \{
-427     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int}) ((180.0 * distance) / (Math.PI * radius));
-428   \}
+431                                                                     \{
+432     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int}) ((180.0 * distance) / (Math.PI * radius));
+433   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -195,19 +192,18 @@ Move the robot forward
 \end{DoxyParams}
 
 
-Definition at line 403 of file Navigation.\+java.
+Definition at line 408 of file Navigation.\+java.
 
 
 \begin{DoxyCode}
-403                                                   \{
-404     leftMotor.setSpeed(speed);
-405     rightMotor.setSpeed(speed);
-406     leftMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, distance * Game.TILE), \textcolor{keyword}{true});
-407     rightMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, distance * Game.TILE), \textcolor{keyword}{false});
-408   \}
+408                                                   \{
+409     leftMotor.setSpeed(speed);
+410     rightMotor.setSpeed(speed);
+411     leftMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, distance * Game.TILE), \textcolor{keyword}{true});
+412     rightMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, distance * Game.TILE), \textcolor{keyword}{false});
+413   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -301,34 +297,36 @@ Definition at line 233 of file Navigation.\+java.
 289     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(angleThoughTunnel);
 290     
 291     \textcolor{comment}{// goback To correct}
-292     leftMotor.backward();
-293     rightMotor.backward();
-294     moveUntilLineDetection();
-295 
-296     \textcolor{comment}{// turn left -6 to correct the effect of the weight}
-297     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ad74286ad36d333bfaf57661837457b76}{turn}(-6);
-298     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a7c66610c5b7496ddb35d342ab2cd3f08}{forward}(250, distance);
-299     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a419b8f07c2c5374411c8e62298e9a402}{setTheta}(angleThoughTunnel);
-300 
-301     \textcolor{comment}{// rotate additional sensor distances to make sure the sensor will not on the balck line}
-302     leftMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, 2*Game.SEN\_DIS), \textcolor{keyword}{true});
-303     rightMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, 2*Game.SEN\_DIS), \textcolor{keyword}{false});
-304     this.moveOneTileWithCorrection(angleThoughTunnel);
-305     \textcolor{keywordtype}{double}[] after = GameUtil.average(notIn.get(0), notIn.get(1));
-306     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(after[0]);
-307     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(after[1]);
-308     \textcolor{comment}{// go to the nearest safe point near tunnel}
-309     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int}[] p : notIn) \{
-310       \textcolor{keywordflow}{if} (GameUtil.isSafe(p)) \{
-311         \textcolor{keywordtype}{double} toPointAngle = Math.toDegrees(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a4376e54162df8f123ca3b52e4fd2f38d}{calculateAngleTo}(p[0], p[1]));
-312         \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(toPointAngle);
-313         this.moveOneTileWithCorrection(toPointAngle);
-314         odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(p[0]);
-315         odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(p[1]);
-316         \textcolor{keywordflow}{break};
-317       \}
-318     \}
-319   \}
+292     leftMotor.setSpeed(FORWARD\_SPEED);
+293     rightMotor.setSpeed(FORWARD\_SPEED);
+294     leftMotor.backward();
+295     rightMotor.backward();
+296     moveUntilLineDetection();
+297 
+298     \textcolor{comment}{// turn left -6 to correct the effect of the weight}
+299     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ad74286ad36d333bfaf57661837457b76}{turn}(-5);
+300     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a7c66610c5b7496ddb35d342ab2cd3f08}{forward}(250, distance);
+301     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a419b8f07c2c5374411c8e62298e9a402}{setTheta}(angleThoughTunnel);
+302 
+303     \textcolor{comment}{// rotate additional sensor distances to make sure the sensor will not on the balck line}
+304     leftMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, 2*Game.SEN\_DIS), \textcolor{keyword}{true});
+305     rightMotor.rotate(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ac9e260bcd619ffa4820d7d0de7ea1c12}{convertDistance}(Game.WHEEL\_RAD, 2*Game.SEN\_DIS), \textcolor{keyword}{false});
+306     this.moveOneTileWithCorrection(angleThoughTunnel);
+307     \textcolor{keywordtype}{double}[] after = GameUtil.average(notIn.get(0), notIn.get(1));
+308     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(after[0]);
+309     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(after[1]);
+310     \textcolor{comment}{// go to the nearest safe point near tunnel}
+311     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int}[] p : notIn) \{
+312       \textcolor{keywordflow}{if} (GameUtil.isSafe(p)) \{
+313         \textcolor{keywordtype}{double} toPointAngle = Math.toDegrees(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a4376e54162df8f123ca3b52e4fd2f38d}{calculateAngleTo}(p[0], p[1]));
+314         \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(toPointAngle);
+315         this.moveOneTileWithCorrection(toPointAngle);
+316         odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(p[0]);
+317         odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(p[1]);
+318         \textcolor{keywordflow}{break};
+319       \}
+320     \}
+321   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
@@ -354,13 +352,13 @@ Here is the caller graph for this function\+:
 
 this method navigate the robot to the ring set, find the right position of the ring set 
 
-Definition at line 351 of file Navigation.\+java.
+Definition at line 353 of file Navigation.\+java.
 
 
 \begin{DoxyCode}
-351                             \{
-352 
-353   \}
+353                             \{
+354 
+355   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a48eeb9ae2da23664421e8da5642054c7}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a48eeb9ae2da23664421e8da5642054c7}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}!move\+With\+Correction@{move\+With\+Correction}}
@@ -410,52 +408,55 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a48eeb9ae2da23664421e8da5642054c7_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a720271c3961b2819183210ad6106beff}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a720271c3961b2819183210ad6106beff}} 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a80ab0e4146d1725b60407bdb91f12a30}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a80ab0e4146d1725b60407bdb91f12a30}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}!search\+Ring\+Set@{search\+Ring\+Set}}
 \index{search\+Ring\+Set@{search\+Ring\+Set}!ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}}
 \subsubsection{\texorpdfstring{search\+Ring\+Set()}{searchRingSet()}}
-{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+project.\+Navigation.\+search\+Ring\+Set (\begin{DoxyParamCaption}\item[{\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher}{Ring\+Searcher}}]{searcher }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+project.\+Navigation.\+search\+Ring\+Set (\begin{DoxyParamCaption}\item[{\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher}{Ring\+Searcher}}]{searcher,  }\item[{boolean}]{correct }\end{DoxyParamCaption})}
 
 this method approaches the ring set by paying attention to the reading of us sensor, stops at the place when the robot can reach the ring 
 
-Definition at line 359 of file Navigation.\+java.
+Definition at line 361 of file Navigation.\+java.
 
 
 \begin{DoxyCode}
-359                                                    \{
-360     \textcolor{comment}{//Go backward to detect the line and correct the rotation}
-361     leftMotor.setSpeed(FORWARD\_SPEED);
-362     rightMotor.setSpeed(FORWARD\_SPEED);
-363     leftMotor.backward();
-364     rightMotor.backward();
-365     moveUntilLineDetection();
-366     \textcolor{comment}{//Forward for 3 cm (approach the ring set)}
-367     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a7c66610c5b7496ddb35d342ab2cd3f08}{forward}(FORWARD\_SPEED, 3/Game.TILE);
-368     \textcolor{comment}{//rotate a little to the left to make sure that the sensor can detect the ring}
-369     leftMotor.rotate(-30, \textcolor{keyword}{false});
-370     \textcolor{comment}{//detect the ring color and beep based on the color}
-371     searcher.search();
-372     \textcolor{comment}{//rotate back}
-373     leftMotor.rotate(30, \textcolor{keyword}{false});
-374     \textcolor{comment}{//prepare for retrieving the ring }
-375     searcher.prepareRetrieve();
-376     \textcolor{comment}{//go to the position where ring can be retrieved}
-377     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a7c66610c5b7496ddb35d342ab2cd3f08}{forward}(FORWARD\_SPEED, 5/Game.TILE);
-378     \textcolor{comment}{//rotate a little to the left to make sure not influence the other ring}
-379     leftMotor.rotate(-30, \textcolor{keyword}{false});
-380     searcher.retrieveRing();
-381     leftMotor.rotate(30, \textcolor{keyword}{false});
-382     \textcolor{comment}{//go back to original position}
-383     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a7c66610c5b7496ddb35d342ab2cd3f08}{forward}(FORWARD\_SPEED, -8/Game.TILE);
-384     searcher.resetRodMotor();
-385   \}
+361                                                                     \{
+362     \textcolor{comment}{//Go backward to detect the line and correct the rotation}
+363     leftMotor.setSpeed(FORWARD\_SPEED);
+364     rightMotor.setSpeed(FORWARD\_SPEED);
+365     
+366     \textcolor{keywordflow}{if}(correct) \{
+367       leftMotor.backward();
+368       rightMotor.backward();
+369       moveUntilLineDetection();
+370       \textcolor{comment}{//Forward for 3 cm (approach the ring set)}
+371       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a7c66610c5b7496ddb35d342ab2cd3f08}{forward}(FORWARD\_SPEED, 3/Game.TILE);
+372     \}
+373     \textcolor{comment}{//rotate a little to the left to make sure that the sensor can detect the ring}
+374     leftMotor.rotate(-30, \textcolor{keyword}{false});
+375     \textcolor{comment}{//detect the ring color and beep based on the color}
+376     searcher.search();
+377     \textcolor{comment}{//rotate back}
+378     leftMotor.rotate(30, \textcolor{keyword}{false});
+379     \textcolor{comment}{//prepare for retrieving the ring }
+380     searcher.prepareRetrieve();
+381     \textcolor{comment}{//go to the position where ring can be retrieved}
+382     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a7c66610c5b7496ddb35d342ab2cd3f08}{forward}(FORWARD\_SPEED, 5/Game.TILE);
+383     \textcolor{comment}{//rotate a little to the left to make sure not influence the other ring}
+384     \textcolor{comment}{//leftMotor.rotate(-20, false);}
+385     searcher.retrieveRing();
+386     \textcolor{comment}{//leftMotor.rotate(20, false);}
+387     \textcolor{comment}{//go back to original position}
+388     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a7c66610c5b7496ddb35d342ab2cd3f08}{forward}(FORWARD\_SPEED, -8/Game.TILE);
+389     searcher.resetRodMotor();
+390   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a720271c3961b2819183210ad6106beff_cgraph}
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a80ab0e4146d1725b60407bdb91f12a30_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -463,7 +464,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a720271c3961b2819183210ad6106beff_icgraph}
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a80ab0e4146d1725b60407bdb91f12a30_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ae8530d181ffd790ff9dea5eeab54b1a1}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ae8530d181ffd790ff9dea5eeab54b1a1}} 
@@ -474,14 +475,14 @@ Here is the caller graph for this function\+:
 
 Stop the motor 
 
-Definition at line 413 of file Navigation.\+java.
+Definition at line 418 of file Navigation.\+java.
 
 
 \begin{DoxyCode}
-413                      \{
-414     leftMotor.stop(\textcolor{keyword}{true});
-415     rightMotor.stop(\textcolor{keyword}{false});
-416   \}
+418                      \{
+419     leftMotor.stop(\textcolor{keyword}{true});
+420     rightMotor.stop(\textcolor{keyword}{false});
+421   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ad89b3dd084d81b4ec4d89ea73ba13eaa}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_ad89b3dd084d81b4ec4d89ea73ba13eaa}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation@{ca\+::mcgill\+::ecse211\+::project\+::\+Navigation}!travel\+To@{travel\+To}}
@@ -626,14 +627,14 @@ Rotate the robot by certain angle
 \end{DoxyParams}
 
 
-Definition at line 392 of file Navigation.\+java.
+Definition at line 397 of file Navigation.\+java.
 
 
 \begin{DoxyCode}
-392                               \{
-393     leftMotor.rotate(convertAngle(Game.WHEEL\_RAD, Game.TRACK, angle), \textcolor{keyword}{true});
-394     rightMotor.rotate(-convertAngle(Game.WHEEL\_RAD, Game.TRACK, angle), \textcolor{keyword}{false});
-395   \}
+397                               \{
+398     leftMotor.rotate(convertAngle(Game.WHEEL\_RAD, Game.TRACK, angle), \textcolor{keyword}{true});
+399     rightMotor.rotate(-convertAngle(Game.WHEEL\_RAD, Game.TRACK, angle), \textcolor{keyword}{false});
+400   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak

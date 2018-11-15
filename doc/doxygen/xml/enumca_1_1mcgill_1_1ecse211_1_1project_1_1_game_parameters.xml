@@ -20,7 +20,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="19" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="19" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a80acbb2b7423c79211e7eb1bd4df8545" prot="public" static="yes" mutable="no">
@@ -36,7 +35,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="24" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="24" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a32080f9c0e2e23c0feefc272620a07ad" prot="public" static="yes" mutable="no">
@@ -66,7 +64,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="49" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="49" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="430" endline="448">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="421" endline="439">ca.mcgill.ecse211.project.Game.runGame</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1af3944d1bc80c4c8a6cabce66e030f4b7" prot="public" static="yes" mutable="no">
@@ -82,7 +80,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="54" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="54" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="259" endline="261">ca.mcgill.ecse211.project.Game.readData</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" compoundref="_component_test_8java" startline="92" endline="98">ca.mcgill.ecse211.tests.ComponentTest.localizationTest</referencedby>
       </memberdef>
@@ -113,7 +111,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="66" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="66" bodyend="-1"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="169" endline="181">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="177" endline="189">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a58f3515615bd8e55a036615a23b8ff80" prot="public" static="yes" mutable="no">
@@ -218,7 +216,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="110" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="110" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="430" endline="448">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="421" endline="439">ca.mcgill.ecse211.project.Game.runGame</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="78" endline="85">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="119" endline="133">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
@@ -236,7 +234,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="120" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="120" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="430" endline="448">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="421" endline="439">ca.mcgill.ecse211.project.Game.runGame</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="78" endline="85">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="119" endline="133">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
@@ -284,7 +282,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="150" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="150" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="430" endline="448">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="421" endline="439">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1aa9819819c4de2ef025caac87d0c0b0db" compoundref="_game_util_8java" startline="243" endline="256">ca.mcgill.ecse211.project.GameUtil.isBoundary</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="78" endline="85">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="119" endline="133">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
@@ -302,7 +301,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="160" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="160" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="430" endline="448">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="421" endline="439">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1aa9819819c4de2ef025caac87d0c0b0db" compoundref="_game_util_8java" startline="243" endline="256">ca.mcgill.ecse211.project.GameUtil.isBoundary</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="78" endline="85">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="119" endline="133">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
@@ -320,8 +320,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="170" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="170" bodyend="-1"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="169" endline="181">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="177" endline="189">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="321">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1aa47abaface63a254570f9a82c4e1fe0d" prot="public" static="yes" mutable="no">
@@ -337,8 +337,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="180" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="180" bodyend="-1"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="169" endline="181">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="177" endline="189">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="321">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a951a1759354ae42a5030e36100f553bc" prot="public" static="yes" mutable="no">
@@ -384,8 +384,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="210" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="210" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="169" endline="181">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="259" endline="261">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" compoundref="_game_util_8java" startline="177" endline="189">ca.mcgill.ecse211.project.GameUtil.isSafe</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="238">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a50543aed3d1731225cee6fe50ebcefe0" prot="public" static="yes" mutable="no">
@@ -453,7 +453,7 @@
         <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a25564076fdd8880377fbd6eaf753456f" compoundref="_game_parameters_8java" startline="31">ca.mcgill.ecse211.project.GameParameters.AreaType.Searching</references>
         <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1ac762256f8b33e7c93c162520a0349769" compoundref="_game_parameters_8java" startline="31">ca.mcgill.ecse211.project.GameParameters.AreaType.Dangerous</references>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="97" endline="137">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="319">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="233" endline="321">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

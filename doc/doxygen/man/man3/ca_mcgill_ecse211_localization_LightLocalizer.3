@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.localization.LightLocalizer" 3 "Wed Nov 14 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.localization.LightLocalizer" 3 "Thu Nov 15 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -57,16 +57,16 @@ This is the class constructor
 .PP
 
 .PP
-Definition at line 38 of file LightLocalizer\&.java\&.
+Definition at line 37 of file LightLocalizer\&.java\&.
 .PP
 .nf
-39                                                                    {
-40     this\&.odometer = Odometer\&.getOdometer();
-41     this\&.data = SensorData\&.getSensorData();
-42     this\&.navigation = nav;
-43     this\&.leftMotor = leftMotor;
-44     this\&.rightMotor = rightMotor;
-45   }
+38                                                                    {
+39     this\&.odometer = Odometer\&.getOdometer();
+40     this\&.data = SensorData\&.getSensorData();
+41     this\&.navigation = nav;
+42     this\&.leftMotor = leftMotor;
+43     this\&.rightMotor = rightMotor;
+44   }
 .fi
 .SH "Member Function Documentation"
 .PP 
@@ -80,65 +80,65 @@ Definition at line 38 of file LightLocalizer\&.java\&.
 .PP
 
 .PP
-Definition at line 53 of file LightLocalizer\&.java\&.
+Definition at line 52 of file LightLocalizer\&.java\&.
 .PP
 .nf
-53                                  {
-54     leftMotor\&.setSpeed(FORWARD_SPEED);
-55     rightMotor\&.setSpeed(FORWARD_SPEED);
-56 
-57     // 1\&. GO forward find the y=0 line
-58     leftMotor\&.forward();
-59     rightMotor\&.forward();
-60     while (leftMotor\&.isMoving() || rightMotor\&.isMoving()) {
-61       if (data\&.getL()[0] < blackLineColor) {
-62         leftMotor\&.stop(true);
-63       }
-64       if (data\&.getL()[1] < blackLineColor) {
-65         rightMotor\&.stop(true);
-66       }
-67     }
-68     odometer\&.setTheta(0\&.0);
-69     Sound\&.beep();
-70     odometer\&.setY(0);
-71     // 2\&. Turn and go forward find the x=0 line
-72     navigation\&.turnTo(90);
-73     leftMotor\&.setSpeed(FORWARD_SPEED);
-74     rightMotor\&.setSpeed(FORWARD_SPEED);
-75     leftMotor\&.forward();
-76     rightMotor\&.forward();
-77     while (leftMotor\&.isMoving() || rightMotor\&.isMoving()) {
-78       if (data\&.getL()[0] < blackLineColor) {
-79         leftMotor\&.stop(true);
-80       }
-81       if (data\&.getL()[1] < blackLineColor) {
-82         rightMotor\&.stop(true);
-83       }
-84     }
-85     odometer\&.setTheta(90\&.0);
-86     Sound\&.beep();
-87     odometer\&.setX(0);
-88     leftMotor\&.setSpeed(FORWARD_SPEED);
-89     rightMotor\&.setSpeed(FORWARD_SPEED);
-90     // 3\&. Go backwards by sensor-wheel center distance in x-direction
-91     leftMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), true);
-92     rightMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), false);
-93     // 4\&. Go backwards by sensor-wheel center distance in y-direction
-94     navigation\&.turnTo(0);
-95     leftMotor\&.setSpeed(FORWARD_SPEED);
-96     rightMotor\&.setSpeed(FORWARD_SPEED);
-97     //double sensorDistanceOffset = 2\&.5;
-98     leftMotor\&.rotate(
-99         Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS),
-100         true);
-101     rightMotor\&.rotate(
-102         Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS),
-103         false);
-104     odometer\&.setTheta(0);
-105     odometer\&.setX(sC[0]);
-106     odometer\&.setY(sC[1]);
-107 
-108   }
+52                                  {
+53     leftMotor\&.setSpeed(FORWARD_SPEED);
+54     rightMotor\&.setSpeed(FORWARD_SPEED);
+55 
+56     // 1\&. GO forward find the y=0 line
+57     leftMotor\&.forward();
+58     rightMotor\&.forward();
+59     while (leftMotor\&.isMoving() || rightMotor\&.isMoving()) {
+60       if (data\&.getL()[0] < blackLineColor) {
+61         leftMotor\&.stop(true);
+62       }
+63       if (data\&.getL()[1] < blackLineColor) {
+64         rightMotor\&.stop(true);
+65       }
+66     }
+67     odometer\&.setTheta(0\&.0);
+68     Sound\&.beep();
+69     odometer\&.setY(0);
+70     // 2\&. Turn and go forward find the x=0 line
+71     navigation\&.turnTo(90);
+72     leftMotor\&.setSpeed(FORWARD_SPEED);
+73     rightMotor\&.setSpeed(FORWARD_SPEED);
+74     leftMotor\&.forward();
+75     rightMotor\&.forward();
+76     while (leftMotor\&.isMoving() || rightMotor\&.isMoving()) {
+77       if (data\&.getL()[0] < blackLineColor) {
+78         leftMotor\&.stop(true);
+79       }
+80       if (data\&.getL()[1] < blackLineColor) {
+81         rightMotor\&.stop(true);
+82       }
+83     }
+84     odometer\&.setTheta(90\&.0);
+85     Sound\&.beep();
+86     odometer\&.setX(0);
+87     leftMotor\&.setSpeed(FORWARD_SPEED);
+88     rightMotor\&.setSpeed(FORWARD_SPEED);
+89     // 3\&. Go backwards by sensor-wheel center distance in x-direction
+90     leftMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), true);
+91     rightMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), false);
+92     // 4\&. Go backwards by sensor-wheel center distance in y-direction
+93     navigation\&.turnTo(0);
+94     leftMotor\&.setSpeed(FORWARD_SPEED);
+95     rightMotor\&.setSpeed(FORWARD_SPEED);
+96     //double sensorDistanceOffset = 2\&.5;
+97     leftMotor\&.rotate(
+98         Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS),
+99         true);
+100     rightMotor\&.rotate(
+101         Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS),
+102         false);
+103     odometer\&.setTheta(0);
+104     odometer\&.setX(sC[0]);
+105     odometer\&.setY(sC[1]);
+106 
+107   }
 .fi
 
 

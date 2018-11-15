@@ -249,13 +249,13 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/Odometer.java" line="69" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/Odometer.java" bodystart="69" bodyend="78"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" compoundref="_light_localizer_8java" startline="38" endline="45">ca.mcgill.ecse211.localization.LightLocalizer.LightLocalizer</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" compoundref="_light_localizer_8java" startline="37" endline="44">ca.mcgill.ecse211.localization.LightLocalizer.LightLocalizer</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1a3603202cdb5035c4e4164933b0aebeec" compoundref="_ultrasonic_localizer_8java" startline="43" endline="50">ca.mcgill.ecse211.localization.UltrasonicLocalizer.UltrasonicLocalizer</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1ad80b45e0bc4bf935494e075edcec739c" compoundref="_odometry_correction_8java" startline="38" endline="42">ca.mcgill.ecse211.odometer.OdometryCorrection.OdometryCorrection</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1af0970123ca090749bfb2f5b9f478c01d" compoundref="_display_8java" startline="35" endline="39">ca.mcgill.ecse211.project.Display.Display</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="358" endline="423">ca.mcgill.ecse211.project.Game.preparation</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1ae373ebc3ec91ed3bf9dd7304a482a3f5" compoundref="_game_util_8java" startline="202" endline="211">ca.mcgill.ecse211.project.GameUtil.distanceFromRobot</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="259" endline="261">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="349" endline="414">ca.mcgill.ecse211.project.Game.preparation</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1ae373ebc3ec91ed3bf9dd7304a482a3f5" compoundref="_game_util_8java" startline="212" endline="221">ca.mcgill.ecse211.project.GameUtil.distanceFromRobot</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" compoundref="_navigation_8java" startline="46" endline="57">ca.mcgill.ecse211.project.Navigation.Navigation</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="78" endline="85">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="119" endline="133">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
@@ -292,7 +292,7 @@
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/Odometer.java" line="99" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/Odometer.java" bodystart="99" bodyend="140"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1aaa06f190d634299fcb1b97a1891dad85" compoundref="_odometer_data_8java" startline="116" endline="132">ca.mcgill.ecse211.odometer.OdometerData.update</references>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="237">ca.mcgill.ecse211.project.Game.TILE</references>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="238">ca.mcgill.ecse211.project.Game.TILE</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
