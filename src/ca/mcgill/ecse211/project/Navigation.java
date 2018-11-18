@@ -177,7 +177,7 @@ public class Navigation {
     moveUntilLineDetection(true);
   }
 
-  public void moveOneTileWithCorrection(int theta) {
+  public void moveOneTileWithCorrection(double theta) {
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.forward();
@@ -407,7 +407,7 @@ public class Navigation {
     if(correct) {
       leftMotor.backward();
       rightMotor.backward();
-      moveUntilLineDetection();
+      moveUntilLineDetection(true);
       //Forward for 3 cm (approach the ring set)
       forward(FORWARD_SPEED, 3/Game.TILE);
     }
