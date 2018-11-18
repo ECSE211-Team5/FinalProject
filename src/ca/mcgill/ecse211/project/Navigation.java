@@ -5,6 +5,7 @@ import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.threads.RingSearcher;
 import ca.mcgill.ecse211.threads.SensorData;
+import lejos.hardware.Sound;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 
 /**
@@ -167,30 +168,74 @@ public class Navigation {
       moveOneTileWithCorrection(theta);
     }
   }
+  
+  public synchronized void moveBackWithCorrection() {
+    leftMotor.setSpeed(FORWARD_SPEED);
+    rightMotor.setSpeed(FORWARD_SPEED);
+    leftMotor.backward();
+    rightMotor.backward();
+    moveUntilLineDetection(true);
+  }
 
-  private void moveOneTileWithCorrection(double theta) {
+  public void moveOneTileWithCorrection(int theta) {
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.forward();
     rightMotor.forward();
-    moveUntilLineDetection();
+    moveUntilLineDetection(true);
     odometer.setTheta(theta);
   }
 
-  private void moveUntilLineDetection() {
+  private void moveUntilLineDetection(boolean checkForBlackLine) {
+    double rotation = 0;
+    int lastTachoCount = 0;
+    char detacted = ' ';
     while (leftMotor.isMoving() || rightMotor.isMoving()) {
       double left = data.getL()[0];
       double right = data.getL()[1];
-      if (left < -5) {
+      if (left < -10) {
         leftMotor.stop(true);
+        if(detacted == ' ') {
+          detacted = 'l';
+          rotation = odometer.getXYT()[2];
+          lastTachoCount = leftMotor.getTachoCount();
+        }
       }
 
-      if (right < -10) {
+      if (right < -13) {
         rightMotor.stop(true);
+        if(detacted == ' ') {
+          detacted = 'r';
+          rotation = odometer.getXYT()[2];
+          lastTachoCount = leftMotor.getTachoCount();
+        }
       }
     }
+    double afterRotation = odometer.getXYT()[2];
+    boolean missedBlackLine = false;
+    if(rotation < 10 || rotation > 350) {
+      missedBlackLine = !(afterRotation > 340 || afterRotation < 20); 
+    }else {
+      missedBlackLine = Math.abs(afterRotation - rotation) > 30;
+    }
+    
+    if(missedBlackLine && checkForBlackLine) {
+      leftMotor.setSpeed(leftMotor.getMaxSpeed());
+      rightMotor.setSpeed(rightMotor.getMaxSpeed());
+      if(detacted == 'l') rightMotor.rotate(-(rightMotor.getTachoCount() - lastTachoCount));
+      else if(detacted == 'r') leftMotor.rotate(-(leftMotor.getTachoCount() - lastTachoCount));
+    }
+    leftMotor.setSpeed(FORWARD_SPEED);
+    rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
     rightMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS+0.5), false);
+    if(missedBlackLine && checkForBlackLine) {
+      leftMotor.setSpeed(FORWARD_SPEED);
+      rightMotor.setSpeed(FORWARD_SPEED);
+      leftMotor.backward();
+      rightMotor.backward();
+      moveUntilLineDetection(false);
+    }
   }
 
   /**
@@ -289,11 +334,7 @@ public class Navigation {
     turnTo(angleThoughTunnel);
     
     // goback To correct
-    leftMotor.setSpeed(FORWARD_SPEED);
-    rightMotor.setSpeed(FORWARD_SPEED);
-    leftMotor.backward();
-    rightMotor.backward();
-    moveUntilLineDetection();
+    moveBackWithCorrection();
 
     // turn left -6 to correct the effect of the weight
     turn(-5);

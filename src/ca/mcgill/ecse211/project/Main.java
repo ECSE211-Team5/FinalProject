@@ -18,12 +18,12 @@ public class Main {
   /**
    * This variable decides whether or not to enable our tests
    */
-  public static boolean test = false;
+  public static boolean test = true;
 
   /**
    * This variable stores the type of test that we want to perform
    */
-  public static ComponentTest.Type testType = ComponentTest.Type.RingDetection;
+  //public static ComponentTest.Type testType = ComponentTest.Type.RingDetection;
 
   /**
    * This method is our main entry point - instantiate objects and halt until a button is pressed
@@ -39,7 +39,7 @@ public class Main {
         (new Thread() {
           public void run() {
             try {
-              ComponentTest.ringMotorTest();
+              ComponentTest.blackLineTest();
             } catch (Exception e) {
               // TODO Auto-generated catch block
               e.printStackTrace();

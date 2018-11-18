@@ -132,4 +132,21 @@ public enum ComponentTest {
     }
   }
   
+  public static void blackLineTest() throws OdometerExceptions {
+    // TODO Auto-generated method stub
+    Navigation navi = new Navigation(Game.leftMotor, Game.rightMotor);
+    GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+    int[] arr1 = {0,0};
+    int[] arr2 = {0,0};
+    GameUtil.startingFinder = new GameUtil.PathFinder(arr1,arr2);
+    int count = 0;
+   while(count <85) {
+     navi.moveOneTileWithCorrection(0);
+     count++;
+     if(count%7 ==0) {
+       navi.turn(90);
+     }
+   }
+  }
+  
 }
