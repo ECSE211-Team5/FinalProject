@@ -335,7 +335,11 @@ public enum Game {
         // turn facing the ring set
         navigation.turnTo(Math.toDegrees(navigation.calculateAngleTo(tree[0], tree[1])));
         boolean doCorrection = !GameUtil.isBoundary(side);
-        navigation.searchRingSet(searcher, doCorrection);
+        if(i != treeSides.length - 1) {
+          navigation.searchRingSet(searcher, doCorrection, true);
+        }else {
+          navigation.searchRingSet(searcher, doCorrection, false);
+        }
       }
     }
   }

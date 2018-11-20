@@ -94,22 +94,21 @@ public class RingSearcher{
    * This method rotate the rod to a suitable position for retrieve the ring
    */
   public void prepareRetrieve() {
-    rodMotor.rotate(170);
+    rodMotor.rotate(180);
   }
   
   /**
    * this method retrieve the searched ring
    */
   public void retrieveRing() {
-    rodMotor.rotate(80);
-    rodMotor.rotate(-80);
+    rodMotor.rotate(70);
   }
   
   /**
    * Rotate the rod back to the original position
    */
   public void resetRodMotor() {
-    rodMotor.rotate(-170);
+    rodMotor.rotate(-170-80);
   }
   
   /**

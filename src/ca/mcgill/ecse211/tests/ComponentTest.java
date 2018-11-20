@@ -128,7 +128,11 @@ public enum ComponentTest {
     for(int i = 0; i < 4; i++) {
       navigation.travelToWithCorrection(other[i][0], other[i][1],false);
       navigation.turn(-90);
-      //navigation.searchRingSet(searcher);
+      if(i != 3) {
+        navigation.searchRingSet(searcher, true, true);
+      }else {
+        navigation.searchRingSet(searcher, true, false);
+      }
     }
   }
   

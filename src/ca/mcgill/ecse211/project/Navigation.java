@@ -32,6 +32,8 @@ public class Navigation {
   private static final int FORWARD_SPEED = 140;
   private static final int ROTATE_SPEED = 250;
   private static final int ACCELERATION = 300;
+  private static int leftBlackLineThre = -10;
+  private static int rightBlackLineThre = -13;
 
   private EV3LargeRegulatedMotor leftMotor;
   private EV3LargeRegulatedMotor rightMotor;
@@ -191,18 +193,20 @@ public class Navigation {
     int lastTachoCount = 0;
     char detacted = ' ';
     while (leftMotor.isMoving() || rightMotor.isMoving()) {
+      //get left and right sensor values
       double left = data.getL()[0];
       double right = data.getL()[1];
-      if (left < -10) {
+      if (left < leftBlackLineThre) {
         leftMotor.stop(true);
         if(detacted == ' ') {
           detacted = 'l';
           rotation = odometer.getXYT()[2];
-          lastTachoCount = leftMotor.getTachoCount();
+          lastTachoCount = rightMotor.getTachoCount();
+          rightBlackLineThre = -13;
         }
       }
 
-      if (right < -13) {
+      if (right < rightBlackLineThre) {
         rightMotor.stop(true);
         if(detacted == ' ') {
           detacted = 'r';
@@ -229,6 +233,8 @@ public class Navigation {
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
     rightMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS+0.5), false);
+    
+    //go backward to correct again
     if(missedBlackLine && checkForBlackLine) {
       leftMotor.setSpeed(FORWARD_SPEED);
       rightMotor.setSpeed(FORWARD_SPEED);
@@ -389,17 +395,10 @@ public class Navigation {
   }
 
   /**
-   * this method navigate the robot to the ring set, find the right position of the ring set
-   */
-  public void goToRingSet() {
-
-  }
-
-  /**
    * this method approaches the ring set by paying attention to the reading of us sensor, stops at
    * the place when the robot can reach the ring
    */
-  public void searchRingSet(RingSearcher searcher, boolean correct) {
+  public void searchRingSet(RingSearcher searcher, boolean correct, boolean reset) {
     //Go backward to detect the line and correct the rotation
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
@@ -412,22 +411,26 @@ public class Navigation {
       forward(FORWARD_SPEED, 3/Game.TILE);
     }
     //rotate a little to the left to make sure that the sensor can detect the ring
-    leftMotor.rotate(-30, false);
+    leftMotor.rotate(-40, false);
     //detect the ring color and beep based on the color
     searcher.search();
     //rotate back
-    leftMotor.rotate(30, false);
+    leftMotor.rotate(40, false);
     //prepare for retrieving the ring 
     searcher.prepareRetrieve();
+    
+    rightMotor.rotate(-30, false);
     //go to the position where ring can be retrieved
     forward(FORWARD_SPEED, 5/Game.TILE);
+    rightMotor.rotate(30, false);
     //rotate a little to the left to make sure not influence the other ring
-    //leftMotor.rotate(-20, false);
     searcher.retrieveRing();
-    //leftMotor.rotate(20, false);
     //go back to original position
+    rightMotor.rotate(-30, false);
     forward(FORWARD_SPEED, -8/Game.TILE);
-    searcher.resetRodMotor();
+    rightMotor.rotate(30, false);
+    if(reset)
+      searcher.resetRodMotor();
   }
 
   /**
