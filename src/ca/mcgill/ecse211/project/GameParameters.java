@@ -53,6 +53,7 @@ public enum GameParameters {
    */
   public static int[] SC = {1, 7, 90};
   
+  public static int[] SCUS = {1, 1};
   /**
    * This variable stores the lower left coordinates of the entire grid
    */

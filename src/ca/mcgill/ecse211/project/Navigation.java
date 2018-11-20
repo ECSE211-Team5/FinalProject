@@ -1,6 +1,8 @@
 package ca.mcgill.ecse211.project;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.threads.RingSearcher;
@@ -240,7 +242,7 @@ public class Navigation {
       rightMotor.setSpeed(FORWARD_SPEED);
       leftMotor.backward();
       rightMotor.backward();
-      moveUntilLineDetection(false);
+      moveUntilLineDetection(true);
     }
   }
 
@@ -376,6 +378,8 @@ public class Navigation {
     for (int i = 0; i < points.size(); i++) {
       points.get(i)[n] = points.get(i)[n] + multiplier * 1;
     }
+    
+    Collections.sort(points, new GameUtil.NearestComparator());
     //find the first safe point
     for(int[] p : points) {
       if(GameUtil.isSafe(p)) {
@@ -409,6 +413,8 @@ public class Navigation {
       moveUntilLineDetection(true);
       //Forward for 3 cm (approach the ring set)
       forward(FORWARD_SPEED, 3/Game.TILE);
+    }else {
+      forward(FORWARD_SPEED, 2/Game.TILE);
     }
     //rotate a little to the left to make sure that the sensor can detect the ring
     leftMotor.rotate(-40, false);
@@ -427,7 +433,11 @@ public class Navigation {
     searcher.retrieveRing();
     //go back to original position
     rightMotor.rotate(-30, false);
-    forward(FORWARD_SPEED, -8/Game.TILE);
+    if(correct) {
+      forward(FORWARD_SPEED, -8/Game.TILE);
+    }else {
+      forward(FORWARD_SPEED, -7/Game.TILE);
+    }
     rightMotor.rotate(30, false);
     if(reset)
       searcher.resetRodMotor();

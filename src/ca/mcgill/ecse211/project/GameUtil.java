@@ -1,6 +1,7 @@
 package ca.mcgill.ecse211.project;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedList;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
@@ -20,6 +21,15 @@ public class GameUtil {
   public static PathFinder startingFinder;
   public static PathFinder searchingFinder;
 
+  public static class NearestComparator implements Comparator<int[]>{
+
+    @Override
+    public int compare(int[] a, int[] b) {
+      return (int)(GameUtil.distanceFromRobot(a[0], a[1]) - GameUtil.distanceFromRobot(b[0], b[1]));
+    }
+    
+  }
+  
   /**
    * Class that find the shortest path from one point to another with constraints inside one area
    * 

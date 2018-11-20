@@ -17,7 +17,7 @@ public enum WiFi {
   INSTANCE;
   
   // ** Set these as appropriate for your team and current situation **
-  private static final String SERVER_IP = "192.168.2.2";
+  private static final String SERVER_IP = "192.168.2.31";
 
   /**
    * This method sets up a connection to a locally hosted server and reads Game Parameter values
@@ -128,18 +128,26 @@ public enum WiFi {
           case 0:
             int[] sc0 = {1,1,0};
             GameParameters.SC = sc0;
+            int[] scus0 = {0,0};
+            GameParameters.SCUS= scus0;
             break;
           case 1:
             int[] sc1 = {7,1,270};
             GameParameters.SC = sc1;
+            int[] scus1 = {8,0};
+            GameParameters.SCUS= scus1;
             break;
           case 2:
             int[] sc2 = {7,7,180};
             GameParameters.SC = sc2;
+            int[] scus2 = {8,8};
+            GameParameters.SCUS= scus2;
             break;
           case 3:
             int[] sc3 = {1,7,90};
             GameParameters.SC = sc3;
+            int[] scus3 = {0,8};
+            GameParameters.SCUS= scus3;
             break;
         }
 /**
@@ -171,18 +179,26 @@ public enum WiFi {
           case 0:
             int[] sc0 = {1,1,0};
             GameParameters.SC = sc0;
+            int[] scus0 = {0,0};
+            GameParameters.SCUS= scus0;
             break;
           case 1:
             int[] sc1 = {14,1,270};
             GameParameters.SC = sc1;
+            int[] scus1 = {15,0};
+            GameParameters.SCUS= scus1;
             break;
           case 2:
             int[] sc2 = {14,8,180};
             GameParameters.SC = sc2;
+            int[] scus2= {15,9};
+            GameParameters.SCUS= scus2;
             break;
           case 3:
             int[] sc3 = {1,8,90};
             GameParameters.SC = sc3;
+            int[] scus3 = {0,9};
+            GameParameters.SCUS= scus3;
             break;
         }
       /**  

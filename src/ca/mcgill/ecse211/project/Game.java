@@ -267,6 +267,7 @@ public enum Game {
    */
   private void localizeAndReadData(UltrasonicLocalizer us, LightLocalizer lgLoc) throws OdometerExceptions {
     this.rgbPoller.setStart(false);
+    
     //read data at the same time as the localization
       readData();
     
@@ -297,7 +298,6 @@ public enum Game {
   private void navigateBackTunnel(Navigation nav, RingSearcher searcher) {
     try {
       rgbPoller.setStart(false);
-      searcher.protectRing();
       nav.goThroughTunnel();
     } catch (Exception e) {
       // TODO Auto-generated catch block
@@ -312,7 +312,11 @@ public enum Game {
   private static void navigateStart(Navigation nav, RingSearcher searcher) {
     int[] starting = GameParameters.SC;
     nav.travelToWithCorrection(starting[0], starting[1], false);
-    searcher.unloadRing();
+    nav.turnTo(Math.toDegrees(nav.calculateAngleTo(GameParameters.SCUS[0], GameParameters.SCUS[1])));
+    Sound.buzz();
+    Sound.beepSequenceUp();
+    Sound.beepSequence();
+    Sound.twoBeeps();
   }
 
   /**
@@ -329,6 +333,9 @@ public enum Game {
     
     //search the tree counterclockwise
     for(int i = 0; i < treeSides.length; i++) {
+      if(i == 0) {
+        Sound.beep();
+      }
       int[] side = treeSides[(startingIndex+i)%treeSides.length];
       if(GameUtil.isSafe(side)) {
         navigation.travelToWithCorrection(side[0], side[1], false);
@@ -341,6 +348,7 @@ public enum Game {
           navigation.searchRingSet(searcher, doCorrection, false);
         }
       }
+      
     }
   }
   
@@ -384,23 +392,23 @@ public enum Game {
     SampleProvider frontLight[] = new SampleProvider[1];
     frontLight[0] = lgSensors[2].getRGBMode();
 
-    TextLCD lcd = LocalEV3.get().getTextLCD();
-    Display odometryDisplay = new Display(lcd);
-    // STEP 1: LOCALIZE to (1,1)
-    // ButtonChoice left or right
-    lcd.clear();
-    lcd.drawString("<  Left  |  Right >", 0, 0);
-    lcd.drawString(" falling | rising  ", 0, 1);
-    lcd.drawString("  edge   |  edge   ", 0, 2);
-    lcd.drawString("        \\/        ", 0, 3);
-    lcd.drawString("  Color Detection  ", 0, 4);
+//    TextLCD lcd = LocalEV3.get().getTextLCD();
+//    Display odometryDisplay = new Display(lcd);
+//    // STEP 1: LOCALIZE to (1,1)
+//    // ButtonChoice left or right
+//    lcd.clear();
+//    lcd.drawString("<  Left  |  Right >", 0, 0);
+//    lcd.drawString(" falling | rising  ", 0, 1);
+//    lcd.drawString("  edge   |  edge   ", 0, 2);
+//    lcd.drawString("        \\/        ", 0, 3);
+//    lcd.drawString("  Color Detection  ", 0, 4);
 
     // Start odometer and odometer display
     Thread odoThread = new Thread(odometer);
     odoThread.start();
-    Thread odoDisplayThread = new Thread(odometryDisplay);
-    odoDisplayThread.start();
-
+//    Thread odoDisplayThread = new Thread(odometryDisplay);
+//    odoDisplayThread.start();
+    Sound.beep();
     // Start ultrasonic and light sensors
     usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
     Thread usThread = new Thread(usPoller);
