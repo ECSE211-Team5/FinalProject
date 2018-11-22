@@ -21,13 +21,49 @@ public class GameUtil {
   public static PathFinder startingFinder;
   public static PathFinder searchingFinder;
 
-  public static class NearestComparator implements Comparator<int[]>{
-
+  /**
+   * This is class is used as a comparator to sort the points from nearest to the robot.
+ * @author Caspar Cedro
+ * @author Percy Chen
+ * @author Patrick Erath
+ * @author Anssam Ghezala
+ * @author Susan Matuszewski
+ * @author Kamy Moussavi Kafi
+   *
+   */
+  public static class RobotComparator implements Comparator<int[]>{
     @Override
     public int compare(int[] a, int[] b) {
-      return (int)(GameUtil.distanceFromRobot(a[0], a[1]) - GameUtil.distanceFromRobot(b[0], b[1]));
+      double[] point = new double[2];
+      try {
+        point = Odometer.getOdometer().getXYT();
+      } catch (OdometerExceptions e) {
+        e.printStackTrace();
+      }
+       return (int)(GameUtil.distanceFrom(a[0], a[1], point) - GameUtil.distanceFrom(b[0], b[1], point));
     }
-    
+  }
+  
+  public static class RingSetComparator implements Comparator<int[]>{
+    @Override
+    public int compare(int[] a, int[] b) {
+      double[] point = new double[2];
+      for(int i = 0; i < point.length; i++) {
+        point[i] = GameParameters.TREE_US[i];
+      }
+      return (int)(GameUtil.distanceFrom(a[0], a[1], point) - GameUtil.distanceFrom(b[0], b[1], point));
+    }
+  }
+  
+  public static class StartingComparator implements Comparator<int[]>{
+    @Override
+    public int compare(int[] a, int[] b) {
+      double[] point = new double[2];
+      for(int i = 0; i < point.length; i++) {
+        point[i] = GameParameters.SC[i];
+      }
+      return (int)(GameUtil.distanceFrom(a[0], a[1], point) - GameUtil.distanceFrom(b[0], b[1], point));
+    }
   }
   
   /**
@@ -219,15 +255,8 @@ public class GameUtil {
    * @param y
    * @return
    */
-  public static double distanceFromRobot(int x, int y) {
-    try {
-      double[] position = Odometer.getOdometer().getXYT();
+  public static double distanceFrom(int x, int y, double[] position) {
       return (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
-    } catch (OdometerExceptions e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    return Integer.MAX_VALUE;
   }
 
   /**
@@ -241,10 +270,16 @@ public class GameUtil {
     double distance = Integer.MAX_VALUE;
 
     for (int i = 0; i < points.length; i++) {
-      double thisDistance = distanceFromRobot(points[i][0], points[i][1]);
-      if (thisDistance < distance) {
-        minIndex = i;
-        distance = thisDistance;
+      try {
+        double[] point = Odometer.getOdometer().getXYT();
+        double thisDistance = distanceFrom(points[i][0], points[i][1], point);
+        if (thisDistance < distance) {
+          minIndex = i;
+          distance = thisDistance;
+        }
+      } catch (OdometerExceptions e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
       }
     }
     return minIndex;

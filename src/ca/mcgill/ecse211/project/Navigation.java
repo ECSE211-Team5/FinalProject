@@ -301,13 +301,19 @@ public class Navigation {
     //search for the points that are the same as the current area of the robot
     //these are the entrance of the tunnel, also find the other two points, those
     //are the exit of the tunnel
+    GameParameters.AreaType type = GameParameters.getType((int) Math.round(position[0]), (int) Math.round(position[1]));
     for (int[] point : corners) {
-      if (GameParameters.getType(point[0], point[1]) == GameParameters
-          .getType((int) Math.round(position[0]), (int) Math.round(position[1]))) {
+      if (GameParameters.getType(point[0], point[1]) == type) {
         points.add(point);
       } else {
         notIn.add(point);
       }
+    }
+    
+    if(type == GameParameters.AreaType.InStarting) {
+      Collections.sort(notIn, new GameUtil.RingSetComparator());
+    }else if(type == GameParameters.AreaType.Searching) {
+      Collections.sort(notIn, new GameUtil.StartingComparator());
     }
     
     //find the direction and length of the tunnel
@@ -335,7 +341,6 @@ public class Navigation {
         notIn.get(i)[1] = notIn.get(i)[1] - multi * 1;
       }
     }
-
     
     double[] tunnelEnd = GameUtil.average(notIn.get(0), notIn.get(1));
     double angleThoughTunnel = Math.toDegrees(calculateAngleTo(tunnelEnd[0], tunnelEnd[1]));
@@ -379,7 +384,7 @@ public class Navigation {
       points.get(i)[n] = points.get(i)[n] + multiplier * 1;
     }
     
-    Collections.sort(points, new GameUtil.NearestComparator());
+    Collections.sort(points, new GameUtil.RobotComparator());
     //find the first safe point
     for(int[] p : points) {
       if(GameUtil.isSafe(p)) {

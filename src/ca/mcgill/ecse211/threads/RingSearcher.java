@@ -56,8 +56,8 @@ public class RingSearcher{
    * 
    */
   public void  search() {
-    sensorMotor.rotate(-180);
-    sensorMotor.rotate(180);
+    sensorMotor.rotate(-90);
+    sensorMotor.rotate(90);
     //TODO: add method for decide the color and beeps
     //determine most frequent colour detected and beep accordingly
  //   System.out.println("here");
@@ -88,6 +88,14 @@ public class RingSearcher{
         break;
     }
     Game.INSTANCE.rgbPoller.setStart(true);
+  }  
+  
+  public void prepareSearch() {
+    sensorMotor.rotate(-90);
+  }
+  
+  public void resetSearch() {
+    sensorMotor.rotate(90);
   }
   
   /**
@@ -116,12 +124,5 @@ public class RingSearcher{
    */
   public void protectRing() {
     rodMotor.rotate(270);
-  }
-  
-  /**
-   * unload all rings
-   */
-  public void unloadRing() {
-    rodMotor.backward();
   }
 }

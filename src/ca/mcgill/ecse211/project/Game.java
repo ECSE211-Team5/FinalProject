@@ -269,8 +269,7 @@ public enum Game {
     this.rgbPoller.setStart(false);
     
     //read data at the same time as the localization
-      readData();
-    
+    readData(); 
     //perform localization
     us.localize(Button.ID_LEFT);
     this.usPoller.setStart(false);
@@ -330,15 +329,15 @@ public enum Game {
     
     //Find the nearest point relative to the robot
     int startingIndex = GameUtil.findClosestPointToRobot(treeSides);
-    
+    searcher.prepareSearch();
     //search the tree counterclockwise
     for(int i = 0; i < treeSides.length; i++) {
-      if(i == 0) {
-        Sound.beep();
-      }
       int[] side = treeSides[(startingIndex+i)%treeSides.length];
       if(GameUtil.isSafe(side)) {
         navigation.travelToWithCorrection(side[0], side[1], false);
+        if(i == 0) {
+          Sound.beep();
+        }
         // turn facing the ring set
         navigation.turnTo(Math.toDegrees(navigation.calculateAngleTo(tree[0], tree[1])));
         boolean doCorrection = !GameUtil.isBoundary(side);
@@ -348,8 +347,8 @@ public enum Game {
           navigation.searchRingSet(searcher, doCorrection, false);
         }
       }
-      
     }
+    searcher.resetSearch();
   }
   
   /**
