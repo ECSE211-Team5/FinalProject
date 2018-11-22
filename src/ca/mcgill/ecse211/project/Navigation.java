@@ -136,8 +136,16 @@ public class Navigation {
       }
       lastStep = step;
       moveWithCorrection(1, theta);
-      odometer.setX(px);
-      odometer.setY(py);
+      //get the position of the robot
+      double[] position = odometer.getXYT();
+      if(Math.round(position[0])==px && Math.round(position[1])==py) {
+        //this means that the robot is at the point, so set the position to the point
+        odometer.setX(px);
+        odometer.setY(py);
+      }else {
+        //otherwise some problem might happened and we are not at the desired postion, push the instruction back
+        instruction.add(step);
+      }
     }
   }
 
