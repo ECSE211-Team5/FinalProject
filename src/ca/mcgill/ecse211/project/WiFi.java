@@ -88,11 +88,6 @@ public enum WiFi {
       GameParameters.OPPO_LL[1] = ((Long) data.get(startingO+"LL_y")).intValue();
       GameParameters.OPPO_UR[0] = ((Long) data.get(startingO+"UR_x")).intValue();
       GameParameters.OPPO_UR[1] = ((Long) data.get(startingO+"UR_y")).intValue();
-      
-      //GameParameters.Grid_LL[0] = ((Long) data.get("Green_LL_x")).intValue();
-      //GameParameters.Grid_LL[1] = ((Long) data.get("Green_LL_y")).intValue();
-      //GameParameters.Grid_UR[0] = ((Long) data.get("Green_UR_x")).intValue();
-      //GameParameters.Grid_UR[1] = ((Long) data.get("Green_UR_y")).intValue();
 
       GameParameters.Island_LL[0] = ((Long) data.get("Island_LL_x")).intValue();
       GameParameters.Island_LL[1] = ((Long) data.get("Island_LL_y")).intValue();
@@ -243,11 +238,6 @@ public enum WiFi {
       }
       
       //set data read to true
-      synchronized(GameParameters.waitDataObject) {
-        GameParameters.hasDataRead = true;
-        GameParameters.waitDataObject.notify();
-      }
-      
     } catch (Exception e) {
       e.printStackTrace();
     }

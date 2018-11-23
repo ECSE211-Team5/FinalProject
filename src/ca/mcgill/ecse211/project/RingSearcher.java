@@ -1,9 +1,8 @@
-package ca.mcgill.ecse211.threads;
+package ca.mcgill.ecse211.project;
 
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
-import ca.mcgill.ecse211.project.ColorCalibrator;
-import ca.mcgill.ecse211.project.Game;
+import ca.mcgill.ecse211.threads.SensorData;
 import lejos.hardware.Sound;
 import lejos.hardware.motor.BaseRegulatedMotor;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
@@ -21,7 +20,12 @@ import lejos.hardware.motor.EV3MediumRegulatedMotor;
  * @author Kamy Moussavi Kafi
  */
 public class RingSearcher{
+  private static final int ROD_RETRIEVE = 70;
+  private static final int ROD_PREPARE = 180;
+  private static final int SENSOR_ROTATION = -90;
   private static final int ACCELERATION = 3000;
+  private static final int ROD_SPEED = 250;
+  private static final int SENSOR_SPEED = 50;
   private EV3LargeRegulatedMotor sensorMotor;
   private EV3LargeRegulatedMotor rodMotor;
   private boolean started = false;
@@ -41,8 +45,8 @@ public class RingSearcher{
     this.odometer = Odometer.getOdometer();
     this.sensorMotor = sensorMotor;
     this.rodMotor = rodMotor;
-    rodMotor.setSpeed(250);
-    this.sensorMotor.setSpeed(50);
+    rodMotor.setSpeed(ROD_SPEED);
+    this.sensorMotor.setSpeed(SENSOR_SPEED);
     data = SensorData.getSensorData();
     for (BaseRegulatedMotor motor : new BaseRegulatedMotor[] {this.sensorMotor, this.rodMotor}) {
       motor.stop();
@@ -56,13 +60,11 @@ public class RingSearcher{
    * 
    */
   public void  search() {
-    sensorMotor.rotate(-90);
-    sensorMotor.rotate(90);
-    //TODO: add method for decide the color and beeps
+    sensorMotor.rotate(SENSOR_ROTATION);
+    sensorMotor.rotate(-SENSOR_ROTATION);
+
     //determine most frequent colour detected and beep accordingly
- //   System.out.println("here");
     Game.INSTANCE.rgbPoller.setStart(false);
- //   System.out.println("here stopped");
     switch (ColorCalibrator.getMostFrequenct()) {
       case Orange:
         Sound.beep();
@@ -90,39 +92,38 @@ public class RingSearcher{
     Game.INSTANCE.rgbPoller.setStart(true);
   }  
   
+  /**
+   * This method put the sensor to search rotation to be ready for the searching
+   */
   public void prepareSearch() {
-    sensorMotor.rotate(-90);
+    sensorMotor.rotate(SENSOR_ROTATION);
   }
   
+  /**
+   * This method put the sensor back
+   */
   public void resetSearch() {
-    sensorMotor.rotate(90);
+    sensorMotor.rotate(-SENSOR_ROTATION);
   }
   
   /**
    * This method rotate the rod to a suitable position for retrieve the ring
    */
   public void prepareRetrieve() {
-    rodMotor.rotate(180);
+    rodMotor.rotate(ROD_PREPARE);
   }
   
   /**
    * this method retrieve the searched ring
    */
   public void retrieveRing() {
-    rodMotor.rotate(70);
+    rodMotor.rotate(ROD_RETRIEVE);
   }
   
   /**
    * Rotate the rod back to the original position
    */
   public void resetRodMotor() {
-    rodMotor.rotate(-170-80);
-  }
-  
-  /**
-   * Protect the ring from dropping
-   */
-  public void protectRing() {
-    rodMotor.rotate(270);
+    rodMotor.rotate(-(ROD_PREPARE+ROD_RETRIEVE));
   }
 }

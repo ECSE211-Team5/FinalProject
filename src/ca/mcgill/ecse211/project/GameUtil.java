@@ -20,15 +20,18 @@ import ca.mcgill.ecse211.odometer.OdometerExceptions;
 public class GameUtil {
   public static PathFinder startingFinder;
   public static PathFinder searchingFinder;
-
+  public static char leftInstruction = 'L';
+  public static char rightInstruction = 'R';
+  public static char upInstruction = 'U';
+  public static char downInstruction = 'D';
   /**
    * This is class is used as a comparator to sort the points from nearest to the robot.
- * @author Caspar Cedro
- * @author Percy Chen
- * @author Patrick Erath
- * @author Anssam Ghezala
- * @author Susan Matuszewski
- * @author Kamy Moussavi Kafi
+   * @author Caspar Cedro
+   * @author Percy Chen
+   * @author Patrick Erath
+   * @author Anssam Ghezala
+   * @author Susan Matuszewski
+   * @author Kamy Moussavi Kafi
    *
    */
   public static class RobotComparator implements Comparator<int[]>{
@@ -44,6 +47,16 @@ public class GameUtil {
     }
   }
   
+  /**
+   * This is class is used as a comparator to sort the points from nearest to the ring set.
+   * @author Caspar Cedro
+   * @author Percy Chen
+   * @author Patrick Erath
+   * @author Anssam Ghezala
+   * @author Susan Matuszewski
+   * @author Kamy Moussavi Kafi
+   *
+   */
   public static class RingSetComparator implements Comparator<int[]>{
     @Override
     public int compare(int[] a, int[] b) {
@@ -55,6 +68,16 @@ public class GameUtil {
     }
   }
   
+  /**
+   * This is class is used as a comparator to sort the points from nearest to the starting point.
+   * @author Caspar Cedro
+   * @author Percy Chen
+   * @author Patrick Erath
+   * @author Anssam Ghezala
+   * @author Susan Matuszewski
+   * @author Kamy Moussavi Kafi
+   *
+   */
   public static class StartingComparator implements Comparator<int[]>{
     @Override
     public int compare(int[] a, int[] b) {
@@ -130,13 +153,13 @@ public class GameUtil {
         if (parent == -1)
           break;
         if (parent == node + 1) {
-          instruction.add('L');
+          instruction.add(leftInstruction);
         } else if (parent == node - 1) {
-          instruction.add('R');
+          instruction.add(rightInstruction);
         } else if (parent == node + (width + 1)) {
-          instruction.add('D');
+          instruction.add(downInstruction);
         } else {
-          instruction.add('U');
+          instruction.add(upInstruction);
         }
         node = parent;
       }
@@ -145,7 +168,7 @@ public class GameUtil {
     }
 
     /**
-     * bfs the area
+     * bfs the area to find a potential path to the destination
      * 
      * @param i: starting node
      * @param j: ending node
@@ -181,9 +204,11 @@ public class GameUtil {
     private ArrayList<Integer> getChildren(int i) {
       ArrayList<Integer> children = new ArrayList<Integer>();
       int[] coor = indexToCoor(i);
+      //get all points that are adjacent to p
       int[][] connectedP = {{coor[0] - 1, coor[1]}, {coor[0] + 1, coor[1]}, {coor[0], coor[1] + 1},
           {coor[0], coor[1] - 1}};
       for (int[] p : connectedP) {
+        //check if the point is in the area and is safe
         if (p[0] >= ll[0] && p[0] <= ur[0] && p[1] >= ll[1] && p[1] <= ur[1] && isSafe(p)) {
           children.add(coordinateToIndex(p));
         }
@@ -212,7 +237,7 @@ public class GameUtil {
       int[] coor = {i % (width + 1) + ll[0], i / (width + 1) + ll[1]};
       return coor;
     }
-  }
+  } //end of class PathFinder
 
   /**
    * check if one coordinate is safe based on (it is not a wall, tree or inside a tunnel)
@@ -285,7 +310,12 @@ public class GameUtil {
     return minIndex;
   }
 
-  public static boolean isBoundary(int[] coor) {
+  /**
+   * Check if a given point is boundary
+   * @param coor: the point to input
+   * @return: whether the given point is on the boundary of an island
+   */
+  public static boolean isIslandBoundary(int[] coor) {
     int x = coor[0];
     int y = coor[1];
     boolean onLY = x == GameParameters.Island_LL[0]

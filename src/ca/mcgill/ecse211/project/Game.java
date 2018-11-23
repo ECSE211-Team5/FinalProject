@@ -7,7 +7,6 @@ import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.GameParameters.DemoType;
 import ca.mcgill.ecse211.threads.LightPoller;
 import ca.mcgill.ecse211.threads.RGBPoller;
-import ca.mcgill.ecse211.threads.RingSearcher;
 import ca.mcgill.ecse211.threads.SensorData;
 import ca.mcgill.ecse211.threads.ThreadControl;
 import ca.mcgill.ecse211.threads.UltrasonicPoller;
@@ -340,7 +339,7 @@ public enum Game {
         }
         // turn facing the ring set
         navigation.turnTo(Math.toDegrees(navigation.calculateAngleTo(tree[0], tree[1])));
-        boolean doCorrection = !GameUtil.isBoundary(side);
+        boolean doCorrection = !GameUtil.isIslandBoundary(side);
         if(i != treeSides.length - 1) {
           navigation.searchRingSet(searcher, doCorrection, true);
         }else {
@@ -437,15 +436,14 @@ public enum Game {
     final LightLocalizer lgLoc = new LightLocalizer(navigation, leftMotor, rightMotor);
     final RingSearcher searcher = new RingSearcher(sensorMotor, rodMotor);
     
-    final int buttonChoice = Button.waitForAnyPress(); // Record choice (left or right press)
-    // spawn a new Thread to avoid localization from blocking
-        INSTANCE.ready(usLoc, lgLoc);
-        //instantiate path finder
-        GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
-        GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
-        INSTANCE.navigateToTunnel(navigation, searcher);
-        INSTANCE.navigateToAndSearcherTree(navigation, searcher);
-        INSTANCE.navigateToTunnel(navigation, searcher);
-        INSTANCE.navigateToStart(navigation, searcher);
+    Button.waitForAnyPress(); // Wait for button press to start
+      INSTANCE.ready(usLoc, lgLoc);
+      //instantiate path finder
+      GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+      GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
+      INSTANCE.navigateToTunnel(navigation, searcher);
+      INSTANCE.navigateToAndSearcherTree(navigation, searcher);
+      INSTANCE.navigateToTunnel(navigation, searcher);
+      INSTANCE.navigateToStart(navigation, searcher);
   }
 }

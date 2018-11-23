@@ -22,15 +22,12 @@ public class ColorCalibrator {
   }
   //this is v1
 
-  private final static int lowerYellowRBound = 9, upperYellowRBound = 14, lowerYellowGBound = 4,
-      upperYellowGBound = 10, lowerYellowBBound = 0, upperYellowBBound = 2, lowerBlueRBound = 0,
-      upperBlueRBound = 1, lowerBlueGBound = 6, upperBlueGBound = 8, lowerBlueBBound = 3,
-      upperBlueBBound = 8, lowerGreenRBound = 1, upperGreenRBound = 8, lowerGreenGBound = 5,
-      upperGreenGBound = 9, lowerGreenBBound = 0, upperGreenBBound = 2, lowerOrangeRBound = 8,
-      upperOrangeRBound = 20, lowerOrangeGBound = 0, upperOrangeGBound = 3, lowerOrangeBBound = 0, upperOrangeBBound = 1;
+  private final static int lowerYellowRBound = 9, lowerYellowGBound = 4, lowerBlueBBound = 3,lowerOrangeRBound = 8;
 
   /**
    * This method returns the color of the ring currently under the light sensor
+   * Instead of intervals, we use a pattern matching for detecting the color
+   * For more: reference the software and testing document
    * 
    * @param r The red value to check for a ring
    * @param g The green value to check for a ring
@@ -52,11 +49,6 @@ public class ColorCalibrator {
 
     return currentColor;
   }
-  /**
-   * (r >= lowerGreenRBound && r <= 5)
-        && (b >= lowerGreenBBound && b <= upperGreenBBound) && (g <= 12 && g >= 6)
-        GREEN
-   */
 
   /**
    * This method gets the last color of the ring under the light sensor
@@ -123,6 +115,12 @@ public class ColorCalibrator {
       colour_frequency[i] = 0;
     }
   }
+  
+  /**
+   * This method match integer to corresponding color
+   * @param i: an integer of [0,4]
+   * @return: cooresponding color of the integer
+   */
   public static Color getGetColor(int i) {
     Color c = Color.Other;
     switch (i) {

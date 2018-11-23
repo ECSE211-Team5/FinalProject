@@ -12,18 +12,6 @@ package ca.mcgill.ecse211.project;
  */
 public enum GameParameters {
   INSTANCE;
-  
-  /*
-   * boolean variable to indicate if the data has read by the robot
-   */
-  public static boolean hasDataRead = false;
-  
-  /**
-   * object to lock the boolean and make it synchronized
-   */
-  public static Object waitDataObject = new Object();
-  
-  
   /**
    * This enumeration contains the possible types of areas that our robot is currently located in
    */

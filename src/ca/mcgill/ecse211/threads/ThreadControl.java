@@ -2,7 +2,12 @@ package ca.mcgill.ecse211.threads;
 
 /**
  * This class for thread control with pause and restart functionality
- *
+ *@author Caspar Cedro
+ * @author Percy Chen
+ * @author Patrick Erath
+ * @author Anssam Ghezala
+ * @author Susan Matuszewski
+ * @author Kamy Moussavi Kafi
  */
 public abstract class ThreadControl implements Runnable{
   protected static int WAIT_TIME = 100;

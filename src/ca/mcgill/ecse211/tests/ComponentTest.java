@@ -8,7 +8,7 @@ import ca.mcgill.ecse211.project.Game;
 import ca.mcgill.ecse211.project.GameParameters;
 import ca.mcgill.ecse211.project.GameUtil;
 import ca.mcgill.ecse211.project.Navigation;
-import ca.mcgill.ecse211.threads.RingSearcher;
+import ca.mcgill.ecse211.project.RingSearcher;
 import ca.mcgill.ecse211.threads.SensorData;
 import lejos.hardware.Button;
 import lejos.hardware.Sound;

@@ -32,6 +32,9 @@ public class RGBPoller extends LightPoller{
     isStarted = true;
   }
 
+  /**
+   * run method for the rgb poller polls and process the rgb data of rgb sensor
+   */
   @Override
   protected void runMethod() {
     us[0].fetchSample(lgData[0], 0); // acquire data at offset 0
@@ -43,19 +46,15 @@ public class RGBPoller extends LightPoller{
     switch (ColorCalibrator.getColor(r, g, b)) {
       case Orange:
         ColorCalibrator.setFrequency(ColorCalibrator.Color.Orange);
-    //    System.out.println("orange");
         break;
       case Yellow:
         ColorCalibrator.setFrequency(ColorCalibrator.Color.Yellow);
-     //   System.out.println("yellow");
         break;
       case Green:
         ColorCalibrator.setFrequency(ColorCalibrator.Color.Green);
-     //   System.out.println("green");
         break;
       case Blue:
         ColorCalibrator.setFrequency(ColorCalibrator.Color.Blue);
-    //    System.out.println("blue");
         break;
       default:
         ColorCalibrator.setFrequency(ColorCalibrator.Color.Other);

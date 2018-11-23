@@ -18,8 +18,6 @@ public class LightPoller extends ThreadControl{
   protected SensorData cont;
   protected float[][] lgData;
   protected float lastValue[];
-  protected static int WAIT_TIME = 50;
-  private int id;
   private static int sensorNumber = 0;
 
   /**
@@ -38,10 +36,10 @@ public class LightPoller extends ThreadControl{
     this.us = us;
     this.cont = cont;
     this.lgData = lgData;
-    this.id = sensorNumber;
     isStarted = true;
     lastValue = new float[2];
     sensorNumber++;
+    WAIT_TIME = 50;
   }
 
   /**
