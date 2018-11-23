@@ -35,7 +35,7 @@ public class Navigation {
   private static final int FORWARD_SPEED = 140;
   private static final int ROTATE_SPEED = 250;
   private static final int TUNNEL_SPEED = 250;
-  private static final int TUNNEL_CORRECTION = -5;
+  private static final int TUNNEL_CORRECTION = -8;
   private static final int ACCELERATION = 300;
   private static int leftBlackLineThre = -10;
   private static int rightBlackLineThre = -13;
