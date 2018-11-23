@@ -17,11 +17,7 @@ public enum WiFi {
   INSTANCE;
   
   // ** Set these as appropriate for your team and current situation **
-<<<<<<< HEAD
   private static final String SERVER_IP = "192.168.2.19";
-=======
-  private static final String SERVER_IP = "192.168.2.6";
->>>>>>> 78f8823524374f5618e4bd20c93bee8b281f16eb
 
   /**
    * This method sets up a connection to a locally hosted server and reads Game Parameter values
