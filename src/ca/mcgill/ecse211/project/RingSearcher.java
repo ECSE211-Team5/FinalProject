@@ -103,7 +103,7 @@ public class RingSearcher{
    * This method put the sensor back
    */
   public void resetSearch() {
-    sensorMotor.rotate(-SENSOR_ROTATION);
+    sensorMotor.rotateTo(0);
   }
   
   /**

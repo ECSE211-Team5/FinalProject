@@ -387,7 +387,7 @@ public class Navigation {
     //after identify it's direction, we find whether it is positive 
     //or negative directed
     if (points.get(0)[0] == points.get(1)[0]) {
-      distance = Math.abs(notIn.get(0)[0] - points.get(0)[0]) + 1;
+      distance = Math.abs(notIn.get(0)[0] - points.get(0)[0]);
       int multi = notIn.get(0)[0] - points.get(0)[0] < 0 ? 1 : -1;
       travelToTunnelEntrance(points, 0, multi);
       for (int i = 0; i < notIn.size(); i++) {
@@ -396,7 +396,7 @@ public class Navigation {
         notIn.get(i)[0] = notIn.get(i)[0] - multi * 1;
       }
     } else {
-      distance = Math.abs(notIn.get(0)[1] - points.get(0)[1]) + 1;
+      distance = Math.abs(notIn.get(0)[1] - points.get(0)[1]);
       int multi = notIn.get(0)[1] - points.get(0)[1] < 0 ? 1 : -1;
       travelToTunnelEntrance(points, 1, multi);
       for (int i = 0; i < notIn.size(); i++) {
@@ -415,7 +415,9 @@ public class Navigation {
 
     // turn left -5 to correct the effect of the weight
     turn(TUNNEL_CORRECTION);
-    forward(TUNNEL_SPEED, distance);
+    forward(TUNNEL_SPEED, distance/2+1);
+    turn(TUNNEL_CORRECTION);
+    forward(TUNNEL_SPEED, distance/2);
     odometer.setTheta(angleThoughTunnel);
 
     // rotate additional sensor distances to make sure the sensor will not on the balck line
@@ -487,7 +489,7 @@ public class Navigation {
       rightMotor.backward();
       moveUntilLineDetection(true);
       //Forward for 3 cm (approach the ring set)
-      forward(FORWARD_SPEED, 3/Game.TILE);
+      forward(FORWARD_SPEED, 2.5/Game.TILE);
     }else {
       forward(FORWARD_SPEED, 2/Game.TILE);
     }
@@ -504,17 +506,17 @@ public class Navigation {
     rightMotor.rotate(RIGHT_MOTOR_RING_COR, false);
     
     //go to the position where ring can be retrieved
-    forward(FORWARD_SPEED, 5/Game.TILE);
+    forward(FORWARD_SPEED, 5.5/Game.TILE);
     
     //rotate a little to the left to make sure not influence the other ring
-    rightMotor.rotate(-RIGHT_MOTOR_RING_COR, false);
+    rightMotor.rotate(50, false);
     searcher.retrieveRing();
     //go back to original position
-    rightMotor.rotate(RIGHT_MOTOR_RING_COR, false);
+    rightMotor.rotate(-50, false);
     if(correct) {
       forward(FORWARD_SPEED, -8/Game.TILE);
     }else {
-      forward(FORWARD_SPEED, -7/Game.TILE);
+      forward(FORWARD_SPEED, -7.5/Game.TILE);
     }
     rightMotor.rotate(-RIGHT_MOTOR_RING_COR, false);
     if(reset)
