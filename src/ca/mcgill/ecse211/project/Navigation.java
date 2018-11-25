@@ -414,10 +414,16 @@ public class Navigation {
     moveBackWithCorrection();
 
     // turn left -5 to correct the effect of the weight
-    turn(TUNNEL_CORRECTION);
-    forward(TUNNEL_SPEED, distance/2+1);
-    turn(TUNNEL_CORRECTION);
-    forward(TUNNEL_SPEED, distance/2);
+    if(distance == 2) {
+      turn(TUNNEL_CORRECTION);
+      forward(TUNNEL_SPEED, distance/2+1);
+      turn(TUNNEL_CORRECTION);
+      forward(TUNNEL_SPEED, distance/2);
+    }else {
+      turn(TUNNEL_CORRECTION);
+      forward(TUNNEL_SPEED, distance+1);
+    }
+
     odometer.setTheta(angleThoughTunnel);
 
     // rotate additional sensor distances to make sure the sensor will not on the balck line
@@ -482,6 +488,7 @@ public class Navigation {
     //Go backward to detect the line and correct the rotation
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
+    double theta = odometer.getXYT()[2];
     
     // if we do correction, we need to forward more (for the sensor distance)
     if(correct) {
@@ -489,9 +496,9 @@ public class Navigation {
       rightMotor.backward();
       moveUntilLineDetection(true);
       //Forward for 3 cm (approach the ring set)
-      forward(FORWARD_SPEED, 2.5/Game.TILE);
+      forward(FORWARD_SPEED, 3/Game.TILE);
     }else {
-      forward(FORWARD_SPEED, 2/Game.TILE);
+      forward(FORWARD_SPEED, 1.5/Game.TILE);
     }
     //rotate a little to the left to make sure that the sensor can detect the ring
     leftMotor.rotate(LEFT_MOTOR_RING_COR, false);
@@ -506,7 +513,7 @@ public class Navigation {
     rightMotor.rotate(RIGHT_MOTOR_RING_COR, false);
     
     //go to the position where ring can be retrieved
-    forward(FORWARD_SPEED, 5.5/Game.TILE);
+    forward(FORWARD_SPEED, 6/Game.TILE);
     
     //rotate a little to the left to make sure not influence the other ring
     rightMotor.rotate(50, false);
@@ -518,7 +525,8 @@ public class Navigation {
     }else {
       forward(FORWARD_SPEED, -7.5/Game.TILE);
     }
-    rightMotor.rotate(-RIGHT_MOTOR_RING_COR, false);
+    rightMotor.rotate(-RIGHT_MOTOR_RING_COR+20, false);
+    odometer.setTheta(theta);
     if(reset)
       searcher.resetRodMotor();
   }

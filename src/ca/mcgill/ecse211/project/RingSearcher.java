@@ -61,6 +61,12 @@ public class RingSearcher{
    */
   public void  search() {
     sensorMotor.rotate(SENSOR_ROTATION);
+    try {
+      Thread.sleep(2000);
+    } catch (InterruptedException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
     sensorMotor.rotate(-SENSOR_ROTATION);
 
     //determine most frequent colour detected and beep accordingly
