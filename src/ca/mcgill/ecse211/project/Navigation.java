@@ -30,13 +30,15 @@ import lejos.hardware.motor.EV3LargeRegulatedMotor;
  * @author Kamy Moussavi Kafi
  */
 public class Navigation {
-  private static final int RIGHT_MOTOR_RING_COR = -30;
+  private static final int RIGHT_MOTOR_RING_COR = -50;
   private static final int LEFT_MOTOR_RING_COR = -40;
-  private static final int FORWARD_SPEED = 140;
+  private static final int FORWARD_SPEED = 250;
   private static final int ROTATE_SPEED = 250;
-  private static final int TUNNEL_SPEED = 250;
-  private static final int TUNNEL_CORRECTION = -5;
-  private static final int ACCELERATION = 300;
+  private static final int TUNNEL_SPEED = 400;
+  private static final int TUNNEL_CORRECTION = 0;
+  private static final int Q_ACCELERATION = 3000; 
+  private static final int N_ACCELERATION = 300; 
+
   private static int leftBlackLineThre = -10;
   private static int rightBlackLineThre = -13;
   
@@ -67,7 +69,7 @@ public class Navigation {
     for (EV3LargeRegulatedMotor motor : new EV3LargeRegulatedMotor[] {this.leftMotor,
         this.rightMotor}) {
       motor.stop();
-      motor.setAcceleration(ACCELERATION);
+      motor.setAcceleration(Q_ACCELERATION);
     }
   }
 
@@ -138,6 +140,7 @@ public class Navigation {
     //use the instruction modified by the pathFind to move to the destination
     char lastStep = ' ';
     int theta = 0;
+    
     while (instruction.size() > 0) {
       char step = instruction.remove(instruction.size() - 1);
       //if the step is different from the last one, rotate to corresponding rotation
@@ -222,6 +225,8 @@ public class Navigation {
    * This method move the robot back until a black line detection
    */
   private synchronized void moveBackWithCorrection() {
+    leftMotor.setAcceleration(N_ACCELERATION);
+    rightMotor.setAcceleration(N_ACCELERATION);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.backward();
@@ -234,6 +239,8 @@ public class Navigation {
    * @param theta
    */
   public void moveOneTileWithCorrection(double theta) {
+    leftMotor.setAcceleration(N_ACCELERATION);
+    rightMotor.setAcceleration(N_ACCELERATION);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.forward();
@@ -250,6 +257,7 @@ public class Navigation {
     double rotation = 0;
     int lastTachoCount = 0;
     char detacted = ' ';
+
     while (leftMotor.isMoving() || rightMotor.isMoving()) {
       //get left and right sensor values
       double left = data.getL()[0];
@@ -258,6 +266,8 @@ public class Navigation {
       //Once left / right sensor has detect a black line, record the correct robot rotation and
       // the tacho count for the other sensor(motor), in case if the other sensor miss the black line
       if (left < leftBlackLineThre) {
+        leftMotor.setAcceleration(Q_ACCELERATION);
+        rightMotor.setAcceleration(Q_ACCELERATION);
         leftMotor.stop(true);
         if(detacted == ' ') {
           detacted = 'l';
@@ -266,6 +276,8 @@ public class Navigation {
         }
       }
       if (right < rightBlackLineThre) {
+        leftMotor.setAcceleration(Q_ACCELERATION);
+        rightMotor.setAcceleration(Q_ACCELERATION);
         rightMotor.stop(true);
         if(detacted == ' ') {
           detacted = 'r';
@@ -294,10 +306,12 @@ public class Navigation {
     }
     
     //rotate one sensor distance to make the sensor off the black line
+    leftMotor.setAcceleration(N_ACCELERATION);
+    rightMotor.setAcceleration(N_ACCELERATION);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
-    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS+0.5), false);
+    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, Game.SEN_DIS + 0.5), false);
     
     //go backward to correct again
     if(missedBlackLine && checkForBlackLine) {
@@ -414,21 +428,21 @@ public class Navigation {
     moveBackWithCorrection();
 
     // turn left -5 to correct the effect of the weight
-    if(distance == 2) {
-      turn(TUNNEL_CORRECTION);
-      forward(TUNNEL_SPEED, distance/2+1);
-      turn(TUNNEL_CORRECTION);
-      forward(TUNNEL_SPEED, distance/2);
-    }else {
-      turn(TUNNEL_CORRECTION);
-      forward(TUNNEL_SPEED, distance+1);
-    }
+    this.turn(TUNNEL_CORRECTION);
+      if(distance == 1) {  
+        forward(TUNNEL_SPEED, distance+1+0.5);
+      }else {
+        forward(TUNNEL_SPEED, distance/2.0+1);
+        turn(TUNNEL_CORRECTION);
+        forward(TUNNEL_SPEED, distance/2.0+0.5);
+      }
 
     odometer.setTheta(angleThoughTunnel);
-
-    // rotate additional sensor distances to make sure the sensor will not on the balck line
-    leftMotor.rotate(convertDistance(Game.WHEEL_RAD, 2*Game.SEN_DIS), true);
-    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, 2*Game.SEN_DIS), false);
+    leftMotor.setAcceleration(N_ACCELERATION);
+    rightMotor.setAcceleration(N_ACCELERATION);
+//    // rotate additional sensor distances to make sure the sensor will not on the balck line
+//    leftMotor.rotate(convertDistance(Game.WHEEL_RAD, 2*Game.SEN_DIS), true);
+//    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, 2*Game.SEN_DIS), false);
     this.moveOneTileWithCorrection(angleThoughTunnel);
     double[] after = GameUtil.average(notIn.get(0), notIn.get(1));
     odometer.setX(after[0]);
@@ -473,6 +487,8 @@ public class Navigation {
 
     // travel to the point
     this.travelToWithCorrection(beforePoint[0], beforePoint[1], false);
+    leftMotor.setAcceleration(N_ACCELERATION);
+    rightMotor.setAcceleration(N_ACCELERATION);
     travelTo(center[0], center[1]);
   }
 
@@ -486,6 +502,8 @@ public class Navigation {
    */
   public void searchRingSet(RingSearcher searcher, boolean correct, boolean reset) {
     //Go backward to detect the line and correct the rotation
+    leftMotor.setAcceleration(N_ACCELERATION);
+    rightMotor.setAcceleration(N_ACCELERATION);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     double theta = odometer.getXYT()[2];
@@ -496,9 +514,9 @@ public class Navigation {
       rightMotor.backward();
       moveUntilLineDetection(true);
       //Forward for 3 cm (approach the ring set)
-      forward(FORWARD_SPEED, 3/Game.TILE);
+      forward(FORWARD_SPEED, 2.5/Game.TILE);
     }else {
-      forward(FORWARD_SPEED, 1.5/Game.TILE);
+      forward(FORWARD_SPEED, 2/Game.TILE);
     }
     //rotate a little to the left to make sure that the sensor can detect the ring
     leftMotor.rotate(LEFT_MOTOR_RING_COR, false);
@@ -513,17 +531,17 @@ public class Navigation {
     rightMotor.rotate(RIGHT_MOTOR_RING_COR, false);
     
     //go to the position where ring can be retrieved
-    forward(FORWARD_SPEED, 6/Game.TILE);
+    forward(FORWARD_SPEED, 4/Game.TILE);
     
     //rotate a little to the left to make sure not influence the other ring
-    rightMotor.rotate(50, false);
+    rightMotor.rotate(70, false);
     searcher.retrieveRing();
     //go back to original position
-    rightMotor.rotate(-50, false);
+    rightMotor.rotate(-70, false);
     if(correct) {
-      forward(FORWARD_SPEED, -8/Game.TILE);
+      forward(FORWARD_SPEED, -6.5/Game.TILE);
     }else {
-      forward(FORWARD_SPEED, -7.5/Game.TILE);
+      forward(FORWARD_SPEED, -6/Game.TILE);
     }
     rightMotor.rotate(-RIGHT_MOTOR_RING_COR+20, false);
     odometer.setTheta(theta);

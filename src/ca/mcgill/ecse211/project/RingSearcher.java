@@ -20,9 +20,9 @@ import lejos.hardware.motor.EV3MediumRegulatedMotor;
  * @author Kamy Moussavi Kafi
  */
 public class RingSearcher{
-  private static final int ROD_RETRIEVE = 70;
-  private static final int ROD_PREPARE = 180;
-  private static final int SENSOR_ROTATION = -90;
+  private static final int ROD_RETRIEVE = 80;
+  private static final int ROD_PREPARE = 170;
+  private static final int SENSOR_ROTATION = -100;
   private static final int ACCELERATION = 3000;
   private static final int ROD_SPEED = 250;
   private static final int SENSOR_SPEED = 50;
@@ -61,12 +61,6 @@ public class RingSearcher{
    */
   public void  search() {
     sensorMotor.rotate(SENSOR_ROTATION);
-    try {
-      Thread.sleep(2000);
-    } catch (InterruptedException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
     sensorMotor.rotate(-SENSOR_ROTATION);
 
     //determine most frequent colour detected and beep accordingly
