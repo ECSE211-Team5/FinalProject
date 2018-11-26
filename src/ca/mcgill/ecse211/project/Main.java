@@ -18,7 +18,7 @@ public class Main {
   /**
    * This variable decides whether or not to enable our tests
    */
-  public static boolean test = false;
+  public static boolean test = true;
 
   /**
    * This variable stores the type of test that we want to perform
@@ -39,7 +39,7 @@ public class Main {
         (new Thread() {
           public void run() {
             try {
-              ComponentTest.ringMotorTest();
+              ComponentTest.musicTest();
             } catch (Exception e) {
               // TODO Auto-generated catch block
               e.printStackTrace();

@@ -153,4 +153,8 @@ public enum ComponentTest {
    }
   }
   
+  public static void musicTest() {
+    GameUtil.playMusic();
+  }
+  
 }

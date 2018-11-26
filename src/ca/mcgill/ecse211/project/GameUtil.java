@@ -1,10 +1,12 @@
 package ca.mcgill.ecse211.project;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedList;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
+import lejos.hardware.Sound;
 
 /**
  * Game utility class with handy functionalities can be used in the game
@@ -328,5 +330,9 @@ public class GameUtil {
         && (x >= GameParameters.Island_LL[0] && x <= GameParameters.Island_UR[0]);
 
     return onLY || onRY || onLX || onUX;
+  }
+  
+  public static void playMusic() {
+    Sound.playSample(new File("Tetris.wav"));
   }
 }
