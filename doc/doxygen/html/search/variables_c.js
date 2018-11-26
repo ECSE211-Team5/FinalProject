@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['redteam',['RedTeam',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#ad36fe5629718c944df7317e53145850c',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['rgbpoller',['rgbPoller',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#af24a953a0c3438670220dde36c532b5d',1,'ca::mcgill::ecse211::project::Game']]],
-  ['rightmotor',['rightMotor',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a7a05fcf37c4435c32270776a427ba0d2',1,'ca::mcgill::ecse211::project::Game']]],
-  ['ringdetection',['RingDetection',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type.html#ab118eac94e0b37e6871a4c9a788c675e',1,'ca::mcgill::ecse211::tests::ComponentTest::Type']]],
-  ['rodmotor',['rodMotor',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#abc070af2fa5a5cda6d81977b35aacfb4',1,'ca::mcgill::ecse211::project::Game']]]
+  ['sc',['SC',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#af3944d1bc80c4c8a6cabce66e030f4b7',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['scus',['SCUS',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a9c136a3a3faff96052381f791bf4c166',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['searching',['Searching',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a25564076fdd8880377fbd6eaf753456f',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
+  ['searchingboundary',['SearchingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a5a3aceb665ba97ac242e77955feed640',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
+  ['searchingfinder',['searchingFinder',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#acedc99ad369450d6b2d7711c2d63027a',1,'ca::mcgill::ecse211::project::GameUtil']]],
+  ['sen_5fdis',['SEN_DIS',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab940d1a52b9759294dc0229e0fd6bc06',1,'ca::mcgill::ecse211::project::Game']]],
+  ['sensormotor',['sensorMotor',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#aa94b85dc88de85d959677bd6c0f98989',1,'ca::mcgill::ecse211::project::Game']]],
+  ['shouldwait',['shouldWait',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a8252930dab1b067da64cf2afae4fc630',1,'ca::mcgill::ecse211::threads::ThreadControl']]],
+  ['startingboundary',['StartingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#afd78c1184c6b82e22bb08ed39ae4e83b',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
+  ['startingfinder',['startingFinder',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a84ec23eabf60cb20895815e7b390e3f2',1,'ca::mcgill::ecse211::project::GameUtil']]]
 ];

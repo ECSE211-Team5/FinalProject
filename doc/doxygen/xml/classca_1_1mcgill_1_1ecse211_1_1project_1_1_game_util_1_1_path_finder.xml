@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="34" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="34" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="103" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1ae14d2f662bcc4125edcf2a037c152755" prot="package" static="no" mutable="no">
         <type>int []</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="35" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="35" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="104" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a7853fad980ecb0336b37e3de439556e9" prot="package" static="no" mutable="no">
         <type>int</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="36" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="105" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1aab40910d25162f37d52ab95a78b4fb99" prot="package" static="no" mutable="no">
         <type>int</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="36" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="105" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a3df394ee079b699c785e578371e2bdc4" prot="package" static="no" mutable="no">
         <type>int []</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="37" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="106" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="106" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -104,7 +104,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="45" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="45" bodyend="51"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="114" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="114" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a07b23a5540e04c7366d6b0ac84185028" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>boolean</type>
@@ -152,7 +152,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="61" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="61" bodyend="99"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="130" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="130" bodyend="168"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -180,7 +180,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>bfs the area</para><para><parameterlist kind="param"><parameteritem>
+<para>bfs the area to find a potential path to the destination</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>i</parametername>
 </parameternamelist>
@@ -212,7 +212,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="109" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="109" bodyend="126"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="178" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="178" bodyend="195"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a2bd046c4dedece80caf5cf2a23ac7445" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>ArrayList&lt; Integer &gt;</type>
@@ -238,7 +238,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="135" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="135" bodyend="146"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="204" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="204" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1aa68e4b44c3406ac9a9d1316976370afe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -265,7 +265,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="154" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="154" bodyend="157"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="225" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="225" bodyend="228"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a45768fed2b30c17edd0a0ced7740dd12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int []</type>
@@ -291,7 +291,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="165" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="165" bodyend="168"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="236" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="236" bodyend="239"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -304,7 +304,7 @@
 <simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="33" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="33" bodyend="169"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="102" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="102" bodyend="240"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1aabb3087119c07c24690024bf0726bc66" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameUtil::PathFinder</scope><name>bfs</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1aa68e4b44c3406ac9a9d1316976370afe" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameUtil::PathFinder</scope><name>coordinateToIndex</name></member>

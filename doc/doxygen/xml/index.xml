@@ -18,29 +18,9 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a18084c47a3376fe0cee35b89072b3d0f" kind="variable"><name>currentColor</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a3c4e2d7f5fe081898322053389bf19af" kind="variable"><name>colour_frequency</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a036acb3a1cd85418e34cfc21d27e00b4" kind="variable"><name>lowerYellowRBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ac6ab6b03c7214b33a2e8ee3e245d9c09" kind="variable"><name>upperYellowRBound</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a7f9ea59cd1f34857074024fb0d8d0d9a" kind="variable"><name>lowerYellowGBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ad83175c5d4b6ac75920d050e4a4c0779" kind="variable"><name>upperYellowGBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a2df7582373399e69d04d5fbb0537d9b7" kind="variable"><name>lowerYellowBBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1aa16baebe92fcd88cffa93f6bdbeaecb7" kind="variable"><name>upperYellowBBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a1b92d707ad83f456bf2d9dd5666c29b4" kind="variable"><name>lowerBlueRBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a15434fa26006e525876e442f5eb4b37a" kind="variable"><name>upperBlueRBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a5999f38badecbba49a28a991d0bb631c" kind="variable"><name>lowerBlueGBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab75ec2b52da762f1c2729bee1dca224a" kind="variable"><name>upperBlueGBound</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a1f7f1c426357281a07d70808ac9a651d" kind="variable"><name>lowerBlueBBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a83d25c92fffd2d45c0f2637c71f4a210" kind="variable"><name>upperBlueBBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ae974621e0c946b91f33a190edce6e711" kind="variable"><name>lowerGreenRBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a28476f7021a9fd414bc224f4e5849137" kind="variable"><name>upperGreenRBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a60b95a0bbf4833eaae791d1ffa6bd026" kind="variable"><name>lowerGreenGBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab8ed92fcb57293ba8a8494bf2381615f" kind="variable"><name>upperGreenGBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ac190ab90e7011583178ff96ca64390eb" kind="variable"><name>lowerGreenBBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a825a6eacb4537d511e2912fbf2621526" kind="variable"><name>upperGreenBBound</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a5717103a634f3f18d59c65ce1867a531" kind="variable"><name>lowerOrangeRBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a75c05595b99e8b934b2395e352f331a6" kind="variable"><name>upperOrangeRBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a495dcb09c80354bfe2436cffe5a895a0" kind="variable"><name>lowerOrangeGBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab27056df54d9a12a1a6e80524c88edff" kind="variable"><name>upperOrangeGBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1abf345f6e1d0b0eafbd01031c262c609d" kind="variable"><name>lowerOrangeBBound</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1adfbfa326b7754c870d72645112a6ba01" kind="variable"><name>upperOrangeBBound</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a92e653a6a9f7a31cb7b6f9bc2e732133" kind="function"><name>getColor</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a1acf05f9523b2c0f329d4a7cbf1b9c47" kind="function"><name>getColor</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" kind="function"><name>setFrequency</name></member>
@@ -56,6 +36,7 @@
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a05cd9d95458b11ed57ca001a28fffa7c" kind="function"><name>ultrasonicSensorTest</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3e8288f482b3806a0f3c4668951f3e36" kind="function"><name>lightSensorTest</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" kind="function"><name>ringMotorTest</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3f36cee9ca567c845377bec33554ba8b" kind="function"><name>blackLineTest</name></member>
   </compound>
   <compound refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type" kind="enum"><name>ca::mcgill::ecse211::project::GameParameters::DemoType</name>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_1a8d4e576df991cb52b50ae54b2812aa7f" kind="variable"><name>Beta</name></member>
@@ -104,11 +85,10 @@
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1ade36cd9e71d770e9d63d16ef3a019b98" kind="function"><name>navigateStart</name></member>
   </compound>
   <compound refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters" kind="enum"><name>ca::mcgill::ecse211::project::GameParameters</name>
-    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a77c0c105458a1f570bd6f726a84f3dd5" kind="variable"><name>hasDataRead</name></member>
-    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a80acbb2b7423c79211e7eb1bd4df8545" kind="variable"><name>waitDataObject</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a32080f9c0e2e23c0feefc272620a07ad" kind="variable"><name>Area</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a36e932159f5f7e0f5e2e78f00d6f7e93" kind="variable"><name>Demo</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1af3944d1bc80c4c8a6cabce66e030f4b7" kind="variable"><name>SC</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a9c136a3a3faff96052381f791bf4c166" kind="variable"><name>SCUS</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1ab190471dbd9bb10d8cef92c1b8bea826" kind="variable"><name>Grid_LL</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afbbca622863f674dfb00dcd93e1328cb" kind="variable"><name>Grid_UR</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a58f3515615bd8e55a036615a23b8ff80" kind="variable"><name>TargetRing</name></member>
@@ -134,11 +114,15 @@
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util" kind="class"><name>ca::mcgill::ecse211::project::GameUtil</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a84ec23eabf60cb20895815e7b390e3f2" kind="variable"><name>startingFinder</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1acedc99ad369450d6b2d7711c2d63027a" kind="variable"><name>searchingFinder</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1ab171328c45ccc1d98d96cc9422232669" kind="variable"><name>leftInstruction</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4f6944d94b8de443baa150a2e7b700a0" kind="variable"><name>rightInstruction</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a98831b92dc6ed43627755d2995cba683" kind="variable"><name>upInstruction</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1afc9ecf0a8a18c0abea79086801d8425a" kind="variable"><name>downInstruction</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a4b657445545fb1a814b6699724d72042" kind="function"><name>isSafe</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1ae5c5c445ab84516991219ca3783fcaa4" kind="function"><name>average</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1ae373ebc3ec91ed3bf9dd7304a482a3f5" kind="function"><name>distanceFromRobot</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a6fb324a3d5e42414c83dfd8bd5910b56" kind="function"><name>distanceFrom</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a6e0ee94b800ca3727ca8009782abda14" kind="function"><name>findClosestPointToRobot</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1aa9819819c4de2ef025caac87d0c0b0db" kind="function"><name>isBoundary</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a5783c3415e13b66362a647504b63741a" kind="function"><name>isIslandBoundary</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer" kind="class"><name>ca::mcgill::ecse211::localization::LightLocalizer</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a4952a0770d403a9805b726d79fbed910" kind="variable"><name>leftMotor</name></member>
@@ -156,21 +140,30 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" kind="variable"><name>cont</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" kind="variable"><name>lgData</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a79908bf56395ae82ab5ac57b5b40f206" kind="variable"><name>lastValue</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ac3eedf8306835f6592bdbec2f5694651" kind="variable"><name>WAIT_TIME</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a81f7ed4eb2aee15bcf08b7396d68f5ac" kind="variable"><name>id</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a5016492d8659e131b6e0700ca75f2214" kind="variable"><name>sensorNumber</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1adc07f842a1cc089195c5e47c2a0e5ee6" kind="function"><name>LightPoller</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1aab90a460a4d0c926fb8f3930492a8fb1" kind="function"><name>runMethod</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main" kind="class"><name>ca::mcgill::ecse211::project::Main</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af6f7b8fffddcf855f74fe128d2e23ea1" kind="variable"><name>test</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1a8dac740460370f76ac0db5dc20824b1f" kind="variable"><name>testType</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af681b5dc675c13ed284071cc135f5fd3" kind="function"><name>main</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation" kind="class"><name>ca::mcgill::ecse211::project::Navigation</name>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaa91995a29b952dc30cb303be69ff6f0" kind="variable"><name>RIGHT_MOTOR_RING_COR</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48c67588a16abbc61deee39a41d21318" kind="variable"><name>LEFT_MOTOR_RING_COR</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae23bfa31488ae9eac7142de45d7163ea" kind="variable"><name>FORWARD_SPEED</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a82b05b985ae3649bc9e515fb03428d82" kind="variable"><name>ROTATE_SPEED</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae680802d48058814c87158c38f3cad34" kind="variable"><name>ACCELERATION</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aa43cdc660f8b0edf3829c221b33452f9" kind="variable"><name>TUNNEL_SPEED</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a8e9fc195f7c8e5aaa9af92ddfeab087a" kind="variable"><name>TUNNEL_CORRECTION</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a8f977c881e15bdd6051c8d426b174d6d" kind="variable"><name>Q_ACCELERATION</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a6a195c67fcf18efff4e53162be73d953" kind="variable"><name>N_ACCELERATION</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a88072a6cfef2bbd37e7a42e9d8f50863" kind="variable"><name>leftBlackLineThre</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a2408df059d61ffffffc2836c23d0c2d6" kind="variable"><name>rightBlackLineThre</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a70f11d49c79002819a5df248d2d23000" kind="variable"><name>ZERO_DEGREE_LOW</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a8d13f98164cf784b110b992d927ed8df" kind="variable"><name>ZERO_DEGREE_HIGH</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1acb05a97f7f1d5b91e7ba2b91340ca27f" kind="variable"><name>ZERO_AFTER_LOW</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a9073bae9d41059a06d87cd563f17db6c" kind="variable"><name>ZERO_AFTER_HIGH</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a8940db211d6fd0e3dd8a37a26105d2f2" kind="variable"><name>OTHER_ANGLE_TOLERENCE</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a05e650fadd8733a3486ecfc5ed8c54ed" kind="variable"><name>leftMotor</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a2ec143983071420e10579c211e2d5f0f" kind="variable"><name>rightMotor</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a20d49ac52063aa11a31a0cdbfdb90aa8" kind="variable"><name>odometer</name></member>
@@ -180,16 +173,16 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" kind="function"><name>travelTo</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" kind="function"><name>travelToWithCorrection</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" kind="function"><name>moveWithCorrection</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" kind="function"><name>moveOneTileWithCorrection</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" kind="function"><name>turnTo</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" kind="function"><name>goThroughTunnel</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a0016a23ab5d544148a09948fb1a40e4c" kind="function"><name>goToRingSet</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a80ab0e4146d1725b60407bdb91f12a30" kind="function"><name>searchRingSet</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" kind="function"><name>searchRingSet</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" kind="function"><name>turn</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a7c66610c5b7496ddb35d342ab2cd3f08" kind="function"><name>forward</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae8530d181ffd790ff9dea5eeab54b1a1" kind="function"><name>stop</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad57ac485f5c26a13f297136e3a0f7e94" kind="function"><name>charToRotation</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" kind="function"><name>moveOneTileWithCorrection</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a64f35546a4ed268ade52a0c7e6235fce" kind="function"><name>moveUntilLineDetection</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ab7e7ec2806ec65df8545d3a19d22d811" kind="function"><name>moveBackWithCorrection</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ab5dfe3377874bc282d3dd068bd5ef712" kind="function"><name>moveUntilLineDetection</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3339b0f8f42617fd6a10de6e1b85c7bc" kind="function"><name>travelToTunnelEntrance</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ac9e260bcd619ffa4820d7d0de7ea1c12" kind="function"><name>convertDistance</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a434c589a16c077ff25dd93121f93c2a7" kind="function"><name>convertAngle</name></member>
@@ -262,20 +255,31 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a7e23e2fe527b2ecbf4ddc8f988dd70a5" kind="function"><name>RGBPoller</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" kind="function"><name>runMethod</name></member>
   </compound>
-  <compound refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher" kind="class"><name>ca::mcgill::ecse211::threads::RingSearcher</name>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a71f82ea170342d2aafcc7372b1c34735" kind="variable"><name>ACCELERATION</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1aef8e2ffbfb10f2090c441bc496108b9d" kind="variable"><name>sensorMotor</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1aae7094688adbb36eeca2862fa3ab04a2" kind="variable"><name>rodMotor</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1ae02595639aa0e47f68a8367eff0cd48d" kind="variable"><name>started</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a0ba2e447e8d1a8b3822b2b5b81a180da" kind="variable"><name>odometer</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a531d7f3a9f8d4443ef70433ad11e4c3c" kind="variable"><name>data</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1af36dd15db12c915245199bef646137ed" kind="function"><name>RingSearcher</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" kind="function"><name>search</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a6cbee26320e250b07e4f4b14f60d39a0" kind="function"><name>prepareRetrieve</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd7a2651a7c5de76a018664c8bf327af" kind="function"><name>retrieveRing</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a3d6f49addfa2bd5d61903287c68aefd6" kind="function"><name>resetRodMotor</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a17ca33f66eca9dd1ad822f99849296ec" kind="function"><name>protectRing</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1a105b1aaaca38a9466c125318175f192c" kind="function"><name>unloadRing</name></member>
+  <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher" kind="class"><name>ca::mcgill::ecse211::project::RingSearcher</name>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ad1a169095f8104b419cd8a24e1fa0f99" kind="variable"><name>ROD_RETRIEVE</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1adcf5f5efc4d1ffad496cb0357405dd6b" kind="variable"><name>ROD_PREPARE</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ac6dcfa1e6a4e0efdc373daadb17e86e1" kind="variable"><name>SENSOR_ROTATION</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a3ad1b3e1d1945e7c3543eeb9a9463545" kind="variable"><name>ACCELERATION</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a3a73cb6a762ccbb47e720a7ad033d931" kind="variable"><name>ROD_SPEED</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1aa422e45881983de587c2e5752b7bd86f" kind="variable"><name>SENSOR_SPEED</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a2b921f2922aa412c1879d3fa1fdf3aae" kind="variable"><name>sensorMotor</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ade0f045cb1f23722810df19430bea5a6" kind="variable"><name>rodMotor</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a816c1727797a5c2f7eb0f514a4508fe5" kind="variable"><name>started</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ae3b3d239a80eb00610ea8c7eda1643f6" kind="variable"><name>odometer</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ab990f1ed46e59183cf8593288efd821f" kind="variable"><name>data</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a37eebb6cbdfd692e0979c3ca0fe2597b" kind="function"><name>RingSearcher</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a7ff5756046a0ce992ed8cb8954139c3b" kind="function"><name>search</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1abf31c36cadb144a4651b11f7fa37120a" kind="function"><name>prepareSearch</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ad73c50b29163d91292de418101cce21e" kind="function"><name>resetSearch</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a3de30b85b1445157d7f8572992de7651" kind="function"><name>prepareRetrieve</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1afca3a0c746b07abb88881d926f4fe71f" kind="function"><name>retrieveRing</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a8b0ea0bf4cd07b6c8a090c3e9bc8eb04" kind="function"><name>resetRodMotor</name></member>
+  </compound>
+  <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_ring_set_comparator" kind="class"><name>ca::mcgill::ecse211::project::GameUtil::RingSetComparator</name>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_ring_set_comparator_1a7e28ffcd3a955ccc0c6ec6406c16fb11" kind="function"><name>compare</name></member>
+  </compound>
+  <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_robot_comparator" kind="class"><name>ca::mcgill::ecse211::project::GameUtil::RobotComparator</name>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_robot_comparator_1a2374aec9793f91e155020d5c4a7f00d7" kind="function"><name>compare</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kind="class"><name>ca::mcgill::ecse211::threads::SensorData</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a100eb89b3adb81a1d22fc6d96dae9fdb" kind="variable"><name>lights</name></member>
@@ -297,6 +301,9 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a35b1941d44e86b81eb7c625efbd3c8ba" kind="function"><name>setA</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" kind="function"><name>setRGB</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1af905a6f2825716ae1a39bf7f6be09477" kind="function"><name>setL</name></member>
+  </compound>
+  <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_starting_comparator" kind="class"><name>ca::mcgill::ecse211::project::GameUtil::StartingComparator</name>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_starting_comparator_1aa4705003cb5fada20ff547b7d0b7732d" kind="function"><name>compare</name></member>
   </compound>
   <compound refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status" kind="enum"><name>ca::mcgill::ecse211::project::Game::Status</name>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status_1a4ee6ac6711e6f0f96cfbe832f260c89f" kind="variable"><name>Idle</name></member>
@@ -398,6 +405,8 @@
   </compound>
   <compound refid="_navigation_8java" kind="file"><name>Navigation.java</name>
   </compound>
+  <compound refid="_ring_searcher_8java" kind="file"><name>RingSearcher.java</name>
+  </compound>
   <compound refid="_wi_fi_8java" kind="file"><name>WiFi.java</name>
   </compound>
   <compound refid="_component_test_8java" kind="file"><name>ComponentTest.java</name>
@@ -405,8 +414,6 @@
   <compound refid="_light_poller_8java" kind="file"><name>LightPoller.java</name>
   </compound>
   <compound refid="_r_g_b_poller_8java" kind="file"><name>RGBPoller.java</name>
-  </compound>
-  <compound refid="_ring_searcher_8java" kind="file"><name>RingSearcher.java</name>
   </compound>
   <compound refid="_sensor_data_8java" kind="file"><name>SensorData.java</name>
   </compound>

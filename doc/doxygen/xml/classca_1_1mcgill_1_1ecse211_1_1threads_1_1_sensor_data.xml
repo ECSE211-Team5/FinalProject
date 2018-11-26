@@ -171,9 +171,9 @@
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" compoundref="_light_localizer_8java" startline="37" endline="44">ca.mcgill.ecse211.localization.LightLocalizer.LightLocalizer</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1a3603202cdb5035c4e4164933b0aebeec" compoundref="_ultrasonic_localizer_8java" startline="43" endline="50">ca.mcgill.ecse211.localization.UltrasonicLocalizer.UltrasonicLocalizer</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1af0970123ca090749bfb2f5b9f478c01d" compoundref="_display_8java" startline="35" endline="39">ca.mcgill.ecse211.project.Display.Display</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="349" endline="414">ca.mcgill.ecse211.project.Game.preparation</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" compoundref="_navigation_8java" startline="46" endline="57">ca.mcgill.ecse211.project.Navigation.Navigation</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1af36dd15db12c915245199bef646137ed" compoundref="_ring_searcher_8java" startline="39" endline="51">ca.mcgill.ecse211.threads.RingSearcher.RingSearcher</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="359" endline="424">ca.mcgill.ecse211.project.Game.preparation</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" compoundref="_navigation_8java" startline="63" endline="74">ca.mcgill.ecse211.project.Navigation.Navigation</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a37eebb6cbdfd692e0979c3ca0fe2597b" compoundref="_ring_searcher_8java" startline="43" endline="55">ca.mcgill.ecse211.project.RingSearcher.RingSearcher</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -206,7 +206,7 @@
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="88" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="88" bodyend="97"/>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="52" endline="107">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" compoundref="_navigation_8java" startline="160" endline="169">ca.mcgill.ecse211.project.Navigation.moveWithCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" compoundref="_navigation_8java" startline="241" endline="250">ca.mcgill.ecse211.project.Navigation.moveOneTileWithCorrection</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a76313564e284f5cdb66aefce4e595f3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int []</type>
@@ -335,7 +335,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="149" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="149" bodyend="158"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="36" endline="66">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="39" endline="65">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1af905a6f2825716ae1a39bf7f6be09477" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -362,7 +362,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="165" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="165" bodyend="173"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1aab90a460a4d0c926fb8f3930492a8fb1" compoundref="_light_poller_8java" startline="50" endline="61">ca.mcgill.ecse211.threads.LightPoller.runMethod</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1aab90a460a4d0c926fb8f3930492a8fb1" compoundref="_light_poller_8java" startline="48" endline="59">ca.mcgill.ecse211.threads.LightPoller.runMethod</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_ring_set_comparator" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::project::GameUtil::RingSetComparator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">java::util::Comparator&lt; int[]&gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_ring_set_comparator_1a7e28ffcd3a955ccc0c6ec6406c16fb11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.project.GameUtil.RingSetComparator.compare</definition>
+        <argsstring>(int[] a, int[] b)</argsstring>
+        <name>compare</name>
+        <param>
+          <type>int []</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int []</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="62" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="62" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is class is used as a comparator to sort the points from nearest to the ring set. <simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="73">
+        <label>java::util::Comparator&lt; int[]&gt;</label>
+      </node>
+      <node id="72">
+        <label>ca.mcgill.ecse211.project.GameUtil.RingSetComparator</label>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="75">
+        <label>java::util::Comparator&lt; int[]&gt;</label>
+      </node>
+      <node id="74">
+        <label>ca.mcgill.ecse211.project.GameUtil.RingSetComparator</label>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="60" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="60" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_ring_set_comparator_1a7e28ffcd3a955ccc0c6ec6406c16fb11" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameUtil::RingSetComparator</scope><name>compare</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

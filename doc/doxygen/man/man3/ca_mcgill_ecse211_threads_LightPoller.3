@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.LightPoller" 3 "Thu Nov 15 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.LightPoller" 3 "Mon Nov 26 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -40,13 +40,7 @@ Inherited by \fBca\&.mcgill\&.ecse211\&.threads\&.RGBPoller\fP\&.
 .RI "float \fBlastValue\fP []"
 .br
 .in -1c
-.SS "Static Protected Attributes"
-
-.in +1c
-.ti -1c
-.RI "static int \fBWAIT_TIME\fP = 50"
-.br
-.in -1c
+.SS "Additional Inherited Members"
 .SH "Detailed Description"
 .PP 
 This class implements the Light Sensor Poller for our robot it runs pulls the sensor data every 50 miliseconds 
@@ -90,39 +84,39 @@ This constructor creates an instance of the \fBLightPoller\fP class to provide d
 .PP
 
 .PP
-Definition at line 37 of file LightPoller\&.java\&.
+Definition at line 35 of file LightPoller\&.java\&.
 .PP
 .nf
-37                                                                                                        {
-38     this\&.us = us;
-39     this\&.cont = cont;
-40     this\&.lgData = lgData;
-41     this\&.id = sensorNumber;
-42     isStarted = true;
-43     lastValue = new float[2];
-44     sensorNumber++;
-45   }
+35                                                                                                        {
+36     this\&.us = us;
+37     this\&.cont = cont;
+38     this\&.lgData = lgData;
+39     isStarted = true;
+40     lastValue = new float[2];
+41     sensorNumber++;
+42     WAIT_TIME = 50;
+43   }
 .fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.LightPoller\&.runMethod ()\fC [protected]\fP"
 the run method to be performed in run method, collect light data 
 .PP
-Definition at line 50 of file LightPoller\&.java\&.
+Definition at line 48 of file LightPoller\&.java\&.
 .PP
 .nf
-50                              {
-51     double l[] = new double[2];
-52     for(int i = 0; i < us\&.length; i++) {
-53       us[i]\&.fetchSample(lgData[i], 0); // acquire data
-54   
-55       int distance = (int) (lgData[i][0] * 100); // extract from buffer, multiply by 100 for convenience
-56                                               // and allow it to be cast to int
-57       l[i] = distance - lastValue[i]; // now take action depending on value
-58       lastValue[i] = distance; 
-59     }
-60     cont\&.setL(l);
-61   }
+48                              {
+49     double l[] = new double[2];
+50     for(int i = 0; i < us\&.length; i++) {
+51       us[i]\&.fetchSample(lgData[i], 0); // acquire data
+52   
+53       int distance = (int) (lgData[i][0] * 100); // extract from buffer, multiply by 100 for convenience
+54                                               // and allow it to be cast to int
+55       l[i] = distance - lastValue[i]; // now take action depending on value
+56       lastValue[i] = distance; 
+57     }
+58     cont\&.setL(l);
+59   }
 .fi
 .SH "Member Data Documentation"
 .PP 
@@ -142,10 +136,6 @@ Definition at line 19 of file LightPoller\&.java\&.
 
 .PP
 Definition at line 17 of file LightPoller\&.java\&.
-.SS "int ca\&.mcgill\&.ecse211\&.threads\&.LightPoller\&.WAIT_TIME = 50\fC [static]\fP, \fC [protected]\fP"
-
-.PP
-Definition at line 21 of file LightPoller\&.java\&.
 
 .SH "Author"
 .PP 

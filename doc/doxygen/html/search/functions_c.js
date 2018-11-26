@@ -1,19 +1,16 @@
 var searchData=
 [
-  ['search',['search',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#abd2b2c172ea393ce4185027c8a12780f',1,'ca::mcgill::ecse211::threads::RingSearcher']]],
-  ['searchringset',['searchRingSet',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a80ab0e4146d1725b60407bdb91f12a30',1,'ca::mcgill::ecse211::project::Navigation']]],
-  ['sensordata',['SensorData',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a11dcdc9c15184e05a9c84fc3958e26b6',1,'ca::mcgill::ecse211::threads::SensorData']]],
-  ['seta',['setA',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a35b1941d44e86b81eb7c625efbd3c8ba',1,'ca::mcgill::ecse211::threads::SensorData']]],
-  ['setd',['setD',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a2c1f8e625478b89aabe6e9911e482ef3',1,'ca::mcgill::ecse211::threads::SensorData']]],
-  ['setfrequency',['setFrequency',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a40906193773ead0bfd582f188413c97a',1,'ca::mcgill::ecse211::project::ColorCalibrator']]],
-  ['setl',['setL',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#af905a6f2825716ae1a39bf7f6be09477',1,'ca::mcgill::ecse211::threads::SensorData']]],
-  ['setrgb',['setRGB',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a6ad23111ecd378099f0b4ed0b6d398bc',1,'ca::mcgill::ecse211::threads::SensorData']]],
-  ['setstart',['setStart',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a16221cdc4ccf637b190934549c708e1f',1,'ca::mcgill::ecse211::threads::ThreadControl']]],
-  ['settheta',['setTheta',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a419b8f07c2c5374411c8e62298e9a402',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
-  ['setwait',['setWait',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a7759a6f52b56e15cb37cd25ea31c93c1',1,'ca::mcgill::ecse211::threads::ThreadControl']]],
-  ['setx',['setX',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a2911d7215e47f3064defe016b46bfeef',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
-  ['setxyt',['setXYT',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a2ebc18a13aea6276122d9ef4ee100bb9',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
-  ['sety',['setY',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a82986438cd462e66520bc62bb4bd2b75',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
-  ['shouldwait',['shouldWait',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a9c3896500e86e402b8019e1be6500621',1,'ca::mcgill::ecse211::threads::ThreadControl']]],
-  ['stop',['stop',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ae8530d181ffd790ff9dea5eeab54b1a1',1,'ca::mcgill::ecse211::project::Navigation']]]
+  ['readdata',['readData',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698',1,'ca.mcgill.ecse211.project.Game.readData()'],['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi.html#a3488726983cda70dbde6f05c9c762f16',1,'ca.mcgill.ecse211.project.WiFi.readData()']]],
+  ['ready',['ready',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a5b304a6a59ddee3f8c7d37bba8a4c129',1,'ca::mcgill::ecse211::project::Game']]],
+  ['resetfrequency',['resetFrequency',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#ab6148d75e3a105016580e90ed1ea9bc9',1,'ca::mcgill::ecse211::project::ColorCalibrator']]],
+  ['resetrodmotor',['resetRodMotor',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#a8b0ea0bf4cd07b6c8a090c3e9bc8eb04',1,'ca::mcgill::ecse211::project::RingSearcher']]],
+  ['resetsearch',['resetSearch',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#ad73c50b29163d91292de418101cce21e',1,'ca::mcgill::ecse211::project::RingSearcher']]],
+  ['retrievering',['retrieveRing',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#afca3a0c746b07abb88881d926f4fe71f',1,'ca::mcgill::ecse211::project::RingSearcher']]],
+  ['rgbpoller',['RGBPoller',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller.html#a7e23e2fe527b2ecbf4ddc8f988dd70a5',1,'ca::mcgill::ecse211::threads::RGBPoller']]],
+  ['ringmotortest',['ringMotorTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a1ecca45b47067d825683cf46dcf22b62',1,'ca::mcgill::ecse211::tests::ComponentTest']]],
+  ['ringsearcher',['RingSearcher',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#a37eebb6cbdfd692e0979c3ca0fe2597b',1,'ca::mcgill::ecse211::project::RingSearcher']]],
+  ['run',['run',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer.html#af0ff4c5121973a8310cf986e25fa0d87',1,'ca.mcgill.ecse211.odometer.Odometer.run()'],['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html#aad66a7030ac00f3a9cbe7bc33c25acbf',1,'ca.mcgill.ecse211.odometer.OdometryCorrection.run()'],['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_display.html#ab508a8bc2b738499bec2c432a814cba5',1,'ca.mcgill.ecse211.project.Display.run()'],['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a03e743000ea2c37080427565e8ec5f35',1,'ca.mcgill.ecse211.threads.ThreadControl.run()']]],
+  ['rungame',['runGame',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#adf69abe44e952d627fb9e6a2f678cb5e',1,'ca::mcgill::ecse211::project::Game']]],
+  ['runmethod',['runMethod',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html#aab90a460a4d0c926fb8f3930492a8fb1',1,'ca.mcgill.ecse211.threads.LightPoller.runMethod()'],['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller.html#a96db4561c87136de5098497fe30356fe',1,'ca.mcgill.ecse211.threads.RGBPoller.runMethod()'],['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a2959c54bdb6c62c9d5569cdf3ccf2418',1,'ca.mcgill.ecse211.threads.ThreadControl.runMethod()'],['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller.html#a8e6a84342aedc1b72741dbc2e80148c4',1,'ca.mcgill.ecse211.threads.UltrasonicPoller.runMethod()']]],
+  ['runtest',['runTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5dc8bf97bc48adf5bee88d425a1a974e',1,'ca::mcgill::ecse211::tests::ComponentTest']]]
 ];

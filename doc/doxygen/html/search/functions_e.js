@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['ultrasoniclocalizer',['UltrasonicLocalizer',['../classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer.html#a3603202cdb5035c4e4164933b0aebeec',1,'ca::mcgill::ecse211::localization::UltrasonicLocalizer']]],
-  ['ultrasonicpoller',['UltrasonicPoller',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller.html#ac561f5d04e2b655a4509de8453c0cd07',1,'ca::mcgill::ecse211::threads::UltrasonicPoller']]],
-  ['ultrasonicsensortest',['ultrasonicSensorTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a05cd9d95458b11ed57ca001a28fffa7c',1,'ca::mcgill::ecse211::tests::ComponentTest']]],
-  ['unloadring',['unloadRing',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher.html#a105b1aaaca38a9466c125318175f192c',1,'ca::mcgill::ecse211::threads::RingSearcher']]],
-  ['update',['update',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#aaa06f190d634299fcb1b97a1891dad85',1,'ca::mcgill::ecse211::odometer::OdometerData']]]
+  ['travelto',['travelTo',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ad89b3dd084d81b4ec4d89ea73ba13eaa',1,'ca::mcgill::ecse211::project::Navigation']]],
+  ['traveltowithcorrection',['travelToWithCorrection',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ae7230e905494002087416294f12cae6a',1,'ca::mcgill::ecse211::project::Navigation']]],
+  ['tunneltest',['tunnelTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#ae85caa20c6391bacc4fdbd411ee3f113',1,'ca::mcgill::ecse211::tests::ComponentTest']]],
+  ['turn',['turn',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ad74286ad36d333bfaf57661837457b76',1,'ca::mcgill::ecse211::project::Navigation']]],
+  ['turnto',['turnTo',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a3bbe0645f2b3b3d0986b4a707fb5a00c',1,'ca::mcgill::ecse211::project::Navigation']]]
 ];

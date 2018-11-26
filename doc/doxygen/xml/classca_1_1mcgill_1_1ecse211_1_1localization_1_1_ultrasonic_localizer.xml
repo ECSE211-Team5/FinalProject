@@ -8,7 +8,7 @@
         <definition>final int ca.mcgill.ecse211.localization.UltrasonicLocalizer.ROTATE_SPEED</definition>
         <argsstring></argsstring>
         <name>ROTATE_SPEED</name>
-        <initializer>= 200</initializer>
+        <initializer>= 600</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -204,11 +204,11 @@
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="57" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="57" bodyend="63"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="84" endline="106">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="203" endline="224">ca.mcgill.ecse211.project.Navigation.turnTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="333" endline="354">ca.mcgill.ecse211.project.Navigation.turnTo</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="197" endline="208">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" compoundref="_navigation_8java" startline="397" endline="400">ca.mcgill.ecse211.project.Navigation.turn</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" compoundref="_navigation_8java" startline="557" endline="560">ca.mcgill.ecse211.project.Navigation.turn</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a46cc30522719018a80f89624e0ce458f" compoundref="_sensor_data_8java" startline="80" endline="82">ca.mcgill.ecse211.threads.SensorData.getD</references>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="259" endline="261">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" compoundref="_component_test_8java" startline="92" endline="98">ca.mcgill.ecse211.tests.ComponentTest.localizationTest</referencedby>
       </memberdef>
       </sectiondef>

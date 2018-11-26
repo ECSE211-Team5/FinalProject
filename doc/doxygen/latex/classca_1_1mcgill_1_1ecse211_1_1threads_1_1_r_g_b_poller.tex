@@ -103,43 +103,39 @@ Here is the call graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{run\+Method()}{runMethod()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+R\+G\+B\+Poller.\+run\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
+run method for the rgb poller polls and process the rgb data of rgb sensor 
 
-
-Definition at line 36 of file R\+G\+B\+Poller.\+java.
+Definition at line 39 of file R\+G\+B\+Poller.\+java.
 
 
 \begin{DoxyCode}
-36                              \{
-37     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}[0].fetchSample(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0], 0); \textcolor{comment}{// acquire data at offset 0}
-38     \textcolor{comment}{// get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int}
-39     \textcolor{keywordtype}{int} r = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][0] * 100); \textcolor{comment}{// extract from buffer, cast to int}
-40     \textcolor{keywordtype}{int} g = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][1] * 100); \textcolor{comment}{// extract from buffer, cast to int}
-41     \textcolor{keywordtype}{int} b = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][2] * 100); \textcolor{comment}{// extract from buffer, cast to int}
-42     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont}.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}{setRGB}(r, g, b); \textcolor{comment}{// now take action depending on value}
-43     \textcolor{keywordflow}{switch} (ColorCalibrator.getColor(r, g, b)) \{
-44       \textcolor{keywordflow}{case} Orange:
-45         ColorCalibrator.setFrequency(ColorCalibrator.Color.Orange);
-46     \textcolor{comment}{//    System.out.println("orange");}
-47         \textcolor{keywordflow}{break};
-48       \textcolor{keywordflow}{case} Yellow:
-49         ColorCalibrator.setFrequency(ColorCalibrator.Color.Yellow);
-50      \textcolor{comment}{//   System.out.println("yellow");}
-51         \textcolor{keywordflow}{break};
-52       \textcolor{keywordflow}{case} Green:
-53         ColorCalibrator.setFrequency(ColorCalibrator.Color.Green);
-54      \textcolor{comment}{//   System.out.println("green");}
+39                              \{
+40     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}[0].fetchSample(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0], 0); \textcolor{comment}{// acquire data at offset 0}
+41     \textcolor{comment}{// get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int}
+42     \textcolor{keywordtype}{int} r = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][0] * 100); \textcolor{comment}{// extract from buffer, cast to int}
+43     \textcolor{keywordtype}{int} g = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][1] * 100); \textcolor{comment}{// extract from buffer, cast to int}
+44     \textcolor{keywordtype}{int} b = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[0][2] * 100); \textcolor{comment}{// extract from buffer, cast to int}
+45     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont}.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a6ad23111ecd378099f0b4ed0b6d398bc}{setRGB}(r, g, b); \textcolor{comment}{// now take action depending on value}
+46     \textcolor{keywordflow}{switch} (ColorCalibrator.getColor(r, g, b)) \{
+47       \textcolor{keywordflow}{case} Orange:
+48         ColorCalibrator.setFrequency(ColorCalibrator.Color.Orange);
+49         \textcolor{keywordflow}{break};
+50       \textcolor{keywordflow}{case} Yellow:
+51         ColorCalibrator.setFrequency(ColorCalibrator.Color.Yellow);
+52         \textcolor{keywordflow}{break};
+53       \textcolor{keywordflow}{case} Green:
+54         ColorCalibrator.setFrequency(ColorCalibrator.Color.Green);
 55         \textcolor{keywordflow}{break};
 56       \textcolor{keywordflow}{case} Blue:
 57         ColorCalibrator.setFrequency(ColorCalibrator.Color.Blue);
-58     \textcolor{comment}{//    System.out.println("blue");}
-59         \textcolor{keywordflow}{break};
-60       \textcolor{keywordflow}{default}:
-61         ColorCalibrator.setFrequency(ColorCalibrator.Color.Other);
-62         \textcolor{keywordflow}{break};
-63     \}
+58         \textcolor{keywordflow}{break};
+59       \textcolor{keywordflow}{default}:
+60         ColorCalibrator.setFrequency(ColorCalibrator.Color.Other);
+61         \textcolor{keywordflow}{break};
+62     \}
+63     
 64     
-65     
-66   \}
+65   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

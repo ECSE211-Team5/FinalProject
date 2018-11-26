@@ -91,8 +91,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="37" bodyend="43"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="37" endline="39">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" compoundref="_thread_control_8java" startline="8">ca.mcgill.ecse211.threads.ThreadControl.WAIT_TIME</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="42" endline="44">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" compoundref="_thread_control_8java" startline="13">ca.mcgill.ecse211.threads.ThreadControl.WAIT_TIME</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -122,36 +122,36 @@
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="88">
+      <node id="99">
         <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
-        <childnode refid="89" relation="public-inheritance">
+        <childnode refid="100" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="89">
+      <node id="100">
         <label>ca.mcgill.ecse211.threads.ThreadControl</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="90" relation="public-inheritance">
+        <childnode refid="101" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="90">
+      <node id="101">
         <label>Runnable</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="91">
+      <node id="102">
         <label>ca.mcgill.ecse211.threads.UltrasonicPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ultrasonic_poller"/>
-        <childnode refid="92" relation="public-inheritance">
+        <childnode refid="103" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="92">
+      <node id="103">
         <label>ca.mcgill.ecse211.threads.ThreadControl</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="104" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="93">
+      <node id="104">
         <label>Runnable</label>
       </node>
     </collaborationgraph>

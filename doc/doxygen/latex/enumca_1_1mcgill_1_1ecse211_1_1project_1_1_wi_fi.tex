@@ -123,94 +123,100 @@ Definition at line 26 of file Wi\+Fi.\+java.
 88       GameParameters.OPPO\_LL[1] = ((Long) data.get(startingO+\textcolor{stringliteral}{"LL\_y"})).intValue();
 89       GameParameters.OPPO\_UR[0] = ((Long) data.get(startingO+\textcolor{stringliteral}{"UR\_x"})).intValue();
 90       GameParameters.OPPO\_UR[1] = ((Long) data.get(startingO+\textcolor{stringliteral}{"UR\_y"})).intValue();
-91       
-92       \textcolor{comment}{//GameParameters.Grid\_LL[0] = ((Long) data.get("Green\_LL\_x")).intValue();}
-93       \textcolor{comment}{//GameParameters.Grid\_LL[1] = ((Long) data.get("Green\_LL\_y")).intValue();}
-94       \textcolor{comment}{//GameParameters.Grid\_UR[0] = ((Long) data.get("Green\_UR\_x")).intValue();}
-95       \textcolor{comment}{//GameParameters.Grid\_UR[1] = ((Long) data.get("Green\_UR\_y")).intValue();}
+91 
+92       GameParameters.Island\_LL[0] = ((Long) data.get(\textcolor{stringliteral}{"Island\_LL\_x"})).intValue();
+93       GameParameters.Island\_LL[1] = ((Long) data.get(\textcolor{stringliteral}{"Island\_LL\_y"})).intValue();
+94       GameParameters.Island\_UR[0] = ((Long) data.get(\textcolor{stringliteral}{"Island\_UR\_x"})).intValue();
+95       GameParameters.Island\_UR[1] = ((Long) data.get(\textcolor{stringliteral}{"Island\_UR\_y"})).intValue();
 96 
-97       GameParameters.Island\_LL[0] = ((Long) data.get(\textcolor{stringliteral}{"Island\_LL\_x"})).intValue();
-98       GameParameters.Island\_LL[1] = ((Long) data.get(\textcolor{stringliteral}{"Island\_LL\_y"})).intValue();
-99       GameParameters.Island\_UR[0] = ((Long) data.get(\textcolor{stringliteral}{"Island\_UR\_x"})).intValue();
-100       GameParameters.Island\_UR[1] = ((Long) data.get(\textcolor{stringliteral}{"Island\_UR\_y"})).intValue();
-101 
-102       GameParameters.TN\_LL[0] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"LL\_x"})).intValue();
-103       GameParameters.TN\_LL[1] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"LL\_y"})).intValue();
-104       GameParameters.TN\_UR[0] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"UR\_x"})).intValue();
-105       GameParameters.TN\_UR[1] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"UR\_y"})).intValue();
-106       System.out.println(\textcolor{stringliteral}{" GameParameters.TN\_LL[0] "} +  GameParameters.TN\_LL[0]);
-107       System.out.println(\textcolor{stringliteral}{" GameParameters.TN\_LL[1] "} +  GameParameters.TN\_LL[1]);
-108       System.out.println(\textcolor{stringliteral}{" GameParameters.TN\_UR[0] "} +  GameParameters.TN\_UR[0]);
-109       System.out.println(\textcolor{stringliteral}{" GameParameters.TN\_UR[1] "} +  GameParameters.TN\_UR[1]);
-110 
+97       GameParameters.TN\_LL[0] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"LL\_x"})).intValue();
+98       GameParameters.TN\_LL[1] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"LL\_y"})).intValue();
+99       GameParameters.TN\_UR[0] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"UR\_x"})).intValue();
+100       GameParameters.TN\_UR[1] = ((Long) data.get(tunnelUs+\textcolor{stringliteral}{"UR\_y"})).intValue();
+101       System.out.println(\textcolor{stringliteral}{" GameParameters.TN\_LL[0] "} +  GameParameters.TN\_LL[0]);
+102       System.out.println(\textcolor{stringliteral}{" GameParameters.TN\_LL[1] "} +  GameParameters.TN\_LL[1]);
+103       System.out.println(\textcolor{stringliteral}{" GameParameters.TN\_UR[0] "} +  GameParameters.TN\_UR[0]);
+104       System.out.println(\textcolor{stringliteral}{" GameParameters.TN\_UR[1] "} +  GameParameters.TN\_UR[1]);
+105 
+106 
+107       GameParameters.TNO\_LL[0] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"LL\_x"})).intValue();
+108       GameParameters.TNO\_LL[1] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"LL\_y"})).intValue();
+109       GameParameters.TNO\_UR[0] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"UR\_x"})).intValue();
+110       GameParameters.TNO\_UR[1] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"UR\_y"})).intValue();
 111 
-112       GameParameters.TNO\_LL[0] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"LL\_x"})).intValue();
-113       GameParameters.TNO\_LL[1] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"LL\_y"})).intValue();
-114       GameParameters.TNO\_UR[0] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"UR\_x"})).intValue();
-115       GameParameters.TNO\_UR[1] = ((Long) data.get(tunnelO+\textcolor{stringliteral}{"UR\_y"})).intValue();
-116 
-117       GameParameters.TREE\_US[0] = ((Long) data.get(ringUs+\textcolor{stringliteral}{"x"})).intValue();
-118       GameParameters.TREE\_US[1] = ((Long) data.get(ringUs+\textcolor{stringliteral}{"y"})).intValue();
-119 
-120       GameParameters.TTEE\_O[0] = ((Long) data.get(ringO+\textcolor{stringliteral}{"x"})).intValue();
-121       GameParameters.TTEE\_O[1] = ((Long) data.get(ringO+\textcolor{stringliteral}{"y"})).intValue();
-122 
-123       \textcolor{keywordflow}{if} (GameParameters.Demo == GameParameters.DemoType.Beta) \{
-124         GameParameters.Grid\_UR[0] = 8;
-125         GameParameters.Grid\_UR[1] = 8;
-126         
-127         \textcolor{keywordflow}{switch}(GameParameters.UsCorner) \{
-128           \textcolor{keywordflow}{case} 0:
-129             \textcolor{keywordtype}{int}[] sc0 = \{1,1,0\};
-130             GameParameters.SC = sc0;
-131             \textcolor{keywordflow}{break};
-132           \textcolor{keywordflow}{case} 1:
-133             \textcolor{keywordtype}{int}[] sc1 = \{7,1,270\};
-134             GameParameters.SC = sc1;
-135             \textcolor{keywordflow}{break};
-136           \textcolor{keywordflow}{case} 2:
-137             \textcolor{keywordtype}{int}[] sc2 = \{7,7,180\};
-138             GameParameters.SC = sc2;
-139             \textcolor{keywordflow}{break};
-140           \textcolor{keywordflow}{case} 3:
-141             \textcolor{keywordtype}{int}[] sc3 = \{1,7,90\};
-142             GameParameters.SC = sc3;
-143             \textcolor{keywordflow}{break};
-144         \}
-166       \} \textcolor{keywordflow}{else} \{
-167         GameParameters.Grid\_UR[0] = 15;
-168         GameParameters.Grid\_UR[1] = 9;
-169  
-170         \textcolor{keywordflow}{switch}(GameParameters.UsCorner) \{
-171           \textcolor{keywordflow}{case} 0:
-172             \textcolor{keywordtype}{int}[] sc0 = \{1,1,0\};
-173             GameParameters.SC = sc0;
-174             \textcolor{keywordflow}{break};
-175           \textcolor{keywordflow}{case} 1:
-176             \textcolor{keywordtype}{int}[] sc1 = \{14,1,270\};
-177             GameParameters.SC = sc1;
-178             \textcolor{keywordflow}{break};
-179           \textcolor{keywordflow}{case} 2:
-180             \textcolor{keywordtype}{int}[] sc2 = \{14,8,180\};
-181             GameParameters.SC = sc2;
-182             \textcolor{keywordflow}{break};
-183           \textcolor{keywordflow}{case} 3:
-184             \textcolor{keywordtype}{int}[] sc3 = \{1,8,90\};
-185             GameParameters.SC = sc3;
-186             \textcolor{keywordflow}{break};
-187         \}
-227       \}
-228       
-229       \textcolor{comment}{//set data read to true}
-230       \textcolor{keyword}{synchronized}(GameParameters.waitDataObject) \{
-231         GameParameters.hasDataRead = \textcolor{keyword}{true};
-232         GameParameters.waitDataObject.notify();
-233       \}
-234       
-235     \} \textcolor{keywordflow}{catch} (Exception e) \{
-236       e.printStackTrace();
-237     \}
-238   \}
+112       GameParameters.TREE\_US[0] = ((Long) data.get(ringUs+\textcolor{stringliteral}{"x"})).intValue();
+113       GameParameters.TREE\_US[1] = ((Long) data.get(ringUs+\textcolor{stringliteral}{"y"})).intValue();
+114 
+115       GameParameters.TTEE\_O[0] = ((Long) data.get(ringO+\textcolor{stringliteral}{"x"})).intValue();
+116       GameParameters.TTEE\_O[1] = ((Long) data.get(ringO+\textcolor{stringliteral}{"y"})).intValue();
+117 
+118       \textcolor{keywordflow}{if} (GameParameters.Demo == GameParameters.DemoType.Beta) \{
+119         GameParameters.Grid\_UR[0] = 8;
+120         GameParameters.Grid\_UR[1] = 8;
+121         
+122         \textcolor{keywordflow}{switch}(GameParameters.UsCorner) \{
+123           \textcolor{keywordflow}{case} 0:
+124             \textcolor{keywordtype}{int}[] sc0 = \{1,1,0\};
+125             GameParameters.SC = sc0;
+126             \textcolor{keywordtype}{int}[] scus0 = \{0,0\};
+127             GameParameters.SCUS= scus0;
+128             \textcolor{keywordflow}{break};
+129           \textcolor{keywordflow}{case} 1:
+130             \textcolor{keywordtype}{int}[] sc1 = \{7,1,270\};
+131             GameParameters.SC = sc1;
+132             \textcolor{keywordtype}{int}[] scus1 = \{8,0\};
+133             GameParameters.SCUS= scus1;
+134             \textcolor{keywordflow}{break};
+135           \textcolor{keywordflow}{case} 2:
+136             \textcolor{keywordtype}{int}[] sc2 = \{7,7,180\};
+137             GameParameters.SC = sc2;
+138             \textcolor{keywordtype}{int}[] scus2 = \{8,8\};
+139             GameParameters.SCUS= scus2;
+140             \textcolor{keywordflow}{break};
+141           \textcolor{keywordflow}{case} 3:
+142             \textcolor{keywordtype}{int}[] sc3 = \{1,7,90\};
+143             GameParameters.SC = sc3;
+144             \textcolor{keywordtype}{int}[] scus3 = \{0,8\};
+145             GameParameters.SCUS= scus3;
+146             \textcolor{keywordflow}{break};
+147         \}
+169       \} \textcolor{keywordflow}{else} \{
+170         GameParameters.Grid\_UR[0] = 15;
+171         GameParameters.Grid\_UR[1] = 9;
+172  
+173         \textcolor{keywordflow}{switch}(GameParameters.UsCorner) \{
+174           \textcolor{keywordflow}{case} 0:
+175             \textcolor{keywordtype}{int}[] sc0 = \{1,1,0\};
+176             GameParameters.SC = sc0;
+177             \textcolor{keywordtype}{int}[] scus0 = \{0,0\};
+178             GameParameters.SCUS= scus0;
+179             \textcolor{keywordflow}{break};
+180           \textcolor{keywordflow}{case} 1:
+181             \textcolor{keywordtype}{int}[] sc1 = \{14,1,270\};
+182             GameParameters.SC = sc1;
+183             \textcolor{keywordtype}{int}[] scus1 = \{15,0\};
+184             GameParameters.SCUS= scus1;
+185             \textcolor{keywordflow}{break};
+186           \textcolor{keywordflow}{case} 2:
+187             \textcolor{keywordtype}{int}[] sc2 = \{14,8,180\};
+188             GameParameters.SC = sc2;
+189             \textcolor{keywordtype}{int}[] scus2= \{15,9\};
+190             GameParameters.SCUS= scus2;
+191             \textcolor{keywordflow}{break};
+192           \textcolor{keywordflow}{case} 3:
+193             \textcolor{keywordtype}{int}[] sc3 = \{1,8,90\};
+194             GameParameters.SC = sc3;
+195             \textcolor{keywordtype}{int}[] scus3 = \{0,9\};
+196             GameParameters.SCUS= scus3;
+197             \textcolor{keywordflow}{break};
+198         \}
+238       \}
+239       
+240       \textcolor{comment}{//set data read to true}
+241     \} \textcolor{keywordflow}{catch} (Exception e) \{
+242       e.printStackTrace();
+243     \}
+244   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

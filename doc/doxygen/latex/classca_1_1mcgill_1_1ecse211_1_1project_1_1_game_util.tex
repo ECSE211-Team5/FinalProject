@@ -13,6 +13,12 @@ Collaboration diagram for ca.\+mcgill.\+ecse211.\+project.\+Game\+Util\+:\nopage
 \begin{DoxyCompactItemize}
 \item 
 class {\bfseries Path\+Finder}
+\item 
+class {\bfseries Ring\+Set\+Comparator}
+\item 
+class {\bfseries Robot\+Comparator}
+\item 
+class {\bfseries Starting\+Comparator}
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -21,11 +27,11 @@ static boolean \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_
 \item 
 static double \mbox{[}$\,$\mbox{]} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4}{average} (int\mbox{[}$\,$\mbox{]} p1, int\mbox{[}$\,$\mbox{]} p2)
 \item 
-static double \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5}{distance\+From\+Robot} (int x, int y)
+static double \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56}{distance\+From} (int x, int y, double\mbox{[}$\,$\mbox{]} position)
 \item 
 static int \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6e0ee94b800ca3727ca8009782abda14}{find\+Closest\+Point\+To\+Robot} (int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} points)
 \item 
-static boolean \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_aa9819819c4de2ef025caac87d0c0b0db}{is\+Boundary} (int\mbox{[}$\,$\mbox{]} coor)
+static boolean \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a}{is\+Island\+Boundary} (int\mbox{[}$\,$\mbox{]} coor)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
@@ -33,6 +39,14 @@ static boolean \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_
 static Path\+Finder \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a84ec23eabf60cb20895815e7b390e3f2}{starting\+Finder}
 \item 
 static Path\+Finder \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_acedc99ad369450d6b2d7711c2d63027a}{searching\+Finder}
+\item 
+static char \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ab171328c45ccc1d98d96cc9422232669}{left\+Instruction} = \textquotesingle{}L\textquotesingle{}
+\item 
+static char \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4f6944d94b8de443baa150a2e7b700a0}{right\+Instruction} = \textquotesingle{}R\textquotesingle{}
+\item 
+static char \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a98831b92dc6ed43627755d2995cba683}{up\+Instruction} = \textquotesingle{}U\textquotesingle{}
+\item 
+static char \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_afc9ecf0a8a18c0abea79086801d8425a}{down\+Instruction} = \textquotesingle{}D\textquotesingle{}
 \end{DoxyCompactItemize}
 
 
@@ -54,7 +68,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 19 of file Game\+Util.\+java.
+Definition at line 20 of file Game\+Util.\+java.
 
 
 
@@ -79,16 +93,16 @@ find the average of the two coordinates
 \end{DoxyReturn}
 
 
-Definition at line 198 of file Game\+Util.\+java.
+Definition at line 269 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-198                                                      \{
-199     \textcolor{keywordtype}{double}[] result = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
-200     result[0] = (double) (p1[0] + p2[0]) / 2;
-201     result[1] = (double) (p1[1] + p2[1]) / 2;
-202     \textcolor{keywordflow}{return} result;
-203   \}
+269                                                      \{
+270     \textcolor{keywordtype}{double}[] result = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
+271     result[0] = (double) (p1[0] + p2[0]) / 2;
+272     result[1] = (double) (p1[1] + p2[1]) / 2;
+273     \textcolor{keywordflow}{return} result;
+274   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -97,11 +111,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!distance\+From\+Robot@{distance\+From\+Robot}}
-\index{distance\+From\+Robot@{distance\+From\+Robot}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
-\subsubsection{\texorpdfstring{distance\+From\+Robot()}{distanceFromRobot()}}
-{\footnotesize\ttfamily static double ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+distance\+From\+Robot (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!distance\+From@{distance\+From}}
+\index{distance\+From@{distance\+From}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
+\subsubsection{\texorpdfstring{distance\+From()}{distanceFrom()}}
+{\footnotesize\ttfamily static double ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+distance\+From (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{double \mbox{[}$\,$\mbox{]}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 find the distance from the starting point to two points
 
@@ -117,33 +131,20 @@ find the distance from the starting point to two points
 \end{DoxyReturn}
 
 
-Definition at line 212 of file Game\+Util.\+java.
+Definition at line 283 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-212                                                        \{
-213     \textcolor{keywordflow}{try} \{
-214       \textcolor{keywordtype}{double}[] position = Odometer.getOdometer().getXYT();
-215       \textcolor{keywordflow}{return} (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
-216     \} \textcolor{keywordflow}{catch} (OdometerExceptions e) \{
-217       \textcolor{comment}{// TODO Auto-generated catch block}
-218       e.printStackTrace();
-219     \}
-220     \textcolor{keywordflow}{return} Integer.MAX\_VALUE;
-221   \}
+283                                                                      \{
+284       \textcolor{keywordflow}{return} (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
+285   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_icgraph}
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6e0ee94b800ca3727ca8009782abda14}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6e0ee94b800ca3727ca8009782abda14}} 
@@ -164,71 +165,87 @@ find closest point from a set of points
 \end{DoxyReturn}
 
 
-Definition at line 229 of file Game\+Util.\+java.
+Definition at line 293 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-229                                                             \{
-230     \textcolor{keywordtype}{int} minIndex = 0;
-231     \textcolor{keywordtype}{double} distance = Integer.MAX\_VALUE;
-232 
-233     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < points.length; i++) \{
-234       \textcolor{keywordtype}{double} thisDistance = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5}{distanceFromRobot}(points[i][0], points[i][1]);
-235       \textcolor{keywordflow}{if} (thisDistance < distance) \{
-236         minIndex = i;
-237         distance = thisDistance;
-238       \}
-239     \}
-240     \textcolor{keywordflow}{return} minIndex;
-241   \}
+293                                                             \{
+294     \textcolor{keywordtype}{int} minIndex = 0;
+295     \textcolor{keywordtype}{double} distance = Integer.MAX\_VALUE;
+296 
+297     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < points.length; i++) \{
+298       \textcolor{keywordflow}{try} \{
+299         \textcolor{keywordtype}{double}[] point = Odometer.getOdometer().getXYT();
+300         \textcolor{keywordtype}{double} thisDistance = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56}{distanceFrom}(points[i][0], points[i][1], point);
+301         \textcolor{keywordflow}{if} (thisDistance < distance) \{
+302           minIndex = i;
+303           distance = thisDistance;
+304         \}
+305       \} \textcolor{keywordflow}{catch} (OdometerExceptions e) \{
+306         \textcolor{comment}{// TODO Auto-generated catch block}
+307         e.printStackTrace();
+308       \}
+309     \}
+310     \textcolor{keywordflow}{return} minIndex;
+311   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6e0ee94b800ca3727ca8009782abda14_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6e0ee94b800ca3727ca8009782abda14_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_aa9819819c4de2ef025caac87d0c0b0db}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_aa9819819c4de2ef025caac87d0c0b0db}} 
-\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!is\+Boundary@{is\+Boundary}}
-\index{is\+Boundary@{is\+Boundary}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
-\subsubsection{\texorpdfstring{is\+Boundary()}{isBoundary()}}
-{\footnotesize\ttfamily static boolean ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+is\+Boundary (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{coor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!is\+Island\+Boundary@{is\+Island\+Boundary}}
+\index{is\+Island\+Boundary@{is\+Island\+Boundary}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
+\subsubsection{\texorpdfstring{is\+Island\+Boundary()}{isIslandBoundary()}}
+{\footnotesize\ttfamily static boolean ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+is\+Island\+Boundary (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{coor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Check if a given point is boundary 
+\begin{DoxyParams}{Parameters}
+{\em coor} & the point to input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: whether the given point is on the boundary of an island 
+\end{DoxyReturn}
 
 
-
-Definition at line 243 of file Game\+Util.\+java.
+Definition at line 318 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-243                                                \{
-244     \textcolor{keywordtype}{int} x = coor[0];
-245     \textcolor{keywordtype}{int} y = coor[1];
-246     \textcolor{keywordtype}{boolean} onLY = x == GameParameters.Island\_LL[0]
-247         && (y >= GameParameters.Island\_LL[1] && y <= GameParameters.Island\_UR[1]);
-248     \textcolor{keywordtype}{boolean} onRY = x == GameParameters.Island\_UR[0]
-249         && (y >= GameParameters.Island\_LL[1] && y <= GameParameters.Island\_UR[1]);
-250     \textcolor{keywordtype}{boolean} onLX = y == GameParameters.Island\_LL[1]
-251         && (x >= GameParameters.Island\_LL[0] && x <= GameParameters.Island\_UR[0]);
-252     \textcolor{keywordtype}{boolean} onUX = y == GameParameters.Island\_UR[1]
-253         && (x >= GameParameters.Island\_LL[0] && x <= GameParameters.Island\_UR[0]);
-254 
-255     \textcolor{keywordflow}{return} onLY || onRY || onLX || onUX;
-256   \}
+318                                                      \{
+319     \textcolor{keywordtype}{int} x = coor[0];
+320     \textcolor{keywordtype}{int} y = coor[1];
+321     \textcolor{keywordtype}{boolean} onLY = x == GameParameters.Island\_LL[0]
+322         && (y >= GameParameters.Island\_LL[1] && y <= GameParameters.Island\_UR[1]);
+323     \textcolor{keywordtype}{boolean} onRY = x == GameParameters.Island\_UR[0]
+324         && (y >= GameParameters.Island\_LL[1] && y <= GameParameters.Island\_UR[1]);
+325     \textcolor{keywordtype}{boolean} onLX = y == GameParameters.Island\_LL[1]
+326         && (x >= GameParameters.Island\_LL[0] && x <= GameParameters.Island\_UR[0]);
+327     \textcolor{keywordtype}{boolean} onUX = y == GameParameters.Island\_UR[1]
+328         && (x >= GameParameters.Island\_LL[0] && x <= GameParameters.Island\_UR[0]);
+329 
+330     \textcolor{keywordflow}{return} onLY || onRY || onLX || onUX;
+331   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_aa9819819c4de2ef025caac87d0c0b0db_icgraph}
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042}} 
@@ -249,23 +266,23 @@ check if one coordinate is safe based on (it is not a wall, tree or inside a tun
 \end{DoxyReturn}
 
 
-Definition at line 177 of file Game\+Util.\+java.
+Definition at line 248 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-177                                            \{
-178     \textcolor{keywordtype}{int} x = coor[0];
-179     \textcolor{keywordtype}{int} y = coor[1];
-180     \textcolor{keywordtype}{boolean} inTunnel = x >= GameParameters.TN\_LL[0] && x <= GameParameters.TN\_UR[0]
-181         && y >= GameParameters.TN\_LL[1] && y <= GameParameters.TN\_UR[1];
-182     \textcolor{keywordtype}{boolean} isTree = x == GameParameters.TREE\_US[0] && y == GameParameters.TREE\_US[1];
-183     \textcolor{keywordtype}{boolean} outBound =
-184         x <= 0 || x >= GameParameters.Grid\_UR[0] || y <= 0 || y >= GameParameters.Grid\_UR[1];
-185     \textcolor{keywordflow}{if} (inTunnel || isTree || outBound) \{
-186       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-187     \}
-188     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-189   \}
+248                                            \{
+249     \textcolor{keywordtype}{int} x = coor[0];
+250     \textcolor{keywordtype}{int} y = coor[1];
+251     \textcolor{keywordtype}{boolean} inTunnel = x >= GameParameters.TN\_LL[0] && x <= GameParameters.TN\_UR[0]
+252         && y >= GameParameters.TN\_LL[1] && y <= GameParameters.TN\_UR[1];
+253     \textcolor{keywordtype}{boolean} isTree = x == GameParameters.TREE\_US[0] && y == GameParameters.TREE\_US[1];
+254     \textcolor{keywordtype}{boolean} outBound =
+255         x <= 0 || x >= GameParameters.Grid\_UR[0] || y <= 0 || y >= GameParameters.Grid\_UR[1];
+256     \textcolor{keywordflow}{if} (inTunnel || isTree || outBound) \{
+257       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+258     \}
+259     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+260   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -278,6 +295,36 @@ Here is the caller graph for this function\+:
 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_afc9ecf0a8a18c0abea79086801d8425a}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_afc9ecf0a8a18c0abea79086801d8425a}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!down\+Instruction@{down\+Instruction}}
+\index{down\+Instruction@{down\+Instruction}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
+\subsubsection{\texorpdfstring{down\+Instruction}{downInstruction}}
+{\footnotesize\ttfamily char ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+down\+Instruction = \textquotesingle{}D\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 26 of file Game\+Util.\+java.
+
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ab171328c45ccc1d98d96cc9422232669}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ab171328c45ccc1d98d96cc9422232669}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!left\+Instruction@{left\+Instruction}}
+\index{left\+Instruction@{left\+Instruction}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
+\subsubsection{\texorpdfstring{left\+Instruction}{leftInstruction}}
+{\footnotesize\ttfamily char ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+left\+Instruction = \textquotesingle{}L\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 23 of file Game\+Util.\+java.
+
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4f6944d94b8de443baa150a2e7b700a0}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4f6944d94b8de443baa150a2e7b700a0}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!right\+Instruction@{right\+Instruction}}
+\index{right\+Instruction@{right\+Instruction}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
+\subsubsection{\texorpdfstring{right\+Instruction}{rightInstruction}}
+{\footnotesize\ttfamily char ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+right\+Instruction = \textquotesingle{}R\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 24 of file Game\+Util.\+java.
+
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_acedc99ad369450d6b2d7711c2d63027a}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_acedc99ad369450d6b2d7711c2d63027a}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!searching\+Finder@{searching\+Finder}}
 \index{searching\+Finder@{searching\+Finder}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
@@ -286,7 +333,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 21 of file Game\+Util.\+java.
+Definition at line 22 of file Game\+Util.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a84ec23eabf60cb20895815e7b390e3f2}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a84ec23eabf60cb20895815e7b390e3f2}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!starting\+Finder@{starting\+Finder}}
@@ -296,7 +343,17 @@ Definition at line 21 of file Game\+Util.\+java.
 
 
 
-Definition at line 20 of file Game\+Util.\+java.
+Definition at line 21 of file Game\+Util.\+java.
+
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a98831b92dc6ed43627755d2995cba683}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a98831b92dc6ed43627755d2995cba683}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!up\+Instruction@{up\+Instruction}}
+\index{up\+Instruction@{up\+Instruction}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}}
+\subsubsection{\texorpdfstring{up\+Instruction}{upInstruction}}
+{\footnotesize\ttfamily char ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+up\+Instruction = \textquotesingle{}U\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 25 of file Game\+Util.\+java.
 
 
 

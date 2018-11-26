@@ -1,11 +1,18 @@
 var searchData=
 [
-  ['idle',['Idle',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status.html#a4ee6ac6711e6f0f96cfbe832f260c89f',1,'ca::mcgill::ecse211::project::Game::Status']]],
-  ['instance',['INSTANCE',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a6584b6534b14ba43dc1444084a925a20',1,'ca.mcgill.ecse211.project.Game.INSTANCE()'],['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a632d56a3288e5e239e0b8fa1012e8a99',1,'ca.mcgill.ecse211.project.GameParameters.INSTANCE()'],['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi.html#a7616131304b624f112d25e972aa18050',1,'ca.mcgill.ecse211.project.WiFi.INSTANCE()'],['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a410addba9c40dcab15a67ef401e54bbc',1,'ca.mcgill.ecse211.tests.ComponentTest.INSTANCE()']]],
-  ['instarting',['InStarting',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a90e9cb33114c7af62aa86684942265e5',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['isboundary',['isBoundary',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#aa9819819c4de2ef025caac87d0c0b0db',1,'ca::mcgill::ecse211::project::GameUtil']]],
-  ['island_5fll',['Island_LL',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a70576bc98218fc0b4a7b2d3b2d56ed2b',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['island_5fur',['Island_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#ac442a5d4a39d6ffae29a183eca5934d3',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['issafe',['isSafe',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a4b657445545fb1a814b6699724d72042',1,'ca::mcgill::ecse211::project::GameUtil']]],
-  ['isstarted',['isStarted',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#abb0ba2385c212f3d0d8435267d882536',1,'ca.mcgill.ecse211.threads.ThreadControl.isStarted()'],['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a92f4933511db42476e39956246bcf2fe',1,'ca.mcgill.ecse211.threads.ThreadControl.isStarted()']]]
+  ['lastvalue',['lastValue',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html#a79908bf56395ae82ab5ac57b5b40f206',1,'ca::mcgill::ecse211::threads::LightPoller']]],
+  ['leftinstruction',['leftInstruction',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#ab171328c45ccc1d98d96cc9422232669',1,'ca::mcgill::ecse211::project::GameUtil']]],
+  ['leftmotor',['leftMotor',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a7c673571bf50fdb6917a9d7bb671e003',1,'ca::mcgill::ecse211::project::Game']]],
+  ['lgdata',['lgData',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html#a6cf53aecc3efc481f71d36341d2276c6',1,'ca::mcgill::ecse211::threads::LightPoller']]],
+  ['lightlocalizer',['LightLocalizer',['../classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html',1,'ca.mcgill.ecse211.localization.LightLocalizer'],['../classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html#aa37a75b7c32c02fe261845021f0734b7',1,'ca.mcgill.ecse211.localization.LightLocalizer.LightLocalizer()']]],
+  ['lightlocalizer_2ejava',['LightLocalizer.java',['../_light_localizer_8java.html',1,'']]],
+  ['lightpoller',['LightPoller',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html',1,'ca.mcgill.ecse211.threads.LightPoller'],['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller.html#adc07f842a1cc089195c5e47c2a0e5ee6',1,'ca.mcgill.ecse211.threads.LightPoller.LightPoller()']]],
+  ['lightpoller_2ejava',['LightPoller.java',['../_light_poller_8java.html',1,'']]],
+  ['lightsensor',['LightSensor',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type.html#aa8c9262ad5014cd52ecce2eec6604510',1,'ca::mcgill::ecse211::tests::ComponentTest::Type']]],
+  ['lightsensortest',['lightSensorTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a3e8288f482b3806a0f3c4668951f3e36',1,'ca::mcgill::ecse211::tests::ComponentTest']]],
+  ['localization',['Localization',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type.html#acdc93de9366f2e6710c7f2fc0e4478c3',1,'ca::mcgill::ecse211::tests::ComponentTest::Type']]],
+  ['localizationtest',['localizationTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#ad11712dd74c5c64e84cd71186a59a087',1,'ca::mcgill::ecse211::tests::ComponentTest']]],
+  ['localize',['localize',['../classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html#a9fc3d6cdd897e9db86fc9d71dc914863',1,'ca.mcgill.ecse211.localization.LightLocalizer.localize()'],['../classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer.html#ab78196997d7409aec0c35603686989ad',1,'ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize()']]],
+  ['localized',['Localized',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status.html#a7d3a789bd51e152bd2643e7214a178f8',1,'ca::mcgill::ecse211::project::Game::Status']]],
+  ['lockobject',['lockObject',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#ab20c44ff2dafab8981c42fa8bf634dfc',1,'ca::mcgill::ecse211::threads::ThreadControl']]]
 ];

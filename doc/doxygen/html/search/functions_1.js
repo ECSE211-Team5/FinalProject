@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['calculateangleto',['calculateAngleTo',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a4376e54162df8f123ca3b52e4fd2f38d',1,'ca::mcgill::ecse211::project::Navigation']]],
-  ['convertdistance',['convertDistance',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ac9e260bcd619ffa4820d7d0de7ea1c12',1,'ca::mcgill::ecse211::project::Navigation']]]
+  ['blacklinetest',['blackLineTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a3f36cee9ca567c845377bec33554ba8b',1,'ca::mcgill::ecse211::tests::ComponentTest']]]
 ];

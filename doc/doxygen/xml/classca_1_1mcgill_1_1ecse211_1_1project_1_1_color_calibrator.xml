@@ -47,20 +47,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="package-static-attrib">
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ac6ab6b03c7214b33a2e8ee3e245d9c09" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperYellowRBound</definition>
-        <argsstring></argsstring>
-        <name>upperYellowRBound</name>
-        <initializer>= 14</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="25" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a7f9ea59cd1f34857074024fb0d8d0d9a" prot="package" static="yes" mutable="no">
         <type>final int</type>
         <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerYellowGBound</definition>
@@ -75,104 +61,6 @@
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="25" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ad83175c5d4b6ac75920d050e4a4c0779" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperYellowGBound</definition>
-        <argsstring></argsstring>
-        <name>upperYellowGBound</name>
-        <initializer>= 10</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a2df7582373399e69d04d5fbb0537d9b7" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerYellowBBound</definition>
-        <argsstring></argsstring>
-        <name>lowerYellowBBound</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1aa16baebe92fcd88cffa93f6bdbeaecb7" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperYellowBBound</definition>
-        <argsstring></argsstring>
-        <name>upperYellowBBound</name>
-        <initializer>= 2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a1b92d707ad83f456bf2d9dd5666c29b4" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerBlueRBound</definition>
-        <argsstring></argsstring>
-        <name>lowerBlueRBound</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a15434fa26006e525876e442f5eb4b37a" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperBlueRBound</definition>
-        <argsstring></argsstring>
-        <name>upperBlueRBound</name>
-        <initializer>= 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="27" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a5999f38badecbba49a28a991d0bb631c" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerBlueGBound</definition>
-        <argsstring></argsstring>
-        <name>lowerBlueGBound</name>
-        <initializer>= 6</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="27" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab75ec2b52da762f1c2729bee1dca224a" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperBlueGBound</definition>
-        <argsstring></argsstring>
-        <name>upperBlueGBound</name>
-        <initializer>= 8</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="27" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="27" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a1f7f1c426357281a07d70808ac9a651d" prot="package" static="yes" mutable="no">
         <type>final int</type>
         <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerBlueBBound</definition>
@@ -185,105 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="27" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a83d25c92fffd2d45c0f2637c71f4a210" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperBlueBBound</definition>
-        <argsstring></argsstring>
-        <name>upperBlueBBound</name>
-        <initializer>= 8</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ae974621e0c946b91f33a190edce6e711" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerGreenRBound</definition>
-        <argsstring></argsstring>
-        <name>lowerGreenRBound</name>
-        <initializer>= 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a28476f7021a9fd414bc224f4e5849137" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperGreenRBound</definition>
-        <argsstring></argsstring>
-        <name>upperGreenRBound</name>
-        <initializer>= 8</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a60b95a0bbf4833eaae791d1ffa6bd026" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerGreenGBound</definition>
-        <argsstring></argsstring>
-        <name>lowerGreenGBound</name>
-        <initializer>= 5</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab8ed92fcb57293ba8a8494bf2381615f" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperGreenGBound</definition>
-        <argsstring></argsstring>
-        <name>upperGreenGBound</name>
-        <initializer>= 9</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ac190ab90e7011583178ff96ca64390eb" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerGreenBBound</definition>
-        <argsstring></argsstring>
-        <name>lowerGreenBBound</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a825a6eacb4537d511e2912fbf2621526" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperGreenBBound</definition>
-        <argsstring></argsstring>
-        <name>upperGreenBBound</name>
-        <initializer>= 2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="29" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a5717103a634f3f18d59c65ce1867a531" prot="package" static="yes" mutable="no">
         <type>final int</type>
@@ -297,77 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a75c05595b99e8b934b2395e352f331a6" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperOrangeRBound</definition>
-        <argsstring></argsstring>
-        <name>upperOrangeRBound</name>
-        <initializer>= 20</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a495dcb09c80354bfe2436cffe5a895a0" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerOrangeGBound</definition>
-        <argsstring></argsstring>
-        <name>lowerOrangeGBound</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab27056df54d9a12a1a6e80524c88edff" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperOrangeGBound</definition>
-        <argsstring></argsstring>
-        <name>upperOrangeGBound</name>
-        <initializer>= 3</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1abf345f6e1d0b0eafbd01031c262c609d" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.lowerOrangeBBound</definition>
-        <argsstring></argsstring>
-        <name>lowerOrangeBBound</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1adfbfa326b7754c870d72645112a6ba01" prot="package" static="yes" mutable="no">
-        <type>final int</type>
-        <definition>final int ca.mcgill.ecse211.project.ColorCalibrator.upperOrangeBBound</definition>
-        <argsstring></argsstring>
-        <name>upperOrangeBBound</name>
-        <initializer>= 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="30" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -391,7 +111,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This method returns the color of the ring currently under the light sensor</para><para><parameterlist kind="param"><parameteritem>
+<para>This method returns the color of the ring currently under the light sensor Instead of intervals, we use a pattern matching for detecting the color For more: reference the software and testing document</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>r</parametername>
 </parameternamelist>
@@ -417,9 +137,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="40" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="40" bodyend="54"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="37" bodyend="51"/>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" compoundref="_display_8java" startline="57" endline="108">ca.mcgill.ecse211.project.Display.run</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="36" endline="66">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="39" endline="65">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a1acf05f9523b2c0f329d4a7cbf1b9c47" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Color</type>
@@ -429,11 +149,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>(r &gt;= lowerGreenRBound &amp;&amp; r &lt;= 5) &amp;&amp; (b &gt;= lowerGreenBBound &amp;&amp; b &lt;= upperGreenBBound) &amp;&amp; (g &lt;= 12 &amp;&amp; g &gt;= 6) GREEN This method gets the last color of the ring under the light sensor</para><para><simplesect kind="return"><para>current color detected by the lightSensor </para></simplesect>
+<para>This method gets the last color of the ring under the light sensor</para><para><simplesect kind="return"><para>current color detected by the lightSensor </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="66" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="66" bodyend="71"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="58" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="58" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -458,8 +178,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="78" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="78" bodyend="94"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="36" endline="66">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="70" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="70" bodyend="86"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="39" endline="65">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a3d65927aaa2041f933dbdc19c3d2a412" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Color</type>
@@ -473,10 +193,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="101" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="101" bodyend="115"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1acb1d9cef0739971dbe00cc16712be0fe" compoundref="_color_calibrator_8java" startline="126" endline="146">ca.mcgill.ecse211.project.ColorCalibrator.getGetColor</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab6148d75e3a105016580e90ed1ea9bc9" compoundref="_color_calibrator_8java" startline="121" endline="125">ca.mcgill.ecse211.project.ColorCalibrator.resetFrequency</references>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_ring_searcher_1abd2b2c172ea393ce4185027c8a12780f" compoundref="_ring_searcher_8java" startline="58" endline="91">ca.mcgill.ecse211.threads.RingSearcher.search</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="93" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="93" bodyend="107"/>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1acb1d9cef0739971dbe00cc16712be0fe" compoundref="_color_calibrator_8java" startline="124" endline="144">ca.mcgill.ecse211.project.ColorCalibrator.getGetColor</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab6148d75e3a105016580e90ed1ea9bc9" compoundref="_color_calibrator_8java" startline="113" endline="117">ca.mcgill.ecse211.project.ColorCalibrator.resetFrequency</references>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a7ff5756046a0ce992ed8cb8954139c3b" compoundref="_ring_searcher_8java" startline="62" endline="93">ca.mcgill.ecse211.project.RingSearcher.search</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab6148d75e3a105016580e90ed1ea9bc9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -489,8 +209,8 @@
 <para>This method resets the colour_frequency array to 0 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="121" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="121" bodyend="125"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a3d65927aaa2041f933dbdc19c3d2a412" compoundref="_color_calibrator_8java" startline="101" endline="115">ca.mcgill.ecse211.project.ColorCalibrator.getMostFrequenct</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="113" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="113" bodyend="117"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a3d65927aaa2041f933dbdc19c3d2a412" compoundref="_color_calibrator_8java" startline="93" endline="107">ca.mcgill.ecse211.project.ColorCalibrator.getMostFrequenct</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1acb1d9cef0739971dbe00cc16712be0fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Color</type>
@@ -504,11 +224,20 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>This method match integer to corresponding color <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an integer of [0,4] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>: cooresponding color of the integer </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="126" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="126" bodyend="146"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a3d65927aaa2041f933dbdc19c3d2a412" compoundref="_color_calibrator_8java" startline="101" endline="115">ca.mcgill.ecse211.project.ColorCalibrator.getMostFrequenct</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="124" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="124" bodyend="144"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a3d65927aaa2041f933dbdc19c3d2a412" compoundref="_color_calibrator_8java" startline="93" endline="107">ca.mcgill.ecse211.project.ColorCalibrator.getMostFrequenct</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -521,7 +250,7 @@
 <simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="13" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="13" bodyend="147"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" line="13" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/ColorCalibrator.java" bodystart="13" bodyend="145"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a3c4e2d7f5fe081898322053389bf19af" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>colour_frequency</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a18084c47a3376fe0cee35b89072b3d0f" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>currentColor</name></member>
@@ -530,31 +259,11 @@
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1acb1d9cef0739971dbe00cc16712be0fe" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>getGetColor</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a3d65927aaa2041f933dbdc19c3d2a412" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>getMostFrequenct</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a1f7f1c426357281a07d70808ac9a651d" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerBlueBBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a5999f38badecbba49a28a991d0bb631c" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerBlueGBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a1b92d707ad83f456bf2d9dd5666c29b4" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerBlueRBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ac190ab90e7011583178ff96ca64390eb" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerGreenBBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a60b95a0bbf4833eaae791d1ffa6bd026" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerGreenGBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ae974621e0c946b91f33a190edce6e711" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerGreenRBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1abf345f6e1d0b0eafbd01031c262c609d" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerOrangeBBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a495dcb09c80354bfe2436cffe5a895a0" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerOrangeGBound</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a5717103a634f3f18d59c65ce1867a531" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerOrangeRBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a2df7582373399e69d04d5fbb0537d9b7" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerYellowBBound</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a7f9ea59cd1f34857074024fb0d8d0d9a" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerYellowGBound</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a036acb3a1cd85418e34cfc21d27e00b4" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>lowerYellowRBound</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab6148d75e3a105016580e90ed1ea9bc9" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>resetFrequency</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>setFrequency</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a83d25c92fffd2d45c0f2637c71f4a210" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperBlueBBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab75ec2b52da762f1c2729bee1dca224a" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperBlueGBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a15434fa26006e525876e442f5eb4b37a" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperBlueRBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a825a6eacb4537d511e2912fbf2621526" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperGreenBBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab8ed92fcb57293ba8a8494bf2381615f" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperGreenGBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a28476f7021a9fd414bc224f4e5849137" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperGreenRBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1adfbfa326b7754c870d72645112a6ba01" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperOrangeBBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ab27056df54d9a12a1a6e80524c88edff" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperOrangeGBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a75c05595b99e8b934b2395e352f331a6" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperOrangeRBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1aa16baebe92fcd88cffa93f6bdbeaecb7" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperYellowBBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ad83175c5d4b6ac75920d050e4a4c0779" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperYellowGBound</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1ac6ab6b03c7214b33a2e8ee3e245d9c09" prot="package" virt="non-virtual"><scope>ca::mcgill::ecse211::project::ColorCalibrator</scope><name>upperYellowRBound</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

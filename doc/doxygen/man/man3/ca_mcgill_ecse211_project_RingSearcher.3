@@ -1,0 +1,186 @@
+.TH "ca.mcgill.ecse211.project.RingSearcher" 3 "Mon Nov 26 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ca.mcgill.ecse211.project.RingSearcher
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRingSearcher\fP (EV3LargeRegulatedMotor sensorMotor, EV3LargeRegulatedMotor rodMotor)  throws OdometerExceptions "
+.br
+.ti -1c
+.RI "void \fBsearch\fP ()"
+.br
+.ti -1c
+.RI "void \fBprepareSearch\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetSearch\fP ()"
+.br
+.ti -1c
+.RI "void \fBprepareRetrieve\fP ()"
+.br
+.ti -1c
+.RI "void \fBretrieveRing\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetRodMotor\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class helps our robot to search for rings on a grid itself as a thread will search and retrieve the rings
+.PP
+\fBAuthor:\fP
+.RS 4
+Caspar Cedro 
+.PP
+Percy Chen 
+.PP
+Patrick Erath 
+.PP
+Anssam Ghezala 
+.PP
+Susan Matuszewski 
+.PP
+Kamy Moussavi Kafi 
+.RE
+.PP
+
+.PP
+Definition at line 22 of file RingSearcher\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.RingSearcher (EV3LargeRegulatedMotor sensorMotor, EV3LargeRegulatedMotor rodMotor) throws \fBOdometerExceptions\fP"
+This class provides method to check if there is a ring and if the ring is the color we want
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstoragenMotor\fP the motor to move the storage of the robot 
+.br
+\fIrodMotor\fP the motor for the rod to collect the ring 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIOdometerExceptions\fP 
+.RE
+.PP
+
+.PP
+Definition at line 43 of file RingSearcher\&.java\&.
+.PP
+.nf
+44                                 {
+45     this\&.odometer = Odometer\&.getOdometer();
+46     this\&.sensorMotor = sensorMotor;
+47     this\&.rodMotor = rodMotor;
+48     rodMotor\&.setSpeed(ROD_SPEED);
+49     this\&.sensorMotor\&.setSpeed(SENSOR_SPEED);
+50     data = SensorData\&.getSensorData();
+51     for (BaseRegulatedMotor motor : new BaseRegulatedMotor[] {this\&.sensorMotor, this\&.rodMotor}) {
+52       motor\&.stop();
+53       motor\&.setAcceleration(ACCELERATION);
+54     }
+55   }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.prepareRetrieve ()"
+This method rotate the rod to a suitable position for retrieve the ring 
+.PP
+Definition at line 112 of file RingSearcher\&.java\&.
+.PP
+.nf
+112                                 {
+113     rodMotor\&.rotate(ROD_PREPARE);
+114   }
+.fi
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.prepareSearch ()"
+This method put the sensor to search rotation to be ready for the searching 
+.PP
+Definition at line 98 of file RingSearcher\&.java\&.
+.PP
+.nf
+98                               {
+99     sensorMotor\&.rotate(SENSOR_ROTATION);
+100   }
+.fi
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.resetRodMotor ()"
+Rotate the rod back to the original position 
+.PP
+Definition at line 126 of file RingSearcher\&.java\&.
+.PP
+.nf
+126                               {
+127     rodMotor\&.rotate(-(ROD_PREPARE+ROD_RETRIEVE));
+128   }
+.fi
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.resetSearch ()"
+This method put the sensor back 
+.PP
+Definition at line 105 of file RingSearcher\&.java\&.
+.PP
+.nf
+105                             {
+106     sensorMotor\&.rotateTo(0);
+107   }
+.fi
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.retrieveRing ()"
+this method retrieve the searched ring 
+.PP
+Definition at line 119 of file RingSearcher\&.java\&.
+.PP
+.nf
+119                              {
+120     rodMotor\&.rotate(ROD_RETRIEVE);
+121   }
+.fi
+.SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.search ()"
+This method searches for the ring and identify its color based using the rod, It will beep based on the color of the ring 
+.PP
+Definition at line 62 of file RingSearcher\&.java\&.
+.PP
+.nf
+62                         {
+63     sensorMotor\&.rotate(SENSOR_ROTATION);
+64     sensorMotor\&.rotate(-SENSOR_ROTATION);
+65 
+66     //determine most frequent colour detected and beep accordingly
+67     Game\&.INSTANCE\&.rgbPoller\&.setStart(false);
+68     switch (ColorCalibrator\&.getMostFrequenct()) {
+69       case Orange:
+70         Sound\&.beep();
+71         Sound\&.beep();
+72         Sound\&.beep();
+73         Sound\&.beep();
+74         break;
+75       case Yellow:
+76         Sound\&.beep();
+77         Sound\&.beep();
+78         Sound\&.beep();
+79         break;
+80       case Green:
+81         Sound\&.beep();
+82         Sound\&.beep();
+83         break;
+84       case Blue:
+85         Sound\&.beep();
+86         break;
+87       case Other:
+88         break;
+89       default:
+90         break;
+91     }
+92     Game\&.INSTANCE\&.rgbPoller\&.setStart(true);
+93   }  
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ECSE211 - Fall 2018 - Final Project from the source code\&.

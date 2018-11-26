@@ -63,7 +63,7 @@
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="30" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="30" bodyend="33"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="17">ca.mcgill.ecse211.threads.LightPoller.us</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.cont</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="37" endline="39">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="42" endline="44">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -75,16 +75,16 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>run method for the rgb poller polls and process the rgb data of rgb sensor </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="36" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="36" bodyend="66"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="39" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="39" bodyend="65"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="17">ca.mcgill.ecse211.threads.LightPoller.us</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" compoundref="_light_poller_8java" startline="19">ca.mcgill.ecse211.threads.LightPoller.lgData</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.cont</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" compoundref="_sensor_data_8java" startline="149" endline="158">ca.mcgill.ecse211.threads.SensorData.setRGB</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a92e653a6a9f7a31cb7b6f9bc2e732133" compoundref="_color_calibrator_8java" startline="40" endline="54">ca.mcgill.ecse211.project.ColorCalibrator.getColor</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" compoundref="_color_calibrator_8java" startline="78" endline="94">ca.mcgill.ecse211.project.ColorCalibrator.setFrequency</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a92e653a6a9f7a31cb7b6f9bc2e732133" compoundref="_color_calibrator_8java" startline="37" endline="51">ca.mcgill.ecse211.project.ColorCalibrator.getColor</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" compoundref="_color_calibrator_8java" startline="70" endline="86">ca.mcgill.ecse211.project.ColorCalibrator.setFrequency</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -98,65 +98,65 @@
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="61">
+      <node id="60">
         <label>ca.mcgill.ecse211.threads.RGBPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>ca.mcgill.ecse211.threads.LightPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
         <childnode refid="62" relation="public-inheritance">
         </childnode>
       </node>
       <node id="62">
-        <label>ca.mcgill.ecse211.threads.LightPoller</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
         <childnode refid="63" relation="public-inheritance">
         </childnode>
       </node>
       <node id="63">
-        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="64" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="64">
         <label>Runnable</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="65">
+      <node id="64">
         <label>ca.mcgill.ecse211.threads.RGBPoller</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller"/>
-        <childnode refid="66" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="69">
-        <label>SampleProvider</label>
-      </node>
-      <node id="66">
-        <label>ca.mcgill.ecse211.threads.LightPoller</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
-        <childnode refid="67" relation="public-inheritance">
-        </childnode>
-        <childnode refid="69" relation="usage">
-          <edgelabel>us</edgelabel>
-        </childnode>
-        <childnode refid="70" relation="usage">
-          <edgelabel>cont</edgelabel>
-        </childnode>
-      </node>
-      <node id="67">
-        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
-        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
-        <childnode refid="68" relation="public-inheritance">
+        <childnode refid="65" relation="public-inheritance">
         </childnode>
       </node>
       <node id="68">
+        <label>SampleProvider</label>
+      </node>
+      <node id="65">
+        <label>ca.mcgill.ecse211.threads.LightPoller</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+        <childnode refid="68" relation="usage">
+          <edgelabel>us</edgelabel>
+        </childnode>
+        <childnode refid="69" relation="usage">
+          <edgelabel>cont</edgelabel>
+        </childnode>
+      </node>
+      <node id="66">
+        <label>ca.mcgill.ecse211.threads.ThreadControl</label>
+        <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
         <label>Runnable</label>
       </node>
-      <node id="70">
+      <node id="69">
         <label>ca.mcgill.ecse211.threads.SensorData</label>
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="18" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="18" bodyend="67"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="18" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="18" bodyend="66"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>cont</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1abb0ba2385c212f3d0d8435267d882536" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>isStarted</name></member>
@@ -173,7 +173,7 @@
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a8252930dab1b067da64cf2afae4fc630" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>shouldWait</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a9c3896500e86e402b8019e1be6500621" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>shouldWait</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>us</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ac3eedf8306835f6592bdbec2f5694651" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>WAIT_TIME</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>WAIT_TIME</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>waitForThisThread</name></member>
     </listofallmembers>
   </compounddef>

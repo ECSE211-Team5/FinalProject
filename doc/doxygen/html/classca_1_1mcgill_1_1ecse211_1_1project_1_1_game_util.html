@@ -83,6 +83,12 @@ Collaboration diagram for ca.mcgill.ecse211.project.GameUtil:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>PathFinder</b></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>RingSetComparator</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>RobotComparator</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>StartingComparator</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -90,12 +96,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a4b657445545fb1a814b6699724d72042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5c5c445ab84516991219ca3783fcaa4"><td class="memItemLeft" align="right" valign="top">static double []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#ae5c5c445ab84516991219ca3783fcaa4">average</a> (int[] p1, int[] p2)</td></tr>
 <tr class="separator:ae5c5c445ab84516991219ca3783fcaa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae373ebc3ec91ed3bf9dd7304a482a3f5"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#ae373ebc3ec91ed3bf9dd7304a482a3f5">distanceFromRobot</a> (int x, int y)</td></tr>
-<tr class="separator:ae373ebc3ec91ed3bf9dd7304a482a3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb324a3d5e42414c83dfd8bd5910b56"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6fb324a3d5e42414c83dfd8bd5910b56">distanceFrom</a> (int x, int y, double[] position)</td></tr>
+<tr class="separator:a6fb324a3d5e42414c83dfd8bd5910b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e0ee94b800ca3727ca8009782abda14"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6e0ee94b800ca3727ca8009782abda14">findClosestPointToRobot</a> (int[][] points)</td></tr>
 <tr class="separator:a6e0ee94b800ca3727ca8009782abda14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9819819c4de2ef025caac87d0c0b0db"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#aa9819819c4de2ef025caac87d0c0b0db">isBoundary</a> (int[] coor)</td></tr>
-<tr class="separator:aa9819819c4de2ef025caac87d0c0b0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5783c3415e13b66362a647504b63741a"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a5783c3415e13b66362a647504b63741a">isIslandBoundary</a> (int[] coor)</td></tr>
+<tr class="separator:a5783c3415e13b66362a647504b63741a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -103,6 +109,14 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a84ec23eabf60cb20895815e7b390e3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acedc99ad369450d6b2d7711c2d63027a"><td class="memItemLeft" align="right" valign="top">static PathFinder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#acedc99ad369450d6b2d7711c2d63027a">searchingFinder</a></td></tr>
 <tr class="separator:acedc99ad369450d6b2d7711c2d63027a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab171328c45ccc1d98d96cc9422232669"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#ab171328c45ccc1d98d96cc9422232669">leftInstruction</a> = 'L'</td></tr>
+<tr class="separator:ab171328c45ccc1d98d96cc9422232669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6944d94b8de443baa150a2e7b700a0"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a4f6944d94b8de443baa150a2e7b700a0">rightInstruction</a> = 'R'</td></tr>
+<tr class="separator:a4f6944d94b8de443baa150a2e7b700a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98831b92dc6ed43627755d2995cba683"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a98831b92dc6ed43627755d2995cba683">upInstruction</a> = 'U'</td></tr>
+<tr class="separator:a98831b92dc6ed43627755d2995cba683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc9ecf0a8a18c0abea79086801d8425a"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#afc9ecf0a8a18c0abea79086801d8425a">downInstruction</a> = 'D'</td></tr>
+<tr class="separator:afc9ecf0a8a18c0abea79086801d8425a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html">Game</a> utility class with handy functionalities can be used in the game</p>
@@ -118,7 +132,7 @@ Susan Matuszewski </dd>
 <dd>
 Kamy Moussavi Kafi </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00019">19</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00020">20</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae5c5c445ab84516991219ca3783fcaa4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5c5c445ab84516991219ca3783fcaa4">&#9670;&nbsp;</a></span>average()</h2>
@@ -163,8 +177,8 @@ Kamy Moussavi Kafi </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00198">198</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                                                     {</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">double</span>[] result = <span class="keyword">new</span> <span class="keywordtype">double</span>[2];</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    result[0] = (double) (p1[0] + p2[0]) / 2;</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    result[1] = (double) (p1[1] + p2[1]) / 2;</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">return</span> result;</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00269">269</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                                     {</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordtype">double</span>[] result = <span class="keyword">new</span> <span class="keywordtype">double</span>[2];</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    result[0] = (double) (p1[0] + p2[0]) / 2;</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    result[1] = (double) (p1[1] + p2[1]) / 2;</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> result;</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4_icgraph" alt=""/></div>
@@ -177,8 +191,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ae373ebc3ec91ed3bf9dd7304a482a3f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae373ebc3ec91ed3bf9dd7304a482a3f5">&#9670;&nbsp;</a></span>distanceFromRobot()</h2>
+<a id="a6fb324a3d5e42414c83dfd8bd5910b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb324a3d5e42414c83dfd8bd5910b56">&#9670;&nbsp;</a></span>distanceFrom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +201,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static double ca.mcgill.ecse211.project.GameUtil.distanceFromRobot </td>
+          <td class="memname">static double ca.mcgill.ecse211.project.GameUtil.distanceFrom </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -196,7 +210,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double []&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -220,23 +240,14 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00212">212</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                                       {</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">try</span> {</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="keywordtype">double</span>[] position = Odometer.getOdometer().getXYT();</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      <span class="keywordflow">return</span> (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    } <span class="keywordflow">catch</span> (OdometerExceptions e) {</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="comment">// TODO Auto-generated catch block</span></div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      e.printStackTrace();</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> Integer.MAX_VALUE;</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_cgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_cgraph" alt=""/></div>
-<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_cgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_cgraph">
-<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer.html#a99171f11e34dea918fa9dd069d721439" title="ca.mcgill.ecse211.odometer.\lOdometer.getOdometer" alt="" coords="248,5,437,47"/>
-<area shape="rect" id="node3" href="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="248,71,437,112"/>
-</map>
-</div>
-<div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00283">283</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                                                                     {</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="keywordflow">return</span> (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_icgraph" alt=""/></div>
-<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae373ebc3ec91ed3bf9dd7304a482a3f5_icgraph">
-<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6e0ee94b800ca3727ca8009782abda14" title="ca.mcgill.ecse211.project.\lGameUtil.findClosestPointToRobot" alt="" coords="248,5,475,47"/>
-<area shape="rect" id="node3" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="523,5,697,47"/>
+<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56_icgraph" alt=""/></div>
+<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56_icgraph">
+<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6e0ee94b800ca3727ca8009782abda14" title="ca.mcgill.ecse211.project.\lGameUtil.findClosestPointToRobot" alt="" coords="228,5,455,47"/>
+<area shape="rect" id="node3" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="503,5,677,47"/>
 </map>
 </div>
 
@@ -274,16 +285,16 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00229">229</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                                                            {</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">int</span> minIndex = 0;</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">double</span> distance = Integer.MAX_VALUE;</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; points.length; i++) {</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordtype">double</span> thisDistance = <a class="code" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#ae373ebc3ec91ed3bf9dd7304a482a3f5">distanceFromRobot</a>(points[i][0], points[i][1]);</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <span class="keywordflow">if</span> (thisDistance &lt; distance) {</div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        minIndex = i;</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        distance = thisDistance;</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      }</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">return</span> minIndex;</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  }</div><div class="ttc" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_html_ae373ebc3ec91ed3bf9dd7304a482a3f5"><div class="ttname"><a href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#ae373ebc3ec91ed3bf9dd7304a482a3f5">ca.mcgill.ecse211.project.GameUtil.distanceFromRobot</a></div><div class="ttdeci">static double distanceFromRobot(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="_game_util_8java_source.html#l00212">GameUtil.java:212</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00293">293</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                                            {</div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">int</span> minIndex = 0;</div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">double</span> distance = Integer.MAX_VALUE;</div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; points.length; i++) {</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      <span class="keywordflow">try</span> {</div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordtype">double</span>[] point = Odometer.getOdometer().getXYT();</div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordtype">double</span> thisDistance = <a class="code" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6fb324a3d5e42414c83dfd8bd5910b56">distanceFrom</a>(points[i][0], points[i][1], point);</div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">if</span> (thisDistance &lt; distance) {</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;          minIndex = i;</div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;          distance = thisDistance;</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      } <span class="keywordflow">catch</span> (OdometerExceptions e) {</div><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="comment">// TODO Auto-generated catch block</span></div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        e.printStackTrace();</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      }</div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">return</span> minIndex;</div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  }</div><div class="ttc" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_html_a6fb324a3d5e42414c83dfd8bd5910b56"><div class="ttname"><a href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6fb324a3d5e42414c83dfd8bd5910b56">ca.mcgill.ecse211.project.GameUtil.distanceFrom</a></div><div class="ttdeci">static double distanceFrom(int x, int y, double[] position)</div><div class="ttdef"><b>Definition:</b> <a href="_game_util_8java_source.html#l00283">GameUtil.java:283</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6e0ee94b800ca3727ca8009782abda14_cgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6e0ee94b800ca3727ca8009782abda14_cgraph" alt=""/></div>
 <map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6e0ee94b800ca3727ca8009782abda14_cgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6e0ee94b800ca3727ca8009782abda14_cgraph">
-<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#ae373ebc3ec91ed3bf9dd7304a482a3f5" title="ca.mcgill.ecse211.project.\lGameUtil.distanceFromRobot" alt="" coords="280,39,475,80"/>
-<area shape="rect" id="node3" href="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer.html#a99171f11e34dea918fa9dd069d721439" title="ca.mcgill.ecse211.odometer.\lOdometer.getOdometer" alt="" coords="523,5,712,47"/>
-<area shape="rect" id="node4" href="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="523,71,712,112"/>
+<area shape="rect" id="node2" href="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer.html#a99171f11e34dea918fa9dd069d721439" title="ca.mcgill.ecse211.odometer.\lOdometer.getOdometer" alt="" coords="280,5,469,47"/>
+<area shape="rect" id="node3" href="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="280,71,469,112"/>
+<area shape="rect" id="node4" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6fb324a3d5e42414c83dfd8bd5910b56" title="ca.mcgill.ecse211.project.\lGameUtil.distanceFrom" alt="" coords="287,136,462,177"/>
 </map>
 </div>
 <div class="dynheader">
@@ -297,8 +308,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa9819819c4de2ef025caac87d0c0b0db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9819819c4de2ef025caac87d0c0b0db">&#9670;&nbsp;</a></span>isBoundary()</h2>
+<a id="a5783c3415e13b66362a647504b63741a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5783c3415e13b66362a647504b63741a">&#9670;&nbsp;</a></span>isIslandBoundary()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,7 +318,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static boolean ca.mcgill.ecse211.project.GameUtil.isBoundary </td>
+          <td class="memname">static boolean ca.mcgill.ecse211.project.GameUtil.isIslandBoundary </td>
           <td>(</td>
           <td class="paramtype">int []&#160;</td>
           <td class="paramname"><em>coor</em></td><td>)</td>
@@ -320,14 +331,21 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Check if a given point is boundary </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coor</td><td>the point to input </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: whether the given point is on the boundary of an island </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00243">243</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                                               {</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">int</span> x = coor[0];</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">int</span> y = coor[1];</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">boolean</span> onLY = x == GameParameters.Island_LL[0]</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        &amp;&amp; (y &gt;= GameParameters.Island_LL[1] &amp;&amp; y &lt;= GameParameters.Island_UR[1]);</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">boolean</span> onRY = x == GameParameters.Island_UR[0]</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        &amp;&amp; (y &gt;= GameParameters.Island_LL[1] &amp;&amp; y &lt;= GameParameters.Island_UR[1]);</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">boolean</span> onLX = y == GameParameters.Island_LL[1]</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        &amp;&amp; (x &gt;= GameParameters.Island_LL[0] &amp;&amp; x &lt;= GameParameters.Island_UR[0]);</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">boolean</span> onUX = y == GameParameters.Island_UR[1]</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        &amp;&amp; (x &gt;= GameParameters.Island_LL[0] &amp;&amp; x &lt;= GameParameters.Island_UR[0]);</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span> onLY || onRY || onLX || onUX;</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00318">318</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                                                     {</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">int</span> x = coor[0];</div><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordtype">int</span> y = coor[1];</div><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">boolean</span> onLY = x == GameParameters.Island_LL[0]</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        &amp;&amp; (y &gt;= GameParameters.Island_LL[1] &amp;&amp; y &lt;= GameParameters.Island_UR[1]);</div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">boolean</span> onRY = x == GameParameters.Island_UR[0]</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        &amp;&amp; (y &gt;= GameParameters.Island_LL[1] &amp;&amp; y &lt;= GameParameters.Island_UR[1]);</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">boolean</span> onLX = y == GameParameters.Island_LL[1]</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        &amp;&amp; (x &gt;= GameParameters.Island_LL[0] &amp;&amp; x &lt;= GameParameters.Island_UR[0]);</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">boolean</span> onUX = y == GameParameters.Island_UR[1]</div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        &amp;&amp; (x &gt;= GameParameters.Island_LL[0] &amp;&amp; x &lt;= GameParameters.Island_UR[0]);</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">return</span> onLY || onRY || onLX || onUX;</div><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_aa9819819c4de2ef025caac87d0c0b0db_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_aa9819819c4de2ef025caac87d0c0b0db_icgraph" alt=""/></div>
-<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_aa9819819c4de2ef025caac87d0c0b0db_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_aa9819819c4de2ef025caac87d0c0b0db_icgraph">
-<area shape="rect" id="node2" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="228,5,403,47"/>
+<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a_icgraph" alt=""/></div>
+<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a_icgraph">
+<area shape="rect" id="node2" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="235,5,409,47"/>
 </map>
 </div>
 
@@ -365,8 +383,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>: true if safe, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00177">177</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                           {</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">int</span> x = coor[0];</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">int</span> y = coor[1];</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">boolean</span> inTunnel = x &gt;= GameParameters.TN_LL[0] &amp;&amp; x &lt;= GameParameters.TN_UR[0]</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        &amp;&amp; y &gt;= GameParameters.TN_LL[1] &amp;&amp; y &lt;= GameParameters.TN_UR[1];</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">boolean</span> isTree = x == GameParameters.TREE_US[0] &amp;&amp; y == GameParameters.TREE_US[1];</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">boolean</span> outBound =</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        x &lt;= 0 || x &gt;= GameParameters.Grid_UR[0] || y &lt;= 0 || y &gt;= GameParameters.Grid_UR[1];</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">if</span> (inTunnel || isTree || outBound) {</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00248">248</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                           {</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">int</span> x = coor[0];</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">int</span> y = coor[1];</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">boolean</span> inTunnel = x &gt;= GameParameters.TN_LL[0] &amp;&amp; x &lt;= GameParameters.TN_UR[0]</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        &amp;&amp; y &gt;= GameParameters.TN_LL[1] &amp;&amp; y &lt;= GameParameters.TN_UR[1];</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">boolean</span> isTree = x == GameParameters.TREE_US[0] &amp;&amp; y == GameParameters.TREE_US[1];</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">boolean</span> outBound =</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        x &lt;= 0 || x &gt;= GameParameters.Grid_UR[0] || y &lt;= 0 || y &gt;= GameParameters.Grid_UR[1];</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">if</span> (inTunnel || isTree || outBound) {</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042_icgraph" alt=""/></div>
@@ -380,6 +398,78 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="afc9ecf0a8a18c0abea79086801d8425a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc9ecf0a8a18c0abea79086801d8425a">&#9670;&nbsp;</a></span>downInstruction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ca.mcgill.ecse211.project.GameUtil.downInstruction = 'D'</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00026">26</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+
+</div>
+</div>
+<a id="ab171328c45ccc1d98d96cc9422232669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab171328c45ccc1d98d96cc9422232669">&#9670;&nbsp;</a></span>leftInstruction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ca.mcgill.ecse211.project.GameUtil.leftInstruction = 'L'</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00023">23</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+
+</div>
+</div>
+<a id="a4f6944d94b8de443baa150a2e7b700a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6944d94b8de443baa150a2e7b700a0">&#9670;&nbsp;</a></span>rightInstruction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ca.mcgill.ecse211.project.GameUtil.rightInstruction = 'R'</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00024">24</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+
+</div>
+</div>
 <a id="acedc99ad369450d6b2d7711c2d63027a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acedc99ad369450d6b2d7711c2d63027a">&#9670;&nbsp;</a></span>searchingFinder</h2>
 
@@ -400,7 +490,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00021">21</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00022">22</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 
 </div>
 </div>
@@ -424,7 +514,31 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00020">20</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00021">21</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+
+</div>
+</div>
+<a id="a98831b92dc6ed43627755d2995cba683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98831b92dc6ed43627755d2995cba683">&#9670;&nbsp;</a></span>upInstruction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ca.mcgill.ecse211.project.GameUtil.upInstruction = 'U'</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00025">25</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 
 </div>
 </div>

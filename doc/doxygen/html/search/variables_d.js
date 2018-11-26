@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['sc',['SC',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#af3944d1bc80c4c8a6cabce66e030f4b7',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['searching',['Searching',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a25564076fdd8880377fbd6eaf753456f',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['searchingboundary',['SearchingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a5a3aceb665ba97ac242e77955feed640',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['searchingfinder',['searchingFinder',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#acedc99ad369450d6b2d7711c2d63027a',1,'ca::mcgill::ecse211::project::GameUtil']]],
-  ['sen_5fdis',['SEN_DIS',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab940d1a52b9759294dc0229e0fd6bc06',1,'ca::mcgill::ecse211::project::Game']]],
-  ['sensormotor',['sensorMotor',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#aa94b85dc88de85d959677bd6c0f98989',1,'ca::mcgill::ecse211::project::Game']]],
-  ['shouldwait',['shouldWait',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a8252930dab1b067da64cf2afae4fc630',1,'ca::mcgill::ecse211::threads::ThreadControl']]],
-  ['startingboundary',['StartingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#afd78c1184c6b82e22bb08ed39ae4e83b',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
-  ['startingfinder',['startingFinder',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a84ec23eabf60cb20895815e7b390e3f2',1,'ca::mcgill::ecse211::project::GameUtil']]]
+  ['targetring',['TargetRing',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a58f3515615bd8e55a036615a23b8ff80',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['test',['test',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af6f7b8fffddcf855f74fe128d2e23ea1',1,'ca::mcgill::ecse211::project::Main']]],
+  ['tile',['TILE',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a72c2224ad4dd557dde445ebc4baaf531',1,'ca::mcgill::ecse211::project::Game']]],
+  ['tn_5fll',['TN_LL',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#aff67c7474a260a8bcbb245a7c7d5b009',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['tn_5fur',['TN_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#aa47abaface63a254570f9a82c4e1fe0d',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['tno_5fll',['TNO_LL',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a951a1759354ae42a5030e36100f553bc',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['tno_5fur',['TNO_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a72ff54e8c60bb2b9d5a06f8377375b8f',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['track',['TRACK',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a64cf12cdd6772ac1ce351ff1dfadd626',1,'ca::mcgill::ecse211::project::Game']]],
+  ['tree_5fus',['TREE_US',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a2449dac1067326f888e8b9e8b5276c18',1,'ca::mcgill::ecse211::project::GameParameters']]],
+  ['ttee_5fo',['TTEE_O',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a50543aed3d1731225cee6fe50ebcefe0',1,'ca::mcgill::ecse211::project::GameParameters']]]
 ];

@@ -21,7 +21,6 @@ var searchData=
   ['gettype',['getType',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a4e7713b30588fc0b2af065db0b198b2c',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['getxyt',['getXYT',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
   ['gothroughtunnel',['goThroughTunnel',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a4b52e605d3ea2f9bcd9481ae2c69ba39',1,'ca::mcgill::ecse211::project::Navigation']]],
-  ['gotoringset',['goToRingSet',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a0016a23ab5d544148a09948fb1a40e4c',1,'ca::mcgill::ecse211::project::Navigation']]],
   ['greenteam',['GreenTeam',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a1d6292807667d219edc172574c2aedbc',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['grid_5fll',['Grid_LL',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#ab190471dbd9bb10d8cef92c1b8bea826',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['grid_5fur',['Grid_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#afbbca622863f674dfb00dcd93e1328cb',1,'ca::mcgill::ecse211::project::GameParameters']]]

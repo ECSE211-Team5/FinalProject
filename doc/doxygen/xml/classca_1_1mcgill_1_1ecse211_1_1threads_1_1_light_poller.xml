@@ -17,9 +17,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="17" bodyend="-1"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1adc07f842a1cc089195c5e47c2a0e5ee6" compoundref="_light_poller_8java" startline="37" endline="45">ca.mcgill.ecse211.threads.LightPoller.LightPoller</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1adc07f842a1cc089195c5e47c2a0e5ee6" compoundref="_light_poller_8java" startline="35" endline="43">ca.mcgill.ecse211.threads.LightPoller.LightPoller</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a7e23e2fe527b2ecbf4ddc8f988dd70a5" compoundref="_r_g_b_poller_8java" startline="30" endline="33">ca.mcgill.ecse211.threads.RGBPoller.RGBPoller</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="36" endline="66">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="39" endline="65">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" prot="protected" static="no" mutable="no">
         <type><ref refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data" kindref="compound">SensorData</ref></type>
@@ -33,9 +33,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="18" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="18" bodyend="-1"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1adc07f842a1cc089195c5e47c2a0e5ee6" compoundref="_light_poller_8java" startline="37" endline="45">ca.mcgill.ecse211.threads.LightPoller.LightPoller</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1adc07f842a1cc089195c5e47c2a0e5ee6" compoundref="_light_poller_8java" startline="35" endline="43">ca.mcgill.ecse211.threads.LightPoller.LightPoller</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a7e23e2fe527b2ecbf4ddc8f988dd70a5" compoundref="_r_g_b_poller_8java" startline="30" endline="33">ca.mcgill.ecse211.threads.RGBPoller.RGBPoller</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="36" endline="66">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="39" endline="65">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" prot="protected" static="no" mutable="no">
         <type>float [][]</type>
@@ -49,8 +49,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="19" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="19" bodyend="-1"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1adc07f842a1cc089195c5e47c2a0e5ee6" compoundref="_light_poller_8java" startline="37" endline="45">ca.mcgill.ecse211.threads.LightPoller.LightPoller</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="36" endline="66">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1adc07f842a1cc089195c5e47c2a0e5ee6" compoundref="_light_poller_8java" startline="35" endline="43">ca.mcgill.ecse211.threads.LightPoller.LightPoller</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_r_g_b_poller_1a96db4561c87136de5098497fe30356fe" compoundref="_r_g_b_poller_8java" startline="39" endline="65">ca.mcgill.ecse211.threads.RGBPoller.runMethod</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a79908bf56395ae82ab5ac57b5b40f206" prot="protected" static="no" mutable="no">
         <type>float</type>
@@ -66,37 +66,6 @@
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="20" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="protected-static-attrib">
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ac3eedf8306835f6592bdbec2f5694651" prot="protected" static="yes" mutable="no">
-        <type>int</type>
-        <definition>int ca.mcgill.ecse211.threads.LightPoller.WAIT_TIME</definition>
-        <argsstring></argsstring>
-        <name>WAIT_TIME</name>
-        <initializer>= 50</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="21" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a81f7ed4eb2aee15bcf08b7396d68f5ac" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int ca.mcgill.ecse211.threads.LightPoller.id</definition>
-        <argsstring></argsstring>
-        <name>id</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="22" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="22" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="private-static-attrib">
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a5016492d8659e131b6e0700ca75f2214" prot="private" static="yes" mutable="no">
         <type>int</type>
@@ -110,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="23" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="23" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="21" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -169,11 +138,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="37" bodyend="45"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="35" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="35" bodyend="43"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="17">ca.mcgill.ecse211.threads.LightPoller.us</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.cont</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" compoundref="_light_poller_8java" startline="19">ca.mcgill.ecse211.threads.LightPoller.lgData</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="37" endline="39">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="42" endline="44">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" compoundref="_thread_control_8java" startline="13">ca.mcgill.ecse211.threads.ThreadControl.WAIT_TIME</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -188,7 +158,7 @@
 <para>the run method to be performed in run method, collect light data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="50" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="50" bodyend="61"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="48" bodyend="59"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1af905a6f2825716ae1a39bf7f6be09477" compoundref="_sensor_data_8java" startline="165" endline="173">ca.mcgill.ecse211.threads.SensorData.setL</references>
       </memberdef>
       </sectiondef>
@@ -255,10 +225,9 @@
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="16" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="16" bodyend="62"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" line="16" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/LightPoller.java" bodystart="16" bodyend="60"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>cont</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a81f7ed4eb2aee15bcf08b7396d68f5ac" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>id</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1abb0ba2385c212f3d0d8435267d882536" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>isStarted</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>isStarted</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a79908bf56395ae82ab5ac57b5b40f206" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>lastValue</name></member>
@@ -273,7 +242,7 @@
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a8252930dab1b067da64cf2afae4fc630" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>shouldWait</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a9c3896500e86e402b8019e1be6500621" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>shouldWait</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>us</name></member>
-      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ac3eedf8306835f6592bdbec2f5694651" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>WAIT_TIME</name></member>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>WAIT_TIME</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a6a25ccb2d8916b8e6cc4b3bb0e9d2ed7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::LightPoller</scope><name>waitForThisThread</name></member>
     </listofallmembers>
   </compounddef>

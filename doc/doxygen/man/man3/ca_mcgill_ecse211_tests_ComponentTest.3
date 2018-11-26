@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.tests.ComponentTest" 3 "Thu Nov 15 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.tests.ComponentTest" 3 "Mon Nov 26 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -37,6 +37,9 @@ ca.mcgill.ecse211.tests.ComponentTest
 .ti -1c
 .RI "static void \fBringMotorTest\fP ()  throws OdometerExceptions "
 .br
+.ti -1c
+.RI "static void \fBblackLineTest\fP ()  throws OdometerExceptions "
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -62,6 +65,29 @@ Kamy Moussavi Kafi
 Definition at line 27 of file ComponentTest\&.java\&.
 .SH "Member Function Documentation"
 .PP 
+.SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.blackLineTest () throws \fBOdometerExceptions\fP\fC [static]\fP"
+
+.PP
+Definition at line 139 of file ComponentTest\&.java\&.
+.PP
+.nf
+139                                                                {
+140     // TODO Auto-generated method stub
+141     Navigation navi = new Navigation(Game\&.leftMotor, Game\&.rightMotor);
+142     GameUtil\&.searchingFinder = new GameUtil\&.PathFinder(GameParameters\&.Island_LL, GameParameters\&.Island_UR);
+143     int[] arr1 = {0,0};
+144     int[] arr2 = {0,0};
+145     GameUtil\&.startingFinder = new GameUtil\&.PathFinder(arr1,arr2);
+146     int count = 0;
+147    while(count <85) {
+148      navi\&.moveOneTileWithCorrection(0);
+149      count++;
+150      if(count%7 ==0) {
+151        navi\&.turn(90);
+152      }
+153    }
+154   }
+.fi
 .SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.lightSensorTest ()\fC [static]\fP"
 Test for lightSensor 
 .PP
@@ -137,9 +163,13 @@ Definition at line 119 of file ComponentTest\&.java\&.
 128     for(int i = 0; i < 4; i++) {
 129       navigation\&.travelToWithCorrection(other[i][0], other[i][1],false);
 130       navigation\&.turn(-90);
-131       //navigation\&.searchRingSet(searcher);
-132     }
-133   }
+131       if(i != 3) {
+132         navigation\&.searchRingSet(searcher, true, true);
+133       }else {
+134         navigation\&.searchRingSet(searcher, true, false);
+135       }
+136     }
+137   }
 .fi
 .SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.runTest (\fBType\fP testType) throws Exception\fC [static]\fP"
 This method selects test for each individual components of the design

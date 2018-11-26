@@ -55,9 +55,22 @@ static int \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control
 
 
 \subsection{Detailed Description}
-This class for thread control with pause and restart functionality 
+This class for thread control with pause and restart functionality \begin{DoxyAuthor}{Author}
+Caspar Cedro 
 
-Definition at line 7 of file Thread\+Control.\+java.
+Percy Chen 
+
+Patrick Erath 
+
+Anssam Ghezala 
+
+Susan Matuszewski 
+
+Kamy Moussavi Kafi 
+\end{DoxyAuthor}
+
+
+Definition at line 12 of file Thread\+Control.\+java.
 
 
 
@@ -73,13 +86,13 @@ check if this poller thread is running \begin{DoxyReturn}{Returns}
 \end{DoxyReturn}
 
 
-Definition at line 37 of file Thread\+Control.\+java.
+Definition at line 42 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-37                                           \{
-38     \textcolor{keywordflow}{return} this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted};
-39   \}
+42                                           \{
+43     \textcolor{keywordflow}{return} this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted};
+44   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -96,25 +109,25 @@ Here is the caller graph for this function\+:\nopagebreak
 
 run method implemented from Runnable class, this run method implements the functionality to pause and restart the thread 
 
-Definition at line 17 of file Thread\+Control.\+java.
+Definition at line 22 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-17                                  \{
-18     \textcolor{keywordflow}{try} \{
-19       \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
-20         \textcolor{keywordflow}{if} (!\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted}) \{
-21   \textcolor{comment}{//        Sound.beepSequence();}
-22           wait();
-23         \} \textcolor{keywordflow}{else} \{
-24           \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a2959c54bdb6c62c9d5569cdf3ccf2418}{runMethod}();
-25           wait(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}{WAIT\_TIME});
-26         \}
-27       \}
-28     \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-29       e.printStackTrace();
-30     \}
-31   \}
+22                                  \{
+23     \textcolor{keywordflow}{try} \{
+24       \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
+25         \textcolor{keywordflow}{if} (!\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted}) \{
+26   \textcolor{comment}{//        Sound.beepSequence();}
+27           wait();
+28         \} \textcolor{keywordflow}{else} \{
+29           \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a2959c54bdb6c62c9d5569cdf3ccf2418}{runMethod}();
+30           wait(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}{WAIT\_TIME});
+31         \}
+32       \}
+33     \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+34       e.printStackTrace();
+35     \}
+36   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -149,14 +162,14 @@ start a paused thread or stop a runing thread
 \end{DoxyParams}
 
 
-Definition at line 45 of file Thread\+Control.\+java.
+Definition at line 50 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-45                                                    \{
-46     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted} = start;
-47     notify();
-48   \}
+50                                                    \{
+51     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted} = start;
+52     notify();
+53   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -178,17 +191,17 @@ set if other thread should\+Wait for this thread
 \end{DoxyParams}
 
 
-Definition at line 78 of file Thread\+Control.\+java.
+Definition at line 83 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-78                                           \{
-79     \textcolor{keyword}{synchronized}(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
-80       this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait} = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait};
-81       
-82       \textcolor{keywordflow}{if}(!\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait}) \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}.notifyAll();
-83     \}
-84   \}
+83                                           \{
+84     \textcolor{keyword}{synchronized}(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
+85       this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait} = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait};
+86       
+87       \textcolor{keywordflow}{if}(!\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait}) \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}.notifyAll();
+88     \}
+89   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -208,15 +221,15 @@ get should\+Wait for this thread \begin{DoxyReturn}{Returns}
 \end{DoxyReturn}
 
 
-Definition at line 68 of file Thread\+Control.\+java.
+Definition at line 73 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-68                               \{
-69     \textcolor{keyword}{synchronized}(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
-70       \textcolor{keywordflow}{return} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait};
-71     \}
-72   \}
+73                               \{
+74     \textcolor{keyword}{synchronized}(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
+75       \textcolor{keywordflow}{return} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait};
+76     \}
+77   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -233,20 +246,20 @@ Here is the caller graph for this function\+:\nopagebreak
 
 wait for this thread until should\+Wait is false 
 
-Definition at line 53 of file Thread\+Control.\+java.
+Definition at line 58 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-53                                   \{
-54     \textcolor{keyword}{synchronized}(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
-55       \textcolor{keywordflow}{try} \{
-56         \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}.wait();
-57       \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-58         \textcolor{comment}{// TODO Auto-generated catch block}
-59         e.printStackTrace();
-60       \}
-61     \}
-62   \}
+58                                   \{
+59     \textcolor{keyword}{synchronized}(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
+60       \textcolor{keywordflow}{try} \{
+61         \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}.wait();
+62       \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+63         \textcolor{comment}{// TODO Auto-generated catch block}
+64         e.printStackTrace();
+65       \}
+66     \}
+67   \}
 \end{DoxyCode}
 
 
@@ -259,7 +272,7 @@ Definition at line 53 of file Thread\+Control.\+java.
 
 
 
-Definition at line 9 of file Thread\+Control.\+java.
+Definition at line 14 of file Thread\+Control.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}!lock\+Object@{lock\+Object}}
@@ -269,7 +282,7 @@ Definition at line 9 of file Thread\+Control.\+java.
 
 
 
-Definition at line 10 of file Thread\+Control.\+java.
+Definition at line 15 of file Thread\+Control.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a8252930dab1b067da64cf2afae4fc630}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a8252930dab1b067da64cf2afae4fc630}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}!should\+Wait@{should\+Wait}}
@@ -279,7 +292,7 @@ Definition at line 10 of file Thread\+Control.\+java.
 
 
 
-Definition at line 11 of file Thread\+Control.\+java.
+Definition at line 16 of file Thread\+Control.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control@{ca\+::mcgill\+::ecse211\+::threads\+::\+Thread\+Control}!W\+A\+I\+T\+\_\+\+T\+I\+ME@{W\+A\+I\+T\+\_\+\+T\+I\+ME}}
@@ -289,7 +302,7 @@ Definition at line 11 of file Thread\+Control.\+java.
 
 
 
-Definition at line 8 of file Thread\+Control.\+java.
+Definition at line 13 of file Thread\+Control.\+java.
 
 
 

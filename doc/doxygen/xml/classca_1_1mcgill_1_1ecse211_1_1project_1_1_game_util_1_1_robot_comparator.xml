@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_robot_comparator" kind="class" language="Java" prot="public">
+    <compoundname>ca::mcgill::ecse211::project::GameUtil::RobotComparator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">java::util::Comparator&lt; int[]&gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_robot_comparator_1a2374aec9793f91e155020d5c4a7f00d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ca.mcgill.ecse211.project.GameUtil.RobotComparator.compare</definition>
+        <argsstring>(int[] a, int[] b)</argsstring>
+        <name>compare</name>
+        <param>
+          <type>int []</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int []</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="39" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="39" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is class is used as a comparator to sort the points from nearest to the robot. <simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<simplesect kind="author"><para>Percy Chen </para></simplesect>
+<simplesect kind="author"><para>Patrick Erath </para></simplesect>
+<simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
+<simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
+<simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="76">
+        <label>ca.mcgill.ecse211.project.GameUtil.RobotComparator</label>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>java::util::Comparator&lt; int[]&gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="78">
+        <label>ca.mcgill.ecse211.project.GameUtil.RobotComparator</label>
+        <childnode refid="79" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>java::util::Comparator&lt; int[]&gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="37" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_robot_comparator_1a2374aec9793f91e155020d5c4a7f00d7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameUtil::RobotComparator</scope><name>compare</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
