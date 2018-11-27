@@ -76,7 +76,7 @@ public class UltrasonicLocalizer {
 
     turnToWall();
     turnAwayFromWall();
-    Sound.beep();
+  //  Sound.beep();
     angle1 = odometer.getXYT()[2];
 
     // 2. turn opposite way, until no wall, then see wall and check angle2
@@ -85,7 +85,7 @@ public class UltrasonicLocalizer {
 
     turnToWall();
     turnAwayFromWall();
-    Sound.beep();
+ //   Sound.beep();
     angle2 = odometer.getXYT()[2];
 
     // 3. Turn to calculate angle, then turn to face y-axis, wait for button press
@@ -113,17 +113,17 @@ public class UltrasonicLocalizer {
 
     turnAwayFromWall();
     turnToWall();
-    Sound.beep();
+  //  Sound.beep();
     angle1 = odometer.getXYT()[2];
 
     // 2. Turn left until we see the second wall, then turn right
-    navigation.turn(-50);
+    navigation.turn(-90);
     rightMotor.forward();
     leftMotor.backward();
     
     turnAwayFromWall();
     turnToWall();
-    Sound.beep();
+    //Sound.beep();
     angle2 = odometer.getXYT()[2];
 
     // 3. Calculate the angle and face y-axis 0

@@ -35,12 +35,12 @@ public class Navigation {
   private static final int FORWARD_SPEED = 250;
   private static final int ROTATE_SPEED = 250;
   private static final int TUNNEL_SPEED = 400;
-  private static final int TUNNEL_CORRECTION = 0;
+  private static final int TUNNEL_CORRECTION = -3;
   private static final int Q_ACCELERATION = 3000; 
   private static final int N_ACCELERATION = 300; 
 
   private static int leftBlackLineThre = -10;
-  private static int rightBlackLineThre = -13;
+  private static int rightBlackLineThre = -10 ;
   
   //angles for detecting if one sensor misses the black lin
   private static final int ZERO_DEGREE_LOW = 350;
@@ -425,14 +425,18 @@ public class Navigation {
     turnTo(angleThoughTunnel);
     
     // goback To correct
-    moveBackWithCorrection();
+    if(angleThoughTunnel > 0) {
+      moveBackWithCorrection();
+    }
 
     // turn left -5 to correct the effect of the weight
+    turn(TUNNEL_CORRECTION);
       if(distance == 1) {  
         forward(TUNNEL_SPEED, distance+1+0.5);
       }else {
+        
         forward(TUNNEL_SPEED, distance+1+0.5);
-//        turn(TUNNEL_CORRECTION);
+       
 //        forward(TUNNEL_SPEED, distance/2.0+0.5);
       }
 

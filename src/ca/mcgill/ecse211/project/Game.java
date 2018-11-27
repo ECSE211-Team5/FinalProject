@@ -96,7 +96,8 @@ public enum Game {
       default:
         // Other states do respond to this event
     }
-
+    Sound.beep();
+    Sound.beep();
     return wasEventProcessed;
   }
 
@@ -332,6 +333,7 @@ public enum Game {
       if(GameUtil.isSafe(side)) {
         navigation.travelToWithCorrection(side[0], side[1], false);
         if(i == 0) {
+          Sound.twoBeeps();
           Sound.beep();
         }
         // turn facing the ring set
@@ -435,6 +437,7 @@ public enum Game {
     
     Button.waitForAnyPress(); // Wait for button press to start
       INSTANCE.ready(usLoc, lgLoc);
+      
       //instantiate path finder
       GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
       GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
