@@ -432,9 +432,9 @@ public class Navigation {
       if(distance == 1) {  
         forward(TUNNEL_SPEED, distance+1+0.5);
       }else {
-        forward(TUNNEL_SPEED, distance/2.0+1);
-        turn(TUNNEL_CORRECTION);
-        forward(TUNNEL_SPEED, distance/2.0+0.5);
+        forward(TUNNEL_SPEED, distance+1+0.5);
+//        turn(TUNNEL_CORRECTION);
+//        forward(TUNNEL_SPEED, distance/2.0+0.5);
       }
 
     odometer.setTheta(angleThoughTunnel);

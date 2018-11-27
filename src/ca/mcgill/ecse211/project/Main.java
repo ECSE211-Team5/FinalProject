@@ -18,7 +18,7 @@ public class Main {
   /**
    * This variable decides whether or not to enable our tests
    */
-  public static boolean test = true;
+  public static boolean test = false;
 
   /**
    * This variable stores the type of test that we want to perform

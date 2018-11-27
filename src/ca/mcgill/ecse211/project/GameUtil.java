@@ -333,6 +333,6 @@ public class GameUtil {
   }
   
   public static void playMusic() {
-    Sound.playSample(new File("Tetris.wav"));
+    Sound.playSample(new File("Pen.wav"),100);
   }
 }
