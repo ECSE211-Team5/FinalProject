@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.Navigation" 3 "Mon Nov 26 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.Navigation" 3 "Tue Nov 27 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -156,12 +156,12 @@ A converted distance
 .PP
 
 .PP
-Definition at line 591 of file Navigation\&.java\&.
+Definition at line 594 of file Navigation\&.java\&.
 .PP
 .nf
-591                                                                     {
-592     return (int) ((180\&.0 * distance) / (Math\&.PI * radius));
-593   }
+594                                                                     {
+595     return (int) ((180\&.0 * distance) / (Math\&.PI * radius));
+596   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.forward (int speed, double distance)"
 Move the robot forward
@@ -175,15 +175,15 @@ Move the robot forward
 .PP
 
 .PP
-Definition at line 568 of file Navigation\&.java\&.
+Definition at line 571 of file Navigation\&.java\&.
 .PP
 .nf
-568                                                   {
-569     leftMotor\&.setSpeed(speed);
-570     rightMotor\&.setSpeed(speed);
-571     leftMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, distance * Game\&.TILE), true);
-572     rightMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, distance * Game\&.TILE), false);
-573   }
+571                                                   {
+572     leftMotor\&.setSpeed(speed);
+573     rightMotor\&.setSpeed(speed);
+574     leftMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, distance * Game\&.TILE), true);
+575     rightMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, distance * Game\&.TILE), false);
+576   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.goThroughTunnel () throws Exception"
 found the tunnel based on the ll and ur coordinate, after the method, the robot will go the the entrance of the tunnel facing the tunnel it returns the distance it needs to go for [x] and [y] in order to go through the tunnel
@@ -263,40 +263,43 @@ Definition at line 363 of file Navigation\&.java\&.
 425     turnTo(angleThoughTunnel);
 426     
 427     // goback To correct
-428     moveBackWithCorrection();
-429 
-430     // turn left -5 to correct the effect of the weight
-431     this\&.turn(TUNNEL_CORRECTION);
-432       if(distance == 1) {  
-433         forward(TUNNEL_SPEED, distance+1+0\&.5);
-434       }else {
-435         forward(TUNNEL_SPEED, distance/2\&.0+1);
-436         turn(TUNNEL_CORRECTION);
-437         forward(TUNNEL_SPEED, distance/2\&.0+0\&.5);
-438       }
-439 
-440     odometer\&.setTheta(angleThoughTunnel);
-441     leftMotor\&.setAcceleration(N_ACCELERATION);
-442     rightMotor\&.setAcceleration(N_ACCELERATION);
-443 //    // rotate additional sensor distances to make sure the sensor will not on the balck line
-444 //    leftMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, 2*Game\&.SEN_DIS), true);
-445 //    rightMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, 2*Game\&.SEN_DIS), false);
-446     this\&.moveOneTileWithCorrection(angleThoughTunnel);
-447     double[] after = GameUtil\&.average(notIn\&.get(0), notIn\&.get(1));
-448     odometer\&.setX(after[0]);
-449     odometer\&.setY(after[1]);
-450     // go to the nearest safe point near tunnel
-451     for (int[] p : notIn) {
-452       if (GameUtil\&.isSafe(p)) {
-453         double toPointAngle = Math\&.toDegrees(calculateAngleTo(p[0], p[1]));
-454         turnTo(toPointAngle);
-455         this\&.moveOneTileWithCorrection(toPointAngle);
-456         odometer\&.setX(p[0]);
-457         odometer\&.setY(p[1]);
-458         break;
-459       }
-460     }
-461   }
+428     if(angleThoughTunnel > 0) {
+429       moveBackWithCorrection();
+430     }
+431 
+432     // turn left -5 to correct the effect of the weight
+433     turn(TUNNEL_CORRECTION);
+434       if(distance == 1) {  
+435         forward(TUNNEL_SPEED, distance+1+0\&.5);
+436       }else {
+437         
+438         forward(TUNNEL_SPEED, distance+1+0\&.5);
+439        
+440 //        forward(TUNNEL_SPEED, distance/2\&.0+0\&.5);
+441       }
+442 
+443     odometer\&.setTheta(angleThoughTunnel);
+444 //    leftMotor\&.setAcceleration(N_ACCELERATION);
+445 //    rightMotor\&.setAcceleration(N_ACCELERATION);
+446 //    // rotate additional sensor distances to make sure the sensor will not on the balck line
+447 //    leftMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, 2*Game\&.SEN_DIS), true);
+448 //    rightMotor\&.rotate(convertDistance(Game\&.WHEEL_RAD, 2*Game\&.SEN_DIS), false);
+449     this\&.moveOneTileWithCorrection(angleThoughTunnel);
+450     double[] after = GameUtil\&.average(notIn\&.get(0), notIn\&.get(1));
+451     odometer\&.setX(after[0]);
+452     odometer\&.setY(after[1]);
+453     // go to the nearest safe point near tunnel
+454     for (int[] p : notIn) {
+455       if (GameUtil\&.isSafe(p)) {
+456         double toPointAngle = Math\&.toDegrees(calculateAngleTo(p[0], p[1]));
+457         turnTo(toPointAngle);
+458         this\&.moveOneTileWithCorrection(toPointAngle);
+459         odometer\&.setX(p[0]);
+460         odometer\&.setY(p[1]);
+461         break;
+462       }
+463     }
+464   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.moveOneTileWithCorrection (double theta)"
 This method move the robot one tile until it detect a blackline (ususally one tile) 
@@ -312,8 +315,8 @@ Definition at line 241 of file Navigation\&.java\&.
 .PP
 .nf
 241                                                       {
-242     leftMotor\&.setAcceleration(N_ACCELERATION);
-243     rightMotor\&.setAcceleration(N_ACCELERATION);
+242 //    leftMotor\&.setAcceleration(N_ACCELERATION);
+243 //    rightMotor\&.setAcceleration(N_ACCELERATION);
 244     leftMotor\&.setSpeed(FORWARD_SPEED);
 245     rightMotor\&.setSpeed(FORWARD_SPEED);
 246     leftMotor\&.forward();
@@ -366,68 +369,68 @@ this method approaches the ring set by paying attention to the reading of us sen
 .PP
 
 .PP
-Definition at line 503 of file Navigation\&.java\&.
+Definition at line 506 of file Navigation\&.java\&.
 .PP
 .nf
-503                                                                                    {
-504     //Go backward to detect the line and correct the rotation
-505     leftMotor\&.setAcceleration(N_ACCELERATION);
-506     rightMotor\&.setAcceleration(N_ACCELERATION);
-507     leftMotor\&.setSpeed(FORWARD_SPEED);
-508     rightMotor\&.setSpeed(FORWARD_SPEED);
-509     double theta = odometer\&.getXYT()[2];
-510     
-511     // if we do correction, we need to forward more (for the sensor distance)
-512     if(correct) {
-513       leftMotor\&.backward();
-514       rightMotor\&.backward();
-515       moveUntilLineDetection(true);
-516       //Forward for 3 cm (approach the ring set)
-517       forward(FORWARD_SPEED, 2\&.5/Game\&.TILE);
-518     }else {
-519       forward(FORWARD_SPEED, 2/Game\&.TILE);
-520     }
-521     //rotate a little to the left to make sure that the sensor can detect the ring
-522     leftMotor\&.rotate(LEFT_MOTOR_RING_COR, false);
-523     //detect the ring color and beep based on the color
-524     searcher\&.search();
-525     //rotate back
-526     leftMotor\&.rotate(-LEFT_MOTOR_RING_COR, false);
-527     //prepare for retrieving the ring 
-528     searcher\&.prepareRetrieve();
-529     
-530     //rotate the right motor to behind a little to make sure we can put the rod behind the ring
-531     rightMotor\&.rotate(RIGHT_MOTOR_RING_COR, false);
+506                                                                                    {
+507     //Go backward to detect the line and correct the rotation
+508 //    leftMotor\&.setAcceleration(N_ACCELERATION);
+509 //    rightMotor\&.setAcceleration(N_ACCELERATION);
+510     leftMotor\&.setSpeed(FORWARD_SPEED);
+511     rightMotor\&.setSpeed(FORWARD_SPEED);
+512     double theta = odometer\&.getXYT()[2];
+513     
+514     // if we do correction, we need to forward more (for the sensor distance)
+515     if(correct) {
+516       leftMotor\&.backward();
+517       rightMotor\&.backward();
+518       moveUntilLineDetection(true);
+519       //Forward for 3 cm (approach the ring set)
+520       forward(FORWARD_SPEED, 2\&.5/Game\&.TILE);
+521     }else {
+522       forward(FORWARD_SPEED, 2/Game\&.TILE);
+523     }
+524     //rotate a little to the left to make sure that the sensor can detect the ring
+525     leftMotor\&.rotate(LEFT_MOTOR_RING_COR, false);
+526     //detect the ring color and beep based on the color
+527     searcher\&.search();
+528     //rotate back
+529     leftMotor\&.rotate(-LEFT_MOTOR_RING_COR, false);
+530     //prepare for retrieving the ring 
+531     searcher\&.prepareRetrieve();
 532     
-533     //go to the position where ring can be retrieved
-534     forward(FORWARD_SPEED, 4/Game\&.TILE);
+533     //rotate the right motor to behind a little to make sure we can put the rod behind the ring
+534     rightMotor\&.rotate(RIGHT_MOTOR_RING_COR, false);
 535     
-536     //rotate a little to the left to make sure not influence the other ring
-537     rightMotor\&.rotate(70, false);
-538     searcher\&.retrieveRing();
-539     //go back to original position
-540     rightMotor\&.rotate(-70, false);
-541     if(correct) {
-542       forward(FORWARD_SPEED, -6\&.5/Game\&.TILE);
-543     }else {
-544       forward(FORWARD_SPEED, -6/Game\&.TILE);
-545     }
-546     rightMotor\&.rotate(-RIGHT_MOTOR_RING_COR+20, false);
-547     odometer\&.setTheta(theta);
-548     if(reset)
-549       searcher\&.resetRodMotor();
-550   }
+536     //go to the position where ring can be retrieved
+537     forward(FORWARD_SPEED, 4/Game\&.TILE);
+538     
+539     //rotate a little to the left to make sure not influence the other ring
+540     rightMotor\&.rotate(70, false);
+541     searcher\&.retrieveRing();
+542     //go back to original position
+543     rightMotor\&.rotate(-70, false);
+544     if(correct) {
+545       forward(FORWARD_SPEED, -6\&.5/Game\&.TILE);
+546     }else {
+547       forward(FORWARD_SPEED, -6/Game\&.TILE);
+548     }
+549     rightMotor\&.rotate(-RIGHT_MOTOR_RING_COR+20, false);
+550     odometer\&.setTheta(theta);
+551     if(reset)
+552       searcher\&.resetRodMotor();
+553   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.stop ()"
 Stop the motor 
 .PP
-Definition at line 578 of file Navigation\&.java\&.
+Definition at line 581 of file Navigation\&.java\&.
 .PP
 .nf
-578                      {
-579     leftMotor\&.stop(true);
-580     rightMotor\&.stop(false);
-581   }
+581                      {
+582     leftMotor\&.stop(true);
+583     rightMotor\&.stop(false);
+584   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.travelTo (double x, double y)"
 Travel to a point naively: by rotating the robot facing the point first and then go to the point 
@@ -553,13 +556,13 @@ Rotate the robot by certain angle
 .PP
 
 .PP
-Definition at line 557 of file Navigation\&.java\&.
+Definition at line 560 of file Navigation\&.java\&.
 .PP
 .nf
-557                               {
-558     leftMotor\&.rotate(convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, angle), true);
-559     rightMotor\&.rotate(-convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, angle), false);
-560   }
+560                               {
+561     leftMotor\&.rotate(convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, angle), true);
+562     rightMotor\&.rotate(-convertAngle(Game\&.WHEEL_RAD, Game\&.TRACK, angle), false);
+563   }
 .fi
 .SS "synchronized void ca\&.mcgill\&.ecse211\&.project\&.Navigation\&.turnTo (double angle)"
 This method is where the logic for the odometer will run\&. Use the methods provided from the OdometerData class to implement the odometer\&.

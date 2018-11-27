@@ -41,8 +41,8 @@ public class OdometerData {
   private static OdometerData odoData = null;
 
   /**
-   * Default constructor. The constructor is private. A factory is used instead such that only one
-   * instance of this class is ever created.
+   * This is the class constructor for the OdometerData class. It cannot be instantiated externally.
+   * A factory is used instead such that only one instance of this class is ever created.
    */
   protected OdometerData() {
     this.x = 0;

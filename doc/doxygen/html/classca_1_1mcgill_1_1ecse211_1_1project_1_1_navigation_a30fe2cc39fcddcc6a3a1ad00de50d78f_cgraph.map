@@ -1,0 +1,19 @@
+<map id="goThroughTunnel" name="goThroughTunnel">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a3c4cf84b90005e7c554c0ddc76c7b267" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="871,574,1060,615"/>
+<area shape="rect" id="node3" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a7e45f0661e67a609932715b9e04ae73d" title="ca.mcgill.ecse211.project.\lGameParameters.getType" alt="" coords="406,147,581,188"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a3d0a31fc5a8d7b7853138582630bd721" title="ca.mcgill.ecse211.project.\lGameUtil.average" alt="" coords="176,127,351,168"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a8ebe13e5a558ae6b0ef6101ccf2d944f" title="calculateAngleTo" alt="" coords="432,657,555,684"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a9aa8f5b46142a3c4a0390058fb8141aa" title="turnTo" alt="" coords="464,497,523,524"/>
+<area shape="rect" id="node7" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a75108a0ac02f62b48a0a90cbb785a379" title="turn" alt="" coords="241,294,285,321"/>
+<area shape="rect" id="node8" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a4a70af678fcf48111d86524ca7d80a5b" title="forward" alt="" coords="697,278,762,305"/>
+<area shape="rect" id="node10" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a17bf5aad43f03f7b6bde4a57114a3a28" title="ca.mcgill.ecse211.odometer.\lOdometerData.setTheta" alt="" coords="871,84,1060,126"/>
+<area shape="rect" id="node11" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a277ebdffc6e0dc8eb045dd017574d284" title="moveOneTileWithCorrection" alt="" coords="636,225,823,252"/>
+<area shape="rect" id="node13" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a9c18fcc579333bf9653d13ad2b372e39" title="ca.mcgill.ecse211.odometer.\lOdometerData.setX" alt="" coords="399,212,588,254"/>
+<area shape="rect" id="node14" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a7d57e2a5c35d27feb58fd498a3cf82b9" title="ca.mcgill.ecse211.odometer.\lOdometerData.setY" alt="" coords="399,380,588,422"/>
+<area shape="rect" id="node15" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#aec7f155760f59f38770c5d14eb53ee39" title="ca.mcgill.ecse211.project.\lGameUtil.isSafe" alt="" coords="176,599,351,640"/>
+<area shape="rect" id="node16" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a8727a3a94248421c47328c109f88ff21" title="travelToWithCorrection" alt="" coords="185,345,341,372"/>
+<area shape="rect" id="node18" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a08679b165a01bc35728eb90e9cf34677" title="travelTo" alt="" coords="229,548,298,574"/>
+<area shape="rect" id="node9" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a426ea7b31d802858dfefc5d4f9c86e08" title="convertDistance" alt="" coords="907,282,1024,309"/>
+<area shape="rect" id="node12" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a7a0dde4fa4f3781c11d51953ece156f5" title="ca.mcgill.ecse211.threads.\lSensorData.getL" alt="" coords="876,216,1055,258"/>
+<area shape="rect" id="node17" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a26ee5acbd30557747dfb4d917db6dd8c" title="moveWithCorrection" alt="" coords="423,278,564,305"/>
+</map>

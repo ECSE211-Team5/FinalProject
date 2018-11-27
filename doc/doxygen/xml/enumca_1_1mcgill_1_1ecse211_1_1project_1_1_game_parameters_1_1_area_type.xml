@@ -17,7 +17,7 @@
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="19" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="19" bodyend="-1"/>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="218" endline="227">ca.mcgill.ecse211.project.GameParameters.getType</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="125" endline="186">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="363" endline="461">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="363" endline="464">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1a25564076fdd8880377fbd6eaf753456f" prot="public" static="no" mutable="no">
         <type></type>
@@ -32,7 +32,7 @@
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="19" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="19" bodyend="-1"/>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a4e7713b30588fc0b2af065db0b198b2c" compoundref="_game_parameters_8java" startline="218" endline="227">ca.mcgill.ecse211.project.GameParameters.getType</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="363" endline="461">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="363" endline="464">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_1ac762256f8b33e7c93c162520a0349769" prot="public" static="no" mutable="no">
         <type></type>

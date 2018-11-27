@@ -171,7 +171,7 @@
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" compoundref="_light_localizer_8java" startline="37" endline="44">ca.mcgill.ecse211.localization.LightLocalizer.LightLocalizer</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1a3603202cdb5035c4e4164933b0aebeec" compoundref="_ultrasonic_localizer_8java" startline="43" endline="50">ca.mcgill.ecse211.localization.UltrasonicLocalizer.UltrasonicLocalizer</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1af0970123ca090749bfb2f5b9f478c01d" compoundref="_display_8java" startline="35" endline="39">ca.mcgill.ecse211.project.Display.Display</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="359" endline="424">ca.mcgill.ecse211.project.Game.preparation</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="358" endline="423">ca.mcgill.ecse211.project.Game.preparation</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" compoundref="_navigation_8java" startline="63" endline="74">ca.mcgill.ecse211.project.Navigation.Navigation</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a37eebb6cbdfd692e0979c3ca0fe2597b" compoundref="_ring_searcher_8java" startline="43" endline="55">ca.mcgill.ecse211.project.RingSearcher.RingSearcher</referencedby>
       </memberdef>

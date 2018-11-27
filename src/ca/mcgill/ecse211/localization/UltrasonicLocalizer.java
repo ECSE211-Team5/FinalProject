@@ -5,7 +5,6 @@ import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.Navigation;
 import ca.mcgill.ecse211.threads.SensorData;
 import lejos.hardware.Button;
-import lejos.hardware.Sound;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 
 /**
@@ -32,11 +31,11 @@ public class UltrasonicLocalizer {
   private static final double wallDistanceError = 5;
 
   /**
-   * This is the class constructor for a class that helps to localize our robot with an ultrasonic
-   * sensor
+   * This is the class constructor for the UltrasonicLocalizer class
    * 
-   * @param leftMotor A EV3LargeRegularedMotor object instance that allows control of the left motor
-   * @param rightMotor A EV3LargeRegularedMotor object instance that allows control of the right
+   * @param leftMotor An EV3LargeRegularedMotor object instance that allows control of the left
+   *        motor
+   * @param rightMotor An EV3LargeRegularedMotor object instance that allows control of the right
    *        motor
    * @throws OdometerExceptions
    */
@@ -76,7 +75,7 @@ public class UltrasonicLocalizer {
 
     turnToWall();
     turnAwayFromWall();
-  //  Sound.beep();
+    // Sound.beep();
     angle1 = odometer.getXYT()[2];
 
     // 2. turn opposite way, until no wall, then see wall and check angle2
@@ -85,7 +84,7 @@ public class UltrasonicLocalizer {
 
     turnToWall();
     turnAwayFromWall();
- //   Sound.beep();
+    // Sound.beep();
     angle2 = odometer.getXYT()[2];
 
     // 3. Turn to calculate angle, then turn to face y-axis, wait for button press
@@ -113,17 +112,17 @@ public class UltrasonicLocalizer {
 
     turnAwayFromWall();
     turnToWall();
-  //  Sound.beep();
+    // Sound.beep();
     angle1 = odometer.getXYT()[2];
 
     // 2. Turn left until we see the second wall, then turn right
     navigation.turn(-90);
     rightMotor.forward();
     leftMotor.backward();
-    
+
     turnAwayFromWall();
     turnToWall();
-    //Sound.beep();
+    // Sound.beep();
     angle2 = odometer.getXYT()[2];
 
     // 3. Calculate the angle and face y-axis 0

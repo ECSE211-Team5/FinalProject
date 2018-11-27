@@ -22,16 +22,19 @@ public class LightLocalizer {
   private EV3LargeRegulatedMotor leftMotor;
   private EV3LargeRegulatedMotor rightMotor;
 
-	private Odometer odometer;
-	private SensorData data;
-	private Navigation navigation;
-	private static final int FORWARD_SPEED = 140;
-	private static final int blackLineColor = -5;
+  private Odometer odometer;
+  private SensorData data;
+  private Navigation navigation;
+  private static final int FORWARD_SPEED = 140;
+  private static final int blackLineColor = -5;
+
   /**
-   * This is the class constructor
+   * This is the class constructor for the LightLocalizer class
    * 
-   * @param leftMotor
-   * @param rightMotor
+   * @param leftMotor An EV3LargeRegularedMotor object instance that allows control of the left
+   *        motor
+   * @param rightMotor An EV3LargeRegularedMotor object instance that allows control of the right
+   *        motor
    * @throws OdometerExceptions
    */
   public LightLocalizer(Navigation nav, EV3LargeRegulatedMotor leftMotor,
@@ -44,10 +47,11 @@ public class LightLocalizer {
   }
 
   /**
-   * (*Improve*)
-   *  Once the robot know what angle it is facing, this method looks for the x,y axis origins knowing
-   * it is in the first tile facing north.
-   * @param sC: the coordinate to set to after localization
+   * This method 
+   * (*Improve*) Once the robot know what angle it is facing, this method looks for the x,y axis
+   * origins knowing it is in the first tile facing north.
+   * 
+   * @param sC the coordinate to set to after localization
    */
   public void localize(int[] sC) {
     leftMotor.setSpeed(FORWARD_SPEED);
@@ -93,16 +97,11 @@ public class LightLocalizer {
     navigation.turnTo(0);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
-    //double sensorDistanceOffset = 2.5;
-    leftMotor.rotate(
-        Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS),
-        true);
-    rightMotor.rotate(
-        Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS),
-        false);
+    // double sensorDistanceOffset = 2.5;
+    leftMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
+    rightMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), false);
     odometer.setTheta(0);
     odometer.setX(sC[0]);
     odometer.setY(sC[1]);
-
   }
 }

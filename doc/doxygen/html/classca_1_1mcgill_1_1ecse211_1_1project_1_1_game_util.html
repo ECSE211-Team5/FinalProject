@@ -102,6 +102,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a6e0ee94b800ca3727ca8009782abda14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5783c3415e13b66362a647504b63741a"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a5783c3415e13b66362a647504b63741a">isIslandBoundary</a> (int[] coor)</td></tr>
 <tr class="separator:a5783c3415e13b66362a647504b63741a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f0e4fdf048d1c265a4b5fc712588f3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a38f0e4fdf048d1c265a4b5fc712588f3">playMusic</a> ()</td></tr>
+<tr class="separator:a38f0e4fdf048d1c265a4b5fc712588f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -132,7 +134,7 @@ Susan Matuszewski </dd>
 <dd>
 Kamy Moussavi Kafi </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00020">20</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00022">22</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae5c5c445ab84516991219ca3783fcaa4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5c5c445ab84516991219ca3783fcaa4">&#9670;&nbsp;</a></span>average()</h2>
@@ -177,8 +179,8 @@ Kamy Moussavi Kafi </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00269">269</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                                     {</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordtype">double</span>[] result = <span class="keyword">new</span> <span class="keywordtype">double</span>[2];</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    result[0] = (double) (p1[0] + p2[0]) / 2;</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    result[1] = (double) (p1[1] + p2[1]) / 2;</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> result;</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00271">271</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                                                     {</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">double</span>[] result = <span class="keyword">new</span> <span class="keywordtype">double</span>[2];</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    result[0] = (double) (p1[0] + p2[0]) / 2;</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    result[1] = (double) (p1[1] + p2[1]) / 2;</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">return</span> result;</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ae5c5c445ab84516991219ca3783fcaa4_icgraph" alt=""/></div>
@@ -240,8 +242,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00283">283</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                                                                     {</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="keywordflow">return</span> (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00285">285</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                                                                     {</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <span class="keywordflow">return</span> (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));</div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56_icgraph" alt=""/></div>
@@ -285,8 +287,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00293">293</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                                            {</div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">int</span> minIndex = 0;</div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">double</span> distance = Integer.MAX_VALUE;</div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; points.length; i++) {</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      <span class="keywordflow">try</span> {</div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordtype">double</span>[] point = Odometer.getOdometer().getXYT();</div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordtype">double</span> thisDistance = <a class="code" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6fb324a3d5e42414c83dfd8bd5910b56">distanceFrom</a>(points[i][0], points[i][1], point);</div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">if</span> (thisDistance &lt; distance) {</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;          minIndex = i;</div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;          distance = thisDistance;</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      } <span class="keywordflow">catch</span> (OdometerExceptions e) {</div><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="comment">// TODO Auto-generated catch block</span></div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        e.printStackTrace();</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      }</div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">return</span> minIndex;</div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  }</div><div class="ttc" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_html_a6fb324a3d5e42414c83dfd8bd5910b56"><div class="ttname"><a href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6fb324a3d5e42414c83dfd8bd5910b56">ca.mcgill.ecse211.project.GameUtil.distanceFrom</a></div><div class="ttdeci">static double distanceFrom(int x, int y, double[] position)</div><div class="ttdef"><b>Definition:</b> <a href="_game_util_8java_source.html#l00283">GameUtil.java:283</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00295">295</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                                                            {</div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">int</span> minIndex = 0;</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">double</span> distance = Integer.MAX_VALUE;</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; points.length; i++) {</div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      <span class="keywordflow">try</span> {</div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordtype">double</span>[] point = Odometer.getOdometer().getXYT();</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordtype">double</span> thisDistance = <a class="code" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6fb324a3d5e42414c83dfd8bd5910b56">distanceFrom</a>(points[i][0], points[i][1], point);</div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">if</span> (thisDistance &lt; distance) {</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;          minIndex = i;</div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;          distance = thisDistance;</div><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        }</div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      } <span class="keywordflow">catch</span> (OdometerExceptions e) {</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="comment">// TODO Auto-generated catch block</span></div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        e.printStackTrace();</div><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      }</div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">return</span> minIndex;</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  }</div><div class="ttc" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_html_a6fb324a3d5e42414c83dfd8bd5910b56"><div class="ttname"><a href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a6fb324a3d5e42414c83dfd8bd5910b56">ca.mcgill.ecse211.project.GameUtil.distanceFrom</a></div><div class="ttdeci">static double distanceFrom(int x, int y, double[] position)</div><div class="ttdef"><b>Definition:</b> <a href="_game_util_8java_source.html#l00285">GameUtil.java:285</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -339,8 +341,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>: whether the given point is on the boundary of an island </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00318">318</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                                                     {</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">int</span> x = coor[0];</div><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordtype">int</span> y = coor[1];</div><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">boolean</span> onLY = x == GameParameters.Island_LL[0]</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        &amp;&amp; (y &gt;= GameParameters.Island_LL[1] &amp;&amp; y &lt;= GameParameters.Island_UR[1]);</div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">boolean</span> onRY = x == GameParameters.Island_UR[0]</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        &amp;&amp; (y &gt;= GameParameters.Island_LL[1] &amp;&amp; y &lt;= GameParameters.Island_UR[1]);</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">boolean</span> onLX = y == GameParameters.Island_LL[1]</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        &amp;&amp; (x &gt;= GameParameters.Island_LL[0] &amp;&amp; x &lt;= GameParameters.Island_UR[0]);</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">boolean</span> onUX = y == GameParameters.Island_UR[1]</div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        &amp;&amp; (x &gt;= GameParameters.Island_LL[0] &amp;&amp; x &lt;= GameParameters.Island_UR[0]);</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">return</span> onLY || onRY || onLX || onUX;</div><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00320">320</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                                                     {</div><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">int</span> x = coor[0];</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">int</span> y = coor[1];</div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">boolean</span> onLY = x == GameParameters.Island_LL[0]</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        &amp;&amp; (y &gt;= GameParameters.Island_LL[1] &amp;&amp; y &lt;= GameParameters.Island_UR[1]);</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordtype">boolean</span> onRY = x == GameParameters.Island_UR[0]</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        &amp;&amp; (y &gt;= GameParameters.Island_LL[1] &amp;&amp; y &lt;= GameParameters.Island_UR[1]);</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">boolean</span> onLX = y == GameParameters.Island_LL[1]</div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        &amp;&amp; (x &gt;= GameParameters.Island_LL[0] &amp;&amp; x &lt;= GameParameters.Island_UR[0]);</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">boolean</span> onUX = y == GameParameters.Island_UR[1]</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        &amp;&amp; (x &gt;= GameParameters.Island_LL[0] &amp;&amp; x &lt;= GameParameters.Island_UR[0]);</div><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">return</span> onLY || onRY || onLX || onUX;</div><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a5783c3415e13b66362a647504b63741a_icgraph" alt=""/></div>
@@ -383,8 +385,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>: true if safe, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00248">248</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                           {</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">int</span> x = coor[0];</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">int</span> y = coor[1];</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">boolean</span> inTunnel = x &gt;= GameParameters.TN_LL[0] &amp;&amp; x &lt;= GameParameters.TN_UR[0]</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        &amp;&amp; y &gt;= GameParameters.TN_LL[1] &amp;&amp; y &lt;= GameParameters.TN_UR[1];</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">boolean</span> isTree = x == GameParameters.TREE_US[0] &amp;&amp; y == GameParameters.TREE_US[1];</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">boolean</span> outBound =</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        x &lt;= 0 || x &gt;= GameParameters.Grid_UR[0] || y &lt;= 0 || y &gt;= GameParameters.Grid_UR[1];</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">if</span> (inTunnel || isTree || outBound) {</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00250">250</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                                           {</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">int</span> x = coor[0];</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">int</span> y = coor[1];</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">boolean</span> inTunnel = x &gt;= GameParameters.TN_LL[0] &amp;&amp; x &lt;= GameParameters.TN_UR[0]</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        &amp;&amp; y &gt;= GameParameters.TN_LL[1] &amp;&amp; y &lt;= GameParameters.TN_UR[1];</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">boolean</span> isTree = x == GameParameters.TREE_US[0] &amp;&amp; y == GameParameters.TREE_US[1];</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">boolean</span> outBound =</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        x &lt;= 0 || x &gt;= GameParameters.Grid_UR[0] || y &lt;= 0 || y &gt;= GameParameters.Grid_UR[1];</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">if</span> (inTunnel || isTree || outBound) {</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4b657445545fb1a814b6699724d72042_icgraph" alt=""/></div>
@@ -392,6 +394,43 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="467,5,641,47"/>
 <area shape="rect" id="node3" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a4b52e605d3ea2f9bcd9481ae2c69ba39" title="ca.mcgill.ecse211.project.\lNavigation.goThroughTunnel" alt="" coords="228,64,416,105"/>
 <area shape="rect" id="node4" href="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#ae85caa20c6391bacc4fdbd411ee3f113" title="ca.mcgill.ecse211.tests.\lComponentTest.tunnelTest" alt="" coords="464,71,644,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a38f0e4fdf048d1c265a4b5fc712588f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f0e4fdf048d1c265a4b5fc712588f3">&#9670;&nbsp;</a></span>playMusic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ca.mcgill.ecse211.project.GameUtil.playMusic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00335">335</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                                 {</div><div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    Sound.playSample(<span class="keyword">new</span> File(<span class="stringliteral">&quot;Pen.wav&quot;</span>),100);</div><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  }</div></div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a38f0e4fdf048d1c265a4b5fc712588f3_icgraph.png" border="0" usemap="#classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a38f0e4fdf048d1c265a4b5fc712588f3_icgraph" alt=""/></div>
+<map name="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a38f0e4fdf048d1c265a4b5fc712588f3_icgraph" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a38f0e4fdf048d1c265a4b5fc712588f3_icgraph">
+<area shape="rect" id="node2" href="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a032b53e9b16b9d470b461de4a311a698" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="231,5,405,47"/>
+<area shape="rect" id="node3" href="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a743c9bb90a8c8bc3fcf3b4c591990e7f" title="ca.mcgill.ecse211.tests.\lComponentTest.musicTest" alt="" coords="228,71,408,112"/>
+<area shape="rect" id="node4" href="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main.html#af681b5dc675c13ed284071cc135f5fd3" title="ca.mcgill.ecse211.project.\lMain.main" alt="" coords="456,71,631,112"/>
 </map>
 </div>
 
@@ -418,7 +457,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00026">26</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00028">28</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 
 </div>
 </div>
@@ -442,7 +481,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00023">23</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00025">25</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 
 </div>
 </div>
@@ -466,7 +505,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00024">24</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00026">26</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 
 </div>
 </div>
@@ -490,7 +529,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00022">22</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00024">24</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 
 </div>
 </div>
@@ -514,7 +553,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00021">21</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00023">23</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 
 </div>
 </div>
@@ -538,7 +577,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00025">25</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_game_util_8java_source.html#l00027">27</a> of file <a class="el" href="_game_util_8java_source.html">GameUtil.java</a>.</p>
 
 </div>
 </div>

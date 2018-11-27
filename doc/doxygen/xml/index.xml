@@ -37,6 +37,7 @@
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3e8288f482b3806a0f3c4668951f3e36" kind="function"><name>lightSensorTest</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" kind="function"><name>ringMotorTest</name></member>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a3f36cee9ca567c845377bec33554ba8b" kind="function"><name>blackLineTest</name></member>
+    <member refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a743c9bb90a8c8bc3fcf3b4c591990e7f" kind="function"><name>musicTest</name></member>
   </compound>
   <compound refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type" kind="enum"><name>ca::mcgill::ecse211::project::GameParameters::DemoType</name>
     <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_1a8d4e576df991cb52b50ae54b2812aa7f" kind="variable"><name>Beta</name></member>
@@ -123,6 +124,7 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a6fb324a3d5e42414c83dfd8bd5910b56" kind="function"><name>distanceFrom</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a6e0ee94b800ca3727ca8009782abda14" kind="function"><name>findClosestPointToRobot</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a5783c3415e13b66362a647504b63741a" kind="function"><name>isIslandBoundary</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a38f0e4fdf048d1c265a4b5fc712588f3" kind="function"><name>playMusic</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer" kind="class"><name>ca::mcgill::ecse211::localization::LightLocalizer</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a4952a0770d403a9805b726d79fbed910" kind="variable"><name>leftMotor</name></member>

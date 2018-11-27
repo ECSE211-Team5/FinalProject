@@ -1,0 +1,10 @@
+<map id="turn" name="turn">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer.html#ae43a11349cf1307770f8f61da9427013" title="ca.mcgill.ecse211.localization.\lUltrasonicLocalizer.localize" alt="" coords="97,71,297,112"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a30fe2cc39fcddcc6a3a1ad00de50d78f" title="goThroughTunnel" alt="" coords="136,141,259,167"/>
+<area shape="rect" id="node8" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a3253999a7403f6515f2042ae969a3363" title="ca.mcgill.ecse211.tests.\lComponentTest.ringMotorTest" alt="" coords="351,201,550,243"/>
+<area shape="rect" id="node9" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#aee08c6a304ccff61883131a53a439d04" title="ca.mcgill.ecse211.tests.\lComponentTest.blackLineTest" alt="" coords="97,243,297,284"/>
+<area shape="rect" id="node3" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab1703367762abc1490e00dcd5ccb29bc" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="363,71,538,112"/>
+<area shape="rect" id="node4" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a44ea92d5a39d94c80d9381050dc61bc1" title="ca.mcgill.ecse211.tests.\lComponentTest.localizationTest" alt="" coords="345,5,556,47"/>
+<area shape="rect" id="node5" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5a4cc124c738bc08138488ca233e310f" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="604,104,768,145"/>
+<area shape="rect" id="node7" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a8671adb4aada7be2dac0dea81528f4e2" title="ca.mcgill.ecse211.tests.\lComponentTest.tunnelTest" alt="" coords="361,136,541,177"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="setX" name="setX">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html#ae6e805d6ce82ae4a1713289115f08db9" title="ca.mcgill.ecse211.localization.\lLightLocalizer.localize" alt="" coords="114,184,314,225"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html#a13a43e6d814de94978c515cb084873b1" title="ca.mcgill.ecse211.odometer.\lOdometryCorrection.run" alt="" coords="119,249,309,291"/>
+<area shape="rect" id="node7" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html#ab25d0e57946605e70a3ccdb619a669cb" title="ca.mcgill.ecse211.odometer.\lOdometryCorrection.doCorrection" alt="" coords="105,315,323,356"/>
+<area shape="rect" id="node8" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a8727a3a94248421c47328c109f88ff21" title="ca.mcgill.ecse211.project.\lNavigation.travelToWithCorrection" alt="" coords="103,119,325,160"/>
+<area shape="rect" id="node9" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a30fe2cc39fcddcc6a3a1ad00de50d78f" title="ca.mcgill.ecse211.project.\lNavigation.goThroughTunnel" alt="" coords="385,8,573,49"/>
+<area shape="rect" id="node3" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab1703367762abc1490e00dcd5ccb29bc" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="635,71,809,112"/>
+<area shape="rect" id="node4" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a44ea92d5a39d94c80d9381050dc61bc1" title="ca.mcgill.ecse211.tests.\lComponentTest.localizationTest" alt="" coords="373,308,584,349"/>
+<area shape="rect" id="node5" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5a4cc124c738bc08138488ca233e310f" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="640,243,804,284"/>
+<area shape="rect" id="node11" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a65bf2bb6dad74a909a1434ef0811a218" title="ca.mcgill.ecse211.tests.\lComponentTest.navigationTest" alt="" coords="377,125,581,167"/>
+<area shape="rect" id="node12" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a3253999a7403f6515f2042ae969a3363" title="ca.mcgill.ecse211.tests.\lComponentTest.ringMotorTest" alt="" coords="379,243,578,284"/>
+<area shape="rect" id="node10" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a8671adb4aada7be2dac0dea81528f4e2" title="ca.mcgill.ecse211.tests.\lComponentTest.tunnelTest" alt="" coords="632,5,812,47"/>
+</map>

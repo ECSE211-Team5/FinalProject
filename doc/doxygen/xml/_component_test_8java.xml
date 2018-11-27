@@ -127,7 +127,11 @@
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156" refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a743c9bb90a8c8bc3fcf3b4c591990e7f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a743c9bb90a8c8bc3fcf3b4c591990e7f" kindref="member">musicTest</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util" kindref="compound">GameUtil</ref>.<ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a38f0e4fdf048d1c265a4b5fc712588f3" kindref="member">playMusic</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/tests/ComponentTest.java"/>
   </compounddef>

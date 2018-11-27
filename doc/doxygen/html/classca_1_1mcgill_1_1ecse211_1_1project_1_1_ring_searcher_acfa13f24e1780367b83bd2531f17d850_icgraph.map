@@ -1,0 +1,6 @@
+<map id="search" name="search">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a7c3fe21036c0eb6a151cacd979030368" title="ca.mcgill.ecse211.project.\lNavigation.searchRingSet" alt="" coords="115,39,289,80"/>
+<area shape="rect" id="node3" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab1703367762abc1490e00dcd5ccb29bc" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="349,5,524,47"/>
+<area shape="rect" id="node4" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a3253999a7403f6515f2042ae969a3363" title="ca.mcgill.ecse211.tests.\lComponentTest.ringMotorTest" alt="" coords="337,71,536,112"/>
+<area shape="rect" id="node5" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5a4cc124c738bc08138488ca233e310f" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="584,71,748,112"/>
+</map>

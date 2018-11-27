@@ -1,0 +1,6 @@
+<map id="travelTo" name="travelTo">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a3c4cf84b90005e7c554c0ddc76c7b267" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="293,20,483,62"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a8ebe13e5a558ae6b0ef6101ccf2d944f" title="calculateAngleTo" alt="" coords="123,28,245,54"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a9aa8f5b46142a3c4a0390058fb8141aa" title="turnTo" alt="" coords="155,78,213,105"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a426ea7b31d802858dfefc5d4f9c86e08" title="convertDistance" alt="" coords="125,129,243,156"/>
+</map>

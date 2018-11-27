@@ -10,7 +10,7 @@
         <definition> static  final String ca.mcgill.ecse211.project.WiFi.SERVER_IP</definition>
         <argsstring></argsstring>
         <name>SERVER_IP</name>
-        <initializer>= &quot;192.168.2.16&quot;</initializer>
+        <initializer>= &quot;192.168.2.48&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -55,7 +55,7 @@
         <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1afbbca622863f674dfb00dcd93e1328cb" compoundref="_game_parameters_8java" startline="55">ca.mcgill.ecse211.project.GameParameters.Grid_UR</references>
         <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1af3944d1bc80c4c8a6cabce66e030f4b7" compoundref="_game_parameters_8java" startline="42">ca.mcgill.ecse211.project.GameParameters.SC</references>
         <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1a9c136a3a3faff96052381f791bf4c166" compoundref="_game_parameters_8java" startline="44">ca.mcgill.ecse211.project.GameParameters.SCUS</references>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="258" endline="260">ca.mcgill.ecse211.project.Game.readData</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="259" endline="261">ca.mcgill.ecse211.project.Game.readData</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

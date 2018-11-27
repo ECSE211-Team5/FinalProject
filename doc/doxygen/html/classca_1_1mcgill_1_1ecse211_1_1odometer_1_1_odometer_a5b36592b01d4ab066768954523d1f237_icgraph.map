@@ -1,0 +1,14 @@
+<map id="getOdometer" name="getOdometer">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html#ae63261edab366dd0b3d97a30ca92e019" title="ca.mcgill.ecse211.localization.\lLightLocalizer.LightLocalizer" alt="" coords="181,5,381,47"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer.html#a3f9efa6f55ca641d9f44a41c48df5522" title="ca.mcgill.ecse211.localization.\lUltrasonicLocalizer.UltrasonicLocalizer" alt="" coords="157,71,405,112"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction.html#a3a0bba1dabe5109d42cd377590bb7aa9" title="ca.mcgill.ecse211.odometer.\lOdometryCorrection.OdometryCorrection" alt="" coords="151,136,411,177"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_display.html#aad31fc1c3e7785f0e0b7b3e29713657b" title="ca.mcgill.ecse211.project.\lDisplay.Display" alt="" coords="193,201,368,243"/>
+<area shape="rect" id="node6" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab1703367762abc1490e00dcd5ccb29bc" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="459,323,633,364"/>
+<area shape="rect" id="node7" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ad156542aaf262e5cd3dd19e457fc0c1b" title="ca.mcgill.ecse211.project.\lGame.preparation" alt="" coords="193,319,368,360"/>
+<area shape="rect" id="node8" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a991f95012aed2b6270754478b4492ede" title="ca.mcgill.ecse211.project.\lGameUtil.findClosestPointToRobot" alt="" coords="167,384,394,425"/>
+<area shape="rect" id="node9" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a3e5389dffc8340139832cc36253a2f11" title="ca.mcgill.ecse211.project.\lNavigation.Navigation" alt="" coords="193,449,368,491"/>
+<area shape="rect" id="node10" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#aa49485e9986bf88139bb79d05784abd2" title="ca.mcgill.ecse211.project.\lRingSearcher.RingSearcher" alt="" coords="189,515,373,556"/>
+<area shape="rect" id="node11" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a8671adb4aada7be2dac0dea81528f4e2" title="ca.mcgill.ecse211.tests.\lComponentTest.tunnelTest" alt="" coords="191,580,371,621"/>
+<area shape="rect" id="node12" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a3253999a7403f6515f2042ae969a3363" title="ca.mcgill.ecse211.tests.\lComponentTest.ringMotorTest" alt="" coords="181,645,380,687"/>
+<area shape="rect" id="node13" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a5a4cc124c738bc08138488ca233e310f" title="ca.mcgill.ecse211.tests.\lComponentTest.runTest" alt="" coords="464,645,628,687"/>
+</map>

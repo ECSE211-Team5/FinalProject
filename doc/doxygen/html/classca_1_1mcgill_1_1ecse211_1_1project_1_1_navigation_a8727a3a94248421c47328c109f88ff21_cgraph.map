@@ -1,0 +1,12 @@
+<map id="travelToWithCorrection" name="travelToWithCorrection">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a3c4cf84b90005e7c554c0ddc76c7b267" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="681,53,871,95"/>
+<area shape="rect" id="node3" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a7e45f0661e67a609932715b9e04ae73d" title="ca.mcgill.ecse211.project.\lGameParameters.getType" alt="" coords="217,52,391,93"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a9aa8f5b46142a3c4a0390058fb8141aa" title="turnTo" alt="" coords="511,85,569,111"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a26ee5acbd30557747dfb4d917db6dd8c" title="moveWithCorrection" alt="" coords="233,169,375,195"/>
+<area shape="rect" id="node10" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a9c18fcc579333bf9653d13ad2b372e39" title="ca.mcgill.ecse211.odometer.\lOdometerData.setX" alt="" coords="209,220,399,261"/>
+<area shape="rect" id="node11" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a7d57e2a5c35d27feb58fd498a3cf82b9" title="ca.mcgill.ecse211.odometer.\lOdometerData.setY" alt="" coords="209,285,399,327"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a277ebdffc6e0dc8eb045dd017574d284" title="moveOneTileWithCorrection" alt="" coords="447,169,633,195"/>
+<area shape="rect" id="node7" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a17bf5aad43f03f7b6bde4a57114a3a28" title="ca.mcgill.ecse211.odometer.\lOdometerData.setTheta" alt="" coords="681,119,871,160"/>
+<area shape="rect" id="node8" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a7a0dde4fa4f3781c11d51953ece156f5" title="ca.mcgill.ecse211.threads.\lSensorData.getL" alt="" coords="687,184,865,225"/>
+<area shape="rect" id="node9" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a426ea7b31d802858dfefc5d4f9c86e08" title="convertDistance" alt="" coords="717,250,835,277"/>
+</map>

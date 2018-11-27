@@ -6,7 +6,8 @@ package ca.mcgill.ecse211.odometer;
 import ca.mcgill.ecse211.project.Game;
 import lejos.hardware.Sound;
 import lejos.hardware.ev3.LocalEV3;
-import lejos.hardware.sensor.*;
+import lejos.hardware.sensor.EV3ColorSensor;
+import lejos.hardware.sensor.SensorModes;
 import lejos.robotics.SampleProvider;
 
 /**
@@ -30,20 +31,19 @@ public class OdometryCorrection implements Runnable {
   private static float[] sampleColor = new float[myColor.sampleSize()];
 
   /**
-   * This is the default class constructor. An existing instance of the odometer is used. This is to
-   * ensure thread safety.
+   * This is the class constructor for the OdometryCorrection class.
    * 
    * @throws OdometerExceptions
    */
   public OdometryCorrection() throws OdometerExceptions {
-
+    // Utilize the singleton Odometer object instance for thread safety.
     this.odometer = Odometer.getOdometer();
-
   }
 
   /**
-   * When this thread starts, it will correct the rotation and position of the robot once a 
-   * blackline is detected
+   * This method is called when this OdometryCorrection object instance is started as a thread.
+   * Functionality wise it will correct the rotation and position of the robot once a black line is
+   * detected.
    * 
    * @throws OdometerExceptions
    */
@@ -54,14 +54,13 @@ public class OdometryCorrection implements Runnable {
     while (true) {
       correctionStart = System.currentTimeMillis();
 
-      // TODO Trigger correction (When do I have information to correct?)
       // Fetch the sample at offset 0
       myColorSample.fetchSample(sampleColor, 0);
 
-      // Check if sensor read black line and didn't already read the same one
+      // Check if our light sensor has read a black line and is not already on top of one
       if (sampleColor[0] < LINE_COLOR_THRESHOLD && !onTopOfLine) {
 
-        // Sensed new line
+        // New black line detected
         Sound.beep();
         onTopOfLine = true;
 
@@ -90,9 +89,9 @@ public class OdometryCorrection implements Runnable {
       }
     }
   }
-  
+
   /**
-   * This method corrects our robot's odometer readings
+   * This method corrects our robot's Odometer readings
    * 
    * @param angle The current angle that the robot is facing
    */

@@ -1,0 +1,7 @@
+<map id="localize" name="localize">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a3c4cf84b90005e7c554c0ddc76c7b267" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="357,16,547,58"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a9aa8f5b46142a3c4a0390058fb8141aa" title="ca.mcgill.ecse211.project.\lNavigation.turnTo" alt="" coords="127,46,302,87"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a17bf5aad43f03f7b6bde4a57114a3a28" title="ca.mcgill.ecse211.odometer.\lOdometerData.setTheta" alt="" coords="120,111,309,152"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a75108a0ac02f62b48a0a90cbb785a379" title="ca.mcgill.ecse211.project.\lNavigation.turn" alt="" coords="127,176,302,218"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a57aabb83f51c75704d11a06c25085c72" title="ca.mcgill.ecse211.threads.\lSensorData.getD" alt="" coords="125,242,304,283"/>
+</map>

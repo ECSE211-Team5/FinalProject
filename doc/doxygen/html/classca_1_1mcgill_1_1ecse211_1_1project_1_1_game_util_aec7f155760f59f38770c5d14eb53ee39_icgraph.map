@@ -1,0 +1,5 @@
+<map id="isSafe" name="isSafe">
+<area shape="rect" id="node2" href="$enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#ab1703367762abc1490e00dcd5ccb29bc" title="ca.mcgill.ecse211.project.\lGame.readData" alt="" coords="351,5,525,47"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a30fe2cc39fcddcc6a3a1ad00de50d78f" title="ca.mcgill.ecse211.project.\lNavigation.goThroughTunnel" alt="" coords="112,64,300,105"/>
+<area shape="rect" id="node4" href="$enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a8671adb4aada7be2dac0dea81528f4e2" title="ca.mcgill.ecse211.tests.\lComponentTest.tunnelTest" alt="" coords="348,71,528,112"/>
+</map>

@@ -7,7 +7,8 @@ import ca.mcgill.ecse211.threads.SensorData;
 import lejos.hardware.lcd.TextLCD;
 
 /**
- * This class is used to display the content of the odometer variables (x, y, Theta)
+ * This class is used to display the content of the odometer variables (x, y, Theta) on an EV3 brick
+ * display
  * 
  * @author Caspar Cedro
  * @author Percy Chen
@@ -27,7 +28,7 @@ public class Display implements Runnable {
   private long timeout = Long.MAX_VALUE;
 
   /**
-   * This is the class constructor for a display object that controls an EV3 brick display
+   * This is the class constructor for the Display class
    * 
    * @param lcd A TextLCD object instance to control
    * @throws OdometerExceptions
@@ -71,29 +72,29 @@ public class Display implements Runnable {
       // Print x,y, and theta information
       DecimalFormat numberFormat = new DecimalFormat("######0.00");
       // The last two parameters to lcd.drawString denote the x and y coordinate to draw at.
-   //   lcd.drawString("X: " + numberFormat.format(position[0]), 0, 0);
-   //   lcd.drawString("Y: " + numberFormat.format(position[1]), 0, 1);
-  //    lcd.drawString("T: " + numberFormat.format(position[2]), 0, 2);
-//      lcd.drawString("LL: " + numberFormat.format(sensdata.getL()[0]), 0, 3);
-//      lcd.drawString("LR: " + numberFormat.format(sensdata.getL()[1]), 0, 4);
-//      lcd.drawString("D: " + numberFormat.format(sensdata.getD()), 0, 5);
+      // lcd.drawString("X: " + numberFormat.format(position[0]), 0, 0);
+      // lcd.drawString("Y: " + numberFormat.format(position[1]), 0, 1);
+      // lcd.drawString("T: " + numberFormat.format(position[2]), 0, 2);
+      // lcd.drawString("LL: " + numberFormat.format(sensdata.getL()[0]), 0, 3);
+      // lcd.drawString("LR: " + numberFormat.format(sensdata.getL()[1]), 0, 4);
+      // lcd.drawString("D: " + numberFormat.format(sensdata.getD()), 0, 5);
 
       lcd.drawString(String.format("(R: %d G: %d B: %d)", (int) rgb[0], (int) rgb[1], (int) rgb[2]),
           0, 4);
-//      if (ColorCalibrator.getColor((int) rgb[0], (int) rgb[1],
-//          (int) rgb[2]) != ColorCalibrator.Color.Other) {
-//        lcd.drawString("Object Detected", 0, 5);
-//      } else {
-//        // Draw whitespace on our display
-//        lcd.drawString("                   ", 0, 5);
-//      }
+      // if (ColorCalibrator.getColor((int) rgb[0], (int) rgb[1],
+      // (int) rgb[2]) != ColorCalibrator.Color.Other) {
+      // lcd.drawString("Object Detected", 0, 5);
+      // } else {
+      // // Draw whitespace on our display
+      // lcd.drawString(" ", 0, 5);
+      // }
 
       lcd.drawString(String.format("%1$-10s", ColorCalibrator.getColor().toString()), 0, 6);
       lcd.drawString("A:" + numberFormat.format(sensdata.getA()), 0, 7);
 
-//       lcd.drawString(String.format("(r: %d", (int)rgb[0]), 0, 3);
-//       lcd.drawString(String.format("(g: %d", (int)rgb[1]), 0, 4);
-//       lcd.drawString(String.format("(b: %d", (int)rgb[2]), 0, 5);
+      // lcd.drawString(String.format("(r: %d", (int)rgb[0]), 0, 3);
+      // lcd.drawString(String.format("(g: %d", (int)rgb[1]), 0, 4);
+      // lcd.drawString(String.format("(b: %d", (int)rgb[2]), 0, 5);
 
       // This ensures that the data is updated only once every period
       updateEnd = System.currentTimeMillis();

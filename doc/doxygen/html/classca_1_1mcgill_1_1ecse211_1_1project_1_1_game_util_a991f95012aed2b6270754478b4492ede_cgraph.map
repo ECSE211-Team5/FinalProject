@@ -1,0 +1,5 @@
+<map id="findClosestPointToRobot" name="findClosestPointToRobot">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer.html#a5b36592b01d4ab066768954523d1f237" title="ca.mcgill.ecse211.odometer.\lOdometer.getOdometer" alt="" coords="221,5,411,47"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a3c4cf84b90005e7c554c0ddc76c7b267" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="221,71,411,112"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#a46e2925487e3ce4bef3c9eb2d26133d1" title="distanceFrom" alt="" coords="265,137,367,163"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="run" name="run">
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a3c4cf84b90005e7c554c0ddc76c7b267" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="93,5,283,47"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#ad9753b3699062827d69cff9925969ffb" title="ca.mcgill.ecse211.threads.\lSensorData.getRGB" alt="" coords="99,71,277,112"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a6b727f59ea4fafa7ea684a86a4ff84fb" title="ca.mcgill.ecse211.project.\lColorCalibrator.getColor" alt="" coords="101,136,275,177"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a4150465a719e9ec271896e592aa2040b" title="ca.mcgill.ecse211.threads.\lSensorData.getA" alt="" coords="99,201,277,243"/>
+</map>

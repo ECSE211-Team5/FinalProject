@@ -141,28 +141,28 @@ A boolean that denotes whether our state transition occurred
 \end{DoxyReturn}
 
 
-Definition at line 166 of file Game.\+java.
+Definition at line 167 of file Game.\+java.
 
 
 \begin{DoxyCode}
-167   \{
-168     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-169     
-170     Status aStatus = status;
-171     \textcolor{keywordflow}{switch} (aStatus)
-172     \{
-173       \textcolor{keywordflow}{case} AtTunnel:
-174         \textcolor{comment}{// line 16 "model.ump"}
-175         searchRing(nav, searcher);
-176         setStatus(Status.AtTree);
-177         wasEventProcessed = \textcolor{keyword}{true};
-178         \textcolor{keywordflow}{break};
-179       \textcolor{keywordflow}{default}:
-180         \textcolor{comment}{// Other states do respond to this event}
-181     \}
-182 
-183     \textcolor{keywordflow}{return} wasEventProcessed;
-184   \}
+168   \{
+169     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
+170     
+171     Status aStatus = status;
+172     \textcolor{keywordflow}{switch} (aStatus)
+173     \{
+174       \textcolor{keywordflow}{case} AtTunnel:
+175         \textcolor{comment}{// line 16 "model.ump"}
+176         searchRing(nav, searcher);
+177         setStatus(Status.AtTree);
+178         wasEventProcessed = \textcolor{keyword}{true};
+179         \textcolor{keywordflow}{break};
+180       \textcolor{keywordflow}{default}:
+181         \textcolor{comment}{// Other states do respond to this event}
+182     \}
+183 
+184     \textcolor{keywordflow}{return} wasEventProcessed;
+185   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aa9d873f6cd4ef177c1622c24f72b0e0a}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aa9d873f6cd4ef177c1622c24f72b0e0a}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!navigate\+To\+Start@{navigate\+To\+Start}}
@@ -182,28 +182,28 @@ A boolean that denotes whether our state transition occurred
 \end{DoxyExceptions}
 
 
-Definition at line 141 of file Game.\+java.
+Definition at line 142 of file Game.\+java.
 
 
 \begin{DoxyCode}
-142   \{
-143     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-144     
-145     Status aStatus = status;
-146     \textcolor{keywordflow}{switch} (aStatus)
-147     \{
-148       \textcolor{keywordflow}{case} AtTunnel:
-149         \textcolor{comment}{// line 12 "model.ump"}
-150         navigateStart(navigation, searcher);
-151         setStatus(Status.Idle);
-152         wasEventProcessed = \textcolor{keyword}{true};
-153         \textcolor{keywordflow}{break};
-154       \textcolor{keywordflow}{default}:
-155         \textcolor{comment}{// Other states do respond to this event}
-156     \}
-157 
-158     \textcolor{keywordflow}{return} wasEventProcessed;
-159   \}
+143   \{
+144     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
+145     
+146     Status aStatus = status;
+147     \textcolor{keywordflow}{switch} (aStatus)
+148     \{
+149       \textcolor{keywordflow}{case} AtTunnel:
+150         \textcolor{comment}{// line 12 "model.ump"}
+151         navigateStart(navigation, searcher);
+152         setStatus(Status.Idle);
+153         wasEventProcessed = \textcolor{keyword}{true};
+154         \textcolor{keywordflow}{break};
+155       \textcolor{keywordflow}{default}:
+156         \textcolor{comment}{// Other states do respond to this event}
+157     \}
+158 
+159     \textcolor{keywordflow}{return} wasEventProcessed;
+160   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ad3d03cffa33c927317d8fcba0c928a24}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ad3d03cffa33c927317d8fcba0c928a24}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!navigate\+To\+Tunnel@{navigate\+To\+Tunnel}}
@@ -218,35 +218,35 @@ A boolean that denotes whether our state transition occurred
 \end{DoxyReturn}
 
 
-Definition at line 108 of file Game.\+java.
+Definition at line 109 of file Game.\+java.
 
 
 \begin{DoxyCode}
-109   \{
-110     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
-111     
-112     Status aStatus = status;
-113     \textcolor{keywordflow}{switch} (aStatus)
-114     \{
-115       \textcolor{keywordflow}{case} Localized:
-116         \textcolor{comment}{// line 8 "model.ump"}
-117         navigateTunnel(navigation);
-118         setStatus(Status.AtTunnel);
-119         wasEventProcessed = \textcolor{keyword}{true};
-120        \textcolor{comment}{// System.out.println("YEYEYEY");}
-121         \textcolor{keywordflow}{break};
-122       \textcolor{keywordflow}{case} AtTree:
-123         \textcolor{comment}{// line 17 "model.ump"}
-124         navigateBackTunnel(navigation, searcher);
-125         setStatus(Status.AtTunnel);
-126         wasEventProcessed = \textcolor{keyword}{true};
-127         \textcolor{keywordflow}{break};
-128       \textcolor{keywordflow}{default}:
-129         \textcolor{comment}{// Other states do respond to this event}
-130     \}
-131 
-132     \textcolor{keywordflow}{return} wasEventProcessed;
-133   \}
+110   \{
+111     \textcolor{keywordtype}{boolean} wasEventProcessed = \textcolor{keyword}{false};
+112     
+113     Status aStatus = status;
+114     \textcolor{keywordflow}{switch} (aStatus)
+115     \{
+116       \textcolor{keywordflow}{case} Localized:
+117         \textcolor{comment}{// line 8 "model.ump"}
+118         navigateTunnel(navigation);
+119         setStatus(Status.AtTunnel);
+120         wasEventProcessed = \textcolor{keyword}{true};
+121        \textcolor{comment}{// System.out.println("YEYEYEY");}
+122         \textcolor{keywordflow}{break};
+123       \textcolor{keywordflow}{case} AtTree:
+124         \textcolor{comment}{// line 17 "model.ump"}
+125         navigateBackTunnel(navigation, searcher);
+126         setStatus(Status.AtTunnel);
+127         wasEventProcessed = \textcolor{keyword}{true};
+128         \textcolor{keywordflow}{break};
+129       \textcolor{keywordflow}{default}:
+130         \textcolor{comment}{// Other states do respond to this event}
+131     \}
+132 
+133     \textcolor{keywordflow}{return} wasEventProcessed;
+134   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a8f3c5b18f98ee56f5f03afd72fa40bcb}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a8f3c5b18f98ee56f5f03afd72fa40bcb}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!preparation@{preparation}}
@@ -263,77 +263,77 @@ This method performs all the object instantiations and preparations necessary to
 \end{DoxyExceptions}
 
 
-Definition at line 359 of file Game.\+java.
+Definition at line 358 of file Game.\+java.
 
 
 \begin{DoxyCode}
-359                                                       \{
-360     \textcolor{comment}{// Motor Objects, and Robot related parameters}
-361     Port usPort = LocalEV3.get().getPort(\textcolor{stringliteral}{"S1"});
-362     \textcolor{comment}{// initialize multiple light ports in main}
-363     Port[] lgPorts = \textcolor{keyword}{new} Port[3];
-364 
-365     \textcolor{comment}{// Light sensor sensor stuff}
-366     lgPorts[0] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S2"});
-367     lgPorts[1] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S3"});
-368     lgPorts[2] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S4"});
-369     EV3ColorSensor[] lgSensors = \textcolor{keyword}{new} EV3ColorSensor[3];
-370     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < lgSensors.length; i++) \{
-371       lgSensors[i] = \textcolor{keyword}{new} EV3ColorSensor(lgPorts[i]);
-372     \}
-373 
-374     Odometer odometer = Odometer.getOdometer(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor}, 
+358                                                       \{
+359     \textcolor{comment}{// Motor Objects, and Robot related parameters}
+360     Port usPort = LocalEV3.get().getPort(\textcolor{stringliteral}{"S1"});
+361     \textcolor{comment}{// initialize multiple light ports in main}
+362     Port[] lgPorts = \textcolor{keyword}{new} Port[3];
+363 
+364     \textcolor{comment}{// Light sensor sensor stuff}
+365     lgPorts[0] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S2"});
+366     lgPorts[1] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S3"});
+367     lgPorts[2] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S4"});
+368     EV3ColorSensor[] lgSensors = \textcolor{keyword}{new} EV3ColorSensor[3];
+369     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < lgSensors.length; i++) \{
+370       lgSensors[i] = \textcolor{keyword}{new} EV3ColorSensor(lgPorts[i]);
+371     \}
+372 
+373     Odometer odometer = Odometer.getOdometer(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor}, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a64cf12cdd6772ac1ce351ff1dfadd626}{TRACK}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a91bd64670c2a91d006c907142783b1f8}{WHEEL\_RAD});
-375 
-376     \textcolor{comment}{// Sensor Related Stuff}
-377     SensorData sensorData = SensorData.getSensorData();
-378 
-379     \textcolor{comment}{// Ultrasonic sensor stuff}
-380     @SuppressWarnings(\textcolor{stringliteral}{"resource"})
-381     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
-382     SampleProvider usDistance = usSensor.getMode("Distance");
-383     \textcolor{keywordtype}{float}[] usData = new \textcolor{keywordtype}{float}[usDistance.sampleSize()];
-384 
-385     SampleProvider backLight[] = new SampleProvider[2];
-386     backLight[0] = lgSensors[0].getRedMode();
-387     backLight[1] = lgSensors[1].getRedMode();
-388     
-389     \textcolor{comment}{//colour detection sensor}
-390     SampleProvider frontLight[] = new SampleProvider[1];
-391     frontLight[0] = lgSensors[2].getRGBMode();
-392 
-393 \textcolor{comment}{//    TextLCD lcd = LocalEV3.get().getTextLCD();}
-394 \textcolor{comment}{//    Display odometryDisplay = new Display(lcd);}
-395 \textcolor{comment}{//    // STEP 1: LOCALIZE to (1,1)}
-396 \textcolor{comment}{//    // ButtonChoice left or right}
-397 \textcolor{comment}{//    lcd.clear();}
-398 \textcolor{comment}{//    lcd.drawString("<  Left  |  Right >", 0, 0);}
-399 \textcolor{comment}{//    lcd.drawString(" falling | rising  ", 0, 1);}
-400 \textcolor{comment}{//    lcd.drawString("  edge   |  edge   ", 0, 2);}
-401 \textcolor{comment}{//    lcd.drawString("        \(\backslash\)\(\backslash\)/        ", 0, 3);}
-402 \textcolor{comment}{//    lcd.drawString("  Color Detection  ", 0, 4);}
-403 
-404     \textcolor{comment}{// Start odometer and odometer display}
-405     Thread odoThread = new Thread(odometer);
-406     odoThread.start();
-407 \textcolor{comment}{//    Thread odoDisplayThread = new Thread(odometryDisplay);}
-408 \textcolor{comment}{//    odoDisplayThread.start();}
-409     Sound.beep();
-410     \textcolor{comment}{// Start ultrasonic and light sensors}
-411     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller} = new UltrasonicPoller(usDistance, usData, sensorData);
-412     Thread usThread = new Thread(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller});
-413     usThread.start();
-414     lightPoller = new LightPoller(backLight, new \textcolor{keywordtype}{float}[2][backLight[1].sampleSize()], sensorData);
-415     Thread lightThread = new Thread(lightPoller);
-416     lightThread.start();
-417 
-418     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}{rgbPoller} = new RGBPoller(frontLight, new \textcolor{keywordtype}{float}[1][frontLight[0].sampleSize()], sensorData);
-419     Thread rgbThread = new Thread(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}{rgbPoller});
-420     
-421     rgbThread.start();
-422     
-423    
-424   \}
+374 
+375     \textcolor{comment}{// Sensor Related Stuff}
+376     SensorData sensorData = SensorData.getSensorData();
+377 
+378     \textcolor{comment}{// Ultrasonic sensor stuff}
+379     @SuppressWarnings(\textcolor{stringliteral}{"resource"})
+380     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
+381     SampleProvider usDistance = usSensor.getMode("Distance");
+382     \textcolor{keywordtype}{float}[] usData = new \textcolor{keywordtype}{float}[usDistance.sampleSize()];
+383 
+384     SampleProvider backLight[] = new SampleProvider[2];
+385     backLight[0] = lgSensors[0].getRedMode();
+386     backLight[1] = lgSensors[1].getRedMode();
+387     
+388     \textcolor{comment}{//colour detection sensor}
+389     SampleProvider frontLight[] = new SampleProvider[1];
+390     frontLight[0] = lgSensors[2].getRGBMode();
+391 
+392 \textcolor{comment}{//    TextLCD lcd = LocalEV3.get().getTextLCD();}
+393 \textcolor{comment}{//    Display odometryDisplay = new Display(lcd);}
+394 \textcolor{comment}{//    // STEP 1: LOCALIZE to (1,1)}
+395 \textcolor{comment}{//    // ButtonChoice left or right}
+396 \textcolor{comment}{//    lcd.clear();}
+397 \textcolor{comment}{//    lcd.drawString("<  Left  |  Right >", 0, 0);}
+398 \textcolor{comment}{//    lcd.drawString(" falling | rising  ", 0, 1);}
+399 \textcolor{comment}{//    lcd.drawString("  edge   |  edge   ", 0, 2);}
+400 \textcolor{comment}{//    lcd.drawString("        \(\backslash\)\(\backslash\)/        ", 0, 3);}
+401 \textcolor{comment}{//    lcd.drawString("  Color Detection  ", 0, 4);}
+402 
+403     \textcolor{comment}{// Start odometer and odometer display}
+404     Thread odoThread = new Thread(odometer);
+405     odoThread.start();
+406 \textcolor{comment}{//    Thread odoDisplayThread = new Thread(odometryDisplay);}
+407 \textcolor{comment}{//    odoDisplayThread.start();}
+408     Sound.beep();
+409     \textcolor{comment}{// Start ultrasonic and light sensors}
+410     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller} = new UltrasonicPoller(usDistance, usData, sensorData);
+411     Thread usThread = new Thread(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller});
+412     usThread.start();
+413     lightPoller = new LightPoller(backLight, new \textcolor{keywordtype}{float}[2][backLight[1].sampleSize()], sensorData);
+414     Thread lightThread = new Thread(lightPoller);
+415     lightThread.start();
+416 
+417     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}{rgbPoller} = new RGBPoller(frontLight, new \textcolor{keywordtype}{float}[1][frontLight[0].sampleSize()], sensorData);
+418     Thread rgbThread = new Thread(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}{rgbPoller});
+419     
+420     rgbThread.start();
+421     
+422    
+423   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -350,13 +350,13 @@ Here is the call graph for this function\+:\nopagebreak
 
 This method reads data from the \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi}{Wi\+Fi} class (using another thread) 
 
-Definition at line 258 of file Game.\+java.
+Definition at line 259 of file Game.\+java.
 
 
 \begin{DoxyCode}
-258                          \{
-259     WiFi.readData();
-260   \}
+259                          \{
+260     WiFi.readData();
+261   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
@@ -404,9 +404,10 @@ Definition at line 77 of file Game.\+java.
 96       \textcolor{keywordflow}{default}:
 97         \textcolor{comment}{// Other states do respond to this event}
 98     \}
-99 
-100     \textcolor{keywordflow}{return} wasEventProcessed;
-101   \}
+99     Sound.beep();
+100     Sound.beep();
+101     \textcolor{keywordflow}{return} wasEventProcessed;
+102   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_adf69abe44e952d627fb9e6a2f678cb5e}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_adf69abe44e952d627fb9e6a2f678cb5e}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!run\+Game@{run\+Game}}
@@ -423,23 +424,24 @@ This method is called when the after the robot has been prepared and is ready to
 \end{DoxyExceptions}
 
 
-Definition at line 431 of file Game.\+java.
+Definition at line 430 of file Game.\+java.
 
 
 \begin{DoxyCode}
-431                                                   \{
-432     GameParameters.Demo = DemoType.Beta;
-433     \textcolor{comment}{// Start localizing}
-434     \textcolor{keyword}{final} Navigation navigation = \textcolor{keyword}{new} Navigation(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
-435     \textcolor{keyword}{final} UltrasonicLocalizer usLoc = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, 
+430                                                   \{
+431     GameParameters.Demo = DemoType.Beta;
+432     \textcolor{comment}{// Start localizing}
+433     \textcolor{keyword}{final} Navigation navigation = \textcolor{keyword}{new} Navigation(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
+434     \textcolor{keyword}{final} UltrasonicLocalizer usLoc = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
-436     \textcolor{keyword}{final} LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, 
+435     \textcolor{keyword}{final} LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
-437     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aa94b85dc88de85d959677bd6c0f98989}{sensorMotor}, 
+436     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aa94b85dc88de85d959677bd6c0f98989}{sensorMotor}, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_abc070af2fa5a5cda6d81977b35aacfb4}{rodMotor});
-438     
-439     Button.waitForAnyPress(); \textcolor{comment}{// Wait for button press to start}
-440       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.ready(usLoc, lgLoc);
+437     
+438     Button.waitForAnyPress(); \textcolor{comment}{// Wait for button press to start}
+439       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.ready(usLoc, lgLoc);
+440       
 441       \textcolor{comment}{//instantiate path finder}
 442       GameUtil.searchingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR
       );
@@ -466,7 +468,7 @@ Definition at line 431 of file Game.\+java.
 \end{DoxyCode}
 This variable stores an E\+V3\+Large\+Regulated\+Motor object instance that allows control of the left motor connected to port A 
 
-Definition at line 213 of file Game.\+java.
+Definition at line 214 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!rgb\+Poller@{rgb\+Poller}}
@@ -476,7 +478,7 @@ Definition at line 213 of file Game.\+java.
 
 This variable stores a Thread\+Controller instance that controls our R\+GB sensor 
 
-Definition at line 198 of file Game.\+java.
+Definition at line 199 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!right\+Motor@{right\+Motor}}
@@ -491,7 +493,7 @@ Definition at line 198 of file Game.\+java.
 \end{DoxyCode}
 This variable stores an E\+V3\+Large\+Regulated\+Motor object instance that allows control of the right motor connected to port D 
 
-Definition at line 219 of file Game.\+java.
+Definition at line 220 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_abc070af2fa5a5cda6d81977b35aacfb4}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_abc070af2fa5a5cda6d81977b35aacfb4}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!rod\+Motor@{rod\+Motor}}
@@ -506,7 +508,7 @@ Definition at line 219 of file Game.\+java.
 \end{DoxyCode}
 This variable stores an E\+V3\+Large\+Regulated\+Motor object instance that allows control of the motor on the rod for collecting rings 
 
-Definition at line 231 of file Game.\+java.
+Definition at line 232 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ab940d1a52b9759294dc0229e0fd6bc06}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_ab940d1a52b9759294dc0229e0fd6bc06}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!S\+E\+N\+\_\+\+D\+IS@{S\+E\+N\+\_\+\+D\+IS}}
@@ -516,7 +518,7 @@ Definition at line 231 of file Game.\+java.
 
 This variable stores the distance between the light sensor and center of the robot in cm 
 
-Definition at line 253 of file Game.\+java.
+Definition at line 254 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aa94b85dc88de85d959677bd6c0f98989}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aa94b85dc88de85d959677bd6c0f98989}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!sensor\+Motor@{sensor\+Motor}}
@@ -531,7 +533,7 @@ Definition at line 253 of file Game.\+java.
 \end{DoxyCode}
 This variable stores an E\+V3\+Large\+Regulated\+Motor object instance that allows control of the motor on storage rod 
 
-Definition at line 225 of file Game.\+java.
+Definition at line 226 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a72c2224ad4dd557dde445ebc4baaf531}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a72c2224ad4dd557dde445ebc4baaf531}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!T\+I\+LE@{T\+I\+LE}}
@@ -541,7 +543,7 @@ Definition at line 225 of file Game.\+java.
 
 This variable stores the length of a tile in cm 
 
-Definition at line 237 of file Game.\+java.
+Definition at line 238 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a64cf12cdd6772ac1ce351ff1dfadd626}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a64cf12cdd6772ac1ce351ff1dfadd626}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!T\+R\+A\+CK@{T\+R\+A\+CK}}
@@ -551,7 +553,7 @@ Definition at line 237 of file Game.\+java.
 
 This variable holds the track distance between the center of the wheels in cm (measured and adjusted based on trial and error) 
 
-Definition at line 248 of file Game.\+java.
+Definition at line 249 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!us\+Poller@{us\+Poller}}
@@ -561,7 +563,7 @@ Definition at line 248 of file Game.\+java.
 
 This variable stores a Thread\+Controller instance that controls our ultrasonic sensor 
 
-Definition at line 208 of file Game.\+java.
+Definition at line 209 of file Game.\+java.
 
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a91bd64670c2a91d006c907142783b1f8}\label{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a91bd64670c2a91d006c907142783b1f8}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game@{ca\+::mcgill\+::ecse211\+::project\+::\+Game}!W\+H\+E\+E\+L\+\_\+\+R\+AD@{W\+H\+E\+E\+L\+\_\+\+R\+AD}}
@@ -571,7 +573,7 @@ Definition at line 208 of file Game.\+java.
 
 This variable stores the radius of our wheels in cm 
 
-Definition at line 242 of file Game.\+java.
+Definition at line 243 of file Game.\+java.
 
 
 

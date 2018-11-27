@@ -26,6 +26,7 @@ public class GameUtil {
   public static char rightInstruction = 'R';
   public static char upInstruction = 'U';
   public static char downInstruction = 'D';
+  
   /**
    * This is class is used as a comparator to sort the points from nearest to the robot.
    * @author Caspar Cedro

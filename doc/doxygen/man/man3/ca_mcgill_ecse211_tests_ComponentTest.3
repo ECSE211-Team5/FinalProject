@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.tests.ComponentTest" 3 "Mon Nov 26 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.tests.ComponentTest" 3 "Tue Nov 27 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -39,6 +39,9 @@ ca.mcgill.ecse211.tests.ComponentTest
 .br
 .ti -1c
 .RI "static void \fBblackLineTest\fP ()  throws OdometerExceptions "
+.br
+.ti -1c
+.RI "static void \fBmusicTest\fP ()"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -118,6 +121,16 @@ Definition at line 92 of file ComponentTest\&.java\&.
 96     us\&.localize(Button\&.ID_LEFT);
 97     lgLoc\&.localize(GameParameters\&.SC);
 98   }
+.fi
+.SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.musicTest ()\fC [static]\fP"
+
+.PP
+Definition at line 156 of file ComponentTest\&.java\&.
+.PP
+.nf
+156                                  {
+157     GameUtil\&.playMusic();
+158   }
 .fi
 .SS "static void ca\&.mcgill\&.ecse211\&.tests\&.ComponentTest\&.navigationTest () throws \fBOdometerExceptions\fP\fC [static]\fP"
 Test for Navigation
