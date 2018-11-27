@@ -14,7 +14,6 @@ import lejos.hardware.motor.EV3LargeRegulatedMotor;
  * @author Kamy Moussavi Kafi
  */
 public class Odometer extends OdometerData implements Runnable {
-
   private OdometerData odoData;
   private static Odometer odometer = null; // Returned as singleton
 
@@ -29,14 +28,15 @@ public class Odometer extends OdometerData implements Runnable {
 
   private double[] position;
 
-
   private static final long ODOMETER_PERIOD = 25; // odometer update period in ms
 
   /**
    * This is the class constructor for the Odometer class. It cannot be instantiated externally.
    * 
-   * @param leftMotor The EV3LargeRegulatedMotor instance for our left motor
-   * @param rightMotor The EV3LargeRegulatedMotor instance for our right motor
+   * @param leftMotor An EV3LargeRegularedMotor object instance that allows control of the left
+   *        motor
+   * @param rightMotor An EV3LargeRegularedMotor object instance that allows control of the right
+   *        motor
    * @throws OdometerExceptions
    */
   private Odometer(EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor,
@@ -54,15 +54,16 @@ public class Odometer extends OdometerData implements Runnable {
 
     this.TRACK = TRACK;
     this.WHEEL_RAD = WHEEL_RAD;
-
   }
 
   /**
-   * This method is meant to ensure only one instance of the odometer is used throughout the code.
+   * This method ensures that only one instance of the Odometer object is used throughout the code.
    * 
-   * @param leftMotor The EV3LargeRegulatedMotor instance for our left motor
-   * @param rightMotor The EV3LargeRegulatedMotor instance for our right motor
-   * @return new or existing Odometer Object
+   * @param leftMotor An EV3LargeRegularedMotor object instance that allows control of the left
+   *        motor
+   * @param rightMotor An EV3LargeRegularedMotor object instance that allows control of the right
+   *        motor
+   * @return A new or pre-existing Odometer object
    * @throws OdometerExceptions
    */
   public synchronized static Odometer getOdometer(EV3LargeRegulatedMotor leftMotor,
@@ -77,16 +78,14 @@ public class Odometer extends OdometerData implements Runnable {
   }
 
   /**
-   * This class is meant to return the existing Odometer Object. It is meant to be used only if an
-   * odometer object has been created
+   * This method returns a pre-existing Odometer object instance. It is meant to be used only if an
+   * Odometer object has already been created beforehand.
    * 
    * @return error if no previous odometer exists
    */
   public synchronized static Odometer getOdometer() throws OdometerExceptions {
-
     if (odometer == null) {
       throw new OdometerExceptions("No previous Odometer exits.");
-
     }
     return odometer;
   }
@@ -101,7 +100,7 @@ public class Odometer extends OdometerData implements Runnable {
     while (true) {
       updateStart = System.currentTimeMillis();
 
-      // TODO Calculate new robot position based on tachometer counts
+      // Calculate new robot position based on tachometer counts
       double distL, distR, deltaD, deltaT, dX, dY;
       int nowTachoL, nowTachoR;
       position = odometer.getXYT();
@@ -121,10 +120,8 @@ public class Odometer extends OdometerData implements Runnable {
       dX = deltaD * Math.sin(Theta);
       dY = deltaD * Math.cos(Theta);
 
-
-      // TODO Update odometer values with new calculated values
+      // Update odometer values with new calculated values
       odometer.update(dX / Game.TILE, dY / Game.TILE, Math.toDegrees(deltaT));
-
 
       // this ensures that the odometer only runs once every period
       updateEnd = System.currentTimeMillis();

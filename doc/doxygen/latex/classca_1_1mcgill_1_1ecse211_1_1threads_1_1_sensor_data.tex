@@ -62,20 +62,20 @@ Definition at line 17 of file Sensor\+Data.\+java.
 
 Default constructor. The constructor is private. A factory is used instead such that only one instance of this class is ever created. 
 
-Definition at line 42 of file Sensor\+Data.\+java.
+Definition at line 44 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-42                          \{
-43     \textcolor{comment}{// Default distance value is 40 cm from any walls.}
-44     this.distance = 40;
-45     \textcolor{comment}{// Default light value is 0}
-46     this.lights = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
-47     rgb = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[3];
-48     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < rgb.length; j++) \{
-49       rgb[j] = 0;
-50     \}
-51   \}
+44                          \{
+45     \textcolor{comment}{// Default distance value is 40 cm from any walls.}
+46     this.distance = 40;
+47     \textcolor{comment}{// Default light value is 0}
+48     this.lights = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
+49     rgb = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[3];
+50     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < rgb.length; j++) \{
+51       rgb[j] = 0;
+52     \}
+53   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -100,13 +100,13 @@ The current angle value
 \end{DoxyReturn}
 
 
-Definition at line 119 of file Sensor\+Data.\+java.
+Definition at line 122 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-119                        \{
-120     \textcolor{keywordflow}{return} angle;
-121   \}
+122                        \{
+123     \textcolor{keywordflow}{return} angle;
+124   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -128,13 +128,13 @@ the sensor data.
 \end{DoxyReturn}
 
 
-Definition at line 80 of file Sensor\+Data.\+java.
+Definition at line 82 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-80                        \{
-81     \textcolor{keywordflow}{return} distance;
-82   \}
+82                        \{
+83     \textcolor{keywordflow}{return} distance;
+84   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -149,28 +149,29 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{get\+L()}{getL()}}
 {\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+getL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-get the light value data from the two light sensors (protected by light\+Lock) \begin{DoxyReturn}{Returns}
+get the light value data from the two light sensors (protected by light\+Lock)
+
+\begin{DoxyReturn}{Returns}
 \+: data from light sensor 
 \end{DoxyReturn}
 
 
-Definition at line 88 of file Sensor\+Data.\+java.
+Definition at line 91 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-88                          \{    
-89     \textcolor{comment}{//lock the lock for light sensor value}
-90     lightLock.lock();
-91     \textcolor{keywordflow}{try} \{
-92       \textcolor{keywordflow}{return} lights.clone();
-93     \} \textcolor{keywordflow}{finally} \{
-94       lightLock.unlock();
-95     \}
-96     
-97   \}
+91                          \{
+92     \textcolor{comment}{// lock the lock for light sensor value}
+93     lightLock.lock();
+94     \textcolor{keywordflow}{try} \{
+95       \textcolor{keywordflow}{return} lights.clone();
+96     \} \textcolor{keywordflow}{finally} \{
+97       lightLock.unlock();
+98     \}
+99 
+100   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -190,21 +191,20 @@ get the rgb data for light sensor (protected by rgb lock)
 \end{DoxyReturn}
 
 
-Definition at line 104 of file Sensor\+Data.\+java.
+Definition at line 107 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-104                         \{
-105     rgbLock.lock();
-106     \textcolor{keywordflow}{try} \{
-107       \textcolor{keywordflow}{return} rgb.clone();
-108     \}\textcolor{keywordflow}{finally} \{
-109       rgbLock.unlock();
-110     \}
-111   \}
+107                         \{
+108     rgbLock.lock();
+109     \textcolor{keywordflow}{try} \{
+110       \textcolor{keywordflow}{return} rgb.clone();
+111     \} \textcolor{keywordflow}{finally} \{
+112       rgbLock.unlock();
+113     \}
+114   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -229,34 +229,32 @@ An Odometer\+Data object
 \end{DoxyExceptions}
 
 
-Definition at line 61 of file Sensor\+Data.\+java.
+Definition at line 63 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-61                                                                                   \{
-62     \textcolor{keywordflow}{if} (sensorData != null) \{ \textcolor{comment}{// Return existing object}
-63       \textcolor{keywordflow}{return} sensorData;
-64     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numberOfIntances < MAX\_INSTANCES) \{ \textcolor{comment}{// create object and}
-65                                                    \textcolor{comment}{// return it}
-66       sensorData = \textcolor{keyword}{new} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a11dcdc9c15184e05a9c84fc3958e26b6}{SensorData}();
-67       numberOfIntances += 1;
-68       \textcolor{keywordflow}{return} sensorData;
-69     \} \textcolor{keywordflow}{else} \{
-70       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} OdometerExceptions(\textcolor{stringliteral}{"Only one intance of the SensorData can be created."});
-71     \}
-72 
-73   \}
+63                                                                                   \{
+64     \textcolor{keywordflow}{if} (sensorData != null) \{ \textcolor{comment}{// Return existing object}
+65       \textcolor{keywordflow}{return} sensorData;
+66     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numberOfIntances < MAX\_INSTANCES) \{ \textcolor{comment}{// create object and}
+67                                                    \textcolor{comment}{// return it}
+68       sensorData = \textcolor{keyword}{new} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a11dcdc9c15184e05a9c84fc3958e26b6}{SensorData}();
+69       numberOfIntances += 1;
+70       \textcolor{keywordflow}{return} sensorData;
+71     \} \textcolor{keywordflow}{else} \{
+72       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} OdometerExceptions(\textcolor{stringliteral}{"Only one intance of the SensorData can be created."});
+73     \}
+74 
+75   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -278,13 +276,13 @@ Here is the caller graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line 138 of file Sensor\+Data.\+java.
+Definition at line 140 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-138                              \{
-139       this.angle = a;
-140   \}
+140                              \{
+141     this.angle = a;
+142   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!setD@{setD}}
@@ -301,16 +299,15 @@ This method overwrites the distance value. Use for ultrasonic sensor.
 \end{DoxyParams}
 
 
-Definition at line 128 of file Sensor\+Data.\+java.
+Definition at line 131 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-128                              \{
-129       this.distance = d;
-130   \}
+131                              \{
+132     this.distance = d;
+133   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -332,22 +329,21 @@ This method overwrites the light value. (protected by light lock)
 \end{DoxyParams}
 
 
-Definition at line 165 of file Sensor\+Data.\+java.
+Definition at line 167 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-165                                \{
-166     \textcolor{keywordflow}{try} \{
-167       lightLock.lock();
-168       this.lights[0] = l[0];
-169       this.lights[1] = l[1];
-170     \} \textcolor{keywordflow}{finally} \{
-171       lightLock.unlock();
-172     \}
-173   \}
+167                                \{
+168     \textcolor{keywordflow}{try} \{
+169       lightLock.lock();
+170       this.lights[0] = l[0];
+171       this.lights[1] = l[1];
+172     \} \textcolor{keywordflow}{finally} \{
+173       lightLock.unlock();
+174     \}
+175   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -373,23 +369,22 @@ set rgb data for color sensor (protected by rgb lock)
 \end{DoxyParams}
 
 
-Definition at line 149 of file Sensor\+Data.\+java.
+Definition at line 151 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-149                                           \{
-150     \textcolor{keywordflow}{try} \{
-151       rgbLock.lock();
-152       rgb[0] = r;
-153       rgb[1] = g;
-154       rgb[2] = b;
-155     \} \textcolor{keywordflow}{finally} \{
-156       rgbLock.unlock();
-157     \}
-158   \}
+151                                           \{
+152     \textcolor{keywordflow}{try} \{
+153       rgbLock.lock();
+154       rgb[0] = r;
+155       rgb[1] = g;
+156       rgb[2] = b;
+157     \} \textcolor{keywordflow}{finally} \{
+158       rgbLock.unlock();
+159     \}
+160   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

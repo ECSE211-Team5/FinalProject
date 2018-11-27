@@ -37,7 +37,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 22 of file Ring\+Searcher.\+java.
+Definition at line 21 of file Ring\+Searcher.\+java.
 
 
 
@@ -64,22 +64,22 @@ This class provides method to check if there is a ring and if the ring is the co
 \end{DoxyExceptions}
 
 
-Definition at line 43 of file Ring\+Searcher.\+java.
+Definition at line 42 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-44                                 \{
-45     this.odometer = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
-46     this.sensorMotor = sensorMotor;
-47     this.rodMotor = rodMotor;
-48     rodMotor.setSpeed(ROD\_SPEED);
-49     this.sensorMotor.setSpeed(SENSOR\_SPEED);
-50     data = SensorData.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}{getSensorData}();
-51     \textcolor{keywordflow}{for} (BaseRegulatedMotor motor : \textcolor{keyword}{new} BaseRegulatedMotor[] \{this.sensorMotor, this.rodMotor\}) \{
-52       motor.stop();
-53       motor.setAcceleration(ACCELERATION);
-54     \}
-55   \}
+43                                 \{
+44     this.odometer = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
+45     this.sensorMotor = sensorMotor;
+46     this.rodMotor = rodMotor;
+47     rodMotor.setSpeed(ROD\_SPEED);
+48     this.sensorMotor.setSpeed(SENSOR\_SPEED);
+49     data = SensorData.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}{getSensorData}();
+50     \textcolor{keywordflow}{for} (BaseRegulatedMotor motor : \textcolor{keyword}{new} BaseRegulatedMotor[] \{this.sensorMotor, this.rodMotor\}) \{
+51       motor.stop();
+52       motor.setAcceleration(ACCELERATION);
+53     \}
+54   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -99,16 +99,15 @@ Here is the call graph for this function\+:\nopagebreak
 
 This method rotate the rod to a suitable position for retrieve the ring 
 
-Definition at line 112 of file Ring\+Searcher.\+java.
+Definition at line 111 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-112                                 \{
-113     rodMotor.rotate(ROD\_PREPARE);
-114   \}
+111                                 \{
+112     rodMotor.rotate(ROD\_PREPARE);
+113   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -123,16 +122,15 @@ Here is the caller graph for this function\+:
 
 This method put the sensor to search rotation to be ready for the searching 
 
-Definition at line 98 of file Ring\+Searcher.\+java.
+Definition at line 97 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-98                               \{
-99     sensorMotor.rotate(SENSOR\_ROTATION);
-100   \}
+97                               \{
+98     sensorMotor.rotate(SENSOR\_ROTATION);
+99   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -147,16 +145,15 @@ Here is the caller graph for this function\+:
 
 Rotate the rod back to the original position 
 
-Definition at line 126 of file Ring\+Searcher.\+java.
+Definition at line 125 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-126                               \{
-127     rodMotor.rotate(-(ROD\_PREPARE+ROD\_RETRIEVE));
-128   \}
+125                               \{
+126     rodMotor.rotate(-(ROD\_PREPARE + ROD\_RETRIEVE));
+127   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -171,16 +168,15 @@ Here is the caller graph for this function\+:
 
 This method put the sensor back 
 
-Definition at line 105 of file Ring\+Searcher.\+java.
+Definition at line 104 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-105                             \{
-106     sensorMotor.rotateTo(0);
-107   \}
+104                             \{
+105     sensorMotor.rotateTo(0);
+106   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -195,16 +191,15 @@ Here is the caller graph for this function\+:
 
 this method retrieve the searched ring 
 
-Definition at line 119 of file Ring\+Searcher.\+java.
+Definition at line 118 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-119                              \{
-120     rodMotor.rotate(ROD\_RETRIEVE);
-121   \}
+118                              \{
+119     rodMotor.rotate(ROD\_RETRIEVE);
+120   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -219,53 +214,51 @@ Here is the caller graph for this function\+:
 
 This method searches for the ring and identify its color based using the rod, It will beep based on the color of the ring 
 
-Definition at line 62 of file Ring\+Searcher.\+java.
+Definition at line 61 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-62                         \{
-63     sensorMotor.rotate(SENSOR\_ROTATION);
-64     sensorMotor.rotate(-SENSOR\_ROTATION);
-65 
-66     \textcolor{comment}{//determine most frequent colour detected and beep accordingly}
-67     Game.INSTANCE.rgbPoller.setStart(\textcolor{keyword}{false});
-68     \textcolor{keywordflow}{switch} (ColorCalibrator.getMostFrequenct()) \{
-69       \textcolor{keywordflow}{case} Orange:
+61                        \{
+62     sensorMotor.rotate(SENSOR\_ROTATION);
+63     sensorMotor.rotate(-SENSOR\_ROTATION);
+64 
+65     \textcolor{comment}{// determine most frequent colour detected and beep accordingly}
+66     Game.INSTANCE.rgbPoller.setStart(\textcolor{keyword}{false});
+67     \textcolor{keywordflow}{switch} (ColorCalibrator.getMostFrequenct()) \{
+68       \textcolor{keywordflow}{case} Orange:
+69         Sound.beep();
 70         Sound.beep();
 71         Sound.beep();
 72         Sound.beep();
-73         Sound.beep();
-74         \textcolor{keywordflow}{break};
-75       \textcolor{keywordflow}{case} Yellow:
+73         \textcolor{keywordflow}{break};
+74       \textcolor{keywordflow}{case} Yellow:
+75         Sound.beep();
 76         Sound.beep();
 77         Sound.beep();
-78         Sound.beep();
-79         \textcolor{keywordflow}{break};
-80       \textcolor{keywordflow}{case} Green:
+78         \textcolor{keywordflow}{break};
+79       \textcolor{keywordflow}{case} Green:
+80         Sound.beep();
 81         Sound.beep();
-82         Sound.beep();
-83         \textcolor{keywordflow}{break};
-84       \textcolor{keywordflow}{case} Blue:
-85         Sound.beep();
-86         \textcolor{keywordflow}{break};
-87       \textcolor{keywordflow}{case} Other:
-88         \textcolor{keywordflow}{break};
-89       \textcolor{keywordflow}{default}:
-90         \textcolor{keywordflow}{break};
-91     \}
-92     Game.INSTANCE.rgbPoller.setStart(\textcolor{keyword}{true});
-93   \}  
+82         \textcolor{keywordflow}{break};
+83       \textcolor{keywordflow}{case} Blue:
+84         Sound.beep();
+85         \textcolor{keywordflow}{break};
+86       \textcolor{keywordflow}{case} Other:
+87         \textcolor{keywordflow}{break};
+88       \textcolor{keywordflow}{default}:
+89         \textcolor{keywordflow}{break};
+90     \}
+91     Game.INSTANCE.rgbPoller.setStart(\textcolor{keyword}{true});
+92   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a7ff5756046a0ce992ed8cb8954139c3b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

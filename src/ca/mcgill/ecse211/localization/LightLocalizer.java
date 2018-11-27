@@ -47,11 +47,10 @@ public class LightLocalizer {
   }
 
   /**
-   * This method 
-   * (*Improve*) Once the robot know what angle it is facing, this method looks for the x,y axis
-   * origins knowing it is in the first tile facing north.
+   * This method localizes our robot to an intersection of two black lines which serve as our origin
+   * and strives to face north.
    * 
-   * @param sC the coordinate to set to after localization
+   * @param sC The x and y coordinates to set on our Odometer after localization
    */
   public void localize(int[] sC) {
     leftMotor.setSpeed(FORWARD_SPEED);
@@ -71,6 +70,7 @@ public class LightLocalizer {
     odometer.setTheta(0.0);
     Sound.beep();
     odometer.setY(0);
+    
     // 2. Turn and go forward find the x=0 line
     navigation.turnTo(90);
     leftMotor.setSpeed(FORWARD_SPEED);
@@ -90,9 +90,11 @@ public class LightLocalizer {
     odometer.setX(0);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
+    
     // 3. Go backwards by sensor-wheel center distance in x-direction
     leftMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
     rightMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), false);
+    
     // 4. Go backwards by sensor-wheel center distance in y-direction
     navigation.turnTo(0);
     leftMotor.setSpeed(FORWARD_SPEED);

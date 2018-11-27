@@ -62,17 +62,17 @@ Definition at line 16 of file Odometer.\+java.
 \subsubsection{\texorpdfstring{get\+Odometer()}{getOdometer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily static synchronized \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} ca.\+mcgill.\+ecse211.\+odometer.\+Odometer.\+get\+Odometer (\begin{DoxyParamCaption}\item[{E\+V3\+Large\+Regulated\+Motor}]{left\+Motor,  }\item[{E\+V3\+Large\+Regulated\+Motor}]{right\+Motor,  }\item[{final double}]{T\+R\+A\+CK,  }\item[{final double}]{W\+H\+E\+E\+L\+\_\+\+R\+AD }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
 
-This method is meant to ensure only one instance of the odometer is used throughout the code.
+This method ensures that only one instance of the \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} object is used throughout the code.
 
 
 \begin{DoxyParams}{Parameters}
-{\em left\+Motor} & The E\+V3\+Large\+Regulated\+Motor instance for our left motor \\
+{\em left\+Motor} & An E\+V3\+Large\+Regulared\+Motor object instance that allows control of the left motor \\
 \hline
-{\em right\+Motor} & The E\+V3\+Large\+Regulated\+Motor instance for our right motor \\
+{\em right\+Motor} & An E\+V3\+Large\+Regulared\+Motor object instance that allows control of the right motor \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-new or existing \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} Object 
+A new or pre-\/existing \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} object 
 \end{DoxyReturn}
 
 \begin{DoxyExceptions}{Exceptions}
@@ -94,8 +94,7 @@ Definition at line 69 of file Odometer.\+java.
 77     \}
 78   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -108,7 +107,7 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{get\+Odometer()}{getOdometer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily static synchronized \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} ca.\+mcgill.\+ecse211.\+odometer.\+Odometer.\+get\+Odometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
 
-This class is meant to return the existing \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} Object. It is meant to be used only if an odometer object has been created
+This method returns a pre-\/existing \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} object instance. It is meant to be used only if an \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} object has already been created beforehand.
 
 \begin{DoxyReturn}{Returns}
 error if no previous odometer exists 
@@ -120,13 +119,11 @@ Definition at line 86 of file Odometer.\+java.
 
 \begin{DoxyCode}
 86                                                                               \{
-87 
-88     \textcolor{keywordflow}{if} (odometer == null) \{
-89       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} OdometerExceptions(\textcolor{stringliteral}{"No previous Odometer exits."});
-90 
-91     \}
-92     \textcolor{keywordflow}{return} odometer;
-93   \}
+87     \textcolor{keywordflow}{if} (odometer == null) \{
+88       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} OdometerExceptions(\textcolor{stringliteral}{"No previous Odometer exits."});
+89     \}
+90     \textcolor{keywordflow}{return} odometer;
+91   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_af0ff4c5121973a8310cf986e25fa0d87}\label{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_af0ff4c5121973a8310cf986e25fa0d87}} 
 \index{ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometer@{ca\+::mcgill\+::ecse211\+::odometer\+::\+Odometer}!run@{run}}
@@ -136,55 +133,52 @@ Definition at line 86 of file Odometer.\+java.
 
 This method is called when our \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} object is started as a thread and begins to keep track of motor rotations 
 
-Definition at line 99 of file Odometer.\+java.
+Definition at line 97 of file Odometer.\+java.
 
 
 \begin{DoxyCode}
-99                     \{
-100     \textcolor{keywordtype}{long} updateStart, updateEnd;
-101 
-102     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
-103       updateStart = System.currentTimeMillis();
-104 
-105       \textcolor{comment}{// TODO Calculate new robot position based on tachometer counts}
-106       \textcolor{keywordtype}{double} distL, distR, deltaD, deltaT, dX, dY;
-107       \textcolor{keywordtype}{int} nowTachoL, nowTachoR;
-108       position = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}();
-109 
-110       \textcolor{comment}{// Calculate the change in distances and Theta with motor tacho counts}
-111       nowTachoL = leftMotor.getTachoCount();
-112       nowTachoR = rightMotor.getTachoCount();
-113       distL = 3.14159 * WHEEL\_RAD * (nowTachoL - leftMotorTachoCount) / 180;
-114       distR = 3.14159 * WHEEL\_RAD * (nowTachoR - rightMotorTachoCount) / 180;
-115       leftMotorTachoCount = nowTachoL;
-116       rightMotorTachoCount = nowTachoR;
-117       deltaD = 0.5 * (distL + distR);
-118       deltaT = (distL - distR) / TRACK;
-119 
-120       \textcolor{keywordtype}{double} Theta = Math.toRadians(position[2]);
-121       Theta += deltaT;
-122       dX = deltaD * Math.sin(Theta);
-123       dY = deltaD * Math.cos(Theta);
-124 
+97                     \{
+98     \textcolor{keywordtype}{long} updateStart, updateEnd;
+99 
+100     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
+101       updateStart = System.currentTimeMillis();
+102 
+103       \textcolor{comment}{// Calculate new robot position based on tachometer counts}
+104       \textcolor{keywordtype}{double} distL, distR, deltaD, deltaT, dX, dY;
+105       \textcolor{keywordtype}{int} nowTachoL, nowTachoR;
+106       position = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}();
+107 
+108       \textcolor{comment}{// Calculate the change in distances and Theta with motor tacho counts}
+109       nowTachoL = leftMotor.getTachoCount();
+110       nowTachoR = rightMotor.getTachoCount();
+111       distL = 3.14159 * WHEEL\_RAD * (nowTachoL - leftMotorTachoCount) / 180;
+112       distR = 3.14159 * WHEEL\_RAD * (nowTachoR - rightMotorTachoCount) / 180;
+113       leftMotorTachoCount = nowTachoL;
+114       rightMotorTachoCount = nowTachoR;
+115       deltaD = 0.5 * (distL + distR);
+116       deltaT = (distL - distR) / TRACK;
+117 
+118       \textcolor{keywordtype}{double} Theta = Math.toRadians(position[2]);
+119       Theta += deltaT;
+120       dX = deltaD * Math.sin(Theta);
+121       dY = deltaD * Math.cos(Theta);
+122 
+123       \textcolor{comment}{// Update odometer values with new calculated values}
+124       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_aaa06f190d634299fcb1b97a1891dad85}{update}(dX / Game.TILE, dY / Game.TILE, Math.toDegrees(deltaT));
 125 
-126       \textcolor{comment}{// TODO Update odometer values with new calculated values}
-127       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_aaa06f190d634299fcb1b97a1891dad85}{update}(dX / Game.TILE, dY / Game.TILE, Math.toDegrees(deltaT));
-128 
-129 
-130       \textcolor{comment}{// this ensures that the odometer only runs once every period}
-131       updateEnd = System.currentTimeMillis();
-132       \textcolor{keywordflow}{if} (updateEnd - updateStart < ODOMETER\_PERIOD) \{
-133         \textcolor{keywordflow}{try} \{
-134           Thread.sleep(ODOMETER\_PERIOD - (updateEnd - updateStart));
-135         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-136           \textcolor{comment}{// there is nothing to be done}
-137         \}
-138       \}
-139     \}
-140   \}
+126       \textcolor{comment}{// this ensures that the odometer only runs once every period}
+127       updateEnd = System.currentTimeMillis();
+128       \textcolor{keywordflow}{if} (updateEnd - updateStart < ODOMETER\_PERIOD) \{
+129         \textcolor{keywordflow}{try} \{
+130           Thread.sleep(ODOMETER\_PERIOD - (updateEnd - updateStart));
+131         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+132           \textcolor{comment}{// there is nothing to be done}
+133         \}
+134       \}
+135     \}
+136   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

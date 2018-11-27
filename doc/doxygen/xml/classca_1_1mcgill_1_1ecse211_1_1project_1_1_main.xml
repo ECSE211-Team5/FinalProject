@@ -50,8 +50,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" line="34" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" bodystart="34" bodyend="58"/>
-        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a6584b6534b14ba43dc1444084a925a20" compoundref="_game_8java" startline="35">ca.mcgill.ecse211.project.Game.INSTANCE</references>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" line="34" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" bodystart="34" bodyend="56"/>
+        <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a6584b6534b14ba43dc1444084a925a20" compoundref="_game_8java" startline="34">ca.mcgill.ecse211.project.Game.INSTANCE</references>
         <references refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a743c9bb90a8c8bc3fcf3b4c591990e7f" compoundref="_component_test_8java" startline="156" endline="158">ca.mcgill.ecse211.tests.ComponentTest.musicTest</references>
       </memberdef>
       </sectiondef>
@@ -65,7 +65,7 @@
 <simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" bodystart="17" bodyend="59"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/Main.java" bodystart="17" bodyend="57"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af681b5dc675c13ed284071cc135f5fd3" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Main</scope><name>main</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_main_1af6f7b8fffddcf855f74fe128d2e23ea1" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::Main</scope><name>test</name></member>

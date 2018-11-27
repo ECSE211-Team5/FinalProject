@@ -14,9 +14,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="26" bodyend="-1"/>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="430" endline="448">ca.mcgill.ecse211.project.Game.runGame</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="244">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="27" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="27" bodyend="-1"/>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1adf69abe44e952d627fb9e6a2f678cb5e" compoundref="_game_8java" startline="421" endline="440">ca.mcgill.ecse211.project.Game.runGame</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_wi_fi_1a3488726983cda70dbde6f05c9c762f16" compoundref="_wi_fi_8java" startline="26" endline="232">ca.mcgill.ecse211.project.WiFi.readData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_1a1ba3e060bfd5f76af77b713321abc7f6" prot="public" static="no" mutable="no">
         <type></type>
@@ -29,14 +29,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="27" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="26" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="27" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>This enumeration contains the type of demo that our robot is currently going to be performing in </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="25" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="25" bodyend="27"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" line="26" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameParameters.java" bodystart="26" bodyend="28"/>
     <listofallmembers>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_1a8d4e576df991cb52b50ae54b2812aa7f" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters::DemoType</scope><name>Beta</name></member>
       <member refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_1a1ba3e060bfd5f76af77b713321abc7f6" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameParameters::DemoType</scope><name>Final</name></member>

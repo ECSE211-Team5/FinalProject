@@ -44,17 +44,19 @@ if (\fBGameParameters\&.Island_UR\fP[0] - \fBGameParameters\&.Island_LL\fP[0] < 
 .PP
 if (\fBGameParameters\&.TTEE_O\fP[0] < 0 || \fBGameParameters\&.TTEE_O\fP[0] > 7 || \fBGameParameters\&.TTEE_O\fP[1] < 0 || \fBGameParameters\&.TTEE_O\fP[1] > 7) { throw new Exception('Green tree coordinates out of bounds'); }
 .PP
-if (\fBGameParameters\&.US_UR\fP[0] - \fBGameParameters\&.US_LL\fP[0] < 2 || \fBGameParameters\&.US_UR\fP[0] - \fBGameParameters\&.US_LL\fP[0] > 10 || \fBGameParameters\&.US_UR\fP[1] - \fBGameParameters\&.US_LL\fP[1] < 2 || \fBGameParameters\&.US_UR\fP[1] - \fBGameParameters\&.US_LL\fP[1] > 10) { throw new Exception('Red zone coordinates out of bounds'); }
+if (\fBGameParameters\&.US_UR\fP[0] - \fBGameParameters\&.US_LL\fP[0] < 2 || \fBGameParameters\&.US_UR\fP[0] - \fBGameParameters\&.US_LL\fP[0] > 10 || \fBGameParameters\&.US_UR\fP[1] - \fBGameParameters\&.US_LL\fP[1] < 2 || \fBGameParameters\&.US_UR\fP[1] - \fBGameParameters\&.US_LL\fP[1] > 10) { throw new Exception('Red zone
+coordinates out of bounds'); }
 .PP
 if (\fBGameParameters\&.OPPO_UR\fP[0] - \fBGameParameters\&.OPPO_LL\fP[0] < 2 || \fBGameParameters\&.OPPO_UR\fP[0] - \fBGameParameters\&.OPPO_LL\fP[0] > 10 || \fBGameParameters\&.OPPO_UR\fP[1] - \fBGameParameters\&.OPPO_LL\fP[1] < 2 || \fBGameParameters\&.OPPO_UR\fP[1] - \fBGameParameters\&.OPPO_LL\fP[1] > 10) { throw new Exception('Green zone coordinates out of bounds'); }
 .PP
 if (\fBGameParameters\&.Island_UR\fP[0] - \fBGameParameters\&.Island_LL\fP[0] < 2 || \fBGameParameters\&.Island_UR\fP[0] - \fBGameParameters\&.Island_LL\fP[0] > 10 || \fBGameParameters\&.Island_UR\fP[1] - \fBGameParameters\&.Island_LL\fP[1] < 2 || \fBGameParameters\&.Island_UR\fP[1] - \fBGameParameters\&.Island_LL\fP[1] > 10) { throw new Exception('Island zone coordinates out of bounds'); }
 .PP
-if (\fBGameParameters\&.TN_UR\fP[0] - \fBGameParameters\&.TN_LL\fP[0] < 1 || \fBGameParameters\&.TN_UR\fP[0] - \fBGameParameters\&.TN_LL\fP[0] > 2 || \fBGameParameters\&.TN_UR\fP[1] - \fBGameParameters\&.TN_LL\fP[1] < 1 || \fBGameParameters\&.TN_UR\fP[1] - \fBGameParameters\&.TN_LL\fP[1] > 2) { throw new Exception('Red tunnel coordinates out of bounds'); }
+if (\fBGameParameters\&.TN_UR\fP[0] - \fBGameParameters\&.TN_LL\fP[0] < 1 || \fBGameParameters\&.TN_UR\fP[0] - \fBGameParameters\&.TN_LL\fP[0] > 2 || \fBGameParameters\&.TN_UR\fP[1] - \fBGameParameters\&.TN_LL\fP[1] < 1 || \fBGameParameters\&.TN_UR\fP[1] - \fBGameParameters\&.TN_LL\fP[1] > 2) { throw new Exception('Red tunnel
+coordinates out of bounds'); }
 .PP
 if (\fBGameParameters\&.TREE_US\fP[0] < 0 || \fBGameParameters\&.TREE_US\fP[0] > 14 || \fBGameParameters\&.TREE_US\fP[1] < 0 || \fBGameParameters\&.TREE_US\fP[1] > 8) { throw new Exception('Red tree coordinates out of bounds'); }
 .PP
-if (\fBGameParameters\&.TTEE_O\fP[0] < 0 || \fBGameParameters\&.TTEE_O\fP[0] > 14 || \fBGameParameters\&.TTEE_O\fP[1] < 0 || \fBGameParameters\&.TTEE_O\fP[1] > 8) { throw new Exception('Green tree coordinates out of bounds'); } 
+if (\fBGameParameters\&.TTEE_O\fP[0] < 0 || \fBGameParameters\&.TTEE_O\fP[0] > 14 || \fBGameParameters\&.TTEE_O\fP[1] < 0 || \fBGameParameters\&.TTEE_O\fP[1] > 8) { throw new Exception('Green tree coordinates out of bounds'); }
 .PP
 Definition at line 26 of file WiFi\&.java\&.
 .PP
@@ -84,140 +86,140 @@ Definition at line 26 of file WiFi\&.java\&.
 48       String startingO = "Green_";
 49       String cornerUs = "RedCorner";
 50       String cornerO = "GreenCorner";
-51      
+51 
 52       GameParameters\&.RedTeam = ((Long) data\&.get("RedTeam"))\&.intValue();
 53       GameParameters\&.GreenTeam = ((Long) data\&.get("GreenTeam"))\&.intValue();
 54 
-55       if(GameParameters\&.RedTeam == GameParameters\&.PlayerTeamNumber) {
-56       }else if(GameParameters\&.GreenTeam == GameParameters\&.PlayerTeamNumber) {
+55       if (GameParameters\&.RedTeam == GameParameters\&.PlayerTeamNumber) {
+56       } else if (GameParameters\&.GreenTeam == GameParameters\&.PlayerTeamNumber) {
 57         System\&.out\&.println("GREEEN");
 58         String s = tunnelO;
 59         tunnelO = tunnelUs;
 60         tunnelUs = s;
-61         //change ring set
+61         // change ring set
 62         s = ringO;
 63         ringO = ringUs;
 64         ringUs = s;
-65         //change starting corner
+65         // change starting corner
 66         s = startingO;
 67         startingO = startingUs;
 68         startingUs = s;
-69         //change corner
+69         // change corner
 70         s = cornerO;
 71         cornerO = cornerUs;
 72         cornerUs = s;
-73         
-74       }else {
+73 
+74       } else {
 75         throw new Exception("Bad Team Number");
 76       }
-77       
-78       
+77 
+78 
 79       GameParameters\&.UsCorner = ((Long) data\&.get(cornerUs))\&.intValue();
 80       GameParameters\&.OCorner = ((Long) data\&.get(cornerO))\&.intValue();
 81 
-82       GameParameters\&.US_LL[0] = ((Long) data\&.get(startingUs+"LL_x"))\&.intValue();
-83       GameParameters\&.US_LL[1] = ((Long) data\&.get(startingUs+"LL_y"))\&.intValue();
-84       GameParameters\&.US_UR[0] = ((Long) data\&.get(startingUs+"UR_x"))\&.intValue();
-85       GameParameters\&.US_UR[1] = ((Long) data\&.get(startingUs+"UR_y"))\&.intValue();
+82       GameParameters\&.US_LL[0] = ((Long) data\&.get(startingUs + "LL_x"))\&.intValue();
+83       GameParameters\&.US_LL[1] = ((Long) data\&.get(startingUs + "LL_y"))\&.intValue();
+84       GameParameters\&.US_UR[0] = ((Long) data\&.get(startingUs + "UR_x"))\&.intValue();
+85       GameParameters\&.US_UR[1] = ((Long) data\&.get(startingUs + "UR_y"))\&.intValue();
 86 
-87       GameParameters\&.OPPO_LL[0] = ((Long) data\&.get(startingO+"LL_x"))\&.intValue();
-88       GameParameters\&.OPPO_LL[1] = ((Long) data\&.get(startingO+"LL_y"))\&.intValue();
-89       GameParameters\&.OPPO_UR[0] = ((Long) data\&.get(startingO+"UR_x"))\&.intValue();
-90       GameParameters\&.OPPO_UR[1] = ((Long) data\&.get(startingO+"UR_y"))\&.intValue();
+87       GameParameters\&.OPPO_LL[0] = ((Long) data\&.get(startingO + "LL_x"))\&.intValue();
+88       GameParameters\&.OPPO_LL[1] = ((Long) data\&.get(startingO + "LL_y"))\&.intValue();
+89       GameParameters\&.OPPO_UR[0] = ((Long) data\&.get(startingO + "UR_x"))\&.intValue();
+90       GameParameters\&.OPPO_UR[1] = ((Long) data\&.get(startingO + "UR_y"))\&.intValue();
 91 
 92       GameParameters\&.Island_LL[0] = ((Long) data\&.get("Island_LL_x"))\&.intValue();
 93       GameParameters\&.Island_LL[1] = ((Long) data\&.get("Island_LL_y"))\&.intValue();
 94       GameParameters\&.Island_UR[0] = ((Long) data\&.get("Island_UR_x"))\&.intValue();
 95       GameParameters\&.Island_UR[1] = ((Long) data\&.get("Island_UR_y"))\&.intValue();
 96 
-97       GameParameters\&.TN_LL[0] = ((Long) data\&.get(tunnelUs+"LL_x"))\&.intValue();
-98       GameParameters\&.TN_LL[1] = ((Long) data\&.get(tunnelUs+"LL_y"))\&.intValue();
-99       GameParameters\&.TN_UR[0] = ((Long) data\&.get(tunnelUs+"UR_x"))\&.intValue();
-100       GameParameters\&.TN_UR[1] = ((Long) data\&.get(tunnelUs+"UR_y"))\&.intValue();
-101       System\&.out\&.println(" GameParameters\&.TN_LL[0] " +  GameParameters\&.TN_LL[0]);
-102       System\&.out\&.println(" GameParameters\&.TN_LL[1] " +  GameParameters\&.TN_LL[1]);
-103       System\&.out\&.println(" GameParameters\&.TN_UR[0] " +  GameParameters\&.TN_UR[0]);
-104       System\&.out\&.println(" GameParameters\&.TN_UR[1] " +  GameParameters\&.TN_UR[1]);
+97       GameParameters\&.TN_LL[0] = ((Long) data\&.get(tunnelUs + "LL_x"))\&.intValue();
+98       GameParameters\&.TN_LL[1] = ((Long) data\&.get(tunnelUs + "LL_y"))\&.intValue();
+99       GameParameters\&.TN_UR[0] = ((Long) data\&.get(tunnelUs + "UR_x"))\&.intValue();
+100       GameParameters\&.TN_UR[1] = ((Long) data\&.get(tunnelUs + "UR_y"))\&.intValue();
+101       System\&.out\&.println(" GameParameters\&.TN_LL[0] " + GameParameters\&.TN_LL[0]);
+102       System\&.out\&.println(" GameParameters\&.TN_LL[1] " + GameParameters\&.TN_LL[1]);
+103       System\&.out\&.println(" GameParameters\&.TN_UR[0] " + GameParameters\&.TN_UR[0]);
+104       System\&.out\&.println(" GameParameters\&.TN_UR[1] " + GameParameters\&.TN_UR[1]);
 105 
 106 
-107       GameParameters\&.TNO_LL[0] = ((Long) data\&.get(tunnelO+"LL_x"))\&.intValue();
-108       GameParameters\&.TNO_LL[1] = ((Long) data\&.get(tunnelO+"LL_y"))\&.intValue();
-109       GameParameters\&.TNO_UR[0] = ((Long) data\&.get(tunnelO+"UR_x"))\&.intValue();
-110       GameParameters\&.TNO_UR[1] = ((Long) data\&.get(tunnelO+"UR_y"))\&.intValue();
+107       GameParameters\&.TNO_LL[0] = ((Long) data\&.get(tunnelO + "LL_x"))\&.intValue();
+108       GameParameters\&.TNO_LL[1] = ((Long) data\&.get(tunnelO + "LL_y"))\&.intValue();
+109       GameParameters\&.TNO_UR[0] = ((Long) data\&.get(tunnelO + "UR_x"))\&.intValue();
+110       GameParameters\&.TNO_UR[1] = ((Long) data\&.get(tunnelO + "UR_y"))\&.intValue();
 111 
-112       GameParameters\&.TREE_US[0] = ((Long) data\&.get(ringUs+"x"))\&.intValue();
-113       GameParameters\&.TREE_US[1] = ((Long) data\&.get(ringUs+"y"))\&.intValue();
+112       GameParameters\&.TREE_US[0] = ((Long) data\&.get(ringUs + "x"))\&.intValue();
+113       GameParameters\&.TREE_US[1] = ((Long) data\&.get(ringUs + "y"))\&.intValue();
 114 
-115       GameParameters\&.TTEE_O[0] = ((Long) data\&.get(ringO+"x"))\&.intValue();
-116       GameParameters\&.TTEE_O[1] = ((Long) data\&.get(ringO+"y"))\&.intValue();
+115       GameParameters\&.TTEE_O[0] = ((Long) data\&.get(ringO + "x"))\&.intValue();
+116       GameParameters\&.TTEE_O[1] = ((Long) data\&.get(ringO + "y"))\&.intValue();
 117 
 118       if (GameParameters\&.Demo == GameParameters\&.DemoType\&.Beta) {
 119         GameParameters\&.Grid_UR[0] = 8;
 120         GameParameters\&.Grid_UR[1] = 8;
-121         
-122         switch(GameParameters\&.UsCorner) {
+121 
+122         switch (GameParameters\&.UsCorner) {
 123           case 0:
-124             int[] sc0 = {1,1,0};
+124             int[] sc0 = {1, 1, 0};
 125             GameParameters\&.SC = sc0;
-126             int[] scus0 = {0,0};
-127             GameParameters\&.SCUS= scus0;
+126             int[] scus0 = {0, 0};
+127             GameParameters\&.SCUS = scus0;
 128             break;
 129           case 1:
-130             int[] sc1 = {7,1,270};
+130             int[] sc1 = {7, 1, 270};
 131             GameParameters\&.SC = sc1;
-132             int[] scus1 = {8,0};
-133             GameParameters\&.SCUS= scus1;
+132             int[] scus1 = {8, 0};
+133             GameParameters\&.SCUS = scus1;
 134             break;
 135           case 2:
-136             int[] sc2 = {7,7,180};
+136             int[] sc2 = {7, 7, 180};
 137             GameParameters\&.SC = sc2;
-138             int[] scus2 = {8,8};
-139             GameParameters\&.SCUS= scus2;
+138             int[] scus2 = {8, 8};
+139             GameParameters\&.SCUS = scus2;
 140             break;
 141           case 3:
-142             int[] sc3 = {1,7,90};
+142             int[] sc3 = {1, 7, 90};
 143             GameParameters\&.SC = sc3;
-144             int[] scus3 = {0,8};
-145             GameParameters\&.SCUS= scus3;
+144             int[] scus3 = {0, 8};
+145             GameParameters\&.SCUS = scus3;
 146             break;
 147         }
-169       } else {
-170         GameParameters\&.Grid_UR[0] = 15;
-171         GameParameters\&.Grid_UR[1] = 9;
-172  
-173         switch(GameParameters\&.UsCorner) {
-174           case 0:
-175             int[] sc0 = {1,1,0};
-176             GameParameters\&.SC = sc0;
-177             int[] scus0 = {0,0};
-178             GameParameters\&.SCUS= scus0;
-179             break;
-180           case 1:
-181             int[] sc1 = {14,1,270};
-182             GameParameters\&.SC = sc1;
-183             int[] scus1 = {15,0};
-184             GameParameters\&.SCUS= scus1;
-185             break;
-186           case 2:
-187             int[] sc2 = {14,8,180};
-188             GameParameters\&.SC = sc2;
-189             int[] scus2= {15,9};
-190             GameParameters\&.SCUS= scus2;
-191             break;
-192           case 3:
-193             int[] sc3 = {1,8,90};
-194             GameParameters\&.SC = sc3;
-195             int[] scus3 = {0,9};
-196             GameParameters\&.SCUS= scus3;
-197             break;
-198         }
-238       }
-239       
-240       //set data read to true
-241     } catch (Exception e) {
-242       e\&.printStackTrace();
-243     }
-244   }
+165       } else {
+166         GameParameters\&.Grid_UR[0] = 15;
+167         GameParameters\&.Grid_UR[1] = 9;
+168 
+169         switch (GameParameters\&.UsCorner) {
+170           case 0:
+171             int[] sc0 = {1, 1, 0};
+172             GameParameters\&.SC = sc0;
+173             int[] scus0 = {0, 0};
+174             GameParameters\&.SCUS = scus0;
+175             break;
+176           case 1:
+177             int[] sc1 = {14, 1, 270};
+178             GameParameters\&.SC = sc1;
+179             int[] scus1 = {15, 0};
+180             GameParameters\&.SCUS = scus1;
+181             break;
+182           case 2:
+183             int[] sc2 = {14, 8, 180};
+184             GameParameters\&.SC = sc2;
+185             int[] scus2 = {15, 9};
+186             GameParameters\&.SCUS = scus2;
+187             break;
+188           case 3:
+189             int[] sc3 = {1, 8, 90};
+190             GameParameters\&.SC = sc3;
+191             int[] scus3 = {0, 9};
+192             GameParameters\&.SCUS = scus3;
+193             break;
+194         }
+226       }
+227 
+228       // set data read to true
+229     } catch (Exception e) {
+230       e\&.printStackTrace();
+231     }
+232   }
 .fi
 
 

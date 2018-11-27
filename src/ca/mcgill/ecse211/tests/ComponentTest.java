@@ -9,9 +9,7 @@ import ca.mcgill.ecse211.project.GameParameters;
 import ca.mcgill.ecse211.project.GameUtil;
 import ca.mcgill.ecse211.project.Navigation;
 import ca.mcgill.ecse211.project.RingSearcher;
-import ca.mcgill.ecse211.threads.SensorData;
 import lejos.hardware.Button;
-import lejos.hardware.Sound;
 
 /**
  * This singleton contains all the methods and structures necessary to test our robot and its
@@ -74,10 +72,11 @@ public enum ComponentTest {
     nav.travelToWithCorrection(4, 2, false);
     nav.travelToWithCorrection(0, 0, false);
   }
-  
+
   public static void tunnelTest() throws Exception {
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
-    GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+    GameUtil.searchingFinder =
+        new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
     GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
     Odometer.getOdometer().setXYT(1, 7, 90);
     navigation.goThroughTunnel();
@@ -120,41 +119,42 @@ public enum ComponentTest {
     Game.INSTANCE.usPoller.setStart(false);
     final RingSearcher searcher = new RingSearcher(Game.sensorMotor, Game.rodMotor);
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
-    GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+    GameUtil.searchingFinder =
+        new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
     GameUtil.startingFinder = new GameUtil.PathFinder(GameParameters.US_LL, GameParameters.US_UR);
     Odometer.getOdometer().setXYT(1, 1, 0);
-    int[] tree = {2,2};
-    int[][] other = {{2,1}, {3,2}, {2,3}, {1,2}};
-    for(int i = 0; i < 4; i++) {
-      navigation.travelToWithCorrection(other[i][0], other[i][1],false);
+    int[] tree = {2, 2};
+    int[][] other = {{2, 1}, {3, 2}, {2, 3}, {1, 2}};
+    for (int i = 0; i < 4; i++) {
+      navigation.travelToWithCorrection(other[i][0], other[i][1], false);
       navigation.turn(-90);
-      if(i != 3) {
+      if (i != 3) {
         navigation.searchRingSet(searcher, true, true);
-      }else {
+      } else {
         navigation.searchRingSet(searcher, true, false);
       }
     }
   }
-  
+
   public static void blackLineTest() throws OdometerExceptions {
-    // TODO Auto-generated method stub
     Navigation navi = new Navigation(Game.leftMotor, Game.rightMotor);
-    GameUtil.searchingFinder = new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
-    int[] arr1 = {0,0};
-    int[] arr2 = {0,0};
-    GameUtil.startingFinder = new GameUtil.PathFinder(arr1,arr2);
+    GameUtil.searchingFinder =
+        new GameUtil.PathFinder(GameParameters.Island_LL, GameParameters.Island_UR);
+    int[] arr1 = {0, 0};
+    int[] arr2 = {0, 0};
+    GameUtil.startingFinder = new GameUtil.PathFinder(arr1, arr2);
     int count = 0;
-   while(count <85) {
-     navi.moveOneTileWithCorrection(0);
-     count++;
-     if(count%7 ==0) {
-       navi.turn(90);
-     }
-   }
+    while (count < 85) {
+      navi.moveOneTileWithCorrection(0);
+      count++;
+      if (count % 7 == 0) {
+        navi.turn(90);
+      }
+    }
   }
-  
+
   public static void musicTest() {
     GameUtil.playMusic();
   }
-  
+
 }

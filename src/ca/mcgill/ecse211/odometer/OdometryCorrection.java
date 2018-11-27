@@ -1,6 +1,3 @@
-/*
- * OdometryCorrection.java
- */
 package ca.mcgill.ecse211.odometer;
 
 import ca.mcgill.ecse211.project.Game;

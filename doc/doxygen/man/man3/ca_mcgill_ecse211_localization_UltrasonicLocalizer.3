@@ -37,17 +37,17 @@ Kamy Moussavi Kafi
 .PP
 
 .PP
-Definition at line 21 of file UltrasonicLocalizer\&.java\&.
+Definition at line 20 of file UltrasonicLocalizer\&.java\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ca\&.mcgill\&.ecse211\&.localization\&.UltrasonicLocalizer\&.UltrasonicLocalizer (\fBNavigation\fP nav, EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor) throws \fBOdometerExceptions\fP"
-This is the class constructor for a class that helps to localize our robot with an ultrasonic sensor
+This is the class constructor for the \fBUltrasonicLocalizer\fP class
 .PP
 \fBParameters:\fP
 .RS 4
-\fIleftMotor\fP A EV3LargeRegularedMotor object instance that allows control of the left motor 
+\fIleftMotor\fP An EV3LargeRegularedMotor object instance that allows control of the left motor 
 .br
-\fIrightMotor\fP A EV3LargeRegularedMotor object instance that allows control of the right motor 
+\fIrightMotor\fP An EV3LargeRegularedMotor object instance that allows control of the right motor 
 .RE
 .PP
 \fBExceptions:\fP
@@ -57,21 +57,21 @@ This is the class constructor for a class that helps to localize our robot with 
 .PP
 
 .PP
-Definition at line 43 of file UltrasonicLocalizer\&.java\&.
+Definition at line 42 of file UltrasonicLocalizer\&.java\&.
 .PP
 .nf
-44                                                                    {
-45     this\&.odometer = Odometer\&.getOdometer();
-46     this\&.data = SensorData\&.getSensorData();
-47     this\&.navigation = nav;
-48     this\&.leftMotor = leftMotor;
-49     this\&.rightMotor = rightMotor;
-50   }
+43                                                                    {
+44     this\&.odometer = Odometer\&.getOdometer();
+45     this\&.data = SensorData\&.getSensorData();
+46     this\&.navigation = nav;
+47     this\&.leftMotor = leftMotor;
+48     this\&.rightMotor = rightMotor;
+49   }
 .fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.localization\&.UltrasonicLocalizer\&.localize (int buttonChoice)"
-Wrapper for risingEdge or falling edge methods\&. Left or Right button option\&.
+This method decides whether to use rising or falling edge localization based on which button is pressed on our EV3 brick\&.
 .PP
 \fBParameters:\fP
 .RS 4

@@ -37,22 +37,24 @@ static synchronized \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odom
 
 
 \subsection{Detailed Description}
-This class stores and provides thread safe access to the odometer data.
+This class stores and provides thread safe access to data required used by the \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} classes.
 
 \begin{DoxyAuthor}{Author}
-Rodrigo Silva 
+Caspar Cedro 
 
-Dirk Dubois 
+Percy Chen 
 
-Derek Yu 
+Patrick Erath 
 
-Karim El-\/\+Baba 
+Anssam Ghezala 
 
-Michael Smith 
+Susan Matuszewski 
+
+Kamy Moussavi Kafi 
 \end{DoxyAuthor}
 
 
-Definition at line 16 of file Odometer\+Data.\+java.
+Definition at line 17 of file Odometer\+Data.\+java.
 
 
 
@@ -63,7 +65,7 @@ Definition at line 16 of file Odometer\+Data.\+java.
 \subsubsection{\texorpdfstring{Odometer\+Data()}{OdometerData()}}
 {\footnotesize\ttfamily ca.\+mcgill.\+ecse211.\+odometer.\+Odometer\+Data.\+Odometer\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Default constructor. The constructor is private. A factory is used instead such that only one instance of this class is ever created. 
+This is the class constructor for the \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data}{Odometer\+Data} class. It cannot be instantiated externally. A factory is used instead such that only one instance of this class is ever created. 
 
 Definition at line 47 of file Odometer\+Data.\+java.
 
@@ -91,7 +93,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{get\+Odometer\+Data()}{getOdometerData()}}
 {\footnotesize\ttfamily static synchronized \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data}{Odometer\+Data} ca.\+mcgill.\+ecse211.\+odometer.\+Odometer\+Data.\+get\+Odometer\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
 
-\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data}{Odometer\+Data} factory. Returns an \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data}{Odometer\+Data} instance and makes sure that only one instance is ever created. If the user tries to instantiate multiple objects, the method throws a Multiple\+Odometer\+Data\+Exception.
+This method returns an \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data}{Odometer\+Data} instance and makes sure that only one instance is ever created.
 
 \begin{DoxyReturn}{Returns}
 An \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data}{Odometer\+Data} object 
@@ -103,23 +105,22 @@ An \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data}{Odomet
 \end{DoxyExceptions}
 
 
-Definition at line 61 of file Odometer\+Data.\+java.
+Definition at line 60 of file Odometer\+Data.\+java.
 
 
 \begin{DoxyCode}
-61                                                                                       \{
-62     \textcolor{keywordflow}{if} (odoData != null) \{ \textcolor{comment}{// Return existing object}
-63       \textcolor{keywordflow}{return} odoData;
-64     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numberOfIntances < MAX\_INSTANCES) \{ \textcolor{comment}{// create object and}
-65                                                    \textcolor{comment}{// return it}
-66       odoData = \textcolor{keyword}{new} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a91412854b75c41bf3af7c8892ec0fe87}{OdometerData}();
-67       numberOfIntances += 1;
-68       \textcolor{keywordflow}{return} odoData;
-69     \} \textcolor{keywordflow}{else} \{
-70       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} OdometerExceptions(\textcolor{stringliteral}{"Only one intance of the Odometer can be created."});
-71     \}
-72 
-73   \}
+60                                                                                       \{
+61     \textcolor{keywordflow}{if} (odoData != null) \{ \textcolor{comment}{// Return existing object}
+62       \textcolor{keywordflow}{return} odoData;
+63     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numberOfIntances < MAX\_INSTANCES) \{
+64       \textcolor{comment}{// create object and return it}
+65       odoData = \textcolor{keyword}{new} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a91412854b75c41bf3af7c8892ec0fe87}{OdometerData}();
+66       numberOfIntances += 1;
+67       \textcolor{keywordflow}{return} odoData;
+68     \} \textcolor{keywordflow}{else} \{
+69       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} OdometerExceptions(\textcolor{stringliteral}{"Only one intance of the Odometer can be created."});
+70     \}
+71   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -134,9 +135,7 @@ Here is the call graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{get\+X\+Y\+T()}{getXYT()}}
 {\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} ca.\+mcgill.\+ecse211.\+odometer.\+Odometer\+Data.\+get\+X\+YT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Return the Odomometer data. 
-
-Writes the current position and orientation of the robot onto the odo\+Data array. odo\+Data\mbox{[}0\mbox{]} = x, odo\+Data\mbox{[}1\mbox{]} = y; odo\+Data\mbox{[}2\mbox{]} = theta;
+This method returns the \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} data. Writes the current position and orientation of the robot onto the odo\+Data array. odo\+Data\mbox{[}0\mbox{]} = x, odo\+Data\mbox{[}1\mbox{]} = y; odo\+Data\mbox{[}2\mbox{]} = theta;
 
 
 \begin{DoxyParams}{Parameters}
@@ -148,36 +147,35 @@ the odometer data.
 \end{DoxyReturn}
 
 
-Definition at line 84 of file Odometer\+Data.\+java.
+Definition at line 81 of file Odometer\+Data.\+java.
 
 
 \begin{DoxyCode}
-84                            \{
-85     \textcolor{keywordtype}{double}[] position = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[4];
-86     lock.lock();
-87     \textcolor{keywordflow}{try} \{
-88       \textcolor{keywordflow}{while} (isReseting) \{ \textcolor{comment}{// If a reset operation is being executed, wait}
-89         \textcolor{comment}{// until it is over.}
-90         doneReseting.await(); \textcolor{comment}{// Using await() is lighter on the CPU}
-91         \textcolor{comment}{// than simple busy wait.}
-92       \}
-93 
-94       position[0] = x;
-95       position[1] = y;
-96       position[2] = theta;
-97 
-98     \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-99       \textcolor{comment}{// Print exception to screen}
-100       e.printStackTrace();
-101     \} \textcolor{keywordflow}{finally} \{
-102       lock.unlock();
-103     \}
-104 
-105     \textcolor{keywordflow}{return} position;
-106   \}
+81                            \{
+82     \textcolor{keywordtype}{double}[] position = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[4];
+83     lock.lock();
+84     \textcolor{keywordflow}{try} \{
+85       \textcolor{keywordflow}{while} (isReseting) \{ \textcolor{comment}{// If a reset operation is being executed, wait}
+86         \textcolor{comment}{// until it is over.}
+87         doneReseting.await(); \textcolor{comment}{// Using await() is lighter on the CPU}
+88         \textcolor{comment}{// than simple busy wait.}
+89       \}
+90 
+91       position[0] = x;
+92       position[1] = y;
+93       position[2] = theta;
+94 
+95     \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+96       \textcolor{comment}{// Print exception to screen}
+97       e.printStackTrace();
+98     \} \textcolor{keywordflow}{finally} \{
+99       lock.unlock();
+100     \}
+101 
+102     \textcolor{keywordflow}{return} position;
+103   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -199,25 +197,24 @@ Overrides theta. Use for odometry correction.
 \end{DoxyParams}
 
 
-Definition at line 197 of file Odometer\+Data.\+java.
+Definition at line 194 of file Odometer\+Data.\+java.
 
 
 \begin{DoxyCode}
-197                                      \{
-198     lock.lock();
-199     isReseting = \textcolor{keyword}{true};
-200     \textcolor{keywordflow}{try} \{
-201       this.theta = theta;
-202       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
-203       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
-204                                 \textcolor{comment}{// done reseting}
-205     \} \textcolor{keywordflow}{finally} \{
-206       lock.unlock();
-207     \}
-208   \}
+194                                      \{
+195     lock.lock();
+196     isReseting = \textcolor{keyword}{true};
+197     \textcolor{keywordflow}{try} \{
+198       this.theta = theta;
+199       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
+200       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
+201                                 \textcolor{comment}{// done reseting}
+202     \} \textcolor{keywordflow}{finally} \{
+203       lock.unlock();
+204     \}
+205   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -239,25 +236,24 @@ Overrides x. Use for odometry correction.
 \end{DoxyParams}
 
 
-Definition at line 161 of file Odometer\+Data.\+java.
+Definition at line 158 of file Odometer\+Data.\+java.
 
 
 \begin{DoxyCode}
-161                              \{
-162     lock.lock();
-163     isReseting = \textcolor{keyword}{true};
-164     \textcolor{keywordflow}{try} \{
-165       this.x = x;
-166       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
-167       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
-168                                 \textcolor{comment}{// done reseting}
-169     \} \textcolor{keywordflow}{finally} \{
-170       lock.unlock();
-171     \}
-172   \}
+158                              \{
+159     lock.lock();
+160     isReseting = \textcolor{keyword}{true};
+161     \textcolor{keywordflow}{try} \{
+162       this.x = x;
+163       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
+164       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
+165                                 \textcolor{comment}{// done reseting}
+166     \} \textcolor{keywordflow}{finally} \{
+167       lock.unlock();
+168     \}
+169   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -283,27 +279,26 @@ Overrides the values of x, y and theta. Use for odometry correction.
 \end{DoxyParams}
 
 
-Definition at line 141 of file Odometer\+Data.\+java.
+Definition at line 138 of file Odometer\+Data.\+java.
 
 
 \begin{DoxyCode}
-141                                                        \{
-142     lock.lock();
-143     isReseting = \textcolor{keyword}{true};
-144     \textcolor{keywordflow}{try} \{
-145       this.x = x;
-146       this.y = y;
-147       this.theta = theta;
-148       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
-149       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
-150                                 \textcolor{comment}{// done reseting}
-151     \} \textcolor{keywordflow}{finally} \{
-152       lock.unlock();
-153     \}
-154   \}
+138                                                        \{
+139     lock.lock();
+140     isReseting = \textcolor{keyword}{true};
+141     \textcolor{keywordflow}{try} \{
+142       this.x = x;
+143       this.y = y;
+144       this.theta = theta;
+145       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
+146       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
+147                                 \textcolor{comment}{// done reseting}
+148     \} \textcolor{keywordflow}{finally} \{
+149       lock.unlock();
+150     \}
+151   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -325,25 +320,24 @@ Overrides y. Use for odometry correction.
 \end{DoxyParams}
 
 
-Definition at line 179 of file Odometer\+Data.\+java.
+Definition at line 176 of file Odometer\+Data.\+java.
 
 
 \begin{DoxyCode}
-179                              \{
-180     lock.lock();
-181     isReseting = \textcolor{keyword}{true};
-182     \textcolor{keywordflow}{try} \{
-183       this.y = y;
-184       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
-185       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
-186                                 \textcolor{comment}{// done reseting}
-187     \} \textcolor{keywordflow}{finally} \{
-188       lock.unlock();
-189     \}
-190   \}
+176                              \{
+177     lock.lock();
+178     isReseting = \textcolor{keyword}{true};
+179     \textcolor{keywordflow}{try} \{
+180       this.y = y;
+181       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
+182       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
+183                                 \textcolor{comment}{// done reseting}
+184     \} \textcolor{keywordflow}{finally} \{
+185       lock.unlock();
+186     \}
+187   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -369,30 +363,29 @@ Adds dx, dy and dtheta to the current values of x, y and theta, respectively. Us
 \end{DoxyParams}
 
 
-Definition at line 116 of file Odometer\+Data.\+java.
+Definition at line 113 of file Odometer\+Data.\+java.
 
 
 \begin{DoxyCode}
-116                                                           \{
-117     lock.lock();
-118     isReseting = \textcolor{keyword}{true};
-119     \textcolor{keywordflow}{try} \{
-120       x += dx;
-121       y += dy;
-122       theta = (theta + (360 + dtheta) % 360) % 360; \textcolor{comment}{// keeps the updates}
-123                                                     \textcolor{comment}{// within 360}
-124                                                     \textcolor{comment}{// degrees}
-125       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
-126       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
-127                                 \textcolor{comment}{// done reseting}
-128     \} \textcolor{keywordflow}{finally} \{
-129       lock.unlock();
-130     \}
-131 
-132   \}
+113                                                           \{
+114     lock.lock();
+115     isReseting = \textcolor{keyword}{true};
+116     \textcolor{keywordflow}{try} \{
+117       x += dx;
+118       y += dy;
+119       theta = (theta + (360 + dtheta) % 360) % 360; \textcolor{comment}{// keeps the updates}
+120                                                     \textcolor{comment}{// within 360}
+121                                                     \textcolor{comment}{// degrees}
+122       isReseting = \textcolor{keyword}{false}; \textcolor{comment}{// Done reseting}
+123       doneReseting.signalAll(); \textcolor{comment}{// Let the other threads know that you are}
+124                                 \textcolor{comment}{// done reseting}
+125     \} \textcolor{keywordflow}{finally} \{
+126       lock.unlock();
+127     \}
+128 
+129   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -49,7 +49,8 @@ public class UltrasonicLocalizer {
   }
 
   /**
-   * Wrapper for risingEdge or falling edge methods. Left or Right button option.
+   * This method decides whether to use rising or falling edge localization based on which button is
+   * pressed on our EV3 brick.
    * 
    * @param buttonChoice The left or right button on the EV3 brick
    */
@@ -62,7 +63,8 @@ public class UltrasonicLocalizer {
   }
 
   /**
-   * Make the robot find North by using the rising edge, start facing left of x-axis wall
+   * This method helps our robot find north by using rising edge localization. We assume the robot
+   * starts by facing left of the x-axis wall.
    */
   private void risingEdge() {
     double angle1, angle2, theta = 0;
@@ -99,7 +101,8 @@ public class UltrasonicLocalizer {
   }
 
   /**
-   * Make the robot find North by using the falling edge, start facing top of y-axis wall
+   * This method helps our robot find north by using rising edge localization. We assume the robot
+   * starts by facing the top of the y-axis wall.
    */
   private void fallingEdge() {
     double angle1, angle2, theta = 0;
@@ -133,12 +136,13 @@ public class UltrasonicLocalizer {
       theta = upperAngleBound + (angle1 + angle2) / 2;
     navigation.turnTo(theta);
     odometer.setTheta(0);
-    // wait for any button pressure
+    // wait for any button press
   }
 
 
   /**
-   * Keep turning until robot is sure to have seen the wall. Takes 10 readings to be sure.
+   * This method keeps turning our robot towards a wall until it has detected one. We takes 10
+   * readings to be sure.
    */
   private void turnToWall() {
     int numberOfReadings = 0;
@@ -150,7 +154,8 @@ public class UltrasonicLocalizer {
   }
 
   /**
-   * Keep turning until robot is sure to have not seen the wall.
+   * This method keeps turning our robot away from a wall until it has detected no wall. We takes 10
+   * readings to be sure.
    */
   private void turnAwayFromWall() {
     int numberOfReadings = 0;

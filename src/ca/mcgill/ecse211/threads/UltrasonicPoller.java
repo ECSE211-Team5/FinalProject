@@ -18,7 +18,7 @@ import lejos.robotics.SampleProvider;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class UltrasonicPoller extends ThreadControl{
+public class UltrasonicPoller extends ThreadControl {
   private SampleProvider us;
   private SensorData cont;
   private float[] usData;
@@ -41,7 +41,7 @@ public class UltrasonicPoller extends ThreadControl{
     isStarted = true;
     WAIT_TIME = 30;
   }
-  
+
   /**
    * get us sensor data
    */

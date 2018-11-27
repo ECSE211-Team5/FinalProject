@@ -12,7 +12,7 @@ package ca.mcgill.ecse211.project;
  */
 public class ColorCalibrator {
   private static volatile Color currentColor;
-  private static int [] colour_frequency = {0, 0, 0, 0, 0};
+  private static int[] colour_frequency = {0, 0, 0, 0, 0};
 
   /**
    * This enumeration contains the possible colors of the ring under a light sensor
@@ -20,14 +20,15 @@ public class ColorCalibrator {
   public static enum Color {
     Orange, Green, Blue, Yellow, Other
   }
-  //this is v1
+  // this is v1
 
-  private final static int lowerYellowRBound = 9, lowerYellowGBound = 4, lowerBlueBBound = 3,lowerOrangeRBound = 8;
+  private final static int lowerYellowRBound = 9, lowerYellowGBound = 4, lowerBlueBBound = 3,
+      lowerOrangeRBound = 8;
 
   /**
-   * This method returns the color of the ring currently under the light sensor
-   * Instead of intervals, we use a pattern matching for detecting the color
-   * For more: reference the software and testing document
+   * This method returns the color of the ring currently under the light sensor Instead of
+   * intervals, we use a pattern matching for detecting the color For more: reference the software
+   * and testing document
    * 
    * @param r The red value to check for a ring
    * @param g The green value to check for a ring
@@ -35,13 +36,14 @@ public class ColorCalibrator {
    * @return A Color enumeration value
    */
   public static Color getColor(int r, int g, int b) {
-    if (r>3*g && b<3 && r>lowerOrangeRBound ) {
+    if (r > 3 * g && b < 3 && r > lowerOrangeRBound) {
       currentColor = Color.Orange;
-    } else if (g>r && b<3) {
+    } else if (g > r && b < 3) {
       currentColor = Color.Green;
-      }else if ((r>= lowerYellowRBound && g >= lowerYellowGBound) || ((r>= 7 && r <= 9) && (g >=0 && g <= 2))) {
+    } else if ((r >= lowerYellowRBound && g >= lowerYellowGBound)
+        || ((r >= 7 && r <= 9) && (g >= 0 && g <= 2))) {
       currentColor = Color.Yellow;
-    } else if ( (b >= lowerBlueBBound )) {
+    } else if ((b >= lowerBlueBBound)) {
       currentColor = Color.Blue;
     } else {
       currentColor = Color.Other;
@@ -61,30 +63,31 @@ public class ColorCalibrator {
     else
       return Color.Other;
   }
-  
-  /** 
-   * This method keeps track of how many of each colour were detected
-   * by increasing the count in the array
+
+  /**
+   * This method keeps track of how many of each colour were detected by increasing the count in the
+   * array
+   * 
    * @param c The Color detected by the light sensor
    */
   public static void setFrequency(Color c) {
     switch (c) {
       case Blue:
-        colour_frequency[1] ++;
+        colour_frequency[1]++;
         break;
       case Green:
-        colour_frequency[2] ++;
+        colour_frequency[2]++;
         break;
       case Yellow:
-        colour_frequency[3] ++;
+        colour_frequency[3]++;
         break;
       case Orange:
-        colour_frequency[4] ++;
+        colour_frequency[4]++;
       default:
         break;
     }
   }
-  
+
   /**
    * This method returns the most frequent colour detected from multiple samples
    * 
@@ -99,25 +102,26 @@ public class ColorCalibrator {
         c = getGetColor(i);
       }
     }
-    if(frequency == 0) {
+    if (frequency == 0) {
       c = Color.Other;
     }
     resetFrequency();
     return c;
   }
-  
+
   /**
    * This method resets the colour_frequency array to 0
    * 
    */
   public static void resetFrequency() {
-    for (int i = 0; i < colour_frequency.length; i ++) {
+    for (int i = 0; i < colour_frequency.length; i++) {
       colour_frequency[i] = 0;
     }
   }
-  
+
   /**
    * This method match integer to corresponding color
+   * 
    * @param i: an integer of [0,4]
    * @return: cooresponding color of the integer
    */
@@ -127,7 +131,7 @@ public class ColorCalibrator {
       case 0:
         c = Color.Other;
         break;
-      case 1: 
+      case 1:
         c = Color.Blue;
         break;
       case 2:

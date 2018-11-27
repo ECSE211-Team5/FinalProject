@@ -47,7 +47,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 22 of file Odometry\+Correction.\+java.
+Definition at line 20 of file Odometry\+Correction.\+java.
 
 
 
@@ -58,7 +58,7 @@ Definition at line 22 of file Odometry\+Correction.\+java.
 \subsubsection{\texorpdfstring{Odometry\+Correction()}{OdometryCorrection()}}
 {\footnotesize\ttfamily ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction.\+Odometry\+Correction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}}
 
-This is the default class constructor. An existing instance of the odometer is used. This is to ensure thread safety.
+This is the class constructor for the \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction}{Odometry\+Correction} class.
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -67,15 +67,14 @@ This is the default class constructor. An existing instance of the odometer is u
 \end{DoxyExceptions}
 
 
-Definition at line 38 of file Odometry\+Correction.\+java.
+Definition at line 35 of file Odometry\+Correction.\+java.
 
 
 \begin{DoxyCode}
-38                                                         \{
-39 
-40     this.odometer = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
-41 
-42   \}
+35                                                         \{
+36     \textcolor{comment}{// Utilize the singleton Odometer object instance for thread safety.}
+37     this.odometer = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
+38   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -93,7 +92,7 @@ Here is the call graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{do\+Correction()}{doCorrection()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction.\+do\+Correction (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
 
-This method corrects our robot\textquotesingle{}s odometer readings
+This method corrects our robot\textquotesingle{}s \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer}{Odometer} readings
 
 
 \begin{DoxyParams}{Parameters}
@@ -102,24 +101,24 @@ This method corrects our robot\textquotesingle{}s odometer readings
 \end{DoxyParams}
 
 
-Definition at line 99 of file Odometry\+Correction.\+java.
+Definition at line 95 of file Odometry\+Correction.\+java.
 
 
 \begin{DoxyCode}
-99                                          \{
-100     \textcolor{keywordtype}{double}[] position = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}();
-101     \textcolor{comment}{// Check that our robot's angle is within certain bounds and correct odometer if required.}
-102     \textcolor{keywordflow}{if} (angle < 5 || angle > 355) \{
-103       \textcolor{keywordtype}{int} sensorCoor = (int) Math.round(position[1] - SENSOR\_DIS / Game.TILE);
-104       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(sensorCoor + SENSOR\_DIS / Game.TILE);
-105     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (angle < 185 && angle > 175) \{
-106       \textcolor{keywordtype}{int} sensorCoor = (int) Math.round(position[1] + SENSOR\_DIS / Game.TILE);
-107       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(sensorCoor - SENSOR\_DIS / Game.TILE);
-108     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (angle < 95 && angle > 85) \{
-109       \textcolor{keywordtype}{int} sensorCoor = (int) Math.round(position[0] - SENSOR\_DIS / Game.TILE);
-110       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(sensorCoor + SENSOR\_DIS / Game.TILE);
-111     \}
-112   \}
+95                                          \{
+96     \textcolor{keywordtype}{double}[] position = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}();
+97     \textcolor{comment}{// Check that our robot's angle is within certain bounds and correct odometer if required.}
+98     \textcolor{keywordflow}{if} (angle < 5 || angle > 355) \{
+99       \textcolor{keywordtype}{int} sensorCoor = (int) Math.round(position[1] - SENSOR\_DIS / Game.TILE);
+100       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(sensorCoor + SENSOR\_DIS / Game.TILE);
+101     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (angle < 185 && angle > 175) \{
+102       \textcolor{keywordtype}{int} sensorCoor = (int) Math.round(position[1] + SENSOR\_DIS / Game.TILE);
+103       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(sensorCoor - SENSOR\_DIS / Game.TILE);
+104     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (angle < 95 && angle > 85) \{
+105       \textcolor{keywordtype}{int} sensorCoor = (int) Math.round(position[0] - SENSOR\_DIS / Game.TILE);
+106       odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(sensorCoor + SENSOR\_DIS / Game.TILE);
+107     \}
+108   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -134,7 +133,7 @@ Here is the call graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{run()}{run()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+odometer.\+Odometry\+Correction.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-When this thread starts, it will correct the rotation and position of the robot once a blackline is detected
+This method is called when this \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction}{Odometry\+Correction} object instance is started as a thread. Functionality wise it will correct the rotation and position of the robot once a black line is detected.
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -143,53 +142,52 @@ When this thread starts, it will correct the rotation and position of the robot 
 \end{DoxyExceptions}
 
 
-Definition at line 50 of file Odometry\+Correction.\+java.
+Definition at line 47 of file Odometry\+Correction.\+java.
 
 
 \begin{DoxyCode}
-50                     \{
-51     \textcolor{keywordtype}{long} correctionStart, correctionEnd;
-52     \textcolor{keywordtype}{boolean} onTopOfLine = \textcolor{keyword}{false};
+47                     \{
+48     \textcolor{keywordtype}{long} correctionStart, correctionEnd;
+49     \textcolor{keywordtype}{boolean} onTopOfLine = \textcolor{keyword}{false};
+50 
+51     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
+52       correctionStart = System.currentTimeMillis();
 53 
-54     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
-55       correctionStart = System.currentTimeMillis();
+54       \textcolor{comment}{// Fetch the sample at offset 0}
+55       myColorSample.fetchSample(sampleColor, 0);
 56 
-57       \textcolor{comment}{// TODO Trigger correction (When do I have information to correct?)}
-58       \textcolor{comment}{// Fetch the sample at offset 0}
-59       myColorSample.fetchSample(sampleColor, 0);
-60 
-61       \textcolor{comment}{// Check if sensor read black line and didn't already read the same one}
-62       \textcolor{keywordflow}{if} (sampleColor[0] < LINE\_COLOR\_THRESHOLD && !onTopOfLine) \{
+57       \textcolor{comment}{// Check if our light sensor has read a black line and is not already on top of one}
+58       \textcolor{keywordflow}{if} (sampleColor[0] < LINE\_COLOR\_THRESHOLD && !onTopOfLine) \{
+59 
+60         \textcolor{comment}{// New black line detected}
+61         Sound.beep();
+62         onTopOfLine = \textcolor{keyword}{true};
 63 
-64         \textcolor{comment}{// Sensed new line}
-65         Sound.beep();
-66         onTopOfLine = \textcolor{keyword}{true};
-67 
-68         \textcolor{keywordtype}{double} x = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}()[0];
-69         \textcolor{keywordtype}{double} y = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}()[1];
-70 
-71         \textcolor{keywordflow}{if} (Math.abs(x % TILE\_WIDTH) < Math.abs(y % TILE\_WIDTH)) \{
-72           odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(Math.round(x / TILE\_WIDTH) * TILE\_WIDTH);
-73         \} \textcolor{keywordflow}{else} \{
-74           odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(Math.round(y / TILE\_WIDTH) * TILE\_WIDTH);
-75         \}
-76 
-77       \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (sampleColor[0] > LINE\_COLOR\_THRESHOLD) \{
-78         \textcolor{comment}{// No longer on top of line, reset to false}
-79         onTopOfLine = \textcolor{keyword}{false};
-80       \}
-81 
-82       \textcolor{comment}{// this ensure the odometry correction occurs only once every period}
-83       correctionEnd = System.currentTimeMillis();
-84       \textcolor{keywordflow}{if} (correctionEnd - correctionStart < CORRECTION\_PERIOD) \{
-85         \textcolor{keywordflow}{try} \{
-86           Thread.sleep(CORRECTION\_PERIOD - (correctionEnd - correctionStart));
-87         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-88           \textcolor{comment}{// there is nothing to be done here}
-89         \}
-90       \}
-91     \}
-92   \}
+64         \textcolor{keywordtype}{double} x = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}()[0];
+65         \textcolor{keywordtype}{double} y = odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}()[1];
+66 
+67         \textcolor{keywordflow}{if} (Math.abs(x % TILE\_WIDTH) < Math.abs(y % TILE\_WIDTH)) \{
+68           odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(Math.round(x / TILE\_WIDTH) * TILE\_WIDTH);
+69         \} \textcolor{keywordflow}{else} \{
+70           odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(Math.round(y / TILE\_WIDTH) * TILE\_WIDTH);
+71         \}
+72 
+73       \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (sampleColor[0] > LINE\_COLOR\_THRESHOLD) \{
+74         \textcolor{comment}{// No longer on top of line, reset to false}
+75         onTopOfLine = \textcolor{keyword}{false};
+76       \}
+77 
+78       \textcolor{comment}{// this ensure the odometry correction occurs only once every period}
+79       correctionEnd = System.currentTimeMillis();
+80       \textcolor{keywordflow}{if} (correctionEnd - correctionStart < CORRECTION\_PERIOD) \{
+81         \textcolor{keywordflow}{try} \{
+82           Thread.sleep(CORRECTION\_PERIOD - (correctionEnd - correctionStart));
+83         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+84           \textcolor{comment}{// there is nothing to be done here}
+85         \}
+86       \}
+87     \}
+88   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

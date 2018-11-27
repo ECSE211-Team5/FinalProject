@@ -23,7 +23,7 @@ Inherits Runnable\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-This class is used to display the content of the odometer variables (x, y, Theta)
+This class is used to display the content of the odometer variables (x, y, Theta) on an EV3 brick display
 .PP
 \fBAuthor:\fP
 .RS 4
@@ -42,11 +42,11 @@ Kamy Moussavi Kafi
 .PP
 
 .PP
-Definition at line 19 of file Display\&.java\&.
+Definition at line 20 of file Display\&.java\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ca\&.mcgill\&.ecse211\&.project\&.Display\&.Display (TextLCD lcd) throws \fBOdometerExceptions\fP"
-This is the class constructor for a display object that controls an EV3 brick display
+This is the class constructor for the \fBDisplay\fP class
 .PP
 \fBParameters:\fP
 .RS 4
@@ -60,14 +60,14 @@ This is the class constructor for a display object that controls an EV3 brick di
 .PP
 
 .PP
-Definition at line 35 of file Display\&.java\&.
+Definition at line 36 of file Display\&.java\&.
 .PP
 .nf
-35                                                         {
-36     this\&.odo = Odometer\&.getOdometer();
-37     this\&.sensdata = SensorData\&.getSensorData();
-38     this\&.lcd = lcd;
-39   }
+36                                                         {
+37     this\&.odo = Odometer\&.getOdometer();
+38     this\&.sensdata = SensorData\&.getSensorData();
+39     this\&.lcd = lcd;
+40   }
 .fi
 .SS "ca\&.mcgill\&.ecse211\&.project\&.Display\&.Display (TextLCD lcd, long timeout) throws \fBOdometerExceptions\fP"
 This is the overloaded class constructor for a display object
@@ -86,75 +86,75 @@ This is the overloaded class constructor for a display object
 .PP
 
 .PP
-Definition at line 48 of file Display\&.java\&.
+Definition at line 49 of file Display\&.java\&.
 .PP
 .nf
-48                                                                       {
-49     odo = Odometer\&.getOdometer();
-50     this\&.timeout = timeout;
-51     this\&.lcd = lcd;
-52   }
+49                                                                       {
+50     odo = Odometer\&.getOdometer();
+51     this\&.timeout = timeout;
+52     this\&.lcd = lcd;
+53   }
 .fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Display\&.run ()"
 This method is called when the \fBDisplay\fP thread is started\&. 
 .PP
-Definition at line 57 of file Display\&.java\&.
+Definition at line 58 of file Display\&.java\&.
 .PP
 .nf
-57                     {
-58     lcd\&.clear();
-59 
-60     long updateStart, updateEnd;
-61 
-62     long tStart = System\&.currentTimeMillis();
-63 
-64     do {
-65       updateStart = System\&.currentTimeMillis();
-66 
-67       // Retrieve x, y and Theta information
-68       position = odo\&.getXYT();
-69       rgb = sensdata\&.getRGB();
-70 
-71       // Print x,y, and theta information
-72       DecimalFormat numberFormat = new DecimalFormat("######0\&.00");
-73       // The last two parameters to lcd\&.drawString denote the x and y coordinate to draw at\&.
-74    //   lcd\&.drawString("X: " + numberFormat\&.format(position[0]), 0, 0);
-75    //   lcd\&.drawString("Y: " + numberFormat\&.format(position[1]), 0, 1);
-76   //    lcd\&.drawString("T: " + numberFormat\&.format(position[2]), 0, 2);
-77 //      lcd\&.drawString("LL: " + numberFormat\&.format(sensdata\&.getL()[0]), 0, 3);
-78 //      lcd\&.drawString("LR: " + numberFormat\&.format(sensdata\&.getL()[1]), 0, 4);
-79 //      lcd\&.drawString("D: " + numberFormat\&.format(sensdata\&.getD()), 0, 5);
-80 
-81       lcd\&.drawString(String\&.format("(R: %d G: %d B: %d)", (int) rgb[0], (int) rgb[1], (int) rgb[2]),
-82           0, 4);
-83 //      if (ColorCalibrator\&.getColor((int) rgb[0], (int) rgb[1],
-84 //          (int) rgb[2]) != ColorCalibrator\&.Color\&.Other) {
-85 //        lcd\&.drawString("Object Detected", 0, 5);
-86 //      } else {
-87 //        // Draw whitespace on our display
-88 //        lcd\&.drawString("                   ", 0, 5);
-89 //      }
-90 
-91       lcd\&.drawString(String\&.format("%1$-10s", ColorCalibrator\&.getColor()\&.toString()), 0, 6);
-92       lcd\&.drawString("A:" + numberFormat\&.format(sensdata\&.getA()), 0, 7);
-93 
-94 //       lcd\&.drawString(String\&.format("(r: %d", (int)rgb[0]), 0, 3);
-95 //       lcd\&.drawString(String\&.format("(g: %d", (int)rgb[1]), 0, 4);
-96 //       lcd\&.drawString(String\&.format("(b: %d", (int)rgb[2]), 0, 5);
-97 
-98       // This ensures that the data is updated only once every period
-99       updateEnd = System\&.currentTimeMillis();
-100       if (updateEnd - updateStart < DISPLAY_PERIOD) {
-101         try {
-102           Thread\&.sleep(DISPLAY_PERIOD - (updateEnd - updateStart));
-103         } catch (InterruptedException e) {
-104           e\&.printStackTrace();
-105         }
-106       }
-107     } while ((updateEnd - tStart) <= timeout);
-108   }
+58                     {
+59     lcd\&.clear();
+60 
+61     long updateStart, updateEnd;
+62 
+63     long tStart = System\&.currentTimeMillis();
+64 
+65     do {
+66       updateStart = System\&.currentTimeMillis();
+67 
+68       // Retrieve x, y and Theta information
+69       position = odo\&.getXYT();
+70       rgb = sensdata\&.getRGB();
+71 
+72       // Print x,y, and theta information
+73       DecimalFormat numberFormat = new DecimalFormat("######0\&.00");
+74       // The last two parameters to lcd\&.drawString denote the x and y coordinate to draw at\&.
+75       // lcd\&.drawString("X: " + numberFormat\&.format(position[0]), 0, 0);
+76       // lcd\&.drawString("Y: " + numberFormat\&.format(position[1]), 0, 1);
+77       // lcd\&.drawString("T: " + numberFormat\&.format(position[2]), 0, 2);
+78       // lcd\&.drawString("LL: " + numberFormat\&.format(sensdata\&.getL()[0]), 0, 3);
+79       // lcd\&.drawString("LR: " + numberFormat\&.format(sensdata\&.getL()[1]), 0, 4);
+80       // lcd\&.drawString("D: " + numberFormat\&.format(sensdata\&.getD()), 0, 5);
+81 
+82       lcd\&.drawString(String\&.format("(R: %d G: %d B: %d)", (int) rgb[0], (int) rgb[1], (int) rgb[2]),
+83           0, 4);
+84       // if (ColorCalibrator\&.getColor((int) rgb[0], (int) rgb[1],
+85       // (int) rgb[2]) != ColorCalibrator\&.Color\&.Other) {
+86       // lcd\&.drawString("Object Detected", 0, 5);
+87       // } else {
+88       // // Draw whitespace on our display
+89       // lcd\&.drawString(" ", 0, 5);
+90       // }
+91 
+92       lcd\&.drawString(String\&.format("%1$-10s", ColorCalibrator\&.getColor()\&.toString()), 0, 6);
+93       lcd\&.drawString("A:" + numberFormat\&.format(sensdata\&.getA()), 0, 7);
+94 
+95       // lcd\&.drawString(String\&.format("(r: %d", (int)rgb[0]), 0, 3);
+96       // lcd\&.drawString(String\&.format("(g: %d", (int)rgb[1]), 0, 4);
+97       // lcd\&.drawString(String\&.format("(b: %d", (int)rgb[2]), 0, 5);
+98 
+99       // This ensures that the data is updated only once every period
+100       updateEnd = System\&.currentTimeMillis();
+101       if (updateEnd - updateStart < DISPLAY_PERIOD) {
+102         try {
+103           Thread\&.sleep(DISPLAY_PERIOD - (updateEnd - updateStart));
+104         } catch (InterruptedException e) {
+105           e\&.printStackTrace();
+106         }
+107       }
+108     } while ((updateEnd - tStart) <= timeout);
+109   }
 .fi
 
 

@@ -23,7 +23,7 @@ public class Main {
   /**
    * This variable stores the type of test that we want to perform
    */
-  //public static ComponentTest.Type testType = ComponentTest.Type.RingDetection;
+  // public static ComponentTest.Type testType = ComponentTest.Type.RingDetection;
 
   /**
    * This method is our main entry point - instantiate objects and halt until a button is pressed
@@ -41,7 +41,6 @@ public class Main {
             try {
               ComponentTest.musicTest();
             } catch (Exception e) {
-              // TODO Auto-generated catch block
               e.printStackTrace();
             }
           }
@@ -52,7 +51,6 @@ public class Main {
       Button.waitForAnyPress();
       System.exit(0);
     } catch (Exception e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
   }

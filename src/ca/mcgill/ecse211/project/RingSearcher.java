@@ -6,11 +6,10 @@ import ca.mcgill.ecse211.threads.SensorData;
 import lejos.hardware.Sound;
 import lejos.hardware.motor.BaseRegulatedMotor;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
-import lejos.hardware.motor.EV3MediumRegulatedMotor;
 
 /**
- * This class helps our robot to search for rings on a grid
- * itself as a thread will search and retrieve the rings
+ * This class helps our robot to search for rings on a grid itself as a thread will search and
+ * retrieve the rings
  * 
  * @author Caspar Cedro
  * @author Percy Chen
@@ -19,7 +18,7 @@ import lejos.hardware.motor.EV3MediumRegulatedMotor;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class RingSearcher{
+public class RingSearcher {
   private static final int ROD_RETRIEVE = 80;
   private static final int ROD_PREPARE = 170;
   private static final int SENSOR_ROTATION = -100;
@@ -55,15 +54,15 @@ public class RingSearcher{
   }
 
   /**
-   * This method searches for the ring and identify its color based using the rod,
-   * It will beep based on the color of the ring
+   * This method searches for the ring and identify its color based using the rod, It will beep
+   * based on the color of the ring
    * 
    */
-  public void  search() {
+  public void search() {
     sensorMotor.rotate(SENSOR_ROTATION);
     sensorMotor.rotate(-SENSOR_ROTATION);
 
-    //determine most frequent colour detected and beep accordingly
+    // determine most frequent colour detected and beep accordingly
     Game.INSTANCE.rgbPoller.setStart(false);
     switch (ColorCalibrator.getMostFrequenct()) {
       case Orange:
@@ -90,40 +89,40 @@ public class RingSearcher{
         break;
     }
     Game.INSTANCE.rgbPoller.setStart(true);
-  }  
-  
+  }
+
   /**
    * This method put the sensor to search rotation to be ready for the searching
    */
   public void prepareSearch() {
     sensorMotor.rotate(SENSOR_ROTATION);
   }
-  
+
   /**
    * This method put the sensor back
    */
   public void resetSearch() {
     sensorMotor.rotateTo(0);
   }
-  
+
   /**
    * This method rotate the rod to a suitable position for retrieve the ring
    */
   public void prepareRetrieve() {
     rodMotor.rotate(ROD_PREPARE);
   }
-  
+
   /**
    * this method retrieve the searched ring
    */
   public void retrieveRing() {
     rodMotor.rotate(ROD_RETRIEVE);
   }
-  
+
   /**
    * Rotate the rod back to the original position
    */
   public void resetRodMotor() {
-    rodMotor.rotate(-(ROD_PREPARE+ROD_RETRIEVE));
+    rodMotor.rotate(-(ROD_PREPARE + ROD_RETRIEVE));
   }
 }

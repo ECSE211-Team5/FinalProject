@@ -2,7 +2,6 @@ package ca.mcgill.ecse211.threads;
 
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
 import ca.mcgill.ecse211.project.ColorCalibrator;
-import lejos.hardware.Sound;
 import lejos.robotics.SampleProvider;
 
 /**
@@ -15,7 +14,7 @@ import lejos.robotics.SampleProvider;
  * @author Susan Matuszewski
  * @author Kamy Moussavi Kafi
  */
-public class RGBPoller extends LightPoller{
+public class RGBPoller extends LightPoller {
 
   /**
    * This constructor creates an instance of the RGBPoller class to provide color data from an light
@@ -27,7 +26,8 @@ public class RGBPoller extends LightPoller{
    * @param cont A SensorData object that is used to process color data.
    * @throws OdometerExceptions
    */
-  public RGBPoller(SampleProvider us[], float[][] usData, SensorData cont) throws OdometerExceptions {
+  public RGBPoller(SampleProvider us[], float[][] usData, SensorData cont)
+      throws OdometerExceptions {
     super(us, usData, cont);
     isStarted = true;
   }
@@ -60,7 +60,7 @@ public class RGBPoller extends LightPoller{
         ColorCalibrator.setFrequency(ColorCalibrator.Color.Other);
         break;
     }
-    
-    
+
+
   }
 }

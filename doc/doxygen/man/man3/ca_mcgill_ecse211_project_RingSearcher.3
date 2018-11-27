@@ -52,7 +52,7 @@ Kamy Moussavi Kafi
 .PP
 
 .PP
-Definition at line 22 of file RingSearcher\&.java\&.
+Definition at line 21 of file RingSearcher\&.java\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.RingSearcher (EV3LargeRegulatedMotor sensorMotor, EV3LargeRegulatedMotor rodMotor) throws \fBOdometerExceptions\fP"
@@ -72,112 +72,112 @@ This class provides method to check if there is a ring and if the ring is the co
 .PP
 
 .PP
-Definition at line 43 of file RingSearcher\&.java\&.
+Definition at line 42 of file RingSearcher\&.java\&.
 .PP
 .nf
-44                                 {
-45     this\&.odometer = Odometer\&.getOdometer();
-46     this\&.sensorMotor = sensorMotor;
-47     this\&.rodMotor = rodMotor;
-48     rodMotor\&.setSpeed(ROD_SPEED);
-49     this\&.sensorMotor\&.setSpeed(SENSOR_SPEED);
-50     data = SensorData\&.getSensorData();
-51     for (BaseRegulatedMotor motor : new BaseRegulatedMotor[] {this\&.sensorMotor, this\&.rodMotor}) {
-52       motor\&.stop();
-53       motor\&.setAcceleration(ACCELERATION);
-54     }
-55   }
+43                                 {
+44     this\&.odometer = Odometer\&.getOdometer();
+45     this\&.sensorMotor = sensorMotor;
+46     this\&.rodMotor = rodMotor;
+47     rodMotor\&.setSpeed(ROD_SPEED);
+48     this\&.sensorMotor\&.setSpeed(SENSOR_SPEED);
+49     data = SensorData\&.getSensorData();
+50     for (BaseRegulatedMotor motor : new BaseRegulatedMotor[] {this\&.sensorMotor, this\&.rodMotor}) {
+51       motor\&.stop();
+52       motor\&.setAcceleration(ACCELERATION);
+53     }
+54   }
 .fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.prepareRetrieve ()"
 This method rotate the rod to a suitable position for retrieve the ring 
 .PP
-Definition at line 112 of file RingSearcher\&.java\&.
+Definition at line 111 of file RingSearcher\&.java\&.
 .PP
 .nf
-112                                 {
-113     rodMotor\&.rotate(ROD_PREPARE);
-114   }
+111                                 {
+112     rodMotor\&.rotate(ROD_PREPARE);
+113   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.prepareSearch ()"
 This method put the sensor to search rotation to be ready for the searching 
 .PP
-Definition at line 98 of file RingSearcher\&.java\&.
+Definition at line 97 of file RingSearcher\&.java\&.
 .PP
 .nf
-98                               {
-99     sensorMotor\&.rotate(SENSOR_ROTATION);
-100   }
+97                               {
+98     sensorMotor\&.rotate(SENSOR_ROTATION);
+99   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.resetRodMotor ()"
 Rotate the rod back to the original position 
 .PP
-Definition at line 126 of file RingSearcher\&.java\&.
+Definition at line 125 of file RingSearcher\&.java\&.
 .PP
 .nf
-126                               {
-127     rodMotor\&.rotate(-(ROD_PREPARE+ROD_RETRIEVE));
-128   }
+125                               {
+126     rodMotor\&.rotate(-(ROD_PREPARE + ROD_RETRIEVE));
+127   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.resetSearch ()"
 This method put the sensor back 
 .PP
-Definition at line 105 of file RingSearcher\&.java\&.
+Definition at line 104 of file RingSearcher\&.java\&.
 .PP
 .nf
-105                             {
-106     sensorMotor\&.rotateTo(0);
-107   }
+104                             {
+105     sensorMotor\&.rotateTo(0);
+106   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.retrieveRing ()"
 this method retrieve the searched ring 
 .PP
-Definition at line 119 of file RingSearcher\&.java\&.
+Definition at line 118 of file RingSearcher\&.java\&.
 .PP
 .nf
-119                              {
-120     rodMotor\&.rotate(ROD_RETRIEVE);
-121   }
+118                              {
+119     rodMotor\&.rotate(ROD_RETRIEVE);
+120   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.RingSearcher\&.search ()"
 This method searches for the ring and identify its color based using the rod, It will beep based on the color of the ring 
 .PP
-Definition at line 62 of file RingSearcher\&.java\&.
+Definition at line 61 of file RingSearcher\&.java\&.
 .PP
 .nf
-62                         {
-63     sensorMotor\&.rotate(SENSOR_ROTATION);
-64     sensorMotor\&.rotate(-SENSOR_ROTATION);
-65 
-66     //determine most frequent colour detected and beep accordingly
-67     Game\&.INSTANCE\&.rgbPoller\&.setStart(false);
-68     switch (ColorCalibrator\&.getMostFrequenct()) {
-69       case Orange:
+61                        {
+62     sensorMotor\&.rotate(SENSOR_ROTATION);
+63     sensorMotor\&.rotate(-SENSOR_ROTATION);
+64 
+65     // determine most frequent colour detected and beep accordingly
+66     Game\&.INSTANCE\&.rgbPoller\&.setStart(false);
+67     switch (ColorCalibrator\&.getMostFrequenct()) {
+68       case Orange:
+69         Sound\&.beep();
 70         Sound\&.beep();
 71         Sound\&.beep();
 72         Sound\&.beep();
-73         Sound\&.beep();
-74         break;
-75       case Yellow:
+73         break;
+74       case Yellow:
+75         Sound\&.beep();
 76         Sound\&.beep();
 77         Sound\&.beep();
-78         Sound\&.beep();
-79         break;
-80       case Green:
+78         break;
+79       case Green:
+80         Sound\&.beep();
 81         Sound\&.beep();
-82         Sound\&.beep();
-83         break;
-84       case Blue:
-85         Sound\&.beep();
-86         break;
-87       case Other:
-88         break;
-89       default:
-90         break;
-91     }
-92     Game\&.INSTANCE\&.rgbPoller\&.setStart(true);
-93   }  
+82         break;
+83       case Blue:
+84         Sound\&.beep();
+85         break;
+86       case Other:
+87         break;
+88       default:
+89         break;
+90     }
+91     Game\&.INSTANCE\&.rgbPoller\&.setStart(true);
+92   }
 .fi
 
 

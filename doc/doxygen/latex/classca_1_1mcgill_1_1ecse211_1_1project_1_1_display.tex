@@ -30,7 +30,7 @@ void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_ab508a8bc2b7
 
 
 \subsection{Detailed Description}
-This class is used to display the content of the odometer variables (x, y, Theta)
+This class is used to display the content of the odometer variables (x, y, Theta) on an E\+V3 brick display
 
 \begin{DoxyAuthor}{Author}
 Caspar Cedro 
@@ -47,7 +47,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 19 of file Display.\+java.
+Definition at line 20 of file Display.\+java.
 
 
 
@@ -58,7 +58,7 @@ Definition at line 19 of file Display.\+java.
 \subsubsection{\texorpdfstring{Display()}{Display()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily ca.\+mcgill.\+ecse211.\+project.\+Display.\+Display (\begin{DoxyParamCaption}\item[{Text\+L\+CD}]{lcd }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}}
 
-This is the class constructor for a display object that controls an E\+V3 brick display
+This is the class constructor for the \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_display}{Display} class
 
 
 \begin{DoxyParams}{Parameters}
@@ -72,15 +72,15 @@ This is the class constructor for a display object that controls an E\+V3 brick 
 \end{DoxyExceptions}
 
 
-Definition at line 35 of file Display.\+java.
+Definition at line 36 of file Display.\+java.
 
 
 \begin{DoxyCode}
-35                                                         \{
-36     this.odo = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
-37     this.sensdata = SensorData.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}{getSensorData}();
-38     this.lcd = lcd;
-39   \}
+36                                                         \{
+37     this.odo = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
+38     this.sensdata = SensorData.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a8260aba53b4474ca1275e4ce26157977}{getSensorData}();
+39     this.lcd = lcd;
+40   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -111,15 +111,15 @@ This is the overloaded class constructor for a display object
 \end{DoxyExceptions}
 
 
-Definition at line 48 of file Display.\+java.
+Definition at line 49 of file Display.\+java.
 
 
 \begin{DoxyCode}
-48                                                                       \{
-49     odo = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
-50     this.timeout = timeout;
-51     this.lcd = lcd;
-52   \}
+49                                                                       \{
+50     odo = Odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_a99171f11e34dea918fa9dd069d721439}{getOdometer}();
+51     this.timeout = timeout;
+52     this.lcd = lcd;
+53   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -139,62 +139,62 @@ Here is the call graph for this function\+:\nopagebreak
 
 This method is called when the \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_display}{Display} thread is started. 
 
-Definition at line 57 of file Display.\+java.
+Definition at line 58 of file Display.\+java.
 
 
 \begin{DoxyCode}
-57                     \{
-58     lcd.clear();
-59 
-60     \textcolor{keywordtype}{long} updateStart, updateEnd;
-61 
-62     \textcolor{keywordtype}{long} tStart = System.currentTimeMillis();
-63 
-64     \textcolor{keywordflow}{do} \{
-65       updateStart = System.currentTimeMillis();
-66 
-67       \textcolor{comment}{// Retrieve x, y and Theta information}
-68       position = odo.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}();
-69       rgb = sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a76313564e284f5cdb66aefce4e595f3b}{getRGB}();
-70 
-71       \textcolor{comment}{// Print x,y, and theta information}
-72       DecimalFormat numberFormat = \textcolor{keyword}{new} DecimalFormat(\textcolor{stringliteral}{"######0.00"});
-73       \textcolor{comment}{// The last two parameters to lcd.drawString denote the x and y coordinate to draw at.}
-74    \textcolor{comment}{//   lcd.drawString("X: " + numberFormat.format(position[0]), 0, 0);}
-75    \textcolor{comment}{//   lcd.drawString("Y: " + numberFormat.format(position[1]), 0, 1);}
-76   \textcolor{comment}{//    lcd.drawString("T: " + numberFormat.format(position[2]), 0, 2);}
-77 \textcolor{comment}{//      lcd.drawString("LL: " + numberFormat.format(sensdata.getL()[0]), 0, 3);}
-78 \textcolor{comment}{//      lcd.drawString("LR: " + numberFormat.format(sensdata.getL()[1]), 0, 4);}
-79 \textcolor{comment}{//      lcd.drawString("D: " + numberFormat.format(sensdata.getD()), 0, 5);}
-80 
-81       lcd.drawString(String.format(\textcolor{stringliteral}{"(R: %d G: %d B: %d)"}, (\textcolor{keywordtype}{int}) rgb[0], (\textcolor{keywordtype}{int}) rgb[1], (\textcolor{keywordtype}{int}) rgb[2]),
-82           0, 4);
-83 \textcolor{comment}{//      if (ColorCalibrator.getColor((int) rgb[0], (int) rgb[1],}
-84 \textcolor{comment}{//          (int) rgb[2]) != ColorCalibrator.Color.Other) \{}
-85 \textcolor{comment}{//        lcd.drawString("Object Detected", 0, 5);}
-86 \textcolor{comment}{//      \} else \{}
-87 \textcolor{comment}{//        // Draw whitespace on our display}
-88 \textcolor{comment}{//        lcd.drawString("                   ", 0, 5);}
-89 \textcolor{comment}{//      \}}
-90 
-91       lcd.drawString(String.format(\textcolor{stringliteral}{"%1$-10s"}, ColorCalibrator.getColor().toString()), 0, 6);
-92       lcd.drawString(\textcolor{stringliteral}{"A:"} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6}{getA}()), 0, 7);
-93 
-94 \textcolor{comment}{//       lcd.drawString(String.format("(r: %d", (int)rgb[0]), 0, 3);}
-95 \textcolor{comment}{//       lcd.drawString(String.format("(g: %d", (int)rgb[1]), 0, 4);}
-96 \textcolor{comment}{//       lcd.drawString(String.format("(b: %d", (int)rgb[2]), 0, 5);}
-97 
-98       \textcolor{comment}{// This ensures that the data is updated only once every period}
-99       updateEnd = System.currentTimeMillis();
-100       \textcolor{keywordflow}{if} (updateEnd - updateStart < DISPLAY\_PERIOD) \{
-101         \textcolor{keywordflow}{try} \{
-102           Thread.sleep(DISPLAY\_PERIOD - (updateEnd - updateStart));
-103         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-104           e.printStackTrace();
-105         \}
-106       \}
-107     \} \textcolor{keywordflow}{while} ((updateEnd - tStart) <= timeout);
-108   \}
+58                     \{
+59     lcd.clear();
+60 
+61     \textcolor{keywordtype}{long} updateStart, updateEnd;
+62 
+63     \textcolor{keywordtype}{long} tStart = System.currentTimeMillis();
+64 
+65     \textcolor{keywordflow}{do} \{
+66       updateStart = System.currentTimeMillis();
+67 
+68       \textcolor{comment}{// Retrieve x, y and Theta information}
+69       position = odo.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a8f40f0264c68f0cbed4fff1723ae7863}{getXYT}();
+70       rgb = sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a76313564e284f5cdb66aefce4e595f3b}{getRGB}();
+71 
+72       \textcolor{comment}{// Print x,y, and theta information}
+73       DecimalFormat numberFormat = \textcolor{keyword}{new} DecimalFormat(\textcolor{stringliteral}{"######0.00"});
+74       \textcolor{comment}{// The last two parameters to lcd.drawString denote the x and y coordinate to draw at.}
+75       \textcolor{comment}{// lcd.drawString("X: " + numberFormat.format(position[0]), 0, 0);}
+76       \textcolor{comment}{// lcd.drawString("Y: " + numberFormat.format(position[1]), 0, 1);}
+77       \textcolor{comment}{// lcd.drawString("T: " + numberFormat.format(position[2]), 0, 2);}
+78       \textcolor{comment}{// lcd.drawString("LL: " + numberFormat.format(sensdata.getL()[0]), 0, 3);}
+79       \textcolor{comment}{// lcd.drawString("LR: " + numberFormat.format(sensdata.getL()[1]), 0, 4);}
+80       \textcolor{comment}{// lcd.drawString("D: " + numberFormat.format(sensdata.getD()), 0, 5);}
+81 
+82       lcd.drawString(String.format(\textcolor{stringliteral}{"(R: %d G: %d B: %d)"}, (\textcolor{keywordtype}{int}) rgb[0], (\textcolor{keywordtype}{int}) rgb[1], (\textcolor{keywordtype}{int}) rgb[2]),
+83           0, 4);
+84       \textcolor{comment}{// if (ColorCalibrator.getColor((int) rgb[0], (int) rgb[1],}
+85       \textcolor{comment}{// (int) rgb[2]) != ColorCalibrator.Color.Other) \{}
+86       \textcolor{comment}{// lcd.drawString("Object Detected", 0, 5);}
+87       \textcolor{comment}{// \} else \{}
+88       \textcolor{comment}{// // Draw whitespace on our display}
+89       \textcolor{comment}{// lcd.drawString(" ", 0, 5);}
+90       \textcolor{comment}{// \}}
+91 
+92       lcd.drawString(String.format(\textcolor{stringliteral}{"%1$-10s"}, ColorCalibrator.getColor().toString()), 0, 6);
+93       lcd.drawString(\textcolor{stringliteral}{"A:"} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6}{getA}()), 0, 7);
+94 
+95       \textcolor{comment}{// lcd.drawString(String.format("(r: %d", (int)rgb[0]), 0, 3);}
+96       \textcolor{comment}{// lcd.drawString(String.format("(g: %d", (int)rgb[1]), 0, 4);}
+97       \textcolor{comment}{// lcd.drawString(String.format("(b: %d", (int)rgb[2]), 0, 5);}
+98 
+99       \textcolor{comment}{// This ensures that the data is updated only once every period}
+100       updateEnd = System.currentTimeMillis();
+101       \textcolor{keywordflow}{if} (updateEnd - updateStart < DISPLAY\_PERIOD) \{
+102         \textcolor{keywordflow}{try} \{
+103           Thread.sleep(DISPLAY\_PERIOD - (updateEnd - updateStart));
+104         \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+105           e.printStackTrace();
+106         \}
+107       \}
+108     \} \textcolor{keywordflow}{while} ((updateEnd - tStart) <= timeout);
+109   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

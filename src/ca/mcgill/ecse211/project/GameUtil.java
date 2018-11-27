@@ -26,9 +26,10 @@ public class GameUtil {
   public static char rightInstruction = 'R';
   public static char upInstruction = 'U';
   public static char downInstruction = 'D';
-  
+
   /**
    * This is class is used as a comparator to sort the points from nearest to the robot.
+   * 
    * @author Caspar Cedro
    * @author Percy Chen
    * @author Patrick Erath
@@ -37,7 +38,7 @@ public class GameUtil {
    * @author Kamy Moussavi Kafi
    *
    */
-  public static class RobotComparator implements Comparator<int[]>{
+  public static class RobotComparator implements Comparator<int[]> {
     @Override
     public int compare(int[] a, int[] b) {
       double[] point = new double[2];
@@ -46,12 +47,14 @@ public class GameUtil {
       } catch (OdometerExceptions e) {
         e.printStackTrace();
       }
-       return (int)(GameUtil.distanceFrom(a[0], a[1], point) - GameUtil.distanceFrom(b[0], b[1], point));
+      return (int) (GameUtil.distanceFrom(a[0], a[1], point)
+          - GameUtil.distanceFrom(b[0], b[1], point));
     }
   }
-  
+
   /**
    * This is class is used as a comparator to sort the points from nearest to the ring set.
+   * 
    * @author Caspar Cedro
    * @author Percy Chen
    * @author Patrick Erath
@@ -60,19 +63,21 @@ public class GameUtil {
    * @author Kamy Moussavi Kafi
    *
    */
-  public static class RingSetComparator implements Comparator<int[]>{
+  public static class RingSetComparator implements Comparator<int[]> {
     @Override
     public int compare(int[] a, int[] b) {
       double[] point = new double[2];
-      for(int i = 0; i < point.length; i++) {
+      for (int i = 0; i < point.length; i++) {
         point[i] = GameParameters.TREE_US[i];
       }
-      return (int)(GameUtil.distanceFrom(a[0], a[1], point) - GameUtil.distanceFrom(b[0], b[1], point));
+      return (int) (GameUtil.distanceFrom(a[0], a[1], point)
+          - GameUtil.distanceFrom(b[0], b[1], point));
     }
   }
-  
+
   /**
    * This is class is used as a comparator to sort the points from nearest to the starting point.
+   * 
    * @author Caspar Cedro
    * @author Percy Chen
    * @author Patrick Erath
@@ -81,17 +86,18 @@ public class GameUtil {
    * @author Kamy Moussavi Kafi
    *
    */
-  public static class StartingComparator implements Comparator<int[]>{
+  public static class StartingComparator implements Comparator<int[]> {
     @Override
     public int compare(int[] a, int[] b) {
       double[] point = new double[2];
-      for(int i = 0; i < point.length; i++) {
+      for (int i = 0; i < point.length; i++) {
         point[i] = GameParameters.SC[i];
       }
-      return (int)(GameUtil.distanceFrom(a[0], a[1], point) - GameUtil.distanceFrom(b[0], b[1], point));
+      return (int) (GameUtil.distanceFrom(a[0], a[1], point)
+          - GameUtil.distanceFrom(b[0], b[1], point));
     }
   }
-  
+
   /**
    * Class that find the shortest path from one point to another with constraints inside one area
    * 
@@ -207,11 +213,11 @@ public class GameUtil {
     private ArrayList<Integer> getChildren(int i) {
       ArrayList<Integer> children = new ArrayList<Integer>();
       int[] coor = indexToCoor(i);
-      //get all points that are adjacent to p
+      // get all points that are adjacent to p
       int[][] connectedP = {{coor[0] - 1, coor[1]}, {coor[0] + 1, coor[1]}, {coor[0], coor[1] + 1},
           {coor[0], coor[1] - 1}};
       for (int[] p : connectedP) {
-        //check if the point is in the area and is safe
+        // check if the point is in the area and is safe
         if (p[0] >= ll[0] && p[0] <= ur[0] && p[1] >= ll[1] && p[1] <= ur[1] && isSafe(p)) {
           children.add(coordinateToIndex(p));
         }
@@ -240,7 +246,7 @@ public class GameUtil {
       int[] coor = {i % (width + 1) + ll[0], i / (width + 1) + ll[1]};
       return coor;
     }
-  } //end of class PathFinder
+  } // end of class PathFinder
 
   /**
    * check if one coordinate is safe based on (it is not a wall, tree or inside a tunnel)
@@ -284,7 +290,7 @@ public class GameUtil {
    * @return
    */
   public static double distanceFrom(int x, int y, double[] position) {
-      return (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
+    return (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
   }
 
   /**
@@ -306,7 +312,6 @@ public class GameUtil {
           distance = thisDistance;
         }
       } catch (OdometerExceptions e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       }
     }
@@ -315,6 +320,7 @@ public class GameUtil {
 
   /**
    * Check if a given point is boundary
+   * 
    * @param coor: the point to input
    * @return: whether the given point is on the boundary of an island
    */
@@ -332,8 +338,8 @@ public class GameUtil {
 
     return onLY || onRY || onLX || onUX;
   }
-  
+
   public static void playMusic() {
-    Sound.playSample(new File("Pen.wav"),100);
+    Sound.playSample(new File("Pen.wav"), 100);
   }
 }

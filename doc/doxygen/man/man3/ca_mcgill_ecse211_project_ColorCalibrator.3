@@ -78,24 +78,25 @@ A Color enumeration value
 .PP
 
 .PP
-Definition at line 37 of file ColorCalibrator\&.java\&.
+Definition at line 38 of file ColorCalibrator\&.java\&.
 .PP
 .nf
-37                                                     {
-38     if (r>3*g && b<3 && r>lowerOrangeRBound ) {
-39       currentColor = Color\&.Orange;
-40     } else if (g>r && b<3) {
-41       currentColor = Color\&.Green;
-42       }else if ((r>= lowerYellowRBound && g >= lowerYellowGBound) || ((r>= 7 && r <= 9) && (g >=0 && g <= 2))) {
-43       currentColor = Color\&.Yellow;
-44     } else if ( (b >= lowerBlueBBound )) {
-45       currentColor = Color\&.Blue;
-46     } else {
-47       currentColor = Color\&.Other;
-48     }
-49 
-50     return currentColor;
-51   }
+38                                                     {
+39     if (r > 3 * g && b < 3 && r > lowerOrangeRBound) {
+40       currentColor = Color\&.Orange;
+41     } else if (g > r && b < 3) {
+42       currentColor = Color\&.Green;
+43     } else if ((r >= lowerYellowRBound && g >= lowerYellowGBound)
+44         || ((r >= 7 && r <= 9) && (g >= 0 && g <= 2))) {
+45       currentColor = Color\&.Yellow;
+46     } else if ((b >= lowerBlueBBound)) {
+47       currentColor = Color\&.Blue;
+48     } else {
+49       currentColor = Color\&.Other;
+50     }
+51 
+52     return currentColor;
+53   }
 .fi
 .SS "static Color ca\&.mcgill\&.ecse211\&.project\&.ColorCalibrator\&.getColor ()\fC [static]\fP"
 This method gets the last color of the ring under the light sensor
@@ -107,18 +108,18 @@ current color detected by the lightSensor
 .PP
 
 .PP
-Definition at line 58 of file ColorCalibrator\&.java\&.
+Definition at line 60 of file ColorCalibrator\&.java\&.
 .PP
 .nf
-58                                  {
-59     if (currentColor != null)
-60       return currentColor;
-61     else
-62       return Color\&.Other;
-63   }
+60                                  {
+61     if (currentColor != null)
+62       return currentColor;
+63     else
+64       return Color\&.Other;
+65   }
 .fi
 .SS "static Color ca\&.mcgill\&.ecse211\&.project\&.ColorCalibrator\&.getGetColor (int i)\fC [static]\fP"
-This method match integer to corresponding color 
+This method match integer to corresponding color
 .PP
 \fBParameters:\fP
 .RS 4
@@ -132,30 +133,30 @@ This method match integer to corresponding color
 .PP
 
 .PP
-Definition at line 124 of file ColorCalibrator\&.java\&.
+Definition at line 128 of file ColorCalibrator\&.java\&.
 .PP
 .nf
-124                                          {
-125     Color c = Color\&.Other;
-126     switch (i) {
-127       case 0:
-128         c = Color\&.Other;
-129         break;
-130       case 1: 
-131         c = Color\&.Blue;
-132         break;
-133       case 2:
-134         c = Color\&.Green;
-135         break;
-136       case 3:
-137         c = Color\&.Yellow;
-138         break;
-139       case 4:
-140         c = Color\&.Orange;
-141         break;
-142     }
-143     return c;
-144   }
+128                                          {
+129     Color c = Color\&.Other;
+130     switch (i) {
+131       case 0:
+132         c = Color\&.Other;
+133         break;
+134       case 1:
+135         c = Color\&.Blue;
+136         break;
+137       case 2:
+138         c = Color\&.Green;
+139         break;
+140       case 3:
+141         c = Color\&.Yellow;
+142         break;
+143       case 4:
+144         c = Color\&.Orange;
+145         break;
+146     }
+147     return c;
+148   }
 .fi
 .SS "static Color ca\&.mcgill\&.ecse211\&.project\&.ColorCalibrator\&.getMostFrequenct ()\fC [static]\fP"
 This method returns the most frequent colour detected from multiple samples
@@ -167,39 +168,39 @@ most frequent colour detected
 .PP
 
 .PP
-Definition at line 93 of file ColorCalibrator\&.java\&.
+Definition at line 96 of file ColorCalibrator\&.java\&.
 .PP
 .nf
-93                                          {
-94     Color c = Color\&.Other;
-95     int frequency = colour_frequency[0];
-96     for (int i = 0; i < colour_frequency\&.length; i++) {
-97       if (colour_frequency[i] >= frequency) {
-98         frequency = colour_frequency[i];
-99         c = getGetColor(i);
-100       }
-101     }
-102     if(frequency == 0) {
-103       c = Color\&.Other;
+96                                          {
+97     Color c = Color\&.Other;
+98     int frequency = colour_frequency[0];
+99     for (int i = 0; i < colour_frequency\&.length; i++) {
+100       if (colour_frequency[i] >= frequency) {
+101         frequency = colour_frequency[i];
+102         c = getGetColor(i);
+103       }
 104     }
-105     resetFrequency();
-106     return c;
-107   }
+105     if (frequency == 0) {
+106       c = Color\&.Other;
+107     }
+108     resetFrequency();
+109     return c;
+110   }
 .fi
 .SS "static void ca\&.mcgill\&.ecse211\&.project\&.ColorCalibrator\&.resetFrequency ()\fC [static]\fP"
 This method resets the colour_frequency array to 0 
 .PP
-Definition at line 113 of file ColorCalibrator\&.java\&.
+Definition at line 116 of file ColorCalibrator\&.java\&.
 .PP
 .nf
-113                                       {
-114     for (int i = 0; i < colour_frequency\&.length; i ++) {
-115       colour_frequency[i] = 0;
-116     }
-117   }
+116                                       {
+117     for (int i = 0; i < colour_frequency\&.length; i++) {
+118       colour_frequency[i] = 0;
+119     }
+120   }
 .fi
 .SS "static void ca\&.mcgill\&.ecse211\&.project\&.ColorCalibrator\&.setFrequency (Color c)\fC [static]\fP"
-This method keeps track of how many of each colour were detected by increasing the count in the array 
+This method keeps track of how many of each colour were detected by increasing the count in the array
 .PP
 \fBParameters:\fP
 .RS 4
@@ -208,26 +209,26 @@ This method keeps track of how many of each colour were detected by increasing t
 .PP
 
 .PP
-Definition at line 70 of file ColorCalibrator\&.java\&.
+Definition at line 73 of file ColorCalibrator\&.java\&.
 .PP
 .nf
-70                                            {
-71     switch (c) {
-72       case Blue:
-73         colour_frequency[1] ++;
-74         break;
-75       case Green:
-76         colour_frequency[2] ++;
+73                                            {
+74     switch (c) {
+75       case Blue:
+76         colour_frequency[1]++;
 77         break;
-78       case Yellow:
-79         colour_frequency[3] ++;
+78       case Green:
+79         colour_frequency[2]++;
 80         break;
-81       case Orange:
-82         colour_frequency[4] ++;
-83       default:
-84         break;
-85     }
-86   }
+81       case Yellow:
+82         colour_frequency[3]++;
+83         break;
+84       case Orange:
+85         colour_frequency[4]++;
+86       default:
+87         break;
+88     }
+89   }
 .fi
 
 

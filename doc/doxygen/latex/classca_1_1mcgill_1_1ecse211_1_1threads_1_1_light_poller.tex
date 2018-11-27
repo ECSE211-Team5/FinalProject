@@ -43,7 +43,9 @@ float \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908
 
 
 \subsection{Detailed Description}
-This class implements the Light Sensor Poller for our robot it runs pulls the sensor data every 50 miliseconds \begin{DoxyAuthor}{Author}
+This class implements the Light Sensor Poller for our robot it runs pulls the sensor data every 50 miliseconds
+
+\begin{DoxyAuthor}{Author}
 Caspar Cedro 
 
 Percy Chen 
@@ -58,7 +60,7 @@ Kamy Moussavi Kafi
 \end{DoxyAuthor}
 
 
-Definition at line 16 of file Light\+Poller.\+java.
+Definition at line 17 of file Light\+Poller.\+java.
 
 
 
@@ -87,19 +89,19 @@ This constructor creates an instance of the \hyperlink{classca_1_1mcgill_1_1ecse
 \end{DoxyExceptions}
 
 
-Definition at line 35 of file Light\+Poller.\+java.
+Definition at line 36 of file Light\+Poller.\+java.
 
 
 \begin{DoxyCode}
-35                                                                                                        \{
-36     this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us} = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us};
-37     this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont} = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont};
-38     this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData} = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData};
-39     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted} = \textcolor{keyword}{true};
-40     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}{lastValue} = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[2];
-41     sensorNumber++;
-42     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}{WAIT\_TIME} = 50;
-43   \}
+37                                 \{
+38     this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us} = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us};
+39     this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont} = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont};
+40     this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData} = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData};
+41     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted} = \textcolor{keyword}{true};
+42     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}{lastValue} = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[2];
+43     sensorNumber++;
+44     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}{WAIT\_TIME} = 50;
+45   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -119,23 +121,23 @@ Here is the call graph for this function\+:\nopagebreak
 
 the run method to be performed in run method, collect light data 
 
-Definition at line 48 of file Light\+Poller.\+java.
+Definition at line 50 of file Light\+Poller.\+java.
 
 
 \begin{DoxyCode}
-48                              \{
-49     \textcolor{keywordtype}{double} l[] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
-50     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}.length; i++) \{
-51       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}[i].fetchSample(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[i], 0); \textcolor{comment}{// acquire data}
-52   
-53       \textcolor{keywordtype}{int} distance = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[i][0] * 100); \textcolor{comment}{// extract from buffer, multiply by 100 for
-       convenience}
-54                                               \textcolor{comment}{// and allow it to be cast to int}
-55       l[i] = distance - \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}{lastValue}[i]; \textcolor{comment}{// now take action depending on value}
-56       lastValue[i] = distance; 
-57     \}
-58     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont}.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_af905a6f2825716ae1a39bf7f6be09477}{setL}(l);
-59   \}
+50                              \{
+51     \textcolor{keywordtype}{double} l[] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
+52     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}.length; i++) \{
+53       \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}{us}[i].fetchSample(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[i], 0); \textcolor{comment}{// acquire data}
+54 
+55       \textcolor{keywordtype}{int} distance = (int) (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}{lgData}[i][0] * 100); \textcolor{comment}{// extract from buffer, multiply by 100 for}
+56                                                  \textcolor{comment}{// convenience}
+57       \textcolor{comment}{// and allow it to be cast to int}
+58       l[i] = distance - \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}{lastValue}[i]; \textcolor{comment}{// now take action depending on value}
+59       lastValue[i] = distance;
+60     \}
+61     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9050ced4f6940add4735c8872194a}{cont}.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_af905a6f2825716ae1a39bf7f6be09477}{setL}(l);
+62   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -155,7 +157,7 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line 18 of file Light\+Poller.\+java.
+Definition at line 19 of file Light\+Poller.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a79908bf56395ae82ab5ac57b5b40f206}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller@{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller}!last\+Value@{last\+Value}}
@@ -165,7 +167,7 @@ Definition at line 18 of file Light\+Poller.\+java.
 
 
 
-Definition at line 20 of file Light\+Poller.\+java.
+Definition at line 21 of file Light\+Poller.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_a6cf53aecc3efc481f71d36341d2276c6}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller@{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller}!lg\+Data@{lg\+Data}}
@@ -175,7 +177,7 @@ Definition at line 20 of file Light\+Poller.\+java.
 
 
 
-Definition at line 19 of file Light\+Poller.\+java.
+Definition at line 20 of file Light\+Poller.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_ab6a9cb770bbf71f586697633db1475ff}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller@{ca\+::mcgill\+::ecse211\+::threads\+::\+Light\+Poller}!us@{us}}
@@ -185,7 +187,7 @@ Definition at line 19 of file Light\+Poller.\+java.
 
 
 
-Definition at line 17 of file Light\+Poller.\+java.
+Definition at line 18 of file Light\+Poller.\+java.
 
 
 

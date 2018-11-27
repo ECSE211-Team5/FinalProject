@@ -29,9 +29,11 @@ public class SensorData {
                                               // OdometerData instances
 
   // Thread control tools
-  private static Lock lightLock = new ReentrantLock(true); // Fair lock for concurrent writing light sensor data
-  
-  private static Lock rgbLock = new ReentrantLock(true); // Fair lock for concurrent writing rgb sensor data
+  private static Lock lightLock = new ReentrantLock(true); // Fair lock for concurrent writing light
+                                                           // sensor data
+
+  private static Lock rgbLock = new ReentrantLock(true); // Fair lock for concurrent writing rgb
+                                                         // sensor data
 
   private static SensorData sensorData = null;
 
@@ -80,20 +82,21 @@ public class SensorData {
   public double getD() {
     return distance;
   }
-  
+
   /**
    * get the light value data from the two light sensors (protected by lightLock)
+   * 
    * @return: data from light sensor
    */
-  public double[] getL() {    
-    //lock the lock for light sensor value
+  public double[] getL() {
+    // lock the lock for light sensor value
     lightLock.lock();
     try {
       return lights.clone();
     } finally {
       lightLock.unlock();
     }
-    
+
   }
 
   /**
@@ -105,14 +108,14 @@ public class SensorData {
     rgbLock.lock();
     try {
       return rgb.clone();
-    }finally {
+    } finally {
       rgbLock.unlock();
     }
   }
 
   /**
-   * (deprecated, not using)
-   * This method returns the currently stored angle value from the gyro sensor
+   * (deprecated, not using) This method returns the currently stored angle value from the gyro
+   * sensor
    * 
    * @return The current angle value
    */
@@ -126,17 +129,16 @@ public class SensorData {
    * @param d The value to overwrite distance with
    */
   public void setD(double d) {
-      this.distance = d;
+    this.distance = d;
   }
 
   /**
-   * (deprecated not usings)
-   * This method overwrites the angle value.
+   * (deprecated not usings) This method overwrites the angle value.
    * 
    * @param a The value to overwrite angle with
    */
   public void setA(double a) {
-      this.angle = a;
+    this.angle = a;
   }
 
   /**

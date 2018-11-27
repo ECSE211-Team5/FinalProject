@@ -377,8 +377,6 @@
   </compound>
   <compound refid="namespaceca_1_1mcgill_1_1ecse211_1_1threads" kind="namespace"><name>ca::mcgill::ecse211::threads</name>
   </compound>
-  <compound refid="namespacelejos_1_1hardware_1_1sensor" kind="namespace"><name>lejos::hardware::sensor</name>
-  </compound>
   <compound refid="_main_01_page_8md" kind="file"><name>Main Page.md</name>
   </compound>
   <compound refid="_light_localizer_8java" kind="file"><name>LightLocalizer.java</name>

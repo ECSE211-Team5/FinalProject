@@ -51,18 +51,18 @@ Definition at line 16 of file Odometer\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "static synchronized \fBOdometer\fP ca\&.mcgill\&.ecse211\&.odometer\&.Odometer\&.getOdometer (EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor, final double TRACK, final double WHEEL_RAD) throws \fBOdometerExceptions\fP\fC [static]\fP"
-This method is meant to ensure only one instance of the odometer is used throughout the code\&.
+This method ensures that only one instance of the \fBOdometer\fP object is used throughout the code\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIleftMotor\fP The EV3LargeRegulatedMotor instance for our left motor 
+\fIleftMotor\fP An EV3LargeRegularedMotor object instance that allows control of the left motor 
 .br
-\fIrightMotor\fP The EV3LargeRegulatedMotor instance for our right motor 
+\fIrightMotor\fP An EV3LargeRegularedMotor object instance that allows control of the right motor 
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-new or existing \fBOdometer\fP Object 
+A new or pre-existing \fBOdometer\fP object 
 .RE
 .PP
 \fBExceptions:\fP
@@ -85,7 +85,7 @@ Definition at line 69 of file Odometer\&.java\&.
 78   }
 .fi
 .SS "static synchronized \fBOdometer\fP ca\&.mcgill\&.ecse211\&.odometer\&.Odometer\&.getOdometer () throws \fBOdometerExceptions\fP\fC [static]\fP"
-This class is meant to return the existing \fBOdometer\fP Object\&. It is meant to be used only if an odometer object has been created
+This method returns a pre-existing \fBOdometer\fP object instance\&. It is meant to be used only if an \fBOdometer\fP object has already been created beforehand\&.
 .PP
 \fBReturns:\fP
 .RS 4
@@ -98,62 +98,58 @@ Definition at line 86 of file Odometer\&.java\&.
 .PP
 .nf
 86                                                                               {
-87 
-88     if (odometer == null) {
-89       throw new OdometerExceptions("No previous Odometer exits\&.");
-90 
-91     }
-92     return odometer;
-93   }
+87     if (odometer == null) {
+88       throw new OdometerExceptions("No previous Odometer exits\&.");
+89     }
+90     return odometer;
+91   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.Odometer\&.run ()"
 This method is called when our \fBOdometer\fP object is started as a thread and begins to keep track of motor rotations 
 .PP
-Definition at line 99 of file Odometer\&.java\&.
+Definition at line 97 of file Odometer\&.java\&.
 .PP
 .nf
-99                     {
-100     long updateStart, updateEnd;
-101 
-102     while (true) {
-103       updateStart = System\&.currentTimeMillis();
-104 
-105       // TODO Calculate new robot position based on tachometer counts
-106       double distL, distR, deltaD, deltaT, dX, dY;
-107       int nowTachoL, nowTachoR;
-108       position = odometer\&.getXYT();
-109 
-110       // Calculate the change in distances and Theta with motor tacho counts
-111       nowTachoL = leftMotor\&.getTachoCount();
-112       nowTachoR = rightMotor\&.getTachoCount();
-113       distL = 3\&.14159 * WHEEL_RAD * (nowTachoL - leftMotorTachoCount) / 180;
-114       distR = 3\&.14159 * WHEEL_RAD * (nowTachoR - rightMotorTachoCount) / 180;
-115       leftMotorTachoCount = nowTachoL;
-116       rightMotorTachoCount = nowTachoR;
-117       deltaD = 0\&.5 * (distL + distR);
-118       deltaT = (distL - distR) / TRACK;
-119 
-120       double Theta = Math\&.toRadians(position[2]);
-121       Theta += deltaT;
-122       dX = deltaD * Math\&.sin(Theta);
-123       dY = deltaD * Math\&.cos(Theta);
-124 
+97                     {
+98     long updateStart, updateEnd;
+99 
+100     while (true) {
+101       updateStart = System\&.currentTimeMillis();
+102 
+103       // Calculate new robot position based on tachometer counts
+104       double distL, distR, deltaD, deltaT, dX, dY;
+105       int nowTachoL, nowTachoR;
+106       position = odometer\&.getXYT();
+107 
+108       // Calculate the change in distances and Theta with motor tacho counts
+109       nowTachoL = leftMotor\&.getTachoCount();
+110       nowTachoR = rightMotor\&.getTachoCount();
+111       distL = 3\&.14159 * WHEEL_RAD * (nowTachoL - leftMotorTachoCount) / 180;
+112       distR = 3\&.14159 * WHEEL_RAD * (nowTachoR - rightMotorTachoCount) / 180;
+113       leftMotorTachoCount = nowTachoL;
+114       rightMotorTachoCount = nowTachoR;
+115       deltaD = 0\&.5 * (distL + distR);
+116       deltaT = (distL - distR) / TRACK;
+117 
+118       double Theta = Math\&.toRadians(position[2]);
+119       Theta += deltaT;
+120       dX = deltaD * Math\&.sin(Theta);
+121       dY = deltaD * Math\&.cos(Theta);
+122 
+123       // Update odometer values with new calculated values
+124       odometer\&.update(dX / Game\&.TILE, dY / Game\&.TILE, Math\&.toDegrees(deltaT));
 125 
-126       // TODO Update odometer values with new calculated values
-127       odometer\&.update(dX / Game\&.TILE, dY / Game\&.TILE, Math\&.toDegrees(deltaT));
-128 
-129 
-130       // this ensures that the odometer only runs once every period
-131       updateEnd = System\&.currentTimeMillis();
-132       if (updateEnd - updateStart < ODOMETER_PERIOD) {
-133         try {
-134           Thread\&.sleep(ODOMETER_PERIOD - (updateEnd - updateStart));
-135         } catch (InterruptedException e) {
-136           // there is nothing to be done
-137         }
-138       }
-139     }
-140   }
+126       // this ensures that the odometer only runs once every period
+127       updateEnd = System\&.currentTimeMillis();
+128       if (updateEnd - updateStart < ODOMETER_PERIOD) {
+129         try {
+130           Thread\&.sleep(ODOMETER_PERIOD - (updateEnd - updateStart));
+131         } catch (InterruptedException e) {
+132           // there is nothing to be done
+133         }
+134       }
+135     }
+136   }
 .fi
 
 

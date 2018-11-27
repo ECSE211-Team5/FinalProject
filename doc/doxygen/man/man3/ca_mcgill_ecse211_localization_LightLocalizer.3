@@ -41,13 +41,13 @@ Definition at line 21 of file LightLocalizer\&.java\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ca\&.mcgill\&.ecse211\&.localization\&.LightLocalizer\&.LightLocalizer (\fBNavigation\fP nav, EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor) throws \fBOdometerExceptions\fP"
-This is the class constructor
+This is the class constructor for the \fBLightLocalizer\fP class
 .PP
 \fBParameters:\fP
 .RS 4
-\fIleftMotor\fP 
+\fIleftMotor\fP An EV3LargeRegularedMotor object instance that allows control of the left motor 
 .br
-\fIrightMotor\fP 
+\fIrightMotor\fP An EV3LargeRegularedMotor object instance that allows control of the right motor 
 .RE
 .PP
 \fBExceptions:\fP
@@ -57,88 +57,86 @@ This is the class constructor
 .PP
 
 .PP
-Definition at line 37 of file LightLocalizer\&.java\&.
+Definition at line 40 of file LightLocalizer\&.java\&.
 .PP
 .nf
-38                                                                    {
-39     this\&.odometer = Odometer\&.getOdometer();
-40     this\&.data = SensorData\&.getSensorData();
-41     this\&.navigation = nav;
-42     this\&.leftMotor = leftMotor;
-43     this\&.rightMotor = rightMotor;
-44   }
+41                                                                    {
+42     this\&.odometer = Odometer\&.getOdometer();
+43     this\&.data = SensorData\&.getSensorData();
+44     this\&.navigation = nav;
+45     this\&.leftMotor = leftMotor;
+46     this\&.rightMotor = rightMotor;
+47   }
 .fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.localization\&.LightLocalizer\&.localize (int [] sC)"
-(\fIImprove\fP) Once the robot know what angle it is facing, this method looks for the x,y axis origins knowing it is in the first tile facing north\&. 
+This method localizes our robot to an intersection of two black lines which serve as our origin and strives to face north\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIsC\fP the coordinate to set to after localization 
+\fIsC\fP The x and y coordinates to set on our Odometer after localization 
 .RE
 .PP
 
 .PP
-Definition at line 52 of file LightLocalizer\&.java\&.
+Definition at line 55 of file LightLocalizer\&.java\&.
 .PP
 .nf
-52                                  {
-53     leftMotor\&.setSpeed(FORWARD_SPEED);
-54     rightMotor\&.setSpeed(FORWARD_SPEED);
-55 
-56     // 1\&. GO forward find the y=0 line
-57     leftMotor\&.forward();
-58     rightMotor\&.forward();
-59     while (leftMotor\&.isMoving() || rightMotor\&.isMoving()) {
-60       if (data\&.getL()[0] < blackLineColor) {
-61         leftMotor\&.stop(true);
-62       }
-63       if (data\&.getL()[1] < blackLineColor) {
-64         rightMotor\&.stop(true);
+55                                  {
+56     leftMotor\&.setSpeed(FORWARD_SPEED);
+57     rightMotor\&.setSpeed(FORWARD_SPEED);
+58 
+59     // 1\&. GO forward find the y=0 line
+60     leftMotor\&.forward();
+61     rightMotor\&.forward();
+62     while (leftMotor\&.isMoving() || rightMotor\&.isMoving()) {
+63       if (data\&.getL()[0] < blackLineColor) {
+64         leftMotor\&.stop(true);
 65       }
-66     }
-67     odometer\&.setTheta(0\&.0);
-68     Sound\&.beep();
-69     odometer\&.setY(0);
-70     // 2\&. Turn and go forward find the x=0 line
-71     navigation\&.turnTo(90);
-72     leftMotor\&.setSpeed(FORWARD_SPEED);
-73     rightMotor\&.setSpeed(FORWARD_SPEED);
-74     leftMotor\&.forward();
-75     rightMotor\&.forward();
-76     while (leftMotor\&.isMoving() || rightMotor\&.isMoving()) {
-77       if (data\&.getL()[0] < blackLineColor) {
-78         leftMotor\&.stop(true);
-79       }
-80       if (data\&.getL()[1] < blackLineColor) {
-81         rightMotor\&.stop(true);
-82       }
-83     }
-84     odometer\&.setTheta(90\&.0);
-85     Sound\&.beep();
-86     odometer\&.setX(0);
-87     leftMotor\&.setSpeed(FORWARD_SPEED);
-88     rightMotor\&.setSpeed(FORWARD_SPEED);
-89     // 3\&. Go backwards by sensor-wheel center distance in x-direction
-90     leftMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), true);
-91     rightMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), false);
-92     // 4\&. Go backwards by sensor-wheel center distance in y-direction
-93     navigation\&.turnTo(0);
-94     leftMotor\&.setSpeed(FORWARD_SPEED);
-95     rightMotor\&.setSpeed(FORWARD_SPEED);
-96     //double sensorDistanceOffset = 2\&.5;
-97     leftMotor\&.rotate(
-98         Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS),
-99         true);
-100     rightMotor\&.rotate(
-101         Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS),
-102         false);
-103     odometer\&.setTheta(0);
-104     odometer\&.setX(sC[0]);
-105     odometer\&.setY(sC[1]);
-106 
-107   }
+66       if (data\&.getL()[1] < blackLineColor) {
+67         rightMotor\&.stop(true);
+68       }
+69     }
+70     odometer\&.setTheta(0\&.0);
+71     Sound\&.beep();
+72     odometer\&.setY(0);
+73     
+74     // 2\&. Turn and go forward find the x=0 line
+75     navigation\&.turnTo(90);
+76     leftMotor\&.setSpeed(FORWARD_SPEED);
+77     rightMotor\&.setSpeed(FORWARD_SPEED);
+78     leftMotor\&.forward();
+79     rightMotor\&.forward();
+80     while (leftMotor\&.isMoving() || rightMotor\&.isMoving()) {
+81       if (data\&.getL()[0] < blackLineColor) {
+82         leftMotor\&.stop(true);
+83       }
+84       if (data\&.getL()[1] < blackLineColor) {
+85         rightMotor\&.stop(true);
+86       }
+87     }
+88     odometer\&.setTheta(90\&.0);
+89     Sound\&.beep();
+90     odometer\&.setX(0);
+91     leftMotor\&.setSpeed(FORWARD_SPEED);
+92     rightMotor\&.setSpeed(FORWARD_SPEED);
+93     
+94     // 3\&. Go backwards by sensor-wheel center distance in x-direction
+95     leftMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), true);
+96     rightMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), false);
+97     
+98     // 4\&. Go backwards by sensor-wheel center distance in y-direction
+99     navigation\&.turnTo(0);
+100     leftMotor\&.setSpeed(FORWARD_SPEED);
+101     rightMotor\&.setSpeed(FORWARD_SPEED);
+102     // double sensorDistanceOffset = 2\&.5;
+103     leftMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), true);
+104     rightMotor\&.rotate(Navigation\&.convertDistance(Game\&.WHEEL_RAD, Game\&.SEN_DIS), false);
+105     odometer\&.setTheta(0);
+106     odometer\&.setX(sC[0]);
+107     odometer\&.setY(sC[1]);
+108   }
 .fi
 
 

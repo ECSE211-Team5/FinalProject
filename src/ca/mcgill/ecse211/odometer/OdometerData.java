@@ -5,16 +5,16 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * This class stores and provides thread safe access to the odometer data.
+ * This class stores and provides thread safe access to data required used by the Odometer classes.
  * 
- * @author Rodrigo Silva
- * @author Dirk Dubois
- * @author Derek Yu
- * @author Karim El-Baba
- * @author Michael Smith
+ * @author Caspar Cedro
+ * @author Percy Chen
+ * @author Patrick Erath
+ * @author Anssam Ghezala
+ * @author Susan Matuszewski
+ * @author Kamy Moussavi Kafi
  */
 public class OdometerData {
-
   // Position parameters
   private volatile double x; // x-axis position
   private volatile double y; // y-axis position
@@ -51,9 +51,8 @@ public class OdometerData {
   }
 
   /**
-   * OdometerData factory. Returns an OdometerData instance and makes sure that only one instance is
-   * ever created. If the user tries to instantiate multiple objects, the method throws a
-   * MultipleOdometerDataException.
+   * This method returns an OdometerData instance and makes sure that only one instance is ever
+   * created.
    * 
    * @return An OdometerData object
    * @throws OdometerExceptions
@@ -61,20 +60,18 @@ public class OdometerData {
   public synchronized static OdometerData getOdometerData() throws OdometerExceptions {
     if (odoData != null) { // Return existing object
       return odoData;
-    } else if (numberOfIntances < MAX_INSTANCES) { // create object and
-                                                   // return it
+    } else if (numberOfIntances < MAX_INSTANCES) {
+      // create object and return it
       odoData = new OdometerData();
       numberOfIntances += 1;
       return odoData;
     } else {
       throw new OdometerExceptions("Only one intance of the Odometer can be created.");
     }
-
   }
 
   /**
-   * Return the Odomometer data.
-   * <p>
+   * This method returns the Odometer data.
    * Writes the current position and orientation of the robot onto the odoData array. odoData[0] =
    * x, odoData[1] = y; odoData[2] = theta;
    * 
@@ -206,5 +203,4 @@ public class OdometerData {
       lock.unlock();
     }
   }
-
 }
