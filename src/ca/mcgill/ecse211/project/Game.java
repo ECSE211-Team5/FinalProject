@@ -311,10 +311,7 @@ public enum Game {
     int[] starting = GameParameters.SC;
     nav.travelToWithCorrection(starting[0], starting[1], false);
     nav.turnTo(Math.toDegrees(nav.calculateAngleTo(GameParameters.SCUS[0], GameParameters.SCUS[1])));
-    Sound.buzz();
-    Sound.beepSequenceUp();
-    Sound.beepSequence();
-    Sound.twoBeeps();
+    GameUtil.playMusic();
   }
 
   /**

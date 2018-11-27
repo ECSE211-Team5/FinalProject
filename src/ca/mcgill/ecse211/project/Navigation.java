@@ -225,8 +225,8 @@ public class Navigation {
    * This method move the robot back until a black line detection
    */
   private synchronized void moveBackWithCorrection() {
-    leftMotor.setAcceleration(N_ACCELERATION);
-    rightMotor.setAcceleration(N_ACCELERATION);
+//    leftMotor.setAcceleration(N_ACCELERATION);
+//    rightMotor.setAcceleration(N_ACCELERATION);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.backward();
@@ -239,8 +239,8 @@ public class Navigation {
    * @param theta
    */
   public void moveOneTileWithCorrection(double theta) {
-    leftMotor.setAcceleration(N_ACCELERATION);
-    rightMotor.setAcceleration(N_ACCELERATION);
+//    leftMotor.setAcceleration(N_ACCELERATION);
+//    rightMotor.setAcceleration(N_ACCELERATION);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     leftMotor.forward();
@@ -428,18 +428,16 @@ public class Navigation {
     moveBackWithCorrection();
 
     // turn left -5 to correct the effect of the weight
-    this.turn(TUNNEL_CORRECTION);
       if(distance == 1) {  
         forward(TUNNEL_SPEED, distance+1+0.5);
       }else {
         forward(TUNNEL_SPEED, distance/2.0+1);
-        turn(TUNNEL_CORRECTION);
         forward(TUNNEL_SPEED, distance/2.0+0.5);
       }
 
     odometer.setTheta(angleThoughTunnel);
-    leftMotor.setAcceleration(N_ACCELERATION);
-    rightMotor.setAcceleration(N_ACCELERATION);
+//    leftMotor.setAcceleration(N_ACCELERATION);
+//    rightMotor.setAcceleration(N_ACCELERATION);
 //    // rotate additional sensor distances to make sure the sensor will not on the balck line
 //    leftMotor.rotate(convertDistance(Game.WHEEL_RAD, 2*Game.SEN_DIS), true);
 //    rightMotor.rotate(convertDistance(Game.WHEEL_RAD, 2*Game.SEN_DIS), false);
@@ -487,8 +485,8 @@ public class Navigation {
 
     // travel to the point
     this.travelToWithCorrection(beforePoint[0], beforePoint[1], false);
-    leftMotor.setAcceleration(N_ACCELERATION);
-    rightMotor.setAcceleration(N_ACCELERATION);
+//    leftMotor.setAcceleration(N_ACCELERATION);
+//    rightMotor.setAcceleration(N_ACCELERATION);
     travelTo(center[0], center[1]);
   }
 
@@ -502,8 +500,8 @@ public class Navigation {
    */
   public void searchRingSet(RingSearcher searcher, boolean correct, boolean reset) {
     //Go backward to detect the line and correct the rotation
-    leftMotor.setAcceleration(N_ACCELERATION);
-    rightMotor.setAcceleration(N_ACCELERATION);
+//    leftMotor.setAcceleration(N_ACCELERATION);
+//    rightMotor.setAcceleration(N_ACCELERATION);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
     double theta = odometer.getXYT()[2];
