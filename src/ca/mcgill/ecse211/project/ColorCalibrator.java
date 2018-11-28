@@ -36,16 +36,16 @@ public class ColorCalibrator {
    * @return A Color enumeration value
    */
   public static Color getColor(int r, int g, int b) {
-    if (r > 3 * g && b < 3 && r > lowerOrangeRBound) {
+    if (r > 2.5 * g && b < 3 && r > lowerOrangeRBound) {
       currentColor = Color.Orange;
-    } else if (g > r && b < 3) {
+    } else if ((b >= lowerBlueBBound)) {
+      currentColor = Color.Blue;
+    }else if (g > r && b < 3) {
       currentColor = Color.Green;
     } else if ((r >= lowerYellowRBound && g >= lowerYellowGBound)
         || ((r >= 7 && r <= 9) && (g >= 0 && g <= 2))) {
       currentColor = Color.Yellow;
-    } else if ((b >= lowerBlueBBound)) {
-      currentColor = Color.Blue;
-    } else {
+    }  else {
       currentColor = Color.Other;
     }
 

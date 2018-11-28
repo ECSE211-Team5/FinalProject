@@ -90,7 +90,7 @@ public class Display implements Runnable {
       // }
 
       lcd.drawString(String.format("%1$-10s", ColorCalibrator.getColor().toString()), 0, 6);
-      lcd.drawString("A:" + numberFormat.format(sensdata.getA()), 0, 7);
+      lcd.drawString("A:" + numberFormat.format(Game.sensorMotor.getTachoCount()), 0, 7);
 
       // lcd.drawString(String.format("(r: %d", (int)rgb[0]), 0, 3);
       // lcd.drawString(String.format("(g: %d", (int)rgb[1]), 0, 4);

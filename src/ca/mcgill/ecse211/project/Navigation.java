@@ -32,7 +32,7 @@ public class Navigation {
   private static final int LEFT_MOTOR_RING_COR = -40;
   private static final int FORWARD_SPEED = 250;
   private static final int ROTATE_SPEED = 250;
-  private static final int TUNNEL_SPEED = 400;
+  private static final int TUNNEL_SPEED = 600;
   private static final int TUNNEL_CORRECTION = -3;
   private static final int Q_ACCELERATION = 3000;
   private static final int N_ACCELERATION = 300;
@@ -94,7 +94,7 @@ public class Navigation {
    * @param x: x coordinate of the point
    * @param y: y coordinate of the points
    */
-  public void travelTo(double x, double y) {
+  public void travelTo(double x, double y, int speed) {
     double dX = x - odometer.getXYT()[0];
     double dY = y - odometer.getXYT()[1];
     double theta = calculateAngleTo(x, y);
@@ -104,8 +104,8 @@ public class Navigation {
 
     turnTo(Math.toDegrees(theta));
 
-    leftMotor.setSpeed(FORWARD_SPEED);
-    rightMotor.setSpeed(FORWARD_SPEED);
+    leftMotor.setSpeed(speed);
+    rightMotor.setSpeed(speed);
 
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
     rightMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), false);
@@ -437,19 +437,16 @@ public class Navigation {
     turnTo(angleThoughTunnel);
 
     // goback To correct
-    if (angleThoughTunnel > 0) {
       moveBackWithCorrection();
-    }
 
     // turn left -5 to correct the effect of the weight
+    forward(TUNNEL_SPEED, 0.5);
     turn(TUNNEL_CORRECTION);
     if (distance == 1) {
-      forward(TUNNEL_SPEED, distance + 1 + 0.5);
+      forward(TUNNEL_SPEED, distance + 1 );
     } else {
 
-      forward(TUNNEL_SPEED, distance + 1 + 0.5);
-
-      // forward(TUNNEL_SPEED, distance/2.0+0.5);
+      forward(TUNNEL_SPEED, distance + 1 );
     }
 
     odometer.setTheta(angleThoughTunnel);
@@ -505,7 +502,7 @@ public class Navigation {
     this.travelToWithCorrection(beforePoint[0], beforePoint[1], false);
     // leftMotor.setAcceleration(N_ACCELERATION);
     // rightMotor.setAcceleration(N_ACCELERATION);
-    travelTo(center[0], center[1]);
+    travelTo(center[0], center[1], FORWARD_SPEED);
   }
 
   /**
@@ -531,39 +528,57 @@ public class Navigation {
       rightMotor.backward();
       moveUntilLineDetection(true);
       // Forward for 3 cm (approach the ring set)
-      forward(FORWARD_SPEED, 2.5 / Game.TILE);
+      //forward(FORWARD_SPEED, 2.5 / Game.TILE);
     } else {
-      forward(FORWARD_SPEED, 2 / Game.TILE);
+      //forward(FORWARD_SPEED, 2 / Game.TILE);
     }
-    // rotate a little to the left to make sure that the sensor can detect the ring
-    leftMotor.rotate(LEFT_MOTOR_RING_COR, false);
-    // detect the ring color and beep based on the color
-    searcher.search();
-    // rotate back
-    leftMotor.rotate(-LEFT_MOTOR_RING_COR, false);
-    // prepare for retrieving the ring
     searcher.prepareRetrieve();
-
-    // rotate the right motor to behind a little to make sure we can put the rod behind the ring
-    rightMotor.rotate(RIGHT_MOTOR_RING_COR, false);
-
-    // go to the position where ring can be retrieved
-    forward(FORWARD_SPEED, 4 / Game.TILE);
-
-    // rotate a little to the left to make sure not influence the other ring
+    // rotate a little to the left to make sure that the sensor can detect the ring
+    // detect the ring color and beep based on the color
+    searcher.search(-160);
+    if(correct) {
+      forward(FORWARD_SPEED, 2.5 / Game.TILE);
+    }else {
+      forward(FORWARD_SPEED, 3.5 / Game.TILE);
+    }
+    searcher.detectColor();
+    searcher.search(-180);
+    searcher.detectColor();
+    
+    // rotate back
+   // leftMotor.rotate(-LEFT_MOTOR_RING_COR, false);
+    // prepare for retrieving the ring
+    searcher.finishSearch();
+    
+    rightMotor.rotate(-40, false);
+    searcher.safeRod();
+    if(correct) {
+      forward(FORWARD_SPEED, 4.5 / Game.TILE);
+    }else {
+      forward(FORWARD_SPEED, 3 / Game.TILE);
+    }
+    // go back to original position
     rightMotor.rotate(70, false);
     searcher.retrieveRing();
-    // go back to original position
+    // rotate the right motor to behind a little to make sure we can put the rod behind the ring
+    //rightMotor.rotate(RIGHT_MOTOR_RING_COR, false);
+
+    // go to the position where ring can be retrieved
+
+    // rotate a little to the left to make sure not influence the other ring
     rightMotor.rotate(-70, false);
-    if (correct) {
-      forward(FORWARD_SPEED, -6.5 / Game.TILE);
-    } else {
-      forward(FORWARD_SPEED, -6 / Game.TILE);
-    }
-    rightMotor.rotate(-RIGHT_MOTOR_RING_COR + 20, false);
-    odometer.setTheta(theta);
-    if (reset)
-      searcher.resetRodMotor();
+
+    forward(FORWARD_SPEED, -6.5 / Game.TILE);
+    // go back to original position
+    rightMotor.rotate(40+30, false);
+
+//    if (correct) {
+//      forward(FORWARD_SPEED, -6.5 / Game.TILE);
+//    } else {
+//      forward(FORWARD_SPEED, -6 / Game.TILE);
+//    }
+    //if (reset)
+      //searcher.resetRodMotor();
   }
 
   /**

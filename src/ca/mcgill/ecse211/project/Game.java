@@ -13,6 +13,7 @@ import ca.mcgill.ecse211.threads.UltrasonicPoller;
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
 import lejos.hardware.ev3.LocalEV3;
+import lejos.hardware.lcd.TextLCD;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.port.Port;
 import lejos.hardware.sensor.EV3ColorSensor;
@@ -296,10 +297,12 @@ public enum Game {
    * then try to drop all rings
    */
   private static void navigateStart(Navigation nav, RingSearcher searcher) {
-    int[] starting = GameParameters.SC;
-    nav.travelToWithCorrection(starting[0], starting[1], false);
+    double[] starting = {(GameParameters.SC[0]+GameParameters.SCUS[0])/2.0,(GameParameters.SC[1]+GameParameters.SCUS[1])/2.0};
+    //nav.travelToWithCorrection(starting[0], starting[1], false);
+    nav.travelTo(starting[0], starting[1], 600);
     nav.turnTo(
         Math.toDegrees(nav.calculateAngleTo(GameParameters.SCUS[0], GameParameters.SCUS[1])));
+    for(int i = 0; i < 5; i++) {Sound.beep();}
     GameUtil.playMusic();
   }
 
@@ -380,23 +383,15 @@ public enum Game {
     SampleProvider frontLight[] = new SampleProvider[1];
     frontLight[0] = lgSensors[2].getRGBMode();
 
-    // TextLCD lcd = LocalEV3.get().getTextLCD();
-    // Display odometryDisplay = new Display(lcd);
-    // // STEP 1: LOCALIZE to (1,1)
-    // // ButtonChoice left or right
-    // lcd.clear();
-    // lcd.drawString("< Left | Right >", 0, 0);
-    // lcd.drawString(" falling | rising ", 0, 1);
-    // lcd.drawString(" edge | edge ", 0, 2);
-    // lcd.drawString(" \\/ ", 0, 3);
-    // lcd.drawString(" Color Detection ", 0, 4);
+//     TextLCD lcd = LocalEV3.get().getTextLCD();
+//     Display odometryDisplay = new Display(lcd);
+//     
 
     // Start odometer and odometer display
     Thread odoThread = new Thread(odometer);
     odoThread.start();
-    // Thread odoDisplayThread = new Thread(odometryDisplay);
-    // odoDisplayThread.start();
-    Sound.beep();
+//     Thread odoDisplayThread = new Thread(odometryDisplay);
+//     odoDisplayThread.start();
     // Start ultrasonic and light sensors
     usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
     Thread usThread = new Thread(usPoller);
@@ -409,8 +404,7 @@ public enum Game {
     Thread rgbThread = new Thread(rgbPoller);
 
     rgbThread.start();
-
-
+    Sound.beep();
   }
 
   /**

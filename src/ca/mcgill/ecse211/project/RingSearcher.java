@@ -20,7 +20,7 @@ import lejos.hardware.motor.EV3LargeRegulatedMotor;
  */
 public class RingSearcher {
   private static final int ROD_RETRIEVE = 80;
-  private static final int ROD_PREPARE = 170;
+  private static final int ROD_PREPARE = 90;
   private static final int SENSOR_ROTATION = -100;
   private static final int ACCELERATION = 3000;
   private static final int ROD_SPEED = 250;
@@ -58,10 +58,19 @@ public class RingSearcher {
    * based on the color of the ring
    * 
    */
-  public void search() {
-    sensorMotor.rotate(SENSOR_ROTATION);
-    sensorMotor.rotate(-SENSOR_ROTATION);
-
+  public void search(int angle) {
+    sensorMotor.rotateTo(angle);
+    
+  }
+  
+  public void detectColor() {
+    Game.INSTANCE.rgbPoller.setStart(true);
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
     // determine most frequent colour detected and beep accordingly
     Game.INSTANCE.rgbPoller.setStart(false);
     switch (ColorCalibrator.getMostFrequenct()) {
@@ -88,14 +97,17 @@ public class RingSearcher {
       default:
         break;
     }
-    Game.INSTANCE.rgbPoller.setStart(true);
   }
 
   /**
    * This method put the sensor to search rotation to be ready for the searching
    */
   public void prepareSearch() {
-    sensorMotor.rotate(SENSOR_ROTATION);
+    sensorMotor.rotateTo(SENSOR_ROTATION);
+  }
+  
+  public void finishSearch() {
+    sensorMotor.rotateTo(-100);
   }
 
   /**
@@ -109,7 +121,7 @@ public class RingSearcher {
    * This method rotate the rod to a suitable position for retrieve the ring
    */
   public void prepareRetrieve() {
-    rodMotor.rotate(ROD_PREPARE);
+    rodMotor.rotateTo(ROD_PREPARE);
   }
 
   /**
@@ -119,10 +131,14 @@ public class RingSearcher {
     rodMotor.rotate(ROD_RETRIEVE);
   }
 
+  public void safeRod() {
+    rodMotor.rotateTo(180);
+  }
+  
   /**
    * Rotate the rod back to the original position
    */
   public void resetRodMotor() {
-    rodMotor.rotate(-(ROD_PREPARE + ROD_RETRIEVE));
+    rodMotor.rotateTo(0);
   }
 }

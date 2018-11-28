@@ -71,6 +71,14 @@ public enum ComponentTest {
     Navigation nav = new Navigation(Game.leftMotor, Game.rightMotor);
     nav.travelToWithCorrection(4, 2, false);
     nav.travelToWithCorrection(0, 0, false);
+    nav.travelToWithCorrection(4, 2, false);
+    nav.travelToWithCorrection(0, 0, false);
+    nav.travelToWithCorrection(4, 2, false);
+    nav.travelToWithCorrection(0, 0, false);
+    nav.travelToWithCorrection(4, 2, false);
+    nav.travelToWithCorrection(0, 0, false);
+    nav.travelToWithCorrection(4, 2, false);
+    nav.travelToWithCorrection(0, 0, false);
   }
 
   public static void tunnelTest() throws Exception {

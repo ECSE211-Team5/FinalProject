@@ -39,7 +39,7 @@ public class Main {
         (new Thread() {
           public void run() {
             try {
-              ComponentTest.musicTest();
+              ComponentTest.navigationTest();
             } catch (Exception e) {
               e.printStackTrace();
             }
