@@ -258,77 +258,68 @@ This method performs all the object instantiations and preparations necessary to
 \end{DoxyExceptions}
 
 
-Definition at line 349 of file Game.\+java.
+Definition at line 354 of file Game.\+java.
 
 
 \begin{DoxyCode}
-349                                                       \{
-350     \textcolor{comment}{// Motor Objects, and Robot related parameters}
-351     Port usPort = LocalEV3.get().getPort(\textcolor{stringliteral}{"S1"});
-352     \textcolor{comment}{// initialize multiple light ports in main}
-353     Port[] lgPorts = \textcolor{keyword}{new} Port[3];
-354 
-355     \textcolor{comment}{// Light sensor sensor stuff}
-356     lgPorts[0] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S2"});
-357     lgPorts[1] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S3"});
-358     lgPorts[2] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S4"});
-359     EV3ColorSensor[] lgSensors = \textcolor{keyword}{new} EV3ColorSensor[3];
-360     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < lgSensors.length; i++) \{
-361       lgSensors[i] = \textcolor{keyword}{new} EV3ColorSensor(lgPorts[i]);
-362     \}
-363 
-364     Odometer odometer = Odometer.getOdometer(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor}, 
-      \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a64cf12cdd6772ac1ce351ff1dfadd626}{TRACK}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a91bd64670c2a91d006c907142783b1f8}{WHEEL\_RAD});
-365 
-366     \textcolor{comment}{// Sensor Related Stuff}
-367     SensorData sensorData = SensorData.getSensorData();
+354                                                       \{
+355     \textcolor{comment}{// Motor Objects, and Robot related parameters}
+356     Port usPort = LocalEV3.get().getPort(\textcolor{stringliteral}{"S1"});
+357     \textcolor{comment}{// initialize multiple light ports in main}
+358     Port[] lgPorts = \textcolor{keyword}{new} Port[3];
+359 
+360     \textcolor{comment}{// Light sensor sensor stuff}
+361     lgPorts[0] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S2"});
+362     lgPorts[1] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S3"});
+363     lgPorts[2] = LocalEV3.get().getPort(\textcolor{stringliteral}{"S4"});
+364     EV3ColorSensor[] lgSensors = \textcolor{keyword}{new} EV3ColorSensor[3];
+365     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < lgSensors.length; i++) \{
+366       lgSensors[i] = \textcolor{keyword}{new} EV3ColorSensor(lgPorts[i]);
+367     \}
 368 
-369     \textcolor{comment}{// Ultrasonic sensor stuff}
-370     @SuppressWarnings(\textcolor{stringliteral}{"resource"})
-371     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
-372     SampleProvider usDistance = usSensor.getMode("Distance");
-373     \textcolor{keywordtype}{float}[] usData = new \textcolor{keywordtype}{float}[usDistance.sampleSize()];
-374 
-375     SampleProvider backLight[] = new SampleProvider[2];
-376     backLight[0] = lgSensors[0].getRedMode();
-377     backLight[1] = lgSensors[1].getRedMode();
-378 
-379     \textcolor{comment}{// colour detection sensor}
-380     SampleProvider frontLight[] = new SampleProvider[1];
-381     frontLight[0] = lgSensors[2].getRGBMode();
-382 
-383     \textcolor{comment}{// TextLCD lcd = LocalEV3.get().getTextLCD();}
-384     \textcolor{comment}{// Display odometryDisplay = new Display(lcd);}
-385     \textcolor{comment}{// // STEP 1: LOCALIZE to (1,1)}
-386     \textcolor{comment}{// // ButtonChoice left or right}
-387     \textcolor{comment}{// lcd.clear();}
-388     \textcolor{comment}{// lcd.drawString("< Left | Right >", 0, 0);}
-389     \textcolor{comment}{// lcd.drawString(" falling | rising ", 0, 1);}
-390     \textcolor{comment}{// lcd.drawString(" edge | edge ", 0, 2);}
-391     \textcolor{comment}{// lcd.drawString(" \(\backslash\)\(\backslash\)/ ", 0, 3);}
-392     \textcolor{comment}{// lcd.drawString(" Color Detection ", 0, 4);}
-393 
-394     \textcolor{comment}{// Start odometer and odometer display}
-395     Thread odoThread = new Thread(odometer);
-396     odoThread.start();
-397     \textcolor{comment}{// Thread odoDisplayThread = new Thread(odometryDisplay);}
-398     \textcolor{comment}{// odoDisplayThread.start();}
-399     Sound.beep();
-400     \textcolor{comment}{// Start ultrasonic and light sensors}
-401     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller} = new UltrasonicPoller(usDistance, usData, sensorData);
-402     Thread usThread = new Thread(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller});
-403     usThread.start();
-404     lightPoller = new LightPoller(backLight, new \textcolor{keywordtype}{float}[2][backLight[1].sampleSize()], sensorData);
-405     Thread lightThread = new Thread(lightPoller);
-406     lightThread.start();
+369     Odometer odometer = Odometer.getOdometer(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor}, 
+      \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a64cf12cdd6772ac1ce351ff1dfadd626}{TRACK}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a91bd64670c2a91d006c907142783b1f8}{WHEEL\_RAD});
+370 
+371     \textcolor{comment}{// Sensor Related Stuff}
+372     SensorData sensorData = SensorData.getSensorData();
+373 
+374     \textcolor{comment}{// Ultrasonic sensor stuff}
+375     @SuppressWarnings(\textcolor{stringliteral}{"resource"})
+376     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
+377     SampleProvider usDistance = usSensor.getMode("Distance");
+378     \textcolor{keywordtype}{float}[] usData = new \textcolor{keywordtype}{float}[usDistance.sampleSize()];
+379 
+380     SampleProvider backLight[] = new SampleProvider[2];
+381     backLight[0] = lgSensors[0].getRedMode();
+382     backLight[1] = lgSensors[1].getRedMode();
+383 
+384     \textcolor{comment}{// colour detection sensor}
+385     SampleProvider frontLight[] = new SampleProvider[1];
+386     frontLight[0] = lgSensors[2].getRGBMode();
+387 
+388     \textcolor{comment}{// TextLCD lcd = LocalEV3.get().getTextLCD();}
+389     \textcolor{comment}{// Display odometryDisplay = new Display(lcd);}
+390     \textcolor{comment}{//}
+391 
+392     \textcolor{comment}{// Start odometer and odometer display}
+393     Thread odoThread = new Thread(odometer);
+394     odoThread.start();
+395     \textcolor{comment}{// Thread odoDisplayThread = new Thread(odometryDisplay);}
+396     \textcolor{comment}{// odoDisplayThread.start();}
+397     \textcolor{comment}{// Start ultrasonic and light sensors}
+398     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller} = new UltrasonicPoller(usDistance, usData, sensorData);
+399     Thread usThread = new Thread(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af6fee74efff891793b32352caa110465}{usPoller});
+400     usThread.start();
+401     lightPoller = new LightPoller(backLight, new \textcolor{keywordtype}{float}[2][backLight[1].sampleSize()], sensorData);
+402     Thread lightThread = new Thread(lightPoller);
+403     lightThread.start();
+404 
+405     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}{rgbPoller} = new RGBPoller(frontLight, new \textcolor{keywordtype}{float}[1][frontLight[0].sampleSize()], sensorData);
+406     Thread rgbThread = new Thread(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}{rgbPoller});
 407 
-408     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}{rgbPoller} = new RGBPoller(frontLight, new \textcolor{keywordtype}{float}[1][frontLight[0].sampleSize()], sensorData);
-409     Thread rgbThread = new Thread(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_af24a953a0c3438670220dde36c532b5d}{rgbPoller});
-410 
-411     rgbThread.start();
-412 
-413 
-414   \}
+408     rgbThread.start();
+409     Sound.beep();
+410   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -353,7 +344,8 @@ Definition at line 245 of file Game.\+java.
 246     WiFi.readData();
 247   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -415,33 +407,34 @@ This method is called when the after the robot has been prepared and is ready to
 \end{DoxyExceptions}
 
 
-Definition at line 421 of file Game.\+java.
+Definition at line 417 of file Game.\+java.
 
 
 \begin{DoxyCode}
-421                                                   \{
-422     GameParameters.Demo = DemoType.Beta;
-423     \textcolor{comment}{// Start localizing}
-424     \textcolor{keyword}{final} Navigation navigation = \textcolor{keyword}{new} Navigation(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
-425     \textcolor{keyword}{final} UltrasonicLocalizer usLoc = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, 
+417                                                   \{
+418     \textcolor{comment}{// Start localizing}
+419     \textcolor{keyword}{final} Navigation navigation = \textcolor{keyword}{new} Navigation(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
+420     \textcolor{keyword}{final} UltrasonicLocalizer usLoc = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
-426     \textcolor{keyword}{final} LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, 
+421     \textcolor{keyword}{final} LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7c673571bf50fdb6917a9d7bb671e003}{leftMotor}, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a7a05fcf37c4435c32270776a427ba0d2}{rightMotor});
-427     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aa94b85dc88de85d959677bd6c0f98989}{sensorMotor}, 
+422     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_aa94b85dc88de85d959677bd6c0f98989}{sensorMotor}, 
       \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_abc070af2fa5a5cda6d81977b35aacfb4}{rodMotor});
+423 
+424     Button.waitForAnyPress(); \textcolor{comment}{// Wait for button press to start}
+425     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.ready(usLoc, lgLoc);
+426     System.out.println(\textcolor{stringliteral}{"Grid\_UR "} + Arrays.toString(GameParameters.Grid\_UR));
+427     System.out.println(\textcolor{stringliteral}{"Grid\_LL "} + Arrays.toString(GameParameters.Grid\_LL));
 428 
-429     Button.waitForAnyPress(); \textcolor{comment}{// Wait for button press to start}
-430     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.ready(usLoc, lgLoc);
-431 
-432     \textcolor{comment}{// instantiate path finder}
-433     GameUtil.searchingFinder =
-434         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
-435     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
-436     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.navigateToTunnel(navigation, searcher);
-437     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.navigateToAndSearcherTree(navigation, searcher);
-438     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.navigateToTunnel(navigation, searcher);
-439     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.navigateToStart(navigation, searcher);
-440   \}
+429     \textcolor{comment}{// instantiate path finder}
+430     GameUtil.searchingFinder =
+431         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
+432     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
+433     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.navigateToTunnel(navigation, searcher);
+434     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.navigateToAndSearcherTree(navigation, searcher);
+435     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.navigateToTunnel(navigation, searcher);
+436     \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_a6584b6534b14ba43dc1444084a925a20}{INSTANCE}.navigateToStart(navigation, searcher);
+437   \}
 \end{DoxyCode}
 
 

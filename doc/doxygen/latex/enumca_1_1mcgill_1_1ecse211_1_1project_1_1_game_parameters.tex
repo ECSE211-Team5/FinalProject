@@ -26,7 +26,7 @@ static \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1
 \item 
 static \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type}{Area\+Type} \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_a32080f9c0e2e23c0feefc272620a07ad}{Area} = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type_a90e9cb33114c7af62aa86684942265e5}{Area\+Type.\+In\+Starting}
 \item 
-static \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type}{Demo\+Type} \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_a36e932159f5f7e0f5e2e78f00d6f7e93}{Demo} = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_a8d4e576df991cb52b50ae54b2812aa7f}{Demo\+Type.\+Beta}
+static \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type}{Demo\+Type} \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_a36e932159f5f7e0f5e2e78f00d6f7e93}{Demo} = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_a1ba3e060bfd5f76af77b713321abc7f6}{Demo\+Type.\+Final}
 \item 
 static int \mbox{[}$\,$\mbox{]} \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_af3944d1bc80c4c8a6cabce66e030f4b7}{SC} = \{1, 7, 90\}
 \item 
@@ -103,17 +103,17 @@ Definition at line 13 of file Game\+Parameters.\+java.
 \subsubsection{\texorpdfstring{get\+Type()}{getType()}}
 {\footnotesize\ttfamily static \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type}{Area\+Type} ca.\+mcgill.\+ecse211.\+project.\+Game\+Parameters.\+get\+Type (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Giving a coordinate, find the type of area it belongs to
+This method decides the type of area a particular set of (x,y) coordinates belongs to
 
 
 \begin{DoxyParams}{Parameters}
-{\em x} & x coordinate \\
+{\em x} & The x coordinate of the coordinate set \\
 \hline
-{\em y} & y coordinate \\
+{\em y} & The y coordinate of the coordinate set \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the type of area the point belongs to 
+The type of area the coordinates belong to 
 \end{DoxyReturn}
 
 \begin{DoxyExceptions}{Exceptions}
@@ -139,7 +139,8 @@ Definition at line 180 of file Game\+Parameters.\+java.
 188     \textcolor{keywordflow}{return} AreaType.Dangerous;
 189   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -163,7 +164,7 @@ Definition at line 33 of file Game\+Parameters.\+java.
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Parameters@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Parameters}!Demo@{Demo}}
 \index{Demo@{Demo}!ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Parameters@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Parameters}}
 \subsubsection{\texorpdfstring{Demo}{Demo}}
-{\footnotesize\ttfamily  static  \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type}{Demo\+Type} ca.\+mcgill.\+ecse211.\+project.\+Game\+Parameters.\+Demo = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_a8d4e576df991cb52b50ae54b2812aa7f}{Demo\+Type.\+Beta}\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily  static  \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type}{Demo\+Type} ca.\+mcgill.\+ecse211.\+project.\+Game\+Parameters.\+Demo = \hyperlink{enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_demo_type_a1ba3e060bfd5f76af77b713321abc7f6}{Demo\+Type.\+Final}\hspace{0.3cm}{\ttfamily [static]}}
 
 This variable stores the current demo type that our robot is in during a competition 
 

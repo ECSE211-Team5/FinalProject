@@ -178,7 +178,7 @@ Definition at line 58 of file Display.\+java.
 90       \textcolor{comment}{// \}}
 91 
 92       lcd.drawString(String.format(\textcolor{stringliteral}{"%1$-10s"}, ColorCalibrator.getColor().toString()), 0, 6);
-93       lcd.drawString(\textcolor{stringliteral}{"A:"} + numberFormat.format(sensdata.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_acc8f6cc56f39c8ea6b812cd8b135eca6}{getA}()), 0, 7);
+93       lcd.drawString(\textcolor{stringliteral}{"A:"} + numberFormat.format(Game.sensorMotor.getTachoCount()), 0, 7);
 94 
 95       \textcolor{comment}{// lcd.drawString(String.format("(r: %d", (int)rgb[0]), 0, 3);}
 96       \textcolor{comment}{// lcd.drawString(String.format("(g: %d", (int)rgb[1]), 0, 4);}
@@ -196,7 +196,8 @@ Definition at line 58 of file Display.\+java.
 108     \} \textcolor{keywordflow}{while} ((updateEnd - tStart) <= timeout);
 109   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

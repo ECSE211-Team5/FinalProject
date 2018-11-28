@@ -59,26 +59,26 @@ Definition at line 25 of file Component\+Test.\+java.
 
 
 
-Definition at line 139 of file Component\+Test.\+java.
+Definition at line 147 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-139                                                                \{
-140     Navigation navi = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-141     GameUtil.searchingFinder =
-142         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
-143     \textcolor{keywordtype}{int}[] arr1 = \{0, 0\};
-144     \textcolor{keywordtype}{int}[] arr2 = \{0, 0\};
-145     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(arr1, arr2);
-146     \textcolor{keywordtype}{int} count = 0;
-147     \textcolor{keywordflow}{while} (count < 85) \{
-148       navi.moveOneTileWithCorrection(0);
-149       count++;
-150       \textcolor{keywordflow}{if} (count % 7 == 0) \{
-151         navi.turn(90);
-152       \}
-153     \}
-154   \}
+147                                                                \{
+148     Navigation navi = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+149     GameUtil.searchingFinder =
+150         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
+151     \textcolor{keywordtype}{int}[] arr1 = \{0, 0\};
+152     \textcolor{keywordtype}{int}[] arr2 = \{0, 0\};
+153     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(arr1, arr2);
+154     \textcolor{keywordtype}{int} count = 0;
+155     \textcolor{keywordflow}{while} (count < 85) \{
+156       navi.moveOneTileWithCorrection(0);
+157       count++;
+158       \textcolor{keywordflow}{if} (count % 7 == 0) \{
+159         navi.turn(90);
+160       \}
+161     \}
+162   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -95,13 +95,13 @@ Here is the call graph for this function\+:\nopagebreak
 
 Test for light\+Sensor 
 
-Definition at line 109 of file Component\+Test.\+java.
+Definition at line 117 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-109                                        \{
-110 
-111   \}
+117                                        \{
+118 
+119   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -125,26 +125,28 @@ Test for localization\+Test
 \end{DoxyExceptions}
 
 
-Definition at line 91 of file Component\+Test.\+java.
+Definition at line 99 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-91                                                                   \{
-92     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-93     UltrasonicLocalizer us = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);
-94     LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
-95     us.localize(Button.ID\_LEFT);
-96     lgLoc.localize(GameParameters.SC);
-97   \}
+99                                                                   \{
+100     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+101     UltrasonicLocalizer us = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+102     LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+103     us.localize(Button.ID\_LEFT);
+104     lgLoc.localize(GameParameters.SC);
+105   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_ad11712dd74c5c64e84cd71186a59a087_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -159,26 +161,20 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 156 of file Component\+Test.\+java.
+Definition at line 164 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-156                                  \{
-157     GameUtil.playMusic();
-158   \}
+164                                  \{
+165     GameUtil.playMusic();
+166   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a743c9bb90a8c8bc3fcf3b4c591990e7f_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a743c9bb90a8c8bc3fcf3b4c591990e7f_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_aa40592bb550b3526402faddbc0d890c7}\label{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_aa40592bb550b3526402faddbc0d890c7}} 
@@ -204,7 +200,15 @@ Definition at line 70 of file Component\+Test.\+java.
 71     Navigation nav = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
 72     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
 73     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
-74   \}
+74     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+75     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+76     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+77     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+78     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+79     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+80     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+81     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+82   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -213,7 +217,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_aa40592bb550b3526402faddbc0d890c7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -235,39 +240,41 @@ Test for ring detection
 \end{DoxyExceptions}
 
 
-Definition at line 118 of file Component\+Test.\+java.
+Definition at line 126 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-118                                                                \{
-119     Game.INSTANCE.usPoller.setStart(\textcolor{keyword}{false});
-120     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(Game.sensorMotor, Game.rodMotor);
-121     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-122     GameUtil.searchingFinder =
-123         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
-124     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
-125     Odometer.getOdometer().setXYT(1, 1, 0);
-126     \textcolor{keywordtype}{int}[] tree = \{2, 2\};
-127     \textcolor{keywordtype}{int}[][] other = \{\{2, 1\}, \{3, 2\}, \{2, 3\}, \{1, 2\}\};
-128     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++) \{
-129       navigation.travelToWithCorrection(other[i][0], other[i][1], \textcolor{keyword}{false});
-130       navigation.turn(-90);
-131       \textcolor{keywordflow}{if} (i != 3) \{
-132         navigation.searchRingSet(searcher, \textcolor{keyword}{true}, \textcolor{keyword}{true});
-133       \} \textcolor{keywordflow}{else} \{
-134         navigation.searchRingSet(searcher, \textcolor{keyword}{true}, \textcolor{keyword}{false});
-135       \}
-136     \}
-137   \}
+126                                                                \{
+127     Game.INSTANCE.usPoller.setStart(\textcolor{keyword}{false});
+128     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(Game.sensorMotor, Game.rodMotor);
+129     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+130     GameUtil.searchingFinder =
+131         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
+132     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
+133     Odometer.getOdometer().setXYT(1, 1, 0);
+134     \textcolor{keywordtype}{int}[] tree = \{2, 2\};
+135     \textcolor{keywordtype}{int}[][] other = \{\{2, 1\}, \{3, 2\}, \{2, 3\}, \{1, 2\}\};
+136     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++) \{
+137       navigation.travelToWithCorrection(other[i][0], other[i][1], \textcolor{keyword}{false});
+138       navigation.turn(-90);
+139       \textcolor{keywordflow}{if} (i != 3) \{
+140         navigation.searchRingSet(searcher, \textcolor{keyword}{true}, \textcolor{keyword}{true});
+141       \} \textcolor{keywordflow}{else} \{
+142         navigation.searchRingSet(searcher, \textcolor{keyword}{true}, \textcolor{keyword}{false});
+143       \}
+144     \}
+145   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a1ecca45b47067d825683cf46dcf22b62_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -325,7 +332,8 @@ Definition at line 38 of file Component\+Test.\+java.
 62     \}
 63   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -340,21 +348,22 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line 76 of file Component\+Test.\+java.
+Definition at line 84 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-76                                                    \{
-77     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-78     GameUtil.searchingFinder =
-79         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
-80     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
-81     Odometer.getOdometer().setXYT(1, 7, 90);
-82     navigation.goThroughTunnel();
-83     navigation.goThroughTunnel();
-84   \}
+84                                                    \{
+85     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+86     GameUtil.searchingFinder =
+87         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
+88     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
+89     Odometer.getOdometer().setXYT(1, 7, 90);
+90     navigation.goThroughTunnel();
+91     navigation.goThroughTunnel();
+92   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -369,15 +378,16 @@ Here is the call graph for this function\+:\nopagebreak
 
 Test for Ultrasonic\+Sensor 
 
-Definition at line 102 of file Component\+Test.\+java.
+Definition at line 110 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-102                                             \{
-103 
-104   \}
+110                                             \{
+111 
+112   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

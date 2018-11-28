@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.Game" 3 "Tue Nov 27 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.Game" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -253,75 +253,66 @@ This method performs all the object instantiations and preparations necessary to
 .PP
 
 .PP
-Definition at line 349 of file Game\&.java\&.
+Definition at line 354 of file Game\&.java\&.
 .PP
 .nf
-349                                                       {
-350     // Motor Objects, and Robot related parameters
-351     Port usPort = LocalEV3\&.get()\&.getPort("S1");
-352     // initialize multiple light ports in main
-353     Port[] lgPorts = new Port[3];
-354 
-355     // Light sensor sensor stuff
-356     lgPorts[0] = LocalEV3\&.get()\&.getPort("S2");
-357     lgPorts[1] = LocalEV3\&.get()\&.getPort("S3");
-358     lgPorts[2] = LocalEV3\&.get()\&.getPort("S4");
-359     EV3ColorSensor[] lgSensors = new EV3ColorSensor[3];
-360     for (int i = 0; i < lgSensors\&.length; i++) {
-361       lgSensors[i] = new EV3ColorSensor(lgPorts[i]);
-362     }
-363 
-364     Odometer odometer = Odometer\&.getOdometer(leftMotor, rightMotor, TRACK, WHEEL_RAD);
-365 
-366     // Sensor Related Stuff
-367     SensorData sensorData = SensorData\&.getSensorData();
+354                                                       {
+355     // Motor Objects, and Robot related parameters
+356     Port usPort = LocalEV3\&.get()\&.getPort("S1");
+357     // initialize multiple light ports in main
+358     Port[] lgPorts = new Port[3];
+359 
+360     // Light sensor sensor stuff
+361     lgPorts[0] = LocalEV3\&.get()\&.getPort("S2");
+362     lgPorts[1] = LocalEV3\&.get()\&.getPort("S3");
+363     lgPorts[2] = LocalEV3\&.get()\&.getPort("S4");
+364     EV3ColorSensor[] lgSensors = new EV3ColorSensor[3];
+365     for (int i = 0; i < lgSensors\&.length; i++) {
+366       lgSensors[i] = new EV3ColorSensor(lgPorts[i]);
+367     }
 368 
-369     // Ultrasonic sensor stuff
-370     @SuppressWarnings("resource")
-371     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
-372     SampleProvider usDistance = usSensor\&.getMode("Distance");
-373     float[] usData = new float[usDistance\&.sampleSize()];
-374 
-375     SampleProvider backLight[] = new SampleProvider[2];
-376     backLight[0] = lgSensors[0]\&.getRedMode();
-377     backLight[1] = lgSensors[1]\&.getRedMode();
-378 
-379     // colour detection sensor
-380     SampleProvider frontLight[] = new SampleProvider[1];
-381     frontLight[0] = lgSensors[2]\&.getRGBMode();
-382 
-383     // TextLCD lcd = LocalEV3\&.get()\&.getTextLCD();
-384     // Display odometryDisplay = new Display(lcd);
-385     // // STEP 1: LOCALIZE to (1,1)
-386     // // ButtonChoice left or right
-387     // lcd\&.clear();
-388     // lcd\&.drawString("< Left | Right >", 0, 0);
-389     // lcd\&.drawString(" falling | rising ", 0, 1);
-390     // lcd\&.drawString(" edge | edge ", 0, 2);
-391     // lcd\&.drawString(" \\/ ", 0, 3);
-392     // lcd\&.drawString(" Color Detection ", 0, 4);
-393 
-394     // Start odometer and odometer display
-395     Thread odoThread = new Thread(odometer);
-396     odoThread\&.start();
-397     // Thread odoDisplayThread = new Thread(odometryDisplay);
-398     // odoDisplayThread\&.start();
-399     Sound\&.beep();
-400     // Start ultrasonic and light sensors
-401     usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
-402     Thread usThread = new Thread(usPoller);
-403     usThread\&.start();
-404     lightPoller = new LightPoller(backLight, new float[2][backLight[1]\&.sampleSize()], sensorData);
-405     Thread lightThread = new Thread(lightPoller);
-406     lightThread\&.start();
+369     Odometer odometer = Odometer\&.getOdometer(leftMotor, rightMotor, TRACK, WHEEL_RAD);
+370 
+371     // Sensor Related Stuff
+372     SensorData sensorData = SensorData\&.getSensorData();
+373 
+374     // Ultrasonic sensor stuff
+375     @SuppressWarnings("resource")
+376     SensorModes usSensor = new EV3UltrasonicSensor(usPort);
+377     SampleProvider usDistance = usSensor\&.getMode("Distance");
+378     float[] usData = new float[usDistance\&.sampleSize()];
+379 
+380     SampleProvider backLight[] = new SampleProvider[2];
+381     backLight[0] = lgSensors[0]\&.getRedMode();
+382     backLight[1] = lgSensors[1]\&.getRedMode();
+383 
+384     // colour detection sensor
+385     SampleProvider frontLight[] = new SampleProvider[1];
+386     frontLight[0] = lgSensors[2]\&.getRGBMode();
+387 
+388     // TextLCD lcd = LocalEV3\&.get()\&.getTextLCD();
+389     // Display odometryDisplay = new Display(lcd);
+390     //
+391 
+392     // Start odometer and odometer display
+393     Thread odoThread = new Thread(odometer);
+394     odoThread\&.start();
+395     // Thread odoDisplayThread = new Thread(odometryDisplay);
+396     // odoDisplayThread\&.start();
+397     // Start ultrasonic and light sensors
+398     usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
+399     Thread usThread = new Thread(usPoller);
+400     usThread\&.start();
+401     lightPoller = new LightPoller(backLight, new float[2][backLight[1]\&.sampleSize()], sensorData);
+402     Thread lightThread = new Thread(lightPoller);
+403     lightThread\&.start();
+404 
+405     rgbPoller = new RGBPoller(frontLight, new float[1][frontLight[0]\&.sampleSize()], sensorData);
+406     Thread rgbThread = new Thread(rgbPoller);
 407 
-408     rgbPoller = new RGBPoller(frontLight, new float[1][frontLight[0]\&.sampleSize()], sensorData);
-409     Thread rgbThread = new Thread(rgbPoller);
-410 
-411     rgbThread\&.start();
-412 
-413 
-414   }
+408     rgbThread\&.start();
+409     Sound\&.beep();
+410   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.project\&.Game\&.readData ()"
 This method reads data from the \fBWiFi\fP class (using another thread) 
@@ -379,29 +370,30 @@ This method is called when the after the robot has been prepared and is ready to
 .PP
 
 .PP
-Definition at line 421 of file Game\&.java\&.
+Definition at line 417 of file Game\&.java\&.
 .PP
 .nf
-421                                                   {
-422     GameParameters\&.Demo = DemoType\&.Beta;
-423     // Start localizing
-424     final Navigation navigation = new Navigation(leftMotor, rightMotor);
-425     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
-426     final LightLocalizer lgLoc = new LightLocalizer(navigation, leftMotor, rightMotor);
-427     final RingSearcher searcher = new RingSearcher(sensorMotor, rodMotor);
+417                                                   {
+418     // Start localizing
+419     final Navigation navigation = new Navigation(leftMotor, rightMotor);
+420     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
+421     final LightLocalizer lgLoc = new LightLocalizer(navigation, leftMotor, rightMotor);
+422     final RingSearcher searcher = new RingSearcher(sensorMotor, rodMotor);
+423 
+424     Button\&.waitForAnyPress(); // Wait for button press to start
+425     INSTANCE\&.ready(usLoc, lgLoc);
+426     System\&.out\&.println("Grid_UR " + Arrays\&.toString(GameParameters\&.Grid_UR));
+427     System\&.out\&.println("Grid_LL " + Arrays\&.toString(GameParameters\&.Grid_LL));
 428 
-429     Button\&.waitForAnyPress(); // Wait for button press to start
-430     INSTANCE\&.ready(usLoc, lgLoc);
-431 
-432     // instantiate path finder
-433     GameUtil\&.searchingFinder =
-434         new GameUtil\&.PathFinder(GameParameters\&.Island_LL, GameParameters\&.Island_UR);
-435     GameUtil\&.startingFinder = new GameUtil\&.PathFinder(GameParameters\&.US_LL, GameParameters\&.US_UR);
-436     INSTANCE\&.navigateToTunnel(navigation, searcher);
-437     INSTANCE\&.navigateToAndSearcherTree(navigation, searcher);
-438     INSTANCE\&.navigateToTunnel(navigation, searcher);
-439     INSTANCE\&.navigateToStart(navigation, searcher);
-440   }
+429     // instantiate path finder
+430     GameUtil\&.searchingFinder =
+431         new GameUtil\&.PathFinder(GameParameters\&.Island_LL, GameParameters\&.Island_UR);
+432     GameUtil\&.startingFinder = new GameUtil\&.PathFinder(GameParameters\&.US_LL, GameParameters\&.US_UR);
+433     INSTANCE\&.navigateToTunnel(navigation, searcher);
+434     INSTANCE\&.navigateToAndSearcherTree(navigation, searcher);
+435     INSTANCE\&.navigateToTunnel(navigation, searcher);
+436     INSTANCE\&.navigateToStart(navigation, searcher);
+437   }
 .fi
 .SH "Member Data Documentation"
 .PP 

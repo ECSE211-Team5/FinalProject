@@ -20,15 +20,40 @@ import lejos.hardware.Sound;
  *
  */
 public class GameUtil {
+  /**
+   * This variable stores a PathFinder object instance that helps to create a path to navigate at
+   * the start of a competition.
+   */
   public static PathFinder startingFinder;
+
+  /**
+   * This variable stores a PathFinder object instance that helps to create a path to navigate
+   * during the searching phase of a competition.
+   */
   public static PathFinder searchingFinder;
+
+  /**
+   * This variable stores a character denoting a left turn is required.
+   */
   public static char leftInstruction = 'L';
+
+  /**
+   * This variable stores a character denoting a right turn is required.
+   */
   public static char rightInstruction = 'R';
+
+  /**
+   * This variable stores a character denoting that we need to navigate upwards.
+   */
   public static char upInstruction = 'U';
+
+  /**
+   * This variable stores a character denoting that we need to navigate downwards.
+   */
   public static char downInstruction = 'D';
 
   /**
-   * This is class is used as a comparator to sort the points from nearest to the robot.
+   * This class is used to compare points nearest to our robot during sorting.
    * 
    * @author Caspar Cedro
    * @author Percy Chen
@@ -53,7 +78,7 @@ public class GameUtil {
   }
 
   /**
-   * This is class is used as a comparator to sort the points from nearest to the ring set.
+   * This class is used to compare points nearest to a ring set during sorting.
    * 
    * @author Caspar Cedro
    * @author Percy Chen
@@ -76,7 +101,7 @@ public class GameUtil {
   }
 
   /**
-   * This is class is used as a comparator to sort the points from nearest to the starting point.
+   * This class is used to compare points nearest to our robot's starting point during sorting.
    * 
    * @author Caspar Cedro
    * @author Percy Chen
@@ -99,7 +124,7 @@ public class GameUtil {
   }
 
   /**
-   * Class that find the shortest path from one point to another with constraints inside one area
+   * This class finds the shortest path from one point to another inside an area
    * 
    * @author Caspar Cedro
    * @author Percy Chen
@@ -115,10 +140,10 @@ public class GameUtil {
     int[] points;
 
     /**
-     * Constructor of the path finder,
+     * This is the class constructor for the PathFinder class
      * 
-     * @param ll: the lower left corner of the area
-     * @param ur: the upper right corner of the area
+     * @param ll The lower left corner of an area to find a path in
+     * @param ur The upper right corner of an area to find a path in
      */
     public PathFinder(int[] ll, int[] ur) {
       this.ll = ll;
@@ -129,12 +154,12 @@ public class GameUtil {
     }
 
     /**
-     * Try find a path from cur to destination, return false if no such path exists
+     * This method tries to find a path from our current location to our destination.
      * 
-     * @param cur: current position of the robot
-     * @param destination: destination inside one area of the robot
-     * @param instruction: instruction that guide the robot to the destination if such path exists
-     * @return: true if such path exists, false otherwise
+     * @param cur The current coordinates of our robot
+     * @param destination The destination coordinates our robot is supposed to travel to
+     * @param instruction The instructions that guide the robot to the destination if a path exists
+     * @return A boolean that is true if a path exists otherwise false
      */
     public boolean tryFindPath(int[] cur, int[] destination, ArrayList<Character> instruction) {
       if (!isSafe(destination))
@@ -177,12 +202,12 @@ public class GameUtil {
     }
 
     /**
-     * bfs the area to find a potential path to the destination
+     * This method runs a breadth-first search on an area to find a potential path to a destination
      * 
-     * @param i: starting node
-     * @param j: ending node
-     * @param visited: an array keeps track of visited nodes
-     * @param parents: an array keeps track of parent of each node
+     * @param i An integer that denotes the starting node
+     * @param j An integer that denotes the ending node
+     * @param visited An array keeps track of visited nodes
+     * @param parents An array keeps track of the parent of each node
      */
     private void bfs(int i, int j, boolean[] visited, int[] parents) {
       LinkedList<Integer> q = new LinkedList<Integer>();
@@ -204,11 +229,11 @@ public class GameUtil {
     }
 
     /**
-     * get a children of one node based on the constraint (cannot be a tree, cannot be in the
-     * tunnel, cannot be a wall etc)
+     * This method gets the children of one node based on certain constraints (i.e. cannot be a
+     * tree, cannot be in the tunnel, cannot be a wall etc)
      * 
-     * @param i: the index representation of the node
-     * @return a list of child, if any
+     * @param i An integer that denotes the index representation of the node
+     * @return A list of children, if any
      */
     private ArrayList<Integer> getChildren(int i) {
       ArrayList<Integer> children = new ArrayList<Integer>();
@@ -226,7 +251,7 @@ public class GameUtil {
     }
 
     /**
-     * transfer a coordinate to index representation
+     * This method transfer a coordinate to index representation
      * 
      * @param coor
      * @return

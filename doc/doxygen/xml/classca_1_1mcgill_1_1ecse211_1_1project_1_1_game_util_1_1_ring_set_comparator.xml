@@ -23,13 +23,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="68" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="68" bodyend="75"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="93" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="93" bodyend="100"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>This is class is used as a comparator to sort the points from nearest to the ring set.</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<para>This class is used to compare points nearest to a ring set during sorting.</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
 <simplesect kind="author"><para>Percy Chen </para></simplesect>
 <simplesect kind="author"><para>Patrick Erath </para></simplesect>
 <simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
@@ -56,7 +56,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="66" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="66" bodyend="76"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="91" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="91" bodyend="101"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_ring_set_comparator_1a7e28ffcd3a955ccc0c6ec6406c16fb11" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameUtil::RingSetComparator</scope><name>compare</name></member>
     </listofallmembers>

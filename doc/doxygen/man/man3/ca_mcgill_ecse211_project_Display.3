@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.Display" 3 "Tue Nov 27 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.Display" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -138,7 +138,7 @@ Definition at line 58 of file Display\&.java\&.
 90       // }
 91 
 92       lcd\&.drawString(String\&.format("%1$-10s", ColorCalibrator\&.getColor()\&.toString()), 0, 6);
-93       lcd\&.drawString("A:" + numberFormat\&.format(sensdata\&.getA()), 0, 7);
+93       lcd\&.drawString("A:" + numberFormat\&.format(Game\&.sensorMotor\&.getTachoCount()), 0, 7);
 94 
 95       // lcd\&.drawString(String\&.format("(r: %d", (int)rgb[0]), 0, 3);
 96       // lcd\&.drawString(String\&.format("(g: %d", (int)rgb[1]), 0, 4);

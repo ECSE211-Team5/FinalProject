@@ -135,7 +135,7 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fe82107f771c1cc70198f6bd5ef97a9" kind="variable"><name>FORWARD_SPEED</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a5ffff12fb880c5b5052118fc27b03778" kind="variable"><name>blackLineColor</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" kind="function"><name>LightLocalizer</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" kind="function"><name>localize</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1afb295ca8cd6623ac3e9eacb1d31b75b9" kind="function"><name>localize</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller" kind="class"><name>ca::mcgill::ecse211::threads::LightPoller</name>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" kind="variable"><name>us</name></member>
@@ -171,8 +171,9 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a20d49ac52063aa11a31a0cdbfdb90aa8" kind="variable"><name>odometer</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad915718f10b304ba6d7c2366037e8022" kind="variable"><name>data</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" kind="function"><name>Navigation</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ab01db7b8a871acd45e7dd16922abc15e" kind="function"><name>setSlowAcc</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4376e54162df8f123ca3b52e4fd2f38d" kind="function"><name>calculateAngleTo</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" kind="function"><name>travelTo</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3d8354490a2d8c36090d794c25d33421" kind="function"><name>travelTo</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" kind="function"><name>travelToWithCorrection</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a48eeb9ae2da23664421e8da5642054c7" kind="function"><name>moveWithCorrection</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" kind="function"><name>moveOneTileWithCorrection</name></member>
@@ -270,11 +271,14 @@
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ae3b3d239a80eb00610ea8c7eda1643f6" kind="variable"><name>odometer</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ab990f1ed46e59183cf8593288efd821f" kind="variable"><name>data</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a37eebb6cbdfd692e0979c3ca0fe2597b" kind="function"><name>RingSearcher</name></member>
-    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a7ff5756046a0ce992ed8cb8954139c3b" kind="function"><name>search</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a6f66df0810034dfb407d792ded013a8e" kind="function"><name>search</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a997bf874ae5577c48719254677830fb7" kind="function"><name>detectColor</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1abf31c36cadb144a4651b11f7fa37120a" kind="function"><name>prepareSearch</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a6edfdbd31d9848ff885e2e4caa3b46c6" kind="function"><name>finishSearch</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ad73c50b29163d91292de418101cce21e" kind="function"><name>resetSearch</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a3de30b85b1445157d7f8572992de7651" kind="function"><name>prepareRetrieve</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1afca3a0c746b07abb88881d926f4fe71f" kind="function"><name>retrieveRing</name></member>
+    <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a0b96c45f7df3eb557496acab33930cd5" kind="function"><name>safeRod</name></member>
     <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a8b0ea0bf4cd07b6c8a090c3e9bc8eb04" kind="function"><name>resetRodMotor</name></member>
   </compound>
   <compound refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_ring_set_comparator" kind="class"><name>ca::mcgill::ecse211::project::GameUtil::RingSetComparator</name>

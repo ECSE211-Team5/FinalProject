@@ -170,11 +170,11 @@ public enum GameParameters {
   public static int[] TTEE_O = {13, 7};
 
   /**
-   * Giving a coordinate, find the type of area it belongs to
+   * This method decides the type of area a particular set of (x,y) coordinates belongs to
    * 
-   * @param x x coordinate
-   * @param y y coordinate
-   * @return the type of area the point belongs to
+   * @param x The x coordinate of the coordinate set
+   * @param y The y coordinate of the coordinate set
+   * @return The type of area the coordinates belong to
    * @throws Exception
    */
   public static AreaType getType(int x, int y) {

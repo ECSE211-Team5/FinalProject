@@ -5,15 +5,21 @@
 \item 
 \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a37eebb6cbdfd692e0979c3ca0fe2597b}{Ring\+Searcher} (E\+V3\+Large\+Regulated\+Motor sensor\+Motor, E\+V3\+Large\+Regulated\+Motor rod\+Motor)  throws Odometer\+Exceptions 
 \item 
-void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a7ff5756046a0ce992ed8cb8954139c3b}{search} ()
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a6f66df0810034dfb407d792ded013a8e}{search} (int angle)
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a997bf874ae5577c48719254677830fb7}{detect\+Color} ()
 \item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_abf31c36cadb144a4651b11f7fa37120a}{prepare\+Search} ()
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a6edfdbd31d9848ff885e2e4caa3b46c6}{finish\+Search} ()
 \item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_ad73c50b29163d91292de418101cce21e}{reset\+Search} ()
 \item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a3de30b85b1445157d7f8572992de7651}{prepare\+Retrieve} ()
 \item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_afca3a0c746b07abb88881d926f4fe71f}{retrieve\+Ring} ()
+\item 
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a0b96c45f7df3eb557496acab33930cd5}{safe\+Rod} ()
 \item 
 void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a8b0ea0bf4cd07b6c8a090c3e9bc8eb04}{reset\+Rod\+Motor} ()
 \end{DoxyCompactItemize}
@@ -91,6 +97,94 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a997bf874ae5577c48719254677830fb7}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a997bf874ae5577c48719254677830fb7}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}!detect\+Color@{detect\+Color}}
+\index{detect\+Color@{detect\+Color}!ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}}
+\subsubsection{\texorpdfstring{detect\+Color()}{detectColor()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+project.\+Ring\+Searcher.\+detect\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file Ring\+Searcher.\+java.
+
+
+\begin{DoxyCode}
+66                             \{
+67     Game.INSTANCE.rgbPoller.setStart(\textcolor{keyword}{true});
+68     \textcolor{keywordflow}{try} \{
+69       Thread.sleep(1000);
+70     \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+71       \textcolor{comment}{// TODO Auto-generated catch block}
+72       e.printStackTrace();
+73     \}
+74     \textcolor{comment}{// determine most frequent colour detected and beep accordingly}
+75     Game.INSTANCE.rgbPoller.setStart(\textcolor{keyword}{false});
+76     \textcolor{keywordflow}{switch} (ColorCalibrator.getMostFrequenct()) \{
+77       \textcolor{keywordflow}{case} Orange:
+78         Sound.beep();
+79         Sound.beep();
+80         Sound.beep();
+81         Sound.beep();
+82         \textcolor{keywordflow}{break};
+83       \textcolor{keywordflow}{case} Yellow:
+84         Sound.beep();
+85         Sound.beep();
+86         Sound.beep();
+87         \textcolor{keywordflow}{break};
+88       \textcolor{keywordflow}{case} Green:
+89         Sound.beep();
+90         Sound.beep();
+91         \textcolor{keywordflow}{break};
+92       \textcolor{keywordflow}{case} Blue:
+93         Sound.beep();
+94         \textcolor{keywordflow}{break};
+95       \textcolor{keywordflow}{case} Other:
+96         \textcolor{keywordflow}{break};
+97       \textcolor{keywordflow}{default}:
+98         \textcolor{keywordflow}{break};
+99     \}
+100   \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a997bf874ae5577c48719254677830fb7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a997bf874ae5577c48719254677830fb7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a6edfdbd31d9848ff885e2e4caa3b46c6}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a6edfdbd31d9848ff885e2e4caa3b46c6}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}!finish\+Search@{finish\+Search}}
+\index{finish\+Search@{finish\+Search}!ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}}
+\subsubsection{\texorpdfstring{finish\+Search()}{finishSearch()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+project.\+Ring\+Searcher.\+finish\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 109 of file Ring\+Searcher.\+java.
+
+
+\begin{DoxyCode}
+109                              \{
+110     sensorMotor.rotateTo(-100);
+111   \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a6edfdbd31d9848ff885e2e4caa3b46c6_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a3de30b85b1445157d7f8572992de7651}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a3de30b85b1445157d7f8572992de7651}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}!prepare\+Retrieve@{prepare\+Retrieve}}
 \index{prepare\+Retrieve@{prepare\+Retrieve}!ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}}
@@ -99,15 +193,16 @@ Here is the call graph for this function\+:\nopagebreak
 
 This method rotate the rod to a suitable position for retrieve the ring 
 
-Definition at line 111 of file Ring\+Searcher.\+java.
+Definition at line 123 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-111                                 \{
-112     rodMotor.rotate(ROD\_PREPARE);
-113   \}
+123                                 \{
+124     rodMotor.rotateTo(ROD\_PREPARE);
+125   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -122,15 +217,16 @@ Here is the caller graph for this function\+:\nopagebreak
 
 This method put the sensor to search rotation to be ready for the searching 
 
-Definition at line 97 of file Ring\+Searcher.\+java.
+Definition at line 105 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-97                               \{
-98     sensorMotor.rotate(SENSOR\_ROTATION);
-99   \}
+105                               \{
+106     sensorMotor.rotateTo(SENSOR\_ROTATION);
+107   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -145,21 +241,14 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Rotate the rod back to the original position 
 
-Definition at line 125 of file Ring\+Searcher.\+java.
+Definition at line 141 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-125                               \{
-126     rodMotor.rotate(-(ROD\_PREPARE + ROD\_RETRIEVE));
-127   \}
+141                               \{
+142     rodMotor.rotateTo(0);
+143   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a8b0ea0bf4cd07b6c8a090c3e9bc8eb04_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_ad73c50b29163d91292de418101cce21e}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_ad73c50b29163d91292de418101cce21e}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}!reset\+Search@{reset\+Search}}
 \index{reset\+Search@{reset\+Search}!ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}}
@@ -168,15 +257,16 @@ Here is the caller graph for this function\+:\nopagebreak
 
 This method put the sensor back 
 
-Definition at line 104 of file Ring\+Searcher.\+java.
+Definition at line 116 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-104                             \{
-105     sensorMotor.rotateTo(0);
-106   \}
+116                             \{
+117     sensorMotor.rotateTo(0);
+118   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -191,26 +281,51 @@ Here is the caller graph for this function\+:\nopagebreak
 
 this method retrieve the searched ring 
 
-Definition at line 118 of file Ring\+Searcher.\+java.
+Definition at line 130 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-118                              \{
-119     rodMotor.rotate(ROD\_RETRIEVE);
-120   \}
+130                              \{
+131     rodMotor.rotate(ROD\_RETRIEVE);
+132   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_afca3a0c746b07abb88881d926f4fe71f_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a7ff5756046a0ce992ed8cb8954139c3b}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a7ff5756046a0ce992ed8cb8954139c3b}} 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a0b96c45f7df3eb557496acab33930cd5}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a0b96c45f7df3eb557496acab33930cd5}} 
+\index{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}!safe\+Rod@{safe\+Rod}}
+\index{safe\+Rod@{safe\+Rod}!ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}}
+\subsubsection{\texorpdfstring{safe\+Rod()}{safeRod()}}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+project.\+Ring\+Searcher.\+safe\+Rod (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file Ring\+Searcher.\+java.
+
+
+\begin{DoxyCode}
+134                         \{
+135     rodMotor.rotateTo(180);
+136   \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a0b96c45f7df3eb557496acab33930cd5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a6f66df0810034dfb407d792ded013a8e}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a6f66df0810034dfb407d792ded013a8e}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}!search@{search}}
 \index{search@{search}!ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher@{ca\+::mcgill\+::ecse211\+::project\+::\+Ring\+Searcher}}
 \subsubsection{\texorpdfstring{search()}{search()}}
-{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+project.\+Ring\+Searcher.\+search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+project.\+Ring\+Searcher.\+search (\begin{DoxyParamCaption}\item[{int}]{angle }\end{DoxyParamCaption})}
 
 This method searches for the ring and identify its color based using the rod, It will beep based on the color of the ring 
 
@@ -218,51 +333,17 @@ Definition at line 61 of file Ring\+Searcher.\+java.
 
 
 \begin{DoxyCode}
-61                        \{
-62     sensorMotor.rotate(SENSOR\_ROTATION);
-63     sensorMotor.rotate(-SENSOR\_ROTATION);
-64 
-65     \textcolor{comment}{// determine most frequent colour detected and beep accordingly}
-66     Game.INSTANCE.rgbPoller.setStart(\textcolor{keyword}{false});
-67     \textcolor{keywordflow}{switch} (ColorCalibrator.getMostFrequenct()) \{
-68       \textcolor{keywordflow}{case} Orange:
-69         Sound.beep();
-70         Sound.beep();
-71         Sound.beep();
-72         Sound.beep();
-73         \textcolor{keywordflow}{break};
-74       \textcolor{keywordflow}{case} Yellow:
-75         Sound.beep();
-76         Sound.beep();
-77         Sound.beep();
-78         \textcolor{keywordflow}{break};
-79       \textcolor{keywordflow}{case} Green:
-80         Sound.beep();
-81         Sound.beep();
-82         \textcolor{keywordflow}{break};
-83       \textcolor{keywordflow}{case} Blue:
-84         Sound.beep();
-85         \textcolor{keywordflow}{break};
-86       \textcolor{keywordflow}{case} Other:
-87         \textcolor{keywordflow}{break};
-88       \textcolor{keywordflow}{default}:
-89         \textcolor{keywordflow}{break};
-90     \}
-91     Game.INSTANCE.rgbPoller.setStart(\textcolor{keyword}{true});
-92   \}
+61                                 \{
+62     sensorMotor.rotateTo(angle);
+63     
+64   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a7ff5756046a0ce992ed8cb8954139c3b_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a7ff5756046a0ce992ed8cb8954139c3b_icgraph}
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_a6f66df0810034dfb407d792ded013a8e_icgraph}
 \end{center}
 \end{figure}
 

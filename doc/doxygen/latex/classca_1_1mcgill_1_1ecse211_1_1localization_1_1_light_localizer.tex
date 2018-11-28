@@ -5,7 +5,7 @@
 \item 
 \hyperlink{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_aa37a75b7c32c02fe261845021f0734b7}{Light\+Localizer} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation}{Navigation} nav, E\+V3\+Large\+Regulated\+Motor left\+Motor, E\+V3\+Large\+Regulated\+Motor right\+Motor)  throws Odometer\+Exceptions 
 \item 
-void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_a9fc3d6cdd897e9db86fc9d71dc914863}{localize} (int\mbox{[}$\,$\mbox{]} sC)
+void \hyperlink{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_afb295ca8cd6623ac3e9eacb1d31b75b9}{localize} (int\mbox{[}$\,$\mbox{]} starting\+Coordinates)
 \end{DoxyCompactItemize}
 
 
@@ -76,17 +76,17 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_a9fc3d6cdd897e9db86fc9d71dc914863}\label{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_a9fc3d6cdd897e9db86fc9d71dc914863}} 
+\mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_afb295ca8cd6623ac3e9eacb1d31b75b9}\label{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_afb295ca8cd6623ac3e9eacb1d31b75b9}} 
 \index{ca\+::mcgill\+::ecse211\+::localization\+::\+Light\+Localizer@{ca\+::mcgill\+::ecse211\+::localization\+::\+Light\+Localizer}!localize@{localize}}
 \index{localize@{localize}!ca\+::mcgill\+::ecse211\+::localization\+::\+Light\+Localizer@{ca\+::mcgill\+::ecse211\+::localization\+::\+Light\+Localizer}}
 \subsubsection{\texorpdfstring{localize()}{localize()}}
-{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+localization.\+Light\+Localizer.\+localize (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{sC }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+localization.\+Light\+Localizer.\+localize (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{starting\+Coordinates }\end{DoxyParamCaption})}
 
 This method localizes our robot to an intersection of two black lines which serve as our origin and strives to face north.
 
 
 \begin{DoxyParams}{Parameters}
-{\em sC} & The x and y coordinates to set on our Odometer after localization \\
+{\em starting\+Coordinates} & The x and y coordinates to set on our Odometer after localization \\
 \hline
 \end{DoxyParams}
 
@@ -95,7 +95,7 @@ Definition at line 55 of file Light\+Localizer.\+java.
 
 
 \begin{DoxyCode}
-55                                  \{
+55                                                   \{
 56     leftMotor.setSpeed(FORWARD\_SPEED);
 57     rightMotor.setSpeed(FORWARD\_SPEED);
 58 
@@ -113,55 +113,57 @@ Definition at line 55 of file Light\+Localizer.\+java.
 70     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a419b8f07c2c5374411c8e62298e9a402}{setTheta}(0.0);
 71     Sound.beep();
 72     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(0);
-73     
-74     \textcolor{comment}{// 2. Turn and go forward find the x=0 line}
-75     navigation.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(90);
-76     leftMotor.setSpeed(FORWARD\_SPEED);
-77     rightMotor.setSpeed(FORWARD\_SPEED);
-78     leftMotor.forward();
-79     rightMotor.forward();
-80     \textcolor{keywordflow}{while} (leftMotor.isMoving() || rightMotor.isMoving()) \{
-81       \textcolor{keywordflow}{if} (data.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[0] < blackLineColor) \{
-82         leftMotor.stop(\textcolor{keyword}{true});
-83       \}
-84       \textcolor{keywordflow}{if} (data.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[1] < blackLineColor) \{
-85         rightMotor.stop(\textcolor{keyword}{true});
-86       \}
-87     \}
-88     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a419b8f07c2c5374411c8e62298e9a402}{setTheta}(90.0);
-89     Sound.beep();
-90     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(0);
-91     leftMotor.setSpeed(FORWARD\_SPEED);
-92     rightMotor.setSpeed(FORWARD\_SPEED);
-93     
-94     \textcolor{comment}{// 3. Go backwards by sensor-wheel center distance in x-direction}
-95     leftMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, Game.SEN\_DIS), \textcolor{keyword}{true});
-96     rightMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, Game.SEN\_DIS), \textcolor{keyword}{false});
-97     
-98     \textcolor{comment}{// 4. Go backwards by sensor-wheel center distance in y-direction}
-99     navigation.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(0);
-100     leftMotor.setSpeed(FORWARD\_SPEED);
-101     rightMotor.setSpeed(FORWARD\_SPEED);
-102     \textcolor{comment}{// double sensorDistanceOffset = 2.5;}
-103     leftMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, Game.SEN\_DIS), \textcolor{keyword}{true});
-104     rightMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, Game.SEN\_DIS), \textcolor{keyword}{false});
+73     leftMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, Game.SEN\_DIS), \textcolor{keyword}{true});
+74     rightMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, Game.SEN\_DIS), \textcolor{keyword}{false});
+75     \textcolor{comment}{// 2. Turn and go forward find the x=0 line}
+76     navigation.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(90);
+77     leftMotor.setSpeed(FORWARD\_SPEED);
+78     rightMotor.setSpeed(FORWARD\_SPEED);
+79     leftMotor.forward();
+80     rightMotor.forward();
+81     \textcolor{keywordflow}{while} (leftMotor.isMoving() || rightMotor.isMoving()) \{
+82       \textcolor{keywordflow}{if} (data.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[0] < blackLineColor) \{
+83         leftMotor.stop(\textcolor{keyword}{true});
+84       \}
+85       \textcolor{keywordflow}{if} (data.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a39eec50582f0e4bcff8a4669c48e1609}{getL}()[1] < blackLineColor) \{
+86         rightMotor.stop(\textcolor{keyword}{true});
+87       \}
+88     \}
+89     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a419b8f07c2c5374411c8e62298e9a402}{setTheta}(90.0);
+90     Sound.beep();
+91     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(0);
+92     leftMotor.setSpeed(FORWARD\_SPEED);
+93     rightMotor.setSpeed(FORWARD\_SPEED);
+94 
+95     \textcolor{comment}{// 3. Go backwards by sensor-wheel center distance in x-direction}
+96     leftMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, Game.SEN\_DIS), \textcolor{keyword}{true});
+97     rightMotor.rotate(Navigation.convertDistance(Game.WHEEL\_RAD, Game.SEN\_DIS), \textcolor{keyword}{false});
+98 
+99     \textcolor{comment}{// 4. Go backwards by sensor-wheel center distance in y-direction}
+100     navigation.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_a3bbe0645f2b3b3d0986b4a707fb5a00c}{turnTo}(0);
+101     leftMotor.setSpeed(FORWARD\_SPEED);
+102     rightMotor.setSpeed(FORWARD\_SPEED);
+103     \textcolor{comment}{// double sensorDistanceOffset = 2.5;}
+104 
 105     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a419b8f07c2c5374411c8e62298e9a402}{setTheta}(0);
-106     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(sC[0]);
-107     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(sC[1]);
+106     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a2911d7215e47f3064defe016b46bfeef}{setX}(startingCoordinates[0]);
+107     odometer.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_a82986438cd462e66520bc62bb4bd2b75}{setY}(startingCoordinates[1]);
 108   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_a9fc3d6cdd897e9db86fc9d71dc914863_cgraph}
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_afb295ca8cd6623ac3e9eacb1d31b75b9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_a9fc3d6cdd897e9db86fc9d71dc914863_icgraph}
+\includegraphics[width=350pt]{classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_afb295ca8cd6623ac3e9eacb1d31b75b9_icgraph}
 \end{center}
 \end{figure}
 

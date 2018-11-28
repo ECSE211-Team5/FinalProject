@@ -83,8 +83,8 @@
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" compoundref="_light_poller_8java" startline="20">ca.mcgill.ecse211.threads.LightPoller.lgData</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="19">ca.mcgill.ecse211.threads.LightPoller.cont</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" compoundref="_sensor_data_8java" startline="151" endline="160">ca.mcgill.ecse211.threads.SensorData.setRGB</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a92e653a6a9f7a31cb7b6f9bc2e732133" compoundref="_color_calibrator_8java" startline="38" endline="53">ca.mcgill.ecse211.project.ColorCalibrator.getColor</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" compoundref="_color_calibrator_8java" startline="73" endline="89">ca.mcgill.ecse211.project.ColorCalibrator.setFrequency</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a92e653a6a9f7a31cb7b6f9bc2e732133" compoundref="_color_calibrator_8java" startline="37" endline="52">ca.mcgill.ecse211.project.ColorCalibrator.getColor</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" compoundref="_color_calibrator_8java" startline="71" endline="87">ca.mcgill.ecse211.project.ColorCalibrator.setFrequency</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

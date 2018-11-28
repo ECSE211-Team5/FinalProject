@@ -254,12 +254,12 @@
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1ad80b45e0bc4bf935494e075edcec739c" compoundref="_odometry_correction_8java" startline="35" endline="38">ca.mcgill.ecse211.odometer.OdometryCorrection.OdometryCorrection</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1af0970123ca090749bfb2f5b9f478c01d" compoundref="_display_8java" startline="36" endline="40">ca.mcgill.ecse211.project.Display.Display</referencedby>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="245" endline="247">ca.mcgill.ecse211.project.Game.readData</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="349" endline="414">ca.mcgill.ecse211.project.Game.preparation</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a6e0ee94b800ca3727ca8009782abda14" compoundref="_game_util_8java" startline="302" endline="319">ca.mcgill.ecse211.project.GameUtil.findClosestPointToRobot</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="354" endline="410">ca.mcgill.ecse211.project.Game.preparation</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a6e0ee94b800ca3727ca8009782abda14" compoundref="_game_util_8java" startline="327" endline="344">ca.mcgill.ecse211.project.GameUtil.findClosestPointToRobot</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" compoundref="_navigation_8java" startline="61" endline="72">ca.mcgill.ecse211.project.Navigation.Navigation</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a37eebb6cbdfd692e0979c3ca0fe2597b" compoundref="_ring_searcher_8java" startline="42" endline="54">ca.mcgill.ecse211.project.RingSearcher.RingSearcher</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="76" endline="84">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="118" endline="137">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="84" endline="92">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="126" endline="145">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a4e069b5a96cd43b29af0785244a99b51" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>synchronized <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer" kindref="compound">Odometer</ref></type>
@@ -290,8 +290,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/Odometer.java" line="97" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/Odometer.java" bodystart="97" bodyend="136"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="81" endline="103">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1aaa06f190d634299fcb1b97a1891dad85" compoundref="_odometer_data_8java" startline="113" endline="129">ca.mcgill.ecse211.odometer.OdometerData.update</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="79" endline="101">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1aaa06f190d634299fcb1b97a1891dad85" compoundref="_odometer_data_8java" startline="110" endline="126">ca.mcgill.ecse211.odometer.OdometerData.update</references>
         <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a72c2224ad4dd557dde445ebc4baaf531" compoundref="_game_8java" startline="224">ca.mcgill.ecse211.project.Game.TILE</references>
       </memberdef>
       </sectiondef>

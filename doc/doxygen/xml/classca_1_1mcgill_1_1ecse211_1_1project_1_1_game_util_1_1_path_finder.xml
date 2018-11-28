@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="112" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="112" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="137" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1ae14d2f662bcc4125edcf2a037c152755" prot="package" static="no" mutable="no">
         <type>int []</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="113" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="113" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="138" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="138" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a7853fad980ecb0336b37e3de439556e9" prot="package" static="no" mutable="no">
         <type>int</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="114" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="114" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="139" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1aab40910d25162f37d52ab95a78b4fb99" prot="package" static="no" mutable="no">
         <type>int</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="114" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="114" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="139" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a3df394ee079b699c785e578371e2bdc4" prot="package" static="no" mutable="no">
         <type>int []</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="115" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="115" bodyend="-1"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="140" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="140" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -86,25 +86,25 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Constructor of the path finder,</para><para><parameterlist kind="param"><parameteritem>
+<para>This is the class constructor for the PathFinder class</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ll</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the lower left corner of the area </para></parameterdescription>
+<para>The lower left corner of an area to find a path in </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>ur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the upper right corner of the area </para></parameterdescription>
+<para>The upper right corner of an area to find a path in </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="123" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="123" bodyend="129"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="148" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="148" bodyend="154"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a07b23a5540e04c7366d6b0ac84185028" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>boolean</type>
@@ -126,33 +126,33 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Try find a path from cur to destination, return false if no such path exists</para><para><parameterlist kind="param"><parameteritem>
+<para>This method tries to find a path from our current location to our destination.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>cur</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>current position of the robot </para></parameterdescription>
+<para>The current coordinates of our robot </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>destination</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>destination inside one area of the robot </para></parameterdescription>
+<para>The destination coordinates our robot is supposed to travel to </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>instruction</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>instruction that guide the robot to the destination if such path exists </para></parameterdescription>
+<para>The instructions that guide the robot to the destination if a path exists </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>: true if such path exists, false otherwise </para></simplesect>
+<simplesect kind="return"><para>A boolean that is true if a path exists otherwise false </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="139" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="139" bodyend="177"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="164" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="164" bodyend="202"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -180,39 +180,39 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>bfs the area to find a potential path to the destination</para><para><parameterlist kind="param"><parameteritem>
+<para>This method runs a breadth-first search on an area to find a potential path to a destination</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>i</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>starting node </para></parameterdescription>
+<para>An integer that denotes the starting node </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>j</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>ending node </para></parameterdescription>
+<para>An integer that denotes the ending node </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>visited</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an array keeps track of visited nodes </para></parameterdescription>
+<para>An array keeps track of visited nodes </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>parents</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an array keeps track of parent of each node </para></parameterdescription>
+<para>An array keeps track of the parent of each node </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="187" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="187" bodyend="204"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="212" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="212" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a2bd046c4dedece80caf5cf2a23ac7445" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>ArrayList&lt; Integer &gt;</type>
@@ -226,19 +226,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>get a children of one node based on the constraint (cannot be a tree, cannot be in the tunnel, cannot be a wall etc)</para><para><parameterlist kind="param"><parameteritem>
+<para>This method gets the children of one node based on certain constraints (i.e. cannot be a tree, cannot be in the tunnel, cannot be a wall etc)</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>i</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the index representation of the node </para></parameterdescription>
+<para>An integer that denotes the index representation of the node </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a list of child, if any </para></simplesect>
+<simplesect kind="return"><para>A list of children, if any </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="213" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="213" bodyend="226"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="238" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="238" bodyend="251"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1aa68e4b44c3406ac9a9d1316976370afe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -253,7 +253,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>transfer a coordinate to index representation</para><para><parameterlist kind="param"><parameteritem>
+<para>This method transfer a coordinate to index representation</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>coor</parametername>
 </parameternamelist>
@@ -265,7 +265,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="234" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="234" bodyend="237"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="259" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="259" bodyend="262"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1a45768fed2b30c17edd0a0ced7740dd12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int []</type>
@@ -291,20 +291,20 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="245" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="245" bodyend="248"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="270" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="270" bodyend="273"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Class that find the shortest path from one point to another with constraints inside one area</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<para>This class finds the shortest path from one point to another inside an area</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
 <simplesect kind="author"><para>Percy Chen </para></simplesect>
 <simplesect kind="author"><para>Patrick Erath </para></simplesect>
 <simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
 <simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="111" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="111" bodyend="249"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="136" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="136" bodyend="274"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1aabb3087119c07c24690024bf0726bc66" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameUtil::PathFinder</scope><name>bfs</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_path_finder_1aa68e4b44c3406ac9a9d1316976370afe" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameUtil::PathFinder</scope><name>coordinateToIndex</name></member>

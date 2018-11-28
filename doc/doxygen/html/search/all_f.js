@@ -10,7 +10,7 @@ var searchData=
   ['tno_5fll',['TNO_LL',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a951a1759354ae42a5030e36100f553bc',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['tno_5fur',['TNO_UR',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a72ff54e8c60bb2b9d5a06f8377375b8f',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['track',['TRACK',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game.html#a64cf12cdd6772ac1ce351ff1dfadd626',1,'ca::mcgill::ecse211::project::Game']]],
-  ['travelto',['travelTo',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ad89b3dd084d81b4ec4d89ea73ba13eaa',1,'ca::mcgill::ecse211::project::Navigation']]],
+  ['travelto',['travelTo',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a3d8354490a2d8c36090d794c25d33421',1,'ca::mcgill::ecse211::project::Navigation']]],
   ['traveltowithcorrection',['travelToWithCorrection',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ae7230e905494002087416294f12cae6a',1,'ca::mcgill::ecse211::project::Navigation']]],
   ['tree_5fus',['TREE_US',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a2449dac1067326f888e8b9e8b5276c18',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['ttee_5fo',['TTEE_O',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a50543aed3d1731225cee6fe50ebcefe0',1,'ca::mcgill::ecse211::project::GameParameters']]],

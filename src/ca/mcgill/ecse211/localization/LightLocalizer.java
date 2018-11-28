@@ -50,9 +50,9 @@ public class LightLocalizer {
    * This method localizes our robot to an intersection of two black lines which serve as our origin
    * and strives to face north.
    * 
-   * @param sC The x and y coordinates to set on our Odometer after localization
+   * @param startingCoordinates The x and y coordinates to set on our Odometer after localization
    */
-  public void localize(int[] sC) {
+  public void localize(int[] startingCoordinates) {
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
 
@@ -91,11 +91,11 @@ public class LightLocalizer {
     odometer.setX(0);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
-    
+
     // 3. Go backwards by sensor-wheel center distance in x-direction
     leftMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), true);
     rightMotor.rotate(Navigation.convertDistance(Game.WHEEL_RAD, Game.SEN_DIS), false);
-    
+
     // 4. Go backwards by sensor-wheel center distance in y-direction
     navigation.turnTo(0);
     leftMotor.setSpeed(FORWARD_SPEED);
@@ -103,7 +103,7 @@ public class LightLocalizer {
     // double sensorDistanceOffset = 2.5;
 
     odometer.setTheta(0);
-    odometer.setX(sC[0]);
-    odometer.setY(sC[1]);
+    odometer.setX(startingCoordinates[0]);
+    odometer.setY(startingCoordinates[1]);
   }
 }

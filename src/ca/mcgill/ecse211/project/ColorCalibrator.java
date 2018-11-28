@@ -20,19 +20,18 @@ public class ColorCalibrator {
   public static enum Color {
     Orange, Green, Blue, Yellow, Other
   }
-  // this is v1
 
   private final static int lowerYellowRBound = 9, lowerYellowGBound = 4, lowerBlueBBound = 3,
       lowerOrangeRBound = 8;
 
   /**
-   * This method returns the color of the ring currently under the light sensor Instead of
-   * intervals, we use a pattern matching for detecting the color For more: reference the software
-   * and testing document
+   * This method returns the color of the ring currently under the light sensor. We check the range
+   * of Red, Green and Blue values to deduce ring color. For more details see the software and
+   * testing document.
    * 
-   * @param r The red value to check for a ring
-   * @param g The green value to check for a ring
-   * @param b The blue value to check for a ring
+   * @param r The red value to check
+   * @param g The green value to check
+   * @param b The blue value to check
    * @return A Color enumeration value
    */
   public static Color getColor(int r, int g, int b) {
@@ -40,12 +39,12 @@ public class ColorCalibrator {
       currentColor = Color.Orange;
     } else if ((b >= lowerBlueBBound)) {
       currentColor = Color.Blue;
-    }else if (g > r && b < 3) {
+    } else if (g > r && b < 3) {
       currentColor = Color.Green;
     } else if ((r >= lowerYellowRBound && g >= lowerYellowGBound)
         || ((r >= 7 && r <= 9) && (g >= 0 && g <= 2))) {
       currentColor = Color.Yellow;
-    }  else {
+    } else {
       currentColor = Color.Other;
     }
 
@@ -53,9 +52,9 @@ public class ColorCalibrator {
   }
 
   /**
-   * This method gets the last color of the ring under the light sensor
+   * This method gets the last detected color of a ring previously inspected by the light sensor
    * 
-   * @return current color detected by the lightSensor
+   * @return The last color detected by the lightSensor
    */
   public static Color getColor() {
     if (currentColor != null)
@@ -65,8 +64,7 @@ public class ColorCalibrator {
   }
 
   /**
-   * This method keeps track of how many of each colour were detected by increasing the count in the
-   * array
+   * This method keeps track of how many rings of each color were detected.
    * 
    * @param c The Color detected by the light sensor
    */
@@ -89,9 +87,9 @@ public class ColorCalibrator {
   }
 
   /**
-   * This method returns the most frequent colour detected from multiple samples
+   * This method returns the most frequent ring color detected from multiple samples
    * 
-   * @return most frequent colour detected
+   * @return The most frequent ring color detected
    */
   public static Color getMostFrequenct() {
     Color c = Color.Other;
@@ -111,7 +109,6 @@ public class ColorCalibrator {
 
   /**
    * This method resets the colour_frequency array to 0
-   * 
    */
   public static void resetFrequency() {
     for (int i = 0; i < colour_frequency.length; i++) {
@@ -120,10 +117,10 @@ public class ColorCalibrator {
   }
 
   /**
-   * This method match integer to corresponding color
+   * This method maps integers to color enumerations
    * 
-   * @param i: an integer of [0,4]
-   * @return: cooresponding color of the integer
+   * @param i An integer in the interval [0,4]
+   * @return The corresponding color enumeration
    */
   public static Color getGetColor(int i) {
     Color c = Color.Other;

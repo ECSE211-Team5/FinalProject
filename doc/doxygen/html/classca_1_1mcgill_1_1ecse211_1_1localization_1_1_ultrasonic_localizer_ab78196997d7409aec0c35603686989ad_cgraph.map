@@ -1,7 +1,8 @@
 <map id="ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize" name="ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize">
-<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="491,7,680,48"/>
-<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a3bbe0645f2b3b3d0986b4a707fb5a00c" title="ca.mcgill.ecse211.project.\lNavigation.turnTo" alt="" coords="261,36,435,78"/>
-<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a419b8f07c2c5374411c8e62298e9a402" title="ca.mcgill.ecse211.odometer.\lOdometerData.setTheta" alt="" coords="253,102,443,143"/>
-<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ad74286ad36d333bfaf57661837457b76" title="ca.mcgill.ecse211.project.\lNavigation.turn" alt="" coords="261,167,435,208"/>
-<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a46cc30522719018a80f89624e0ce458f" title="ca.mcgill.ecse211.threads.\lSensorData.getD" alt="" coords="259,232,437,274"/>
+<area shape="rect" id="node2" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a8f40f0264c68f0cbed4fff1723ae7863" title="ca.mcgill.ecse211.odometer.\lOdometerData.getXYT" alt="" coords="491,11,680,53"/>
+<area shape="rect" id="node3" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#a3bbe0645f2b3b3d0986b4a707fb5a00c" title="ca.mcgill.ecse211.project.\lNavigation.turnTo" alt="" coords="261,41,435,82"/>
+<area shape="rect" id="node4" href="$classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a419b8f07c2c5374411c8e62298e9a402" title="ca.mcgill.ecse211.odometer.\lOdometerData.setTheta" alt="" coords="253,106,443,147"/>
+<area shape="rect" id="node5" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ad74286ad36d333bfaf57661837457b76" title="ca.mcgill.ecse211.project.\lNavigation.turn" alt="" coords="261,171,435,213"/>
+<area shape="rect" id="node6" href="$classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ab01db7b8a871acd45e7dd16922abc15e" title="ca.mcgill.ecse211.project.\lNavigation.setSlowAcc" alt="" coords="261,237,435,278"/>
+<area shape="rect" id="node7" href="$classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a46cc30522719018a80f89624e0ce458f" title="ca.mcgill.ecse211.threads.\lSensorData.getD" alt="" coords="259,302,437,343"/>
 </map>

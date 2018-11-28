@@ -1,8 +1,9 @@
 var searchData=
 [
+  ['saferod',['safeRod',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#a0b96c45f7df3eb557496acab33930cd5',1,'ca::mcgill::ecse211::project::RingSearcher']]],
   ['sc',['SC',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#af3944d1bc80c4c8a6cabce66e030f4b7',1,'ca::mcgill::ecse211::project::GameParameters']]],
   ['scus',['SCUS',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters.html#a9c136a3a3faff96052381f791bf4c166',1,'ca::mcgill::ecse211::project::GameParameters']]],
-  ['search',['search',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#a7ff5756046a0ce992ed8cb8954139c3b',1,'ca::mcgill::ecse211::project::RingSearcher']]],
+  ['search',['search',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher.html#a6f66df0810034dfb407d792ded013a8e',1,'ca::mcgill::ecse211::project::RingSearcher']]],
   ['searching',['Searching',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a25564076fdd8880377fbd6eaf753456f',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
   ['searchingboundary',['SearchingBoundary',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_parameters_1_1_area_type.html#a5a3aceb665ba97ac242e77955feed640',1,'ca::mcgill::ecse211::project::GameParameters::AreaType']]],
   ['searchingfinder',['searchingFinder',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util.html#acedc99ad369450d6b2d7711c2d63027a',1,'ca::mcgill::ecse211::project::GameUtil']]],
@@ -16,6 +17,7 @@ var searchData=
   ['setfrequency',['setFrequency',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator.html#a40906193773ead0bfd582f188413c97a',1,'ca::mcgill::ecse211::project::ColorCalibrator']]],
   ['setl',['setL',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#af905a6f2825716ae1a39bf7f6be09477',1,'ca::mcgill::ecse211::threads::SensorData']]],
   ['setrgb',['setRGB',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data.html#a6ad23111ecd378099f0b4ed0b6d398bc',1,'ca::mcgill::ecse211::threads::SensorData']]],
+  ['setslowacc',['setSlowAcc',['../classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation.html#ab01db7b8a871acd45e7dd16922abc15e',1,'ca::mcgill::ecse211::project::Navigation']]],
   ['setstart',['setStart',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a16221cdc4ccf637b190934549c708e1f',1,'ca::mcgill::ecse211::threads::ThreadControl']]],
   ['settheta',['setTheta',['../classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data.html#a419b8f07c2c5374411c8e62298e9a402',1,'ca::mcgill::ecse211::odometer::OdometerData']]],
   ['setwait',['setWait',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#a7759a6f52b56e15cb37cd25ea31c93c1',1,'ca::mcgill::ecse211::threads::ThreadControl']]],

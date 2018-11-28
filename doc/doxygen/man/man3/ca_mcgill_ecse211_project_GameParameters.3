@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.GameParameters" 3 "Tue Nov 27 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.GameParameters" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -30,7 +30,7 @@ ca.mcgill.ecse211.project.GameParameters
 .RI "static \fBAreaType\fP \fBArea\fP = \fBAreaType\&.InStarting\fP"
 .br
 .ti -1c
-.RI "static \fBDemoType\fP \fBDemo\fP = \fBDemoType\&.Beta\fP"
+.RI "static \fBDemoType\fP \fBDemo\fP = \fBDemoType\&.Final\fP"
 .br
 .ti -1c
 .RI "static int [] \fBSC\fP = {1, 7, 90}"
@@ -124,18 +124,18 @@ Definition at line 13 of file GameParameters\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "static \fBAreaType\fP ca\&.mcgill\&.ecse211\&.project\&.GameParameters\&.getType (int x, int y)\fC [static]\fP"
-Giving a coordinate, find the type of area it belongs to
+This method decides the type of area a particular set of (x,y) coordinates belongs to
 .PP
 \fBParameters:\fP
 .RS 4
-\fIx\fP x coordinate 
+\fIx\fP The x coordinate of the coordinate set 
 .br
-\fIy\fP y coordinate 
+\fIy\fP The y coordinate of the coordinate set 
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-the type of area the point belongs to 
+The type of area the coordinates belong to 
 .RE
 .PP
 \fBExceptions:\fP
@@ -165,7 +165,7 @@ Definition at line 180 of file GameParameters\&.java\&.
 This variable stores the current area that our robot is in during a competition 
 .PP
 Definition at line 33 of file GameParameters\&.java\&.
-.SS " static  \fBDemoType\fP ca\&.mcgill\&.ecse211\&.project\&.GameParameters\&.Demo = \fBDemoType\&.Beta\fP\fC [static]\fP"
+.SS " static  \fBDemoType\fP ca\&.mcgill\&.ecse211\&.project\&.GameParameters\&.Demo = \fBDemoType\&.Final\fP\fC [static]\fP"
 This variable stores the current demo type that our robot is in during a competition 
 .PP
 Definition at line 38 of file GameParameters\&.java\&.

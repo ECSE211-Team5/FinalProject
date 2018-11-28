@@ -12,7 +12,7 @@ var searchData=
   ['lightsensortest',['lightSensorTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#a3e8288f482b3806a0f3c4668951f3e36',1,'ca::mcgill::ecse211::tests::ComponentTest']]],
   ['localization',['Localization',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type.html#acdc93de9366f2e6710c7f2fc0e4478c3',1,'ca::mcgill::ecse211::tests::ComponentTest::Type']]],
   ['localizationtest',['localizationTest',['../enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test.html#ad11712dd74c5c64e84cd71186a59a087',1,'ca::mcgill::ecse211::tests::ComponentTest']]],
-  ['localize',['localize',['../classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html#a9fc3d6cdd897e9db86fc9d71dc914863',1,'ca.mcgill.ecse211.localization.LightLocalizer.localize()'],['../classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer.html#ab78196997d7409aec0c35603686989ad',1,'ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize()']]],
+  ['localize',['localize',['../classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer.html#afb295ca8cd6623ac3e9eacb1d31b75b9',1,'ca.mcgill.ecse211.localization.LightLocalizer.localize()'],['../classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer.html#ab78196997d7409aec0c35603686989ad',1,'ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize()']]],
   ['localized',['Localized',['../enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1_1_status.html#a7d3a789bd51e152bd2643e7214a178f8',1,'ca::mcgill::ecse211::project::Game::Status']]],
   ['lockobject',['lockObject',['../classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control.html#ab20c44ff2dafab8981c42fa8bf634dfc',1,'ca::mcgill::ecse211::threads::ThreadControl']]]
 ];

@@ -23,13 +23,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="43" bodyend="52"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="68" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="68" bodyend="77"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>This is class is used as a comparator to sort the points from nearest to the robot.</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<para>This class is used to compare points nearest to our robot during sorting.</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
 <simplesect kind="author"><para>Percy Chen </para></simplesect>
 <simplesect kind="author"><para>Patrick Erath </para></simplesect>
 <simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
@@ -56,7 +56,7 @@
         <label>java::util::Comparator&lt; int[]&gt;</label>
       </node>
     </collaborationgraph>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="41" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="41" bodyend="53"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="66" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="66" bodyend="78"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_robot_comparator_1a2374aec9793f91e155020d5c4a7f00d7" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameUtil::RobotComparator</scope><name>compare</name></member>
     </listofallmembers>

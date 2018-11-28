@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.odometer.OdometerData" 3 "Tue Nov 27 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.odometer.OdometerData" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -114,191 +114,186 @@ Definition at line 60 of file OdometerData\&.java\&.
 71   }
 .fi
 .SS "double [] ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.getXYT ()"
-This method returns the \fBOdometer\fP data\&. Writes the current position and orientation of the robot onto the odoData array\&. odoData[0] = x, odoData[1] = y; odoData[2] = theta;
-.PP
-\fBParameters:\fP
-.RS 4
-\fIposition\fP the array to store the odometer data 
-.RE
+This method returns the \fBOdometer\fP data consisting of the current x, y coordinates and angle (theta)\&.
 .PP
 \fBReturns:\fP
 .RS 4
-the odometer data\&. 
+The odometer data\&. 
 .RE
 .PP
 
 .PP
-Definition at line 81 of file OdometerData\&.java\&.
+Definition at line 79 of file OdometerData\&.java\&.
 .PP
 .nf
-81                            {
-82     double[] position = new double[4];
-83     lock\&.lock();
-84     try {
-85       while (isReseting) { // If a reset operation is being executed, wait
-86         // until it is over\&.
-87         doneReseting\&.await(); // Using await() is lighter on the CPU
-88         // than simple busy wait\&.
-89       }
-90 
-91       position[0] = x;
-92       position[1] = y;
-93       position[2] = theta;
-94 
-95     } catch (InterruptedException e) {
-96       // Print exception to screen
-97       e\&.printStackTrace();
-98     } finally {
-99       lock\&.unlock();
-100     }
-101 
-102     return position;
-103   }
+79                            {
+80     double[] position = new double[4];
+81     lock\&.lock();
+82     try {
+83       while (isReseting) { // If a reset operation is being executed, wait
+84         // until it is over\&.
+85         doneReseting\&.await(); // Using await() is lighter on the CPU
+86         // than simple busy wait\&.
+87       }
+88 
+89       position[0] = x;
+90       position[1] = y;
+91       position[2] = theta;
+92 
+93     } catch (InterruptedException e) {
+94       // Print exception to screen
+95       e\&.printStackTrace();
+96     } finally {
+97       lock\&.unlock();
+98     }
+99 
+100     return position;
+101   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.setTheta (double theta)"
-Overrides theta\&. Use for odometry correction\&.
+This method overrides theta\&. Used for odometry correction\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fItheta\fP the value of theta 
+\fItheta\fP The value to set the current angle (theta) to 
 .RE
 .PP
 
 .PP
-Definition at line 194 of file OdometerData\&.java\&.
+Definition at line 191 of file OdometerData\&.java\&.
 .PP
 .nf
-194                                      {
-195     lock\&.lock();
-196     isReseting = true;
-197     try {
-198       this\&.theta = theta;
-199       isReseting = false; // Done reseting
-200       doneReseting\&.signalAll(); // Let the other threads know that you are
-201                                 // done reseting
-202     } finally {
-203       lock\&.unlock();
-204     }
-205   }
+191                                      {
+192     lock\&.lock();
+193     isReseting = true;
+194     try {
+195       this\&.theta = theta;
+196       isReseting = false; // Done reseting
+197       doneReseting\&.signalAll(); // Let the other threads know that you are
+198                                 // done reseting
+199     } finally {
+200       lock\&.unlock();
+201     }
+202   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.setX (double x)"
-Overrides x\&. Use for odometry correction\&.
+This method overrides the x coordinate\&. Used for odometry correction\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIx\fP the value of x 
+\fIx\fP The value to set the current x coordinate to 
 .RE
 .PP
 
 .PP
-Definition at line 158 of file OdometerData\&.java\&.
+Definition at line 155 of file OdometerData\&.java\&.
 .PP
 .nf
-158                              {
-159     lock\&.lock();
-160     isReseting = true;
-161     try {
-162       this\&.x = x;
-163       isReseting = false; // Done reseting
-164       doneReseting\&.signalAll(); // Let the other threads know that you are
-165                                 // done reseting
-166     } finally {
-167       lock\&.unlock();
-168     }
-169   }
+155                              {
+156     lock\&.lock();
+157     isReseting = true;
+158     try {
+159       this\&.x = x;
+160       isReseting = false; // Done reseting
+161       doneReseting\&.signalAll(); // Let the other threads know that you are
+162                                 // done reseting
+163     } finally {
+164       lock\&.unlock();
+165     }
+166   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.setXYT (double x, double y, double theta)"
-Overrides the values of x, y and theta\&. Use for odometry correction\&.
+This method overrides the values of x, y and theta\&. Used for odometry correction\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIx\fP the value of x 
+\fIx\fP The value to set the current x coordinate to 
 .br
-\fIy\fP the value of y 
+\fIy\fP The value to set the current y coordinate to 
 .br
-\fItheta\fP the value of theta 
+\fItheta\fP The value to set the current angle (theta) to 
 .RE
 .PP
 
 .PP
-Definition at line 138 of file OdometerData\&.java\&.
+Definition at line 135 of file OdometerData\&.java\&.
 .PP
 .nf
-138                                                        {
-139     lock\&.lock();
-140     isReseting = true;
-141     try {
-142       this\&.x = x;
-143       this\&.y = y;
-144       this\&.theta = theta;
-145       isReseting = false; // Done reseting
-146       doneReseting\&.signalAll(); // Let the other threads know that you are
-147                                 // done reseting
-148     } finally {
-149       lock\&.unlock();
-150     }
-151   }
+135                                                        {
+136     lock\&.lock();
+137     isReseting = true;
+138     try {
+139       this\&.x = x;
+140       this\&.y = y;
+141       this\&.theta = theta;
+142       isReseting = false; // Done reseting
+143       doneReseting\&.signalAll(); // Let the other threads know that you are
+144                                 // done reseting
+145     } finally {
+146       lock\&.unlock();
+147     }
+148   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.setY (double y)"
-Overrides y\&. Use for odometry correction\&.
+This method overrides the y coordinate\&. Used for odometry correction\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIy\fP the value of y 
+\fIy\fP The value to set the current y coordinate to 
 .RE
 .PP
 
 .PP
-Definition at line 176 of file OdometerData\&.java\&.
+Definition at line 173 of file OdometerData\&.java\&.
 .PP
 .nf
-176                              {
-177     lock\&.lock();
-178     isReseting = true;
-179     try {
-180       this\&.y = y;
-181       isReseting = false; // Done reseting
-182       doneReseting\&.signalAll(); // Let the other threads know that you are
-183                                 // done reseting
-184     } finally {
-185       lock\&.unlock();
-186     }
-187   }
+173                              {
+174     lock\&.lock();
+175     isReseting = true;
+176     try {
+177       this\&.y = y;
+178       isReseting = false; // Done reseting
+179       doneReseting\&.signalAll(); // Let the other threads know that you are
+180                                 // done reseting
+181     } finally {
+182       lock\&.unlock();
+183     }
+184   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.odometer\&.OdometerData\&.update (double dx, double dy, double dtheta)"
-Adds dx, dy and dtheta to the current values of x, y and theta, respectively\&. Useful for odometry\&.
+This method adds dx, dy and dtheta to the current values of x, y and theta, respectively\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIdx\fP 
+\fIdx\fP The change in x coordinate to add to the current x coordinate 
 .br
-\fIdy\fP 
+\fIdy\fP The change in y coordinate to add to the current y coordinate 
 .br
-\fIdtheta\fP 
+\fIdtheta\fP The change in angle to add to the current angle (theta) 
 .RE
 .PP
 
 .PP
-Definition at line 113 of file OdometerData\&.java\&.
+Definition at line 110 of file OdometerData\&.java\&.
 .PP
 .nf
-113                                                           {
-114     lock\&.lock();
-115     isReseting = true;
-116     try {
-117       x += dx;
-118       y += dy;
-119       theta = (theta + (360 + dtheta) % 360) % 360; // keeps the updates
-120                                                     // within 360
-121                                                     // degrees
-122       isReseting = false; // Done reseting
-123       doneReseting\&.signalAll(); // Let the other threads know that you are
-124                                 // done reseting
-125     } finally {
-126       lock\&.unlock();
-127     }
-128 
-129   }
+110                                                           {
+111     lock\&.lock();
+112     isReseting = true;
+113     try {
+114       x += dx;
+115       y += dy;
+116       theta = (theta + (360 + dtheta) % 360) % 360; // keeps the updates
+117                                                     // within 360
+118                                                     // degrees
+119       isReseting = false; // Done reseting
+120       doneReseting\&.signalAll(); // Let the other threads know that you are
+121                                 // done reseting
+122     } finally {
+123       lock\&.unlock();
+124     }
+125 
+126   }
 .fi
 
 

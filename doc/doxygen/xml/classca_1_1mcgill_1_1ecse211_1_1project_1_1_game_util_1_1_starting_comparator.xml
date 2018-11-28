@@ -23,13 +23,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="91" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="91" bodyend="98"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="116" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="116" bodyend="123"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>This is class is used as a comparator to sort the points from nearest to the starting point.</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
+<para>This class is used to compare points nearest to our robot&apos;s starting point during sorting.</para><para><simplesect kind="author"><para>Caspar Cedro </para></simplesect>
 <simplesect kind="author"><para>Percy Chen </para></simplesect>
 <simplesect kind="author"><para>Patrick Erath </para></simplesect>
 <simplesect kind="author"><para>Anssam Ghezala </para></simplesect>
@@ -56,7 +56,7 @@
         <label>java::util::Comparator&lt; int[]&gt;</label>
       </node>
     </collaborationgraph>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="89" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="89" bodyend="99"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" line="114" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/GameUtil.java" bodystart="114" bodyend="124"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1_1_starting_comparator_1aa4705003cb5fada20ff547b7d0b7732d" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::project::GameUtil::StartingComparator</scope><name>compare</name></member>
     </listofallmembers>

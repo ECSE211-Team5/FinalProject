@@ -71,12 +71,10 @@ public class OdometerData {
   }
 
   /**
-   * This method returns the Odometer data.
-   * Writes the current position and orientation of the robot onto the odoData array. odoData[0] =
-   * x, odoData[1] = y; odoData[2] = theta;
+   * This method returns the Odometer data consisting of the current x, y coordinates and angle
+   * (theta).
    * 
-   * @param position the array to store the odometer data
-   * @return the odometer data.
+   * @return The odometer data.
    */
   public double[] getXYT() {
     double[] position = new double[4];
@@ -103,12 +101,11 @@ public class OdometerData {
   }
 
   /**
-   * Adds dx, dy and dtheta to the current values of x, y and theta, respectively. Useful for
-   * odometry.
+   * This method adds dx, dy and dtheta to the current values of x, y and theta, respectively.
    * 
-   * @param dx
-   * @param dy
-   * @param dtheta
+   * @param dx The change in x coordinate to add to the current x coordinate
+   * @param dy The change in y coordinate to add to the current y coordinate
+   * @param dtheta The change in angle to add to the current angle (theta)
    */
   public void update(double dx, double dy, double dtheta) {
     lock.lock();
@@ -129,11 +126,11 @@ public class OdometerData {
   }
 
   /**
-   * Overrides the values of x, y and theta. Use for odometry correction.
+   * This method overrides the values of x, y and theta. Used for odometry correction.
    * 
-   * @param x the value of x
-   * @param y the value of y
-   * @param theta the value of theta
+   * @param x The value to set the current x coordinate to
+   * @param y The value to set the current y coordinate to
+   * @param theta The value to set the current angle (theta) to
    */
   public void setXYT(double x, double y, double theta) {
     lock.lock();
@@ -151,9 +148,9 @@ public class OdometerData {
   }
 
   /**
-   * Overrides x. Use for odometry correction.
+   * This method overrides the x coordinate. Used for odometry correction.
    * 
-   * @param x the value of x
+   * @param x The value to set the current x coordinate to
    */
   public void setX(double x) {
     lock.lock();
@@ -169,9 +166,9 @@ public class OdometerData {
   }
 
   /**
-   * Overrides y. Use for odometry correction.
+   * This method overrides the y coordinate. Used for odometry correction.
    * 
-   * @param y the value of y
+   * @param y The value to set the current y coordinate to
    */
   public void setY(double y) {
     lock.lock();
@@ -187,9 +184,9 @@ public class OdometerData {
   }
 
   /**
-   * Overrides theta. Use for odometry correction.
+   * This method overrides theta. Used for odometry correction.
    * 
-   * @param theta the value of theta
+   * @param theta The value to set the current angle (theta) to
    */
   public void setTheta(double theta) {
     lock.lock();

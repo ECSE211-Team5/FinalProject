@@ -171,7 +171,7 @@
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1aa37a75b7c32c02fe261845021f0734b7" compoundref="_light_localizer_8java" startline="40" endline="47">ca.mcgill.ecse211.localization.LightLocalizer.LightLocalizer</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1a3603202cdb5035c4e4164933b0aebeec" compoundref="_ultrasonic_localizer_8java" startline="42" endline="49">ca.mcgill.ecse211.localization.UltrasonicLocalizer.UltrasonicLocalizer</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1af0970123ca090749bfb2f5b9f478c01d" compoundref="_display_8java" startline="36" endline="40">ca.mcgill.ecse211.project.Display.Display</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="349" endline="414">ca.mcgill.ecse211.project.Game.preparation</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a8f3c5b18f98ee56f5f03afd72fa40bcb" compoundref="_game_8java" startline="354" endline="410">ca.mcgill.ecse211.project.Game.preparation</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1aaee14b67c392ddd951e3ce21224c3e56" compoundref="_navigation_8java" startline="61" endline="72">ca.mcgill.ecse211.project.Navigation.Navigation</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a37eebb6cbdfd692e0979c3ca0fe2597b" compoundref="_ring_searcher_8java" startline="42" endline="54">ca.mcgill.ecse211.project.RingSearcher.RingSearcher</referencedby>
       </memberdef>
@@ -205,8 +205,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="91" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="91" bodyend="100"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="55" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" compoundref="_navigation_8java" startline="246" endline="255">ca.mcgill.ecse211.project.Navigation.moveOneTileWithCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1afb295ca8cd6623ac3e9eacb1d31b75b9" compoundref="_light_localizer_8java" startline="55" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" compoundref="_navigation_8java" startline="257" endline="266">ca.mcgill.ecse211.project.Navigation.moveOneTileWithCorrection</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a76313564e284f5cdb66aefce4e595f3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int []</type>
@@ -236,7 +236,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" line="122" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/SensorData.java" bodystart="122" bodyend="124"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" compoundref="_display_8java" startline="58" endline="109">ca.mcgill.ecse211.project.Display.run</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a2c1f8e625478b89aabe6e9911e482ef3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

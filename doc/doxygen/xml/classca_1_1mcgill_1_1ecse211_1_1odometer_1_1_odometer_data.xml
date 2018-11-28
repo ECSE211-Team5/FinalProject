@@ -181,32 +181,24 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This method returns the <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer" kindref="compound">Odometer</ref> data. Writes the current position and orientation of the robot onto the odoData array. odoData[0] = x, odoData[1] = y; odoData[2] = theta;</para><para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>position</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>the array to store the odometer data </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>the odometer data. </para></simplesect>
+<para>This method returns the <ref refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer" kindref="compound">Odometer</ref> data consisting of the current x, y coordinates and angle (theta).</para><para><simplesect kind="return"><para>The odometer data. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="81" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="81" bodyend="103"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="79" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="79" bodyend="101"/>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1af0ff4c5121973a8310cf986e25fa0d87" compoundref="_odometer_8java" startline="97" endline="136">ca.mcgill.ecse211.odometer.Odometer.run</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1aad66a7030ac00f3a9cbe7bc33c25acbf" compoundref="_odometry_correction_8java" startline="47" endline="88">ca.mcgill.ecse211.odometer.OdometryCorrection.run</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1a21a351682dc75060d6a5f15ad4775068" compoundref="_odometry_correction_8java" startline="95" endline="108">ca.mcgill.ecse211.odometer.OdometryCorrection.doCorrection</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_display_1ab508a8bc2b738499bec2c432a814cba5" compoundref="_display_8java" startline="58" endline="109">ca.mcgill.ecse211.project.Display.run</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a6e0ee94b800ca3727ca8009782abda14" compoundref="_game_util_8java" startline="302" endline="319">ca.mcgill.ecse211.project.GameUtil.findClosestPointToRobot</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4376e54162df8f123ca3b52e4fd2f38d" compoundref="_navigation_8java" startline="81" endline="88">ca.mcgill.ecse211.project.Navigation.calculateAngleTo</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad89b3dd084d81b4ec4d89ea73ba13eaa" compoundref="_navigation_8java" startline="97" endline="112">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="126" endline="188">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" compoundref="_navigation_8java" startline="246" endline="255">ca.mcgill.ecse211.project.Navigation.moveOneTileWithCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="344" endline="365">ca.mcgill.ecse211.project.Navigation.turnTo</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="374" endline="476">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="520" endline="567">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_1a6e0ee94b800ca3727ca8009782abda14" compoundref="_game_util_8java" startline="327" endline="344">ca.mcgill.ecse211.project.GameUtil.findClosestPointToRobot</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4376e54162df8f123ca3b52e4fd2f38d" compoundref="_navigation_8java" startline="85" endline="92">ca.mcgill.ecse211.project.Navigation.calculateAngleTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3d8354490a2d8c36090d794c25d33421" compoundref="_navigation_8java" startline="101" endline="123">ca.mcgill.ecse211.project.Navigation.travelTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="137" endline="199">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" compoundref="_navigation_8java" startline="257" endline="266">ca.mcgill.ecse211.project.Navigation.moveOneTileWithCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="355" endline="388">ca.mcgill.ecse211.project.Navigation.turnTo</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="397" endline="496">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="540" endline="611">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1aaa06f190d634299fcb1b97a1891dad85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -228,32 +220,32 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Adds dx, dy and dtheta to the current values of x, y and theta, respectively. Useful for odometry.</para><para><parameterlist kind="param"><parameteritem>
+<para>This method adds dx, dy and dtheta to the current values of x, y and theta, respectively.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dx</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para></parameterdescription>
+<para>The change in x coordinate to add to the current x coordinate </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>dy</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para></parameterdescription>
+<para>The change in y coordinate to add to the current y coordinate </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>dtheta</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para></parameterdescription>
+<para>The change in angle to add to the current angle (theta) </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="113" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="113" bodyend="129"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="110" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="110" bodyend="126"/>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1af0ff4c5121973a8310cf986e25fa0d87" compoundref="_odometer_8java" startline="97" endline="136">ca.mcgill.ecse211.odometer.Odometer.run</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2ebc18a13aea6276122d9ef4ee100bb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -276,35 +268,35 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Overrides the values of x, y and theta. Use for odometry correction.</para><para><parameterlist kind="param"><parameteritem>
+<para>This method overrides the values of x, y and theta. Used for odometry correction.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>x</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the value of x </para></parameterdescription>
+<para>The value to set the current x coordinate to </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>y</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the value of y </para></parameterdescription>
+<para>The value to set the current y coordinate to </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>theta</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the value of theta </para></parameterdescription>
+<para>The value to set the current angle (theta) to </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="138" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="138" bodyend="151"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="135" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="135" bodyend="148"/>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="245" endline="247">ca.mcgill.ecse211.project.Game.readData</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="76" endline="84">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="118" endline="137">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ae85caa20c6391bacc4fdbd411ee3f113" compoundref="_component_test_8java" startline="84" endline="92">ca.mcgill.ecse211.tests.ComponentTest.tunnelTest</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1a1ecca45b47067d825683cf46dcf22b62" compoundref="_component_test_8java" startline="126" endline="145">ca.mcgill.ecse211.tests.ComponentTest.ringMotorTest</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a2911d7215e47f3064defe016b46bfeef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -318,23 +310,23 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Overrides x. Use for odometry correction.</para><para><parameterlist kind="param"><parameteritem>
+<para>This method overrides the x coordinate. Used for odometry correction.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>x</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the value of x </para></parameterdescription>
+<para>The value to set the current x coordinate to </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="158" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="158" bodyend="169"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="55" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="155" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="155" bodyend="166"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1afb295ca8cd6623ac3e9eacb1d31b75b9" compoundref="_light_localizer_8java" startline="55" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1aad66a7030ac00f3a9cbe7bc33c25acbf" compoundref="_odometry_correction_8java" startline="47" endline="88">ca.mcgill.ecse211.odometer.OdometryCorrection.run</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1a21a351682dc75060d6a5f15ad4775068" compoundref="_odometry_correction_8java" startline="95" endline="108">ca.mcgill.ecse211.odometer.OdometryCorrection.doCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="126" endline="188">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="374" endline="476">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="137" endline="199">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="397" endline="496">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a82986438cd462e66520bc62bb4bd2b75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -348,23 +340,23 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Overrides y. Use for odometry correction.</para><para><parameterlist kind="param"><parameteritem>
+<para>This method overrides the y coordinate. Used for odometry correction.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>y</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the value of y </para></parameterdescription>
+<para>The value to set the current y coordinate to </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="176" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="176" bodyend="187"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="55" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="173" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="173" bodyend="184"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1afb295ca8cd6623ac3e9eacb1d31b75b9" compoundref="_light_localizer_8java" startline="55" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1aad66a7030ac00f3a9cbe7bc33c25acbf" compoundref="_odometry_correction_8java" startline="47" endline="88">ca.mcgill.ecse211.odometer.OdometryCorrection.run</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometry_correction_1a21a351682dc75060d6a5f15ad4775068" compoundref="_odometry_correction_8java" startline="95" endline="108">ca.mcgill.ecse211.odometer.OdometryCorrection.doCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="126" endline="188">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="374" endline="476">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ae7230e905494002087416294f12cae6a" compoundref="_navigation_8java" startline="137" endline="199">ca.mcgill.ecse211.project.Navigation.travelToWithCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="397" endline="496">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -378,23 +370,22 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Overrides theta. Use for odometry correction.</para><para><parameterlist kind="param"><parameteritem>
+<para>This method overrides theta. Used for odometry correction.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>theta</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the value of theta </para></parameterdescription>
+<para>The value to set the current angle (theta) to </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="194" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="194" bodyend="205"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1a9fc3d6cdd897e9db86fc9d71dc914863" compoundref="_light_localizer_8java" startline="55" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="191" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="191" bodyend="202"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_light_localizer_1afb295ca8cd6623ac3e9eacb1d31b75b9" compoundref="_light_localizer_8java" startline="55" endline="108">ca.mcgill.ecse211.localization.LightLocalizer.localize</referencedby>
         <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1ab78196997d7409aec0c35603686989ad" compoundref="_ultrasonic_localizer_8java" startline="57" endline="63">ca.mcgill.ecse211.localization.UltrasonicLocalizer.localize</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" compoundref="_navigation_8java" startline="246" endline="255">ca.mcgill.ecse211.project.Navigation.moveOneTileWithCorrection</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="374" endline="476">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="520" endline="567">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1afbe677941e2bd44e35452e1eff508ae9" compoundref="_navigation_8java" startline="257" endline="266">ca.mcgill.ecse211.project.Navigation.moveOneTileWithCorrection</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a4b52e605d3ea2f9bcd9481ae2c69ba39" compoundref="_navigation_8java" startline="397" endline="496">ca.mcgill.ecse211.project.Navigation.goThroughTunnel</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -419,7 +410,7 @@
         <link refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data"/>
       </node>
     </inheritancegraph>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="17" bodyend="206"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/odometer/OdometerData.java" bodystart="17" bodyend="203"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a73c7ba7d64aadea2b4b8c11b8084d376" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::odometer::OdometerData</scope><name>doneReseting</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1afff2d760dd1f861b580f3eacef37f1cc" prot="public" virt="non-virtual"><scope>ca::mcgill::ecse211::odometer::OdometerData</scope><name>getOdometerData</name></member>

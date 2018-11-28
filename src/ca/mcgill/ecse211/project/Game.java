@@ -5,7 +5,6 @@ import ca.mcgill.ecse211.localization.LightLocalizer;
 import ca.mcgill.ecse211.localization.UltrasonicLocalizer;
 import ca.mcgill.ecse211.odometer.Odometer;
 import ca.mcgill.ecse211.odometer.OdometerExceptions;
-import ca.mcgill.ecse211.project.GameParameters.DemoType;
 import ca.mcgill.ecse211.threads.LightPoller;
 import ca.mcgill.ecse211.threads.RGBPoller;
 import ca.mcgill.ecse211.threads.SensorData;
@@ -14,7 +13,6 @@ import ca.mcgill.ecse211.threads.UltrasonicPoller;
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
 import lejos.hardware.ev3.LocalEV3;
-import lejos.hardware.lcd.TextLCD;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.port.Port;
 import lejos.hardware.sensor.EV3ColorSensor;
@@ -298,12 +296,15 @@ public enum Game {
    * then try to drop all rings
    */
   private static void navigateStart(Navigation nav, RingSearcher searcher) {
-    double[] starting = {(GameParameters.SC[0]+GameParameters.SCUS[0])/2.0,(GameParameters.SC[1]+GameParameters.SCUS[1])/2.0};
-    //nav.travelToWithCorrection(starting[0], starting[1], false);
+    double[] starting = {(GameParameters.SC[0] + GameParameters.SCUS[0]) / 2.0,
+        (GameParameters.SC[1] + GameParameters.SCUS[1]) / 2.0};
+    // nav.travelToWithCorrection(starting[0], starting[1], false);
     nav.travelTo(starting[0], starting[1], 600);
     nav.turnTo(
         Math.toDegrees(nav.calculateAngleTo(GameParameters.SCUS[0], GameParameters.SCUS[1])));
-    for(int i = 0; i < 5; i++) {Sound.beep();}
+    for (int i = 0; i < 5; i++) {
+      Sound.beep();
+    }
     GameUtil.playMusic();
   }
 
@@ -384,15 +385,15 @@ public enum Game {
     SampleProvider frontLight[] = new SampleProvider[1];
     frontLight[0] = lgSensors[2].getRGBMode();
 
-//     TextLCD lcd = LocalEV3.get().getTextLCD();
-//     Display odometryDisplay = new Display(lcd);
-//     
+    // TextLCD lcd = LocalEV3.get().getTextLCD();
+    // Display odometryDisplay = new Display(lcd);
+    //
 
     // Start odometer and odometer display
     Thread odoThread = new Thread(odometer);
     odoThread.start();
-//     Thread odoDisplayThread = new Thread(odometryDisplay);
-//     odoDisplayThread.start();
+    // Thread odoDisplayThread = new Thread(odometryDisplay);
+    // odoDisplayThread.start();
     // Start ultrasonic and light sensors
     usPoller = new UltrasonicPoller(usDistance, usData, sensorData);
     Thread usThread = new Thread(usPoller);

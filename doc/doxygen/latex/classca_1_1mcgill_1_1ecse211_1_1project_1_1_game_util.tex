@@ -95,16 +95,16 @@ find the average of the two coordinates
 \end{DoxyReturn}
 
 
-Definition at line 278 of file Game\+Util.\+java.
+Definition at line 303 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-278                                                      \{
-279     \textcolor{keywordtype}{double}[] result = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
-280     result[0] = (double) (p1[0] + p2[0]) / 2;
-281     result[1] = (double) (p1[1] + p2[1]) / 2;
-282     \textcolor{keywordflow}{return} result;
-283   \}
+303                                                      \{
+304     \textcolor{keywordtype}{double}[] result = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[2];
+305     result[0] = (double) (p1[0] + p2[0]) / 2;
+306     result[1] = (double) (p1[1] + p2[1]) / 2;
+307     \textcolor{keywordflow}{return} result;
+308   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -133,13 +133,13 @@ find the distance from the starting point to two points
 \end{DoxyReturn}
 
 
-Definition at line 292 of file Game\+Util.\+java.
+Definition at line 317 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-292                                                                      \{
-293     \textcolor{keywordflow}{return} (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
-294   \}
+317                                                                      \{
+318     \textcolor{keywordflow}{return} (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
+319   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -166,28 +166,28 @@ find closest point from a set of points
 \end{DoxyReturn}
 
 
-Definition at line 302 of file Game\+Util.\+java.
+Definition at line 327 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-302                                                             \{
-303     \textcolor{keywordtype}{int} minIndex = 0;
-304     \textcolor{keywordtype}{double} distance = Integer.MAX\_VALUE;
-305 
-306     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < points.length; i++) \{
-307       \textcolor{keywordflow}{try} \{
-308         \textcolor{keywordtype}{double}[] point = Odometer.getOdometer().getXYT();
-309         \textcolor{keywordtype}{double} thisDistance = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56}{distanceFrom}(points[i][0], points[i][1], point);
-310         \textcolor{keywordflow}{if} (thisDistance < distance) \{
-311           minIndex = i;
-312           distance = thisDistance;
-313         \}
-314       \} \textcolor{keywordflow}{catch} (OdometerExceptions e) \{
-315         e.printStackTrace();
-316       \}
-317     \}
-318     \textcolor{keywordflow}{return} minIndex;
-319   \}
+327                                                             \{
+328     \textcolor{keywordtype}{int} minIndex = 0;
+329     \textcolor{keywordtype}{double} distance = Integer.MAX\_VALUE;
+330 
+331     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < points.length; i++) \{
+332       \textcolor{keywordflow}{try} \{
+333         \textcolor{keywordtype}{double}[] point = Odometer.getOdometer().getXYT();
+334         \textcolor{keywordtype}{double} thisDistance = \hyperlink{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a6fb324a3d5e42414c83dfd8bd5910b56}{distanceFrom}(points[i][0], points[i][1], point);
+335         \textcolor{keywordflow}{if} (thisDistance < distance) \{
+336           minIndex = i;
+337           distance = thisDistance;
+338         \}
+339       \} \textcolor{keywordflow}{catch} (OdometerExceptions e) \{
+340         e.printStackTrace();
+341       \}
+342     \}
+343     \textcolor{keywordflow}{return} minIndex;
+344   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -221,24 +221,24 @@ Check if a given point is boundary
 \end{DoxyReturn}
 
 
-Definition at line 327 of file Game\+Util.\+java.
+Definition at line 352 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-327                                                      \{
-328     \textcolor{keywordtype}{int} x = coor[0];
-329     \textcolor{keywordtype}{int} y = coor[1];
-330     \textcolor{keywordtype}{boolean} onLY = x == GameParameters.Island\_LL[0]
-331         && (y >= GameParameters.Island\_LL[1] && y <= GameParameters.Island\_UR[1]);
-332     \textcolor{keywordtype}{boolean} onRY = x == GameParameters.Island\_UR[0]
-333         && (y >= GameParameters.Island\_LL[1] && y <= GameParameters.Island\_UR[1]);
-334     \textcolor{keywordtype}{boolean} onLX = y == GameParameters.Island\_LL[1]
-335         && (x >= GameParameters.Island\_LL[0] && x <= GameParameters.Island\_UR[0]);
-336     \textcolor{keywordtype}{boolean} onUX = y == GameParameters.Island\_UR[1]
-337         && (x >= GameParameters.Island\_LL[0] && x <= GameParameters.Island\_UR[0]);
-338 
-339     \textcolor{keywordflow}{return} onLY || onRY || onLX || onUX;
-340   \}
+352                                                      \{
+353     \textcolor{keywordtype}{int} x = coor[0];
+354     \textcolor{keywordtype}{int} y = coor[1];
+355     \textcolor{keywordtype}{boolean} onLY = x == GameParameters.Island\_LL[0]
+356         && (y >= GameParameters.Island\_LL[1] && y <= GameParameters.Island\_UR[1]);
+357     \textcolor{keywordtype}{boolean} onRY = x == GameParameters.Island\_UR[0]
+358         && (y >= GameParameters.Island\_LL[1] && y <= GameParameters.Island\_UR[1]);
+359     \textcolor{keywordtype}{boolean} onLX = y == GameParameters.Island\_LL[1]
+360         && (x >= GameParameters.Island\_LL[0] && x <= GameParameters.Island\_UR[0]);
+361     \textcolor{keywordtype}{boolean} onUX = y == GameParameters.Island\_UR[1]
+362         && (x >= GameParameters.Island\_LL[0] && x <= GameParameters.Island\_UR[0]);
+363 
+364     \textcolor{keywordflow}{return} onLY || onRY || onLX || onUX;
+365   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -265,23 +265,23 @@ check if one coordinate is safe based on (it is not a wall, tree or inside a tun
 \end{DoxyReturn}
 
 
-Definition at line 257 of file Game\+Util.\+java.
+Definition at line 282 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-257                                            \{
-258     \textcolor{keywordtype}{int} x = coor[0];
-259     \textcolor{keywordtype}{int} y = coor[1];
-260     \textcolor{keywordtype}{boolean} inTunnel = x >= GameParameters.TN\_LL[0] && x <= GameParameters.TN\_UR[0]
-261         && y >= GameParameters.TN\_LL[1] && y <= GameParameters.TN\_UR[1];
-262     \textcolor{keywordtype}{boolean} isTree = x == GameParameters.TREE\_US[0] && y == GameParameters.TREE\_US[1];
-263     \textcolor{keywordtype}{boolean} outBound =
-264         x <= 0 || x >= GameParameters.Grid\_UR[0] || y <= 0 || y >= GameParameters.Grid\_UR[1];
-265     \textcolor{keywordflow}{if} (inTunnel || isTree || outBound) \{
-266       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-267     \}
-268     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-269   \}
+282                                            \{
+283     \textcolor{keywordtype}{int} x = coor[0];
+284     \textcolor{keywordtype}{int} y = coor[1];
+285     \textcolor{keywordtype}{boolean} inTunnel = x >= GameParameters.TN\_LL[0] && x <= GameParameters.TN\_UR[0]
+286         && y >= GameParameters.TN\_LL[1] && y <= GameParameters.TN\_UR[1];
+287     \textcolor{keywordtype}{boolean} isTree = x == GameParameters.TREE\_US[0] && y == GameParameters.TREE\_US[1];
+288     \textcolor{keywordtype}{boolean} outBound =
+289         x <= 0 || x >= GameParameters.Grid\_UR[0] || y <= 0 || y >= GameParameters.Grid\_UR[1];
+290     \textcolor{keywordflow}{if} (inTunnel || isTree || outBound) \{
+291       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+292     \}
+293     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+294   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -298,15 +298,16 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 342 of file Game\+Util.\+java.
+Definition at line 367 of file Game\+Util.\+java.
 
 
 \begin{DoxyCode}
-342                                  \{
-343     Sound.playSample(\textcolor{keyword}{new} File(\textcolor{stringliteral}{"Pen.wav"}), 100);
-344   \}
+367                                  \{
+368     Sound.playSample(\textcolor{keyword}{new} File(\textcolor{stringliteral}{"Pen.wav"}), 100);
+369   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -322,9 +323,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{down\+Instruction}{downInstruction}}
 {\footnotesize\ttfamily char ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+down\+Instruction = \textquotesingle{}D\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
 
+This variable stores a character denoting that we need to navigate downwards. 
 
-
-Definition at line 28 of file Game\+Util.\+java.
+Definition at line 53 of file Game\+Util.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ab171328c45ccc1d98d96cc9422232669}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_ab171328c45ccc1d98d96cc9422232669}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!left\+Instruction@{left\+Instruction}}
@@ -332,9 +333,9 @@ Definition at line 28 of file Game\+Util.\+java.
 \subsubsection{\texorpdfstring{left\+Instruction}{leftInstruction}}
 {\footnotesize\ttfamily char ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+left\+Instruction = \textquotesingle{}L\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
 
+This variable stores a character denoting a left turn is required. 
 
-
-Definition at line 25 of file Game\+Util.\+java.
+Definition at line 38 of file Game\+Util.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4f6944d94b8de443baa150a2e7b700a0}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a4f6944d94b8de443baa150a2e7b700a0}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!right\+Instruction@{right\+Instruction}}
@@ -342,9 +343,9 @@ Definition at line 25 of file Game\+Util.\+java.
 \subsubsection{\texorpdfstring{right\+Instruction}{rightInstruction}}
 {\footnotesize\ttfamily char ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+right\+Instruction = \textquotesingle{}R\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
 
+This variable stores a character denoting a right turn is required. 
 
-
-Definition at line 26 of file Game\+Util.\+java.
+Definition at line 43 of file Game\+Util.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_acedc99ad369450d6b2d7711c2d63027a}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_acedc99ad369450d6b2d7711c2d63027a}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!searching\+Finder@{searching\+Finder}}
@@ -352,9 +353,9 @@ Definition at line 26 of file Game\+Util.\+java.
 \subsubsection{\texorpdfstring{searching\+Finder}{searchingFinder}}
 {\footnotesize\ttfamily Path\+Finder ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+searching\+Finder\hspace{0.3cm}{\ttfamily [static]}}
 
+This variable stores a Path\+Finder object instance that helps to create a path to navigate during the searching phase of a competition. 
 
-
-Definition at line 24 of file Game\+Util.\+java.
+Definition at line 33 of file Game\+Util.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a84ec23eabf60cb20895815e7b390e3f2}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a84ec23eabf60cb20895815e7b390e3f2}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!starting\+Finder@{starting\+Finder}}
@@ -362,9 +363,9 @@ Definition at line 24 of file Game\+Util.\+java.
 \subsubsection{\texorpdfstring{starting\+Finder}{startingFinder}}
 {\footnotesize\ttfamily Path\+Finder ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+starting\+Finder\hspace{0.3cm}{\ttfamily [static]}}
 
+This variable stores a Path\+Finder object instance that helps to create a path to navigate at the start of a competition. 
 
-
-Definition at line 23 of file Game\+Util.\+java.
+Definition at line 27 of file Game\+Util.\+java.
 
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a98831b92dc6ed43627755d2995cba683}\label{classca_1_1mcgill_1_1ecse211_1_1project_1_1_game_util_a98831b92dc6ed43627755d2995cba683}} 
 \index{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util@{ca\+::mcgill\+::ecse211\+::project\+::\+Game\+Util}!up\+Instruction@{up\+Instruction}}
@@ -372,9 +373,9 @@ Definition at line 23 of file Game\+Util.\+java.
 \subsubsection{\texorpdfstring{up\+Instruction}{upInstruction}}
 {\footnotesize\ttfamily char ca.\+mcgill.\+ecse211.\+project.\+Game\+Util.\+up\+Instruction = \textquotesingle{}U\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
 
+This variable stores a character denoting that we need to navigate upwards. 
 
-
-Definition at line 27 of file Game\+Util.\+java.
+Definition at line 48 of file Game\+Util.\+java.
 
 
 

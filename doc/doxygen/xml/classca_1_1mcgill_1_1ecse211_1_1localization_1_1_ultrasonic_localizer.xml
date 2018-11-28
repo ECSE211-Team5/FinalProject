@@ -203,13 +203,14 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="57" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="57" bodyend="63"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="81" endline="103">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="344" endline="365">ca.mcgill.ecse211.project.Navigation.turnTo</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="194" endline="205">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" compoundref="_navigation_8java" startline="574" endline="577">ca.mcgill.ecse211.project.Navigation.turn</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a8f40f0264c68f0cbed4fff1723ae7863" compoundref="_odometer_data_8java" startline="79" endline="101">ca.mcgill.ecse211.odometer.OdometerData.getXYT</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a3bbe0645f2b3b3d0986b4a707fb5a00c" compoundref="_navigation_8java" startline="355" endline="388">ca.mcgill.ecse211.project.Navigation.turnTo</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_data_1a419b8f07c2c5374411c8e62298e9a402" compoundref="_odometer_data_8java" startline="191" endline="202">ca.mcgill.ecse211.odometer.OdometerData.setTheta</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ad74286ad36d333bfaf57661837457b76" compoundref="_navigation_8java" startline="618" endline="621">ca.mcgill.ecse211.project.Navigation.turn</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1ab01db7b8a871acd45e7dd16922abc15e" compoundref="_navigation_8java" startline="74" endline="77">ca.mcgill.ecse211.project.Navigation.setSlowAcc</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a46cc30522719018a80f89624e0ce458f" compoundref="_sensor_data_8java" startline="82" endline="84">ca.mcgill.ecse211.threads.SensorData.getD</references>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="245" endline="247">ca.mcgill.ecse211.project.Game.readData</referencedby>
-        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" compoundref="_component_test_8java" startline="91" endline="97">ca.mcgill.ecse211.tests.ComponentTest.localizationTest</referencedby>
+        <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1ad11712dd74c5c64e84cd71186a59a087" compoundref="_component_test_8java" startline="99" endline="105">ca.mcgill.ecse211.tests.ComponentTest.localizationTest</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -237,7 +238,7 @@
 <para>This method helps our robot find north by using rising edge localization. We assume the robot starts by facing the top of the y-axis wall. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="107" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="107" bodyend="140"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="107" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="107" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1aa05b5b765f28c5388302dea82299e1bb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -250,7 +251,7 @@
 <para>This method keeps turning our robot towards a wall until it has detected one. We takes 10 readings to be sure. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="147" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="147" bodyend="154"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="148" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="148" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1a80d295b94e7160a5c424bc0f007ecde0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -263,7 +264,7 @@
 <para>This method keeps turning our robot away from a wall until it has detected no wall. We takes 10 readings to be sure. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="160" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="160" bodyend="167"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="161" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="161" bodyend="168"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -276,7 +277,7 @@
 <simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="20" bodyend="168"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" line="20" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/localization/UltrasonicLocalizer.java" bodystart="20" bodyend="169"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1a08000714fdbbd6144b2c36f161001a38" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::UltrasonicLocalizer</scope><name>data</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1localization_1_1_ultrasonic_localizer_1a9b7327e9ecef55625d4244e150070538" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::localization::UltrasonicLocalizer</scope><name>fallingEdge</name></member>

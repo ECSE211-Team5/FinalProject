@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.WiFi" 3 "Tue Nov 27 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.WiFi" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -153,73 +153,74 @@ Definition at line 26 of file WiFi\&.java\&.
 115       GameParameters\&.TTEE_O[0] = ((Long) data\&.get(ringO + "x"))\&.intValue();
 116       GameParameters\&.TTEE_O[1] = ((Long) data\&.get(ringO + "y"))\&.intValue();
 117 
-118       if (GameParameters\&.Demo == GameParameters\&.DemoType\&.Beta) {
-119         GameParameters\&.Grid_UR[0] = 8;
-120         GameParameters\&.Grid_UR[1] = 8;
-121 
-122         switch (GameParameters\&.UsCorner) {
-123           case 0:
-124             int[] sc0 = {1, 1, 0};
-125             GameParameters\&.SC = sc0;
-126             int[] scus0 = {0, 0};
-127             GameParameters\&.SCUS = scus0;
-128             break;
-129           case 1:
-130             int[] sc1 = {7, 1, 270};
-131             GameParameters\&.SC = sc1;
-132             int[] scus1 = {8, 0};
-133             GameParameters\&.SCUS = scus1;
-134             break;
-135           case 2:
-136             int[] sc2 = {7, 7, 180};
-137             GameParameters\&.SC = sc2;
-138             int[] scus2 = {8, 8};
-139             GameParameters\&.SCUS = scus2;
-140             break;
-141           case 3:
-142             int[] sc3 = {1, 7, 90};
-143             GameParameters\&.SC = sc3;
-144             int[] scus3 = {0, 8};
-145             GameParameters\&.SCUS = scus3;
-146             break;
-147         }
-165       } else {
-166         GameParameters\&.Grid_UR[0] = 15;
-167         GameParameters\&.Grid_UR[1] = 9;
-168 
-169         switch (GameParameters\&.UsCorner) {
-170           case 0:
-171             int[] sc0 = {1, 1, 0};
-172             GameParameters\&.SC = sc0;
-173             int[] scus0 = {0, 0};
-174             GameParameters\&.SCUS = scus0;
-175             break;
-176           case 1:
-177             int[] sc1 = {14, 1, 270};
-178             GameParameters\&.SC = sc1;
-179             int[] scus1 = {15, 0};
-180             GameParameters\&.SCUS = scus1;
-181             break;
-182           case 2:
-183             int[] sc2 = {14, 8, 180};
-184             GameParameters\&.SC = sc2;
-185             int[] scus2 = {15, 9};
-186             GameParameters\&.SCUS = scus2;
-187             break;
-188           case 3:
-189             int[] sc3 = {1, 8, 90};
-190             GameParameters\&.SC = sc3;
-191             int[] scus3 = {0, 9};
-192             GameParameters\&.SCUS = scus3;
-193             break;
-194         }
-226       }
-227 
-228       // set data read to true
-229     } catch (Exception e) {
-230       e\&.printStackTrace();
-231     }
-232   }
+118       System\&.out\&.println(GameParameters\&.Demo);
+119       if (GameParameters\&.Demo == GameParameters\&.DemoType\&.Beta) {
+120         GameParameters\&.Grid_UR[0] = 8;
+121         GameParameters\&.Grid_UR[1] = 8;
+122 
+123         switch (GameParameters\&.UsCorner) {
+124           case 0:
+125             int[] sc0 = {1, 1, 0};
+126             GameParameters\&.SC = sc0;
+127             int[] scus0 = {0, 0};
+128             GameParameters\&.SCUS = scus0;
+129             break;
+130           case 1:
+131             int[] sc1 = {7, 1, 270};
+132             GameParameters\&.SC = sc1;
+133             int[] scus1 = {8, 0};
+134             GameParameters\&.SCUS = scus1;
+135             break;
+136           case 2:
+137             int[] sc2 = {7, 7, 180};
+138             GameParameters\&.SC = sc2;
+139             int[] scus2 = {8, 8};
+140             GameParameters\&.SCUS = scus2;
+141             break;
+142           case 3:
+143             int[] sc3 = {1, 7, 90};
+144             GameParameters\&.SC = sc3;
+145             int[] scus3 = {0, 8};
+146             GameParameters\&.SCUS = scus3;
+147             break;
+148         }
+166       } else {
+167         GameParameters\&.Grid_UR[0] = 15;
+168         GameParameters\&.Grid_UR[1] = 9;
+169 
+170         switch (GameParameters\&.UsCorner) {
+171           case 0:
+172             int[] sc0 = {1, 1, 0};
+173             GameParameters\&.SC = sc0;
+174             int[] scus0 = {0, 0};
+175             GameParameters\&.SCUS = scus0;
+176             break;
+177           case 1:
+178             int[] sc1 = {14, 1, 270};
+179             GameParameters\&.SC = sc1;
+180             int[] scus1 = {15, 0};
+181             GameParameters\&.SCUS = scus1;
+182             break;
+183           case 2:
+184             int[] sc2 = {14, 8, 180};
+185             GameParameters\&.SC = sc2;
+186             int[] scus2 = {15, 9};
+187             GameParameters\&.SCUS = scus2;
+188             break;
+189           case 3:
+190             int[] sc3 = {1, 8, 90};
+191             GameParameters\&.SC = sc3;
+192             int[] scus3 = {0, 9};
+193             GameParameters\&.SCUS = scus3;
+194             break;
+195         }
+227       }
+228 
+229       // set data read to true
+230     } catch (Exception e) {
+231       e\&.printStackTrace();
+232     }
+233   }
 .fi
 
 
