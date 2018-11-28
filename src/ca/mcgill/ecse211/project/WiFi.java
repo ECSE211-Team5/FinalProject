@@ -17,7 +17,7 @@ public enum WiFi {
   INSTANCE;
 
   // ** Set these as appropriate for your team and current situation **
-  private static final String SERVER_IP = "192.168.2.13";
+  private static final String SERVER_IP = "192.168.2.2";
 
   /**
    * This method sets up a connection to a locally hosted server and reads Game Parameter values
@@ -115,6 +115,7 @@ public enum WiFi {
       GameParameters.TTEE_O[0] = ((Long) data.get(ringO + "x")).intValue();
       GameParameters.TTEE_O[1] = ((Long) data.get(ringO + "y")).intValue();
 
+      System.out.println(GameParameters.Demo);
       if (GameParameters.Demo == GameParameters.DemoType.Beta) {
         GameParameters.Grid_UR[0] = 8;
         GameParameters.Grid_UR[1] = 8;

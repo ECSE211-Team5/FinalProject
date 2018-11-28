@@ -1,5 +1,6 @@
 package ca.mcgill.ecse211.project;
 
+import java.util.Arrays;
 import ca.mcgill.ecse211.localization.LightLocalizer;
 import ca.mcgill.ecse211.localization.UltrasonicLocalizer;
 import ca.mcgill.ecse211.odometer.Odometer;
@@ -319,7 +320,7 @@ public enum Game {
     // Find the nearest point relative to the robot
     int startingIndex = GameUtil.findClosestPointToRobot(treeSides);
     searcher.prepareSearch();
-
+    System.out.println("treeSides.length " + treeSides.length);
     // search the tree counterclockwise
     for (int i = 0; i < treeSides.length; i++) {
       int[] side = treeSides[(startingIndex + i) % treeSides.length];
@@ -413,7 +414,6 @@ public enum Game {
    * @throws OdometerExceptions
    */
   public void runGame() throws OdometerExceptions {
-    GameParameters.Demo = DemoType.Beta;
     // Start localizing
     final Navigation navigation = new Navigation(leftMotor, rightMotor);
     final UltrasonicLocalizer usLoc = new UltrasonicLocalizer(navigation, leftMotor, rightMotor);
@@ -422,6 +422,8 @@ public enum Game {
 
     Button.waitForAnyPress(); // Wait for button press to start
     INSTANCE.ready(usLoc, lgLoc);
+    System.out.println("Grid_UR " + Arrays.toString(GameParameters.Grid_UR));
+    System.out.println("Grid_LL " + Arrays.toString(GameParameters.Grid_LL));
 
     // instantiate path finder
     GameUtil.searchingFinder =

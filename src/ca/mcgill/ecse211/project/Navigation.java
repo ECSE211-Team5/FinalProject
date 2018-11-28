@@ -71,6 +71,10 @@ public class Navigation {
     }
   }
 
+  public void setSlowAcc() {
+    leftMotor.setAcceleration(N_ACCELERATION);
+    rightMotor.setAcceleration(N_ACCELERATION);
+  }
   /**
    * This method calculate the angle for the robot to rotate facing certain point
    * 
@@ -103,12 +107,19 @@ public class Navigation {
     double distance = Math.sqrt(Math.pow(dX, 2) + Math.pow(dY, 2));
 
     turnTo(Math.toDegrees(theta));
-
     leftMotor.setSpeed(speed);
     rightMotor.setSpeed(speed);
+    try {
+      Thread.sleep(100);
+    } catch (InterruptedException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+   
 
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
     rightMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), false);
+    
   }
 
   /**
@@ -352,6 +363,12 @@ public class Navigation {
     if (dTheta > 180) {
       leftMotor.setSpeed(ROTATE_SPEED);
       rightMotor.setSpeed(ROTATE_SPEED);
+      try {
+        Thread.sleep(100);
+      } catch (InterruptedException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
       leftMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta), true);
       rightMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta), false);
     }
@@ -359,6 +376,12 @@ public class Navigation {
     else {
       leftMotor.setSpeed(ROTATE_SPEED);
       rightMotor.setSpeed(ROTATE_SPEED);
+      try {
+        Thread.sleep(100);
+      } catch (InterruptedException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
       leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), true);
       rightMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), false);
     }
@@ -520,6 +543,12 @@ public class Navigation {
     // rightMotor.setAcceleration(N_ACCELERATION);
     leftMotor.setSpeed(FORWARD_SPEED);
     rightMotor.setSpeed(FORWARD_SPEED);
+    try {
+      Thread.sleep(100);
+    } catch (InterruptedException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
     double theta = odometer.getXYT()[2];
 
     // if we do correction, we need to forward more (for the sensor distance)
@@ -535,14 +564,14 @@ public class Navigation {
     searcher.prepareRetrieve();
     // rotate a little to the left to make sure that the sensor can detect the ring
     // detect the ring color and beep based on the color
-    searcher.search(-160);
+    searcher.search(-165);
     if(correct) {
-      forward(FORWARD_SPEED, 2.5 / Game.TILE);
+      forward(FORWARD_SPEED, 2.8 / Game.TILE);
     }else {
-      forward(FORWARD_SPEED, 3.5 / Game.TILE);
+      forward(FORWARD_SPEED, 3.8 / Game.TILE);
     }
     searcher.detectColor();
-    searcher.search(-180);
+    searcher.search(-190);
     searcher.detectColor();
     
     // rotate back
@@ -553,9 +582,9 @@ public class Navigation {
     rightMotor.rotate(-40, false);
     searcher.safeRod();
     if(correct) {
-      forward(FORWARD_SPEED, 4.5 / Game.TILE);
+      forward(FORWARD_SPEED, 3.7 / Game.TILE);
     }else {
-      forward(FORWARD_SPEED, 3 / Game.TILE);
+      forward(FORWARD_SPEED, 2.7 / Game.TILE);
     }
     // go back to original position
     rightMotor.rotate(70, false);
@@ -600,6 +629,12 @@ public class Navigation {
   public void forward(int speed, double distance) {
     leftMotor.setSpeed(speed);
     rightMotor.setSpeed(speed);
+    try {
+      Thread.sleep(100);
+    } catch (InterruptedException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
     rightMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), false);
   }

@@ -136,6 +136,7 @@ public class UltrasonicLocalizer {
       theta = upperAngleBound + (angle1 + angle2) / 2;
     navigation.turnTo(theta);
     odometer.setTheta(0);
+    navigation.setSlowAcc();
     // wait for any button press
   }
 

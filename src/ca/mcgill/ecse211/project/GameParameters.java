@@ -35,7 +35,7 @@ public enum GameParameters {
   /**
    * This variable stores the current demo type that our robot is in during a competition
    */
-  public static DemoType Demo = DemoType.Beta;
+  public static DemoType Demo = DemoType.Final;
 
   /**
    * This variables holds the starting corner coordinates for our robot
