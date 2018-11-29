@@ -251,10 +251,10 @@ public class GameUtil {
     }
 
     /**
-     * This method transfer a coordinate to index representation
+     * This method transforms a coordinate to square tile index representation
      * 
-     * @param coor
-     * @return
+     * @param coor An array with x and y coordinates
+     * @return The index of the square tile the coordinates represent
      */
     private int coordinateToIndex(int coor[]) {
       int i = coor[0] - ll[0] + (width + 1) * (coor[1] - ll[1]);
@@ -262,22 +262,23 @@ public class GameUtil {
     }
 
     /**
-     * transfer a index representation to its coordinate
+     * This method transforms a square tile index to its coordinate representation
      * 
-     * @param i
-     * @return
+     * @param i A square tile index
+     * @return An array with x and y coordinates
      */
     private int[] indexToCoor(int i) {
       int[] coor = {i % (width + 1) + ll[0], i / (width + 1) + ll[1]};
       return coor;
     }
-  } // end of class PathFinder
+  }
 
   /**
-   * check if one coordinate is safe based on (it is not a wall, tree or inside a tunnel)
+   * This method checks if a coordinate pair is safe to travel to (i.e. it is not a wall, tree or
+   * inside a tunnel)
    * 
-   * @param coor: coordinate array
-   * @return: true if safe, false otherwise
+   * @param coor An array with a pair of coordinates
+   * @return A boolean that is true if safe, false otherwise
    */
   public static boolean isSafe(int[] coor) {
     int x = coor[0];
@@ -294,11 +295,11 @@ public class GameUtil {
   }
 
   /**
-   * find the average of the two coordinates
+   * This method finds the mid point between two coordinate pairs
    * 
-   * @param p1
-   * @param p2
-   * @return
+   * @param p1 The first pair of coordinates
+   * @param p2 The second pair of coordinates
+   * @return An array with the mid point coordinates
    */
   public static double[] average(int[] p1, int[] p2) {
     double[] result = new double[2];
@@ -308,18 +309,19 @@ public class GameUtil {
   }
 
   /**
-   * find the distance from the starting point to two points
+   * This method finds the distance from some starting coordinates to a target pair of coordinates
    * 
-   * @param x
-   * @param y
-   * @return
+   * @param x The target x coordinate
+   * @param y The target y coordinate
+   * @param position The starting pair of coordinates
+   * @return The distance from the starting position to the target coordinates
    */
   public static double distanceFrom(int x, int y, double[] position) {
     return (Math.pow(Math.round(position[0]) - x, 2) + Math.pow(Math.round(position[1]) - y, 2));
   }
 
   /**
-   * find closest point from a set of points
+   * This method finds the closest point from a set of points
    * 
    * @param points: a set of points
    * @return

@@ -112,7 +112,6 @@ public class Navigation {
     try {
       Thread.sleep(100);
     } catch (InterruptedException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
    
@@ -366,7 +365,6 @@ public class Navigation {
       try {
         Thread.sleep(100);
       } catch (InterruptedException e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       }
       leftMotor.rotate(-convertAngle(Game.WHEEL_RAD, Game.TRACK, 360 - dTheta), true);
@@ -379,7 +377,6 @@ public class Navigation {
       try {
         Thread.sleep(100);
       } catch (InterruptedException e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       }
       leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, dTheta), true);
@@ -546,7 +543,6 @@ public class Navigation {
     try {
       Thread.sleep(100);
     } catch (InterruptedException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
     double theta = odometer.getXYT()[2];
@@ -632,7 +628,6 @@ public class Navigation {
     try {
       Thread.sleep(100);
     } catch (InterruptedException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
