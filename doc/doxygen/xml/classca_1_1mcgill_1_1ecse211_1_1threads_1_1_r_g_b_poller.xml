@@ -32,7 +32,7 @@
 <parametername>us</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A SampleProvider class instance that helps us to store an array of ultrasonic sensor data. </para></parameterdescription>
+<para>A SampleProvider class instance that helps us to store an array of light sensor data. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -60,10 +60,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="29" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="29" bodyend="33"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="28" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="28" bodyend="32"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.us</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="19">ca.mcgill.ecse211.threads.LightPoller.cont</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="44" endline="46">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="43" endline="45">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -75,14 +75,14 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>run method for the rgb poller polls and process the rgb data of rgb sensor </para>        </detaileddescription>
+<para>This method reads rgb light sensor data and processes it </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="39" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="39" bodyend="65"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="38" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="38" bodyend="62"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9cb770bbf71f586697633db1475ff" compoundref="_light_poller_8java" startline="18">ca.mcgill.ecse211.threads.LightPoller.us</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1a6cf53aecc3efc481f71d36341d2276c6" compoundref="_light_poller_8java" startline="20">ca.mcgill.ecse211.threads.LightPoller.lgData</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" compoundref="_light_poller_8java" startline="19">ca.mcgill.ecse211.threads.LightPoller.cont</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" compoundref="_sensor_data_8java" startline="151" endline="160">ca.mcgill.ecse211.threads.SensorData.setRGB</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a6ad23111ecd378099f0b4ed0b6d398bc" compoundref="_sensor_data_8java" startline="146" endline="155">ca.mcgill.ecse211.threads.SensorData.setRGB</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a92e653a6a9f7a31cb7b6f9bc2e732133" compoundref="_color_calibrator_8java" startline="37" endline="52">ca.mcgill.ecse211.project.ColorCalibrator.getColor</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a40906193773ead0bfd582f188413c97a" compoundref="_color_calibrator_8java" startline="71" endline="87">ca.mcgill.ecse211.project.ColorCalibrator.setFrequency</references>
       </memberdef>
@@ -156,7 +156,7 @@
         <link refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="17" bodyend="66"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" line="17" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/RGBPoller.java" bodystart="17" bodyend="63"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_light_poller_1ab6a9050ced4f6940add4735c8872194a" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>cont</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1abb0ba2385c212f3d0d8435267d882536" prot="protected" virt="non-virtual"><scope>ca::mcgill::ecse211::threads::RGBPoller</scope><name>isStarted</name></member>

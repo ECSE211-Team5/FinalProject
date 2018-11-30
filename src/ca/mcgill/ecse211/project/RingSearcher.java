@@ -33,10 +33,11 @@ public class RingSearcher {
 
 
   /**
-   * This class provides method to check if there is a ring and if the ring is the color we want
+   * This RingSearcher class constructor checks if there is a ring to collect and records its color
    * 
-   * @param storagenMotor: the motor to move the storage of the robot
-   * @param rodMotor: the motor for the rod to collect the ring
+   * @param sensorMotor An EV3LargeRegulatedMotor object instance that controls a sensor motor
+   * @param rodMotor An EV3LargeRegulatedMotor object instance that controls the rod with a light
+   *        sensor for ring color detection
    * @throws OdometerExceptions
    */
   public RingSearcher(EV3LargeRegulatedMotor sensorMotor, EV3LargeRegulatedMotor rodMotor)
@@ -54,15 +55,18 @@ public class RingSearcher {
   }
 
   /**
-   * This method searches for the ring and identify its color based using the rod, It will beep
-   * based on the color of the ring
+   * This method searches for a ring and rotates the sensorMotor rod
    * 
+   * @param angle An integer to rotate the motor for the sensor to
    */
   public void search(int angle) {
     sensorMotor.rotateTo(angle);
-    
   }
-  
+
+  /**
+   * This method causes our robot to beep a certain number of times to identify what ring it is
+   * picking up
+   */
   public void detectColor() {
     Game.INSTANCE.rgbPoller.setStart(true);
     try {
@@ -99,43 +103,49 @@ public class RingSearcher {
   }
 
   /**
-   * This method put the sensor to search rotation to be ready for the searching
+   * This method prepares our robot to search for a ring
    */
   public void prepareSearch() {
     sensorMotor.rotateTo(SENSOR_ROTATION);
   }
-  
+
+  /**
+   * This method indicates that our robot is done searching for a ring
+   */
   public void finishSearch() {
     sensorMotor.rotateTo(-100);
   }
 
   /**
-   * This method put the sensor back
+   * This method retracts our ring searching rod
    */
   public void resetSearch() {
     sensorMotor.rotateTo(0);
   }
 
   /**
-   * This method rotate the rod to a suitable position for retrieve the ring
+   * This method rotates the rod to a suitable position to allow a ring to be picked up
    */
   public void prepareRetrieve() {
     rodMotor.rotateTo(ROD_PREPARE);
   }
 
   /**
-   * this method retrieve the searched ring
+   * This method rotates the rod to be ready to retrieve a ring
    */
   public void retrieveRing() {
     rodMotor.rotate(ROD_RETRIEVE);
   }
 
+  /**
+   * This method rotates the rod to a safe position
+   */
   public void safeRod() {
     rodMotor.rotateTo(180);
   }
-  
+
   /**
-   * Rotate the rod back to the original position
+   * This method rotates the rod back to its original position
    */
   public void resetRodMotor() {
     rodMotor.rotateTo(0);

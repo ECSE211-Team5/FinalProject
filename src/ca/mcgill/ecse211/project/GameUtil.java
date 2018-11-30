@@ -321,10 +321,10 @@ public class GameUtil {
   }
 
   /**
-   * This method finds the closest point from a set of points
+   * This method finds the closest point to our robot's current position from a set of points
    * 
-   * @param points: a set of points
-   * @return
+   * @param points A two dimensional array of points
+   * @return An index that represents the closest point to our robot
    */
   public static int findClosestPointToRobot(int[][] points) {
     int minIndex = 0;
@@ -346,10 +346,10 @@ public class GameUtil {
   }
 
   /**
-   * Check if a given point is boundary
+   * This method checks if a given point is on an island boundary
    * 
-   * @param coor: the point to input
-   * @return: whether the given point is on the boundary of an island
+   * @param coor An array with a pair of coordinates to check
+   * @return A boolean that represents whether the given point is on the boundary of an island
    */
   public static boolean isIslandBoundary(int[] coor) {
     int x = coor[0];
@@ -366,6 +366,9 @@ public class GameUtil {
     return onLY || onRY || onLX || onUX;
   }
 
+  /**
+   * This method plays music
+   */
   public static void playMusic() {
     Sound.playSample(new File("Pen.wav"), 100);
   }

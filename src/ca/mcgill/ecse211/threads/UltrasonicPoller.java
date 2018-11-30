@@ -27,11 +27,11 @@ public class UltrasonicPoller extends ThreadControl {
    * This constructor creates an instance of the UltrasonicPoller class to provide distance data
    * from an ultrasonic sensor to our Wall Follower.
    * 
-   * @param us a SampleProvider class instance that helps us to store an array of ultrasonic sensor
+   * @param us A SampleProvider class instance that helps us to store an array of ultrasonic sensor
    *        data.
-   * @param usData an array of distance data to be used by our Wall Follower's
+   * @param usData An array of distance data to be used by our Wall Follower's
    *        UltrasonicControllers.
-   * @param cont a BangBangController or PController instance that has accumulated distance data
+   * @param cont A BangBangController or PController instance that has accumulated distance data
    *        stored in usData passed to it.
    */
   public UltrasonicPoller(SampleProvider us, float[] usData, SensorData cont) {
@@ -43,7 +43,7 @@ public class UltrasonicPoller extends ThreadControl {
   }
 
   /**
-   * get us sensor data
+   * This method gets ultrasonic sensor data
    */
   protected void runMethod() {
     us.fetchSample(usData, 0); // acquire data

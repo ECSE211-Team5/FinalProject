@@ -253,15 +253,15 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This method transfer a coordinate to index representation</para><para><parameterlist kind="param"><parameteritem>
+<para>This method transforms a coordinate to square tile index representation</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>coor</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para></parameterdescription>
+<para>An array with x and y coordinates </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para></para></simplesect>
+<simplesect kind="return"><para>The index of the square tile the coordinates represent </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -279,15 +279,15 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>transfer a index representation to its coordinate</para><para><parameterlist kind="param"><parameteritem>
+<para>This method transforms a square tile index to its coordinate representation</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>i</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para></parameterdescription>
+<para>A square tile index </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para></para></simplesect>
+<simplesect kind="return"><para>An array with x and y coordinates </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>

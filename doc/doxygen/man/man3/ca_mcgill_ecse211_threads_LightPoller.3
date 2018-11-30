@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.LightPoller" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.LightPoller" 3 "Thu Nov 29 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -70,11 +70,11 @@ This constructor creates an instance of the \fBLightPoller\fP class to provide d
 .PP
 \fBParameters:\fP
 .RS 4
-\fIus\fP a SampleProvider class instance that helps us to store an array of ultrasonic sensor data\&. 
+\fIus\fP A SampleProvider class instance that helps us to store an array of light sensor data\&. 
 .br
-\fIlgData\fP an array of distance data to be used by our Wall Follower's UltrasonicControllers\&. 
+\fIlgData\fP An array to store light sensor data\&. 
 .br
-\fIcont\fP a BangBangController or PController instance that has accumulated distance data stored in usData passed to it\&. 
+\fIcont\fP A \fBSensorData\fP object instance to further store sensor data\&. 
 .RE
 .PP
 \fBExceptions:\fP
@@ -84,40 +84,40 @@ This constructor creates an instance of the \fBLightPoller\fP class to provide d
 .PP
 
 .PP
-Definition at line 36 of file LightPoller\&.java\&.
+Definition at line 33 of file LightPoller\&.java\&.
 .PP
 .nf
-37                                 {
-38     this\&.us = us;
-39     this\&.cont = cont;
-40     this\&.lgData = lgData;
-41     isStarted = true;
-42     lastValue = new float[2];
-43     sensorNumber++;
-44     WAIT_TIME = 50;
-45   }
+34                                 {
+35     this\&.us = us;
+36     this\&.cont = cont;
+37     this\&.lgData = lgData;
+38     isStarted = true;
+39     lastValue = new float[2];
+40     sensorNumber++;
+41     WAIT_TIME = 50;
+42   }
 .fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.LightPoller\&.runMethod ()\fC [protected]\fP"
-the run method to be performed in run method, collect light data 
+This method reads light sensor data 
 .PP
-Definition at line 50 of file LightPoller\&.java\&.
+Definition at line 47 of file LightPoller\&.java\&.
 .PP
 .nf
-50                              {
-51     double l[] = new double[2];
-52     for (int i = 0; i < us\&.length; i++) {
-53       us[i]\&.fetchSample(lgData[i], 0); // acquire data
-54 
-55       int distance = (int) (lgData[i][0] * 100); // extract from buffer, multiply by 100 for
-56                                                  // convenience
-57       // and allow it to be cast to int
-58       l[i] = distance - lastValue[i]; // now take action depending on value
-59       lastValue[i] = distance;
-60     }
-61     cont\&.setL(l);
-62   }
+47                              {
+48     double l[] = new double[2];
+49     for (int i = 0; i < us\&.length; i++) {
+50       us[i]\&.fetchSample(lgData[i], 0); // acquire data
+51 
+52       int distance = (int) (lgData[i][0] * 100); // extract from buffer, multiply by 100 for
+53                                                  // convenience
+54       // and allow it to be cast to int
+55       l[i] = distance - lastValue[i]; // now take action depending on value
+56       lastValue[i] = distance;
+57     }
+58     cont\&.setL(l);
+59   }
 .fi
 .SH "Member Data Documentation"
 .PP 

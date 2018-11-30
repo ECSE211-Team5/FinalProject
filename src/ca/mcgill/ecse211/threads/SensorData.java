@@ -38,8 +38,8 @@ public class SensorData {
   private static SensorData sensorData = null;
 
   /**
-   * Default constructor. The constructor is private. A factory is used instead such that only one
-   * instance of this class is ever created.
+   * This is the class constructor for the SensorData class. It cannot be instantiated externally. A
+   * factory is used instead such that only one instance of this class is ever created.
    */
   protected SensorData() {
     // Default distance value is 40 cm from any walls.
@@ -53,12 +53,10 @@ public class SensorData {
   }
 
   /**
-   * OdometerData factory. Returns an OdometerData instance and makes sure that only one instance is
-   * ever created. If the user tries to instantiate multiple objects, the method throws a
-   * MultipleOdometerDataException.
+   * This method returns an SensorData instance and makes sure that only one instance is ever
+   * created.
    * 
-   * @return An OdometerData object
-   * @throws OdometerExceptions
+   * @return A SensorData object
    */
   public synchronized static SensorData getSensorData() throws OdometerExceptions {
     if (sensorData != null) { // Return existing object
@@ -71,22 +69,21 @@ public class SensorData {
     } else {
       throw new OdometerExceptions("Only one intance of the SensorData can be created.");
     }
-
   }
 
   /**
-   * Return the ultraSonic distance data.
+   * This method returns ultrasonic sensor distance data.
    * 
-   * @return the sensor data.
+   * @return The distance detected by an ultrasonic sensor.
    */
   public double getD() {
     return distance;
   }
 
   /**
-   * get the light value data from the two light sensors (protected by lightLock)
+   * This thread safe method gets light data from two light sensors.
    * 
-   * @return: data from light sensor
+   * @return An array of light sensor data
    */
   public double[] getL() {
     // lock the lock for light sensor value
@@ -96,13 +93,12 @@ public class SensorData {
     } finally {
       lightLock.unlock();
     }
-
   }
 
   /**
-   * get the rgb data for light sensor (protected by rgb lock)
+   * This thread safe method gets rgb data from a light sensor
    * 
-   * @return: rgb data
+   * @return An array of rgb data
    */
   public int[] getRGB() {
     rgbLock.lock();
@@ -114,8 +110,7 @@ public class SensorData {
   }
 
   /**
-   * (deprecated, not using) This method returns the currently stored angle value from the gyro
-   * sensor
+   * (deprecated) This method returns the currently stored angle value
    * 
    * @return The current angle value
    */
@@ -124,7 +119,7 @@ public class SensorData {
   }
 
   /**
-   * This method overwrites the distance value. Use for ultrasonic sensor.
+   * This method overwrites the last distance value. Used for ultrasonic sensor data
    * 
    * @param d The value to overwrite distance with
    */
@@ -133,7 +128,7 @@ public class SensorData {
   }
 
   /**
-   * (deprecated not usings) This method overwrites the angle value.
+   * (deprecated) This method overwrites the last angle value.
    * 
    * @param a The value to overwrite angle with
    */
@@ -142,11 +137,11 @@ public class SensorData {
   }
 
   /**
-   * set rgb data for color sensor (protected by rgb lock)
+   * This thread safe method stores rgb data from a color sensor
    * 
-   * @param r: red value
-   * @param g: green value
-   * @param b: blue value
+   * @param r An integer that denotes the red value to store
+   * @param g An integer that denotes the green value to store
+   * @param b An integer that denotes the blue value to store
    */
   public void setRGB(int r, int g, int b) {
     try {
@@ -160,9 +155,9 @@ public class SensorData {
   }
 
   /**
-   * This method overwrites the light value. (protected by light lock)
+   * This thread safe method overwrites the last light value
    * 
-   * @param l The value to overwrite the current light value with
+   * @param l The value to overwrite the last light value with
    */
   public void setL(double l[]) {
     try {

@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.RGBPoller" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.RGBPoller" 3 "Thu Nov 29 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -52,7 +52,7 @@ This constructor creates an instance of the \fBRGBPoller\fP class to provide col
 .PP
 \fBParameters:\fP
 .RS 4
-\fIus\fP A SampleProvider class instance that helps us to store an array of ultrasonic sensor data\&. 
+\fIus\fP A SampleProvider class instance that helps us to store an array of light sensor data\&. 
 .br
 \fIusData\fP An array to store light data\&. 
 .br
@@ -66,49 +66,47 @@ This constructor creates an instance of the \fBRGBPoller\fP class to provide col
 .PP
 
 .PP
-Definition at line 29 of file RGBPoller\&.java\&.
+Definition at line 28 of file RGBPoller\&.java\&.
 .PP
 .nf
-30                                 {
-31     super(us, usData, cont);
-32     isStarted = true;
-33   }
+29                                 {
+30     super(us, usData, cont);
+31     isStarted = true;
+32   }
 .fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.RGBPoller\&.runMethod ()\fC [protected]\fP"
-run method for the rgb poller polls and process the rgb data of rgb sensor 
+This method reads rgb light sensor data and processes it 
 .PP
-Definition at line 39 of file RGBPoller\&.java\&.
+Definition at line 38 of file RGBPoller\&.java\&.
 .PP
 .nf
-39                              {
-40     us[0]\&.fetchSample(lgData[0], 0); // acquire data at offset 0
-41     // get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int
-42     int r = (int) (lgData[0][0] * 100); // extract from buffer, cast to int
-43     int g = (int) (lgData[0][1] * 100); // extract from buffer, cast to int
-44     int b = (int) (lgData[0][2] * 100); // extract from buffer, cast to int
-45     cont\&.setRGB(r, g, b); // now take action depending on value
-46     switch (ColorCalibrator\&.getColor(r, g, b)) {
-47       case Orange:
-48         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Orange);
-49         break;
-50       case Yellow:
-51         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Yellow);
-52         break;
-53       case Green:
-54         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Green);
-55         break;
-56       case Blue:
-57         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Blue);
-58         break;
-59       default:
-60         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Other);
-61         break;
-62     }
-63 
-64 
-65   }
+38                              {
+39     us[0]\&.fetchSample(lgData[0], 0); // acquire data at offset 0
+40     // get RGB values from buffer, multiply by 100 for convenience and allow it to be cast to int
+41     int r = (int) (lgData[0][0] * 100); // extract from buffer, cast to int
+42     int g = (int) (lgData[0][1] * 100); // extract from buffer, cast to int
+43     int b = (int) (lgData[0][2] * 100); // extract from buffer, cast to int
+44     cont\&.setRGB(r, g, b); // now take action depending on value
+45     switch (ColorCalibrator\&.getColor(r, g, b)) {
+46       case Orange:
+47         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Orange);
+48         break;
+49       case Yellow:
+50         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Yellow);
+51         break;
+52       case Green:
+53         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Green);
+54         break;
+55       case Blue:
+56         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Blue);
+57         break;
+58       default:
+59         ColorCalibrator\&.setFrequency(ColorCalibrator\&.Color\&.Other);
+60         break;
+61     }
+62   }
 .fi
 
 

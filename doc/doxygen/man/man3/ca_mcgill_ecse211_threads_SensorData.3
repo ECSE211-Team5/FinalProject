@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.SensorData" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.SensorData" 3 "Thu Nov 29 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -73,7 +73,7 @@ Definition at line 17 of file SensorData\&.java\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.SensorData ()\fC [protected]\fP"
-Default constructor\&. The constructor is private\&. A factory is used instead such that only one instance of this class is ever created\&. 
+This is the class constructor for the \fBSensorData\fP class\&. It cannot be instantiated externally\&. A factory is used instead such that only one instance of this class is ever created\&. 
 .PP
 Definition at line 44 of file SensorData\&.java\&.
 .PP
@@ -92,7 +92,7 @@ Definition at line 44 of file SensorData\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "double ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getA ()"
-(deprecated, not using) This method returns the currently stored angle value from the gyro sensor
+(deprecated) This method returns the currently stored angle value
 .PP
 \fBReturns:\fP
 .RS 4
@@ -101,110 +101,103 @@ The current angle value
 .PP
 
 .PP
-Definition at line 122 of file SensorData\&.java\&.
+Definition at line 117 of file SensorData\&.java\&.
 .PP
 .nf
-122                        {
-123     return angle;
-124   }
+117                        {
+118     return angle;
+119   }
 .fi
 .SS "double ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getD ()"
-Return the ultraSonic distance data\&.
+This method returns ultrasonic sensor distance data\&.
 .PP
 \fBReturns:\fP
 .RS 4
-the sensor data\&. 
+The distance detected by an ultrasonic sensor\&. 
 .RE
 .PP
 
 .PP
-Definition at line 82 of file SensorData\&.java\&.
+Definition at line 79 of file SensorData\&.java\&.
 .PP
 .nf
-82                        {
-83     return distance;
-84   }
+79                        {
+80     return distance;
+81   }
 .fi
 .SS "double [] ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getL ()"
-get the light value data from the two light sensors (protected by lightLock)
+This thread safe method gets light data from two light sensors\&.
 .PP
 \fBReturns:\fP
 .RS 4
-: data from light sensor 
+An array of light sensor data 
 .RE
 .PP
 
 .PP
-Definition at line 91 of file SensorData\&.java\&.
+Definition at line 88 of file SensorData\&.java\&.
 .PP
 .nf
-91                          {
-92     // lock the lock for light sensor value
-93     lightLock\&.lock();
-94     try {
-95       return lights\&.clone();
-96     } finally {
-97       lightLock\&.unlock();
-98     }
-99 
-100   }
+88                          {
+89     // lock the lock for light sensor value
+90     lightLock\&.lock();
+91     try {
+92       return lights\&.clone();
+93     } finally {
+94       lightLock\&.unlock();
+95     }
+96   }
 .fi
 .SS "int [] ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getRGB ()"
-get the rgb data for light sensor (protected by rgb lock)
+This thread safe method gets rgb data from a light sensor
 .PP
 \fBReturns:\fP
 .RS 4
-: rgb data 
+An array of rgb data 
 .RE
 .PP
 
 .PP
-Definition at line 107 of file SensorData\&.java\&.
+Definition at line 103 of file SensorData\&.java\&.
 .PP
 .nf
-107                         {
-108     rgbLock\&.lock();
-109     try {
-110       return rgb\&.clone();
-111     } finally {
-112       rgbLock\&.unlock();
-113     }
-114   }
+103                         {
+104     rgbLock\&.lock();
+105     try {
+106       return rgb\&.clone();
+107     } finally {
+108       rgbLock\&.unlock();
+109     }
+110   }
 .fi
 .SS "static synchronized \fBSensorData\fP ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.getSensorData () throws \fBOdometerExceptions\fP\fC [static]\fP"
-OdometerData factory\&. Returns an OdometerData instance and makes sure that only one instance is ever created\&. If the user tries to instantiate multiple objects, the method throws a MultipleOdometerDataException\&.
+This method returns an \fBSensorData\fP instance and makes sure that only one instance is ever created\&.
 .PP
 \fBReturns:\fP
 .RS 4
-An OdometerData object 
-.RE
-.PP
-\fBExceptions:\fP
-.RS 4
-\fIOdometerExceptions\fP 
+A \fBSensorData\fP object 
 .RE
 .PP
 
 .PP
-Definition at line 63 of file SensorData\&.java\&.
+Definition at line 61 of file SensorData\&.java\&.
 .PP
 .nf
-63                                                                                   {
-64     if (sensorData != null) { // Return existing object
-65       return sensorData;
-66     } else if (numberOfIntances < MAX_INSTANCES) { // create object and
-67                                                    // return it
-68       sensorData = new SensorData();
-69       numberOfIntances += 1;
-70       return sensorData;
-71     } else {
-72       throw new OdometerExceptions("Only one intance of the SensorData can be created\&.");
-73     }
-74 
-75   }
+61                                                                                   {
+62     if (sensorData != null) { // Return existing object
+63       return sensorData;
+64     } else if (numberOfIntances < MAX_INSTANCES) { // create object and
+65                                                    // return it
+66       sensorData = new SensorData();
+67       numberOfIntances += 1;
+68       return sensorData;
+69     } else {
+70       throw new OdometerExceptions("Only one intance of the SensorData can be created\&.");
+71     }
+72   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setA (double a)"
-(deprecated not usings) This method overwrites the angle value\&.
+(deprecated) This method overwrites the last angle value\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -213,15 +206,15 @@ Definition at line 63 of file SensorData\&.java\&.
 .PP
 
 .PP
-Definition at line 140 of file SensorData\&.java\&.
+Definition at line 135 of file SensorData\&.java\&.
 .PP
 .nf
-140                              {
-141     this\&.angle = a;
-142   }
+135                              {
+136     this\&.angle = a;
+137   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setD (double d)"
-This method overwrites the distance value\&. Use for ultrasonic sensor\&.
+This method overwrites the last distance value\&. Used for ultrasonic sensor data
 .PP
 \fBParameters:\fP
 .RS 4
@@ -230,63 +223,63 @@ This method overwrites the distance value\&. Use for ultrasonic sensor\&.
 .PP
 
 .PP
-Definition at line 131 of file SensorData\&.java\&.
+Definition at line 126 of file SensorData\&.java\&.
 .PP
 .nf
-131                              {
-132     this\&.distance = d;
-133   }
+126                              {
+127     this\&.distance = d;
+128   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setL (double l[])"
-This method overwrites the light value\&. (protected by light lock)
+This thread safe method overwrites the last light value
 .PP
 \fBParameters:\fP
 .RS 4
-\fIl\fP The value to overwrite the current light value with 
+\fIl\fP The value to overwrite the last light value with 
 .RE
 .PP
 
 .PP
-Definition at line 167 of file SensorData\&.java\&.
+Definition at line 162 of file SensorData\&.java\&.
 .PP
 .nf
-167                                {
-168     try {
-169       lightLock\&.lock();
-170       this\&.lights[0] = l[0];
-171       this\&.lights[1] = l[1];
-172     } finally {
-173       lightLock\&.unlock();
-174     }
-175   }
+162                                {
+163     try {
+164       lightLock\&.lock();
+165       this\&.lights[0] = l[0];
+166       this\&.lights[1] = l[1];
+167     } finally {
+168       lightLock\&.unlock();
+169     }
+170   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.SensorData\&.setRGB (int r, int g, int b)"
-set rgb data for color sensor (protected by rgb lock)
+This thread safe method stores rgb data from a color sensor
 .PP
 \fBParameters:\fP
 .RS 4
-\fIr\fP red value 
+\fIr\fP An integer that denotes the red value to store 
 .br
-\fIg\fP green value 
+\fIg\fP An integer that denotes the green value to store 
 .br
-\fIb\fP blue value 
+\fIb\fP An integer that denotes the blue value to store 
 .RE
 .PP
 
 .PP
-Definition at line 151 of file SensorData\&.java\&.
+Definition at line 146 of file SensorData\&.java\&.
 .PP
 .nf
-151                                           {
-152     try {
-153       rgbLock\&.lock();
-154       rgb[0] = r;
-155       rgb[1] = g;
-156       rgb[2] = b;
-157     } finally {
-158       rgbLock\&.unlock();
-159     }
-160   }
+146                                           {
+147     try {
+148       rgbLock\&.lock();
+149       rgb[0] = r;
+150       rgb[1] = g;
+151       rgb[2] = b;
+152     } finally {
+153       rgbLock\&.unlock();
+154     }
+155   }
 .fi
 
 

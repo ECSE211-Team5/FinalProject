@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.threads.ThreadControl" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.threads.ThreadControl" 3 "Thu Nov 29 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -61,7 +61,7 @@ Inherited by \fBca\&.mcgill\&.ecse211\&.threads\&.LightPoller\fP, and \fBca\&.mc
 .in -1c
 .SH "Detailed Description"
 .PP 
-This class for thread control with pause and restart functionality
+This class controls threads by providing the functionality to pause and restart them
 .PP
 \fBAuthor:\fP
 .RS 4
@@ -84,70 +84,70 @@ Definition at line 13 of file ThreadControl\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "synchronized boolean ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.isStarted ()"
-check if this poller thread is running
+This method checks if this thread has been previously started
 .PP
 \fBReturns:\fP
 .RS 4
-: true if the thread is running, false if the thread is paused 
+A boolean denoting true if the thread is running, false otherwise 
 .RE
 .PP
 
 .PP
-Definition at line 44 of file ThreadControl\&.java\&.
+Definition at line 43 of file ThreadControl\&.java\&.
 .PP
 .nf
-44                                           {
-45     return this\&.isStarted;
-46   }
+43                                           {
+44     return this\&.isStarted;
+45   }
 .fi
 .SS "synchronized void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.run ()"
-run method implemented from Runnable class, this run method implements the functionality to pause and restart the thread 
+This method implements the functionality to run a thread 
 .PP
-Definition at line 23 of file ThreadControl\&.java\&.
+Definition at line 22 of file ThreadControl\&.java\&.
 .PP
 .nf
-23                                  {
-24     try {
-25       while (true) {
-26         if (!isStarted) {
-27           // Sound\&.beepSequence();
-28           wait();
-29         } else {
-30           runMethod();
-31           wait(WAIT_TIME);
-32         }
-33       }
-34     } catch (InterruptedException e) {
-35       e\&.printStackTrace();
-36     }
-37   }
+22                                  {
+23     try {
+24       while (true) {
+25         if (!isStarted) {
+26           // Sound\&.beepSequence();
+27           wait();
+28         } else {
+29           runMethod();
+30           wait(WAIT_TIME);
+31         }
+32       }
+33     } catch (InterruptedException e) {
+34       e\&.printStackTrace();
+35     }
+36   }
 .fi
 .SS "abstract void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.runMethod ()\fC [abstract]\fP, \fC [protected]\fP"
 
 .SS "synchronized void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.setStart (boolean start)"
-start a paused thread or stop a runing thread
+This method starts a paused thread
 .PP
 \fBParameters:\fP
 .RS 4
-\fIstart\fP 
+\fIstart\fP A boolean to set the current thread status 
 .RE
 .PP
 
 .PP
-Definition at line 53 of file ThreadControl\&.java\&.
+Definition at line 52 of file ThreadControl\&.java\&.
 .PP
 .nf
-53                                                    {
-54     isStarted = start;
-55     notify();
-56   }
+52                                                    {
+53     isStarted = start;
+54     notify();
+55   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.setWait (boolean shouldWait)"
-set if other thread shouldWait for this thread
+This method sets the variable shouldWait for this thread
 .PP
 \fBParameters:\fP
 .RS 4
-\fIshouldWait\fP 
+\fIshouldWait\fP A boolean variable to decide whether other threads should wait for this thread 
 .RE
 .PP
 
@@ -165,39 +165,39 @@ Definition at line 87 of file ThreadControl\&.java\&.
 94   }
 .fi
 .SS "boolean ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.shouldWait ()"
-get shouldWait for this thread
+This method returns the variable shouldWait
 .PP
 \fBReturns:\fP
 .RS 4
-: shouldWait 
+A boolean variable called shouldWait 
 .RE
 .PP
 
 .PP
-Definition at line 76 of file ThreadControl\&.java\&.
+Definition at line 75 of file ThreadControl\&.java\&.
 .PP
 .nf
-76                               {
-77     synchronized (lockObject) {
-78       return shouldWait;
-79     }
-80   }
+75                               {
+76     synchronized (lockObject) {
+77       return shouldWait;
+78     }
+79   }
 .fi
 .SS "void ca\&.mcgill\&.ecse211\&.threads\&.ThreadControl\&.waitForThisThread ()"
-wait for this thread until shouldWait is false 
+This method waits for this thread to finish 
 .PP
-Definition at line 61 of file ThreadControl\&.java\&.
+Definition at line 60 of file ThreadControl\&.java\&.
 .PP
 .nf
-61                                   {
-62     synchronized (lockObject) {
-63       try {
-64         lockObject\&.wait();
-65       } catch (InterruptedException e) {
-66         e\&.printStackTrace();
-67       }
-68     }
-69   }
+60                                   {
+61     synchronized (lockObject) {
+62       try {
+63         lockObject\&.wait();
+64       } catch (InterruptedException e) {
+65         e\&.printStackTrace();
+66       }
+67     }
+68   }
 .fi
 .SH "Member Data Documentation"
 .PP 

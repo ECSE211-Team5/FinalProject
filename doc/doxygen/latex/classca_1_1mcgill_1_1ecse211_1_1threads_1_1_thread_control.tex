@@ -55,7 +55,7 @@ static int \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control
 
 
 \subsection{Detailed Description}
-This class for thread control with pause and restart functionality
+This class controls threads by providing the functionality to pause and restart them
 
 \begin{DoxyAuthor}{Author}
 Caspar Cedro 
@@ -83,20 +83,20 @@ Definition at line 13 of file Thread\+Control.\+java.
 \subsubsection{\texorpdfstring{is\+Started()}{isStarted()}}
 {\footnotesize\ttfamily synchronized boolean ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+is\+Started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-check if this poller thread is running
+This method checks if this thread has been previously started
 
 \begin{DoxyReturn}{Returns}
-\+: true if the thread is running, false if the thread is paused 
+A boolean denoting true if the thread is running, false otherwise 
 \end{DoxyReturn}
 
 
-Definition at line 44 of file Thread\+Control.\+java.
+Definition at line 43 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-44                                           \{
-45     \textcolor{keywordflow}{return} this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted};
-46   \}
+43                                           \{
+44     \textcolor{keywordflow}{return} this.\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted};
+45   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -111,27 +111,27 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{run()}{run()}}
 {\footnotesize\ttfamily synchronized void ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-run method implemented from Runnable class, this run method implements the functionality to pause and restart the thread 
+This method implements the functionality to run a thread 
 
-Definition at line 23 of file Thread\+Control.\+java.
+Definition at line 22 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-23                                  \{
-24     \textcolor{keywordflow}{try} \{
-25       \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
-26         \textcolor{keywordflow}{if} (!\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted}) \{
-27           \textcolor{comment}{// Sound.beepSequence();}
-28           wait();
-29         \} \textcolor{keywordflow}{else} \{
-30           \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a2959c54bdb6c62c9d5569cdf3ccf2418}{runMethod}();
-31           wait(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}{WAIT\_TIME});
-32         \}
-33       \}
-34     \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-35       e.printStackTrace();
-36     \}
-37   \}
+22                                  \{
+23     \textcolor{keywordflow}{try} \{
+24       \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
+25         \textcolor{keywordflow}{if} (!\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted}) \{
+26           \textcolor{comment}{// Sound.beepSequence();}
+27           wait();
+28         \} \textcolor{keywordflow}{else} \{
+29           \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a2959c54bdb6c62c9d5569cdf3ccf2418}{runMethod}();
+30           wait(\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a395cfe1d73b3ef14da0830ed0a499f82}{WAIT\_TIME});
+31         \}
+32       \}
+33     \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+34       e.printStackTrace();
+35     \}
+36   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -159,23 +159,23 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{set\+Start()}{setStart()}}
 {\footnotesize\ttfamily synchronized void ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+set\+Start (\begin{DoxyParamCaption}\item[{boolean}]{start }\end{DoxyParamCaption})}
 
-start a paused thread or stop a runing thread
+This method starts a paused thread
 
 
 \begin{DoxyParams}{Parameters}
-{\em start} & \\
+{\em start} & A boolean to set the current thread status \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 53 of file Thread\+Control.\+java.
+Definition at line 52 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-53                                                    \{
-54     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted} = start;
-55     notify();
-56   \}
+52                                                    \{
+53     \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a92f4933511db42476e39956246bcf2fe}{isStarted} = start;
+54     notify();
+55   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -190,11 +190,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{set\+Wait()}{setWait()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+set\+Wait (\begin{DoxyParamCaption}\item[{boolean}]{should\+Wait }\end{DoxyParamCaption})}
 
-set if other thread should\+Wait for this thread
+This method sets the variable should\+Wait for this thread
 
 
 \begin{DoxyParams}{Parameters}
-{\em should\+Wait} & \\
+{\em should\+Wait} & A boolean variable to decide whether other threads should wait for this thread \\
 \hline
 \end{DoxyParams}
 
@@ -225,22 +225,22 @@ Here is the call graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{should\+Wait()}{shouldWait()}}
 {\footnotesize\ttfamily boolean ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+should\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-get should\+Wait for this thread
+This method returns the variable should\+Wait
 
 \begin{DoxyReturn}{Returns}
-\+: should\+Wait 
+A boolean variable called should\+Wait 
 \end{DoxyReturn}
 
 
-Definition at line 76 of file Thread\+Control.\+java.
+Definition at line 75 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-76                               \{
-77     \textcolor{keyword}{synchronized} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
-78       \textcolor{keywordflow}{return} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait};
-79     \}
-80   \}
+75                               \{
+76     \textcolor{keyword}{synchronized} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
+77       \textcolor{keywordflow}{return} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_a9c3896500e86e402b8019e1be6500621}{shouldWait};
+78     \}
+79   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -255,21 +255,21 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{wait\+For\+This\+Thread()}{waitForThisThread()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Thread\+Control.\+wait\+For\+This\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-wait for this thread until should\+Wait is false 
+This method waits for this thread to finish 
 
-Definition at line 61 of file Thread\+Control.\+java.
+Definition at line 60 of file Thread\+Control.\+java.
 
 
 \begin{DoxyCode}
-61                                   \{
-62     \textcolor{keyword}{synchronized} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
-63       \textcolor{keywordflow}{try} \{
-64         \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}.wait();
-65       \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
-66         e.printStackTrace();
-67       \}
-68     \}
-69   \}
+60                                   \{
+61     \textcolor{keyword}{synchronized} (\hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}) \{
+62       \textcolor{keywordflow}{try} \{
+63         \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_ab20c44ff2dafab8981c42fa8bf634dfc}{lockObject}.wait();
+64       \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+65         e.printStackTrace();
+66       \}
+67     \}
+68   \}
 \end{DoxyCode}
 
 

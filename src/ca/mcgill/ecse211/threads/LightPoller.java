@@ -25,12 +25,9 @@ public class LightPoller extends ThreadControl {
    * This constructor creates an instance of the LightPoller class to provide distance data from an
    * light sensor to our robot.
    * 
-   * @param us a SampleProvider class instance that helps us to store an array of ultrasonic sensor
-   *        data.
-   * @param lgData an array of distance data to be used by our Wall Follower's
-   *        UltrasonicControllers.
-   * @param cont a BangBangController or PController instance that has accumulated distance data
-   *        stored in usData passed to it.
+   * @param us A SampleProvider class instance that helps us to store an array of light sensor data.
+   * @param lgData An array to store light sensor data.
+   * @param cont A SensorData object instance to further store sensor data.
    * @throws OdometerExceptions
    */
   public LightPoller(SampleProvider[] us, float[][] lgData, SensorData cont)
@@ -45,7 +42,7 @@ public class LightPoller extends ThreadControl {
   }
 
   /**
-   * the run method to be performed in run method, collect light data
+   * This method reads light sensor data
    */
   protected void runMethod() {
     double l[] = new double[2];

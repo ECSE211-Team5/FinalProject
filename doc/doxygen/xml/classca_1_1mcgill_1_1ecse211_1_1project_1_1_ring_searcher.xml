@@ -174,19 +174,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This class provides method to check if there is a ring and if the ring is the color we want</para><para><parameterlist kind="param"><parameteritem>
+<para>This <ref refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher" kindref="compound">RingSearcher</ref> class constructor checks if there is a ring to collect and records its color</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>storagenMotor</parametername>
+<parametername>sensorMotor</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the motor to move the storage of the robot </para></parameterdescription>
+<para>An EV3LargeRegulatedMotor object instance that controls a sensor motor </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>rodMotor</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the motor for the rod to collect the ring </para></parameterdescription>
+<para>An EV3LargeRegulatedMotor object instance that controls the rod with a light sensor for ring color detection </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <parameterlist kind="exception"><parameteritem>
@@ -200,9 +200,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="42" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="42" bodyend="54"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="43" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="43" bodyend="55"/>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_1a99171f11e34dea918fa9dd069d721439" compoundref="_odometer_8java" startline="69" endline="78">ca.mcgill.ecse211.odometer.Odometer.getOdometer</references>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" compoundref="_sensor_data_8java" startline="63" endline="75">ca.mcgill.ecse211.threads.SensorData.getSensorData</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a8260aba53b4474ca1275e4ce26157977" compoundref="_sensor_data_8java" startline="61" endline="72">ca.mcgill.ecse211.threads.SensorData.getSensorData</references>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a6f66df0810034dfb407d792ded013a8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -216,11 +216,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This method searches for the ring and identify its color based using the rod, It will beep based on the color of the ring </para>        </detaileddescription>
+<para>This method searches for a ring and rotates the sensorMotor rod</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An integer to rotate the motor for the sensor to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="61" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="61" bodyend="64"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="540" endline="611">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="62" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="62" bodyend="64"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="537" endline="607">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a997bf874ae5577c48719254677830fb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -230,13 +238,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>This method causes our robot to beep a certain number of times to identify what ring it is picking up </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="66" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="66" bodyend="100"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="70" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="70" bodyend="103"/>
         <references refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a6584b6534b14ba43dc1444084a925a20" compoundref="_game_8java" startline="34">ca.mcgill.ecse211.project.Game.INSTANCE</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_color_calibrator_1a3d65927aaa2041f933dbdc19c3d2a412" compoundref="_color_calibrator_8java" startline="94" endline="108">ca.mcgill.ecse211.project.ColorCalibrator.getMostFrequenct</references>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="540" endline="611">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="537" endline="607">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1abf31c36cadb144a4651b11f7fa37120a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -246,10 +254,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This method put the sensor to search rotation to be ready for the searching </para>        </detaileddescription>
+<para>This method prepares our robot to search for a ring </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="105" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="105" bodyend="107"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="108" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="108" bodyend="110"/>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="245" endline="247">ca.mcgill.ecse211.project.Game.readData</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a6edfdbd31d9848ff885e2e4caa3b46c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -260,11 +268,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>This method indicates that our robot is done searching for a ring </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="109" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="109" bodyend="111"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="540" endline="611">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="115" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="115" bodyend="117"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="537" endline="607">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ad73c50b29163d91292de418101cce21e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -274,10 +282,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This method put the sensor back </para>        </detaileddescription>
+<para>This method retracts our ring searching rod </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="116" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="116" bodyend="118"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="122" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="122" bodyend="124"/>
         <referencedby refid="enumca_1_1mcgill_1_1ecse211_1_1project_1_1_game_1a032b53e9b16b9d470b461de4a311a698" compoundref="_game_8java" startline="245" endline="247">ca.mcgill.ecse211.project.Game.readData</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a3de30b85b1445157d7f8572992de7651" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -288,11 +296,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>This method rotate the rod to a suitable position for retrieve the ring </para>        </detaileddescription>
+<para>This method rotates the rod to a suitable position to allow a ring to be picked up </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="123" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="123" bodyend="125"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="540" endline="611">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="129" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="129" bodyend="131"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="537" endline="607">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1afca3a0c746b07abb88881d926f4fe71f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -302,11 +310,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>this method retrieve the searched ring </para>        </detaileddescription>
+<para>This method rotates the rod to be ready to retrieve a ring </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="130" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="130" bodyend="132"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="540" endline="611">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="136" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="136" bodyend="138"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="537" endline="607">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a0b96c45f7df3eb557496acab33930cd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -316,11 +324,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>This method rotates the rod to a safe position </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="134" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="134" bodyend="136"/>
-        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="540" endline="611">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="143" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="143" bodyend="145"/>
+        <referencedby refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_navigation_1a1a808e665b8dd5b8e79b0580724d239c" compoundref="_navigation_8java" startline="537" endline="607">ca.mcgill.ecse211.project.Navigation.searchRingSet</referencedby>
       </memberdef>
       <memberdef kind="function" id="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a8b0ea0bf4cd07b6c8a090c3e9bc8eb04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -330,10 +338,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Rotate the rod back to the original position </para>        </detaileddescription>
+<para>This method rotates the rod back to its original position </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="141" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="141" bodyend="143"/>
+        <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="150" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="150" bodyend="152"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -346,7 +354,7 @@
 <simplesect kind="author"><para>Susan Matuszewski </para></simplesect>
 <simplesect kind="author"><para>Kamy Moussavi Kafi </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="21" bodyend="144"/>
+    <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" line="21" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/project/RingSearcher.java" bodystart="21" bodyend="153"/>
     <listofallmembers>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1a3ad1b3e1d1945e7c3543eeb9a9463545" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::RingSearcher</scope><name>ACCELERATION</name></member>
       <member refid="classca_1_1mcgill_1_1ecse211_1_1project_1_1_ring_searcher_1ab990f1ed46e59183cf8593288efd821f" prot="private" virt="non-virtual"><scope>ca::mcgill::ecse211::project::RingSearcher</scope><name>data</name></member>

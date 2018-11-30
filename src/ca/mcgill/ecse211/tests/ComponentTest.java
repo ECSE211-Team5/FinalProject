@@ -25,14 +25,17 @@ import lejos.hardware.Button;
 public enum ComponentTest {
   INSTANCE;
 
+  /**
+   * This enumeration stores the possible test types that can be tested on our robot
+   */
   public enum Type {
     Navigation, Localization, UltrasonicSensor, LightSensor, RingDetection
   }
 
   /**
-   * This method selects test for each individual components of the design
+   * This method executes a specific type of tests
    * 
-   * @param type
+   * @param type The type of tests to execute
    * @throws Exception
    */
   public static void runTest(Type testType) throws Exception {
@@ -63,7 +66,7 @@ public enum ComponentTest {
   }
 
   /**
-   * Test for Navigation
+   * This method runs Navigation tests
    * 
    * @throws OdometerExceptions
    */
@@ -81,6 +84,11 @@ public enum ComponentTest {
     nav.travelToWithCorrection(0, 0, false);
   }
 
+  /**
+   * This method runs Tunnel tests
+   * 
+   * @throws Exception
+   */
   public static void tunnelTest() throws Exception {
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
     GameUtil.searchingFinder =
@@ -92,9 +100,9 @@ public enum ComponentTest {
   }
 
   /**
-   * Test for localizationTest
+   * This method runs Localization tests
    * 
-   * @throws OdometerExceptions
+   * @throws Exception
    */
   public static void localizationTest() throws OdometerExceptions {
     Navigation navigation = new Navigation(Game.leftMotor, Game.rightMotor);
@@ -105,23 +113,27 @@ public enum ComponentTest {
   }
 
   /**
-   * Test for UltrasonicSensor
+   * This method runs UltrasonicSensor tests
+   * 
+   * @throws Exception
    */
   public static void ultrasonicSensorTest() {
 
   }
 
   /**
-   * Test for lightSensor
+   * This method runs LightSensor tests
+   * 
+   * @throws Exception
    */
   public static void lightSensorTest() {
 
   }
 
   /**
-   * Test for ring detection
+   * This method runs RingDetection tests
    * 
-   * @throws OdometerExceptions
+   * @throws Exception
    */
   public static void ringMotorTest() throws OdometerExceptions {
     Game.INSTANCE.usPoller.setStart(false);
@@ -144,6 +156,11 @@ public enum ComponentTest {
     }
   }
 
+  /**
+   * This method tests black line detection
+   * 
+   * @throws Exception
+   */
   public static void blackLineTest() throws OdometerExceptions {
     Navigation navi = new Navigation(Game.leftMotor, Game.rightMotor);
     GameUtil.searchingFinder =
@@ -161,8 +178,12 @@ public enum ComponentTest {
     }
   }
 
+  /**
+   * This method tests that music can be played
+   * 
+   * @throws Exception
+   */
   public static void musicTest() {
     GameUtil.playMusic();
   }
-
 }

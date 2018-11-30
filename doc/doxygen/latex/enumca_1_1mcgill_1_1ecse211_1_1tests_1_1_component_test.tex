@@ -57,28 +57,35 @@ Definition at line 25 of file Component\+Test.\+java.
 \subsubsection{\texorpdfstring{black\+Line\+Test()}{blackLineTest()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+black\+Line\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
 
+This method tests black line detection
 
 
-Definition at line 147 of file Component\+Test.\+java.
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 164 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-147                                                                \{
-148     Navigation navi = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-149     GameUtil.searchingFinder =
-150         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
-151     \textcolor{keywordtype}{int}[] arr1 = \{0, 0\};
-152     \textcolor{keywordtype}{int}[] arr2 = \{0, 0\};
-153     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(arr1, arr2);
-154     \textcolor{keywordtype}{int} count = 0;
-155     \textcolor{keywordflow}{while} (count < 85) \{
-156       navi.moveOneTileWithCorrection(0);
-157       count++;
-158       \textcolor{keywordflow}{if} (count % 7 == 0) \{
-159         navi.turn(90);
-160       \}
-161     \}
-162   \}
+164                                                                \{
+165     Navigation navi = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+166     GameUtil.searchingFinder =
+167         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
+168     \textcolor{keywordtype}{int}[] arr1 = \{0, 0\};
+169     \textcolor{keywordtype}{int}[] arr2 = \{0, 0\};
+170     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(arr1, arr2);
+171     \textcolor{keywordtype}{int} count = 0;
+172     \textcolor{keywordflow}{while} (count < 85) \{
+173       navi.moveOneTileWithCorrection(0);
+174       count++;
+175       \textcolor{keywordflow}{if} (count % 7 == 0) \{
+176         navi.turn(90);
+177       \}
+178     \}
+179   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -93,15 +100,22 @@ Here is the call graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{light\+Sensor\+Test()}{lightSensorTest()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+light\+Sensor\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Test for light\+Sensor 
+This method runs Light\+Sensor tests
 
-Definition at line 117 of file Component\+Test.\+java.
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 129 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-117                                        \{
-118 
-119   \}
+129                                        \{
+130 
+131   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -116,37 +130,35 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{localization\+Test()}{localizationTest()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+localization\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
 
-Test for localization\+Test
+This method runs Localization tests
 
 
 \begin{DoxyExceptions}{Exceptions}
-{\em Odometer\+Exceptions} & \\
+{\em Exception} & \\
 \hline
 \end{DoxyExceptions}
 
 
-Definition at line 99 of file Component\+Test.\+java.
+Definition at line 107 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-99                                                                   \{
-100     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-101     UltrasonicLocalizer us = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);
-102     LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
-103     us.localize(Button.ID\_LEFT);
-104     lgLoc.localize(GameParameters.SC);
-105   \}
+107                                                                   \{
+108     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+109     UltrasonicLocalizer us = \textcolor{keyword}{new} UltrasonicLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+110     LightLocalizer lgLoc = \textcolor{keyword}{new} LightLocalizer(navigation, Game.leftMotor, Game.rightMotor);
+111     us.localize(Button.ID\_LEFT);
+112     lgLoc.localize(GameParameters.SC);
+113   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_ad11712dd74c5c64e84cd71186a59a087_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -159,18 +171,24 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{music\+Test()}{musicTest()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+music\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+This method tests that music can be played
 
 
-Definition at line 164 of file Component\+Test.\+java.
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 186 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-164                                  \{
-165     GameUtil.playMusic();
-166   \}
+186                                  \{
+187     GameUtil.playMusic();
+188   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,7 +201,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{navigation\+Test()}{navigationTest()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+navigation\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
 
-Test for Navigation
+This method runs Navigation tests
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -192,23 +210,23 @@ Test for Navigation
 \end{DoxyExceptions}
 
 
-Definition at line 70 of file Component\+Test.\+java.
+Definition at line 73 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-70                                                                 \{
-71     Navigation nav = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-72     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
-73     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
-74     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
-75     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
-76     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
-77     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
-78     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
-79     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
-80     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
-81     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
-82   \}
+73                                                                 \{
+74     Navigation nav = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+75     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+76     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+77     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+78     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+79     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+80     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+81     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+82     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+83     nav.travelToWithCorrection(4, 2, \textcolor{keyword}{false});
+84     nav.travelToWithCorrection(0, 0, \textcolor{keyword}{false});
+85   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -217,8 +235,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_aa40592bb550b3526402faddbc0d890c7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -231,50 +248,48 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{ring\+Motor\+Test()}{ringMotorTest()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+ring\+Motor\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
 
-Test for ring detection
+This method runs Ring\+Detection tests
 
 
 \begin{DoxyExceptions}{Exceptions}
-{\em Odometer\+Exceptions} & \\
+{\em Exception} & \\
 \hline
 \end{DoxyExceptions}
 
 
-Definition at line 126 of file Component\+Test.\+java.
+Definition at line 138 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-126                                                                \{
-127     Game.INSTANCE.usPoller.setStart(\textcolor{keyword}{false});
-128     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(Game.sensorMotor, Game.rodMotor);
-129     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-130     GameUtil.searchingFinder =
-131         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
-132     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
-133     Odometer.getOdometer().setXYT(1, 1, 0);
-134     \textcolor{keywordtype}{int}[] tree = \{2, 2\};
-135     \textcolor{keywordtype}{int}[][] other = \{\{2, 1\}, \{3, 2\}, \{2, 3\}, \{1, 2\}\};
-136     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++) \{
-137       navigation.travelToWithCorrection(other[i][0], other[i][1], \textcolor{keyword}{false});
-138       navigation.turn(-90);
-139       \textcolor{keywordflow}{if} (i != 3) \{
-140         navigation.searchRingSet(searcher, \textcolor{keyword}{true}, \textcolor{keyword}{true});
-141       \} \textcolor{keywordflow}{else} \{
-142         navigation.searchRingSet(searcher, \textcolor{keyword}{true}, \textcolor{keyword}{false});
-143       \}
-144     \}
-145   \}
+138                                                                \{
+139     Game.INSTANCE.usPoller.setStart(\textcolor{keyword}{false});
+140     \textcolor{keyword}{final} RingSearcher searcher = \textcolor{keyword}{new} RingSearcher(Game.sensorMotor, Game.rodMotor);
+141     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+142     GameUtil.searchingFinder =
+143         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
+144     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
+145     Odometer.getOdometer().setXYT(1, 1, 0);
+146     \textcolor{keywordtype}{int}[] tree = \{2, 2\};
+147     \textcolor{keywordtype}{int}[][] other = \{\{2, 1\}, \{3, 2\}, \{2, 3\}, \{1, 2\}\};
+148     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 4; i++) \{
+149       navigation.travelToWithCorrection(other[i][0], other[i][1], \textcolor{keyword}{false});
+150       navigation.turn(-90);
+151       \textcolor{keywordflow}{if} (i != 3) \{
+152         navigation.searchRingSet(searcher, \textcolor{keyword}{true}, \textcolor{keyword}{true});
+153       \} \textcolor{keywordflow}{else} \{
+154         navigation.searchRingSet(searcher, \textcolor{keyword}{true}, \textcolor{keyword}{false});
+155       \}
+156     \}
+157   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_a1ecca45b47067d825683cf46dcf22b62_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -287,11 +302,11 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{run\+Test()}{runTest()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+run\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{enumca_1_1mcgill_1_1ecse211_1_1tests_1_1_component_test_1_1_type}{Type}}]{test\+Type }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
-This method selects test for each individual components of the design
+This method executes a specific type of tests
 
 
 \begin{DoxyParams}{Parameters}
-{\em type} & \\
+{\em type} & The type of tests to execute \\
 \hline
 \end{DoxyParams}
 
@@ -301,39 +316,38 @@ This method selects test for each individual components of the design
 \end{DoxyExceptions}
 
 
-Definition at line 38 of file Component\+Test.\+java.
+Definition at line 41 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-38                                                              \{
-39     \textcolor{keywordflow}{try} \{
-40       \textcolor{keywordflow}{switch} (testType) \{
-41         \textcolor{keywordflow}{case} Navigation:
-42           ComponentTest.navigationTest();
-43           \textcolor{keywordflow}{break};
-44         \textcolor{keywordflow}{case} Localization:
-45           ComponentTest.localizationTest();
+41                                                              \{
+42     \textcolor{keywordflow}{try} \{
+43       \textcolor{keywordflow}{switch} (testType) \{
+44         \textcolor{keywordflow}{case} Navigation:
+45           ComponentTest.navigationTest();
 46           \textcolor{keywordflow}{break};
-47         \textcolor{keywordflow}{case} UltrasonicSensor:
-48           ComponentTest.ultrasonicSensorTest();
+47         \textcolor{keywordflow}{case} Localization:
+48           ComponentTest.localizationTest();
 49           \textcolor{keywordflow}{break};
-50         \textcolor{keywordflow}{case} LightSensor:
-51           ComponentTest.lightSensorTest();
+50         \textcolor{keywordflow}{case} UltrasonicSensor:
+51           ComponentTest.ultrasonicSensorTest();
 52           \textcolor{keywordflow}{break};
-53         \textcolor{keywordflow}{case} RingDetection:
-54           ComponentTest.ringMotorTest();
+53         \textcolor{keywordflow}{case} LightSensor:
+54           ComponentTest.lightSensorTest();
 55           \textcolor{keywordflow}{break};
-56         \textcolor{keywordflow}{default}:
-57           System.out.println(\textcolor{stringliteral}{"Invalid test type selected"});
+56         \textcolor{keywordflow}{case} RingDetection:
+57           ComponentTest.ringMotorTest();
 58           \textcolor{keywordflow}{break};
-59       \}
-60     \} \textcolor{keywordflow}{catch} (Exception e) \{
-61       \textcolor{keywordflow}{throw} e;
-62     \}
-63   \}
+59         \textcolor{keywordflow}{default}:
+60           System.out.println(\textcolor{stringliteral}{"Invalid test type selected"});
+61           \textcolor{keywordflow}{break};
+62       \}
+63     \} \textcolor{keywordflow}{catch} (Exception e) \{
+64       \textcolor{keywordflow}{throw} e;
+65     \}
+66   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -346,24 +360,30 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{tunnel\+Test()}{tunnelTest()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+tunnel\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+This method runs Tunnel tests
 
 
-Definition at line 84 of file Component\+Test.\+java.
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 92 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-84                                                    \{
-85     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
-86     GameUtil.searchingFinder =
-87         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
-88     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
-89     Odometer.getOdometer().setXYT(1, 7, 90);
-90     navigation.goThroughTunnel();
-91     navigation.goThroughTunnel();
-92   \}
+92                                                    \{
+93     Navigation navigation = \textcolor{keyword}{new} Navigation(Game.leftMotor, Game.rightMotor);
+94     GameUtil.searchingFinder =
+95         \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.Island\_LL, GameParameters.Island\_UR);
+96     GameUtil.startingFinder = \textcolor{keyword}{new} GameUtil.PathFinder(GameParameters.US\_LL, GameParameters.US\_UR);
+97     Odometer.getOdometer().setXYT(1, 7, 90);
+98     navigation.goThroughTunnel();
+99     navigation.goThroughTunnel();
+100   \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -376,18 +396,24 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{ultrasonic\+Sensor\+Test()}{ultrasonicSensorTest()}}
 {\footnotesize\ttfamily static void ca.\+mcgill.\+ecse211.\+tests.\+Component\+Test.\+ultrasonic\+Sensor\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Test for Ultrasonic\+Sensor 
+This method runs Ultrasonic\+Sensor tests
 
-Definition at line 110 of file Component\+Test.\+java.
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 120 of file Component\+Test.\+java.
 
 
 \begin{DoxyCode}
-110                                             \{
-111 
-112   \}
+120                                             \{
+121 
+122   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -20,8 +20,7 @@ public class RGBPoller extends LightPoller {
    * This constructor creates an instance of the RGBPoller class to provide color data from an light
    * sensor to our robot.
    * 
-   * @param us A SampleProvider class instance that helps us to store an array of ultrasonic sensor
-   *        data.
+   * @param us A SampleProvider class instance that helps us to store an array of light sensor data.
    * @param usData An array to store light data.
    * @param cont A SensorData object that is used to process color data.
    * @throws OdometerExceptions
@@ -33,7 +32,7 @@ public class RGBPoller extends LightPoller {
   }
 
   /**
-   * run method for the rgb poller polls and process the rgb data of rgb sensor
+   * This method reads rgb light sensor data and processes it
    */
   @Override
   protected void runMethod() {
@@ -60,7 +59,5 @@ public class RGBPoller extends LightPoller {
         ColorCalibrator.setFrequency(ColorCalibrator.Color.Other);
         break;
     }
-
-
   }
 }

@@ -1,4 +1,4 @@
-.TH "ca.mcgill.ecse211.project.GameUtil" 3 "Wed Nov 28 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
+.TH "ca.mcgill.ecse211.project.GameUtil" 3 "Thu Nov 29 2018" "Version 1.0" "ECSE211 - Fall 2018 - Final Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -91,164 +91,169 @@ Definition at line 22 of file GameUtil\&.java\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "static double [] ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.average (int [] p1, int [] p2)\fC [static]\fP"
-find the average of the two coordinates
+This method finds the mid point between two coordinate pairs
 .PP
 \fBParameters:\fP
 .RS 4
-\fIp1\fP 
+\fIp1\fP The first pair of coordinates 
 .br
-\fIp2\fP 
+\fIp2\fP The second pair of coordinates 
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
+An array with the mid point coordinates 
 .RE
 .PP
 
 .PP
-Definition at line 303 of file GameUtil\&.java\&.
+Definition at line 304 of file GameUtil\&.java\&.
 .PP
 .nf
-303                                                      {
-304     double[] result = new double[2];
-305     result[0] = (double) (p1[0] + p2[0]) / 2;
-306     result[1] = (double) (p1[1] + p2[1]) / 2;
-307     return result;
-308   }
+304                                                      {
+305     double[] result = new double[2];
+306     result[0] = (double) (p1[0] + p2[0]) / 2;
+307     result[1] = (double) (p1[1] + p2[1]) / 2;
+308     return result;
+309   }
 .fi
 .SS "static double ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.distanceFrom (int x, int y, double [] position)\fC [static]\fP"
-find the distance from the starting point to two points
+This method finds the distance from some starting coordinates to a target pair of coordinates
 .PP
 \fBParameters:\fP
 .RS 4
-\fIx\fP 
+\fIx\fP The target x coordinate 
 .br
-\fIy\fP 
+\fIy\fP The target y coordinate 
+.br
+\fIposition\fP The starting pair of coordinates 
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
+The distance from the starting position to the target coordinates 
 .RE
 .PP
 
 .PP
-Definition at line 317 of file GameUtil\&.java\&.
+Definition at line 319 of file GameUtil\&.java\&.
 .PP
 .nf
-317                                                                      {
-318     return (Math\&.pow(Math\&.round(position[0]) - x, 2) + Math\&.pow(Math\&.round(position[1]) - y, 2));
-319   }
+319                                                                      {
+320     return (Math\&.pow(Math\&.round(position[0]) - x, 2) + Math\&.pow(Math\&.round(position[1]) - y, 2));
+321   }
 .fi
 .SS "static int ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.findClosestPointToRobot (int points[][])\fC [static]\fP"
-find closest point from a set of points
+This method finds the closest point to our robot's current position from a set of points
 .PP
 \fBParameters:\fP
 .RS 4
-\fIpoints\fP a set of points 
+\fIpoints\fP A two dimensional array of points 
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
+An index that represents the closest point to our robot 
 .RE
 .PP
 
 .PP
-Definition at line 327 of file GameUtil\&.java\&.
+Definition at line 329 of file GameUtil\&.java\&.
 .PP
 .nf
-327                                                             {
-328     int minIndex = 0;
-329     double distance = Integer\&.MAX_VALUE;
-330 
-331     for (int i = 0; i < points\&.length; i++) {
-332       try {
-333         double[] point = Odometer\&.getOdometer()\&.getXYT();
-334         double thisDistance = distanceFrom(points[i][0], points[i][1], point);
-335         if (thisDistance < distance) {
-336           minIndex = i;
-337           distance = thisDistance;
-338         }
-339       } catch (OdometerExceptions e) {
-340         e\&.printStackTrace();
-341       }
-342     }
-343     return minIndex;
-344   }
+329                                                             {
+330     int minIndex = 0;
+331     double distance = Integer\&.MAX_VALUE;
+332 
+333     for (int i = 0; i < points\&.length; i++) {
+334       try {
+335         double[] point = Odometer\&.getOdometer()\&.getXYT();
+336         double thisDistance = distanceFrom(points[i][0], points[i][1], point);
+337         if (thisDistance < distance) {
+338           minIndex = i;
+339           distance = thisDistance;
+340         }
+341       } catch (OdometerExceptions e) {
+342         e\&.printStackTrace();
+343       }
+344     }
+345     return minIndex;
+346   }
 .fi
 .SS "static boolean ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.isIslandBoundary (int [] coor)\fC [static]\fP"
-Check if a given point is boundary
+This method checks if a given point is on an island boundary
 .PP
 \fBParameters:\fP
 .RS 4
-\fIcoor\fP the point to input 
+\fIcoor\fP An array with a pair of coordinates to check 
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-: whether the given point is on the boundary of an island 
+A boolean that represents whether the given point is on the boundary of an island 
 .RE
 .PP
 
 .PP
-Definition at line 352 of file GameUtil\&.java\&.
+Definition at line 354 of file GameUtil\&.java\&.
 .PP
 .nf
-352                                                      {
-353     int x = coor[0];
-354     int y = coor[1];
-355     boolean onLY = x == GameParameters\&.Island_LL[0]
-356         && (y >= GameParameters\&.Island_LL[1] && y <= GameParameters\&.Island_UR[1]);
-357     boolean onRY = x == GameParameters\&.Island_UR[0]
+354                                                      {
+355     int x = coor[0];
+356     int y = coor[1];
+357     boolean onLY = x == GameParameters\&.Island_LL[0]
 358         && (y >= GameParameters\&.Island_LL[1] && y <= GameParameters\&.Island_UR[1]);
-359     boolean onLX = y == GameParameters\&.Island_LL[1]
-360         && (x >= GameParameters\&.Island_LL[0] && x <= GameParameters\&.Island_UR[0]);
-361     boolean onUX = y == GameParameters\&.Island_UR[1]
+359     boolean onRY = x == GameParameters\&.Island_UR[0]
+360         && (y >= GameParameters\&.Island_LL[1] && y <= GameParameters\&.Island_UR[1]);
+361     boolean onLX = y == GameParameters\&.Island_LL[1]
 362         && (x >= GameParameters\&.Island_LL[0] && x <= GameParameters\&.Island_UR[0]);
-363 
-364     return onLY || onRY || onLX || onUX;
-365   }
+363     boolean onUX = y == GameParameters\&.Island_UR[1]
+364         && (x >= GameParameters\&.Island_LL[0] && x <= GameParameters\&.Island_UR[0]);
+365 
+366     return onLY || onRY || onLX || onUX;
+367   }
 .fi
 .SS "static boolean ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.isSafe (int [] coor)\fC [static]\fP"
-check if one coordinate is safe based on (it is not a wall, tree or inside a tunnel)
+This method checks if a coordinate pair is safe to travel to (i\&.e\&. it is not a wall, tree or inside a tunnel)
 .PP
 \fBParameters:\fP
 .RS 4
-\fIcoor\fP coordinate array 
+\fIcoor\fP An array with a pair of coordinates 
 .RE
 .PP
 \fBReturns:\fP
 .RS 4
-: true if safe, false otherwise 
+A boolean that is true if safe, false otherwise 
 .RE
 .PP
 
 .PP
-Definition at line 282 of file GameUtil\&.java\&.
+Definition at line 283 of file GameUtil\&.java\&.
 .PP
 .nf
-282                                            {
-283     int x = coor[0];
-284     int y = coor[1];
-285     boolean inTunnel = x >= GameParameters\&.TN_LL[0] && x <= GameParameters\&.TN_UR[0]
-286         && y >= GameParameters\&.TN_LL[1] && y <= GameParameters\&.TN_UR[1];
-287     boolean isTree = x == GameParameters\&.TREE_US[0] && y == GameParameters\&.TREE_US[1];
-288     boolean outBound =
-289         x <= 0 || x >= GameParameters\&.Grid_UR[0] || y <= 0 || y >= GameParameters\&.Grid_UR[1];
-290     if (inTunnel || isTree || outBound) {
-291       return false;
-292     }
-293     return true;
-294   }
+283                                            {
+284     int x = coor[0];
+285     int y = coor[1];
+286     boolean inTunnel = x >= GameParameters\&.TN_LL[0] && x <= GameParameters\&.TN_UR[0]
+287         && y >= GameParameters\&.TN_LL[1] && y <= GameParameters\&.TN_UR[1];
+288     boolean isTree = x == GameParameters\&.TREE_US[0] && y == GameParameters\&.TREE_US[1];
+289     boolean outBound =
+290         x <= 0 || x >= GameParameters\&.Grid_UR[0] || y <= 0 || y >= GameParameters\&.Grid_UR[1];
+291     if (inTunnel || isTree || outBound) {
+292       return false;
+293     }
+294     return true;
+295   }
 .fi
 .SS "static void ca\&.mcgill\&.ecse211\&.project\&.GameUtil\&.playMusic ()\fC [static]\fP"
-
+This method plays music 
 .PP
-Definition at line 367 of file GameUtil\&.java\&.
+Definition at line 372 of file GameUtil\&.java\&.
 .PP
 .nf
-367                                  {
-368     Sound\&.playSample(new File("Pen\&.wav"), 100);
-369   }
+372                                  {
+373     Sound\&.playSample(new File("Pen\&.wav"), 100);
+374   }
 .fi
 .SH "Member Data Documentation"
 .PP 

@@ -60,7 +60,7 @@ Definition at line 17 of file Sensor\+Data.\+java.
 \subsubsection{\texorpdfstring{Sensor\+Data()}{SensorData()}}
 {\footnotesize\ttfamily ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+Sensor\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-Default constructor. The constructor is private. A factory is used instead such that only one instance of this class is ever created. 
+This is the class constructor for the \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} class. It cannot be instantiated externally. A factory is used instead such that only one instance of this class is ever created. 
 
 Definition at line 44 of file Sensor\+Data.\+java.
 
@@ -93,20 +93,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{get\+A()}{getA()}}
 {\footnotesize\ttfamily double ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+getA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-(deprecated, not using) This method returns the currently stored angle value from the gyro sensor
+(deprecated) This method returns the currently stored angle value
 
 \begin{DoxyReturn}{Returns}
 The current angle value 
 \end{DoxyReturn}
 
 
-Definition at line 122 of file Sensor\+Data.\+java.
+Definition at line 117 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-122                        \{
-123     \textcolor{keywordflow}{return} angle;
-124   \}
+117                        \{
+118     \textcolor{keywordflow}{return} angle;
+119   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a46cc30522719018a80f89624e0ce458f}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a46cc30522719018a80f89624e0ce458f}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!getD@{getD}}
@@ -114,23 +114,22 @@ Definition at line 122 of file Sensor\+Data.\+java.
 \subsubsection{\texorpdfstring{get\+D()}{getD()}}
 {\footnotesize\ttfamily double ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+getD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Return the ultra\+Sonic distance data.
+This method returns ultrasonic sensor distance data.
 
 \begin{DoxyReturn}{Returns}
-the sensor data. 
+The distance detected by an ultrasonic sensor. 
 \end{DoxyReturn}
 
 
-Definition at line 82 of file Sensor\+Data.\+java.
+Definition at line 79 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-82                        \{
-83     \textcolor{keywordflow}{return} distance;
-84   \}
+79                        \{
+80     \textcolor{keywordflow}{return} distance;
+81   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -143,30 +142,28 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{get\+L()}{getL()}}
 {\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+getL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-get the light value data from the two light sensors (protected by light\+Lock)
+This thread safe method gets light data from two light sensors.
 
 \begin{DoxyReturn}{Returns}
-\+: data from light sensor 
+An array of light sensor data 
 \end{DoxyReturn}
 
 
-Definition at line 91 of file Sensor\+Data.\+java.
+Definition at line 88 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-91                          \{
-92     \textcolor{comment}{// lock the lock for light sensor value}
-93     lightLock.lock();
-94     \textcolor{keywordflow}{try} \{
-95       \textcolor{keywordflow}{return} lights.clone();
-96     \} \textcolor{keywordflow}{finally} \{
-97       lightLock.unlock();
-98     \}
-99 
-100   \}
+88                          \{
+89     \textcolor{comment}{// lock the lock for light sensor value}
+90     lightLock.lock();
+91     \textcolor{keywordflow}{try} \{
+92       \textcolor{keywordflow}{return} lights.clone();
+93     \} \textcolor{keywordflow}{finally} \{
+94       lightLock.unlock();
+95     \}
+96   \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -179,25 +176,25 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{get\+R\+G\+B()}{getRGB()}}
 {\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+get\+R\+GB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-get the rgb data for light sensor (protected by rgb lock)
+This thread safe method gets rgb data from a light sensor
 
 \begin{DoxyReturn}{Returns}
-\+: rgb data 
+An array of rgb data 
 \end{DoxyReturn}
 
 
-Definition at line 107 of file Sensor\+Data.\+java.
+Definition at line 103 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-107                         \{
-108     rgbLock.lock();
-109     \textcolor{keywordflow}{try} \{
-110       \textcolor{keywordflow}{return} rgb.clone();
-111     \} \textcolor{keywordflow}{finally} \{
-112       rgbLock.unlock();
-113     \}
-114   \}
+103                         \{
+104     rgbLock.lock();
+105     \textcolor{keywordflow}{try} \{
+106       \textcolor{keywordflow}{return} rgb.clone();
+107     \} \textcolor{keywordflow}{finally} \{
+108       rgbLock.unlock();
+109     \}
+110   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -212,35 +209,29 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{get\+Sensor\+Data()}{getSensorData()}}
 {\footnotesize\ttfamily static synchronized \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+get\+Sensor\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws \hyperlink{classca_1_1mcgill_1_1ecse211_1_1odometer_1_1_odometer_exceptions}{Odometer\+Exceptions}\hspace{0.3cm}{\ttfamily [static]}}
 
-Odometer\+Data factory. Returns an Odometer\+Data instance and makes sure that only one instance is ever created. If the user tries to instantiate multiple objects, the method throws a Multiple\+Odometer\+Data\+Exception.
+This method returns an \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} instance and makes sure that only one instance is ever created.
 
 \begin{DoxyReturn}{Returns}
-An Odometer\+Data object 
+A \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data}{Sensor\+Data} object 
 \end{DoxyReturn}
 
-\begin{DoxyExceptions}{Exceptions}
-{\em Odometer\+Exceptions} & \\
-\hline
-\end{DoxyExceptions}
 
-
-Definition at line 63 of file Sensor\+Data.\+java.
+Definition at line 61 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-63                                                                                   \{
-64     \textcolor{keywordflow}{if} (sensorData != null) \{ \textcolor{comment}{// Return existing object}
-65       \textcolor{keywordflow}{return} sensorData;
-66     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numberOfIntances < MAX\_INSTANCES) \{ \textcolor{comment}{// create object and}
-67                                                    \textcolor{comment}{// return it}
-68       sensorData = \textcolor{keyword}{new} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a11dcdc9c15184e05a9c84fc3958e26b6}{SensorData}();
-69       numberOfIntances += 1;
-70       \textcolor{keywordflow}{return} sensorData;
-71     \} \textcolor{keywordflow}{else} \{
-72       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} OdometerExceptions(\textcolor{stringliteral}{"Only one intance of the SensorData can be created."});
-73     \}
-74 
-75   \}
+61                                                                                   \{
+62     \textcolor{keywordflow}{if} (sensorData != null) \{ \textcolor{comment}{// Return existing object}
+63       \textcolor{keywordflow}{return} sensorData;
+64     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numberOfIntances < MAX\_INSTANCES) \{ \textcolor{comment}{// create object and}
+65                                                    \textcolor{comment}{// return it}
+66       sensorData = \textcolor{keyword}{new} \hyperlink{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a11dcdc9c15184e05a9c84fc3958e26b6}{SensorData}();
+67       numberOfIntances += 1;
+68       \textcolor{keywordflow}{return} sensorData;
+69     \} \textcolor{keywordflow}{else} \{
+70       \textcolor{keywordflow}{throw} \textcolor{keyword}{new} OdometerExceptions(\textcolor{stringliteral}{"Only one intance of the SensorData can be created."});
+71     \}
+72   \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -262,7 +253,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{set\+A()}{setA()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+setA (\begin{DoxyParamCaption}\item[{double}]{a }\end{DoxyParamCaption})}
 
-(deprecated not usings) This method overwrites the angle value.
+(deprecated) This method overwrites the last angle value.
 
 
 \begin{DoxyParams}{Parameters}
@@ -271,13 +262,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{DoxyParams}
 
 
-Definition at line 140 of file Sensor\+Data.\+java.
+Definition at line 135 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-140                              \{
-141     this.angle = a;
-142   \}
+135                              \{
+136     this.angle = a;
+137   \}
 \end{DoxyCode}
 \mbox{\Hypertarget{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}\label{classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_a2c1f8e625478b89aabe6e9911e482ef3}} 
 \index{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data@{ca\+::mcgill\+::ecse211\+::threads\+::\+Sensor\+Data}!setD@{setD}}
@@ -285,7 +276,7 @@ Definition at line 140 of file Sensor\+Data.\+java.
 \subsubsection{\texorpdfstring{set\+D()}{setD()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+setD (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
 
-This method overwrites the distance value. Use for ultrasonic sensor.
+This method overwrites the last distance value. Used for ultrasonic sensor data
 
 
 \begin{DoxyParams}{Parameters}
@@ -294,13 +285,13 @@ This method overwrites the distance value. Use for ultrasonic sensor.
 \end{DoxyParams}
 
 
-Definition at line 131 of file Sensor\+Data.\+java.
+Definition at line 126 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-131                              \{
-132     this.distance = d;
-133   \}
+126                              \{
+127     this.distance = d;
+128   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -315,28 +306,28 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{set\+L()}{setL()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+setL (\begin{DoxyParamCaption}\item[{double}]{l\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
-This method overwrites the light value. (protected by light lock)
+This thread safe method overwrites the last light value
 
 
 \begin{DoxyParams}{Parameters}
-{\em l} & The value to overwrite the current light value with \\
+{\em l} & The value to overwrite the last light value with \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 167 of file Sensor\+Data.\+java.
+Definition at line 162 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-167                                \{
-168     \textcolor{keywordflow}{try} \{
-169       lightLock.lock();
-170       this.lights[0] = l[0];
-171       this.lights[1] = l[1];
-172     \} \textcolor{keywordflow}{finally} \{
-173       lightLock.unlock();
-174     \}
-175   \}
+162                                \{
+163     \textcolor{keywordflow}{try} \{
+164       lightLock.lock();
+165       this.lights[0] = l[0];
+166       this.lights[1] = l[1];
+167     \} \textcolor{keywordflow}{finally} \{
+168       lightLock.unlock();
+169     \}
+170   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -351,33 +342,33 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{set\+R\+G\+B()}{setRGB()}}
 {\footnotesize\ttfamily void ca.\+mcgill.\+ecse211.\+threads.\+Sensor\+Data.\+set\+R\+GB (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
 
-set rgb data for color sensor (protected by rgb lock)
+This thread safe method stores rgb data from a color sensor
 
 
 \begin{DoxyParams}{Parameters}
-{\em r} & red value \\
+{\em r} & An integer that denotes the red value to store \\
 \hline
-{\em g} & green value \\
+{\em g} & An integer that denotes the green value to store \\
 \hline
-{\em b} & blue value \\
+{\em b} & An integer that denotes the blue value to store \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 151 of file Sensor\+Data.\+java.
+Definition at line 146 of file Sensor\+Data.\+java.
 
 
 \begin{DoxyCode}
-151                                           \{
-152     \textcolor{keywordflow}{try} \{
-153       rgbLock.lock();
-154       rgb[0] = r;
-155       rgb[1] = g;
-156       rgb[2] = b;
-157     \} \textcolor{keywordflow}{finally} \{
-158       rgbLock.unlock();
-159     \}
-160   \}
+146                                           \{
+147     \textcolor{keywordflow}{try} \{
+148       rgbLock.lock();
+149       rgb[0] = r;
+150       rgb[1] = g;
+151       rgb[2] = b;
+152     \} \textcolor{keywordflow}{finally} \{
+153       rgbLock.unlock();
+154     \}
+155   \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

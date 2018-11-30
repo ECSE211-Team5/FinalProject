@@ -55,8 +55,10 @@ public class Navigation {
   /**
    * This navigation class constructor sets up our robot to begin navigating a particular map
    * 
-   * @param leftMotor The EV3LargeRegulatedMotor instance for our left motor
-   * @param rightMotor The EV3LargeRegulatedMotor instance for our right motor
+   * @param leftMotor An EV3LargeRegularedMotor object instance that allows control of the left
+   *        motor
+   * @param rightMotor An EV3LargeRegularedMotor object instance that allows control of the right
+   *        motor
    */
   public Navigation(EV3LargeRegulatedMotor leftMotor, EV3LargeRegulatedMotor rightMotor)
       throws OdometerExceptions {
@@ -71,16 +73,20 @@ public class Navigation {
     }
   }
 
+  /**
+   * This method sets the motor acceleration speed to a lower threshold value
+   */
   public void setSlowAcc() {
     leftMotor.setAcceleration(N_ACCELERATION);
     rightMotor.setAcceleration(N_ACCELERATION);
   }
+
   /**
-   * This method calculate the angle for the robot to rotate facing certain point
+   * This method calculates the angle necessary for the robot to rotate to face a certain point
    * 
-   * @param x: x coordinate of the point
-   * @param y: y coordinate of the point
-   * @return: rotation needed in degree
+   * @param x The x coordinate of the point to face
+   * @param y The y coordinate of the point to face
+   * @return The rotation angle in degrees
    */
   public double calculateAngleTo(double x, double y) {
     double dX = x - odometer.getXYT()[0];
@@ -92,11 +98,11 @@ public class Navigation {
   }
 
   /**
-   * Travel to a point naively: by rotating the robot facing the point first and then go to the
+   * This method makes our robot travel to a point by first rotating it and then traversing to the
    * point
    * 
-   * @param x: x coordinate of the point
-   * @param y: y coordinate of the points
+   * @param x The x coordinate of the point to travel to
+   * @param y The y coordinate of the point to travel to
    */
   public void travelTo(double x, double y, int speed) {
     double dX = x - odometer.getXYT()[0];
@@ -114,24 +120,21 @@ public class Navigation {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
-   
+
 
     leftMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), true);
     rightMotor.rotate(convertDistance(Game.WHEEL_RAD, distance * Game.TILE), false);
-    
+
   }
 
   /**
-   * This method travel the robot to desired position by following the line (Always rotate 90
-   * degree), along with a correction
+   * This method makes the robot travel to a desired position by checking its orientation and
+   * corrects it if necessary to align with the lines on the grid.
    * 
-   * When avoid=true, the nav thread will handle traveling. If you want to travel without avoidance,
-   * this is also possible. In this case, the method in the Navigation class is used.
-   * 
-   * @param x The x coordinate to travel to (in cm)
-   * @param y The y coordinate to travel to (in cm)
-   * @param avoid: the robot will pay attention to the distance from ultrasonic sensor to avoid
-   *        abstacle when navigating
+   * @param x The x coordinate to travel to
+   * @param y The y coordinate to travel to
+   * @param avoid This boolean decides if the robot will pay attention to readings from the
+   *        ultrasonic sensor to avoid obstacles when navigating
    */
   public void travelToWithCorrection(int x, int y, boolean avoid) {
     int px = (int) Math.round(odometer.getXYT()[0]);
@@ -140,7 +143,7 @@ public class Navigation {
     int[] destination = {x, y};
     ArrayList<Character> instruction = new ArrayList<Character>();
 
-    // use path finder to find path based on different area the robot is at
+    // use path finder to find path based on the different areas the robot is in
     // OUT: instruction: contains a list of instruction for the robot to move to the destination
     if (GameParameters.getType(px, py) == GameParameters.AreaType.InStarting) {
       GameUtil.startingFinder.tryFindPath(cur, destination, instruction);
@@ -198,11 +201,10 @@ public class Navigation {
   }
 
   /**
-   * This method return the direction (up, down, right, left) based on the instruction from the path
-   * finder
+   * This method converts directions our robot can face (up, down, right, left) into degrees
    * 
-   * @param direction: instruction from the path finder
-   * @return: angle the robot should at
+   * @param direction The direction to convert
+   * @return The angle the robot should face in degrees
    */
   private int charToRotation(char direction) {
     if (direction == GameUtil.upInstruction) {
@@ -219,10 +221,10 @@ public class Navigation {
   }
 
   /**
-   * Move a certain distance with correction along current direction (using coordinate system)
+   * This method moves our robot a certain distance with corrections if required.
    * 
-   * @param distance: distance to cover
-   * @param theta: theta to be corrected each time
+   * @param distance The distance our robot is to travel
+   * @param theta The angle to be corrected to upon crossing a tile
    */
   public synchronized void moveWithCorrection(double distance, double theta) {
     leftMotor.setSpeed(FORWARD_SPEED);
@@ -236,7 +238,7 @@ public class Navigation {
   }
 
   /**
-   * This method move the robot back until a black line detection
+   * This method moves the robot backwards until a black line is detected
    */
   private synchronized void moveBackWithCorrection() {
     // leftMotor.setAcceleration(N_ACCELERATION);
@@ -249,9 +251,9 @@ public class Navigation {
   }
 
   /**
-   * This method move the robot one tile until it detect a blackline (ususally one tile)
+   * This method moves the robot one tile until it detects a black line
    * 
-   * @param theta
+   * @param theta The angle to be corrected to upon crossing a tile
    */
   public void moveOneTileWithCorrection(double theta) {
     // leftMotor.setAcceleration(N_ACCELERATION);
@@ -265,10 +267,9 @@ public class Navigation {
   }
 
   /**
-   * Move the robot until one blackline has been detect
+   * This method moves the robot until a black line has been detected
    * 
-   * @param checkForBlackLine: whether consider the case if one sensor does not detect black line
-   *        (recommend to set to true)
+   * @param checkForBlackLine This boolean decides whether to check for a black line.
    */
   private void moveUntilLineDetection(boolean checkForBlackLine) {
     double rotation = 0;
@@ -345,11 +346,9 @@ public class Navigation {
   }
 
   /**
-   * This method is where the logic for the odometer will run. Use the methods provided from the
-   * OdometerData class to implement the odometer.
+   * This method turns our robot to a desired angle
    * 
    * @param angle The angle we want our robot to turn to (in degrees)
-   * @param async whether return instantaneously
    */
   public synchronized void turnTo(double angle) {
     double dTheta;
@@ -385,9 +384,9 @@ public class Navigation {
   }
 
   /**
-   * found the tunnel based on the ll and ur coordinate, after the method, the robot will go the the
-   * entrance of the tunnel facing the tunnel it returns the distance it needs to go for [x] and [y]
-   * in order to go through the tunnel
+   * This method moves our robot through a tunnel by first finding the tunnel based on the lower
+   * left and upper right coordinates provided in GameParameters, aligning itself with the tunnel
+   * and then finally moving through it. the tunnel
    * 
    * @throws Exception
    */
@@ -457,16 +456,16 @@ public class Navigation {
     turnTo(angleThoughTunnel);
 
     // goback To correct
-      moveBackWithCorrection();
+    moveBackWithCorrection();
 
     // turn left -5 to correct the effect of the weight
     forward(TUNNEL_SPEED, 0.5);
     turn(TUNNEL_CORRECTION);
     if (distance == 1) {
-      forward(TUNNEL_SPEED, distance + 1 );
+      forward(TUNNEL_SPEED, distance + 1);
     } else {
 
-      forward(TUNNEL_SPEED, distance + 1 );
+      forward(TUNNEL_SPEED, distance + 1);
     }
 
     odometer.setTheta(angleThoughTunnel);
@@ -493,9 +492,11 @@ public class Navigation {
   }
 
   /**
-   * This method navigate the robot to the entrance of the tunnel
+   * This method navigates our robot to the entrance of a tunnel
    * 
-   * @param n :0: x, 1: y
+   * @param points An ArrayList of points to navigate our robot to the tunnel entrance
+   * @param n An integer index to modify the list of points at
+   * @param multiplier An integer to add onto each point
    */
   private void travelToTunnelEntrance(ArrayList<int[]> points, int n, int multiplier) {
     int[] safePoint = new int[2];
@@ -526,13 +527,12 @@ public class Navigation {
   }
 
   /**
-   * * this method approaches the ring set by paying attention to the reading of us sensor, stops at
-   * the place when the robot can reach the ring
+   * This method moves our robot towards a ring set by noting ultrasonic sensor readings
    * 
-   * @param searcher: ring searcher
-   * @param correct: whether correct the position when searching ring (cannot do this when at
-   *        boundary)
-   * @param reset: whether reset the rod motor to the original position
+   * @param searcher A RingSearcher object instance to detect ring colors and navigate around a ring
+   *        set
+   * @param correct A boolean that decides whether to correct our position when searching for a ring
+   * @param reset A boolean that decides whether to rotate the rod motor to its original position
    */
   public void searchRingSet(RingSearcher searcher, boolean correct, boolean reset) {
     // Go backward to detect the line and correct the rotation
@@ -553,40 +553,40 @@ public class Navigation {
       rightMotor.backward();
       moveUntilLineDetection(true);
       // Forward for 3 cm (approach the ring set)
-      //forward(FORWARD_SPEED, 2.5 / Game.TILE);
+      // forward(FORWARD_SPEED, 2.5 / Game.TILE);
     } else {
-      //forward(FORWARD_SPEED, 2 / Game.TILE);
+      // forward(FORWARD_SPEED, 2 / Game.TILE);
     }
     searcher.prepareRetrieve();
     // rotate a little to the left to make sure that the sensor can detect the ring
     // detect the ring color and beep based on the color
     searcher.search(-165);
-    if(correct) {
+    if (correct) {
       forward(FORWARD_SPEED, 2.8 / Game.TILE);
-    }else {
+    } else {
       forward(FORWARD_SPEED, 3.8 / Game.TILE);
     }
     searcher.detectColor();
     searcher.search(-190);
     searcher.detectColor();
-    
+
     // rotate back
-   // leftMotor.rotate(-LEFT_MOTOR_RING_COR, false);
+    // leftMotor.rotate(-LEFT_MOTOR_RING_COR, false);
     // prepare for retrieving the ring
     searcher.finishSearch();
-    
+
     rightMotor.rotate(-40, false);
     searcher.safeRod();
-    if(correct) {
+    if (correct) {
       forward(FORWARD_SPEED, 3.7 / Game.TILE);
-    }else {
+    } else {
       forward(FORWARD_SPEED, 2.7 / Game.TILE);
     }
     // go back to original position
     rightMotor.rotate(70, false);
     searcher.retrieveRing();
     // rotate the right motor to behind a little to make sure we can put the rod behind the ring
-    //rightMotor.rotate(RIGHT_MOTOR_RING_COR, false);
+    // rightMotor.rotate(RIGHT_MOTOR_RING_COR, false);
 
     // go to the position where ring can be retrieved
 
@@ -595,21 +595,21 @@ public class Navigation {
 
     forward(FORWARD_SPEED, -6.5 / Game.TILE);
     // go back to original position
-    rightMotor.rotate(40+30, false);
+    rightMotor.rotate(40 + 30, false);
 
-//    if (correct) {
-//      forward(FORWARD_SPEED, -6.5 / Game.TILE);
-//    } else {
-//      forward(FORWARD_SPEED, -6 / Game.TILE);
-//    }
-    //if (reset)
-      //searcher.resetRodMotor();
+    // if (correct) {
+    // forward(FORWARD_SPEED, -6.5 / Game.TILE);
+    // } else {
+    // forward(FORWARD_SPEED, -6 / Game.TILE);
+    // }
+    // if (reset)
+    // searcher.resetRodMotor();
   }
 
   /**
-   * Rotate the robot by certain angle
+   * This method rotates the robot by a certain angle
    * 
-   * @param angle The angle to rotate our robot to
+   * @param angle The angle (in degrees) to rotate our robot to
    */
   public void turn(int angle) {
     leftMotor.rotate(convertAngle(Game.WHEEL_RAD, Game.TRACK, angle), true);
@@ -617,10 +617,10 @@ public class Navigation {
   }
 
   /**
-   * Move the robot forward
+   * This method moves our robot forward
    * 
-   * @param speed: speed to be taken
-   * @param distance: distacne to travel
+   * @param speed An integer that denotes the speed to rotate our wheels at
+   * @param distance A double that denotes the distance to travel
    */
   public void forward(int speed, double distance) {
     leftMotor.setSpeed(speed);
@@ -635,7 +635,7 @@ public class Navigation {
   }
 
   /**
-   * Stop the motor
+   * This method stops both motors
    */
   public void stop() {
     leftMotor.stop(true);
@@ -643,24 +643,24 @@ public class Navigation {
   }
 
   /**
-   * This method allows the conversion of a distance to the total rotation of each wheel need to
-   * cover that distance.
+   * This method converts a distance to the total number of wheel rotations needed to cover that
+   * distance.
    * 
    * @param radius The radius of our wheels
-   * @param distance The distance traveled
-   * @return A converted distance
+   * @param distance The distance to travel
+   * @return A number of wheel rotations
    */
   public static int convertDistance(double radius, double distance) {
     return (int) ((180.0 * distance) / (Math.PI * radius));
   }
 
   /**
-   * This method allows the conversion of an angle value
+   * This method converts an angle value to the number of wheel rotations needed to achieve rotation
    * 
    * @param radius The radius of our wheels
-   * @param distance The distance traveled
+   * @param width The width
    * @param angle The angle to convert
-   * @return A converted angle
+   * @return A number of wheel rotations
    */
   private static int convertAngle(double radius, double width, double angle) {
     return convertDistance(radius, Math.PI * width * angle / 360.0);

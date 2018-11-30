@@ -70,28 +70,28 @@
 <parametername>us</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a SampleProvider class instance that helps us to store an array of ultrasonic sensor data. </para></parameterdescription>
+<para>A SampleProvider class instance that helps us to store an array of ultrasonic sensor data. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>usData</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>an array of distance data to be used by our Wall Follower&apos;s UltrasonicControllers. </para></parameterdescription>
+<para>An array of distance data to be used by our Wall Follower&apos;s UltrasonicControllers. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>cont</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>a BangBangController or PController instance that has accumulated distance data stored in usData passed to it. </para></parameterdescription>
+<para>A BangBangController or PController instance that has accumulated distance data stored in usData passed to it. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="37" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="37" bodyend="43"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="44" endline="46">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a92f4933511db42476e39956246bcf2fe" compoundref="_thread_control_8java" startline="43" endline="45">ca.mcgill.ecse211.threads.ThreadControl.isStarted</references>
         <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_thread_control_1a395cfe1d73b3ef14da0830ed0a499f82" compoundref="_thread_control_8java" startline="14">ca.mcgill.ecse211.threads.ThreadControl.WAIT_TIME</references>
       </memberdef>
       </sectiondef>
@@ -104,11 +104,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>get us sensor data </para>        </detaileddescription>
+<para>This method gets ultrasonic sensor data </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" line="48" column="1" bodyfile="/home/ccc/FinalProject/src/ca/mcgill/ecse211/threads/UltrasonicPoller.java" bodystart="48" bodyend="54"/>
-        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a2c1f8e625478b89aabe6e9911e482ef3" compoundref="_sensor_data_8java" startline="131" endline="133">ca.mcgill.ecse211.threads.SensorData.setD</references>
+        <references refid="classca_1_1mcgill_1_1ecse211_1_1threads_1_1_sensor_data_1a2c1f8e625478b89aabe6e9911e482ef3" compoundref="_sensor_data_8java" startline="126" endline="128">ca.mcgill.ecse211.threads.SensorData.setD</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
